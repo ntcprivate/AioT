@@ -1,0 +1,100 @@
+{
+  "mode": "BENCH_DEMO STATE_V2",
+  "tests": {
+    "passed": 4,
+    "failed": 0,
+    "controller": "waveform boundaries, priority, state transitions, freshness and phase continuity"
+  },
+  "build": {
+    "idf": "5.4.4",
+    "normal": "PASS",
+    "bench": "PASS",
+    "normal_bench_default": false,
+    "normal_bytes": 330608,
+    "bench_bytes": 331328
+  },
+  "flash": {
+    "port": "COM3",
+    "status": "PASS_MD5_VERIFIED",
+    "app_sha256": "2981f70f1d97793181bca77635423fb8d46a4bc18428ffe683b09a14fdffea4c",
+    "backup": "pre_test_touched_flash.bin"
+  },
+  "protected_sha256": {
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp": "e185d3923a9b0102e4679ad960f6c62b836f8012667d8faf6d23064ea39ae75e",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.cpp": "63067881c8215b7f680a83ecc60eaed3c491f17cb8d370e1244e0822720be608",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.h": "32814244792747c151c67e246e91363a27682252b82ee0f3c9c1c67514917bad",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\preprocessing.h": "b3628015449568d6adb3e64a73cff1dfa83ec618c64f97ad344102a80d1bfca0",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\research_shadow.h": "df4c8d44456cf6773205e1731cbfc20ce72c5cd0b866219e831a7556e4ed1452",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.cpp": "01e51f827cee12fa81f4956a3876358d238f8c2e294d65e39a85411818ca236f",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.h": "f48f55d32657b843454e0f04af15028cf58085ca19b50fa6539793cbcf88054c",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp": "984bf777149b50d0473e5244468d1f07b01fb0a4d4aa309b7142d9876e87c5fe",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h": "50437dcc4fbdaa53d31c46b8749f8f5092469ec8107653b65df702784d247224",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h": "32d6d540f3d38757f041dc432a2e07f58e0b80e2d5c1da8e064a36dd725d5f76",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model\\ecg_cnn_int8.tflite": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_metadata.h": "b69fddca6df4f82fb68c47c4549f55dec406d9f52b762a1d1e2240721db6e296",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_samples_int8.bin": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758"
+  },
+  "hardware": {
+    "duration_seconds": 45,
+    "captured_statuses_leads_off_led_on_buzzer_off": 86,
+    "accepted_inferences": 0,
+    "telemetry": {
+      "capture": "D:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\debug\\bench_states\\hardware.bin",
+      "sha256": "b331c50cf2971f3b2cf897c9743b38273a38b30c3fb673f21198fbb8a8aac01a",
+      "bytes": 330021,
+      "valid_packets": 432,
+      "valid_samples": 11072,
+      "crc_failures": 0,
+      "framing_errors": 0,
+      "schema_errors": 0,
+      "sequence_errors": 0,
+      "packet_gaps": 0,
+      "missing_samples": 0,
+      "rx_timing_violations": 14,
+      "synthetic_mismatches": 0,
+      "trailing_partial_bytes": 1216,
+      "unterminated_oversize": false,
+      "by_boot": {
+        "7f25fe56": {
+          "samples": 11072,
+          "first_us": 271139,
+          "last_us": 44555132,
+          "synthetic": false,
+          "received_device_time_hz": 250.000039517665
+        }
+      },
+      "last_firmware_counters": {
+        "firmware": "ecg-monitor-2",
+        "source": "HARDWARE",
+        "baud": 115200,
+        "uart_baud_actual": 115201,
+        "sample_attempts": 10957,
+        "acq_hz": 250.0,
+        "tx_samples": 10944,
+        "tx_hz": 252.342114,
+        "tx_dropped": 0,
+        "write_errors": 0,
+        "format_errors": 0,
+        "uart_write_errors": 0,
+        "uart_tx_timeouts": 0,
+        "adc_errors": 0,
+        "missed_est": 0,
+        "late": 7,
+        "snapshot_errors": 0
+      },
+      "rejection_examples": [],
+      "limits": "No repair. Offline raw file has no host-arrival clock; RX wall rate cannot be inferred. UART completion is not a host acknowledgement. Corrupt frames alone cannot identify physical cause."
+    },
+    "automatic_startup_golden_exact": 12,
+    "limits": "Observed LEADS_OFF only. NORMAL/PVC/UNKNOWN/INVALID waveform tests run on host production controller; not electrically timed on board. Fixed-duration capture ends with partial frame; raw retained unchanged."
+  },
+  "changed_files": [
+    "main/bench_feedback.h",
+    "main/pipeline.cpp",
+    "main/Kconfig.projbuild",
+    "tests/bench_feedback_test.cpp",
+    "tools/ecg_monitor/tests/test_bench_feedback.py"
+  ],
+  "deleted_files": [],
+  "push": false
+}

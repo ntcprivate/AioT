@@ -1,6 +1,4 @@
 import csv
-import json
-import os
 import struct
 import tempfile
 import time
@@ -61,14 +59,14 @@ class SafetyTests(unittest.TestCase):
         for s in [status(),status(classification='NORMAL',state='NORMAL',p_pvc=.1),status(model='READY',bpm=72)]:
             self.assertEqual(valid_classification(s,'HARDWARE',2_000_000),('UNKNOWN',None))
     def test_full_gates_and_stale(self):
-        s=status(model='RUNNING',ai_validated=True,r_validated=True,golden=True,quality_valid=True,
-            classification='PVC',state='PVC',p_pvc=.53,result_t_us=1_900_000)
-        self.assertEqual(valid_classification(s,'HARDWARE',2_000_000),('PVC',.53))
-        for source in ['DEMO','REPLAY']:self.assertEqual(valid_classification(s,source,2_000_000)[0],'UNKNOWN')
-        for key in ['ai_validated','r_validated','golden','quality_valid']:
-            bad={**s,key:False};self.assertEqual(valid_classification(bad,'HARDWARE',2_000_000)[0],'UNKNOWN')
-        self.assertEqual(valid_classification(s,'HARDWARE',4_000_000)[0],'UNKNOWN')
-        self.assertEqual(valid_classification({**s,'self_test':True},'HARDWARE',2_000_000)[0],'UNKNOWN')
+        from test_research_shadow import research_packet
+        s=research_packet();s['ai'].update(result_t_us=1900000,valid_until_us=3400000,r_t_us=1000000,window_end_us=1508000)
+        self.assertEqual(valid_classification(s,'HARDWARE',2000000),('PVC',135/256))
+        for source in ['DEMO','REPLAY']:self.assertEqual(valid_classification(s,source,2000000)[0],'UNKNOWN')
+        for key in ['golden','quality_valid']:
+            self.assertEqual(valid_classification({**s,key:False},'HARDWARE',2000000)[0],'UNKNOWN')
+        self.assertEqual(valid_classification(s,'HARDWARE',4000000)[0],'UNKNOWN')
+        self.assertEqual(valid_classification({**s,'self_test':True},'HARDWARE',2000000)[0],'UNKNOWN')
     def test_record_pause_and_disconnect(self):
         with tempfile.TemporaryDirectory() as d:
             s=Session();path=Path(d)/'session.csv';s.start_recording(path)

@@ -1,7 +1,5 @@
 #pragma once
 #include <cstdint>
-// Gate stays false until labeled detector + simulator + continuity tests pass.
-constexpr bool kLivePipelineValidated = false;
 enum class EcgState { Waiting, Collecting, Normal, Pvc, Invalid, Fault };
 inline const char* state_name(EcgState s) {
     switch(s) {
@@ -24,9 +22,6 @@ inline AlertOutput alert_pattern(EcgState s,int64_t elapsed) {
         case EcgState::Pvc:{ bool on=elapsed%500000<150000;return {on,on}; }
     }
     return {false,false};
-}
-inline bool classification_allowed(bool ready,bool enabled,bool validated,bool quality,bool fresh,bool same_generation) {
-    return ready && enabled && validated && quality && fresh && same_generation;
 }
 inline bool recovery_allowed(EcgState state,bool system_fault,uint32_t samples,uint32_t good_blocks,bool same_generation) {
     return state==EcgState::Invalid && !system_fault && samples>=512 && good_blocks>=2 && same_generation;

@@ -1,0 +1,21 @@
+{
+  "scope": "Actual UART -> production Qt GUI; offscreen rendering; no simulated predictions",
+  "fields": {
+    "Classification": "UNKNOWN",
+    "PVC probability": "--",
+    "CNN latency": "--",
+    "R-peak count": "0",
+    "Total classified beats": "0",
+    "Prediction age": "--",
+    "Reason": "LEADS OFF"
+  },
+  "sample_count": 3552,
+  "crc": 0,
+  "missing": 0,
+  "framing": 0,
+  "schema": 0,
+  "acquisition_classification": "UNKNOWN",
+  "model_status": "READY",
+  "raw_capture": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\captures\\20261107T034851Z_2ce8cc83.bin",
+  "status": "PASS"
+}

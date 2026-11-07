@@ -1,5 +1,5 @@
 """Build the final report from saved measurements, never fabricated hardware data."""
-import hashlib,json,re
+import json, re
 from datetime import datetime,timezone
 from pathlib import Path
 from ecg_monitor.protocol import StreamParser

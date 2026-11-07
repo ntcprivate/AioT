@@ -1,10 +1,8 @@
 """Same frozen Validation inputs and historical scorer; phase2A queue-only review."""
 from collections import Counter,defaultdict
-import csv
 import hashlib
 import json
 from pathlib import Path
-import subprocess
 import time
 import numpy as np
 from audit_r_peaks import ROOT,FW,TRACE,score,assignment,rows_from,run_native,reasons,dump_csv,summary_metrics

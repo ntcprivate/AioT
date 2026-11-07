@@ -1,7 +1,7 @@
 """Analysis only: cached errors, Train controls, paired centering/ADC counterfactuals.
 Never trains, tunes, reads Test signals/predictions, changes firmware or opens COM.
 """
-from collections import Counter,defaultdict
+from collections import Counter
 import csv,hashlib,json,subprocess
 from pathlib import Path
 import numpy as np

@@ -15,7 +15,6 @@
 #include "tensorflow/lite/micro/schema/schema_generated.h"
 #include "test_data/ecg_test_metadata.h"
 #include "single_round_conv.h"
-#include "preprocessing.h"
 #include "single_round_fc.h"
 #if CONFIG_ECG_AI_TEST_ONLY
 #include "ai_test_only.h"
@@ -101,13 +100,6 @@ bool model_invoke_quantized(const int8_t* data,float& score,int& code,int64_t& l
 bool model_memory_usage(uint32_t& allocated,uint32_t& used) {
     if(!interpreter)return false;
     allocated=CONFIG_ECG_ARENA_KIB*1024;used=interpreter->arena_used_bytes();return true;
-}
-bool model_invoke_beat(const float* beat,float& score,int64_t& latency,unsigned& clipped) {
-    if(!interpreter || !input) return false;
-    int8_t quantized[256];
-    if(!ecg_preprocessing::quantize(beat,quantized,input->params.scale,input->params.zero_point,clipped))return false;
-    int code;
-    return model_invoke_quantized(quantized,score,code,latency);
 }
 bool model_golden_test() {
     if (static_cast<size_t>(samples_end-samples_start)!=kSampleCount*256 ||

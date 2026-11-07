@@ -1,0 +1,7 @@
+{
+  "tests": 26,
+  "status": "PASS",
+  "failures": 0,
+  "errors": 0,
+  "scope": "Focused GUI/state tests only; no COM, firmware build/flash, CNN or benchmark"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "tests": 44,
+  "modified": [
+    "ecg_monitor/app.py",
+    "ecg_monitor/research.py",
+    "tests/test_gui.py",
+    "tests/test_research_shadow.py",
+    "tests/test_telemetry_fix.py",
+    "gui_research_board_smoke.py",
+    "README.md"
+  ],
+  "added": [
+    "tests/test_ai_unification.py"
+  ],
+  "deleted": [],
+  "firmware_modified": false,
+  "flashed": false,
+  "com_opened": false,
+  "training": false,
+  "benchmark": false,
+  "github_push": false,
+  "evidence": "Stored real CNN golden outputs and saved UART replay; no new live valid-ADC classification asserted",
+  "retained": [
+    "Firmware algorithms/GPIO/ADC250Hz",
+    "models/weights/threshold0.52",
+    "training/datasets/golden/TEST_ONLY/Synthetic",
+    "CSV/raw captures/reports/history/backups"
+  ],
+  "removed_code": [
+    "duplicate AI panel and legacy AI widget fields",
+    "legacy VALIDATED AI TEST selector and guard",
+    "unused json import and filter_state",
+    "legacy validated-classification GUI call"
+  ],
+  "images": [
+    "reference_normal.png",
+    "reference_pvc.png",
+    "recorded_uart_invalid.png"
+  ]
+}

@@ -4,21 +4,21 @@
 #include <cstring>
 #include <initializer_list>
 int main() {
-    research::View v;
+    ecg_ai::View v;
     assert(!v.has_result);
     // Recorded golden output codes -126 (N) and7 (PVC), not fake inference.
-    assert(research::publish(v,2/256.f,2000000,250,1500000,1999999,81000,2300,true));
-    assert(strcmp(v.state,"NORMAL")==0 && research::fresh(v,2000000));
-    assert(!research::fresh(v,3500001));
-    assert(research::publish(v,135/256.f,2000000,250,1500000,1999999,81000,2300,true));
+    assert(ecg_ai::publish(v,2/256.f,2000000,250,1500000,1999999,81000,2300,true));
+    assert(strcmp(v.state,"NORMAL")==0 && ecg_ai::fresh(v,2000000));
+    assert(!ecg_ai::fresh(v,3500001));
+    assert(ecg_ai::publish(v,135/256.f,2000000,250,1500000,1999999,81000,2300,true));
     assert(strcmp(v.state,"PVC")==0);
-    assert(!research::publish(v,135/256.f,2000000,250,1500000,1999999,81000,2300,false));
+    assert(!ecg_ai::publish(v,135/256.f,2000000,250,1500000,1999999,81000,2300,false));
     assert(!v.has_result);
     for(auto issue:{"LEADS_OFF","ADC_SATURATION","SAMPLE_GAP","HIGH_FREQUENCY_NOISE"}) {
-        research::clear(v,issue,true);assert(!v.has_result && strcmp(v.state,"INVALID")==0);
+        ecg_ai::clear(v,issue,true);assert(!v.has_result && strcmp(v.state,"INVALID")==0);
     }
-    assert(!research::publish(v,135/256.f,4000000,250,1500000,1999999,81000,2300,true));
-    research::Engine engine;research::Window w={},out={};w.raw[0]=123;
+    assert(!ecg_ai::publish(v,135/256.f,4000000,250,1500000,1999999,81000,2300,true));
+    ecg_ai::Engine engine;ecg_ai::Window w={},out={};w.raw[0]=123;
     for(unsigned i=0;i<4;++i){w.r_sample=i+500;assert(engine.enqueue(w));}
     w.raw[0]=456;assert(!engine.enqueue(w));assert(engine.drops==1 && engine.depth()==4);
     for(unsigned i=0;i<4;++i){assert(engine.pop(out));assert(out.r_sample==i+500 && out.raw[0]==123);}

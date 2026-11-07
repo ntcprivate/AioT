@@ -1,6 +1,5 @@
 import hashlib,json,subprocess,tempfile,unittest
 from pathlib import Path
-import numpy as np
 FW=Path(__file__).resolve().parents[3]/'firmware/esp32_ecg_tinyml_integrated'
 BASE=FW/'debug/r_peak_phase2b'
 class Int8FixTests(unittest.TestCase):

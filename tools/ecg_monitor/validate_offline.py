@@ -1,14 +1,12 @@
 """Exploratory Validation records only; native actual detector and CNN; no Test.
 
-This command never writes original data/splits/models and never unlocks firmware.
+This command never writes original data/splits/models and never changes firmware configuration.
 """
-import bisect
 from collections import Counter
 import hashlib
 import json
 from pathlib import Path
 import subprocess
-import sys
 import numpy as np
 import wfdb
 from scipy.signal import resample_poly
@@ -119,7 +117,7 @@ def main():
             matched_pvc_tp=int(np.sum(predicted&(truth==1)&eligible)),matched_pvc_fn=int(np.sum(~predicted&(truth==1)&eligible)),
             matched_normal_fp=int(np.sum(predicted&(truth==0)&eligible)),matched_normal_tn=int(np.sum(~predicted&(truth==0)&eligible)))
         (OUT/'detected_windows_metadata.json').write_text(json.dumps(metadata,indent=2))
-    report=dict(status='PASS' if detector_pass else 'FAIL_AI_LIVE_LOCKED',source='LocalMITBIH_MLII_VALIDATION_ONLY',
+    report=dict(status='PASS' if detector_pass else 'DETECTOR_CRITERIA_FAIL',source='LocalMITBIH_MLII_VALIDATION_ONLY',
         records=records,criteria=criteria,aggregate=dict(tp=tp,fp=fp,fn=fn,sensitivity=tp/(tp+fn),ppv=tp/(tp+fp)),
         per_record=results,controls=controls,noisy_ecg=noisy_review,chain=chain,
         filter_review=dict(annotation_windows=len(filter_corr),median_raw_filtered_correlation=float(np.median(filter_corr)),

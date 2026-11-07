@@ -16,7 +16,7 @@ int main(int argc,char** argv) {
     FILE* q=std::fopen((std::string(argv[2])+".q.bin").c_str(),"wb");
     FILE* csv=std::fopen((std::string(argv[2])+".csv").c_str(),"w");if(!q || !csv)return 3;
     std::fprintf(csv,"r_index,r_t_us,end_us,generation\n");
-    research::Engine engine;research::Window w;unsigned good=0,windows=0,rejected=0,invalid=0;
+    ecg_ai::Engine engine;ecg_ai::Window w;unsigned good=0,windows=0,rejected=0,invalid=0;
     for(size_t start=0;start+256<=n;start+=256) {
         int raw[256];int64_t time[256];
         for(int i=0;i<256;++i){raw[i]=input[start+i];time[i]=1000000+(start+i)*4000LL;}

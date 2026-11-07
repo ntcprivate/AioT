@@ -1,0 +1,43 @@
+{
+  "offset": 0,
+  "length": 458752,
+  "sha256": "168a74ac8045d189de240e41a0d57b051da5d1533afe6795ff115bc13304a726",
+  "parts": [
+    {
+      "offset": 0,
+      "length": 65536,
+      "sha256": "f7f53a0dad19171b1a13ee11427fe4a051cbae89a63872613a837272af8843bb"
+    },
+    {
+      "offset": 65536,
+      "length": 65536,
+      "sha256": "cf04b9cef0477beded21eb41873c2621040be8982a1cbd7ca9765c942244e9bb"
+    },
+    {
+      "offset": 131072,
+      "length": 65536,
+      "sha256": "7dab951572febf65e31b29da1b9e4c224cb1db2c6573db72f330e2b207f3485e"
+    },
+    {
+      "offset": 196608,
+      "length": 65536,
+      "sha256": "e4882fde6381f4eea1bbf7c13455766cbf2142d62255fd84577502925f4fd880"
+    },
+    {
+      "offset": 262144,
+      "length": 65536,
+      "sha256": "0b51a8ee0f38cdf4a2f50a6076c01ce2f5e5c63d00171bf57c278862f4a0f6df"
+    },
+    {
+      "offset": 327680,
+      "length": 65536,
+      "sha256": "b612ff6d6c4530887db5fc3c282167533758fae7e997071c046c4af5ad920d91"
+    },
+    {
+      "offset": 393216,
+      "length": 65536,
+      "sha256": "5f3ebaf314cc3202496e60d41ae3f0f458fe26e0e9bf7ce00daa4e440ad4f299"
+    }
+  ],
+  "verification": "Each read verified by esptool MD5"
+}

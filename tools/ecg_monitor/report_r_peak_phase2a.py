@@ -1,5 +1,4 @@
 """Finalize phase2A evidence and report. No device access or firmware mutation."""
-from collections import Counter
 import difflib
 import hashlib
 import json

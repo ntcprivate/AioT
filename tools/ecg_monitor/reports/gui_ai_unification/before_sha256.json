@@ -1,0 +1,9 @@
+{
+  "ecg_monitor/app.py": "a4640b02b61f46f27d5ff52e790ac87f1d3e3738ed06127c5caad76a8fdec8f4",
+  "ecg_monitor/research.py": "0ec80f739d15fa5bfa3883ad73c52dce04e9ba804dd17c2ff4ea7ba518c6d009",
+  "tests/test_gui.py": "f1466c5413c4be044423d9a66f0d854d2c1dae88c3de7279d6cf79e04cfe055c",
+  "tests/test_research_shadow.py": "2ad3bc1e835f00a8580c0129d86ab019a4ea53895a8c2bb5693559f1c9cc1d62",
+  "tests/test_telemetry_fix.py": "a0b6e9b552f7a81031c3a855f3de2ea42f0e0292ed2925d39516cf966f675cb5",
+  "gui_research_board_smoke.py": "e1fc1c15e998228324857bab46fd4113548547e16b15316118f7b8c3ec004ff9",
+  "README.md": "e7b0451f5ff15151683de9c803778ea67817ab0bd0d5edbdc9490c0a05261bb8"
+}

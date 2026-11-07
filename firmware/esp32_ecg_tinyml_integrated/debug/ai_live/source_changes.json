@@ -1,0 +1,76 @@
+{
+  "modified": [
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\ai_test_only.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\research_shadow.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\system_state.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\research_shadow_replay.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\research_shadow_test.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\system_test.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\check_xtensa_syntax.py",
+    "tools\\ecg_monitor\\ecg_monitor\\app.py",
+    "tools\\ecg_monitor\\ecg_monitor\\protocol.py",
+    "tools\\ecg_monitor\\ecg_monitor\\session.py",
+    "tools\\ecg_monitor\\complete_r_peak_phase2b.py",
+    "tools\\ecg_monitor\\diagnose_phase2b_int8.py",
+    "tools\\ecg_monitor\\final_ai_readiness_review.py",
+    "tools\\ecg_monitor\\gui_research_board_smoke.py",
+    "tools\\ecg_monitor\\report_research_shadow.py",
+    "tools\\ecg_monitor\\report_r_peak_phase2a.py",
+    "tools\\ecg_monitor\\review_r_peak_phase2a.py",
+    "tools\\ecg_monitor\\run_ai_test_only_bench.py",
+    "tools\\ecg_monitor\\summarize_ai_test_only.py",
+    "tools\\ecg_monitor\\validate_offline.py",
+    "tools\\ecg_monitor\\tests\\test_ai_test_only.py",
+    "tools\\ecg_monitor\\tests\\test_ai_unification.py",
+    "tools\\ecg_monitor\\tests\\test_monitor.py",
+    "tools\\ecg_monitor\\tests\\test_phase2b_int8_fix.py",
+    "tools\\ecg_monitor\\tests\\test_research_shadow.py",
+    "firmware\\esp32_ecg_tinyml_integrated\\sdkconfig",
+    "firmware\\esp32_ecg_tinyml_integrated\\sdkconfig.defaults",
+    "firmware\\esp32_ecg_tinyml_integrated\\README.md",
+    "tools\\ecg_monitor\\README.md"
+  ],
+  "deleted": [
+    "tools\\ecg_monitor\\ecg_monitor\\research.py",
+    "tools\\ecg_monitor\\run_research_shadow_bench.py"
+  ],
+  "added": [
+    "tools/ecg_monitor/ecg_monitor/ai.py",
+    "tools/ecg_monitor/bench_flash.py",
+    "tools/ecg_monitor/run_ai_live_bench.py",
+    "tools/ecg_monitor/tests/test_ai_live.py"
+  ],
+  "cache_plan": [
+    {
+      "path": "D:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\tests\\__pycache__",
+      "files": 7,
+      "bytes": 94533
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\python\\__pycache__",
+      "files": 8,
+      "bytes": 212639
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\__pycache__",
+      "files": 14,
+      "bytes": 211558
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\ecg_monitor\\__pycache__",
+      "files": 8,
+      "bytes": 116804
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\tests\\__pycache__",
+      "files": 11,
+      "bytes": 130902
+    }
+  ]
+}

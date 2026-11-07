@@ -1,6 +1,5 @@
 """Resume finalizer: preserves previous evidence; reports measured failures without retuning."""
-from collections import Counter
-import csv,difflib,hashlib,json,re
+import csv, difflib, hashlib, json
 from pathlib import Path
 import numpy as np
 from audit_r_peaks import assignment,rows_from

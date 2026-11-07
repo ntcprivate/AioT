@@ -1,0 +1,33 @@
+{
+    "directories":  5,
+    "files":  48,
+    "bytes":  766414,
+    "deleted":  [
+                    {
+                        "path":  "D:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\tests\\__pycache__",
+                        "files":  7,
+                        "bytes":  94533
+                    },
+                    {
+                        "path":  "D:\\Code Part Two\\AIoT\\python\\__pycache__",
+                        "files":  8,
+                        "bytes":  212639
+                    },
+                    {
+                        "path":  "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\__pycache__",
+                        "files":  14,
+                        "bytes":  211558
+                    },
+                    {
+                        "path":  "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\ecg_monitor\\__pycache__",
+                        "files":  8,
+                        "bytes":  116804
+                    },
+                    {
+                        "path":  "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\tests\\__pycache__",
+                        "files":  11,
+                        "bytes":  130880
+                    }
+                ],
+    "scope":  "Only verified untracked Python bytecode caches inside workspace; no datasets, models, captures, environments, Git or evidence"
+}

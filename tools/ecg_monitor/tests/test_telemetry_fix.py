@@ -133,13 +133,13 @@ class GuiTransitionTests(unittest.TestCase):
         w.session.values[3]=1e18;w.tick();self.assertEqual(len(w.session.values),0);self.assertEqual(w.display_rejections,1)
     def test_synthetic_source_stays_locked(self):
         w=self.w;w.mode.setCurrentIndex(1);w.monitoring=True;w.accept(decode(encode(synthetic(0,0))),'HARDWARE');w.tick()
-        self.assertEqual(w.state.text(),'SYNTHETIC_TEST');self.assertEqual(w.fields['Classification'].text(),'UNKNOWN')
+        self.assertEqual(w.state.text(),'SYNTHETIC_TEST');self.assertEqual(w.ai_fields['Classification'].text(),'UNKNOWN')
         self.assertEqual(w.fields['BPM / RR'].text(),'-- / --')
     def test_synthetic_does_not_hide_system_fault(self):
         w=self.w;w.mode.setCurrentIndex(1);w.monitoring=True
         from test_monitor import status
         w.accept(status(v=2,source='SYNTHETIC_TEST',state='SYSTEM_FAULT',reason='MODEL_OR_GOLDEN_FAILED'),'HARDWARE');w.update_status()
-        self.assertEqual(w.state.text(),'SYSTEM_FAULT');self.assertEqual(w.fields['Classification'].text(),'UNKNOWN')
+        self.assertEqual(w.state.text(),'SYSTEM_FAULT');self.assertEqual(w.ai_fields['Classification'].text(),'UNKNOWN')
     def test_lost_connection_can_connect_again_without_stale_data(self):
         import queue
         from ecg_monitor.protocol import StreamParser

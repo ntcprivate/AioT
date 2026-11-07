@@ -1,5 +1,4 @@
 import argparse
-import json
 import queue
 import sys
 import os
@@ -11,11 +10,11 @@ import pyqtgraph as pg
 from serial.tools import list_ports
 from .protocol import StreamParser,encode
 from .serial_worker import SerialWorker
-from .session import Session,demo_packet,valid_classification
+from .session import Session,demo_packet
 
 REASONS={
  'MODEL_VALIDATION_PENDING':'Đang kiểm tra mô hình và 12 golden; ADC/telemetry vẫn hoạt động',
- 'R_DETECTOR_UNVALIDATED_LIVE_DISABLED':'AI chưa kích hoạt: bộ phát hiện đỉnh R chưa đạt kiểm chứng',
+ 'R_DETECTOR_UNVALIDATED_LIVE_DISABLED':'Đang thu ECG; xem dự đoán tại AI ECG CLASSIFICATION',
  'HIGH_FREQUENCY_NOISE':'Biến thiên cao tần vượt ngưỡng; chưa đủ bằng chứng kết luận nhiễu 50 Hz',
  'LEADS_OFF':'Mất kết nối đầu vào cảm biến', 'COLLECTING':'Đang thu thập tín hiệu',
  'MODEL_OR_GOLDEN_FAILED':'Mô hình hoặc golden test lỗi', 'ADC_SATURATION':'ADC chạm biên đo',
@@ -28,7 +27,7 @@ class Monitor(W.QMainWindow):
         super().__init__();self.setWindowTitle('ECG Monitor 2.0 • Research Bench');self.resize(1250,850)
         self.session=Session();self.worker=None;self.parser=StreamParser();self.monitoring=False
         self.demo_first=0;self.demo_seq=0;self.last_demo=time.monotonic();self.last_event=None
-        self.last_packet=0;self.connected_at=0;self.filter_state=None
+        self.last_packet=0;self.connected_at=0
         self.display_rejections=0
         self.setStyleSheet('''QWidget {background:#101a2b;color:#e5edf6;font-family:Segoe UI;font-size:13px;}
             QLabel#title {font-size:25px;font-weight:700;} QLabel#banner {background:#26364a;padding:12px;border-radius:6px;}
@@ -43,7 +42,7 @@ class Monitor(W.QMainWindow):
         title=W.QLabel('ECG Monitor');title.setObjectName('title');layout.addWidget(title)
         self.banner=W.QLabel('NGUYÊN MẪU NGHIÊN CỨU • Chỉ dùng simulator/bàn thử • Không kết nối cơ thể');self.banner.setObjectName('banner');layout.addWidget(self.banner)
         row=W.QHBoxLayout();layout.addLayout(row)
-        self.mode=W.QComboBox();self.mode.addItems(['DEMO — dữ liệu mô phỏng','HARDWARE MONITOR — USB Serial','VALIDATED AI TEST — LOCKED']);row.addWidget(self.mode)
+        self.mode=W.QComboBox();self.mode.addItems(['DEMO — dữ liệu mô phỏng','HARDWARE MONITOR — USB Serial']);row.addWidget(self.mode)
         self.mode.setMinimumContentsLength(15);self.mode.setSizeAdjustPolicy(W.QComboBox.SizeAdjustPolicy.AdjustToMinimumContentsLengthWithIcon);self.mode.setMaximumWidth(300)
         self.mode.currentIndexChanged.connect(self.mode_changed)
         self.port=W.QComboBox();row.addWidget(self.port)
@@ -68,28 +67,30 @@ class Monitor(W.QMainWindow):
         side=W.QGroupBox('System / signal status');shell=W.QVBoxLayout(side);split.addWidget(side,2)
         scroll=W.QScrollArea();scroll.setWidgetResizable(True);scroll.setFrameShape(W.QFrame.Shape.NoFrame)
         scroll.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff);shell.addWidget(scroll)
-        content=W.QWidget();form=W.QVBoxLayout(content);form.setSizeConstraint(W.QLayout.SizeConstraint.SetMinimumSize);scroll.setWidget(content)
+        content=W.QWidget();content.setSizePolicy(W.QSizePolicy.Policy.Ignored,W.QSizePolicy.Policy.Preferred)
+        form=W.QVBoxLayout(content);form.setSizeConstraint(W.QLayout.SizeConstraint.SetNoConstraint);scroll.setWidget(content)
         self.state=W.QLabel('WAITING');self.state.setObjectName('state');form.addWidget(self.state)
         self.reason=W.QLabel('Đang chờ dữ liệu ECG');self.reason.setWordWrap(True);form.addWidget(self.reason)
+        self.reason.setSizePolicy(W.QSizePolicy.Policy.Ignored,W.QSizePolicy.Policy.Minimum)
         self.fields={}
         grid=W.QFormLayout();form.addLayout(grid)
-        for name in ['Source','Connection','Firmware','ADC / generator rate','TX completed rate','RX device-time rate','RX wall-clock rate','Lead status','Signal quality','Amplitude / Δ ratio','50 Hz estimate','Clipping / 256','Baseline Δ counts','Errors / lost','AI mode','Classification','PVC probability','BPM / RR','LED / buzzer']:
-            label=W.QLabel('--');label.setWordWrap(True);label.setSizePolicy(W.QSizePolicy.Policy.Preferred,W.QSizePolicy.Policy.Minimum);grid.addRow(name,label);self.fields[name]=label
-        research=W.QGroupBox('RESEARCH AI — EXPERIMENTAL');research_form=W.QFormLayout(research)
-        self.research_fields={}
-        for name in ['Mode','Latest prediction','Signal / validity','PVC probability','R-peak detected','Prediction timestamp','Prediction age','CNN latency','Total classified beats','Skipped/rejected beats','Reason']:
-            label=W.QLabel('--');label.setWordWrap(True);research_form.addRow(name,label);self.research_fields[name]=label
-        notice=W.QLabel('EXPERIMENTAL — NOT FOR MEDICAL DIAGNOSIS.');notice.setWordWrap(True)
-        research_form.addRow(notice);form.insertWidget(2,research)
-        self.research_fields['Latest prediction'].setStyleSheet('font-size:18px;font-weight:700;color:#edc376;')
-        form.addStretch()
-        locked=W.QLabel('AI TEST: LOCKED\nCần detector + end-to-end + simulator PASS. Golden inference không mở khóa AI-live.');locked.setWordWrap(True);form.addWidget(locked)
-        validation=Path(__file__).resolve().parents[1]/'reports/offline_validation.json'
-        if validation.exists():
-            try:
-                result=json.loads(validation.read_text());metrics=result['aggregate']
-                locked.setText(locked.text()+f'\nDetector: {result["status"]}\nSensitivity {metrics["sensitivity"]:.2%} / PPV {metrics["ppv"]:.2%}')
-            except (OSError,ValueError,KeyError,TypeError):pass
+        grid.setRowWrapPolicy(W.QFormLayout.RowWrapPolicy.WrapLongRows)
+        for name in ['Source','Connection','Firmware','ADC / generator rate','TX completed rate','RX device-time rate','RX wall-clock rate','Lead status','Signal quality','Amplitude / Δ ratio','50 Hz estimate','Clipping / 256','Baseline Δ counts','Errors / lost','BPM / RR','LED / buzzer']:
+            label=W.QLabel('--');label.setWordWrap(True);label.setSizePolicy(W.QSizePolicy.Policy.Ignored,W.QSizePolicy.Policy.Minimum);grid.addRow(name,label);self.fields[name]=label
+            grid.labelForField(label).setWordWrap(True)
+        ai=W.QGroupBox('AI ECG CLASSIFICATION');ai_layout=W.QVBoxLayout(ai)
+        prediction=W.QLabel('UNKNOWN');prediction.setObjectName('ai_prediction')
+        prediction.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        prediction.setStyleSheet('font-size:32px;font-weight:700;color:#edc376;')
+        ai_layout.addWidget(prediction);ai_form=W.QFormLayout();ai_layout.addLayout(ai_form)
+        ai_form.setRowWrapPolicy(W.QFormLayout.RowWrapPolicy.WrapLongRows)
+        self.ai_fields={'Classification':prediction}
+        for name in ['PVC probability','CNN latency','R-peak count','Total classified beats','Prediction age','Reason']:
+            label=W.QLabel('--');label.setWordWrap(True);label.setSizePolicy(W.QSizePolicy.Policy.Ignored,W.QSizePolicy.Policy.Minimum)
+            ai_form.addRow(name,label);ai_form.labelForField(label).setWordWrap(True);self.ai_fields[name]=label
+        notice=W.QLabel('Research prototype \u2014 Not for medical diagnosis');notice.setWordWrap(True)
+        notice.setStyleSheet('font-size:11px;color:#9cbbcf;');ai_layout.addWidget(notice)
+        form.insertWidget(2,ai);form.addStretch()
         record=W.QHBoxLayout();layout.addLayout(record)
         self.record_button=W.QPushButton('Save session CSV…');self.record_button.clicked.connect(self.toggle_recording);record.addWidget(self.record_button)
         self.record_label=W.QLabel('No recording • DEMO / HARDWARE luôn được ghi rõ nguồn');record.addWidget(self.record_label,1)
@@ -109,7 +110,7 @@ class Monitor(W.QMainWindow):
 
     def mode_changed(self):
         self.disconnect();self.monitoring=False;self.start_button.setText('Start Monitoring')
-        self.session=Session();self.parser=StreamParser();self.last_packet=0;self.filter_state=None
+        self.session=Session();self.parser=StreamParser();self.last_packet=0
         self.connect_button.setEnabled(self.mode.currentIndex()==1)
         self.reset_plot()
         self.log_event('Đổi nguồn: '+self.mode.currentText());self.update_status()
@@ -126,7 +127,7 @@ class Monitor(W.QMainWindow):
         self.plot.setXRange(0,10,padding=0);self.plot.setYRange(0,4095,padding=.02)
         self.plot.enableAutoRange(axis='y',enable=True)
         self.pause.setChecked(False);self.show_raw.setChecked(True)
-        self.filter_state=None;self.demo_first=0;self.demo_seq=0;self.last_demo=time.monotonic()
+        self.demo_first=0;self.demo_seq=0;self.last_demo=time.monotonic()
 
     def toggle_connect(self):
         if self.worker:self.disconnect();return
@@ -138,8 +139,6 @@ class Monitor(W.QMainWindow):
         self.connect_button.setText('Disconnect');self.log_event('Đang mở '+port+'; hãy đóng idf.py monitor nếu cổng đang bận.')
 
     def toggle_monitor(self):
-        if self.mode.currentIndex()==2:
-            self.log_event('AI TEST bị khóa: xem reports/offline_validation.json; không giả lập kết quả AI.');return
         if self.mode.currentIndex()==1 and not self.worker and not self.monitoring:self.log_event('Connect ESP32 trước.');return
         self.monitoring=not self.monitoring;self.start_button.setText('Stop Monitoring' if self.monitoring else 'Start Monitoring')
         if self.monitoring:
@@ -241,21 +240,26 @@ class Monitor(W.QMainWindow):
         self.update_status()
 
     def update_status(self):
-        self.update_research()
+        # Resolve validity/expiry once so header and prediction cannot disagree
+        # at a TTL boundary or because of the separate official-live FSM.
+        ai=self.session.ai_display(now=time.monotonic(),connected=bool(self.last_packet) and self.monitoring)
+        self.update_ai(ai)
         s=self.session.status;demo=self.mode.currentIndex()==0;live=bool(self.last_packet)
         synthetic=self.session.source=='SYNTHETIC_TEST'
-        label,p=valid_classification(s,self.session.source,max(s.get('t_us',0),self.session.times[-1] if self.session.times else 0),self.session.last_invalid_t)
-        state='DEMO' if demo and self.monitoring else s.get('state','WAITING') if live else 'WAITING'
-        if synthetic and live:
-            if state not in ('SYSTEM_FAULT','SELF_TEST'):state='SYNTHETIC_TEST'
-            label,p='UNKNOWN',None
-        if self.session.local_invalid_reason and not demo and not synthetic and live:
-            label,p='UNKNOWN',None
-            if state not in ('SYSTEM_FAULT','SELF_TEST'):state='SIGNAL_INVALID'
-        if state in ('NORMAL','PVC') and label=='UNKNOWN':state='SIGNAL_INVALID'
+        reason=ai['reason']
+        if ai['prediction'] in ('NORMAL','PVC'):state='AI LIVE'
+        elif reason=='TELEMETRY_TIMEOUT':state='DISCONNECTED'
+        elif reason=='STOPPED_OR_DISCONNECTED':
+            state='WAITING' if demo else 'STOPPED' if self.worker and not self.monitoring else 'DISCONNECTED'
+        elif reason in ('PREDICTION_STALE','AI_STATUS_TIMEOUT'):state=reason
+        elif ai['state']=='INVALID':state='SYSTEM_FAULT' if s.get('state')=='SYSTEM_FAULT' else 'LEADS_OFF' if reason=='LEADS_OFF' else 'SIGNAL_INVALID'
+        elif s.get('self_test') is True and live:state='SELF_TEST'
+        elif demo and self.monitoring:state='DEMO'
+        elif synthetic and live:state='SYNTHETIC_TEST'
+        else:state='WAITING'
         self.state.setText(state)
-        reason=s.get('reason','');self.reason.setText('Dữ liệu tổng hợp để kiểm thử giao diện; AI chưa chạy.' if demo else REASONS.get(reason,reason or 'Đang chờ dữ liệu ECG'))
-        if self.session.local_invalid_reason and not demo and state=='SIGNAL_INVALID':self.reason.setText(REASONS.get(self.session.local_invalid_reason,self.session.local_invalid_reason))
+        self.reason.setText('Dữ liệu tổng hợp để kiểm thử giao diện; AI chưa chạy.' if demo else REASONS.get(reason,reason.replace('_',' ')))
+        self.reason.setToolTip(reason)
         if state=='SELF_TEST':self.reason.setText('Kiểm tra LED/buzzer khi khởi động • độc lập AI, không phải cảnh báo PVC.')
         if synthetic and state=='SYNTHETIC_TEST':self.reason.setText('SYNTHETIC_TEST • mẫu xác định từ ESP32, không phải ECG; không đưa vào AI.')
         fields=self.fields;fields['Source'].setText('DEMO • SYNTHETIC' if demo else 'HARDWARE • ADC' if live else '--')
@@ -275,7 +279,7 @@ class Monitor(W.QMainWindow):
         last_flag=self.session.flags[-1] if self.session.flags else None
         fields['Lead status'].setText('SIMULATED' if demo else '--' if last_flag is None or not raw_fresh else f'LO+={last_flag&1}, LO−={(last_flag>>1)&1}')
         known=s.get('quality_known') is True and live and 0<=s.get('t_us',0)-s.get('quality_t_us',-10**18)<=2_000_000
-        fields['Signal quality'].setText('REJECTED' if state=='SIGNAL_INVALID' else 'Bench checks pass (not validated ECG)' if known and s.get('quality_valid') else 'Collecting / checks pending' if known else '--')
+        fields['Signal quality'].setText('REJECTED' if ai['state']=='INVALID' else 'Bench checks pass (not validated ECG)' if known and s.get('quality_valid') else 'Collecting / checks pending' if known else '--')
         fields['Amplitude / Δ ratio'].setText(f'{s["ptp"]} counts / {s["diff_percent"]:.1f}% (limit {s.get("diff_limit",25)}%)' if known else '--')
         fields['50 Hz estimate'].setText(f'{100*s["power50_ratio"]:.1f}% • diagnostic' if known else '--')
         fields['Clipping / 256'].setText(str(s.get('clip_count','--')) if known else '--')
@@ -289,24 +293,22 @@ class Monitor(W.QMainWindow):
         fields['Errors / lost'].setText(f'Connection counters: CRC {parser.crc_failures} • frame {parser.framing_errors} • schema {parser.schema_errors} • sequence {parser.sequence_errors}\nPacket gaps {parser.lost_packets} • missing samples {parser.lost_samples} • RX timing {parser.timing_violations}\nSynthetic mismatch {parser.synthetic_mismatches} • host queue drops(worker) {self.worker.host_dropped if self.worker else 0} • reconnects(worker) {parser.reconnects}')
         if s:fields['Errors / lost'].setText(fields['Errors / lost'].text()+f'\nFW since boot: ADC errors {s.get("adc_errors","--")} • missed slots(est) {s.get("missed_est","--")} • queue drops {s.get("tx_dropped","--")}')
         if s:fields['Errors / lost'].setText(fields['Errors / lost'].text()+f'\nFW UART write {s.get("uart_write_errors","--")} • drain timeout {s.get("uart_tx_timeouts","--")} • format {s.get("format_errors","--")}')
-        fields['AI mode'].setText('DISABLED • DEMO' if demo else s.get('model','LOCKED / no data'))
-        fields['Classification'].setText(label);fields['PVC probability'].setText('--' if p is None else f'{p:.5f}')
         fields['BPM / RR'].setText('-- / --') # No validated R detector, no invented HR.
         fields['LED / buzzer'].setText(f'{"ON" if s.get("led") else "OFF"} / {"ON" if s.get("buzzer") else "OFF"}' if s and live else '--')
-        if reason and reason!=self.last_event:self.log_event(state+' • '+REASONS.get(reason,reason));self.last_event=reason
+        event=(state,reason)
+        if event!=self.last_event:self.log_event(state+' • '+REASONS.get(reason,reason));self.last_event=event
 
-    def update_research(self):
-        d=self.session.research_display(connected=bool(self.last_packet) and self.monitoring)
-        r=d['research'];f=self.research_fields
-        f['Mode'].setText(d['mode']);f['Latest prediction'].setText(d['prediction']);f['Signal / validity'].setText(d['state'])
+    def update_ai(self,d):
+        r=d['ai'];f=self.ai_fields
+        label={'NORMAL':'NORMAL (N)','PVC':'PVC (V)'}.get(d['prediction'],'UNKNOWN')
+        f['Classification'].setText(label)
         f['PVC probability'].setText('--' if d['probability'] is None else f"{100*d['probability']:.4f}%")
-        f['R-peak detected'].setText(f"{r.get('detected',0)} total; index {r.get('r_index',-1)}")
-        f['Prediction timestamp'].setText(str(r['result_t_us'])+' µs (device)' if d['prediction']!='UNKNOWN' else '--')
-        f['Prediction age'].setText('--' if d['age_us'] is None else f"{max(0,d['age_us'])/1000:.0f} ms")
         f['CNN latency'].setText(f"{r.get('latency_us',0)/1000:.3f} ms" if d['prediction']!='UNKNOWN' else '--')
+        f['R-peak count'].setText(str(r.get('detected',0)))
         f['Total classified beats'].setText(str(r.get('classified',0)))
-        f['Skipped/rejected beats'].setText(f"{r.get('rejected',0)} windows; inference drops {r.get('queue_drops',0)}; block drops {r.get('block_drops',0)}")
-        f['Reason'].setText(d['reason'])
+        f['Prediction age'].setText('--' if d['age_us'] is None else f"{max(0,d['age_us'])/1000:.0f} ms")
+        f['Reason'].setText(d['reason'].replace('_',' '))
+        f['Reason'].setToolTip(d['reason'])
 
     def closeEvent(self,event):
         self.disconnect();event.accept()

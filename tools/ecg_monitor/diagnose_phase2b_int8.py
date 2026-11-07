@@ -1,5 +1,5 @@
 """Resume2B: inspect existing mismatches, using identical INT8 input at both runtimes."""
-import argparse,hashlib,json,subprocess,sys,math
+import argparse, hashlib, json, subprocess, math
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2];FW=ROOT/'firmware/esp32_ecg_tinyml_integrated';OUT=FW/'debug/r_peak_phase2b/int8_diagnosis'

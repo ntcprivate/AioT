@@ -1,0 +1,200 @@
+{
+  "owned_source_files": 138,
+  "python_syntax_errors": [],
+  "unused_import_candidates": [
+    {
+      "path": "tools\\ecg_monitor\\complete_r_peak_phase2b.py",
+      "candidates": [
+        "Counter",
+        "re"
+      ],
+      "decision": "Confirmed unused imports removed: re"
+    },
+    {
+      "path": "tools\\ecg_monitor\\diagnose_phase2b_int8.py",
+      "candidates": [
+        "sys"
+      ],
+      "decision": "Confirmed unused imports removed: sys"
+    },
+    {
+      "path": "tools\\ecg_monitor\\final_ai_readiness_review.py",
+      "candidates": [
+        "defaultdict"
+      ],
+      "decision": "Confirmed unused imports removed: defaultdict"
+    },
+    {
+      "path": "tools\\ecg_monitor\\report_research_shadow.py",
+      "candidates": [
+        "hashlib",
+        "re",
+        "Path"
+      ],
+      "decision": "Confirmed unused imports removed: Path"
+    },
+    {
+      "path": "tools\\ecg_monitor\\report_r_peak_phase2a.py",
+      "candidates": [
+        "Counter"
+      ],
+      "decision": "Confirmed unused imports removed: Counter"
+    },
+    {
+      "path": "tools\\ecg_monitor\\review_r_peak_phase2a.py",
+      "candidates": [
+        "csv",
+        "subprocess"
+      ],
+      "decision": "Confirmed unused imports removed: subprocess"
+    },
+    {
+      "path": "tools\\ecg_monitor\\summarize_ai_test_only.py",
+      "candidates": [
+        "hashlib"
+      ],
+      "decision": "Confirmed unused imports removed: hashlib"
+    },
+    {
+      "path": "tools\\ecg_monitor\\validate_offline.py",
+      "candidates": [
+        "bisect",
+        "sys"
+      ],
+      "decision": "Removed earlier from touched file; source retained"
+    },
+    {
+      "path": "tools\\ecg_monitor\\tests\\test_monitor.py",
+      "candidates": [
+        "json",
+        "os"
+      ],
+      "decision": "Removed earlier from touched file; source retained"
+    },
+    {
+      "path": "tools\\ecg_monitor\\tests\\test_phase2b_int8_fix.py",
+      "candidates": [
+        "np"
+      ],
+      "decision": "Confirmed unused imports removed: np"
+    }
+  ],
+  "duplicate_source_groups": [
+    [
+      "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_metadata.h",
+      "firmware\\esp32_tinyml_step8\\main\\test_data\\ecg_test_metadata.h"
+    ]
+  ],
+  "caches": [
+    "D:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\tests\\__pycache__",
+    "D:\\Code Part Two\\AIoT\\python\\__pycache__",
+    "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\__pycache__",
+    "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\ecg_monitor\\__pycache__",
+    "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\tests\\__pycache__"
+  ],
+  "format_only_rewrites_undone": [
+    "tools\\ecg_monitor\\ecg_monitor\\offline.py",
+    "tools\\ecg_monitor\\ecg_monitor\\serial_worker.py",
+    "tools\\ecg_monitor\\ecg_monitor\\__init__.py",
+    "tools\\ecg_monitor\\audit_r_peaks.py",
+    "tools\\ecg_monitor\\benchmark_transport.py",
+    "tools\\ecg_monitor\\complete_r_peak_phase2b.py",
+    "tools\\ecg_monitor\\develop_r_peak_phase2b.py",
+    "tools\\ecg_monitor\\develop_r_peak_phase2b_confirmation.py",
+    "tools\\ecg_monitor\\develop_r_peak_phase2b_ratio.py",
+    "tools\\ecg_monitor\\diagnose_capture.py",
+    "tools\\ecg_monitor\\diagnose_phase2b_int8.py",
+    "tools\\ecg_monitor\\enrich_ai_readiness.py",
+    "tools\\ecg_monitor\\evaluate_r_peak_phase2b.py",
+    "tools\\ecg_monitor\\final_ai_readiness_review.py",
+    "tools\\ecg_monitor\\generate_ai_test_only_fixtures.py",
+    "tools\\ecg_monitor\\readiness_float32_probe.py",
+    "tools\\ecg_monitor\\report_research_shadow.py",
+    "tools\\ecg_monitor\\report_r_peak_phase2a.py",
+    "tools\\ecg_monitor\\report_r_peak_phase2b.py",
+    "tools\\ecg_monitor\\review_r_peak_phase2a.py",
+    "tools\\ecg_monitor\\run.py",
+    "tools\\ecg_monitor\\r_peak_audit_report.py",
+    "tools\\ecg_monitor\\summarize_ai_test_only.py",
+    "tools\\ecg_monitor\\validate_phase2a_parity.py",
+    "tools\\ecg_monitor\\validate_reference.py",
+    "tools\\ecg_monitor\\verify_phase2b_int8_fix.py",
+    "tools\\ecg_monitor\\verify_shadow_replay.py",
+    "tools\\ecg_monitor\\write_final_ai_readiness_report.py",
+    "tools\\ecg_monitor\\tests\\test_phase2a_windows.py",
+    "tools\\ecg_monitor\\tests\\test_phase2b_detector.py",
+    "tools\\ecg_monitor\\tests\\test_phase2b_int8_fix.py",
+    "tools\\ecg_monitor\\tests\\test_r_peak_audit.py"
+  ],
+  "preservation": "No dataset/model/environment/history/evidence/build snapshot removed; source duplicates retained if referenced or uncertain",
+  "confirmed_unused_imports_removed": [
+    {
+      "path": "tools\\ecg_monitor\\complete_r_peak_phase2b.py",
+      "imports": [
+        "Counter"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\complete_r_peak_phase2b.py",
+      "imports": [
+        "re"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\diagnose_phase2b_int8.py",
+      "imports": [
+        "sys"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\final_ai_readiness_review.py",
+      "imports": [
+        "defaultdict"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\report_research_shadow.py",
+      "imports": [
+        "hashlib",
+        "re"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\report_research_shadow.py",
+      "imports": [
+        "Path"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\report_r_peak_phase2a.py",
+      "imports": [
+        "Counter"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\review_r_peak_phase2a.py",
+      "imports": [
+        "csv"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\review_r_peak_phase2a.py",
+      "imports": [
+        "subprocess"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\summarize_ai_test_only.py",
+      "imports": [
+        "hashlib"
+      ]
+    },
+    {
+      "path": "tools\\ecg_monitor\\tests\\test_phase2b_int8_fix.py",
+      "imports": [
+        "np"
+      ]
+    }
+  ],
+  "uncertain_imports_retained": []
+}

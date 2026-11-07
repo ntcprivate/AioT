@@ -17,5 +17,5 @@ struct PipelineTelemetry {
 };
 PipelineTelemetry pipeline_telemetry();
 
-// Optional nested research object, never official classification fields.
-int pipeline_research_json(char* output,size_t capacity);
+// Single inference payload shared by GUI and CSV.
+int pipeline_ai_json(char* output,size_t capacity);

@@ -1,6 +1,5 @@
 """Summarize actual saved host/replay/board evidence without promoting PENDING."""
-import hashlib,json,re
-from pathlib import Path
+import json
 from run_ai_test_only_bench import FW,ROOT,sha
 from summarize_ai_test_only import read_log,timestamps
 OUT=FW/'debug/research_shadow'

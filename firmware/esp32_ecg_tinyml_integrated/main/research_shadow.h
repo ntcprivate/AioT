@@ -2,13 +2,13 @@
 #include "signal.h"
 #include <cstdint>
 #include <cmath>
-namespace research {
+namespace ecg_ai {
 constexpr int64_t kResultLifetimeUs=1500000,kMaxWindowAgeUs=1500000;
 struct View {
     const char* state="UNKNOWN";const char* reason="MODEL_VALIDATION_PENDING";
     float probability=0;bool has_result=false;
     int64_t r_sample=-1,r_us=0,window_end_us=0,result_us=0,valid_until_us=0,latency_us=0,prep_us=0;
-    uint32_t classified=0,rejected=0,queue_drops=0,invalid_blocks=0,block_drops=0,inference_calls=0;
+    uint32_t classified=0,rejected=0,queue_drops=0,block_drops=0,inference_calls=0;
     uint32_t detected=0,queue_depth=0,queue_high_water=0,heap_free=0,heap_min=0,stack_free=0;
 };
 inline void clear(View& v,const char* reason,bool invalid=false) {
@@ -22,7 +22,7 @@ inline bool publish(View& v,float score,int64_t now,int64_t r_sample,int64_t r_u
     if(!safe || !std::isfinite(score) || score<0 || score>1 || now<end_us || now-end_us>kMaxWindowAgeUs) {
         ++v.rejected;clear(v,safe?"BEAT_TOO_OLD":"SIGNAL_CHANGED_DURING_INFERENCE");return false;
     }
-    ++v.classified;v.has_result=true;v.state=score>=0.52f?"PVC":"NORMAL";v.reason="CNN_RESEARCH_PREDICTION";
+    ++v.classified;v.has_result=true;v.state=score>=0.52f?"PVC":"NORMAL";v.reason="CNN_PREDICTION";
     v.probability=score;v.r_sample=r_sample;v.r_us=r_us;v.window_end_us=end_us;v.result_us=now;
     v.valid_until_us=now+kResultLifetimeUs;v.latency_us=latency;v.prep_us=prep;return true;
 }
@@ -43,7 +43,7 @@ public:
         if(detector_.push(raw,time,scratch_.raw,issue)) {
             const auto& info=detector_.last_window();scratch_.r_sample=info.center_sample+offset_;scratch_.r_us=info.center_timestamp;
             scratch_.end_us=time;scratch_.generation=generation;
-            if(!enqueue(scratch_))return "SHADOW_QUEUE_FULL";
+            if(!enqueue(scratch_))return "INFERENCE_QUEUE_FULL";
         }
         return issue;
     }
@@ -58,4 +58,4 @@ private:
     BeatDetector detector_;Window queue_[kCapacity]={},scratch_={};unsigned head_=0,size_=0;
     bool aligned_=false;int64_t offset_=0;
 };
-} // namespace research
+} // namespace ecg_ai

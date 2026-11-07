@@ -1320,3 +1320,30 @@
 7742	7981	8156941578102844	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/.bin_timestamp	8900c53dabf798c5
 7981	8070	8156941578153021	esp-idf/esptool_py/CMakeFiles/app_check_size	cbe6340dc87f8194
 7981	8070	8156941578153021	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/esp-idf/esptool_py/CMakeFiles/app_check_size	cbe6340dc87f8194
+126	515	8157259646058551	esp-idf/main/CMakeFiles/__idf_main.dir/telemetry.cpp.obj	f9b99a5579c7363a
+515	595	8157259649954373	esp-idf/main/CMakeFiles/__idf_main.dir/ai_test_only.cpp.obj	c9afd0a0b4940eba
+115	689	8157259645945601	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c8c3d0a742ced442
+119	759	8157259645995677	esp-idf/main/CMakeFiles/__idf_main.dir/pipeline.cpp.obj	6b33039ab2684b6
+595	772	8157259650743993	bootloader-prefix/src/bootloader-stamp/bootloader-build	bd97a5be8b9774a1
+595	772	8157259650743993	bootloader/bootloader.elf	bd97a5be8b9774a1
+595	772	8157259650743993	bootloader/bootloader.bin	bd97a5be8b9774a1
+595	772	8157259650743993	bootloader/bootloader.map	bd97a5be8b9774a1
+595	772	8157259650743993	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/bootloader-prefix/src/bootloader-stamp/bootloader-build	bd97a5be8b9774a1
+595	772	8157259650743993	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/bootloader/bootloader.elf	bd97a5be8b9774a1
+595	772	8157259650743993	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/bootloader/bootloader.bin	bd97a5be8b9774a1
+595	772	8157259650743993	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/bootloader/bootloader.map	bd97a5be8b9774a1
+773	804	8157259652524460	bootloader-prefix/src/bootloader-stamp/bootloader-install	a8f945185fe6b4e1
+773	804	8157259652524460	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/bootloader-prefix/src/bootloader-stamp/bootloader-install	a8f945185fe6b4e1
+804	882	8157259653542461	CMakeFiles/bootloader-complete	c840822b08f379b5
+804	882	8157259653542461	bootloader-prefix/src/bootloader-stamp/bootloader-done	c840822b08f379b5
+804	882	8157259653542461	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/CMakeFiles/bootloader-complete	c840822b08f379b5
+804	882	8157259653542461	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/bootloader-prefix/src/bootloader-stamp/bootloader-done	c840822b08f379b5
+122	6023	8157259646025669	esp-idf/main/CMakeFiles/__idf_main.dir/model.cpp.obj	3b34bd809420eca4
+6023	6137	8157259705033010	esp-idf/main/libmain.a	f07e4ea9acee6d14
+6138	13496	8157259778904876	esp-idf/esp_system/ld/sections.ld	4bd1a66a4422f01b
+6138	13496	8157259778904876	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/esp-idf/esp_system/ld/sections.ld	4bd1a66a4422f01b
+13496	14593	8157259779763532	esp32_ecg_tinyml_integrated.elf	7a38bebebff31f41
+14594	14860	8157259793333398	.bin_timestamp	8900c53dabf798c5
+14594	14860	8157259793333398	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/.bin_timestamp	8900c53dabf798c5
+14860	14960	8157259793398895	esp-idf/esptool_py/CMakeFiles/app_check_size	cbe6340dc87f8194
+14860	14960	8157259793398895	D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_synthetic_telemetry_test/esp-idf/esptool_py/CMakeFiles/app_check_size	cbe6340dc87f8194

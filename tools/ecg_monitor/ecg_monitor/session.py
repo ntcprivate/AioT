@@ -7,23 +7,9 @@ from datetime import datetime,timezone
 from pathlib import Path
 
 
-def valid_classification(status, source, now_us, invalid_since=None):
-    """Fail closed independently of display mode or labels sent by firmware."""
-    result_time=status.get('result_t_us')
-    if type(result_time) is not int:return 'UNKNOWN',None
-    if invalid_since is not None and result_time<=invalid_since:return 'UNKNOWN',None
-    age=now_us-result_time
-    p=status.get('p_pvc')
-    valid=(source=='HARDWARE' and status.get('source')=='HARDWARE' and
-           status.get('model')=='RUNNING' and status.get('ai_validated') is True and
-           status.get('r_validated') is True and status.get('golden') is True and
-           status.get('quality_valid') is True and status.get('self_test') is not True and
-           status.get('classification') in ('NORMAL','PVC') and
-           status.get('state')==status.get('classification') and 0<=age<=1_500_000 and
-           type(p) in (int,float) and math.isfinite(p) and 0<=p<=1)
-    if not valid:return 'UNKNOWN',None
-    label='PVC' if p>=0.52 else 'NORMAL'
-    return (label,p) if label==status['classification'] else ('UNKNOWN',None)
+def valid_classification(status,source,now_us,invalid_since=None,min_result_us=None):
+    from .ai import classification
+    return classification(status,source,now_us,invalid_since,min_result_us)
 
 
 class Session:
@@ -38,7 +24,7 @@ class Session:
         self.transport_stats={}
         self.arrivals=deque(maxlen=256)
         self.origin_us=None
-        self.research_epoch_us=None
+        self.prediction_epoch_us=None
 
     def disconnect(self):
         self.status={};self.last_received=0;self.last_samples_received=0;self.last_status_us=None;self.boot=None
@@ -46,7 +32,7 @@ class Session:
         self.local_invalid_reason=None;self.local_invalid_t=None;self.last_invalid_t=None
         self.arrivals=deque(maxlen=256)
         self.origin_us=None
-        self.research_epoch_us=None
+        self.prediction_epoch_us=None
 
     def consume(self,p,source):
         if p['type']=='samples':
@@ -63,17 +49,16 @@ class Session:
             self.local_invalid_reason=None;self.local_invalid_t=None;self.last_invalid_t=None
             self.arrivals.clear();self.total=0;self.adc_errors=0;self.missed_flags=0
             self.origin_us=None
-            self.research_epoch_us=None
+            self.prediction_epoch_us=None
         self.boot=p['boot'];self.source=source;self.last_received=time.monotonic()
-        if self.research_epoch_us is None:
-            self.research_epoch_us=p['t_us'] if p['type']=='status' else p['samples'][0][0]
+        if self.prediction_epoch_us is None:
+            self.prediction_epoch_us=p['t_us'] if p['type']=='status' else p['samples'][0][0]
         if p['type']=='status':
             self.status=p;self.last_status_us=p['t_us']
             if self.local_invalid_t is not None and p.get('quality_valid') is True and p.get('quality_t_us',-1)>self.local_invalid_t:
                 self.local_invalid_reason=None;self.local_invalid_t=None
             return
         self.last_samples_received=time.monotonic()
-        if not hasattr(self,'arrivals'):self.arrivals=deque(maxlen=256)
         self.arrivals.append((p.get('_received_monotonic',self.last_samples_received),len(p['samples'])))
         if self.last_status_us is not None and p['samples'][-1][0]-self.last_status_us>2_000_000:self.status={}
         for index,(t,raw,flags) in enumerate(p['samples']):
@@ -88,7 +73,7 @@ class Session:
             self.times.append(t);self.values.append(raw if raw<=4095 else float('nan'));self.flags.append(flags)
             self.total+=1;self.adc_errors+=bool(flags&4);self.missed_flags+=bool(flags&8)
             if self.writer:
-                label,prob=valid_classification(self.status,source,t,self.last_invalid_t)
+                label,prob=valid_classification(self.status,source,t,self.last_invalid_t,self.prediction_epoch_us)
                 if self.local_invalid_reason:label,prob='UNKNOWN',None
                 try:
                     self.writer.writerow([source,self.boot,p['seq'],p['first']+index,t,raw,flags&1,(flags>>1)&1,bool(flags&4),bool(flags&8),
@@ -105,8 +90,8 @@ class Session:
             try:self.csv.flush()
             except OSError as error:self._record_failed(error)
 
-    def research_display(self,now=None,connected=True):
-        from .research import display
+    def ai_display(self,now=None,connected=True):
+        from .ai import display
         return display(self,time.monotonic() if now is None else now,connected)
 
     def received_wall_rate(self,now=None):

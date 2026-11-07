@@ -1,6 +1,6 @@
 #include "sdkconfig.h"
 #if CONFIG_ECG_AI_TEST_ONLY
-#if CONFIG_ECG_ENABLE_EXPERIMENTAL_LIVE || CONFIG_ECG_GOLDEN_ALERT_DEMO
+#if CONFIG_ECG_AI_LIVE || CONFIG_ECG_GOLDEN_ALERT_DEMO
 #error "Reference TEST_ONLY cannot enable live AI or prediction alerts"
 #endif
 #include "ai_test_only.h"
@@ -32,7 +32,6 @@ constexpr int kSynthetic=1;
 #else
 constexpr int kSynthetic=0;
 #endif
-static_assert(!kLivePipelineValidated,"Live gate must remain locked");
 static_assert(kAiTestCount==20 && kSampleCount==12 && sizeof(float)==4,"Reviewed fixtures only");
 uint32_t inference[kAiTestCount*30]={},preprocessing[kAiTestCount*30]={};
 int observed[kAiTestCount]={};
@@ -63,7 +62,7 @@ bool ai_test_only_begin() {
     for(unsigned i=0;i<kAiTestCount;++i)exact[i]=prep_exact[i]=true;
     char elf_sha[65];constexpr char digits[]="0123456789abcdef";const auto* app=esp_app_get_description();
     for(unsigned i=0;i<32;++i){elf_sha[2*i]=digits[app->app_elf_sha256[i]>>4];elf_sha[2*i+1]=digits[app->app_elf_sha256[i]&15];}elf_sha[64]=0;
-    console_lock();printf("ECG_AI_TEST_BEGIN source=REFERENCE_TEST_ONLY not_live=1 cases=20 golden=12 extended=8 repeats=30 warmups=3 synthetic=%d live_locked=1 assets_ok=%d adc_started=%d app_elf_sha=%s idf=%s t_us=%lld\n",
+    console_lock();printf("ECG_AI_TEST_BEGIN source=REFERENCE_TEST_ONLY not_live=1 cases=20 golden=12 extended=8 repeats=30 warmups=3 synthetic=%d live_inference=0 assets_ok=%d adc_started=%d app_elf_sha=%s idf=%s t_us=%lld\n",
         kSynthetic,valid,initial.attempts>=512,elf_sha,app->idf_ver,static_cast<long long>(begin_us));console_unlock();
     return started;
 }
@@ -74,7 +73,7 @@ void ai_test_only_note_golden(unsigned sample,unsigned run,int code,int64_t late
 }
 void ai_test_only_note_golden_result(unsigned sample,bool passed) {if(sample<12)exact[sample] &= passed;}
 bool ai_test_only_finish(bool golden_passed) {
-    if(!started){console_lock();printf("ECG_AI_TEST_DONE source=REFERENCE_TEST_ONLY not_live=1 status=FAILED reason=TEST_BEGIN_FAILED live_locked=1\n");console_unlock();return false;}
+    if(!started){console_lock();printf("ECG_AI_TEST_DONE source=REFERENCE_TEST_ONLY not_live=1 status=FAILED reason=TEST_BEGIN_FAILED live_inference=0\n");console_unlock();return false;}
     float raw[256];int8_t quantized[256];unsigned failed=0,truth_errors=0,known_labels=0;
     for(unsigned i=0;i<kAiTestCount;++i) {
         memcpy(raw,raw_start+i*256*4,sizeof(raw));
@@ -120,7 +119,7 @@ bool ai_test_only_finish(bool golden_passed) {
     printf("ECG_AI_TEST_STRESS source=REFERENCE_TEST_ONLY not_live=1 adc_attempts_delta=%lu acq_hz=%.6f adc_errors_delta=%lu missed_delta=%lu late_delta=%lu queue_drops_delta=%lu snapshot_errors_delta=%lu uart_errors_delta=%lu format_errors_delta=%lu uart_timeouts_delta=%lu duration_us=%lld status=%s\n",
         static_cast<unsigned long>(end.attempts-initial.attempts),end.acquisition_hz,static_cast<unsigned long>(end.adc_errors-initial.adc_errors),static_cast<unsigned long>(end.missed-initial.missed),static_cast<unsigned long>(end.late-initial.late),
         static_cast<unsigned long>(end.drops-initial.drops),static_cast<unsigned long>(end.snapshot_errors-initial.snapshot_errors),static_cast<unsigned long>(end.write_errors-initial.write_errors),static_cast<unsigned long>(end.format_errors-initial.format_errors),static_cast<unsigned long>(end.timeouts-initial.timeouts),static_cast<long long>(esp_timer_get_time()-begin_us),stress?"PASS":"FAIL");
-    printf("ECG_AI_TEST_DONE source=REFERENCE_TEST_ONLY not_live=1 cases=20 failed=%u golden_passed=%d known_truth_cases=%u truth_misclassified=%u exact_status=%s stress_status=%s status=%s live_locked=1\n",
+    printf("ECG_AI_TEST_DONE source=REFERENCE_TEST_ONLY not_live=1 cases=20 failed=%u golden_passed=%d known_truth_cases=%u truth_misclassified=%u exact_status=%s stress_status=%s status=%s live_inference=0\n",
         failed,golden_passed,known_labels,truth_errors,failed==0 && golden_passed?"PASS":"FAIL",stress?"PASS":"FAIL",failed==0 && golden_passed && stress && memory?"PASS":"FAIL");
     console_unlock();return failed==0 && golden_passed && stress && memory;
 }

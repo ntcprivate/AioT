@@ -36,7 +36,7 @@ uint32_t uart_baud_actual=0;
 struct Completion {uint32_t samples;int64_t time;};
 Completion completed[32]={};unsigned completed_count=0,completed_next=0;
 bool emit(const char* json) {
-#if CONFIG_ECG_RESEARCH_SHADOW
+#if CONFIG_ECG_AI_LIVE
     static char framed[3300]; // Sole TX owner; keep extra payload off 6KiB stack.
 #else
     char framed[1800];
@@ -53,7 +53,7 @@ bool emit(const char* json) {
 }
 [[maybe_unused]] void tx_task(void*) {
     Packet packet;
-#if CONFIG_ECG_RESEARCH_SHADOW
+#if CONFIG_ECG_AI_LIVE
     static char json[3072];
 #else
     char json[1600];
@@ -88,8 +88,8 @@ bool emit(const char* json) {
                 const auto& last=completed[(completed_next+31)%32];
                 if(last.time>first.time)snprintf(txhz,sizeof(txhz),"%.6f",static_cast<uint32_t>(last.samples-first.samples)*1000000.0/(last.time-first.time));
             }
-            const int n=snprintf(json,sizeof(json),"{\"v\":2,\"type\":\"status\",\"boot\":\"%08lx\",\"seq\":%lu,\"t_us\":%lld,\"firmware\":\"ecg-monitor-2\",\"source\":\"%s\",\"state\":\"%s\",\"reason\":\"%s\",\"model\":\"%s\",\"golden\":%s,\"classification\":\"UNKNOWN\",\"p_pvc\":null,\"threshold\":0.52,\"r_validated\":false,\"bpm\":null,\"rr_ms\":null,\"led\":%s,\"buzzer\":%s,\"self_test\":%s,\"clip_count\":%lu,\"ptp\":%d,\"diff_percent\":%.4f,\"power50_ratio\":%.6f,\"baseline_delta\":%.4f,\"quality_known\":%s,\"quality_t_us\":%lld,\"tx_dropped\":%lu,\"write_errors\":%lu}",
-                static_cast<unsigned long>(boot),static_cast<unsigned long>(sequence++),static_cast<long long>(now),kSource,s.state,kSynthetic && strcmp(s.state,"SYSTEM_FAULT")!=0?"SYNTHETIC_TELEMETRY_TEST":s.reason,s.model_ready?"LOCKED":"DISABLED",s.model_ready?"true":"false",s.led?"true":"false",s.buzzer?"true":"false",s.self_test?"true":"false",static_cast<unsigned long>(s.clips),s.ptp,s.diff_percent,s.power50_ratio,s.baseline_delta,s.quality_known?"true":"false",static_cast<long long>(s.quality_time),static_cast<unsigned long>(dropped.load()),static_cast<unsigned long>(write_errors.load()));
+            const int n=snprintf(json,sizeof(json),"{\"v\":2,\"type\":\"status\",\"boot\":\"%08lx\",\"seq\":%lu,\"t_us\":%lld,\"firmware\":\"ecg-monitor-2\",\"source\":\"%s\",\"state\":\"%s\",\"reason\":\"%s\",\"model\":\"%s\",\"golden\":%s,\"threshold\":0.52,\"bpm\":null,\"rr_ms\":null,\"led\":%s,\"buzzer\":%s,\"self_test\":%s,\"clip_count\":%lu,\"ptp\":%d,\"diff_percent\":%.4f,\"power50_ratio\":%.6f,\"baseline_delta\":%.4f,\"quality_known\":%s,\"quality_t_us\":%lld,\"tx_dropped\":%lu,\"write_errors\":%lu}",
+                static_cast<unsigned long>(boot),static_cast<unsigned long>(sequence++),static_cast<long long>(now),kSource,s.state,kSynthetic && strcmp(s.state,"SYSTEM_FAULT")!=0?"SYNTHETIC_TELEMETRY_TEST":s.reason,s.model_ready?"READY":"DISABLED",s.model_ready?"true":"false",s.led?"true":"false",s.buzzer?"true":"false",s.self_test?"true":"false",static_cast<unsigned long>(s.clips),s.ptp,s.diff_percent,s.power50_ratio,s.baseline_delta,s.quality_known?"true":"false",static_cast<long long>(s.quality_time),static_cast<unsigned long>(dropped.load()),static_cast<unsigned long>(write_errors.load()));
             // Append cumulative sampler health before the closing brace.
             if(n>0 && static_cast<size_t>(n)<sizeof(json)) {
                 const int extra=snprintf(json+n-1,sizeof(json)-n+1,",\"quality_valid\":%s,\"r_peaks\":[],\"adc_errors\":%lu,\"missed_est\":%lu,\"late\":%lu,\"snapshot_errors\":%lu,\"rail_margin\":%d,\"diff_limit\":%d,\"baud\":115200,\"uart_baud_actual\":%lu,\"sample_attempts\":%lu,\"tx_samples\":%lu,\"tx_bytes\":%lu,\"acq_hz\":%s,\"tx_hz\":%s,\"dt_mean_us\":%s,\"dt_min_us\":%lld,\"dt_max_us\":%lld,\"clock_last_us\":%lld,\"format_errors\":%lu,\"uart_write_errors\":%lu,\"uart_tx_timeouts\":%lu}",
@@ -97,10 +97,10 @@ bool emit(const char* json) {
                     static_cast<unsigned long>(uart_baud_actual),static_cast<unsigned long>(attempts.load()),static_cast<unsigned long>(tx_samples),static_cast<unsigned long>(tx_bytes),hz,txhz,mean,
                     static_cast<long long>(clock.minimum),static_cast<long long>(clock.maximum),static_cast<long long>(clock.last),static_cast<unsigned long>(format_errors.load()),static_cast<unsigned long>(uart_write_errors.load()),static_cast<unsigned long>(uart_tx_timeouts.load()));
                 if(extra>0 && static_cast<size_t>(extra)<sizeof(json)-n+1) {
-#if CONFIG_ECG_RESEARCH_SHADOW
+#if CONFIG_ECG_AI_LIVE
                     const size_t used=strlen(json);
-                    // Replace outer final brace; helper closes research and status.
-                    const int added=pipeline_research_json(json+used-1,sizeof(json)-used+1);
+                    // Replace outer final brace; helper closes AI and status.
+                    const int added=pipeline_ai_json(json+used-1,sizeof(json)-used+1);
                     if(added<=0 || static_cast<size_t>(added)>=sizeof(json)-used+1){++format_errors;++write_errors;continue;}
 #endif
                     emit(json);
@@ -113,10 +113,10 @@ bool emit(const char* json) {
 esp_err_t telemetry_init() {
 #if CONFIG_ECG_TELEMETRY
     boot=esp_random();queue=xQueueCreate(6,sizeof(Packet));if(!queue)return ESP_ERR_NO_MEM;
-    // Research status adds formatting work. Its TX consumer must preempt the
+    // AI status adds formatting work. Its TX consumer must preempt the
     // CPU-bound priority4 model worker; otherwise ready packets wait through
     // Invoke and the fixed six-packet FIFO overflows under golden load.
-#if CONFIG_ECG_RESEARCH_SHADOW
+#if CONFIG_ECG_AI_LIVE
     constexpr UBaseType_t tx_priority=5;
 #else
     constexpr UBaseType_t tx_priority=2;

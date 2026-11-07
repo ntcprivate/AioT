@@ -1,0 +1,31 @@
+{
+  "root": "D:\\Code Part Two\\AIoT",
+  "delete": [
+    {
+      "path": "D:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\tests\\__pycache__",
+      "files": 7,
+      "bytes": 94533
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\python\\__pycache__",
+      "files": 8,
+      "bytes": 212639
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\__pycache__",
+      "files": 14,
+      "bytes": 211558
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\ecg_monitor\\__pycache__",
+      "files": 8,
+      "bytes": 116804
+    },
+    {
+      "path": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\tests\\__pycache__",
+      "files": 11,
+      "bytes": 130902
+    }
+  ],
+  "skip": []
+}

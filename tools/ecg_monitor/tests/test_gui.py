@@ -22,7 +22,7 @@ class GuiTests(unittest.TestCase):
         w=self.window;w.toggle_monitor()
         for i in range(80):w.accept(decode(encode(demo_packet(i*32,i))),'DEMO')
         w.tick();self.app.processEvents()
-        self.assertEqual(w.fields['Classification'].text(),'UNKNOWN');self.assertEqual(w.fields['BPM / RR'].text(),'-- / --')
+        self.assertEqual(w.ai_fields['Classification'].text(),'UNKNOWN');self.assertEqual(w.fields['BPM / RR'].text(),'-- / --')
         self.assertEqual(w.state.text(),'DEMO');self.assertIsNone(w.worker)
     def test_pause_keeps_recording(self):
         with tempfile.TemporaryDirectory() as d:
@@ -33,9 +33,10 @@ class GuiTests(unittest.TestCase):
         w=self.window;w.mode.setCurrentIndex(1);w.monitoring=True
         from test_monitor import status
         w.accept(status(state='NORMAL',classification='NORMAL',p_pvc=.1),'HARDWARE');w.update_status()
-        self.assertEqual(w.fields['Classification'].text(),'UNKNOWN');self.assertEqual(w.state.text(),'SIGNAL_INVALID')
-    def test_ai_test_locked(self):
-        w=self.window;w.mode.setCurrentIndex(2);w.toggle_monitor();self.assertFalse(w.monitoring)
+        self.assertEqual(w.ai_fields['Classification'].text(),'UNKNOWN');self.assertEqual(w.state.text(),'WAITING')
+    def test_only_stream_source_modes(self):
+        self.assertEqual(self.window.mode.count(),2)
+        self.assertTrue(all('LOCKED' not in self.window.mode.itemText(i) for i in range(2)))
     def test_graph_performance(self):
         w=self.window;w.monitoring=True;w.last_demo=float('inf');durations=[]
         for i in range(160):w.accept(decode(encode(demo_packet(i*32,i))),'DEMO')

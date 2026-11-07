@@ -1,18 +1,27 @@
 menu "Integrated ECG experimental prototype"
-config ECG_RESEARCH_SHADOW
-    bool "RESEARCH_SHADOW: experimental ADC CNN display only; no alerts"
-    depends on ECG_TELEMETRY && !ECG_ENABLE_EXPERIMENTAL_LIVE && !ECG_AI_TEST_ONLY && !ECG_SYNTHETIC_TELEMETRY_TEST
-    default n
+config ECG_AI_LIVE
+    bool
+    depends on ECG_TELEMETRY && !ECG_AI_TEST_ONLY && !ECG_SYNTHETIC_TELEMETRY_TEST
+    default y
     help
-        Separate research-only prediction, expires after1500ms, cancels on
-        invalid signals. Official live stays LOCKED. No research PVC alerts.
+        Main research application ADC inference. Input safety/golden checks remain.
+        Diagnostic TEST_ONLY and Synthetic builds never invoke ADC classification.
 config ECG_AI_TEST_ONLY
     bool "Reference AI TEST_ONLY suite; never ADC-live or PVC alerts"
-    depends on ECG_TELEMETRY && !ECG_ENABLE_EXPERIMENTAL_LIVE
+    depends on ECG_TELEMETRY
     default n
     help
         Reuses12 golden cases, adds8 FC14 regression cases and preprocessing/
         timing/memory measurements. Uses the existing model worker exclusively.
+config ECG_BENCH_DEMO
+    bool "BENCH DEMO: state-driven LED/buzzer; simulator only"
+    depends on ECG_AI_LIVE && !ECG_HARDWARE_SELF_TEST && !ECG_GOLDEN_ALERT_DEMO
+    default n
+    help
+        Requires a no-body bench/simulator setup. NORMAL: both 500ms on/off;
+        PVC: LED steady, buzzer 200ms on/off; UNKNOWN/INVALID: LED off,
+        buzzer 1000ms on/off; LEADS_OFF: LED steady, buzzer off.
+        Physical feedback defaults disabled. No medical alarm.
 config ECG_TELEMETRY
     bool "USB Serial batched telemetry for Windows Monitor (115200 baud)"
     default y
@@ -21,7 +30,7 @@ config ECG_TELEMETRY
         Sampling never waits for UART. Disables long operator/arithmetic dumps.
 config ECG_SYNTHETIC_TELEMETRY_TEST
     bool "SYNTHETIC_TELEMETRY_TEST: known pattern, no sensor and no AI input"
-    depends on ECG_TELEMETRY && !ECG_ENABLE_EXPERIMENTAL_LIVE
+    depends on ECG_TELEMETRY
     default n
     help
         Same250Hz GPTimer/sampling task, queue and UART; replaces ADC read
@@ -50,16 +59,10 @@ config ECG_TRACE_SAMPLE
     default 5
 config ECG_HARDWARE_SELF_TEST
     bool "LED/buzzer hardware self-test once at boot, independent of AI"
-    default y
+    default n
     help
         Clearly labeled hardware test: LED 2s, then six 150ms ON/350ms OFF
         LED/buzzer pulses. Sampling continues. Does not clear golden failure.
-config ECG_ENABLE_EXPERIMENTAL_LIVE
-    bool "Enable unvalidated R detector/live CNN for bench signal generator only"
-    default n
-    help
-        Training used MIT-BIH annotation centers, not this detector. Requires
-        detector/quality validation and golden tests before live claims.
 config ECG_GOLDEN_ALERT_DEMO
     bool "Demonstrate LED/buzzer for golden model predictions at boot (TEST DATA)"
     depends on !ECG_HARDWARE_SELF_TEST

@@ -1,0 +1,6 @@
+{
+  "cases": 20,
+  "exact": 20,
+  "status": "PASS",
+  "scope": "12 golden +8 FC14 unique inputs compared to preserved TensorFlow codes; not full-corpus evaluation"
+}

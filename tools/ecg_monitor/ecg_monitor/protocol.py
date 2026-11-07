@@ -82,8 +82,8 @@ def decode(line):
         for key in ('acq_hz','tx_hz','dt_mean_us'):
             if p.get(key) is not None and (type(p[key]) not in (int,float) or not math.isfinite(p[key]) or not 0<=p[key]<=1e10):raise ValueError('invalid timing '+key)
     if p['type']=='status':
-        from .research import validate_research
-        validate_research(p)
+        from .ai import validate_ai
+        validate_ai(p)
     p.pop('_received_monotonic',None) # Reserved for the local serial reader, not the device.
     return p
 

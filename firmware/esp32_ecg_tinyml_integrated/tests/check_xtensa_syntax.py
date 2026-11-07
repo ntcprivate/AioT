@@ -23,11 +23,11 @@ results=[]
 with tempfile.TemporaryDirectory(prefix='ecg_syntax_') as temp:
     header=Path(temp)/'integration_config.h'
     for mode in (0,1):
-        header.write_text(config+f'\n#define CONFIG_ECG_ENABLE_EXPERIMENTAL_LIVE {mode}\n#define CONFIG_ECG_GOLDEN_ALERT_DEMO {mode}\n#define CONFIG_ECG_HARDWARE_SELF_TEST {mode}\n#define ECG_REFERENCE_KERNELS_ACTIVE 1\n#define TFLITE_SINGLE_ROUNDING 0\n#define ECG_CONV_SINGLE_ROUNDING 1\n')
+        header.write_text(config+f'\n#define CONFIG_ECG_AI_LIVE {mode}\n#define CONFIG_ECG_GOLDEN_ALERT_DEMO {mode}\n#define CONFIG_ECG_HARDWARE_SELF_TEST {mode}\n#define ECG_REFERENCE_KERNELS_ACTIVE 1\n#define TFLITE_SINGLE_ROUNDING 0\n#define ECG_CONV_SINGLE_ROUNDING 1\n')
         for source in ('main.cpp','pipeline.cpp','model.cpp','signal.cpp','single_round_conv.cpp'):
             invocation=(command+f' -I"{project / "main"}" -include "{header}" -fsyntax-only "{project / "main" / source}"')
             result=subprocess.run(invocation,cwd=entry['directory'],capture_output=True,text=True)
-            results.append({'file':source,'experimental_live':mode,'exit_code':result.returncode,'output':result.stdout+result.stderr})
+            results.append({'file':source,'ai_live':mode,'exit_code':result.returncode,'output':result.stdout+result.stderr})
             print(source,mode,result.returncode,result.stdout+result.stderr)
 (project/'tests/xtensa_syntax_results.json').write_text(json.dumps(results,indent=2))
 raise SystemExit(0 if all(r['exit_code']==0 for r in results) else 1)

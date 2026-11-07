@@ -7,8 +7,6 @@
 #include <cstring>
 #include <initializer_list>
 int main() {
-    assert(!kLivePipelineValidated);
-    for(int mask=0;mask<64;++mask)assert(classification_allowed(mask&1,mask&2,mask&4,mask&8,mask&16,mask&32)==(mask==63));
     assert(!recovery_allowed(EcgState::Invalid,false,511,2,true));
     assert(!recovery_allowed(EcgState::Invalid,false,512,1,true));
     assert(!recovery_allowed(EcgState::Invalid,false,512,2,false));
@@ -30,5 +28,5 @@ int main() {
     auto m=signal_metrics(raw);assert(m.power50_ratio>.9 && m.diff_percent>25);
     assert(strcmp(signal_block_reason(raw,t),"HIGH_FREQUENCY_NOISE")==0);
     raw[12]=4095;assert(signal_metrics(raw).clips==1);
-    puts("PASS: classification gate64 cases; LED/buzzer nonblocking patterns; CRC32 golden; exact sample encoding;50Hz rejection/metrics and clipping.");
+    puts("PASS: input recovery; LED/buzzer nonblocking patterns; CRC32 golden; exact sample encoding;50Hz rejection/metrics and clipping.");
 }

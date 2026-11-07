@@ -1,0 +1,6 @@
+{
+  "frames": 100,
+  "mean_frame_ms": 11.558538999670418,
+  "budget_ms": 40,
+  "scope": "Host Qt offscreen, raw plus display-only filter"
+}

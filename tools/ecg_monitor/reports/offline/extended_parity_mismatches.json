@@ -1,0 +1,141 @@
+{
+  "beats": 9425,
+  "mismatch_indices": [
+    4609,
+    5183,
+    5188,
+    5742,
+    5799,
+    5909,
+    5987,
+    6208,
+    6751
+  ],
+  "native": [
+    -87,
+    -125,
+    -125,
+    112,
+    -112,
+    -121,
+    -117,
+    -108,
+    -55
+  ],
+  "reference": [
+    -88,
+    -126,
+    -126,
+    111,
+    -113,
+    -122,
+    -118,
+    -109,
+    -58
+  ],
+  "max_lsb": 3,
+  "class_changes": 0,
+  "first_mismatch_index": 4609,
+  "operators": [
+    {
+      "op": 0,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 1,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 2,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 3,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 4,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 5,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 6,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 7,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 8,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 9,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 10,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 11,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 12,
+      "count": 0,
+      "first": []
+    },
+    {
+      "op": 13,
+      "count": 1,
+      "first": [
+        {
+          "index": 4,
+          "native": -74,
+          "reference": -75
+        }
+      ]
+    },
+    {
+      "op": 14,
+      "count": 1,
+      "first": [
+        {
+          "index": 0,
+          "native": -70,
+          "reference": -71
+        }
+      ]
+    },
+    {
+      "op": 15,
+      "count": 1,
+      "first": [
+        {
+          "index": 0,
+          "native": -87,
+          "reference": -88
+        }
+      ]
+    }
+  ],
+  "phase": "BEFORE_PER_CHANNEL_FC_FIX",
+  "after_fix": "0 mismatched codes across9425 inputs; see ../offline_validation.json"
+}

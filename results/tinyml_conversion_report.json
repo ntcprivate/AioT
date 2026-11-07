@@ -1,0 +1,2872 @@
+{
+  "status": "CONVERSION_AND_VALIDATION_COMPLETED",
+  "tensorflow_version": "2.21.0",
+  "source_model": "D:\\Code Part Two\\AIoT\\models\\ecg_cnn_best.keras",
+  "dataset_sha256": "5540e47b41a01b3f87c563ce7f701213fcf30dc241ef79037ab9ab92c46bbce5",
+  "split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b",
+  "model_sha256": "254595d658838de6525f4dc0a2821415a9197443e529d838e362044cd2e32399",
+  "model_parameter_count": 849,
+  "input_shape": [
+    null,
+    256,
+    1
+  ],
+  "output_shape": [
+    null,
+    1
+  ],
+  "class_mapping": {
+    "0": "Normal",
+    "1": "PVC"
+  },
+  "original_threshold": 0.52,
+  "threshold_source": "D:\\Code Part Two\\AIoT\\results\\optimized_threshold.json",
+  "threshold_sha256": "690ffe47405b11090aaa00249934d4ac52b0c0bdfb7ef7ff0f35ad83c1298f87",
+  "preprocessing": {
+    "sampling_rate_hz": 250,
+    "source_rate_hz": 360,
+    "resample_ratio": "25/36",
+    "window": [
+      128,
+      128
+    ],
+    "normalization": "per-beat z-score, denominator=max(std,1e-8)",
+    "new_transforms": false
+  },
+  "representative_dataset": {
+    "size": 600,
+    "class_counts": {
+      "0": 476,
+      "1": 124
+    },
+    "seed": 42,
+    "source": "Train only",
+    "indices": [
+      49375,
+      74603,
+      12600,
+      5465,
+      72157,
+      60623,
+      63797,
+      53208,
+      9003,
+      69811,
+      36123,
+      15060,
+      62147,
+      9043,
+      10377,
+      30961,
+      2401,
+      72127,
+      59217,
+      60489,
+      52659,
+      54461,
+      24929,
+      17653,
+      55653,
+      38111,
+      56059,
+      48209,
+      8765,
+      66266,
+      54093,
+      71589,
+      8344,
+      7101,
+      69436,
+      22996,
+      17379,
+      75162,
+      62569,
+      37693,
+      56190,
+      17542,
+      44636,
+      55474,
+      70076,
+      15128,
+      13747,
+      46387,
+      60399,
+      41180,
+      23026,
+      21798,
+      7319,
+      38235,
+      39668,
+      73391,
+      21269,
+      25076,
+      26179,
+      57382,
+      17352,
+      24948,
+      47383,
+      6274,
+      53807,
+      37763,
+      45243,
+      12689,
+      20986,
+      63937,
+      46624,
+      37230,
+      56696,
+      69158,
+      63451,
+      72117,
+      17440,
+      30400,
+      32569,
+      32584,
+      60928,
+      54155,
+      73412,
+      41559,
+      55101,
+      69551,
+      61443,
+      53852,
+      36093,
+      69805,
+      4886,
+      72233,
+      37236,
+      60070,
+      63319,
+      44230,
+      58679,
+      48703,
+      38554,
+      9618,
+      38176,
+      8082,
+      37850,
+      10538,
+      21496,
+      22586,
+      3914,
+      25288,
+      37196,
+      8357,
+      46917,
+      64039,
+      4221,
+      71731,
+      69302,
+      65051,
+      15002,
+      74394,
+      46632,
+      60071,
+      46104,
+      25358,
+      3483,
+      17333,
+      60045,
+      9850,
+      73952,
+      17178,
+      57619,
+      10452,
+      26667,
+      69149,
+      13499,
+      47802,
+      54545,
+      65364,
+      75717,
+      25390,
+      25451,
+      38747,
+      45094,
+      57594,
+      73133,
+      10091,
+      306,
+      17555,
+      22425,
+      60089,
+      69635,
+      38864,
+      1126,
+      32571,
+      5754,
+      9886,
+      71604,
+      55897,
+      62528,
+      71743,
+      10608,
+      397,
+      1033,
+      40158,
+      7486,
+      63708,
+      72655,
+      71845,
+      49039,
+      41511,
+      6133,
+      25627,
+      62578,
+      8131,
+      17348,
+      42388,
+      30101,
+      8094,
+      72918,
+      30965,
+      70006,
+      1452,
+      64388,
+      75860,
+      30669,
+      58468,
+      18412,
+      25603,
+      66270,
+      75956,
+      57863,
+      18677,
+      41975,
+      65272,
+      44714,
+      38430,
+      5464,
+      21816,
+      38010,
+      66016,
+      573,
+      29732,
+      22385,
+      43480,
+      70898,
+      20900,
+      55126,
+      44766,
+      59682,
+      70392,
+      5074,
+      60960,
+      13191,
+      22952,
+      43763,
+      25011,
+      58272,
+      58740,
+      63737,
+      62369,
+      65898,
+      21455,
+      30592,
+      32602,
+      22734,
+      60315,
+      21732,
+      17706,
+      45666,
+      58620,
+      74151,
+      75706,
+      26158,
+      41592,
+      44562,
+      55198,
+      1278,
+      18088,
+      22252,
+      55199,
+      52998,
+      38997,
+      22611,
+      12599,
+      73380,
+      66610,
+      42058,
+      1438,
+      48607,
+      1520,
+      4573,
+      7110,
+      1846,
+      60244,
+      6103,
+      4874,
+      376,
+      63073,
+      8750,
+      37980,
+      43841,
+      9303,
+      42520,
+      40187,
+      60475,
+      73846,
+      72897,
+      65060,
+      7657,
+      64355,
+      5259,
+      75741,
+      6699,
+      75425,
+      39457,
+      59162,
+      30419,
+      6868,
+      72286,
+      74020,
+      58809,
+      61966,
+      41991,
+      71750,
+      73388,
+      36241,
+      44441,
+      75179,
+      69599,
+      72201,
+      62449,
+      71454,
+      49289,
+      35456,
+      69668,
+      58875,
+      4684,
+      42353,
+      54928,
+      1752,
+      64876,
+      43528,
+      43906,
+      71123,
+      61387,
+      70978,
+      54183,
+      46795,
+      41373,
+      73720,
+      74283,
+      21950,
+      22368,
+      39507,
+      72692,
+      62693,
+      48831,
+      69707,
+      18600,
+      3213,
+      38230,
+      5560,
+      40926,
+      62546,
+      75925,
+      65996,
+      39371,
+      7051,
+      806,
+      24769,
+      73113,
+      37072,
+      8330,
+      72867,
+      60186,
+      49786,
+      46502,
+      48043,
+      53496,
+      58669,
+      20847,
+      38887,
+      75105,
+      61171,
+      7631,
+      6227,
+      57092,
+      18797,
+      13390,
+      22080,
+      10342,
+      6156,
+      59465,
+      25488,
+      12700,
+      26057,
+      43255,
+      30839,
+      2491,
+      17093,
+      57971,
+      17278,
+      43087,
+      22887,
+      10084,
+      9151,
+      42502,
+      13540,
+      72096,
+      41630,
+      41558,
+      64727,
+      40425,
+      39391,
+      43155,
+      1039,
+      60039,
+      3016,
+      8104,
+      21144,
+      57478,
+      25034,
+      73656,
+      73939,
+      9520,
+      18559,
+      22004,
+      12977,
+      54822,
+      8346,
+      59731,
+      36533,
+      58570,
+      64747,
+      49811,
+      55729,
+      46237,
+      26493,
+      36801,
+      59629,
+      57311,
+      42531,
+      8030,
+      53835,
+      5901,
+      22845,
+      44709,
+      55114,
+      22134,
+      42806,
+      44783,
+      59254,
+      28736,
+      47557,
+      42856,
+      14744,
+      72953,
+      64575,
+      75798,
+      58161,
+      65873,
+      44227,
+      9993,
+      530,
+      36290,
+      17169,
+      41359,
+      8912,
+      37218,
+      6804,
+      35909,
+      20765,
+      9603,
+      60324,
+      69906,
+      5417,
+      30226,
+      64182,
+      47663,
+      10203,
+      39803,
+      6325,
+      66749,
+      21419,
+      6891,
+      47768,
+      49430,
+      65240,
+      10500,
+      44421,
+      40233,
+      10135,
+      1226,
+      75808,
+      40049,
+      13544,
+      44399,
+      57410,
+      62249,
+      30665,
+      54888,
+      69640,
+      73127,
+      59343,
+      2523,
+      44481,
+      47206,
+      37171,
+      2597,
+      45933,
+      36261,
+      25429,
+      6707,
+      56322,
+      1247,
+      41211,
+      3035,
+      74918,
+      8479,
+      46695,
+      26274,
+      10519,
+      63798,
+      61481,
+      46647,
+      23109,
+      39363,
+      62629,
+      37220,
+      75807,
+      29492,
+      35286,
+      21687,
+      2162,
+      43865,
+      29842,
+      6592,
+      25652,
+      5968,
+      25570,
+      4363,
+      4778,
+      43016,
+      15116,
+      2858,
+      65401,
+      46729,
+      48522,
+      37355,
+      29007,
+      70448,
+      40118,
+      3751,
+      39909,
+      70110,
+      48485,
+      53974,
+      17419,
+      10363,
+      8214,
+      8871,
+      3804,
+      75909,
+      71448,
+      64027,
+      7360,
+      3860,
+      60211,
+      7165,
+      25663,
+      38196,
+      59169,
+      52884,
+      74094,
+      64678,
+      3097,
+      13127,
+      26162,
+      410,
+      45153,
+      71778,
+      53979,
+      45665,
+      62460,
+      48097,
+      12611,
+      73661,
+      5054,
+      48446,
+      6196,
+      52785,
+      48736,
+      10117,
+      44685,
+      29988,
+      2592,
+      66878,
+      60887,
+      41293,
+      41693,
+      60387,
+      61745,
+      71729,
+      35890,
+      1879,
+      47619,
+      7589,
+      1315,
+      49840,
+      62619,
+      64058,
+      46576,
+      41417,
+      38739,
+      8587,
+      47011,
+      40645,
+      26531,
+      46880,
+      64950,
+      66580,
+      22157,
+      74399,
+      70438,
+      70084,
+      75358,
+      44212,
+      73513,
+      18131,
+      12592,
+      58750,
+      52658,
+      36515,
+      36987,
+      6226,
+      8166,
+      61778,
+      12624,
+      17983,
+      72816,
+      22317,
+      25116
+    ],
+    "records": [
+      "100",
+      "101",
+      "103",
+      "105",
+      "106",
+      "109",
+      "111",
+      "112",
+      "114",
+      "116",
+      "119",
+      "122",
+      "124",
+      "201",
+      "202",
+      "203",
+      "205",
+      "207",
+      "208",
+      "209",
+      "212",
+      "213",
+      "215",
+      "217",
+      "219",
+      "220",
+      "221",
+      "223",
+      "228",
+      "230",
+      "231"
+    ],
+    "method": "record/class/Train peak-to-peak quartile coverage, then random remaining Train samples; morphology coverage is a proxy, not guaranteed"
+  },
+  "test_inference_performed": false,
+  "quantization_settings": {
+    "optimization": "DEFAULT",
+    "ops": "TFLITE_BUILTINS_INT8",
+    "input": "int8",
+    "output": "int8",
+    "float_fallback": false
+  },
+  "tflm_compatibility": {
+    "status": "NEEDS_VERIFICATION",
+    "reason": "No pinned local esp-tflite-micro/TFLM kernel build or ESP32 execution verified. Desktop success cannot certify operator versions or hardware compatibility.",
+    "sources": [
+      "https://github.com/espressif/esp-tflite-micro",
+      "https://github.com/tensorflow/tflite-micro",
+      "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/micro_mutable_op_resolver.h"
+    ]
+  },
+  "esp32_measurements": {
+    "tensor_arena": "NOT_MEASURED",
+    "inference_ram": "NOT_MEASURED",
+    "latency": "NOT_MEASURED",
+    "firmware_flash": "NOT_MEASURED"
+  },
+  "float32_flatbuffer": {
+    "schema_version": 3,
+    "operators": [
+      {
+        "index": 0,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          0,
+          13
+        ],
+        "outputs": [
+          15
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 1,
+        "name": "CONV_2D",
+        "version": 1,
+        "inputs": [
+          15,
+          10,
+          3
+        ],
+        "outputs": [
+          16
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 2,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          16,
+          8
+        ],
+        "outputs": [
+          17
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 3,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          17,
+          14
+        ],
+        "outputs": [
+          18
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 4,
+        "name": "MAX_POOL_2D",
+        "version": 1,
+        "inputs": [
+          18
+        ],
+        "outputs": [
+          19
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 5,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          19,
+          7
+        ],
+        "outputs": [
+          20
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 6,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          20,
+          13
+        ],
+        "outputs": [
+          21
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 7,
+        "name": "CONV_2D",
+        "version": 1,
+        "inputs": [
+          21,
+          9,
+          2
+        ],
+        "outputs": [
+          22
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 8,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          22,
+          6
+        ],
+        "outputs": [
+          23
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 9,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          23,
+          14
+        ],
+        "outputs": [
+          24
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 10,
+        "name": "MAX_POOL_2D",
+        "version": 1,
+        "inputs": [
+          24
+        ],
+        "outputs": [
+          25
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 11,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          25,
+          5
+        ],
+        "outputs": [
+          26
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 12,
+        "name": "MEAN",
+        "version": 1,
+        "inputs": [
+          26,
+          14
+        ],
+        "outputs": [
+          27
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 13,
+        "name": "FULLY_CONNECTED",
+        "version": 1,
+        "inputs": [
+          27,
+          12,
+          1
+        ],
+        "outputs": [
+          28
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 14,
+        "name": "FULLY_CONNECTED",
+        "version": 1,
+        "inputs": [
+          28,
+          11,
+          4
+        ],
+        "outputs": [
+          29
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 15,
+        "name": "LOGISTIC",
+        "version": 1,
+        "inputs": [
+          29
+        ],
+        "outputs": [
+          30
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      }
+    ],
+    "tensors": [
+      {
+        "index": 0,
+        "name": "serving_default_input_layer:0",
+        "shape": [
+          1,
+          256,
+          1
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 1,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1024,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 1,
+        "name": "ecg_nv_cnn_1/dense_1/Relu;ecg_nv_cnn_1/dense_1/BiasAdd",
+        "shape": [
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 2,
+        "constant_buffer_bytes": 32,
+        "logical_tensor_bytes": 32,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 2,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze;ecg_nv_cnn_1/conv1d_1_2/convolution",
+        "shape": [
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 3,
+        "constant_buffer_bytes": 64,
+        "logical_tensor_bytes": 64,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 3,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze;ecg_nv_cnn_1/conv1d_1/convolution",
+        "shape": [
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 4,
+        "constant_buffer_bytes": 32,
+        "logical_tensor_bytes": 32,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 4,
+        "name": "ecg_nv_cnn_1/dense_1_2/Add",
+        "shape": [
+          1
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 5,
+        "constant_buffer_bytes": 4,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 5,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 6,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 6,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 7,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 7,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 8,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 8,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 9,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 9,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution",
+        "shape": [
+          16,
+          1,
+          5,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 10,
+        "constant_buffer_bytes": 2560,
+        "logical_tensor_bytes": 2560,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 10,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution",
+        "shape": [
+          8,
+          1,
+          5,
+          1
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 11,
+        "constant_buffer_bytes": 160,
+        "logical_tensor_bytes": 160,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 11,
+        "name": "ecg_nv_cnn_1/dense_1_2/MatMul",
+        "shape": [
+          1,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 12,
+        "constant_buffer_bytes": 32,
+        "logical_tensor_bytes": 32,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 12,
+        "name": "ecg_nv_cnn_1/dense_1/MatMul",
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 13,
+        "constant_buffer_bytes": 512,
+        "logical_tensor_bytes": 512,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 13,
+        "name": "arith.constant",
+        "shape": [],
+        "dtype": "INT32",
+        "buffer_index": 14,
+        "constant_buffer_bytes": 4,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 14,
+        "name": "arith.constant1",
+        "shape": [],
+        "dtype": "INT32",
+        "buffer_index": 15,
+        "constant_buffer_bytes": 4,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 15,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution/ExpandDims",
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 16,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1024,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 16,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze;ecg_nv_cnn_1/conv1d_1/convolution1",
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 17,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 8064,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 17,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze",
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 18,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 8064,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 18,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/ExpandDims",
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 19,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 8064,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 19,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d",
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 20,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 4032,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 20,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/Squeeze1",
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 21,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 4032,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 21,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution/ExpandDims",
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 22,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 4032,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 22,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze;ecg_nv_cnn_1/conv1d_1_2/convolution1",
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 23,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 7808,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 23,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze",
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 24,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 7808,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 24,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/ExpandDims",
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 25,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 7808,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 25,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d",
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 26,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 3904,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 26,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/Squeeze1",
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 27,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 3904,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 27,
+        "name": "ecg_nv_cnn_1/global_average_pooling1d_1/Mean",
+        "shape": [
+          1,
+          16
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 28,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 64,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 28,
+        "name": "ecg_nv_cnn_1/dense_1/MatMul;ecg_nv_cnn_1/dense_1/Relu;ecg_nv_cnn_1/dense_1/BiasAdd",
+        "shape": [
+          1,
+          8
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 29,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 32,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 29,
+        "name": "ecg_nv_cnn_1/dense_1_2/MatMul;ecg_nv_cnn_1/dense_1_2/Add",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 30,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 30,
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "FLOAT32",
+        "buffer_index": 31,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      }
+    ],
+    "input_indices": [
+      0
+    ],
+    "output_indices": [
+      30
+    ],
+    "constant_tensor_buffer_bytes": 3452,
+    "learned_weight_buffer_bytes": 3264,
+    "bias_buffer_bytes": 132,
+    "memory_note": "Constant tensor buffers include weights, biases and shape constants; not total file size or tensor arena."
+  },
+  "int8_flatbuffer": {
+    "schema_version": 3,
+    "operators": [
+      {
+        "index": 0,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          0,
+          1
+        ],
+        "outputs": [
+          15
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 1,
+        "name": "CONV_2D",
+        "version": 3,
+        "inputs": [
+          15,
+          14,
+          13
+        ],
+        "outputs": [
+          16
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 2,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          16,
+          2
+        ],
+        "outputs": [
+          17
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 3,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          17,
+          3
+        ],
+        "outputs": [
+          18
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 4,
+        "name": "MAX_POOL_2D",
+        "version": 2,
+        "inputs": [
+          18
+        ],
+        "outputs": [
+          19
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 5,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          19,
+          4
+        ],
+        "outputs": [
+          20
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 6,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          20,
+          1
+        ],
+        "outputs": [
+          21
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 7,
+        "name": "CONV_2D",
+        "version": 3,
+        "inputs": [
+          21,
+          12,
+          11
+        ],
+        "outputs": [
+          22
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 8,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          22,
+          5
+        ],
+        "outputs": [
+          23
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 9,
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          23,
+          3
+        ],
+        "outputs": [
+          24
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 10,
+        "name": "MAX_POOL_2D",
+        "version": 2,
+        "inputs": [
+          24
+        ],
+        "outputs": [
+          25
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 11,
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          25,
+          6
+        ],
+        "outputs": [
+          26
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 12,
+        "name": "MEAN",
+        "version": 2,
+        "inputs": [
+          26,
+          3
+        ],
+        "outputs": [
+          27
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 13,
+        "name": "FULLY_CONNECTED",
+        "version": 4,
+        "inputs": [
+          27,
+          10,
+          9
+        ],
+        "outputs": [
+          28
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 14,
+        "name": "FULLY_CONNECTED",
+        "version": 4,
+        "inputs": [
+          28,
+          8,
+          7
+        ],
+        "outputs": [
+          29
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      },
+      {
+        "index": 15,
+        "name": "LOGISTIC",
+        "version": 2,
+        "inputs": [
+          29
+        ],
+        "outputs": [
+          30
+        ],
+        "tflm_status": "NEEDS_VERIFICATION"
+      }
+    ],
+    "tensors": [
+      {
+        "index": 0,
+        "name": "serving_default_input_layer:0",
+        "shape": [
+          1,
+          256,
+          1
+        ],
+        "dtype": "INT8",
+        "buffer_index": 1,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 256,
+        "scales": [
+          0.053921569138765335
+        ],
+        "zero_points": [
+          -27
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 1,
+        "name": "arith.constant",
+        "shape": [],
+        "dtype": "INT32",
+        "buffer_index": 2,
+        "constant_buffer_bytes": 4,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 2,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 3,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 3,
+        "name": "arith.constant1",
+        "shape": [],
+        "dtype": "INT32",
+        "buffer_index": 4,
+        "constant_buffer_bytes": 4,
+        "logical_tensor_bytes": 4,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 4,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 5,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 5,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 6,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 6,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "buffer_index": 7,
+        "constant_buffer_bytes": 12,
+        "logical_tensor_bytes": 12,
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 7,
+        "name": "ecg_nv_cnn_1/dense_1_2/Add",
+        "shape": [
+          1
+        ],
+        "dtype": "INT32",
+        "buffer_index": 8,
+        "constant_buffer_bytes": 4,
+        "logical_tensor_bytes": 4,
+        "scales": [
+          9.830878843786195e-05
+        ],
+        "zero_points": [
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 8,
+        "name": "ecg_nv_cnn_1/dense_1_2/MatMul",
+        "shape": [
+          1,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 9,
+        "constant_buffer_bytes": 8,
+        "logical_tensor_bytes": 8,
+        "scales": [
+          0.0175047405064106
+        ],
+        "zero_points": [
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 9,
+        "name": "ecg_nv_cnn_1/dense_1/Relu;ecg_nv_cnn_1/dense_1/BiasAdd",
+        "shape": [
+          8
+        ],
+        "dtype": "INT32",
+        "buffer_index": 10,
+        "constant_buffer_bytes": 32,
+        "logical_tensor_bytes": 32,
+        "scales": [
+          3.2515221391804516e-05,
+          9.407524339621887e-05,
+          0.00011890605674125254,
+          9.39426026889123e-05,
+          0.00011280133185209706,
+          3.9929989725351334e-05,
+          9.364922880195081e-05,
+          8.63286477397196e-05
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 10,
+        "name": "ecg_nv_cnn_1/dense_1/MatMul",
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 11,
+        "constant_buffer_bytes": 128,
+        "logical_tensor_bytes": 128,
+        "scales": [
+          0.003693344071507454,
+          0.010685834102332592,
+          0.013506320305168629,
+          0.010670767165720463,
+          0.012812895700335503,
+          0.004535574000328779,
+          0.010637443512678146,
+          0.009805912151932716
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 11,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze;ecg_nv_cnn_1/conv1d_1_2/convolution",
+        "shape": [
+          16
+        ],
+        "dtype": "INT32",
+        "buffer_index": 12,
+        "constant_buffer_bytes": 64,
+        "logical_tensor_bytes": 64,
+        "scales": [
+          0.00023752778361085802,
+          0.0003278155636508018,
+          0.0004093240131624043,
+          0.0004666151653509587,
+          0.00029612620710395277,
+          0.00048370324657298625,
+          0.0002752012514974922,
+          0.00019160524243488908,
+          0.00012397272803355008,
+          0.00013129308354109526,
+          0.00034604690154083073,
+          0.0004683805746026337,
+          0.0001118596555897966,
+          0.0003703705733641982,
+          0.0006523247575387359,
+          0.0003372092905919999
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 12,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution",
+        "shape": [
+          16,
+          1,
+          5,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 13,
+        "constant_buffer_bytes": 640,
+        "logical_tensor_bytes": 640,
+        "scales": [
+          0.005796544719487429,
+          0.007999896071851254,
+          0.009988999925553799,
+          0.01138711255043745,
+          0.007226559799164534,
+          0.011804124340415001,
+          0.006715914700180292,
+          0.004675867035984993,
+          0.0030253869481384754,
+          0.003204030217602849,
+          0.00844480749219656,
+          0.011430195532739162,
+          0.0027297837659716606,
+          0.009038393385708332,
+          0.01591910421848297,
+          0.008229137398302555
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 13,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze;ecg_nv_cnn_1/conv1d_1/convolution",
+        "shape": [
+          8
+        ],
+        "dtype": "INT32",
+        "buffer_index": 14,
+        "constant_buffer_bytes": 32,
+        "logical_tensor_bytes": 32,
+        "scales": [
+          0.0002377398923272267,
+          0.0002152526576537639,
+          0.00018614171131048352,
+          0.00033229266409762204,
+          0.0003453579265624285,
+          0.00019465362129267305,
+          0.000166033671121113,
+          0.00028225986170582473
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 14,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution",
+        "shape": [
+          8,
+          1,
+          5,
+          1
+        ],
+        "dtype": "INT8",
+        "buffer_index": 15,
+        "constant_buffer_bytes": 40,
+        "logical_tensor_bytes": 40,
+        "scales": [
+          0.004408994223922491,
+          0.0039919582195580006,
+          0.0034520826302468777,
+          0.006162518635392189,
+          0.006404819432646036,
+          0.003609939943999052,
+          0.0030791698954999447,
+          0.005234637297689915
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 15,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution/ExpandDims",
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "dtype": "INT8",
+        "buffer_index": 16,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 256,
+        "scales": [
+          0.053921569138765335
+        ],
+        "zero_points": [
+          -27
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 16,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze;ecg_nv_cnn_1/conv1d_1/convolution1",
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 17,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 2016,
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 17,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze",
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 18,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 2016,
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 18,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/ExpandDims",
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 19,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 2016,
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 19,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d",
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 20,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1008,
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 20,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/Squeeze1",
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 21,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1008,
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 21,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution/ExpandDims",
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 22,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1008,
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 22,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze;ecg_nv_cnn_1/conv1d_1_2/convolution1",
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 23,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1952,
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 23,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze",
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 24,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1952,
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 24,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/ExpandDims",
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 25,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1952,
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 25,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d",
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 26,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 976,
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 26,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/Squeeze1",
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 27,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 976,
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 27,
+        "name": "ecg_nv_cnn_1/global_average_pooling1d_1/Mean",
+        "shape": [
+          1,
+          16
+        ],
+        "dtype": "INT8",
+        "buffer_index": 28,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 16,
+        "scales": [
+          0.008803734555840492
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 28,
+        "name": "ecg_nv_cnn_1/dense_1/MatMul;ecg_nv_cnn_1/dense_1/Relu;ecg_nv_cnn_1/dense_1/BiasAdd",
+        "shape": [
+          1,
+          8
+        ],
+        "dtype": "INT8",
+        "buffer_index": 29,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 8,
+        "scales": [
+          0.005616123788058758
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 29,
+        "name": "ecg_nv_cnn_1/dense_1_2/MatMul;ecg_nv_cnn_1/dense_1_2/Add",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "INT8",
+        "buffer_index": 30,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1,
+        "scales": [
+          0.05139290168881416
+        ],
+        "zero_points": [
+          -38
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 30,
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "INT8",
+        "buffer_index": 31,
+        "constant_buffer_bytes": 0,
+        "logical_tensor_bytes": 1,
+        "scales": [
+          0.00390625
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      }
+    ],
+    "input_indices": [
+      0
+    ],
+    "output_indices": [
+      30
+    ],
+    "constant_tensor_buffer_bytes": 1004,
+    "learned_weight_buffer_bytes": 816,
+    "bias_buffer_bytes": 132,
+    "memory_note": "Constant tensor buffers include weights, biases and shape constants; not total file size or tensor arena."
+  },
+  "int8_io": {
+    "input_shape": [
+      1,
+      256,
+      1
+    ],
+    "output_shape": [
+      1,
+      1
+    ],
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_scale": 0.053921569138765335,
+    "input_zero_point": -27,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128,
+    "validation_input_clipped_values": 4,
+    "validation_input_clipped_fraction": 1.254113492254595e-06
+  },
+  "model_file_sizes": {
+    "ecg_cnn_best.keras": {
+      "bytes": 48247,
+      "KB": 48.247,
+      "KiB": 47.1162109375,
+      "sha256": "254595d658838de6525f4dc0a2821415a9197443e529d838e362044cd2e32399"
+    },
+    "ecg_cnn_float32.tflite": {
+      "bytes": 9424,
+      "KB": 9.424,
+      "KiB": 9.203125,
+      "sha256": "ff90884a156f8fb2f623facf857583522fa7a990c8e5d720a671055a1680d8cb"
+    },
+    "ecg_cnn_int8.tflite": {
+      "bytes": 8560,
+      "KB": 8.56,
+      "KiB": 8.359375,
+      "sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394"
+    }
+  },
+  "float32_io": {
+    "input_shape": [
+      1,
+      256,
+      1
+    ],
+    "output_shape": [
+      1,
+      1
+    ],
+    "input_dtype": "float32",
+    "output_dtype": "float32"
+  },
+  "validation_samples": 12459,
+  "validation_N": 11159,
+  "validation_V": 1300,
+  "validation_metrics": {
+    "Keras Float32": {
+      "accuracy": 0.9503973031543462,
+      "precision": 0.7056694813027744,
+      "recall": 0.9,
+      "specificity": 0.956268482838964,
+      "f1": 0.7910750507099391,
+      "TP": 1170,
+      "TN": 10671,
+      "FP": 488,
+      "FN": 130,
+      "roc_auc": 0.9830213280759924,
+      "average_precision": 0.9167329685724093
+    },
+    "TFLite Float32": {
+      "accuracy": 0.9503973031543462,
+      "precision": 0.7056694813027744,
+      "recall": 0.9,
+      "specificity": 0.956268482838964,
+      "f1": 0.7910750507099391,
+      "TP": 1170,
+      "TN": 10671,
+      "FP": 488,
+      "FN": 130,
+      "roc_auc": 0.9830212936091598,
+      "average_precision": 0.9167329685724092
+    },
+    "TFLite INT8": {
+      "accuracy": 0.953045990849988,
+      "precision": 0.7221876942200124,
+      "recall": 0.8938461538461538,
+      "specificity": 0.9599426471906085,
+      "f1": 0.7988999656239257,
+      "TP": 1162,
+      "TN": 10712,
+      "FP": 447,
+      "FN": 138,
+      "roc_auc": 0.9830447999889705,
+      "average_precision": 0.915588101983454
+    }
+  },
+  "output_difference_metrics": {
+    "TFLite Float32": {
+      "mean_absolute_error": 2.6034947282305994e-08,
+      "max_absolute_error": 1.0132789611816406e-06,
+      "rmse": 7.357180366479118e-08,
+      "pearson_correlation": 0.9999999999999679,
+      "changed_predictions": 0,
+      "normal_to_pvc": 0,
+      "pvc_to_normal": 0
+    },
+    "TFLite INT8": {
+      "mean_absolute_error": 0.0056925394683472325,
+      "max_absolute_error": 0.12460732460021973,
+      "rmse": 0.012848359063951854,
+      "pearson_correlation": 0.999113504282709,
+      "changed_predictions": 65,
+      "normal_to_pvc": 8,
+      "pvc_to_normal": 57
+    },
+    "INT8 versus TFLite Float32": {
+      "mean_absolute_error": 0.005692539523438712,
+      "max_absolute_error": 0.1246076226234436,
+      "rmse": 0.012848359982322647,
+      "pearson_correlation": 0.9991135042041404,
+      "changed_predictions": 65,
+      "normal_to_pvc": 8,
+      "pvc_to_normal": 57
+    }
+  },
+  "near_threshold_analysis": {
+    "keras_threshold_distance": 0.05,
+    "count": 188,
+    "int8_label_flips_near_threshold": 56,
+    "nearest_20_samples": [
+      {
+        "dataset_index": 76392,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5201490521430969,
+          "TFLite Float32": 0.5201491117477417,
+          "TFLite INT8": 0.52734375
+        }
+      },
+      {
+        "dataset_index": 77807,
+        "record_id": "233",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5204259157180786,
+          "TFLite Float32": 0.5204257369041443,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 77146,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5191150903701782,
+          "TFLite Float32": 0.5191152691841125,
+          "TFLite INT8": 0.4609375
+        }
+      },
+      {
+        "dataset_index": 76185,
+        "record_id": "233",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5190410614013672,
+          "TFLite Float32": 0.5190409421920776,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 78414,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.519023060798645,
+          "TFLite Float32": 0.5190235376358032,
+          "TFLite INT8": 0.55078125
+        }
+      },
+      {
+        "dataset_index": 77263,
+        "record_id": "233",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.521369457244873,
+          "TFLite Float32": 0.5213696956634521,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 77172,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.518592357635498,
+          "TFLite Float32": 0.5185920596122742,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 78268,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5183534622192383,
+          "TFLite Float32": 0.5183536410331726,
+          "TFLite INT8": 0.5
+        }
+      },
+      {
+        "dataset_index": 76898,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5177488327026367,
+          "TFLite Float32": 0.5177485346794128,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 78605,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5224462151527405,
+          "TFLite Float32": 0.5224459767341614,
+          "TFLite INT8": 0.5
+        }
+      },
+      {
+        "dataset_index": 77674,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5224533081054688,
+          "TFLite Float32": 0.5224534869194031,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 76569,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.517513632774353,
+          "TFLite Float32": 0.5175135135650635,
+          "TFLite INT8": 0.5390625
+        }
+      },
+      {
+        "dataset_index": 51368,
+        "record_id": "210",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5225881338119507,
+          "TFLite Float32": 0.5225877165794373,
+          "TFLite INT8": 0.5625
+        }
+      },
+      {
+        "dataset_index": 51200,
+        "record_id": "210",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5172861218452454,
+          "TFLite Float32": 0.5172857046127319,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 77274,
+        "record_id": "233",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5231059789657593,
+          "TFLite Float32": 0.5231063365936279,
+          "TFLite INT8": 0.47265625
+        }
+      },
+      {
+        "dataset_index": 78829,
+        "record_id": "233",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.523557722568512,
+          "TFLite Float32": 0.5235580801963806,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 78657,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5160663723945618,
+          "TFLite Float32": 0.5160667896270752,
+          "TFLite INT8": 0.4375
+        }
+      },
+      {
+        "dataset_index": 78848,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5240914225578308,
+          "TFLite Float32": 0.524091362953186,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 56519,
+        "record_id": "214",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5243242979049683,
+          "TFLite Float32": 0.5243241786956787,
+          "TFLite INT8": 0.58984375
+        }
+      },
+      {
+        "dataset_index": 76200,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5247730016708374,
+          "TFLite Float32": 0.5247729420661926,
+          "TFLite INT8": 0.4609375
+        }
+      }
+    ],
+    "first_20_int8_label_flips": [
+      {
+        "dataset_index": 27066,
+        "record_id": "121",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5720905661582947,
+          "TFLite Float32": 0.5720906853675842,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 28388,
+        "record_id": "121",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.4964436888694763,
+          "TFLite Float32": 0.4964436888694763,
+          "TFLite INT8": 0.52734375
+        }
+      },
+      {
+        "dataset_index": 50868,
+        "record_id": "210",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5670421123504639,
+          "TFLite Float32": 0.5670418739318848,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 51155,
+        "record_id": "210",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5526339411735535,
+          "TFLite Float32": 0.5526337027549744,
+          "TFLite INT8": 0.51171875
+        }
+      },
+      {
+        "dataset_index": 51271,
+        "record_id": "210",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5410902500152588,
+          "TFLite Float32": 0.5410903692245483,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 51681,
+        "record_id": "210",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5369409918785095,
+          "TFLite Float32": 0.5369407534599304,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 52444,
+        "record_id": "210",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5678300857543945,
+          "TFLite Float32": 0.5678302049636841,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 52523,
+        "record_id": "210",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.47365114092826843,
+          "TFLite Float32": 0.4736511707305908,
+          "TFLite INT8": 0.55078125
+        }
+      },
+      {
+        "dataset_index": 56464,
+        "record_id": "214",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5297192335128784,
+          "TFLite Float32": 0.5297192335128784,
+          "TFLite INT8": 0.5
+        }
+      },
+      {
+        "dataset_index": 76163,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5058869123458862,
+          "TFLite Float32": 0.5058868527412415,
+          "TFLite INT8": 0.5625
+        }
+      },
+      {
+        "dataset_index": 76200,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5247730016708374,
+          "TFLite Float32": 0.5247729420661926,
+          "TFLite INT8": 0.4609375
+        }
+      },
+      {
+        "dataset_index": 76247,
+        "record_id": "233",
+        "label": 1,
+        "scores": {
+          "Keras Float32": 0.5494025349617004,
+          "TFLite Float32": 0.5494020581245422,
+          "TFLite INT8": 0.4609375
+        }
+      },
+      {
+        "dataset_index": 76330,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5101882219314575,
+          "TFLite Float32": 0.5101884603500366,
+          "TFLite INT8": 0.52734375
+        }
+      },
+      {
+        "dataset_index": 76390,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5373140573501587,
+          "TFLite Float32": 0.53731369972229,
+          "TFLite INT8": 0.44921875
+        }
+      },
+      {
+        "dataset_index": 76471,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.577150821685791,
+          "TFLite Float32": 0.5771509408950806,
+          "TFLite INT8": 0.48828125
+        }
+      },
+      {
+        "dataset_index": 76569,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.517513632774353,
+          "TFLite Float32": 0.5175135135650635,
+          "TFLite INT8": 0.5390625
+        }
+      },
+      {
+        "dataset_index": 76618,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5828835368156433,
+          "TFLite Float32": 0.5828837752342224,
+          "TFLite INT8": 0.5
+        }
+      },
+      {
+        "dataset_index": 76654,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.545209527015686,
+          "TFLite Float32": 0.5452086925506592,
+          "TFLite INT8": 0.4375
+        }
+      },
+      {
+        "dataset_index": 76678,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5752061009407043,
+          "TFLite Float32": 0.57520592212677,
+          "TFLite INT8": 0.4609375
+        }
+      },
+      {
+        "dataset_index": 76733,
+        "record_id": "233",
+        "label": 0,
+        "scores": {
+          "Keras Float32": 0.5622496604919434,
+          "TFLite Float32": 0.5622495412826538,
+          "TFLite INT8": 0.48828125
+        }
+      }
+    ]
+  },
+  "int8_minus_keras_metrics": {
+    "precision": 0.016518212917237984,
+    "recall": -0.006153846153846176,
+    "f1": 0.007824914913986625,
+    "accuracy": 0.0026486876956417493
+  },
+  "size_reduction_float32_tflite_to_int8_percent": 9.168081494057724,
+  "warnings": [
+    "INT8 Validation recall < 90%; review before hardware testing. Threshold is unchanged.",
+    "Some Validation input values saturate INT8 range; clipping statistics are recorded. No recalibration using Validation performed."
+  ],
+  "quality_warning_drop_absolute": 0.01,
+  "evaluation_note": "Validation comparison only; Validation previously selected the threshold. Not a new independent Test assessment.",
+  "memory_note": "File bytes include FlatBuffer metadata/weights/constants. Logical tensor bytes exclude lifetime reuse, scratch buffers, alignment, kernels and firmware; do not infer tensor arena or ESP32 RAM from them."
+}

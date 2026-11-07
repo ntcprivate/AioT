@@ -1,0 +1,837 @@
+{
+  "status": "EXPLORATORY_CANDIDATE",
+  "official_threshold_unchanged": 0.52,
+  "reference_threshold": 0.52,
+  "candidate_threshold": 0.4765625,
+  "selection_rule": "Validation recall >=90%; highest F1, then precision, then smallest enumerated threshold",
+  "candidate_grid": "Every dequantized INT8 output level in [0,1], endpoints 0/1, configured threshold and requested 0.52 reference; comparison scores >= threshold",
+  "candidate_count": 258,
+  "quantization": {
+    "input_shape": [
+      1,
+      256,
+      1
+    ],
+    "output_shape": [
+      1,
+      1
+    ],
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_scale": 0.053921569138765335,
+    "input_zero_point": -27,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128,
+    "input_clipped_values": 4,
+    "input_clipped_fraction": 1.254113492254595e-06,
+    "rounding": "Vectorized np.rint, ties to even; clip [-128,127]",
+    "score_reconstruction": "(raw_int8 - output_zero_point) * output_scale in float64"
+  },
+  "validation_samples": 12459,
+  "validation_records": [
+    "115",
+    "118",
+    "121",
+    "210",
+    "214",
+    "233",
+    "234"
+  ],
+  "validation_N": 11159,
+  "validation_V": 1300,
+  "reference_metrics": {
+    "threshold": 0.52,
+    "accuracy": 0.953045990849988,
+    "precision": 0.7221876942200124,
+    "recall": 0.8938461538461538,
+    "f1": 0.7988999656239257,
+    "specificity": 0.9599426471906085,
+    "TP": 1162,
+    "TN": 10712,
+    "FP": 447,
+    "FN": 138
+  },
+  "official_config_metrics": {
+    "threshold": 0.52,
+    "accuracy": 0.953045990849988,
+    "precision": 0.7221876942200124,
+    "recall": 0.8938461538461538,
+    "f1": 0.7988999656239257,
+    "specificity": 0.9599426471906085,
+    "TP": 1162,
+    "TN": 10712,
+    "FP": 447,
+    "FN": 138
+  },
+  "candidate_metrics": {
+    "threshold": 0.4765625,
+    "accuracy": 0.949514407255799,
+    "precision": 0.6995835812016656,
+    "recall": 0.9046153846153846,
+    "f1": 0.7889969808788997,
+    "specificity": 0.9547450488395017,
+    "TP": 1176,
+    "TN": 10654,
+    "FP": 505,
+    "FN": 124,
+    "meets_recall_90": true,
+    "is_selected": true
+  },
+  "candidate_minus_reference": {
+    "accuracy": -0.003531583594188925,
+    "precision": -0.02260411301834675,
+    "recall": 0.010769230769230753,
+    "f1": -0.009902984745026044,
+    "specificity": -0.00519759835110678,
+    "TP": 14,
+    "TN": -58,
+    "FP": 58,
+    "FN": -14
+  },
+  "record_rankings_by_false_positives": {
+    "reference_0.52": [
+      {
+        "record_id": "233",
+        "scenario": "reference_0.52",
+        "samples": 3059,
+        "N": 2229,
+        "V": 830,
+        "threshold": 0.52,
+        "accuracy": 0.8607388035305655,
+        "precision": 0.6655737704918033,
+        "recall": 0.9783132530120482,
+        "f1": 0.7921951219512195,
+        "specificity": 0.8169582772543742,
+        "TP": 812,
+        "TN": 1821,
+        "FP": 408,
+        "FN": 18,
+        "false_positive_rate": 0.18304172274562583
+      },
+      {
+        "record_id": "210",
+        "scenario": "reference_0.52",
+        "samples": 2615,
+        "N": 2421,
+        "V": 194,
+        "threshold": 0.52,
+        "accuracy": 0.9739961759082219,
+        "precision": 0.8620689655172413,
+        "recall": 0.7731958762886598,
+        "f1": 0.8152173913043478,
+        "specificity": 0.990086741016109,
+        "TP": 150,
+        "TN": 2397,
+        "FP": 24,
+        "FN": 44,
+        "false_positive_rate": 0.009913258983890954
+      },
+      {
+        "record_id": "121",
+        "scenario": "reference_0.52",
+        "samples": 1860,
+        "N": 1859,
+        "V": 1,
+        "threshold": 0.52,
+        "accuracy": 0.9919354838709677,
+        "precision": 0.0625,
+        "recall": 1.0,
+        "f1": 0.11764705882352941,
+        "specificity": 0.9919311457772996,
+        "TP": 1,
+        "TN": 1844,
+        "FP": 15,
+        "FN": 0,
+        "false_positive_rate": 0.008068854222700376
+      },
+      {
+        "record_id": "115",
+        "scenario": "reference_0.52",
+        "samples": 1951,
+        "N": 1951,
+        "V": 0,
+        "threshold": 0.52,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "TP": 0,
+        "TN": 1951,
+        "FP": 0,
+        "FN": 0,
+        "false_positive_rate": 0.0
+      },
+      {
+        "record_id": "118",
+        "scenario": "reference_0.52",
+        "samples": 16,
+        "N": 0,
+        "V": 16,
+        "threshold": 0.52,
+        "accuracy": 0.1875,
+        "precision": 1.0,
+        "recall": 0.1875,
+        "f1": 0.3157894736842105,
+        "specificity": null,
+        "TP": 3,
+        "TN": 0,
+        "FP": 0,
+        "FN": 13,
+        "false_positive_rate": null
+      },
+      {
+        "record_id": "214",
+        "scenario": "reference_0.52",
+        "samples": 256,
+        "N": 0,
+        "V": 256,
+        "threshold": 0.52,
+        "accuracy": 0.765625,
+        "precision": 1.0,
+        "recall": 0.765625,
+        "f1": 0.8672566371681416,
+        "specificity": null,
+        "TP": 196,
+        "TN": 0,
+        "FP": 0,
+        "FN": 60,
+        "false_positive_rate": null
+      },
+      {
+        "record_id": "234",
+        "scenario": "reference_0.52",
+        "samples": 2702,
+        "N": 2699,
+        "V": 3,
+        "threshold": 0.52,
+        "accuracy": 0.9988897113249445,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "TP": 0,
+        "TN": 2699,
+        "FP": 0,
+        "FN": 3,
+        "false_positive_rate": 0.0
+      }
+    ],
+    "candidate": [
+      {
+        "record_id": "233",
+        "scenario": "candidate",
+        "samples": 3059,
+        "N": 2229,
+        "V": 830,
+        "threshold": 0.4765625,
+        "accuracy": 0.8453743053285387,
+        "precision": 0.64,
+        "recall": 0.983132530120482,
+        "f1": 0.7752969121140143,
+        "specificity": 0.7940780619111709,
+        "TP": 816,
+        "TN": 1770,
+        "FP": 459,
+        "FN": 14,
+        "false_positive_rate": 0.20592193808882908
+      },
+      {
+        "record_id": "210",
+        "scenario": "candidate",
+        "samples": 2615,
+        "N": 2421,
+        "V": 194,
+        "threshold": 0.4765625,
+        "accuracy": 0.9751434034416826,
+        "precision": 0.8486486486486486,
+        "recall": 0.8092783505154639,
+        "f1": 0.8284960422163589,
+        "specificity": 0.9884345311854605,
+        "TP": 157,
+        "TN": 2393,
+        "FP": 28,
+        "FN": 37,
+        "false_positive_rate": 0.011565468814539447
+      },
+      {
+        "record_id": "121",
+        "scenario": "candidate",
+        "samples": 1860,
+        "N": 1859,
+        "V": 1,
+        "threshold": 0.4765625,
+        "accuracy": 0.9903225806451613,
+        "precision": 0.05263157894736842,
+        "recall": 1.0,
+        "f1": 0.1,
+        "specificity": 0.9903173749327595,
+        "TP": 1,
+        "TN": 1841,
+        "FP": 18,
+        "FN": 0,
+        "false_positive_rate": 0.009682625067240451
+      },
+      {
+        "record_id": "115",
+        "scenario": "candidate",
+        "samples": 1951,
+        "N": 1951,
+        "V": 0,
+        "threshold": 0.4765625,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "TP": 0,
+        "TN": 1951,
+        "FP": 0,
+        "FN": 0,
+        "false_positive_rate": 0.0
+      },
+      {
+        "record_id": "118",
+        "scenario": "candidate",
+        "samples": 16,
+        "N": 0,
+        "V": 16,
+        "threshold": 0.4765625,
+        "accuracy": 0.1875,
+        "precision": 1.0,
+        "recall": 0.1875,
+        "f1": 0.3157894736842105,
+        "specificity": null,
+        "TP": 3,
+        "TN": 0,
+        "FP": 0,
+        "FN": 13,
+        "false_positive_rate": null
+      },
+      {
+        "record_id": "214",
+        "scenario": "candidate",
+        "samples": 256,
+        "N": 0,
+        "V": 256,
+        "threshold": 0.4765625,
+        "accuracy": 0.77734375,
+        "precision": 1.0,
+        "recall": 0.77734375,
+        "f1": 0.8747252747252747,
+        "specificity": null,
+        "TP": 199,
+        "TN": 0,
+        "FP": 0,
+        "FN": 57,
+        "false_positive_rate": null
+      },
+      {
+        "record_id": "234",
+        "scenario": "candidate",
+        "samples": 2702,
+        "N": 2699,
+        "V": 3,
+        "threshold": 0.4765625,
+        "accuracy": 0.9988897113249445,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 1.0,
+        "TP": 0,
+        "TN": 2699,
+        "FP": 0,
+        "FN": 3,
+        "false_positive_rate": 0.0
+      }
+    ]
+  },
+  "record_metric_note": "Recall=None if a record has no PVC; specificity=None if no Normal; undefined precision/F1 reported as zero. FP counts and FPR should both be inspected.",
+  "local_stability": {
+    "status": "DESCRIPTIVE_ONLY",
+    "nearby_threshold_metrics": [
+      {
+        "threshold": 0.46484375,
+        "accuracy": 0.9483907215667389,
+        "precision": 0.6928948913681738,
+        "recall": 0.9076923076923077,
+        "f1": 0.7858807858807859,
+        "specificity": 0.9531320010753652,
+        "TP": 1180,
+        "TN": 10636,
+        "FP": 523,
+        "FN": 120
+      },
+      {
+        "threshold": 0.4665625,
+        "accuracy": 0.9483907215667389,
+        "precision": 0.6928948913681738,
+        "recall": 0.9076923076923077,
+        "f1": 0.7858807858807859,
+        "specificity": 0.9531320010753652,
+        "TP": 1180,
+        "TN": 10636,
+        "FP": 523,
+        "FN": 120
+      },
+      {
+        "threshold": 0.46875,
+        "accuracy": 0.9483907215667389,
+        "precision": 0.6928948913681738,
+        "recall": 0.9076923076923077,
+        "f1": 0.7858807858807859,
+        "specificity": 0.9531320010753652,
+        "TP": 1180,
+        "TN": 10636,
+        "FP": 523,
+        "FN": 120
+      },
+      {
+        "threshold": 0.4715625,
+        "accuracy": 0.9483907215667389,
+        "precision": 0.6928948913681738,
+        "recall": 0.9076923076923077,
+        "f1": 0.7858807858807859,
+        "specificity": 0.9531320010753652,
+        "TP": 1180,
+        "TN": 10636,
+        "FP": 523,
+        "FN": 120
+      },
+      {
+        "threshold": 0.47265625,
+        "accuracy": 0.9483907215667389,
+        "precision": 0.6928948913681738,
+        "recall": 0.9076923076923077,
+        "f1": 0.7858807858807859,
+        "specificity": 0.9531320010753652,
+        "TP": 1180,
+        "TN": 10636,
+        "FP": 523,
+        "FN": 120
+      },
+      {
+        "threshold": 0.4755625,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.4765625,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.4775625,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.48046875,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.4815625,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.484375,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.4865625,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      },
+      {
+        "threshold": 0.48828125,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      }
+    ],
+    "note": "Quantized scores create stepwise decisions. Perturbations are sensitivity checks, not independent or statistical robustness evidence.",
+    "ranges": {
+      "precision": {
+        "min": 0.6928948913681738,
+        "max": 0.6995835812016656
+      },
+      "recall": {
+        "min": 0.9046153846153846,
+        "max": 0.9076923076923077
+      },
+      "f1": {
+        "min": 0.7858807858807859,
+        "max": 0.7889969808788997
+      },
+      "FP": {
+        "min": 505,
+        "max": 523
+      },
+      "FN": {
+        "min": 120,
+        "max": 124
+      }
+    },
+    "nearby_thresholds_below_recall_90": 0
+  },
+  "keras_vs_int8": {
+    "reference_0.52": {
+      "threshold": 0.52,
+      "mean_absolute_error": 0.0056925394683472325,
+      "max_absolute_error": 0.12460732460021973,
+      "rmse": 0.012848359063951854,
+      "pearson_correlation": 0.999113504282709,
+      "changed_labels": 65,
+      "float_normal_to_int8_pvc": 8,
+      "float_pvc_to_int8_normal": 57,
+      "near_threshold_definition": "Either model score within 0.02 of threshold",
+      "near_threshold_samples": 117,
+      "changed_labels_near_threshold": 40,
+      "keras_metrics": {
+        "threshold": 0.52,
+        "accuracy": 0.9503973031543462,
+        "precision": 0.7056694813027744,
+        "recall": 0.9,
+        "f1": 0.7910750507099391,
+        "specificity": 0.956268482838964,
+        "TP": 1170,
+        "TN": 10671,
+        "FP": 488,
+        "FN": 130
+      },
+      "int8_metrics": {
+        "threshold": 0.52,
+        "accuracy": 0.953045990849988,
+        "precision": 0.7221876942200124,
+        "recall": 0.8938461538461538,
+        "f1": 0.7988999656239257,
+        "specificity": 0.9599426471906085,
+        "TP": 1162,
+        "TN": 10712,
+        "FP": 447,
+        "FN": 138
+      }
+    },
+    "candidate": {
+      "threshold": 0.4765625,
+      "mean_absolute_error": 0.0056925394683472325,
+      "max_absolute_error": 0.12460732460021973,
+      "rmse": 0.012848359063951854,
+      "pearson_correlation": 0.999113504282709,
+      "changed_labels": 70,
+      "float_normal_to_int8_pvc": 11,
+      "float_pvc_to_int8_normal": 59,
+      "near_threshold_definition": "Either model score within 0.02 of threshold",
+      "near_threshold_samples": 115,
+      "changed_labels_near_threshold": 53,
+      "keras_metrics": {
+        "threshold": 0.4765625,
+        "accuracy": 0.9461433501886186,
+        "precision": 0.681897050318103,
+        "recall": 0.9069230769230769,
+        "f1": 0.7784747441399802,
+        "specificity": 0.9507124294291603,
+        "TP": 1179,
+        "TN": 10609,
+        "FP": 550,
+        "FN": 121
+      },
+      "int8_metrics": {
+        "threshold": 0.4765625,
+        "accuracy": 0.949514407255799,
+        "precision": 0.6995835812016656,
+        "recall": 0.9046153846153846,
+        "f1": 0.7889969808788997,
+        "specificity": 0.9547450488395017,
+        "TP": 1176,
+        "TN": 10654,
+        "FP": 505,
+        "FN": 124
+      }
+    }
+  },
+  "nearest_25_samples_to_candidate_or_official": [
+    {
+      "dataset_index": 28252,
+      "record_id": "121",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4888201653957367
+    },
+    {
+      "dataset_index": 51358,
+      "record_id": "210",
+      "label": 1,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.44681113958358765
+    },
+    {
+      "dataset_index": 52348,
+      "record_id": "210",
+      "label": 1,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4820639491081238
+    },
+    {
+      "dataset_index": 76184,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4948747754096985
+    },
+    {
+      "dataset_index": 76445,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4663373827934265
+    },
+    {
+      "dataset_index": 76451,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.43358927965164185
+    },
+    {
+      "dataset_index": 76596,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.501945972442627
+    },
+    {
+      "dataset_index": 76890,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4997885227203369
+    },
+    {
+      "dataset_index": 77037,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.5300829410552979
+    },
+    {
+      "dataset_index": 77105,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.43055883049964905
+    },
+    {
+      "dataset_index": 77242,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4793296754360199
+    },
+    {
+      "dataset_index": 77274,
+      "record_id": "233",
+      "label": 1,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.5231059789657593
+    },
+    {
+      "dataset_index": 77561,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4825585186481476
+    },
+    {
+      "dataset_index": 77572,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.5016869306564331
+    },
+    {
+      "dataset_index": 77577,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.5397186279296875
+    },
+    {
+      "dataset_index": 77823,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.5727667212486267
+    },
+    {
+      "dataset_index": 77867,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4688636362552643
+    },
+    {
+      "dataset_index": 78166,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.46303412318229675
+    },
+    {
+      "dataset_index": 78549,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.46553659439086914
+    },
+    {
+      "dataset_index": 79092,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.5250359773635864
+    },
+    {
+      "dataset_index": 79123,
+      "record_id": "233",
+      "label": 0,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.49966344237327576
+    },
+    {
+      "dataset_index": 81729,
+      "record_id": "234",
+      "label": 1,
+      "int8_raw_code": -7,
+      "int8_score": 0.47265625,
+      "keras_score": 0.4892265796661377
+    },
+    {
+      "dataset_index": 28459,
+      "record_id": "121",
+      "label": 0,
+      "int8_raw_code": -3,
+      "int8_score": 0.48828125,
+      "keras_score": 0.48096752166748047
+    },
+    {
+      "dataset_index": 50685,
+      "record_id": "210",
+      "label": 1,
+      "int8_raw_code": -3,
+      "int8_score": 0.48828125,
+      "keras_score": 0.49784091114997864
+    },
+    {
+      "dataset_index": 51055,
+      "record_id": "210",
+      "label": 0,
+      "int8_raw_code": -3,
+      "int8_score": 0.48828125,
+      "keras_score": 0.4720672369003296
+    }
+  ],
+  "source_paths": {
+    "keras": "D:\\Code Part Two\\AIoT\\models\\ecg_cnn_best.keras",
+    "int8": "D:\\Code Part Two\\AIoT\\models\\ecg_cnn_int8.tflite",
+    "dataset": "D:\\Code Part Two\\AIoT\\data\\processed\\mitbih_nv_250hz.npz",
+    "split": "D:\\Code Part Two\\AIoT\\data\\processed\\mitbih_split_indices.npz"
+  },
+  "provenance": {
+    "dataset_sha256": "5540e47b41a01b3f87c563ce7f701213fcf30dc241ef79037ab9ab92c46bbce5",
+    "split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b",
+    "model_sha256": "254595d658838de6525f4dc0a2821415a9197443e529d838e362044cd2e32399",
+    "int8_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "threshold_config_sha256": "690ffe47405b11090aaa00249934d4ac52b0c0bdfb7ef7ff0f35ad83c1298f87"
+  },
+  "protected_artifact_hashes_unchanged": true,
+  "test_inference_performed": false,
+  "training_performed": false,
+  "limitations": [
+    "Validation was reused in Steps 6, 6.5 and 7; threshold selection here is exploratory and optimistically biased.",
+    "No claim of improvement on previously exposed Test or real ECG; no Test inference here.",
+    "Record 201/202 linked; remaining record IDs are proxies, not independently verified patient identities.",
+    "No automatic threshold deployment. Official optimized_threshold.json is unchanged.",
+    "Sigmoid/dequantized scores are not automatically calibrated probabilities.",
+    "Raising precision may increase missed PVC; maximizing F1 subject to recall does not guarantee fewer false alarms than 0.52."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "capture": "..\\..\\firmware\\esp32_ecg_tinyml_integrated\\debug\\telemetry_cpp_fixture.bin",
+  "sha256": "1cfbfc2a0363c8a997297da89b66cbaa93ef2297b1466ee48fa90268fef11b1a",
+  "bytes": 315448,
+  "valid_packets": 500,
+  "valid_samples": 16000,
+  "crc_failures": 0,
+  "framing_errors": 0,
+  "schema_errors": 0,
+  "sequence_errors": 0,
+  "packet_gaps": 0,
+  "missing_samples": 0,
+  "rx_timing_violations": 0,
+  "synthetic_mismatches": 0,
+  "trailing_partial_bytes": 0,
+  "unterminated_oversize": false,
+  "by_boot": {
+    "CPP_FIXTURE": {
+      "samples": 16000,
+      "first_us": 0,
+      "last_us": 63996000,
+      "synthetic": true,
+      "received_device_time_hz": 250.0
+    }
+  },
+  "last_firmware_counters": {
+    "firmware": null,
+    "source": null,
+    "baud": null,
+    "uart_baud_actual": null,
+    "sample_attempts": null,
+    "acq_hz": null,
+    "tx_samples": null,
+    "tx_hz": null,
+    "tx_dropped": null,
+    "write_errors": null,
+    "adc_errors": null,
+    "missed_est": null,
+    "late": null,
+    "snapshot_errors": null
+  },
+  "rejection_examples": [],
+  "limits": "No repair. Offline raw file has no host-arrival clock; RX wall rate cannot be inferred. UART completion is not a host acknowledgement. Corrupt frames alone cannot identify physical cause."
+}

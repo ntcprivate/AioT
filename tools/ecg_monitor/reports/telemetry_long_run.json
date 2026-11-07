@@ -1,0 +1,9 @@
+{
+  "scope": "HOST virtual21min20sec; not board validation",
+  "samples": 320000,
+  "virtual_seconds": 1280.0,
+  "processing_seconds": 2.2177425999980187,
+  "bytes_per_second": 4934.94375,
+  "parser_errors": 0,
+  "retained_points": 5000
+}

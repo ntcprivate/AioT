@@ -1,0 +1,122 @@
+{
+  "model_path": "D:\\Code Part Two\\AIoT\\models\\ecg_cnn_best.keras",
+  "model_sha256": "254595d658838de6525f4dc0a2821415a9197443e529d838e362044cd2e32399",
+  "model_parameter_count": 849,
+  "input_shape": [
+    null,
+    256,
+    1
+  ],
+  "dataset_sha256": "5540e47b41a01b3f87c563ce7f701213fcf30dc241ef79037ab9ab92c46bbce5",
+  "split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b",
+  "original_threshold": 0.5,
+  "selected_threshold": 0.52,
+  "selection_criterion": "Validation recall >= 0.90; maximize F1, then precision, then smaller threshold",
+  "minimum_validation_recall": 0.9,
+  "fallback_used": false,
+  "fallback_reason": null,
+  "validation_metrics_original": {
+    "threshold": 0.5,
+    "accuracy": 0.9483907215667389,
+    "precision": 0.69449378330373,
+    "recall": 0.9023076923076923,
+    "specificity": 0.953759297428085,
+    "f1": 0.7848778855804617,
+    "TP": 1173,
+    "TN": 10643,
+    "FP": 516,
+    "FN": 127,
+    "false_positive_rate": 0.046240702571915045
+  },
+  "validation_metrics_selected": {
+    "threshold": 0.52,
+    "accuracy": 0.9503973031543462,
+    "precision": 0.7056694813027744,
+    "recall": 0.9,
+    "specificity": 0.956268482838964,
+    "f1": 0.7910750507099391,
+    "TP": 1170,
+    "TN": 10671,
+    "FP": 488,
+    "FN": 130,
+    "false_positive_rate": 0.04373151716103593
+  },
+  "metric_changes": {
+    "accuracy": 0.002006581587607359,
+    "precision": 0.011175697999044387,
+    "recall": -0.002307692307692233,
+    "specificity": 0.002509185410879078,
+    "f1": 0.006197165129477433,
+    "TP": -3,
+    "TN": 28,
+    "FP": -28,
+    "FN": 3,
+    "false_positive_rate": -0.0025091854108791126
+  },
+  "validation_samples": 12459,
+  "validation_class_fractions": {
+    "Normal": 0.8956577574444177,
+    "PVC": 0.1043422425555823
+  },
+  "test_used_for_selection": false,
+  "test_inference_performed": false,
+  "test_note": "Previously exposed Test is not a new independent evaluation. No Test inference in Step 6.5.",
+  "score_note": "Sigmoid scores are not automatically calibrated probabilities.",
+  "overfitting_audit": {
+    "status": "ANALYZED",
+    "best_epoch": 15,
+    "actual_epochs": 20,
+    "best_epoch_values": {
+      "loss": 0.08249610662460327,
+      "val_loss": 0.11235905438661575,
+      "accuracy": 0.9699487686157227,
+      "val_accuracy": 0.9483907222747803
+    },
+    "last_epoch_values": {
+      "loss": 0.07337058335542679,
+      "val_loss": 0.12457501888275146,
+      "accuracy": 0.9718581438064575,
+      "val_accuracy": 0.9420499205589294
+    },
+    "changes_after_best": {
+      "loss": -0.009125523269176483,
+      "val_loss": 0.012215964496135712,
+      "accuracy": 0.0019093751907348633,
+      "val_accuracy": -0.00634080171585083
+    },
+    "validation_loss_relative_increase": 0.10872256413000643,
+    "post_best_values": {
+      "loss": [
+        0.08047603815793991,
+        0.07857932150363922,
+        0.0767173022031784,
+        0.0749192163348198,
+        0.07337058335542679
+      ],
+      "val_loss": [
+        0.1142464280128479,
+        0.11696022748947144,
+        0.119417205452919,
+        0.12201186269521713,
+        0.12457501888275146
+      ],
+      "accuracy": [
+        0.9704475998878479,
+        0.9707571864128113,
+        0.9711528420448303,
+        0.9716001152992249,
+        0.9718581438064575
+      ],
+      "val_accuracy": [
+        0.9460631012916565,
+        0.9439762234687805,
+        0.9434946775436401,
+        0.9429328441619873,
+        0.9420499205589294
+      ]
+    },
+    "overfitting_signs": true,
+    "assessment": "Diverging train/validation loss after best epoch",
+    "limitation": "Descriptive evidence only; no universal severity cutoff. Train loss is class-weighted, validation loss is unweighted; absolute loss gaps are not directly comparable."
+  }
+}

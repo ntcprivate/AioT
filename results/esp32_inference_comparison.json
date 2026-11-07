@@ -1,0 +1,500 @@
+{
+  "status": "FAILED",
+  "hardware_log_path": "D:\\Code Part Two\\AIoT\\results\\esp32_serial.log",
+  "hardware_log_sha256": "d98404e8d5736201434f00d09b9d5e485fdbb21bef5f0fa6b183af8fe5432a3d",
+  "evidence_scope": "User-supplied hardware serial log; log origin cannot be independently authenticated by this parser",
+  "samples_expected": 12,
+  "samples_observed": 12,
+  "exact_outputs": 10,
+  "matching_classes": 11,
+  "hashes_verified_from_log": true,
+  "completed_marker": true,
+  "errors": [],
+  "comparisons": [
+    {
+      "sample_id": 0,
+      "dataset_index": 19766,
+      "record_id": "115",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0,
+      "esp32_output_int8": -126,
+      "esp32_score": 0.0078125,
+      "esp32_predicted": 0,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 1,
+      "dataset_index": 78432,
+      "record_id": "233",
+      "true_label": 0,
+      "python_output_int8": 50,
+      "python_score": 0.6953125,
+      "python_predicted": 1,
+      "esp32_output_int8": 50,
+      "esp32_score": 0.6953125,
+      "esp32_predicted": 1,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 2,
+      "dataset_index": 56558,
+      "record_id": "214",
+      "true_label": 1,
+      "python_output_int8": -66,
+      "python_score": 0.2421875,
+      "python_predicted": 0,
+      "esp32_output_int8": -61,
+      "esp32_score": 0.26171875,
+      "esp32_predicted": 0,
+      "lsb_difference": 5,
+      "absolute_score_difference": 0.01953125,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "sample_id": 3,
+      "dataset_index": 76710,
+      "record_id": "233",
+      "true_label": 1,
+      "python_output_int8": 68,
+      "python_score": 0.765625,
+      "python_predicted": 1,
+      "esp32_output_int8": 68,
+      "esp32_score": 0.765625,
+      "esp32_predicted": 1,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 4,
+      "dataset_index": 28388,
+      "record_id": "121",
+      "true_label": 0,
+      "python_output_int8": 7,
+      "python_score": 0.52734375,
+      "python_predicted": 1,
+      "esp32_output_int8": 7,
+      "esp32_score": 0.52734375,
+      "esp32_predicted": 1,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": true,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 5,
+      "dataset_index": 50805,
+      "record_id": "210",
+      "true_label": 1,
+      "python_output_int8": 7,
+      "python_score": 0.52734375,
+      "python_predicted": 1,
+      "esp32_output_int8": 0,
+      "esp32_score": 0.5,
+      "esp32_predicted": 0,
+      "lsb_difference": 7,
+      "absolute_score_difference": 0.02734375,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": false,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": true,
+      "status": "FAILED"
+    },
+    {
+      "sample_id": 6,
+      "dataset_index": 52318,
+      "record_id": "210",
+      "true_label": 0,
+      "python_output_int8": -124,
+      "python_score": 0.015625,
+      "python_predicted": 0,
+      "esp32_output_int8": -124,
+      "esp32_score": 0.015625,
+      "esp32_predicted": 0,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 7,
+      "dataset_index": 81870,
+      "record_id": "234",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0,
+      "esp32_output_int8": -126,
+      "esp32_score": 0.0078125,
+      "esp32_predicted": 0,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 8,
+      "dataset_index": 27174,
+      "record_id": "121",
+      "true_label": 0,
+      "python_output_int8": -125,
+      "python_score": 0.01171875,
+      "python_predicted": 0,
+      "esp32_output_int8": -125,
+      "esp32_score": 0.01171875,
+      "esp32_predicted": 0,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 9,
+      "dataset_index": 76481,
+      "record_id": "233",
+      "true_label": 1,
+      "python_output_int8": 47,
+      "python_score": 0.68359375,
+      "python_predicted": 1,
+      "esp32_output_int8": 47,
+      "esp32_score": 0.68359375,
+      "esp32_predicted": 1,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 10,
+      "dataset_index": 52498,
+      "record_id": "210",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0,
+      "esp32_output_int8": -126,
+      "esp32_score": 0.0078125,
+      "esp32_predicted": 0,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    },
+    {
+      "sample_id": 11,
+      "dataset_index": 19095,
+      "record_id": "115",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0,
+      "esp32_output_int8": -126,
+      "esp32_score": 0.0078125,
+      "esp32_predicted": 0,
+      "lsb_difference": 0,
+      "absolute_score_difference": 0.0,
+      "metadata_match": true,
+      "input_bytes_match": true,
+      "class_match": true,
+      "repeats_stable": true,
+      "logged_score_valid": true,
+      "near_threshold": false,
+      "status": "EXACT_MATCH"
+    }
+  ],
+  "latency": {
+    "count": 360,
+    "min_us": 9408,
+    "mean_us": 9414.422222222222,
+    "median_us": 9411.0,
+    "p95_us": 9430,
+    "max_us": 9437,
+    "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+  },
+  "per_sample_latency": {
+    "0": {
+      "count": 30,
+      "min_us": 9410,
+      "mean_us": 9410.233333333334,
+      "median_us": 9410.0,
+      "p95_us": 9410,
+      "max_us": 9417,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "1": {
+      "count": 30,
+      "min_us": 9411,
+      "mean_us": 9411.266666666666,
+      "median_us": 9411.0,
+      "p95_us": 9411,
+      "max_us": 9419,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "2": {
+      "count": 30,
+      "min_us": 9411,
+      "mean_us": 9411.266666666666,
+      "median_us": 9411.0,
+      "p95_us": 9411,
+      "max_us": 9419,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "3": {
+      "count": 30,
+      "min_us": 9421,
+      "mean_us": 9421.266666666666,
+      "median_us": 9421.0,
+      "p95_us": 9421,
+      "max_us": 9429,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "4": {
+      "count": 30,
+      "min_us": 9420,
+      "mean_us": 9420.266666666666,
+      "median_us": 9420.0,
+      "p95_us": 9420,
+      "max_us": 9428,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "5": {
+      "count": 30,
+      "min_us": 9411,
+      "mean_us": 9411.233333333334,
+      "median_us": 9411.0,
+      "p95_us": 9411,
+      "max_us": 9418,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "6": {
+      "count": 30,
+      "min_us": 9408,
+      "mean_us": 9408.266666666666,
+      "median_us": 9408.0,
+      "p95_us": 9408,
+      "max_us": 9416,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "7": {
+      "count": 30,
+      "min_us": 9408,
+      "mean_us": 9408.266666666666,
+      "median_us": 9408.0,
+      "p95_us": 9408,
+      "max_us": 9416,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "8": {
+      "count": 30,
+      "min_us": 9430,
+      "mean_us": 9430.233333333334,
+      "median_us": 9430.0,
+      "p95_us": 9430,
+      "max_us": 9437,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "9": {
+      "count": 30,
+      "min_us": 9421,
+      "mean_us": 9421.266666666666,
+      "median_us": 9421.0,
+      "p95_us": 9421,
+      "max_us": 9429,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "10": {
+      "count": 30,
+      "min_us": 9409,
+      "mean_us": 9409.233333333334,
+      "median_us": 9409.0,
+      "p95_us": 9409,
+      "max_us": 9416,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "11": {
+      "count": 30,
+      "min_us": 9410,
+      "mean_us": 9410.266666666666,
+      "median_us": 9410.0,
+      "p95_us": 9410,
+      "max_us": 9418,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    }
+  },
+  "heap_logs": [
+    {
+      "stage": "before_init",
+      "free": "298644",
+      "minimum": "298644",
+      "largest": "163840"
+    },
+    {
+      "stage": "after_init",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "after_sample",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    },
+    {
+      "stage": "final",
+      "free": "232608",
+      "minimum": "232608",
+      "largest": "110592"
+    }
+  ],
+  "arena_logs": [
+    {
+      "allocated": "65536",
+      "used": "6396"
+    }
+  ],
+  "boot": [
+    {
+      "firmware": "step8_v1",
+      "idf": "v5.4.4",
+      "target": "esp32",
+      "cpu_mhz": "240",
+      "component": "1.4.2"
+    }
+  ],
+  "configuration": [
+    {
+      "esp_nn": "ENABLED_BUILD_OPTION",
+      "actual_kernel_paths": "NEEDS_VERIFICATION"
+    }
+  ],
+  "kernel_difference_note": "Nonzero LSB differences may reflect kernel rounding/implementation differences; not automatically accepted. Class disagreement is FAILED. No threshold adjustment."
+}

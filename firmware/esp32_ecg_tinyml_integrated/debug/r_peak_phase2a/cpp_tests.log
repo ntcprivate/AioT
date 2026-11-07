@@ -1,6 +1,0 @@
-PASS: classification gate64 cases; LED/buzzer nonblocking patterns; CRC32 golden; exact sample encoding;50Hz rejection/metrics and clipping.
-PASS: rails/flat/noise/timestamp-gap guards; 128-before/128-from-center indexing, both detector polarities. Not ECG/clinical validation.
-PASS: mapping27/26; active-HIGH truth table; 65536 sequences; OR swap invariant; immutable snapshots; corrupt counts/raw rejected; alternating leads can yield lo_any=256.
-PASS: actual firmware hex encoder, all256 byte values, chunk sizes1..16, terminator/bounds checks.
-PASS: actual firmware CRC32/frame encoder and deterministic synthetic pattern;500 production-layout batches emitted when path supplied.
-PASS: overlapping/variable-RR/polarity windows; FIFO full/order/duplicate/expiry; atomic gaps; reset/invalid cancellation;20min250Hz host stream.

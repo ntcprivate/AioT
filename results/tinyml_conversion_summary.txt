@@ -1,0 +1,18 @@
+Step 7: conversion and desktop Validation comparison completed.
+Source CNN parameters: 849
+Threshold: 0.52 (unchanged, read from optimized_threshold.json)
+INT8 size: 8560 bytes (8.36 KiB)
+File-size reduction versus TFLite Float32: 9.17%
+INT8 learned weight buffers: 816 bytes; bias buffers: 132 bytes (not the whole file or RAM)
+Validation only; no Test inference, calibration or selection.
+Model                     Accuracy  Precision Recall    F1
+Keras Float32             0.950397  0.705669  0.900000  0.791075
+TFLite Float32            0.950397  0.705669  0.900000  0.791075
+TFLite INT8               0.953046  0.722188  0.893846  0.798900
+Actual INT8 operators: CONV_2D v3, EXPAND_DIMS v1, FULLY_CONNECTED v4, LOGISTIC v2, MAX_POOL_2D v2, MEAN v2, RESHAPE v1
+TFLM/esp-tflite-micro: NEEDS_VERIFICATION for pinned kernel/operator versions.
+ESP32 tensor arena, RAM, latency and firmware flash: NOT MEASURED.
+Smaller files do not establish better PVC detection.
+Step 8 readiness: review warnings before any hardware experiment; no automatic changes made.
+WARNING: INT8 Validation recall < 90%; review before hardware testing. Threshold is unchanged.
+WARNING: Some Validation input values saturate INT8 range; clipping statistics are recorded. No recalibration using Validation performed.

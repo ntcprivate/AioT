@@ -1,17 +1,40 @@
+﻿# Python
+.venv/
 **/.venv/
 **/__pycache__/
-**/build/
+**/.pytest_cache/
+**/.ipynb_checkpoints/
 *.pyc
-**/captures/
+
+# ESP-IDF
+**/build/
+**/managed_components/
+
+# IDE
+.vscode/
+
+# Credentials
 .env
 .env.*
 !.env.example
 *.pem
 *.key
-/data/
+
+# Original ECG datasets
 /mit-bih-arrhythmia-database-1.0.0/
-/results/
-/plots/
-/.vscode/
-**/managed_components/
-/tools/ecg_monitor/reports/
+/data/
+
+# Raw ECG recordings
+**/captures/
+**/raw_captures/
+**/raw_ecg/
+
+# Temporary diagnostics
+**/*.log
+/tools/ecg_monitor/reports/offline/native_mismatch/
+/tools/ecg_monitor/reports/offline/reference_mismatch/
+/tools/ecg_monitor/reports/offline/*.bin
+
+# Operating system
+.DS_Store
+Thumbs.db

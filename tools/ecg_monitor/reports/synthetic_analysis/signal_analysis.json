@@ -1,0 +1,28 @@
+{
+  "source": "SYNTHETIC50Hz_TEST",
+  "scope": "Exploratory bench analysis; filter not approved for model",
+  "observed_fs": 250.0,
+  "raw": {
+    "samples": 7500,
+    "ptp_counts": 350.13854506355165,
+    "mean_counts": 2048.0,
+    "clipping_fraction": 0.0,
+    "power50_fraction": 0.7416581390775886,
+    "baseline_fraction": 0.07292900444441647,
+    "high_frequency_fraction": 0.7416581563827731,
+    "baseline_first_last_counts": -32.991938816096535
+  },
+  "filtered": {
+    "samples": 7500,
+    "ptp_counts": 107.15709399503066,
+    "mean_counts": 2047.9072982485193,
+    "clipping_fraction": 0.0,
+    "power50_fraction": 2.3304812717353981e-07,
+    "baseline_fraction": 0.010212579109884169,
+    "high_frequency_fraction": 2.3385280876646144e-07,
+    "baseline_first_last_counts": 8.396585393108126
+  },
+  "filter": "Causal50Hz notch Q30 +2nd-order0.5-40Hz bandpass",
+  "filter_model_use": "BLOCKED: labeled QRS alignment/classification parity required",
+  "limits": "PSD50 estimate does not prove mains origin. Filter startup transients/phase delay retained; no validity inferred."
+}

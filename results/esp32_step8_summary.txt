@@ -1,0 +1,6 @@
+Step 8: real hardware log reviewed. Result: FAILED
+Samples: 12/12; exact outputs: 10
+Class matches: 11; threshold unchanged: 0.52
+Build status: NOT_ATTEMPTED; flash status: NOT_ATTEMPTED
+Build/flash command evidence is separate from runtime serial evidence.
+See esp32_inference_comparison.json for measured latency/heap and all differences.

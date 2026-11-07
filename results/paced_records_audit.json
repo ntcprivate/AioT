@@ -1,0 +1,200 @@
+{
+  "records": {
+    "102": {
+      "dataset_N": 0,
+      "dataset_V": 0,
+      "present_in_dataset": false,
+      "split_membership": [],
+      "step5_csv": {
+        "record_id": "102",
+        "lead": "",
+        "n_normal": "0",
+        "n_pvc": "0",
+        "n_rejected": "0",
+        "status": "skipped",
+        "reason": "ValueError: No MLII lead (available: ['V5', 'V2'])",
+        "n_boundary": "0",
+        "n_nonfinite": "0",
+        "n_low_std": "0",
+        "n_other_annotations": "0"
+      },
+      "evidence_status": "CONFIRMED",
+      "leads": [
+        "V5",
+        "V2"
+      ],
+      "header_comments": [
+        "84 F 1525 167 x1",
+        "Digoxin",
+        "The rhythm is paced with a demand pacemaker.  The PVCs are multiform."
+      ],
+      "annotation_counts": {
+        "+": 5,
+        "/": 2028,
+        "f": 56,
+        "N": 99,
+        "V": 4
+      },
+      "paced_annotation_count": 2084,
+      "paced_symbols": {
+        "/": "paced beat",
+        "f": "fusion of paced and normal beat"
+      },
+      "evidence_files": [
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\102.hea",
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\102.atr"
+      ],
+      "no_mlii": true
+    },
+    "104": {
+      "dataset_N": 0,
+      "dataset_V": 0,
+      "present_in_dataset": false,
+      "split_membership": [],
+      "step5_csv": {
+        "record_id": "104",
+        "lead": "",
+        "n_normal": "0",
+        "n_pvc": "0",
+        "n_rejected": "0",
+        "status": "skipped",
+        "reason": "ValueError: No MLII lead (available: ['V5', 'V2'])",
+        "n_boundary": "0",
+        "n_nonfinite": "0",
+        "n_low_std": "0",
+        "n_other_annotations": "0"
+      },
+      "evidence_status": "CONFIRMED",
+      "leads": [
+        "V5",
+        "V2"
+      ],
+      "header_comments": [
+        "66 F 1567 694 x1",
+        "Digoxin, Pronestyl",
+        "The rate of paced rhythm is close to that of the underlying sinus rhythm,",
+        "resulting in many pacemaker fusion beats.  The PVCs are multiform.  Several",
+        "bursts of muscle noise occur, but the signals are generally of good quality."
+      ],
+      "annotation_counts": {
+        "+": 45,
+        "/": 1380,
+        "f": 666,
+        "~": 37,
+        "Q": 18,
+        "N": 163,
+        "V": 2
+      },
+      "paced_annotation_count": 2046,
+      "paced_symbols": {
+        "/": "paced beat",
+        "f": "fusion of paced and normal beat"
+      },
+      "evidence_files": [
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\104.hea",
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\104.atr"
+      ],
+      "no_mlii": true
+    },
+    "107": {
+      "dataset_N": 0,
+      "dataset_V": 59,
+      "present_in_dataset": true,
+      "split_membership": [
+        "test"
+      ],
+      "step5_csv": {
+        "record_id": "107",
+        "lead": "MLII",
+        "n_normal": "0",
+        "n_pvc": "59",
+        "n_rejected": "0",
+        "status": "ok",
+        "reason": "",
+        "n_boundary": "0",
+        "n_nonfinite": "0",
+        "n_low_std": "0",
+        "n_other_annotations": "2081"
+      },
+      "evidence_status": "CONFIRMED",
+      "leads": [
+        "MLII",
+        "V1"
+      ],
+      "header_comments": [
+        "63 M 1340 167 x1",
+        "Digoxin",
+        "Complete heart block is present. The PVCs are multiform."
+      ],
+      "annotation_counts": {
+        "+": 1,
+        "/": 2078,
+        "V": 59,
+        "~": 2
+      },
+      "paced_annotation_count": 2078,
+      "paced_symbols": {
+        "/": "paced beat",
+        "f": "fusion of paced and normal beat"
+      },
+      "evidence_files": [
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\107.hea",
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\107.atr"
+      ],
+      "no_mlii": false
+    },
+    "217": {
+      "dataset_N": 244,
+      "dataset_V": 162,
+      "present_in_dataset": true,
+      "split_membership": [
+        "train"
+      ],
+      "step5_csv": {
+        "record_id": "217",
+        "lead": "MLII",
+        "n_normal": "244",
+        "n_pvc": "162",
+        "n_rejected": "0",
+        "status": "ok",
+        "reason": "",
+        "n_boundary": "0",
+        "n_nonfinite": "0",
+        "n_low_std": "0",
+        "n_other_annotations": "1874"
+      },
+      "evidence_status": "CONFIRMED",
+      "leads": [
+        "MLII",
+        "V1"
+      ],
+      "header_comments": [
+        "65 M 2450 653 x1",
+        "Digoxin, Lasix, Quinidine",
+        "The PVCs are multiform."
+      ],
+      "annotation_counts": {
+        "+": 67,
+        "/": 1542,
+        "f": 260,
+        "V": 162,
+        "N": 244,
+        "~": 4,
+        "|": 1
+      },
+      "paced_annotation_count": 1802,
+      "paced_symbols": {
+        "/": "paced beat",
+        "f": "fusion of paced and normal beat"
+      },
+      "evidence_files": [
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\217.hea",
+        "D:\\Code Part Two\\AIoT\\mit-bih-arrhythmia-database-1.0.0\\217.atr"
+      ],
+      "no_mlii": false
+    }
+  },
+  "test_inference_performed": false,
+  "risk": "Paced/fusion morphology and patient-specific signal context may alter N/V discrimination. Non-N/V annotations were omitted, but that does not make a paced record equivalent to a non-paced record.",
+  "action": "No records removed; no split or weights changed. Any exclusion must be a separate prespecified experiment, without choosing exclusions from test performance."
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "HOST simulated serial protocol only, not hardware bandwidth/latency measurement",
+  "samples": 15008,
+  "virtual_seconds": 60.032,
+  "status_packets": 118,
+  "parser_errors": 0,
+  "bytes_per_second": 6659.731476545842,
+  "uart_capacity_8n1": 11520.0,
+  "uart_fraction": 0.5781016906723822,
+  "host_processing_seconds": 0.08371200000692625,
+  "sample_points_retained": 5000,
+  "lost_packets": 0
+}

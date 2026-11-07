@@ -1,0 +1,1090 @@
+{
+  "pinned_source_evidence": [
+    {
+      "path": "tensorflow/lite/micro/kernels/expand_dims.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/expand_dims.cc",
+      "sha256": "e03ef164fe149fad1de723ea4635bb34edf7d38ae1055863a46c774a6622cda3",
+      "int8_marker_found": true,
+      "review_markers": [
+        {
+          "line": 41,
+          "text": "if (kTfLiteInt32 == (axis->type)) {"
+        },
+        {
+          "line": 137,
+          "text": "case kTfLiteInt8: {"
+        }
+      ]
+    },
+    {
+      "path": "tensorflow/lite/micro/kernels/reshape.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/reshape.cc",
+      "sha256": "e2f96f3db4f2c3e4e2acf75a86ba6bd4cf83ea8b675aa6b69b2207b18fe50c64",
+      "int8_marker_found": false,
+      "review_markers": []
+    },
+    {
+      "path": "tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+      "sha256": "c482045c9376dd944e772a5d5785e98ac8e48e5cfd8e84335feff830222faf21",
+      "int8_marker_found": true,
+      "review_markers": [
+        {
+          "line": 82,
+          "text": "(input->type == kTfLiteInt16 && filter->type == kTfLiteInt8) ||"
+        },
+        {
+          "line": 83,
+          "text": "(input->type == kTfLiteInt8 &&"
+        },
+        {
+          "line": 84,
+          "text": "(filter->type == kTfLiteInt4 || filter->type == kTfLiteInt8)),"
+        },
+        {
+          "line": 104,
+          "text": "if (input->type == kTfLiteInt8 || input->type == kTfLiteInt16) {"
+        },
+        {
+          "line": 134,
+          "text": "if (input->type == kTfLiteInt8) {"
+        },
+        {
+          "line": 318,
+          "text": "if (bias == nullptr || bias->type == kTfLiteInt32) {"
+        },
+        {
+          "line": 351,
+          "text": "case kTfLiteInt8: {"
+        },
+        {
+          "line": 373,
+          "text": "case kTfLiteInt8: {"
+        }
+      ]
+    },
+    {
+      "path": "tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+      "sha256": "8f0a12cd7b785b9ca7786ec13959115fdec21ad0b60507eb6564663704d73adb",
+      "int8_marker_found": true,
+      "review_markers": [
+        {
+          "line": 70,
+          "text": "(input->type == kTfLiteInt8 &&"
+        },
+        {
+          "line": 71,
+          "text": "(filter->type != kTfLiteInt8 && filter->type != kTfLiteInt4)) ||"
+        },
+        {
+          "line": 72,
+          "text": "(input->type == kTfLiteInt16 && filter->type != kTfLiteInt8)) {"
+        },
+        {
+          "line": 137,
+          "text": "case kTfLiteInt8: {"
+        },
+        {
+          "line": 157,
+          "text": "case kTfLiteInt8: {"
+        },
+        {
+          "line": 285,
+          "text": "case kTfLiteInt8: {"
+        }
+      ]
+    },
+    {
+      "path": "tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+      "sha256": "23391b183d620aafd5093942967073e8a48c0f0d636c7b942669430c32a43000",
+      "int8_marker_found": true,
+      "review_markers": [
+        {
+          "line": 91,
+          "text": "NumElements(input->dims),"
+        },
+        {
+          "line": 102,
+          "text": "} else if (input->type == kTfLiteInt8) {"
+        },
+        {
+          "line": 104,
+          "text": "case kTfLiteInt8: {"
+        },
+        {
+          "line": 112,
+          "text": "const int32_t count = NumElements(input->dims);"
+        },
+        {
+          "line": 167,
+          "text": "NumElements(input->dims),"
+        },
+        {
+          "line": 199,
+          "text": "if (input != nullptr && input->type == kTfLiteInt8) {"
+        }
+      ]
+    },
+    {
+      "path": "tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+      "sha256": "dc8358dba8b60567729ac1d8f55d06fec7e8cfe273ad37a8de850d448135dcfc",
+      "int8_marker_found": true,
+      "review_markers": [
+        {
+          "line": 168,
+          "text": "case kTfLiteInt8:"
+        },
+        {
+          "line": 207,
+          "text": "case kTfLiteInt8:"
+        }
+      ]
+    },
+    {
+      "path": "tensorflow/lite/micro/kernels/esp_nn/reduce.cc",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/reduce.cc",
+      "sha256": "27eda4a65cfd77656e46b9c42a1613b8a28695fcef90318bbb2dcb07efc7dd86",
+      "int8_marker_found": true,
+      "review_markers": [
+        {
+          "line": 166,
+          "text": "if (input->type == kTfLiteInt8 && output->type == kTfLiteInt8 &&"
+        },
+        {
+          "line": 189,
+          "text": "if (input->type == kTfLiteInt8 && output->type == kTfLiteInt8 &&"
+        }
+      ]
+    },
+    {
+      "path": "tensorflow/lite/micro/micro_interpreter.h",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/micro_interpreter.h",
+      "sha256": "77ea0e18b88c108cea7eb72cb79437be7bb01cb1a1ac3eee1588645daaea0e81",
+      "int8_marker_found": false,
+      "review_markers": [
+        {
+          "line": 89,
+          "text": "size_t inputs_size() const {"
+        },
+        {
+          "line": 107,
+          "text": "size_t outputs_size() const {"
+        },
+        {
+          "line": 147,
+          "text": "// arena_used_bytes() + 16."
+        },
+        {
+          "line": 148,
+          "text": "size_t arena_used_bytes() const { return allocator_.used_bytes(); }"
+        }
+      ]
+    },
+    {
+      "path": "Kconfig",
+      "url": "https://raw.githubusercontent.com/espressif/esp-tflite-micro/6368cd2ddebb72e047509ccbc529afc321e804b9/Kconfig",
+      "sha256": "46c277890d428cba57efb90257d2a647e07769b16af87baecf2bad7d2041b167",
+      "int8_marker_found": false,
+      "review_markers": [
+        {
+          "line": 3,
+          "text": "config ESP_TFLITE_MICRO_USE_ESP_NN"
+        }
+      ]
+    }
+  ],
+  "source_review_note": "Kernel files read at pinned release commit; markers show type/shape branches, not proof of all model operator versions. Runtime AllocateTensors/Invoke still required.",
+  "component": "espressif/esp-tflite-micro",
+  "version": "1.4.2",
+  "source_commit": "6368cd2ddebb72e047509ccbc529afc321e804b9",
+  "status": "NEEDS_VERIFICATION",
+  "flatbuffer": {
+    "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "model_bytes": 8560,
+    "schema_version": 3,
+    "io": {
+      "input": {
+        "index": 0,
+        "name": "serving_default_input_layer:0",
+        "shape": [
+          1,
+          256,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.053921569138765335
+        ],
+        "zero_points": [
+          -27
+        ],
+        "quantized_dimension": 0
+      },
+      "output": {
+        "index": 30,
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.00390625
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      }
+    },
+    "operators": [
+      {
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          0,
+          1
+        ],
+        "outputs": [
+          15
+        ]
+      },
+      {
+        "name": "CONV_2D",
+        "version": 3,
+        "inputs": [
+          15,
+          14,
+          13
+        ],
+        "outputs": [
+          16
+        ]
+      },
+      {
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          16,
+          2
+        ],
+        "outputs": [
+          17
+        ]
+      },
+      {
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          17,
+          3
+        ],
+        "outputs": [
+          18
+        ]
+      },
+      {
+        "name": "MAX_POOL_2D",
+        "version": 2,
+        "inputs": [
+          18
+        ],
+        "outputs": [
+          19
+        ]
+      },
+      {
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          19,
+          4
+        ],
+        "outputs": [
+          20
+        ]
+      },
+      {
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          20,
+          1
+        ],
+        "outputs": [
+          21
+        ]
+      },
+      {
+        "name": "CONV_2D",
+        "version": 3,
+        "inputs": [
+          21,
+          12,
+          11
+        ],
+        "outputs": [
+          22
+        ]
+      },
+      {
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          22,
+          5
+        ],
+        "outputs": [
+          23
+        ]
+      },
+      {
+        "name": "EXPAND_DIMS",
+        "version": 1,
+        "inputs": [
+          23,
+          3
+        ],
+        "outputs": [
+          24
+        ]
+      },
+      {
+        "name": "MAX_POOL_2D",
+        "version": 2,
+        "inputs": [
+          24
+        ],
+        "outputs": [
+          25
+        ]
+      },
+      {
+        "name": "RESHAPE",
+        "version": 1,
+        "inputs": [
+          25,
+          6
+        ],
+        "outputs": [
+          26
+        ]
+      },
+      {
+        "name": "MEAN",
+        "version": 2,
+        "inputs": [
+          26,
+          3
+        ],
+        "outputs": [
+          27
+        ]
+      },
+      {
+        "name": "FULLY_CONNECTED",
+        "version": 4,
+        "inputs": [
+          27,
+          10,
+          9
+        ],
+        "outputs": [
+          28
+        ]
+      },
+      {
+        "name": "FULLY_CONNECTED",
+        "version": 4,
+        "inputs": [
+          28,
+          8,
+          7
+        ],
+        "outputs": [
+          29
+        ]
+      },
+      {
+        "name": "LOGISTIC",
+        "version": 2,
+        "inputs": [
+          29
+        ],
+        "outputs": [
+          30
+        ]
+      }
+    ],
+    "tensors": [
+      {
+        "index": 0,
+        "name": "serving_default_input_layer:0",
+        "shape": [
+          1,
+          256,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.053921569138765335
+        ],
+        "zero_points": [
+          -27
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 1,
+        "name": "arith.constant",
+        "shape": [],
+        "dtype": "INT32",
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 2,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 3,
+        "name": "arith.constant1",
+        "shape": [],
+        "dtype": "INT32",
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 4,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 5,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 6,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/Squeeze",
+        "shape": [
+          3
+        ],
+        "dtype": "INT32",
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 7,
+        "name": "ecg_nv_cnn_1/dense_1_2/Add",
+        "shape": [
+          1
+        ],
+        "dtype": "INT32",
+        "scales": [
+          9.830878843786195e-05
+        ],
+        "zero_points": [
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 8,
+        "name": "ecg_nv_cnn_1/dense_1_2/MatMul",
+        "shape": [
+          1,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.0175047405064106
+        ],
+        "zero_points": [
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 9,
+        "name": "ecg_nv_cnn_1/dense_1/Relu;ecg_nv_cnn_1/dense_1/BiasAdd",
+        "shape": [
+          8
+        ],
+        "dtype": "INT32",
+        "scales": [
+          3.2515221391804516e-05,
+          9.407524339621887e-05,
+          0.00011890605674125254,
+          9.39426026889123e-05,
+          0.00011280133185209706,
+          3.9929989725351334e-05,
+          9.364922880195081e-05,
+          8.63286477397196e-05
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 10,
+        "name": "ecg_nv_cnn_1/dense_1/MatMul",
+        "shape": [
+          8,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.003693344071507454,
+          0.010685834102332592,
+          0.013506320305168629,
+          0.010670767165720463,
+          0.012812895700335503,
+          0.004535574000328779,
+          0.010637443512678146,
+          0.009805912151932716
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 11,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze;ecg_nv_cnn_1/conv1d_1_2/convolution",
+        "shape": [
+          16
+        ],
+        "dtype": "INT32",
+        "scales": [
+          0.00023752778361085802,
+          0.0003278155636508018,
+          0.0004093240131624043,
+          0.0004666151653509587,
+          0.00029612620710395277,
+          0.00048370324657298625,
+          0.0002752012514974922,
+          0.00019160524243488908,
+          0.00012397272803355008,
+          0.00013129308354109526,
+          0.00034604690154083073,
+          0.0004683805746026337,
+          0.0001118596555897966,
+          0.0003703705733641982,
+          0.0006523247575387359,
+          0.0003372092905919999
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 12,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution",
+        "shape": [
+          16,
+          1,
+          5,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.005796544719487429,
+          0.007999896071851254,
+          0.009988999925553799,
+          0.01138711255043745,
+          0.007226559799164534,
+          0.011804124340415001,
+          0.006715914700180292,
+          0.004675867035984993,
+          0.0030253869481384754,
+          0.003204030217602849,
+          0.00844480749219656,
+          0.011430195532739162,
+          0.0027297837659716606,
+          0.009038393385708332,
+          0.01591910421848297,
+          0.008229137398302555
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 13,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze;ecg_nv_cnn_1/conv1d_1/convolution",
+        "shape": [
+          8
+        ],
+        "dtype": "INT32",
+        "scales": [
+          0.0002377398923272267,
+          0.0002152526576537639,
+          0.00018614171131048352,
+          0.00033229266409762204,
+          0.0003453579265624285,
+          0.00019465362129267305,
+          0.000166033671121113,
+          0.00028225986170582473
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 14,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution",
+        "shape": [
+          8,
+          1,
+          5,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.004408994223922491,
+          0.0039919582195580006,
+          0.0034520826302468777,
+          0.006162518635392189,
+          0.006404819432646036,
+          0.003609939943999052,
+          0.0030791698954999447,
+          0.005234637297689915
+        ],
+        "zero_points": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 15,
+        "name": "ecg_nv_cnn_1/conv1d_1/convolution/ExpandDims",
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.053921569138765335
+        ],
+        "zero_points": [
+          -27
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 16,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze;ecg_nv_cnn_1/conv1d_1/convolution1",
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 17,
+        "name": "ecg_nv_cnn_1/conv1d_1/Relu;ecg_nv_cnn_1/conv1d_1/BiasAdd;ecg_nv_cnn_1/conv1d_1/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1/Squeeze",
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 18,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/ExpandDims",
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 19,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d",
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 20,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1/MaxPool1d/Squeeze1",
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 21,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/convolution/ExpandDims",
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.04097747802734375
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 22,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze;ecg_nv_cnn_1/conv1d_1_2/convolution1",
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 23,
+        "name": "ecg_nv_cnn_1/conv1d_1_2/Relu;ecg_nv_cnn_1/conv1d_1_2/BiasAdd;ecg_nv_cnn_1/conv1d_1_2/convolution/Squeeze;ecg_nv_cnn_1/conv1d_1_2/Squeeze",
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 24,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/ExpandDims",
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 25,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d",
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 26,
+        "name": "ecg_nv_cnn_1/max_pooling1d_1_2/MaxPool1d/Squeeze1",
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.07794410735368729
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 27,
+        "name": "ecg_nv_cnn_1/global_average_pooling1d_1/Mean",
+        "shape": [
+          1,
+          16
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.008803734555840492
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 28,
+        "name": "ecg_nv_cnn_1/dense_1/MatMul;ecg_nv_cnn_1/dense_1/Relu;ecg_nv_cnn_1/dense_1/BiasAdd",
+        "shape": [
+          1,
+          8
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.005616123788058758
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 29,
+        "name": "ecg_nv_cnn_1/dense_1_2/MatMul;ecg_nv_cnn_1/dense_1_2/Add",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.05139290168881416
+        ],
+        "zero_points": [
+          -38
+        ],
+        "quantized_dimension": 0
+      },
+      {
+        "index": 30,
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.00390625
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      }
+    ]
+  },
+  "resolver_api_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/micro_mutable_op_resolver.h",
+  "operators": [
+    {
+      "name": "CONV_2D",
+      "version": 3,
+      "registration": "AddConv2D",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "EXPAND_DIMS",
+      "version": 1,
+      "registration": "AddExpandDims",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/expand_dims.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "FULLY_CONNECTED",
+      "version": 4,
+      "registration": "AddFullyConnected",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "LOGISTIC",
+      "version": 2,
+      "registration": "AddLogistic",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "MAX_POOL_2D",
+      "version": 2,
+      "registration": "AddMaxPool2D",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "MEAN",
+      "version": 2,
+      "registration": "AddMean",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/reduce.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "RESHAPE",
+      "version": 1,
+      "registration": "AddReshape",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/reshape.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    }
+  ]
+}

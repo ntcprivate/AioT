@@ -1,0 +1,440 @@
+{
+  "status": "FAIL_AI_LIVE_LOCKED",
+  "source": "LocalMITBIH_MLII_VALIDATION_ONLY",
+  "records": [
+    "115",
+    "118",
+    "121",
+    "210",
+    "214",
+    "233",
+    "234"
+  ],
+  "criteria": {
+    "sensitivity_min": 0.99,
+    "ppv_min": 0.99,
+    "timing_p95_max_ms": 40,
+    "noise_false_peaks_max": 0,
+    "matching_tolerance_samples": 12
+  },
+  "aggregate": {
+    "tp": 13226,
+    "fp": 90,
+    "fn": 3612,
+    "sensitivity": 0.78548521202043,
+    "ppv": 0.9932412135776509
+  },
+  "per_record": [
+    {
+      "record": "115",
+      "samples": 451389,
+      "candidate": {
+        "tp": 1935,
+        "fp": 11,
+        "fn": 18,
+        "sensitivity": 0.9907834101382489,
+        "ppv": 0.9943473792394656,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1935
+        },
+        "missed_by_annotation": {
+          "N": 18
+        }
+      },
+      "quality_gated": {
+        "tp": 1934,
+        "fp": 11,
+        "fn": 19,
+        "sensitivity": 0.9902713773681515,
+        "ppv": 0.9943444730077121,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1934
+        },
+        "missed_by_annotation": {
+          "N": 19
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 1
+      }
+    },
+    {
+      "record": "118",
+      "samples": 451389,
+      "candidate": {
+        "tp": 2209,
+        "fp": 17,
+        "fn": 69,
+        "sensitivity": 0.9697102721685689,
+        "ppv": 0.9923629829290207,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2112,
+          "A": 88,
+          "V": 9
+        },
+        "missed_by_annotation": {
+          "R": 54,
+          "V": 7,
+          "A": 8
+        }
+      },
+      "quality_gated": {
+        "tp": 2207,
+        "fp": 17,
+        "fn": 71,
+        "sensitivity": 0.9688323090430202,
+        "ppv": 0.9923561151079137,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2110,
+          "A": 88,
+          "V": 9
+        },
+        "missed_by_annotation": {
+          "R": 56,
+          "V": 7,
+          "A": 8
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 13
+      }
+    },
+    {
+      "record": "121",
+      "samples": 451389,
+      "candidate": {
+        "tp": 1741,
+        "fp": 50,
+        "fn": 122,
+        "sensitivity": 0.9345142243692969,
+        "ppv": 0.9720826353992184,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1739,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 122
+        }
+      },
+      "quality_gated": {
+        "tp": 1740,
+        "fp": 50,
+        "fn": 123,
+        "sensitivity": 0.9339774557165862,
+        "ppv": 0.9720670391061452,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1738,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 123
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 14,
+        "NO_RELIABLE_R_PEAK": 3
+      }
+    },
+    {
+      "record": "210",
+      "samples": 451389,
+      "candidate": {
+        "tp": 2061,
+        "fp": 5,
+        "fn": 589,
+        "sensitivity": 0.7777358490566038,
+        "ppv": 0.9975798644724104,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2015,
+          "F": 7,
+          "V": 37,
+          "a": 2
+        },
+        "missed_by_annotation": {
+          "N": 408,
+          "V": 157,
+          "a": 20,
+          "F": 3,
+          "E": 1
+        }
+      },
+      "quality_gated": {
+        "tp": 2058,
+        "fp": 5,
+        "fn": 592,
+        "sensitivity": 0.7766037735849056,
+        "ppv": 0.9975763451284537,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2012,
+          "F": 7,
+          "V": 37,
+          "a": 2
+        },
+        "missed_by_annotation": {
+          "N": 411,
+          "V": 157,
+          "a": 20,
+          "F": 3,
+          "E": 1
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 135
+      }
+    },
+    {
+      "record": "214",
+      "samples": 451389,
+      "candidate": {
+        "tp": 1619,
+        "fp": 2,
+        "fn": 643,
+        "sensitivity": 0.715738284703802,
+        "ppv": 0.9987661937075879,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1553,
+          "V": 65,
+          "Q": 1
+        },
+        "missed_by_annotation": {
+          "L": 450,
+          "V": 191,
+          "Q": 1,
+          "F": 1
+        }
+      },
+      "quality_gated": {
+        "tp": 1618,
+        "fp": 2,
+        "fn": 644,
+        "sensitivity": 0.7152961980548187,
+        "ppv": 0.9987654320987654,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1552,
+          "V": 65,
+          "Q": 1
+        },
+        "missed_by_annotation": {
+          "L": 451,
+          "V": 191,
+          "Q": 1,
+          "F": 1
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 178
+      }
+    },
+    {
+      "record": "233",
+      "samples": 451389,
+      "candidate": {
+        "tp": 963,
+        "fp": 0,
+        "fn": 2116,
+        "sensitivity": 0.3127638843780448,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 36.0,
+        "matched_by_annotation": {
+          "N": 800,
+          "V": 156,
+          "F": 5,
+          "A": 2
+        },
+        "missed_by_annotation": {
+          "V": 675,
+          "N": 1430,
+          "A": 5,
+          "F": 6
+        }
+      },
+      "quality_gated": {
+        "tp": 963,
+        "fp": 0,
+        "fn": 2116,
+        "sensitivity": 0.3127638843780448,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 36.0,
+        "matched_by_annotation": {
+          "V": 157,
+          "N": 799,
+          "F": 5,
+          "A": 2
+        },
+        "missed_by_annotation": {
+          "V": 674,
+          "N": 1431,
+          "A": 5,
+          "F": 6
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 445
+      }
+    },
+    {
+      "record": "234",
+      "samples": 451389,
+      "candidate": {
+        "tp": 2698,
+        "fp": 5,
+        "fn": 55,
+        "sensitivity": 0.9800217944061025,
+        "ppv": 0.9981502034776175,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2676,
+          "J": 22
+        },
+        "missed_by_annotation": {
+          "N": 24,
+          "J": 28,
+          "V": 3
+        }
+      },
+      "quality_gated": {
+        "tp": 2695,
+        "fp": 5,
+        "fn": 58,
+        "sensitivity": 0.9789320741009807,
+        "ppv": 0.9981481481481481,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2673,
+          "J": 22
+        },
+        "missed_by_annotation": {
+          "N": 27,
+          "J": 28,
+          "V": 3
+        }
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 9
+      }
+    }
+  ],
+  "controls": {
+    "no_peaks": {
+      "candidate_peaks": 0,
+      "quality_gated_peaks": 0
+    },
+    "pure50Hz": {
+      "candidate_peaks": 0,
+      "quality_gated_peaks": 0
+    }
+  },
+  "noisy_ecg": {
+    "source": "Validation record115 first120s + synthetic0.5mV50Hz",
+    "candidate": {
+      "tp": 123,
+      "fp": 0,
+      "fn": 3,
+      "sensitivity": 0.9761904761904762,
+      "ppv": 1.0,
+      "timing_median_abs_ms": 4.0,
+      "timing_p95_abs_ms": 12.0,
+      "matched_by_annotation": {
+        "N": 123
+      },
+      "missed_by_annotation": {
+        "N": 3
+      }
+    },
+    "quality_gated": {
+      "tp": 122,
+      "fp": 0,
+      "fn": 4,
+      "sensitivity": 0.9682539682539683,
+      "ppv": 1.0,
+      "timing_median_abs_ms": 4.0,
+      "timing_p95_abs_ms": 12.0,
+      "matched_by_annotation": {
+        "N": 122
+      },
+      "missed_by_annotation": {
+        "N": 4
+      }
+    },
+    "quality_blocks": {
+      "PASS": 117
+    }
+  },
+  "chain": {
+    "status": "COMPONENT_PARITY_PASS",
+    "scope": "Exploratory matched N/V detections on Validation; excludes missed/false/other-label peaks; NOT end-to-end clinical accuracy",
+    "beats": 9425,
+    "preprocessing_mismatched_bytes": 0,
+    "cnn_mismatched_codes": 0,
+    "quantization_clipped_beats": 0,
+    "runtime_eligible_beats": 9425,
+    "classification_metrics_scope": "Matched N/V windows only, additionally exclude quantization clipping as firmware would; not full pipeline accuracy",
+    "matched_pvc_tp": 229,
+    "matched_pvc_fn": 40,
+    "matched_normal_fp": 14,
+    "matched_normal_tn": 9142
+  },
+  "filter_review": {
+    "annotation_windows": 12459,
+    "median_raw_filtered_correlation": 0.9191407350500872,
+    "p95_absolute_peak_displacement_samples": 2.0,
+    "decision": "NOT_APPROVED_FOR_CNN: causal filter alters morphology/alignment; existing unfiltered preprocessing unchanged"
+  },
+  "limitations": [
+    "Validation reused: exploratory, no held-out final claim",
+    "Candidate detector standalone and host quality-gated mirror, not real-time firmware scheduler",
+    "ADC mapping2048+200counts/mV is an explicit synthetic bench representation, not calibration",
+    "Warm-up and end-boundary missed beats counted as FN",
+    "Golden inference PASS does not establish peak-detector or live system validity",
+    "Hardware/simulator validation BLOCKED until user flashes/tests"
+  ],
+  "input_split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b",
+  "live_unlocked": false
+}

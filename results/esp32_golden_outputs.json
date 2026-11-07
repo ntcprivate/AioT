@@ -1,0 +1,145 @@
+{
+  "status": "PYTHON_GOLDEN_CREATED_HARDWARE_NOT_TESTED",
+  "seed": 42,
+  "source": "Validation only",
+  "threshold": 0.52,
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+  "samples_sha256": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758",
+  "sample_count": 12,
+  "bytes_per_sample": 256,
+  "layout": "Consecutive 256 signed INT8 bytes per sample, row-major (1,256,1); no multi-byte fields or endianness conversion",
+  "selection": "Seeded label/prediction coverage, two nearest-threshold samples, random fill; not threshold selection",
+  "quantization": {
+    "input_shape": [
+      1,
+      256,
+      1
+    ],
+    "output_shape": [
+      1,
+      1
+    ],
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_scale": 0.053921569138765335,
+    "input_zero_point": -27,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128
+  },
+  "samples": [
+    {
+      "sample_id": 0,
+      "dataset_index": 19766,
+      "record_id": "115",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0
+    },
+    {
+      "sample_id": 1,
+      "dataset_index": 78432,
+      "record_id": "233",
+      "true_label": 0,
+      "python_output_int8": 50,
+      "python_score": 0.6953125,
+      "python_predicted": 1
+    },
+    {
+      "sample_id": 2,
+      "dataset_index": 56558,
+      "record_id": "214",
+      "true_label": 1,
+      "python_output_int8": -66,
+      "python_score": 0.2421875,
+      "python_predicted": 0
+    },
+    {
+      "sample_id": 3,
+      "dataset_index": 76710,
+      "record_id": "233",
+      "true_label": 1,
+      "python_output_int8": 68,
+      "python_score": 0.765625,
+      "python_predicted": 1
+    },
+    {
+      "sample_id": 4,
+      "dataset_index": 28388,
+      "record_id": "121",
+      "true_label": 0,
+      "python_output_int8": 7,
+      "python_score": 0.52734375,
+      "python_predicted": 1
+    },
+    {
+      "sample_id": 5,
+      "dataset_index": 50805,
+      "record_id": "210",
+      "true_label": 1,
+      "python_output_int8": 7,
+      "python_score": 0.52734375,
+      "python_predicted": 1
+    },
+    {
+      "sample_id": 6,
+      "dataset_index": 52318,
+      "record_id": "210",
+      "true_label": 0,
+      "python_output_int8": -124,
+      "python_score": 0.015625,
+      "python_predicted": 0
+    },
+    {
+      "sample_id": 7,
+      "dataset_index": 81870,
+      "record_id": "234",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0
+    },
+    {
+      "sample_id": 8,
+      "dataset_index": 27174,
+      "record_id": "121",
+      "true_label": 0,
+      "python_output_int8": -125,
+      "python_score": 0.01171875,
+      "python_predicted": 0
+    },
+    {
+      "sample_id": 9,
+      "dataset_index": 76481,
+      "record_id": "233",
+      "true_label": 1,
+      "python_output_int8": 47,
+      "python_score": 0.68359375,
+      "python_predicted": 1
+    },
+    {
+      "sample_id": 10,
+      "dataset_index": 52498,
+      "record_id": "210",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0
+    },
+    {
+      "sample_id": 11,
+      "dataset_index": 19095,
+      "record_id": "115",
+      "true_label": 0,
+      "python_output_int8": -126,
+      "python_score": 0.0078125,
+      "python_predicted": 0
+    }
+  ],
+  "input_binary": "D:\\Code Part Two\\AIoT\\firmware\\esp32_tinyml_step8\\main\\test_data\\ecg_test_samples_int8.bin",
+  "provenance": {
+    "dataset_sha256": "5540e47b41a01b3f87c563ce7f701213fcf30dc241ef79037ab9ab92c46bbce5",
+    "split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b",
+    "model_sha256": "254595d658838de6525f4dc0a2821415a9197443e529d838e362044cd2e32399"
+  }
+}

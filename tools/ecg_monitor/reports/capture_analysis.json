@@ -1,0 +1,47 @@
+{
+  "capture": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\captures\\20261106T124834Z_25fb48db.bin",
+  "sha256": "587ef9b4562da394b98b5dd8abefbb8706b547bbfc1331efdb805b1926edf473",
+  "bytes": 4226001,
+  "valid_packets": 6159,
+  "valid_samples": 157664,
+  "crc_failures": 0,
+  "framing_errors": 0,
+  "schema_errors": 0,
+  "sequence_errors": 0,
+  "packet_gaps": 0,
+  "missing_samples": 0,
+  "rx_timing_violations": 0,
+  "synthetic_mismatches": 0,
+  "trailing_partial_bytes": 384,
+  "unterminated_oversize": false,
+  "by_boot": {
+    "723f5582": {
+      "samples": 157664,
+      "first_us": 98789244,
+      "last_us": 729441244,
+      "synthetic": false,
+      "received_device_time_hz": 249.99999999999997
+    }
+  },
+  "last_firmware_counters": {
+    "firmware": "ecg-monitor-2",
+    "source": "HARDWARE",
+    "baud": 115200,
+    "uart_baud_actual": 115201,
+    "sample_attempts": 182189,
+    "acq_hz": 249.999755,
+    "tx_samples": 182176,
+    "tx_hz": 250.723167,
+    "tx_dropped": 0,
+    "write_errors": 0,
+    "format_errors": 0,
+    "uart_write_errors": 0,
+    "uart_tx_timeouts": 0,
+    "adc_errors": 0,
+    "missed_est": 0,
+    "late": 3,
+    "snapshot_errors": 0
+  },
+  "rejection_examples": [],
+  "limits": "No repair. Offline raw file has no host-arrival clock; RX wall rate cannot be inferred. UART completion is not a host acknowledgement. Corrupt frames alone cannot identify physical cause."
+}

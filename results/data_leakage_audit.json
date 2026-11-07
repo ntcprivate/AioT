@@ -1,0 +1,235 @@
+{
+  "index_record_known_group_disjointness": {
+    "status": "PASS",
+    "evidence": {
+      "train": {
+        "samples": 58134,
+        "N": 53216,
+        "V": 4918,
+        "records": [
+          "100",
+          "101",
+          "103",
+          "105",
+          "106",
+          "109",
+          "111",
+          "112",
+          "114",
+          "116",
+          "119",
+          "122",
+          "124",
+          "201",
+          "202",
+          "203",
+          "205",
+          "207",
+          "208",
+          "209",
+          "212",
+          "213",
+          "215",
+          "217",
+          "219",
+          "220",
+          "221",
+          "223",
+          "228",
+          "230",
+          "231"
+        ],
+        "groups": [
+          "patient_201_202",
+          "record_100",
+          "record_101",
+          "record_103",
+          "record_105",
+          "record_106",
+          "record_109",
+          "record_111",
+          "record_112",
+          "record_114",
+          "record_116",
+          "record_119",
+          "record_122",
+          "record_124",
+          "record_203",
+          "record_205",
+          "record_207",
+          "record_208",
+          "record_209",
+          "record_212",
+          "record_213",
+          "record_215",
+          "record_217",
+          "record_219",
+          "record_220",
+          "record_221",
+          "record_223",
+          "record_228",
+          "record_230",
+          "record_231"
+        ]
+      },
+      "validation": {
+        "samples": 12459,
+        "N": 11159,
+        "V": 1300,
+        "records": [
+          "115",
+          "118",
+          "121",
+          "210",
+          "214",
+          "233",
+          "234"
+        ],
+        "groups": [
+          "record_115",
+          "record_118",
+          "record_121",
+          "record_210",
+          "record_214",
+          "record_233",
+          "record_234"
+        ]
+      },
+      "test": {
+        "samples": 11279,
+        "N": 10374,
+        "V": 905,
+        "records": [
+          "107",
+          "108",
+          "113",
+          "117",
+          "123",
+          "200",
+          "222"
+        ],
+        "groups": [
+          "record_107",
+          "record_108",
+          "record_113",
+          "record_117",
+          "record_123",
+          "record_200",
+          "record_222"
+        ]
+      }
+    }
+  },
+  "known_patient_201_202": {
+    "status": "PASS",
+    "evidence": "201/202 mapped to same group; disjointness checked on saved indices"
+  },
+  "dataset_fingerprint": {
+    "status": "PASS",
+    "sha256": "5540e47b41a01b3f87c563ce7f701213fcf30dc241ef79037ab9ab92c46bbce5"
+  },
+  "train_only_weight_arithmetic": {
+    "status": "PASS",
+    "expected": {
+      "0": 0.5462079073962718,
+      "1": 5.910329402196014
+    },
+    "recorded": {
+      "0": 0.5462079073962718,
+      "1": 5.910329402196014
+    }
+  },
+  "historical_training_and_sampling": {
+    "path": "D:\\Code Part Two\\AIoT\\python\\06_train_evaluate.py",
+    "sha256": "4f63cedbb5a366c45032e68ce9e18574550b8d234638ac10994565d0cb729792",
+    "status": "NEEDS_REVIEW",
+    "excerpts": [
+      {
+        "line": 193,
+        "text": "train_counts = np.bincount(y[train], minlength=2)"
+      },
+      {
+        "line": 194,
+        "text": "class_weight = {label: float(len(train) / (2 * train_counts[label]))"
+      },
+      {
+        "line": 196,
+        "text": "print(f\"Class weights (Train only): {class_weight}\")"
+      },
+      {
+        "line": 208,
+        "text": "history = model.fit(X[train], y[train], validation_data=(X[val], y[val]),"
+      },
+      {
+        "line": 209,
+        "text": "epochs=epochs, batch_size=64, class_weight=class_weight,"
+      },
+      {
+        "line": 258,
+        "text": "\"early_stopping_patience\": 5, \"class_weights_train_only\": class_weight,"
+      }
+    ],
+    "limitation": "Current source evidence only; keyword excerpts are not proof of historical execution. Training artifacts do not record executed source hashes."
+  },
+  "source_review_findings": {
+    "status": "NEEDS_REVIEW",
+    "reviewed_sha256": {
+      "05_build_dataset.py": "fc811be21a0c7a386bc47f7af108c4b5590d658f647469564a12a72ce0c195be",
+      "06_train_evaluate.py": "4f63cedbb5a366c45032e68ce9e18574550b8d234638ac10994565d0cb729792"
+    },
+    "step6_review": "Manual review at script creation: weights calculated from y[train], fit uses X[train]/y[train], validation passed separately; no oversampling call found.",
+    "step5_review": "Manual review at script creation: fixed resample ratio and per-beat mean/std; no dataset-fitted scaler found.",
+    "limitation": "These findings apply only to the reviewed hashes. Compare current source evidence hashes; historical executed source was not fingerprinted."
+  },
+  "historical_preprocessing": {
+    "path": "D:\\Code Part Two\\AIoT\\python\\05_build_dataset.py",
+    "sha256": "fc811be21a0c7a386bc47f7af108c4b5590d658f647469564a12a72ce0c195be",
+    "status": "NEEDS_REVIEW",
+    "excerpts": [
+      {
+        "line": 17,
+        "text": "from scipy.signal import resample_poly"
+      },
+      {
+        "line": 31,
+        "text": "LABELS = {\"N\": 0, \"V\": 1}"
+      },
+      {
+        "line": 61,
+        "text": "resampled = resample_poly(signal, up=25, down=36)"
+      },
+      {
+        "line": 66,
+        "text": "if symbol not in LABELS:"
+      },
+      {
+        "line": 77,
+        "text": "std = float(beat.std())"
+      },
+      {
+        "line": 80,
+        "text": "beat = ((beat - beat.mean()) / max(std, STD_EPS)).astype(np.float32)"
+      },
+      {
+        "line": 85,
+        "text": "labels.append(LABELS[symbol])"
+      }
+    ],
+    "limitation": "Current source evidence only; keyword excerpts are not proof of historical execution. Training artifacts do not record executed source hashes."
+  },
+  "current_threshold_test_access": {
+    "status": "PASS",
+    "evidence": "Only model.predict(X[validation_indices]) is called; test indices used only for structural/provenance audit.",
+    "source_sha256": "9bd9e7f9d87c514a588957728b0271d94328693967f8c3864cf2b01d6512efcc"
+  },
+  "patient_identity_completeness": {
+    "status": "UNKNOWN",
+    "reason": "201/202 linked explicitly; other record IDs are patient proxies, not independently verified identities"
+  },
+  "previous_test_exposure": {
+    "status": "NEEDS_REVIEW",
+    "reason": "Test results already viewed in Step 6. No new independent test claim. Split selection used class counts, so holdout construction was label-informed."
+  },
+  "overall_status": "NEEDS_REVIEW",
+  "note": "Structural PASS does not certify historical execution or all patient relationships."
+}

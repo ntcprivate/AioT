@@ -1,0 +1,303 @@
+{
+  "scope": "Step 8 only; ESP32-WROOM-32 static ECG fixtures",
+  "statuses": {
+    "CODE_CREATED": true,
+    "STATIC_CHECK_PASSED": true,
+    "BUILD_PASSED": "NOT_ATTEMPTED",
+    "FLASH_PASSED": "NOT_ATTEMPTED",
+    "INFERENCE_PASSED": true,
+    "PYTHON_MATCH_PASSED": false
+  },
+  "static_check_scope": [
+    "Python syntax/import",
+    "Read actual FlatBuffer schema, operator versions and IO quantization",
+    "Copied model SHA256 match",
+    "Pinned resolver constructor, registrations and arena_used_bytes API inspected"
+  ],
+  "static_check_limits": [
+    "C++ not compiled; CMake/linker/dependency resolution not executed",
+    "Full Python golden inference unavailable"
+  ],
+  "hardware_status": "HARDWARE_LOG_REVIEWED",
+  "environment": {
+    "idf_path": null,
+    "idf_command": null,
+    "idf_version": "NOT_DETECTED_IN_CODEX_SESSION",
+    "xtensa_esp32_elf_gcc": null,
+    "com_ports_observed": [],
+    "target": "esp32",
+    "esp_tflite_micro_version_pinned": "1.4.2",
+    "source_commit": "6368cd2ddebb72e047509ccbc529afc321e804b9",
+    "esp_nn_version_pinned": "1.3.0",
+    "esp_nn_runtime_status": "NOT_VERIFIED",
+    "dependency_resolution": "NOT_ATTEMPTED",
+    "idf_supported_manifest_range": ">=5.1,<6.1",
+    "python_venv_status": "Launcher references missing Python311 executable; unchanged"
+  },
+  "model": {
+    "file": "models/ecg_cnn_int8.tflite",
+    "sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "file_bytes": 8560,
+    "embedded_copy_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "io": {
+      "input": {
+        "index": 0,
+        "name": "serving_default_input_layer:0",
+        "shape": [
+          1,
+          256,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.053921569138765335
+        ],
+        "zero_points": [
+          -27
+        ],
+        "quantized_dimension": 0
+      },
+      "output": {
+        "index": 30,
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          1
+        ],
+        "dtype": "INT8",
+        "scales": [
+          0.00390625
+        ],
+        "zero_points": [
+          -128
+        ],
+        "quantized_dimension": 0
+      }
+    },
+    "threshold": 0.52
+  },
+  "operators": [
+    {
+      "name": "CONV_2D",
+      "version": 3,
+      "registration": "AddConv2D",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "EXPAND_DIMS",
+      "version": 1,
+      "registration": "AddExpandDims",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/expand_dims.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "FULLY_CONNECTED",
+      "version": 4,
+      "registration": "AddFullyConnected",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "LOGISTIC",
+      "version": 2,
+      "registration": "AddLogistic",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "MAX_POOL_2D",
+      "version": 2,
+      "registration": "AddMaxPool2D",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "MEAN",
+      "version": 2,
+      "registration": "AddMean",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/esp_nn/reduce.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    },
+    {
+      "name": "RESHAPE",
+      "version": 1,
+      "registration": "AddReshape",
+      "registration_api_checked": true,
+      "kernel_source": "https://github.com/espressif/esp-tflite-micro/blob/6368cd2ddebb72e047509ccbc529afc321e804b9/tensorflow/lite/micro/kernels/reshape.cc",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Registration API checked at pinned commit; exact INT8 shape/quantization constraints and operator-version behavior require AllocateTensors/Invoke on this target."
+    }
+  ],
+  "build": {
+    "status": "NOT_ATTEMPTED",
+    "reason": "IDF_PATH unset; idf.py/toolchain not found on PATH; real golden fixtures not yet generated",
+    "firmware_binary_bytes": "NOT_MEASURED",
+    "flash_usage": "NOT_MEASURED",
+    "static_ram_bss": "NOT_MEASURED",
+    "app_partition_utilization": "NOT_MEASURED",
+    "errors": []
+  },
+  "runtime": {
+    "latency": {
+      "count": 360,
+      "min_us": 9408,
+      "mean_us": 9414.422222222222,
+      "median_us": 9411.0,
+      "p95_us": 9430,
+      "max_us": 9437,
+      "scope": "Invoke only; ADC/filtering/beat detection/serial excluded"
+    },
+    "arena": [
+      {
+        "allocated": "65536",
+        "used": "6396"
+      }
+    ],
+    "heap": [
+      {
+        "stage": "before_init",
+        "free": "298644",
+        "minimum": "298644",
+        "largest": "163840"
+      },
+      {
+        "stage": "after_init",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "after_sample",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      },
+      {
+        "stage": "final",
+        "free": "232608",
+        "minimum": "232608",
+        "largest": "110592"
+      }
+    ],
+    "boot": [
+      {
+        "firmware": "step8_v1",
+        "idf": "v5.4.4",
+        "target": "esp32",
+        "cpu_mhz": "240",
+        "component": "1.4.2"
+      }
+    ],
+    "configuration": [
+      {
+        "esp_nn": "ENABLED_BUILD_OPTION",
+        "actual_kernel_paths": "NEEDS_VERIFICATION"
+      }
+    ]
+  },
+  "inference": {
+    "status": "FAILED",
+    "samples_expected": 12,
+    "samples_observed": 12,
+    "exact_outputs": 10,
+    "matching_classes": 11
+  },
+  "limitations": [
+    "No ESP32 or COM port accessible in this session",
+    "No build, flash or device execution",
+    "No AD8232, ADC, real-time ECG, Wi-Fi or IoT",
+    "Validation fixtures are technical regression examples, not independent clinical assessment",
+    "No new-patient or clinical verification; prototype only",
+    "Operator version/INT8 shape and quantization runtime behavior NEEDS_VERIFICATION"
+  ],
+  "next_commands": [
+    ".\\.venv\\Scripts\\python.exe python\\08_prepare_esp32_test_data.py",
+    "Open ESP-IDF Terminal; cd firmware/esp32_tinyml_step8",
+    "idf.py --version",
+    "idf.py set-target esp32",
+    "idf.py build",
+    "idf.py size",
+    "idf.py size-components",
+    "Confirm actual board COM port before flash/monitor"
+  ],
+  "comparison_report": "D:\\Code Part Two\\AIoT\\results\\esp32_inference_comparison.json"
+}

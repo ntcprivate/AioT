@@ -1,0 +1,8 @@
+{
+  "status": "TRACE_REJECTED",
+  "transport_verified": false,
+  "hardware_log": "firmware\\esp32_ecg_tinyml_integrated\\debug\\serial_trace_v2.log",
+  "error": "Line 30: line checksum mismatch (lost/changed character); no data repair",
+  "first_divergence": null,
+  "note": "No repair or numerical conclusion. Old PASS results must not be reused for this capture."
+}

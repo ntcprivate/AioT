@@ -1,0 +1,190 @@
+{
+  "golden_samples": 12,
+  "repeats": 33,
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+  "adapter_sha256": "76d22f9939311f55d1bf2ea9a3524ce09db22485800bcf8f97c9d703a596f9c3",
+  "native_exe_sha256": "15a77b72fffab6212326f20f35e5fc2edc70c3d30ae6ca1c2ca0551dff647215",
+  "fixed9425": {
+    "windows": 9425,
+    "mismatched_codes": 0,
+    "classification_disagreements": 0,
+    "input_sha256": "b9f01765cddc074c51d8c193815e809ee912c6dc3bfff6b883d7ceb65d7f81cf"
+  },
+  "extended33586": {
+    "windows": 33586,
+    "mismatched_codes": 0,
+    "classification_disagreements": 0,
+    "input_sha256": "5d774e3e645443bbc21135b2c19de7a6a47b337f88061ac25d9759abfd5e941e"
+  },
+  "traces": [
+    {
+      "id": "118_5613",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "118_12239",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "118_416969",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "210_200430",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "214_22287",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "233_20069",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "233_59286",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "233_291311",
+      "operator_mismatches": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "status": "PASS_EXACT"
+}

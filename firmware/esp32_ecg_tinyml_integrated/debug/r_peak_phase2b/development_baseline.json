@@ -1,0 +1,120 @@
+[
+  {
+    "record": "105",
+    "tp": 2386,
+    "fp": 114,
+    "fn": 186,
+    "sensitivity": 0.9276827371695179,
+    "ppv": 0.9544,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 2344,
+      "V": 41,
+      "Q": 1
+    },
+    "missed_by_annotation": {
+      "N": 182,
+      "Q": 4
+    }
+  },
+  {
+    "record": "106",
+    "tp": 1663,
+    "fp": 444,
+    "fn": 364,
+    "sensitivity": 0.820424272323631,
+    "ppv": 0.7892738490745135,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 20.0,
+    "matched_by_annotation": {
+      "N": 1241,
+      "V": 422
+    },
+    "missed_by_annotation": {
+      "N": 266,
+      "V": 98
+    }
+  },
+  {
+    "record": "114",
+    "tp": 1873,
+    "fp": 22,
+    "fn": 6,
+    "sensitivity": 0.9968068121341139,
+    "ppv": 0.9883905013192612,
+    "timing_median_abs_ms": 4.0,
+    "timing_p95_abs_ms": 8.0,
+    "matched_by_annotation": {
+      "N": 1815,
+      "V": 43,
+      "J": 2,
+      "F": 4,
+      "A": 9
+    },
+    "missed_by_annotation": {
+      "N": 5,
+      "A": 1
+    }
+  },
+  {
+    "record": "119",
+    "tp": 1885,
+    "fp": 102,
+    "fn": 102,
+    "sensitivity": 0.9486663311524912,
+    "ppv": 0.9486663311524912,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 1446,
+      "V": 439
+    },
+    "missed_by_annotation": {
+      "N": 97,
+      "V": 5
+    }
+  },
+  {
+    "record": "208",
+    "tp": 2913,
+    "fp": 19,
+    "fn": 42,
+    "sensitivity": 0.9857868020304569,
+    "ppv": 0.9935197817189632,
+    "timing_median_abs_ms": 4.0,
+    "timing_p95_abs_ms": 12.0,
+    "matched_by_annotation": {
+      "V": 986,
+      "N": 1560,
+      "F": 365,
+      "S": 2
+    },
+    "missed_by_annotation": {
+      "F": 8,
+      "V": 6,
+      "N": 26,
+      "Q": 2
+    }
+  },
+  {
+    "record": "219",
+    "tp": 2121,
+    "fp": 27,
+    "fn": 33,
+    "sensitivity": 0.9846796657381616,
+    "ppv": 0.9874301675977654,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 2050,
+      "V": 63,
+      "F": 1,
+      "A": 7
+    },
+    "missed_by_annotation": {
+      "N": 32,
+      "V": 1
+    }
+  }
+]

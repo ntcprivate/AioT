@@ -1,0 +1,187 @@
+{
+  "status": "EXACT_REPRODUCTION_BEFORE_SOURCE_EDIT",
+  "records": [
+    {
+      "record": "115",
+      "metrics": {
+        "tp": 1935,
+        "fp": 11,
+        "fn": 18,
+        "sensitivity": 0.9907834101382489,
+        "ppv": 0.9943473792394656,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1935
+        },
+        "missed_by_annotation": {
+          "N": 18
+        }
+      },
+      "completed": 1946,
+      "warmup_samples": 1000,
+      "adc_sha256": "3932528c2ffcfeba0d993fa38f7a041a97a0e655955cff47b1c5199ce0290cab"
+    },
+    {
+      "record": "118",
+      "metrics": {
+        "tp": 2209,
+        "fp": 17,
+        "fn": 69,
+        "sensitivity": 0.9697102721685689,
+        "ppv": 0.9923629829290207,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2112,
+          "A": 88,
+          "V": 9
+        },
+        "missed_by_annotation": {
+          "R": 54,
+          "V": 7,
+          "A": 8
+        }
+      },
+      "completed": 2226,
+      "warmup_samples": 7000,
+      "adc_sha256": "cab4f8f7adf407210e79ef435e9576f28cf8f365d76af62dcfe9b82a080a4c9d"
+    },
+    {
+      "record": "121",
+      "metrics": {
+        "tp": 1741,
+        "fp": 50,
+        "fn": 122,
+        "sensitivity": 0.9345142243692969,
+        "ppv": 0.9720826353992184,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1739,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 122
+        }
+      },
+      "completed": 1791,
+      "warmup_samples": 9000,
+      "adc_sha256": "23725e929ba2c9aa5de845d2724cdbfbb7a58595d81ad2620034011d2ba31096"
+    },
+    {
+      "record": "210",
+      "metrics": {
+        "tp": 2061,
+        "fp": 5,
+        "fn": 589,
+        "sensitivity": 0.7777358490566038,
+        "ppv": 0.9975798644724104,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2015,
+          "F": 7,
+          "V": 37,
+          "a": 2
+        },
+        "missed_by_annotation": {
+          "N": 408,
+          "V": 157,
+          "a": 20,
+          "F": 3,
+          "E": 1
+        }
+      },
+      "completed": 2066,
+      "warmup_samples": 68000,
+      "adc_sha256": "92acbcd211c8f6f8a0082dc46257b22f80b340de8cbee1ddfd799504c257ee3a"
+    },
+    {
+      "record": "214",
+      "metrics": {
+        "tp": 1619,
+        "fp": 2,
+        "fn": 643,
+        "sensitivity": 0.715738284703802,
+        "ppv": 0.9987661937075879,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1553,
+          "V": 65,
+          "Q": 1
+        },
+        "missed_by_annotation": {
+          "L": 450,
+          "V": 191,
+          "Q": 1,
+          "F": 1
+        }
+      },
+      "completed": 1621,
+      "warmup_samples": 89500,
+      "adc_sha256": "03ac2a3da6ded48c20692b518033377704aa3f1b0c77a0d826acc1c32480dc86"
+    },
+    {
+      "record": "233",
+      "metrics": {
+        "tp": 963,
+        "fp": 0,
+        "fn": 2116,
+        "sensitivity": 0.3127638843780448,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 36.0,
+        "matched_by_annotation": {
+          "N": 800,
+          "V": 156,
+          "F": 5,
+          "A": 2
+        },
+        "missed_by_annotation": {
+          "V": 675,
+          "N": 1430,
+          "A": 5,
+          "F": 6
+        }
+      },
+      "completed": 963,
+      "warmup_samples": 223000,
+      "adc_sha256": "b8187f559bce8ea0d329a0a74dab2c481ac240ec32fc59c44fd843adfe56b457"
+    },
+    {
+      "record": "234",
+      "metrics": {
+        "tp": 2698,
+        "fp": 5,
+        "fn": 55,
+        "sensitivity": 0.9800217944061025,
+        "ppv": 0.9981502034776175,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2676,
+          "J": 22
+        },
+        "missed_by_annotation": {
+          "N": 24,
+          "J": 28,
+          "V": 3
+        }
+      },
+      "completed": 2703,
+      "warmup_samples": 5000,
+      "adc_sha256": "5f49ac5be45615896bf49c7d9a1e0cbe744d41c6ccd80eb261fa75ac031ba6ba"
+    }
+  ],
+  "aggregate": {
+    "reference_beats": 16838,
+    "tp": 13226,
+    "fp": 90,
+    "fn": 3612,
+    "sensitivity": 0.78548521202043,
+    "ppv": 0.9932412135776509
+  }
+}

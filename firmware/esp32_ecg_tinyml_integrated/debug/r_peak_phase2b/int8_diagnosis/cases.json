@@ -1,0 +1,98 @@
+[
+  {
+    "index": 3923,
+    "record": "118",
+    "mode": "candidate",
+    "center": 5613,
+    "symbol": "R",
+    "native": -55,
+    "tensorflow": -53,
+    "decision_changed": false,
+    "id": "118_5613",
+    "input_sha256": "49ce5d8bd5860981de69c4b4cacbf40714812dc4df0ba95ece1a2ce34baae7f6"
+  },
+  {
+    "index": 3955,
+    "record": "118",
+    "mode": "candidate",
+    "center": 12239,
+    "symbol": "R",
+    "native": 70,
+    "tensorflow": 68,
+    "decision_changed": false,
+    "id": "118_12239",
+    "input_sha256": "49caa944d31e368cde14fba60e84691ea8a8429e5808d69de7b94bf1ebbbb6e3"
+  },
+  {
+    "index": 5983,
+    "record": "118",
+    "mode": "candidate",
+    "center": 416969,
+    "symbol": "R",
+    "native": -116,
+    "tensorflow": -115,
+    "decision_changed": false,
+    "id": "118_416969",
+    "input_sha256": "b445afd8137ad1856df597475a6cc700543032f8672de3dc3783b06715abad80"
+  },
+  {
+    "index": 13355,
+    "record": "210",
+    "mode": "candidate",
+    "center": 200430,
+    "symbol": "V",
+    "native": 106,
+    "tensorflow": 105,
+    "decision_changed": false,
+    "id": "210_200430",
+    "input_sha256": "57afa15ac90ad36bf483ddbf04a0f9bbc522ec2bd0152035ecfe3961a165fe71"
+  },
+  {
+    "index": 17549,
+    "record": "214",
+    "mode": "candidate",
+    "center": 22287,
+    "symbol": "L",
+    "native": -109,
+    "tensorflow": -108,
+    "decision_changed": false,
+    "id": "214_22287",
+    "input_sha256": "dbff58a4c160c0a47945406e819fb82f140b597b5b41fedb9deba9f0df9ed37b"
+  },
+  {
+    "index": 22088,
+    "record": "233",
+    "mode": "candidate",
+    "center": 20069,
+    "symbol": "V",
+    "native": -7,
+    "tensorflow": -3,
+    "decision_changed": false,
+    "id": "233_20069",
+    "input_sha256": "e2c2a9950bced9e3a6c4b7e5dcd50dd4f09785bbab409b5f1ee821582ac759a2"
+  },
+  {
+    "index": 22360,
+    "record": "233",
+    "mode": "candidate",
+    "center": 59286,
+    "symbol": "N",
+    "native": -23,
+    "tensorflow": -20,
+    "decision_changed": false,
+    "id": "233_59286",
+    "input_sha256": "3a6e2f074bb59771dfa5d50f8ce3380ccc819e90e7fbb612a9563fd910bb46cc"
+  },
+  {
+    "index": 23940,
+    "record": "233",
+    "mode": "candidate",
+    "center": 291311,
+    "symbol": "N",
+    "native": -93,
+    "tensorflow": -92,
+    "decision_changed": false,
+    "id": "233_291311",
+    "input_sha256": "20785ef7101f3122fb220d70989ed893faf93d449f0019aa01b5889235e6a56c"
+  }
+]

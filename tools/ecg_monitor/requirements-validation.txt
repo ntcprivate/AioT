@@ -1,0 +1,2 @@
+# Optional isolated reference environment only; not needed for the dashboard.
+tensorflow-cpu==2.21.0

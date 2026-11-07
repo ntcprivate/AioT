@@ -1,0 +1,170 @@
+{
+  "cases": [
+    {
+      "id": "golden0",
+      "record": "115",
+      "label": 0,
+      "symbol": "N",
+      "code": -126,
+      "dataset_index": 19766
+    },
+    {
+      "id": "golden1",
+      "record": "233",
+      "label": 0,
+      "symbol": "N",
+      "code": 50,
+      "dataset_index": 78432
+    },
+    {
+      "id": "golden2",
+      "record": "214",
+      "label": 1,
+      "symbol": "V",
+      "code": -66,
+      "dataset_index": 56558
+    },
+    {
+      "id": "golden3",
+      "record": "233",
+      "label": 1,
+      "symbol": "V",
+      "code": 68,
+      "dataset_index": 76710
+    },
+    {
+      "id": "golden4",
+      "record": "121",
+      "label": 0,
+      "symbol": "N",
+      "code": 7,
+      "dataset_index": 28388
+    },
+    {
+      "id": "golden5",
+      "record": "210",
+      "label": 1,
+      "symbol": "V",
+      "code": 7,
+      "dataset_index": 50805
+    },
+    {
+      "id": "golden6",
+      "record": "210",
+      "label": 0,
+      "symbol": "N",
+      "code": -124,
+      "dataset_index": 52318
+    },
+    {
+      "id": "golden7",
+      "record": "234",
+      "label": 0,
+      "symbol": "N",
+      "code": -126,
+      "dataset_index": 81870
+    },
+    {
+      "id": "golden8",
+      "record": "121",
+      "label": 0,
+      "symbol": "N",
+      "code": -125,
+      "dataset_index": 27174
+    },
+    {
+      "id": "golden9",
+      "record": "233",
+      "label": 1,
+      "symbol": "V",
+      "code": 47,
+      "dataset_index": 76481
+    },
+    {
+      "id": "golden10",
+      "record": "210",
+      "label": 0,
+      "symbol": "N",
+      "code": -126,
+      "dataset_index": 52498
+    },
+    {
+      "id": "golden11",
+      "record": "115",
+      "label": 0,
+      "symbol": "N",
+      "code": -126,
+      "dataset_index": 19095
+    },
+    {
+      "id": "fc14_118_5613",
+      "record": "118",
+      "label": -1,
+      "symbol": "R",
+      "code": -53,
+      "center": 5613
+    },
+    {
+      "id": "fc14_118_12239",
+      "record": "118",
+      "label": -1,
+      "symbol": "R",
+      "code": 68,
+      "center": 12239
+    },
+    {
+      "id": "fc14_118_416969",
+      "record": "118",
+      "label": -1,
+      "symbol": "R",
+      "code": -115,
+      "center": 416969
+    },
+    {
+      "id": "fc14_210_200430",
+      "record": "210",
+      "label": 1,
+      "symbol": "V",
+      "code": 105,
+      "center": 200430
+    },
+    {
+      "id": "fc14_214_22287",
+      "record": "214",
+      "label": -1,
+      "symbol": "L",
+      "code": -108,
+      "center": 22287
+    },
+    {
+      "id": "fc14_233_20069",
+      "record": "233",
+      "label": 1,
+      "symbol": "V",
+      "code": -3,
+      "center": 20069
+    },
+    {
+      "id": "fc14_233_59286",
+      "record": "233",
+      "label": 0,
+      "symbol": "N",
+      "code": -20,
+      "center": 59286
+    },
+    {
+      "id": "fc14_233_291311",
+      "record": "233",
+      "label": 0,
+      "symbol": "N",
+      "code": -92,
+      "center": 291311
+    }
+  ],
+  "raw_sha256": "b55642468e1fa654b368f874d6370a469b21c94ad5898c60f8a339ac1f022351",
+  "extended_sha256": "ca78d98e03da93c8e4141b517935da1fe5931ffa72dbd1d8c2f58e443850fce7",
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+  "original_golden_sha256": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758",
+  "preprocessing_exact": true,
+  "tensorflow_cases": 20
+}

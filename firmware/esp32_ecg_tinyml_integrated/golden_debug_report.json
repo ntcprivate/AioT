@@ -1,0 +1,245 @@
+{
+  "status": "BUILD_PASSED_HARDWARE_GOLDEN_RETEST_REQUIRED",
+  "effective_kernel_comparison": [
+    {
+      "kernel": "esp_nn/conv.cc",
+      "step8_esp_nn_define": false,
+      "integrated_after_fix_esp_nn_define": false,
+      "integrated_before_fix_esp_nn_define": true
+    },
+    {
+      "kernel": "esp_nn/fully_connected.cc",
+      "step8_esp_nn_define": false,
+      "integrated_after_fix_esp_nn_define": false,
+      "integrated_before_fix_esp_nn_define": true
+    },
+    {
+      "kernel": "esp_nn/logistic.cc",
+      "step8_esp_nn_define": false,
+      "integrated_after_fix_esp_nn_define": false,
+      "integrated_before_fix_esp_nn_define": true
+    },
+    {
+      "kernel": "esp_nn/reduce.cc",
+      "step8_esp_nn_define": false,
+      "integrated_after_fix_esp_nn_define": false,
+      "integrated_before_fix_esp_nn_define": true
+    },
+    {
+      "kernel": "esp_nn/pooling.cc",
+      "step8_esp_nn_define": false,
+      "integrated_after_fix_esp_nn_define": false,
+      "integrated_before_fix_esp_nn_define": true
+    }
+  ],
+  "same_assets": [
+    "model",
+    "golden input binary",
+    "golden metadata",
+    "dependency lock"
+  ],
+  "component_comparison": {
+    "tflm_files_compared": 569,
+    "esp_nn_files_compared": 100,
+    "differences": 0
+  },
+  "confirmed_configuration_cause": "Observed build-configuration difference only; NOT established as the numerical root cause. Saved Step8 serial log has the identical sample5 code0 failure.",
+  "specific_failing_kernel": "NOT_ISOLATED",
+  "hardware_after_fix": "NOT_TESTED",
+  "flash": "NOT_ATTEMPTED",
+  "golden_reference_unchanged": true,
+  "reported_sample_differences": [
+    {
+      "sample": 2,
+      "actual_code": -61,
+      "reference_code": -66,
+      "actual_score": 0.26171875,
+      "reference_score": 0.2421875,
+      "class_change": false
+    },
+    {
+      "sample": 5,
+      "actual_code": 0,
+      "reference_code": 7,
+      "actual_score": 0.5,
+      "reference_score": 0.52734375,
+      "class_change": true
+    }
+  ],
+  "threshold": 0.52,
+  "live_ADC_enabled": false,
+  "hardware_self_test": "ENABLED; explicitly not AI; restores normal state mapping after completion",
+  "postfix_kernel_define_comparison": [
+    {
+      "kernel": "esp_nn/conv.cc",
+      "step8_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"v5.4.4\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "integrated_after_fix_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"HEAD-HASH-NOTFOUND\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "matching": false,
+      "numerical_kernel_defines_match": true
+    },
+    {
+      "kernel": "esp_nn/fully_connected.cc",
+      "step8_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"v5.4.4\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "integrated_after_fix_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"HEAD-HASH-NOTFOUND\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "matching": false,
+      "numerical_kernel_defines_match": true
+    },
+    {
+      "kernel": "esp_nn/logistic.cc",
+      "step8_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"v5.4.4\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "integrated_after_fix_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"HEAD-HASH-NOTFOUND\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "matching": false,
+      "numerical_kernel_defines_match": true
+    },
+    {
+      "kernel": "esp_nn/reduce.cc",
+      "step8_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"v5.4.4\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "integrated_after_fix_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"HEAD-HASH-NOTFOUND\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "matching": false,
+      "numerical_kernel_defines_match": true
+    },
+    {
+      "kernel": "esp_nn/pooling.cc",
+      "step8_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"v5.4.4\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "integrated_after_fix_defines": [
+        "-DESP_PLATFORM",
+        "-DIDF_VER=\\\"HEAD-HASH-NOTFOUND\\\"",
+        "-DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "-DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "-D_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+        "-D_GLIBCXX_USE_POSIX_SEMAPHORE",
+        "-D_GNU_SOURCE",
+        "-D_POSIX_READER_WRITER_LOCKS",
+        "-DTF_LITE_STATIC_MEMORY",
+        "-DTF_LITE_DISABLE_X86_NEON"
+      ],
+      "matching": false,
+      "numerical_kernel_defines_match": true
+    }
+  ],
+  "inference_review": {
+    "model_and_samples": "SHA256 and bytes match",
+    "input": "256 existing signed int8 bytes copied; golden does not call z-score or live quantization",
+    "output": "signed int8; (code-zero)*scale; threshold0.52 unchanged",
+    "operators": "same seven explicit MicroMutableOpResolver registrations",
+    "arena": "64KiB internal,16byte alignment in both",
+    "interpreter_ownership": "only AI worker uses interpreter; ADC queue buffers are separate",
+    "warmup_difference_before_fix": "Step8 3warmup+30passes+1tick pauses; integrated previously single Invoke. Now repeat checks added without accepting any mismatch.",
+    "runtime_difference": "Step8 runs app_main; integrated worker core0,12KiB stack, ADC core1. Arithmetic equivalence still needs board retest."
+  },
+  "self_test_option": "CONFIG_ECG_HARDWARE_SELF_TEST=y; once, five seconds, priority2; not conditional on model readiness",
+  "define_review_note": "IDF_VER string differs because sandbox Git ownership check prevented git describe during initial CMake. Target/config still IDF5.4.4; numerical kernel defines match.",
+  "build": {
+    "status": "PASSED",
+    "method": "cmake --build build --parallel 4 with installed IDF5.4.4 cached build/toolchain",
+    "exit_code": 0,
+    "binary": "firmware\\esp32_ecg_tinyml_integrated\\build\\esp32_ecg_tinyml_integrated.bin",
+    "bytes": 295664,
+    "sha256": "ccd655bdc19c50d3a14603c454454690caed7ec756235f0ff5ec32b92bfc1acb",
+    "app_partition_bytes": 1048576,
+    "partition_size_check": "PASSED",
+    "metadata_warning": "IDF_VER string HEAD-HASH-NOTFOUND after sandbox git ownership warning; source version macros verified5.4.4"
+  },
+  "original_projects_unchanged": true,
+  "prior_hypothesis_status": "SUPERSEDED_BY_SAVED_STEP8_LOG_EVIDENCE",
+  "followup_report": "operator_debug_report.json"
+}

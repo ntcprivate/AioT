@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(esp32_tinyml_step8)
+if(NOT IDF_TARGET STREQUAL "esp32")
+    message(FATAL_ERROR "Step 8 requires target esp32 (ESP32-WROOM-32)")
+endif()

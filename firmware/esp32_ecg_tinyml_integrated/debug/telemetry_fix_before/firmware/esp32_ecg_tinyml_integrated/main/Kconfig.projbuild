@@ -1,0 +1,66 @@
+menu "Integrated ECG experimental prototype"
+config ECG_TELEMETRY
+    bool "USB Serial batched telemetry for Windows Monitor (115200 baud)"
+    default y
+    help
+        CRC32 frames, 32 actual timestamps/ADC/flags per packet, bounded queue.
+        Sampling never waits for UART. Disables long operator/arithmetic dumps.
+config ECG_CONV_ARITHMETIC_LOG
+    bool "Print three first-Conv arithmetic records outside Invoke"
+    default y
+    depends on !ECG_TELEMETRY
+config ECG_CONV_DIAGNOSTIC_SAMPLE
+    int "Golden sample for compact Conv diagnostics"
+    depends on ECG_CONV_ARITHMETIC_LOG
+    range 0 11
+    default 5
+config ECG_OPERATOR_TRACE
+    bool "Capture operator output bytes for one golden sample (diagnostic)"
+    default y
+    depends on !ECG_TELEMETRY
+    help
+        Adds a bounded 24KiB diagnostic buffer. Captures via profiler callbacks
+        before arena reuse, dumps after Invoke. No live inference or UART in ISR.
+config ECG_TRACE_SAMPLE
+    int "Golden sample index to trace"
+    depends on ECG_OPERATOR_TRACE
+    range 0 11
+    default 5
+config ECG_HARDWARE_SELF_TEST
+    bool "LED/buzzer hardware self-test once at boot, independent of AI"
+    default y
+    help
+        Clearly labeled hardware test: LED 2s, then six 150ms ON/350ms OFF
+        LED/buzzer pulses. Sampling continues. Does not clear golden failure.
+config ECG_ENABLE_EXPERIMENTAL_LIVE
+    bool "Enable unvalidated R detector/live CNN for bench signal generator only"
+    default n
+    help
+        Training used MIT-BIH annotation centers, not this detector. Requires
+        detector/quality validation and golden tests before live claims.
+config ECG_GOLDEN_ALERT_DEMO
+    bool "Demonstrate LED/buzzer for golden model predictions at boot (TEST DATA)"
+    depends on !ECG_HARDWARE_SELF_TEST
+    depends on !ECG_TELEMETRY
+    default n
+config ECG_ARENA_KIB
+    int "Internal tensor arena KiB"
+    range 32 128
+    default 64
+config ECG_ADC_RAIL_MARGIN
+    int "Reject ADC samples within this many counts of either rail"
+    range 1 200
+    default 16
+config ECG_MIN_BLOCK_PTP
+    int "Minimum block peak-to-peak ADC counts (bench heuristic)"
+    range 1 1000
+    default 20
+config ECG_MAX_DIFF_PERCENT
+    int "Maximum mean absolute difference as percent of peak-to-peak (bench heuristic)"
+    range 1 100
+    default 25
+config ECG_QRS_MIN_COUNTS
+    int "Minimum baseline-relative detector peak in ADC counts (bench heuristic)"
+    range 1 1000
+    default 30
+endmenu

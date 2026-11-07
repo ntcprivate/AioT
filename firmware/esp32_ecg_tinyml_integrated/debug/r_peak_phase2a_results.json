@@ -1,0 +1,1756 @@
+{
+  "status": "QUEUE_FUNCTIONAL_CHECKS_PASS_DETECTOR_VALIDATION_FAIL_AI_LIVE_LOCKED",
+  "records": [
+    "115",
+    "118",
+    "121",
+    "210",
+    "214",
+    "233",
+    "234"
+  ],
+  "criteria": {
+    "sensitivity_min": 0.99,
+    "ppv_min": 0.99,
+    "timing_p95_max_ms": 40,
+    "noise_false_peaks_max": 0,
+    "matching_tolerance_samples": 12
+  },
+  "baseline": {
+    "reference_beats": 16838,
+    "tp": 13226,
+    "fp": 90,
+    "fn": 3612,
+    "sensitivity": 0.78548521202043,
+    "ppv": 0.9932412135776509
+  },
+  "after": {
+    "reference_beats": 16838,
+    "tp": 16654,
+    "fp": 136,
+    "fn": 184,
+    "sensitivity": 0.9890723363819931,
+    "ppv": 0.9918999404407385
+  },
+  "by_annotation_before": {
+    "N": {
+      "reference": 11167,
+      "tp": 9165,
+      "fn": 2002,
+      "sensitivity": 0.8207217694994179
+    },
+    "A": {
+      "reference": 104,
+      "tp": 91,
+      "fn": 13,
+      "sensitivity": 0.875
+    },
+    "R": {
+      "reference": 2166,
+      "tp": 2112,
+      "fn": 54,
+      "sensitivity": 0.9750692520775623
+    },
+    "V": {
+      "reference": 1301,
+      "tp": 268,
+      "fn": 1033,
+      "sensitivity": 0.20599538816295157
+    },
+    "E": {
+      "reference": 1,
+      "tp": 0,
+      "fn": 1,
+      "sensitivity": 0.0
+    },
+    "F": {
+      "reference": 22,
+      "tp": 12,
+      "fn": 10,
+      "sensitivity": 0.5454545454545454
+    },
+    "a": {
+      "reference": 22,
+      "tp": 2,
+      "fn": 20,
+      "sensitivity": 0.09090909090909091
+    },
+    "L": {
+      "reference": 2003,
+      "tp": 1553,
+      "fn": 450,
+      "sensitivity": 0.7753369945082377
+    },
+    "Q": {
+      "reference": 2,
+      "tp": 1,
+      "fn": 1,
+      "sensitivity": 0.5
+    },
+    "J": {
+      "reference": 50,
+      "tp": 22,
+      "fn": 28,
+      "sensitivity": 0.44
+    }
+  },
+  "by_annotation_after": {
+    "N": {
+      "reference": 11167,
+      "tp": 11035,
+      "fn": 132,
+      "sensitivity": 0.988179457329632
+    },
+    "A": {
+      "reference": 104,
+      "tp": 104,
+      "fn": 0,
+      "sensitivity": 1.0
+    },
+    "R": {
+      "reference": 2166,
+      "tp": 2147,
+      "fn": 19,
+      "sensitivity": 0.9912280701754386
+    },
+    "V": {
+      "reference": 1301,
+      "tp": 1276,
+      "fn": 25,
+      "sensitivity": 0.9807840122982321
+    },
+    "E": {
+      "reference": 1,
+      "tp": 1,
+      "fn": 0,
+      "sensitivity": 1.0
+    },
+    "F": {
+      "reference": 22,
+      "tp": 21,
+      "fn": 1,
+      "sensitivity": 0.9545454545454546
+    },
+    "a": {
+      "reference": 22,
+      "tp": 20,
+      "fn": 2,
+      "sensitivity": 0.9090909090909091
+    },
+    "L": {
+      "reference": 2003,
+      "tp": 1998,
+      "fn": 5,
+      "sensitivity": 0.9975037443834248
+    },
+    "Q": {
+      "reference": 2,
+      "tp": 2,
+      "fn": 0,
+      "sensitivity": 1.0
+    },
+    "J": {
+      "reference": 50,
+      "tp": 50,
+      "fn": 0,
+      "sensitivity": 1.0
+    }
+  },
+  "per_record": [
+    {
+      "record": "115",
+      "reference": 1953,
+      "before": {
+        "tp": 1935,
+        "fp": 11,
+        "fn": 18,
+        "sensitivity": 0.9907834101382489,
+        "ppv": 0.9943473792394656,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1935
+        },
+        "missed_by_annotation": {
+          "N": 18
+        }
+      },
+      "after": {
+        "tp": 1939,
+        "fp": 12,
+        "fn": 14,
+        "sensitivity": 0.992831541218638,
+        "ppv": 0.9938493080471553,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1939
+        },
+        "missed_by_annotation": {
+          "N": 14
+        }
+      },
+      "quality_gated_after": {
+        "tp": 1938,
+        "fp": 12,
+        "fn": 15,
+        "sensitivity": 0.9923195084485407,
+        "ppv": 0.9938461538461538,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1938
+        },
+        "missed_by_annotation": {
+          "N": 15
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 1
+      },
+      "after_issues": {},
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 1952,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 1952,
+          "completed": 1951,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 1950,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 1950,
+          "completed": 1950,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 0
+        }
+      },
+      "before_completed": 1946,
+      "after_completed": 1951,
+      "overlap_enqueues": 2,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 2,
+        "REFRACTORY_BLOCK": 11,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 1,
+        "RESET_WARMUP": 3,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 2,
+        "REFRACTORY_BLOCK": 11,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "before_warmup_samples": 1000,
+      "after_warmup_samples": 500,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [
+        11549,
+        23432,
+        25375,
+        31804,
+        40495,
+        68962,
+        141128,
+        165230,
+        251645,
+        364582,
+        419611
+      ],
+      "fp_after_exact_samples": [
+        11549,
+        23432,
+        25375,
+        31804,
+        40495,
+        68962,
+        141128,
+        165230,
+        251645,
+        364582,
+        419611,
+        449492
+      ],
+      "recovered_reference": 4,
+      "lost_reference": 0,
+      "recovered_reference_by_label": {
+        "N": 4
+      },
+      "lost_reference_by_label": {},
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.1220035000005737,
+      "adc_sha256": "3932528c2ffcfeba0d993fa38f7a041a97a0e655955cff47b1c5199ce0290cab"
+    },
+    {
+      "record": "118",
+      "reference": 2278,
+      "before": {
+        "tp": 2209,
+        "fp": 17,
+        "fn": 69,
+        "sensitivity": 0.9697102721685689,
+        "ppv": 0.9923629829290207,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2112,
+          "A": 88,
+          "V": 9
+        },
+        "missed_by_annotation": {
+          "R": 54,
+          "V": 7,
+          "A": 8
+        }
+      },
+      "after": {
+        "tp": 2256,
+        "fp": 23,
+        "fn": 22,
+        "sensitivity": 0.990342405618964,
+        "ppv": 0.9899078543220711,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2147,
+          "A": 96,
+          "V": 13
+        },
+        "missed_by_annotation": {
+          "R": 19,
+          "V": 3
+        }
+      },
+      "quality_gated_after": {
+        "tp": 2254,
+        "fp": 23,
+        "fn": 24,
+        "sensitivity": 0.9894644424934153,
+        "ppv": 0.98989898989899,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2145,
+          "A": 96,
+          "V": 13
+        },
+        "missed_by_annotation": {
+          "R": 21,
+          "V": 3
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 13
+      },
+      "after_issues": {},
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 2280,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 2280,
+          "completed": 2279,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 2278,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 2278,
+          "completed": 2277,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        }
+      },
+      "before_completed": 2226,
+      "after_completed": 2279,
+      "overlap_enqueues": 16,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 3,
+        "BELOW_ADAPTIVE_THRESHOLD": 3,
+        "REFRACTORY_BLOCK": 14,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 12,
+        "RESET_WARMUP": 32,
+        "PENDING_CONFLICT_RESET": 5
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 3,
+        "BELOW_ADAPTIVE_THRESHOLD": 4,
+        "REFRACTORY_BLOCK": 15
+      },
+      "before_warmup_samples": 7000,
+      "after_warmup_samples": 500,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [
+        7657,
+        45060,
+        48131,
+        56137,
+        65912,
+        71946,
+        126121,
+        191520,
+        208388,
+        216030,
+        254559,
+        284693,
+        397154,
+        405754,
+        409695,
+        430297,
+        442950
+      ],
+      "fp_after_exact_samples": [
+        7657,
+        45060,
+        48131,
+        56137,
+        65912,
+        71946,
+        125525,
+        125729,
+        126121,
+        127974,
+        187084,
+        191520,
+        208388,
+        216030,
+        254559,
+        284693,
+        397154,
+        404509,
+        405754,
+        406069,
+        409695,
+        430297,
+        442950
+      ],
+      "recovered_reference": 47,
+      "lost_reference": 0,
+      "recovered_reference_by_label": {
+        "R": 35,
+        "A": 8,
+        "V": 4
+      },
+      "lost_reference_by_label": {},
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.12216220000118483,
+      "adc_sha256": "cab4f8f7adf407210e79ef435e9576f28cf8f365d76af62dcfe9b82a080a4c9d"
+    },
+    {
+      "record": "121",
+      "reference": 1863,
+      "before": {
+        "tp": 1741,
+        "fp": 50,
+        "fn": 122,
+        "sensitivity": 0.9345142243692969,
+        "ppv": 0.9720826353992184,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1739,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 122
+        }
+      },
+      "after": {
+        "tp": 1781,
+        "fp": 65,
+        "fn": 82,
+        "sensitivity": 0.9559849704777241,
+        "ppv": 0.9647887323943662,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1779,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 82
+        }
+      },
+      "quality_gated_after": {
+        "tp": 1780,
+        "fp": 65,
+        "fn": 83,
+        "sensitivity": 0.9554482018250134,
+        "ppv": 0.964769647696477,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1778,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 83
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 14,
+        "NO_RELIABLE_R_PEAK": 3
+      },
+      "after_issues": {
+        "NO_RELIABLE_R_PEAK": 3
+      },
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 1847,
+          "warmup_samples": 2000,
+          "no_peak_resets": 3,
+          "external_resets": 0,
+          "enqueued": 1847,
+          "completed": 1846,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 1846,
+          "warmup_samples": 2000,
+          "no_peak_resets": 3,
+          "external_resets": 0,
+          "enqueued": 1846,
+          "completed": 1845,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        }
+      },
+      "before_completed": 1791,
+      "after_completed": 1846,
+      "overlap_enqueues": 15,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 2,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 10,
+        "RESET_WARMUP": 38,
+        "REFRACTORY_BLOCK": 45,
+        "BELOW_ADAPTIVE_THRESHOLD": 22,
+        "PENDING_CONFLICT_RESET": 4,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 2,
+        "REFRACTORY_BLOCK": 46,
+        "BELOW_ADAPTIVE_THRESHOLD": 24,
+        "RESET_WARMUP": 9,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "before_warmup_samples": 9000,
+      "after_warmup_samples": 2000,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [
+        58854,
+        62950,
+        79289,
+        86764,
+        89349,
+        99058,
+        103471,
+        121156,
+        142720,
+        196665,
+        359228,
+        367451,
+        369416,
+        369840,
+        380430,
+        382069,
+        383226,
+        385867,
+        386503,
+        388279,
+        388878,
+        391782,
+        392521,
+        392904,
+        394763,
+        397706,
+        397907,
+        398106,
+        401384,
+        405213,
+        408164,
+        410126,
+        410321,
+        410524,
+        410923,
+        413130,
+        413529,
+        416243,
+        424197,
+        425037,
+        425247,
+        425455,
+        425666,
+        425878,
+        426497,
+        428371,
+        435662,
+        438467,
+        442587,
+        442989
+      ],
+      "fp_after_exact_samples": [
+        57273,
+        58854,
+        62950,
+        64544,
+        67550,
+        67901,
+        79289,
+        86764,
+        89349,
+        99058,
+        103471,
+        121156,
+        133072,
+        135767,
+        142720,
+        196665,
+        278798,
+        301535,
+        359228,
+        359633,
+        367451,
+        368879,
+        369416,
+        369840,
+        380430,
+        382069,
+        383226,
+        385867,
+        386503,
+        386650,
+        388279,
+        388878,
+        391782,
+        392521,
+        392904,
+        394763,
+        396863,
+        397706,
+        397907,
+        398106,
+        398800,
+        401384,
+        405213,
+        408164,
+        410126,
+        410321,
+        410524,
+        410923,
+        413130,
+        413529,
+        416243,
+        424197,
+        425037,
+        425247,
+        425455,
+        425666,
+        425878,
+        426497,
+        428371,
+        428519,
+        435662,
+        438467,
+        442587,
+        442989,
+        446870
+      ],
+      "recovered_reference": 40,
+      "lost_reference": 0,
+      "recovered_reference_by_label": {
+        "N": 40
+      },
+      "lost_reference_by_label": {},
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.11301780000212602,
+      "adc_sha256": "23725e929ba2c9aa5de845d2724cdbfbb7a58595d81ad2620034011d2ba31096"
+    },
+    {
+      "record": "210",
+      "reference": 2650,
+      "before": {
+        "tp": 2061,
+        "fp": 5,
+        "fn": 589,
+        "sensitivity": 0.7777358490566038,
+        "ppv": 0.9975798644724104,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2015,
+          "F": 7,
+          "V": 37,
+          "a": 2
+        },
+        "missed_by_annotation": {
+          "N": 408,
+          "V": 157,
+          "a": 20,
+          "F": 3,
+          "E": 1
+        }
+      },
+      "after": {
+        "tp": 2623,
+        "fp": 16,
+        "fn": 27,
+        "sensitivity": 0.989811320754717,
+        "ppv": 0.9939370973853733,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2406,
+          "V": 187,
+          "F": 9,
+          "a": 20,
+          "E": 1
+        },
+        "missed_by_annotation": {
+          "N": 17,
+          "V": 7,
+          "a": 2,
+          "F": 1
+        }
+      },
+      "quality_gated_after": {
+        "tp": 2620,
+        "fp": 16,
+        "fn": 30,
+        "sensitivity": 0.9886792452830189,
+        "ppv": 0.9939301972685888,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2403,
+          "V": 187,
+          "F": 9,
+          "a": 20,
+          "E": 1
+        },
+        "missed_by_annotation": {
+          "N": 20,
+          "V": 7,
+          "a": 2,
+          "F": 1
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 135
+      },
+      "after_issues": {
+        "NO_RELIABLE_R_PEAK": 1
+      },
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 2640,
+          "warmup_samples": 1000,
+          "no_peak_resets": 1,
+          "external_resets": 0,
+          "enqueued": 2640,
+          "completed": 2639,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 2637,
+          "warmup_samples": 1000,
+          "no_peak_resets": 1,
+          "external_resets": 0,
+          "enqueued": 2637,
+          "completed": 2636,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        }
+      },
+      "before_completed": 2066,
+      "after_completed": 2639,
+      "overlap_enqueues": 183,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 4,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 135,
+        "PENDING_CONFLICT_RESET": 60,
+        "RESET_WARMUP": 378,
+        "REFRACTORY_BLOCK": 5,
+        "BELOW_ADAPTIVE_THRESHOLD": 6,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 4,
+        "REFRACTORY_BLOCK": 9,
+        "BELOW_ADAPTIVE_THRESHOLD": 10,
+        "RESET_WARMUP": 3,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "before_warmup_samples": 68000,
+      "after_warmup_samples": 1000,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [
+        46882,
+        57870,
+        60860,
+        274594,
+        371876
+      ],
+      "fp_after_exact_samples": [
+        46882,
+        57135,
+        57306,
+        57870,
+        58225,
+        58333,
+        59161,
+        60860,
+        135219,
+        210429,
+        240362,
+        240447,
+        245845,
+        245922,
+        274594,
+        371876
+      ],
+      "recovered_reference": 563,
+      "lost_reference": 1,
+      "recovered_reference_by_label": {
+        "N": 392,
+        "V": 150,
+        "a": 18,
+        "F": 2,
+        "E": 1
+      },
+      "lost_reference_by_label": {
+        "N": 1
+      },
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.13926409999839962,
+      "adc_sha256": "92acbcd211c8f6f8a0082dc46257b22f80b340de8cbee1ddfd799504c257ee3a"
+    },
+    {
+      "record": "214",
+      "reference": 2262,
+      "before": {
+        "tp": 1619,
+        "fp": 2,
+        "fn": 643,
+        "sensitivity": 0.715738284703802,
+        "ppv": 0.9987661937075879,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1553,
+          "V": 65,
+          "Q": 1
+        },
+        "missed_by_annotation": {
+          "L": 450,
+          "V": 191,
+          "Q": 1,
+          "F": 1
+        }
+      },
+      "after": {
+        "tp": 2251,
+        "fp": 9,
+        "fn": 11,
+        "sensitivity": 0.9951370468611848,
+        "ppv": 0.9960176991150442,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1998,
+          "V": 250,
+          "Q": 2,
+          "F": 1
+        },
+        "missed_by_annotation": {
+          "L": 5,
+          "V": 6
+        }
+      },
+      "quality_gated_after": {
+        "tp": 2250,
+        "fp": 9,
+        "fn": 12,
+        "sensitivity": 0.9946949602122016,
+        "ppv": 0.9960159362549801,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1997,
+          "V": 250,
+          "Q": 2,
+          "F": 1
+        },
+        "missed_by_annotation": {
+          "L": 6,
+          "V": 6
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 178
+      },
+      "after_issues": {},
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 2261,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 2261,
+          "completed": 2260,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 2260,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 2260,
+          "completed": 2259,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        }
+      },
+      "before_completed": 1621,
+      "after_completed": 2260,
+      "overlap_enqueues": 198,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 3,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 177,
+        "PENDING_CONFLICT_RESET": 163,
+        "RESET_WARMUP": 296,
+        "BELOW_ADAPTIVE_THRESHOLD": 2,
+        "REFRACTORY_BLOCK": 1,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 3,
+        "REFRACTORY_BLOCK": 2,
+        "BELOW_ADAPTIVE_THRESHOLD": 5,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "before_warmup_samples": 89500,
+      "after_warmup_samples": 500,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [
+        74896,
+        424502
+      ],
+      "fp_after_exact_samples": [
+        19763,
+        37009,
+        74896,
+        85800,
+        106007,
+        125562,
+        211064,
+        246910,
+        424502
+      ],
+      "recovered_reference": 632,
+      "lost_reference": 0,
+      "recovered_reference_by_label": {
+        "L": 445,
+        "V": 185,
+        "Q": 1,
+        "F": 1
+      },
+      "lost_reference_by_label": {},
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.1634011999994982,
+      "adc_sha256": "03ac2a3da6ded48c20692b518033377704aa3f1b0c77a0d826acc1c32480dc86"
+    },
+    {
+      "record": "233",
+      "reference": 3079,
+      "before": {
+        "tp": 963,
+        "fp": 0,
+        "fn": 2116,
+        "sensitivity": 0.3127638843780448,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 36.0,
+        "matched_by_annotation": {
+          "N": 800,
+          "V": 156,
+          "F": 5,
+          "A": 2
+        },
+        "missed_by_annotation": {
+          "V": 675,
+          "N": 1430,
+          "A": 5,
+          "F": 6
+        }
+      },
+      "after": {
+        "tp": 3064,
+        "fp": 4,
+        "fn": 15,
+        "sensitivity": 0.9951282884053264,
+        "ppv": 0.9986962190352021,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 40.0,
+        "matched_by_annotation": {
+          "N": 2224,
+          "V": 822,
+          "A": 7,
+          "F": 11
+        },
+        "missed_by_annotation": {
+          "V": 9,
+          "N": 6
+        }
+      },
+      "quality_gated_after": {
+        "tp": 3061,
+        "fp": 4,
+        "fn": 18,
+        "sensitivity": 0.9941539460863917,
+        "ppv": 0.998694942903752,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 40.0,
+        "matched_by_annotation": {
+          "V": 822,
+          "N": 2221,
+          "A": 7,
+          "F": 11
+        },
+        "missed_by_annotation": {
+          "V": 9,
+          "N": 9
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 445
+      },
+      "after_issues": {},
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 3069,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 3069,
+          "completed": 3068,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 3066,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 3066,
+          "completed": 3065,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        }
+      },
+      "before_completed": 963,
+      "after_completed": 3068,
+      "overlap_enqueues": 797,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 3,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 441,
+        "RESET_WARMUP": 1464,
+        "PENDING_CONFLICT_RESET": 204,
+        "BELOW_ADAPTIVE_THRESHOLD": 3,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 3,
+        "BELOW_ADAPTIVE_THRESHOLD": 9,
+        "REFRACTORY_BLOCK": 2,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "before_warmup_samples": 223000,
+      "after_warmup_samples": 500,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [],
+      "fp_after_exact_samples": [
+        388723,
+        395859,
+        424763,
+        444420
+      ],
+      "recovered_reference": 2101,
+      "lost_reference": 0,
+      "recovered_reference_by_label": {
+        "N": 1424,
+        "V": 666,
+        "A": 5,
+        "F": 6
+      },
+      "lost_reference_by_label": {},
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.18401450000237674,
+      "adc_sha256": "b8187f559bce8ea0d329a0a74dab2c481ac240ec32fc59c44fd843adfe56b457"
+    },
+    {
+      "record": "234",
+      "reference": 2753,
+      "before": {
+        "tp": 2698,
+        "fp": 5,
+        "fn": 55,
+        "sensitivity": 0.9800217944061025,
+        "ppv": 0.9981502034776175,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2676,
+          "J": 22
+        },
+        "missed_by_annotation": {
+          "N": 24,
+          "J": 28,
+          "V": 3
+        }
+      },
+      "after": {
+        "tp": 2740,
+        "fp": 7,
+        "fn": 13,
+        "sensitivity": 0.995277878677806,
+        "ppv": 0.9974517655624318,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2687,
+          "J": 50,
+          "V": 3
+        },
+        "missed_by_annotation": {
+          "N": 13
+        }
+      },
+      "quality_gated_after": {
+        "tp": 2737,
+        "fp": 7,
+        "fn": 16,
+        "sensitivity": 0.9941881583726844,
+        "ppv": 0.9974489795918368,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2684,
+          "J": 50,
+          "V": 3
+        },
+        "missed_by_annotation": {
+          "N": 16
+        }
+      },
+      "before_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 9
+      },
+      "after_issues": {},
+      "stats": {
+        "candidate": {
+          "samples": 451389,
+          "candidates": 2747,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 2747,
+          "completed": 2747,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 0
+        },
+        "gated": {
+          "samples": 451072,
+          "candidates": 2745,
+          "warmup_samples": 500,
+          "no_peak_resets": 0,
+          "external_resets": 0,
+          "enqueued": 2745,
+          "completed": 2744,
+          "dropped_full": 0,
+          "dropped_reset": 0,
+          "duplicate": 0,
+          "out_of_order": 0,
+          "overwritten": 0,
+          "high_water": 2,
+          "pending": 1
+        }
+      },
+      "before_completed": 2703,
+      "after_completed": 2747,
+      "overlap_enqueues": 29,
+      "fn_evidence_before": {
+        "INITIAL_WARMUP": 3,
+        "REFRACTORY_BLOCK": 5,
+        "BELOW_ADAPTIVE_THRESHOLD": 3,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 9,
+        "PENDING_CONFLICT_RESET": 8,
+        "RESET_WARMUP": 27
+      },
+      "fn_evidence_after": {
+        "INITIAL_WARMUP": 3,
+        "REFRACTORY_BLOCK": 6,
+        "BELOW_ADAPTIVE_THRESHOLD": 4
+      },
+      "before_warmup_samples": 5000,
+      "after_warmup_samples": 500,
+      "duplicate_emitted": 0,
+      "out_of_order_emitted": 0,
+      "fp_before_exact_samples": [
+        100279,
+        203711,
+        337369,
+        344429,
+        359873
+      ],
+      "fp_after_exact_samples": [
+        100279,
+        203711,
+        217938,
+        337369,
+        343041,
+        344429,
+        359873
+      ],
+      "recovered_reference": 43,
+      "lost_reference": 1,
+      "recovered_reference_by_label": {
+        "J": 28,
+        "N": 12,
+        "V": 3
+      },
+      "lost_reference_by_label": {
+        "N": 1
+      },
+      "qrs_arithmetic_identical_before_first_conflict": true,
+      "elapsed_host_seconds": 0.1289455999940401,
+      "adc_sha256": "5f49ac5be45615896bf49c7d9a1e0cbe744d41c6ccd80eb261fa75ac031ba6ba"
+    }
+  ],
+  "record_pass": {
+    "115": true,
+    "118": false,
+    "121": false,
+    "210": false,
+    "214": true,
+    "233": true,
+    "234": true
+  },
+  "controls": {
+    "no_peaks": {
+      "candidate_peaks": 0,
+      "gated_peaks": 0
+    },
+    "pure50Hz": {
+      "candidate_peaks": 0,
+      "gated_peaks": 0
+    }
+  },
+  "all_detector_criteria_pass": false,
+  "fn_evidence_before": {
+    "INITIAL_WARMUP": 20,
+    "REFRACTORY_BLOCK": 81,
+    "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 785,
+    "RESET_WARMUP": 2238,
+    "END_WINDOW_UNAVAILABLE": 5,
+    "BELOW_ADAPTIVE_THRESHOLD": 39,
+    "PENDING_CONFLICT_RESET": 444
+  },
+  "fn_evidence_after": {
+    "INITIAL_WARMUP": 20,
+    "REFRACTORY_BLOCK": 91,
+    "END_WINDOW_UNAVAILABLE": 5,
+    "BELOW_ADAPTIVE_THRESHOLD": 56,
+    "RESET_WARMUP": 12
+  },
+  "protected_checks": {
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\idf_component.yml": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\lead_off.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\operator_trace.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\preprocessing.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_conv.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_conv.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_math.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\system_state.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_codec.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_transport.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_transport.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model\\ecg_cnn_int8.tflite": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_metadata.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_samples_int8.bin": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\sdkconfig": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\sdkconfig.defaults": true,
+    "data\\processed\\mitbih_split_indices.npz": true,
+    "data\\processed\\mitbih_nv_250hz.npz": true,
+    "results\\optimized_threshold.json": true,
+    "tools\\ecg_monitor\\validate_offline.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\r_peak_detector_audit.json": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\docs\\r_peak_detector_audit.md": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\check_xtensa_syntax.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\compare_operator_trace.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\conv_fixture.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\conv_kernel_test.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_audit_replay.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_replay.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\flat_reader.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\full_chain_host.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\isolate_conv.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\lead_off_test.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\preprocess_host.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\requantization_test.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\run_conv_host.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\run_full_host.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\run_requant_host.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\sdkconfig.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\signal_test.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\system_test.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\telemetry_wire_test.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\test_trace_protocol.py": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\trace_codec_test.cpp": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\alert.cpp": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\alert.h": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\main.cpp": true,
+    "firmware\\esp32_tinyml_step8\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_tinyml_step8\\main\\idf_component.yml": true,
+    "firmware\\esp32_tinyml_step8\\main\\Kconfig.projbuild": true,
+    "firmware\\esp32_tinyml_step8\\main\\main.cpp": true,
+    "firmware\\esp32_tinyml_step8\\main\\model\\ecg_cnn_int8.tflite": true,
+    "firmware\\esp32_tinyml_step8\\main\\test_data\\ecg_test_metadata.h": true,
+    "firmware\\esp32_tinyml_step8\\main\\test_data\\ecg_test_samples_int8.bin": true
+  },
+  "changed_sources": [
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.cpp"
+  ],
+  "input_split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b",
+  "sampling_algorithm_changed": false,
+  "qrs_rule_tuned": false,
+  "cnn_changed": false,
+  "telemetry_changed": false,
+  "ai_live_unlocked": false,
+  "com_opened": false,
+  "flashed": false,
+  "limitations": [
+    "Validation reused; no Test, patient-independent final claim or hardware validation",
+    "Old/new same candidate rule; persistent state differs because overlap no longer resets it",
+    "FP increased and failing records retained; no threshold/refractory/filter retuning in2A",
+    "Timing and data checks cover raw windows; host gated mirror is not full RTOS/generation simulation"
+  ],
+  "examples": [
+    "debug\\r_peak_phase2a\\233_before_after.png",
+    "debug\\r_peak_phase2a\\121_before_after.png",
+    "debug\\r_peak_phase2a\\115_before_after.png"
+  ],
+  "tests": {
+    "monitor_python": 53,
+    "operator_trace_python": 14,
+    "cpp_suites": [
+      "system",
+      "signal",
+      "lead_off",
+      "trace_codec",
+      "telemetry_wire",
+      "beat_window",
+      "requantization20000"
+    ],
+    "status": "PASS",
+    "streaming_virtual_samples": 300000,
+    "streaming_virtual_seconds": 1200,
+    "cpp_log": "debug/r_peak_phase2a/cpp_tests.log",
+    "note": "9 historical audit tests use frozen old binaries; new queue and old signal tests compiled against current signal.cpp"
+  },
+  "cnn_verification": {
+    "status": "PASS",
+    "scope": "Fixed9425 matched Validation windows from phase1; not detector end-to-end accuracy",
+    "golden_samples": 12,
+    "repeats_each": 33,
+    "golden_exact": true,
+    "parity_beats": 9425,
+    "preprocessing_mismatched_bytes": 0,
+    "cnn_mismatched_codes": 0,
+    "corpus_sha256": "babc6c1df5efd0e3044d68f818ab519cce8ad9a36f9072073ad5176399ef4168",
+    "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394"
+  },
+  "builds": {
+    "hardware": {
+      "status": "PASS",
+      "idf_version": "v5.4.4",
+      "idf_path": "C:/esp/v5.4.4/esp-idf",
+      "bytes": 317264,
+      "sha256": "cf406aef1e001480793d3f4ad5553707c3a87b508155ae4303a786edeeb353d4",
+      "log": "debug\\r_peak_phase2a\\build_hardware.log"
+    },
+    "synthetic": {
+      "status": "PASS",
+      "idf_version": "v5.4.4",
+      "idf_path": "C:/esp/v5.4.4/esp-idf",
+      "bytes": 315824,
+      "sha256": "f5e1ba55fc730a9ee3f2e1f15fc63226755b329b5cf6f3f81ce783b446af72a5",
+      "log": "debug\\r_peak_phase2a\\build_synthetic.log"
+    }
+  },
+  "resources": {
+    "esp32_detector_bytes_before": 6184,
+    "esp32_detector_bytes_after": 6448,
+    "esp32_detector_delta_bytes": 264,
+    "pending_capacity": 4,
+    "ring_samples": 512,
+    "queue_high_water": 2,
+    "dynamic_allocations_in_push": 0,
+    "synchronization": "AI worker sole owner; ADC producer does not touch detector ring or counters",
+    "cpu_complexity": "O(1) sample/insert; up to255 interval checks +256 raw copies per completed window; O(1) reset",
+    "host_cpu": {
+      "before": {
+        "100": [
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 7584500,
+            "host_ns_per_sample": 7.585,
+            "windows": 0,
+            "issues": 1428,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 7718700,
+            "host_ns_per_sample": 7.719,
+            "windows": 0,
+            "issues": 1428,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 7589800,
+            "host_ns_per_sample": 7.59,
+            "windows": 0,
+            "issues": 1428,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 7743600,
+            "host_ns_per_sample": 7.744,
+            "windows": 0,
+            "issues": 1428,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 7712100,
+            "host_ns_per_sample": 7.712,
+            "windows": 0,
+            "issues": 1428,
+            "sizeof_detector_host": 6184
+          }
+        ],
+        "200": [
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 9830200,
+            "host_ns_per_sample": 9.83,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 9534400,
+            "host_ns_per_sample": 9.534,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 9435800,
+            "host_ns_per_sample": 9.436,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 9128200,
+            "host_ns_per_sample": 9.128,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6184
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 9481200,
+            "host_ns_per_sample": 9.481,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6184
+          }
+        ]
+      },
+      "after": {
+        "100": [
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 13088400,
+            "host_ns_per_sample": 13.088,
+            "windows": 9993,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 10964100,
+            "host_ns_per_sample": 10.964,
+            "windows": 9993,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 10914700,
+            "host_ns_per_sample": 10.915,
+            "windows": 9993,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 10671700,
+            "host_ns_per_sample": 10.672,
+            "windows": 9993,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 100,
+            "host_ns_total": 11794400,
+            "host_ns_per_sample": 11.794,
+            "windows": 9993,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          }
+        ],
+        "200": [
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 8885700,
+            "host_ns_per_sample": 8.886,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 9074300,
+            "host_ns_per_sample": 9.074,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 8443100,
+            "host_ns_per_sample": 8.443,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 8334600,
+            "host_ns_per_sample": 8.335,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          },
+          {
+            "samples": 1000000,
+            "rr_samples": 200,
+            "host_ns_total": 8275000,
+            "host_ns_per_sample": 8.275,
+            "windows": 4997,
+            "issues": 0,
+            "sizeof_detector_host": 6448
+          }
+        ]
+      }
+    },
+    "board_wcet": "PENDING HARDWARE VALIDATION; host O2 timing is not ESP32 IDF-size-optimized latency",
+    "host_cpu_median_ns_per_sample": {
+      "before": {
+        "100": 7.712,
+        "200": 9.481
+      },
+      "after": {
+        "100": 10.964,
+        "200": 8.443
+      }
+    }
+  },
+  "comparison": {
+    "tp_delta": 3428,
+    "fp_delta": 46,
+    "fn_delta": -3428,
+    "before_windows": 13316,
+    "after_windows": 16790,
+    "before_conflict_resets": 795,
+    "after_conflict_resets": 0,
+    "before_reset_warmup_fn": 2238,
+    "after_reset_warmup_fn": 12,
+    "after_pending_overflow": 0,
+    "after_end_pending": 6,
+    "duplicate_windows": 0,
+    "out_of_order_windows": 0
+  },
+  "phase2b": {
+    "priorities": [
+      "Analyze false preceding local maxima and refractory91FN, especially record121; do not simply shorten refractory",
+      "Adaptive threshold/noise-QRS separation and optional causal detection-only QRS band filtering;56FN below adaptive threshold",
+      "Review no-peak reset/searchback;12FN after reset; preserve safety and do not feed filtered morphology to CNN",
+      "Per-record and per-label Validation criteria, noise controls and FP/time monitoring; no held-out Test tuning",
+      "Authorized simulator/RTOS timing/CPU/heap/stack/generation/queue validation before any live readiness decision"
+    ]
+  },
+  "source_sha256": {
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.h": "a9254c6ed4076963a051ac00a2724c712e4fff49caa9f52279cfbc34d7412282",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.cpp": "d9bb36eeecfc5512aacd05342a191ab71d5b1a56a77c911de41549d0c55bf3be",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_phase2a_replay.cpp": "f2427dee24b5092964399e9892e6b03ddd9894b7a67c97fcc13dcd04e8573598",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\beat_window_test.cpp": "e389ca370562c70e05de0c71ef14ef3e4eba6b938a7ed02c5440acb2889ac1f8",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_cpu_bench.cpp": "894504d9833eb043c9b81193dc9a96db1a5ba26fc5dc7ac769ed5447d36974d9",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_size_probe.cpp": "07970453519d099cc602536b4eb79f1b476d1384d04e4b44cee7f46cb04dec38",
+    "tools\\ecg_monitor\\review_r_peak_phase2a.py": "141a32cd996918c57242dcac06709bdf6da132cd36e0f08c6f22189cda212473",
+    "tools\\ecg_monitor\\validate_phase2a_parity.py": "e28dc9488997acb598353477888e982481571678b1fda8efd7f050756fac58c0",
+    "tools\\ecg_monitor\\report_r_peak_phase2a.py": "0170b3a2e4b226d76ebf9603dbb7ca22eb01e787c6a6a4b611c39e6036c5c093",
+    "tools\\ecg_monitor\\tests\\test_phase2a_windows.py": "85b2d8c434727de230a443719a14da04989a2481683aa844f713f6df5c3d533d"
+  },
+  "report": "docs/r_peak_detector_phase2a.md"
+}

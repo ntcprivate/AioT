@@ -1,0 +1,12 @@
+[
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt",
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild",
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp",
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp",
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h",
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h",
+  "tools\\ecg_monitor\\ecg_monitor\\app.py",
+  "tools\\ecg_monitor\\ecg_monitor\\protocol.py",
+  "tools\\ecg_monitor\\ecg_monitor\\serial_worker.py",
+  "tools\\ecg_monitor\\ecg_monitor\\session.py"
+]

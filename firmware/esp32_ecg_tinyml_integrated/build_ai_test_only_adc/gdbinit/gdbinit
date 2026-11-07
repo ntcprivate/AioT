@@ -1,0 +1,2 @@
+source D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_ai_test_only_adc/gdbinit/symbols
+source D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_ai_test_only_adc/gdbinit/connect

@@ -1,0 +1,28 @@
+--- pipeline.cpp.before
++++ pipeline.cpp
+@@ -1,6 +1,7 @@
+ #include "trace_transport.h"
+ #include "pipeline.h"
+ #include "model.h"
++#include "ai_test_only.h"
+ #include "signal.h"
+ #include "system_state.h"
+ #include <algorithm>
+@@ -172,7 +173,17 @@
+     portENTER_CRITICAL(&lock);
+     if(!status.system_fault && status.state==State::Waiting) {status.reason="MODEL_VALIDATION_PENDING";++status.revision;}
+     portEXIT_CRITICAL(&lock);
++#if CONFIG_ECG_AI_TEST_ONLY
++    static_assert(!kLivePipelineValidated,"TEST_ONLY must never enable live classification");
++    bool ready=model_init();
++    if(ready) {
++        ready=ai_test_only_begin();
++        const bool golden=ready && model_golden_test();
++        ready=ai_test_only_finish(golden) && golden;
++    }
++#else
+     bool ready=model_init() && model_golden_test();
++#endif
+     portENTER_CRITICAL(&lock); status.model_ready=ready; portEXIT_CRITICAL(&lock);
+     if(!ready) fault("MODEL_OR_GOLDEN_FAILED");
+ #if CONFIG_ECG_GOLDEN_ALERT_DEMO

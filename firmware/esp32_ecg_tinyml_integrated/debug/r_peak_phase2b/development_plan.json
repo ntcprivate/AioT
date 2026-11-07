@@ -1,0 +1,17 @@
+{
+  "records": [
+    "105",
+    "106",
+    "114",
+    "119",
+    "208",
+    "219"
+  ],
+  "candidates": [
+    6,
+    8,
+    10
+  ],
+  "selection": "Maximize macro F1 on these Train records only; tie higher min sensitivity, then smaller gap",
+  "source": "Phase2A plus causal curvature/confirmation and non-destructive no-peak event"
+}

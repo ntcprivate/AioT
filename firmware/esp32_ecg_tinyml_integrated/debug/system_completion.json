@@ -1,0 +1,203 @@
+{
+  "status": "MONITOR_IMPLEMENTED_HOST_CHECKS_PASS_AI_LIVE_NOT_READY",
+  "build": {
+    "status": "PASS",
+    "idf": "5.4.4",
+    "target": "esp32",
+    "binary_bytes": 299136,
+    "binary_sha256": "775db0b4939efd7ab3436aaed90c442473ff1a613d2943a493a2c4dcd91e9267",
+    "partition_check": "PASS",
+    "log": "debug/system_build_final.log",
+    "warnings": "No warnings in final incremental build; initial full build emitted existing vendor TFLM -Wshadow warnings",
+    "flash": "NOT_ATTEMPTED",
+    "reset": "NOT_ATTEMPTED"
+  },
+  "scope": "Only host/offscreen/simulated transport measured; no COM opened, no patched board execution",
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+  "golden_reference_unchanged": true,
+  "original_projects_unchanged": true,
+  "split_unchanged": true,
+  "protected_assets": {
+    "main/model/ecg_cnn_int8.tflite": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "main/test_data/ecg_test_samples_int8.bin": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758",
+    "main/test_data/ecg_test_metadata.h": "b69fddca6df4f82fb68c47c4549f55dec406d9f52b762a1d1e2240721db6e296",
+    "main/single_round_conv.cpp": "f89b61eecf305fb994af772ebd299c972afc203c72cd346f349e307ce8935b34",
+    "main/single_round_math.h": "6201eb5acd6631d2d0f1118be8799c1431901499d8d87a822c2833191ebec7de"
+  },
+  "actual_kernel_reference_flags_verified": [
+    "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+    "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+    "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+    "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+    "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/reduce.cc"
+  ],
+  "threshold": 0.52,
+  "ai_live_enabled": false,
+  "findings": [
+    "WAITING steady LED confused with NORMAL; new nonblocking patterns",
+    "Coarse diff/PTP gate is not a50Hz detector; full raw capture needed for actual PSD",
+    "Model fault could be masked by raw-sample recovery; now sticky SYSTEM_FAULT",
+    "Quality recovery now requires512 samples and2 good complete blocks",
+    "Avoid startup PROCESS_QUEUE_FULL while golden worker busy; do not enqueue until model_ready",
+    "Old buffer quality result cannot overwrite newer-generation danger",
+    "Extended per-channel FC rounding mismatch fixed with isolated arithmetic proof"
+  ],
+  "verification": {
+    "monitor_python_tests": "25 PASS",
+    "legacy_trace_tests": "14 PASS",
+    "native_system_signal_leads_codec": "PASS",
+    "golden_host": "12/12 exact,33 repeats each stable",
+    "sample5_operator_tensors": "16/16 exact bytes",
+    "preprocessing_parity_windows": 9425,
+    "preprocessing_mismatched_bytes": 0,
+    "cnn_mismatched_codes": 0,
+    "cpp_vs_python_scope": "9425 matched Validation N/V windows; not independent end-to-end performance",
+    "gui_raw": {
+      "frames": 100,
+      "mean_frame_ms": 8.804417999854195,
+      "samples": 8320,
+      "platform": "Qt offscreen on Windows; no COM opened",
+      "budget_ms": 40
+    },
+    "gui_filtered": {
+      "frames": 100,
+      "mean_frame_ms": 10.837210999743547,
+      "budget_ms": 40,
+      "scope": "Host Qt offscreen, raw plus display-only filter"
+    },
+    "transport_host": {
+      "scope": "HOST simulated serial protocol only, not hardware bandwidth/latency measurement",
+      "samples": 15008,
+      "virtual_seconds": 60.032,
+      "status_packets": 118,
+      "parser_errors": 0,
+      "bytes_per_second": 5834.088486140725,
+      "uart_capacity_8n1": 11520.0,
+      "uart_fraction": 0.5064312921997157,
+      "host_processing_seconds": 0.07161690000066301,
+      "sample_points_retained": 5000,
+      "lost_packets": 0
+    }
+  },
+  "detector": {
+    "status": "FAIL",
+    "criteria": {
+      "sensitivity_min": 0.99,
+      "ppv_min": 0.99,
+      "timing_p95_max_ms": 40,
+      "noise_false_peaks_max": 0,
+      "matching_tolerance_samples": 12
+    },
+    "aggregate": {
+      "tp": 13226,
+      "fp": 90,
+      "fn": 3612,
+      "sensitivity": 0.78548521202043,
+      "ppv": 0.9932412135776509
+    },
+    "report": "../../tools/ecg_monitor/reports/offline_validation.json"
+  },
+  "offline_component_chain": {
+    "status": "COMPONENT_PARITY_PASS",
+    "scope": "Exploratory matched N/V detections on Validation; excludes missed/false/other-label peaks; NOT end-to-end clinical accuracy",
+    "beats": 9425,
+    "preprocessing_mismatched_bytes": 0,
+    "cnn_mismatched_codes": 0,
+    "quantization_clipped_beats": 0,
+    "runtime_eligible_beats": 9425,
+    "classification_metrics_scope": "Matched N/V windows only, additionally exclude quantization clipping as firmware would; not full pipeline accuracy",
+    "matched_pvc_tp": 229,
+    "matched_pvc_fn": 40,
+    "matched_normal_fp": 14,
+    "matched_normal_tn": 9142
+  },
+  "filter_review": {
+    "annotation_windows": 12459,
+    "median_raw_filtered_correlation": 0.9191407350500872,
+    "p95_absolute_peak_displacement_samples": 2.0,
+    "decision": "NOT_APPROVED_FOR_CNN: causal filter alters morphology/alignment; existing unfiltered preprocessing unchanged"
+  },
+  "blocked_or_unfinished": {
+    "detector_redesign": "NOT_COMPLETE: current native candidate sensitivity below release criteria",
+    "actual_adc50hz_psd": "BLOCKED: no complete current hardware capture; first10 insufficient",
+    "independent_final_evaluation": "NOT_RUN: Validation has been reused; Test untouched",
+    "board_sampling_telemetry_latency_stack_heap": "NOT_RUN: user must intentionally flash and measure new binary",
+    "simulator_integration": "NOT_RUN: bench simulator hardware not exercised",
+    "validated_ai_test_gui": "LOCKED by failed detector and missing hardware validation",
+    "pyinstaller_exe": "NOT_CREATED; tested Python/bat launcher provided"
+  },
+  "desktop": {
+    "path": "tools/ecg_monitor/Start_ECG_Monitor.bat",
+    "setup": "tools/ecg_monitor/setup.bat",
+    "python": "3.13 own .venv; root .venv unchanged",
+    "features": [
+      "DEMO synthetic250Hz",
+      "HARDWARE MONITOR framed samples receiver",
+      "COM enumeration and explicit connect; reconnect opt-in",
+      "10s raw/filtered display, pause without stopping recording",
+      "CSV with source/timestamp/flags/state and non-medical report",
+      "Async offline CSV PSD/clip/baseline/filter analysis",
+      "Fail-closed AI/BPM and stale-value clearing",
+      "Error/drop counters and event log"
+    ],
+    "screenshot": "tools/ecg_monitor/reports/gui_demo.png",
+    "serial_board": "NOT_OPENED"
+  },
+  "changed_firmware_sources": [
+    "CMakeLists.txt",
+    "sdkconfig.defaults",
+    "main/CMakeLists.txt",
+    "main/Kconfig.projbuild",
+    "main/main.cpp",
+    "main/pipeline.cpp",
+    "main/pipeline.h",
+    "main/model.cpp",
+    "main/signal.cpp",
+    "main/signal.h",
+    "main/system_state.h",
+    "main/preprocessing.h",
+    "main/single_round_fc.h",
+    "main/single_round_fc.cpp",
+    "main/telemetry.h",
+    "main/telemetry.cpp",
+    "main/telemetry_codec.h",
+    "tests/system_test.cpp",
+    "tests/detector_replay.cpp",
+    "tests/preprocess_host.cpp",
+    "tests/full_chain_host.cpp",
+    "tests/run_full_host.py"
+  ],
+  "desktop_sources": [
+    "tools/ecg_monitor/README.md",
+    "tools/ecg_monitor/Run_Tests.bat",
+    "tools/ecg_monitor/Start_ECG_Monitor.bat",
+    "tools/ecg_monitor/benchmark_transport.py",
+    "tools/ecg_monitor/ecg_monitor/__init__.py",
+    "tools/ecg_monitor/ecg_monitor/app.py",
+    "tools/ecg_monitor/ecg_monitor/offline.py",
+    "tools/ecg_monitor/ecg_monitor/protocol.py",
+    "tools/ecg_monitor/ecg_monitor/serial_worker.py",
+    "tools/ecg_monitor/ecg_monitor/session.py",
+    "tools/ecg_monitor/requirements-validation.txt",
+    "tools/ecg_monitor/requirements.txt",
+    "tools/ecg_monitor/run.py",
+    "tools/ecg_monitor/setup.bat",
+    "tools/ecg_monitor/tests/test_gui.py",
+    "tools/ecg_monitor/tests/test_monitor.py",
+    "tools/ecg_monitor/validate_offline.py",
+    "tools/ecg_monitor/validate_reference.py"
+  ],
+  "documentation": [
+    "README.md",
+    "tools/ecg_monitor/README.md",
+    "docs/system_audit.md",
+    "docs/telemetry_protocol.md",
+    "docs/bench_validation.md"
+  ],
+  "evidence": [
+    "debug/full_host_results.json",
+    "../../tools/ecg_monitor/reports/offline_validation.json",
+    "../../tools/ecg_monitor/reports/offline/fc_arithmetic_diagnosis.json",
+    "../../tools/ecg_monitor/reports/offline/extended_parity_mismatches.json"
+  ]
+}

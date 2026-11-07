@@ -1,0 +1,7 @@
+source "C:/esp/v5.4.4/esp-idf/components/bootloader/Kconfig.projbuild"
+source "C:/esp/v5.4.4/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "C:/esp/v5.4.4/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "C:/esp/v5.4.4/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "C:/esp/v5.4.4/esp-idf/components/partition_table/Kconfig.projbuild"
+source "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/main/Kconfig.projbuild"
+source "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-nn/Kconfig.projbuild"

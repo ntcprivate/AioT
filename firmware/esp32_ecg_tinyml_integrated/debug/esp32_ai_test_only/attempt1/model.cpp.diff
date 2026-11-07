@@ -1,0 +1,48 @@
+--- model.cpp.before
++++ model.cpp
+@@ -17,6 +17,9 @@
+ #include "single_round_conv.h"
+ #include "preprocessing.h"
+ #include "single_round_fc.h"
++#if CONFIG_ECG_AI_TEST_ONLY
++#include "ai_test_only.h"
++#endif
+ #if !defined(TFLITE_SINGLE_ROUNDING) || TFLITE_SINGLE_ROUNDING != 0 || !ECG_CONV_SINGLE_ROUNDING
+ #error "Require Conv-only single rounding; stock backend stays double rounding"
+ #endif
+@@ -52,7 +55,7 @@
+ }
+ bool model_init() {
+     console_lock();
+-    printf("ECG_KERNELS reference_active=%d esp_nn_effective=%d single_rounding=%d conv_single_rounding=%d fc_per_channel_single=1 tflm=1.4.2 esp_nn_component=1.3.0\n",
++    printf("ECG_KERNELS reference_active=%d esp_nn_effective=%d single_rounding=%d conv_single_rounding=%d fc_per_channel_single=1 fc_per_tensor_single=1 tflm=1.4.2 esp_nn_component=1.3.0\n",
+            ECG_REFERENCE_KERNELS_ACTIVE, !ECG_REFERENCE_KERNELS_ACTIVE,TFLITE_SINGLE_ROUNDING,ECG_CONV_SINGLE_ROUNDING);
+     console_unlock();
+     if (static_cast<size_t>(model_end-model_start)!=kModelBytes ||
+@@ -94,6 +97,10 @@
+     code=output->data.int8[0];
+     score=(code-output->params.zero_point)*output->params.scale;
+     return std::isfinite(score) && score>=0 && score<=1;
++}
++bool model_memory_usage(uint32_t& allocated,uint32_t& used) {
++    if(!interpreter)return false;
++    allocated=CONFIG_ECG_ARENA_KIB*1024;used=interpreter->arena_used_bytes();return true;
+ }
+ bool model_invoke_beat(const float* beat,float& score,int64_t& latency,unsigned& clipped) {
+     if(!interpreter || !input) return false;
+@@ -150,9 +157,15 @@
+             stable &= code==first_code;
+             // Every pass must match. Warm-up is not permission to hide a mismatch.
+             stable &= ok && code==kGolden[i].output;
++#if CONFIG_ECG_AI_TEST_ONLY
++            ai_test_only_note_golden(static_cast<unsigned>(i),static_cast<unsigned>(run),code,latency,ok);
++#endif
+             vTaskDelay(1);
+         }
+         bool exact=invoked && warm_exact && stable && code==kGolden[i].output && static_cast<int>(score>=kThreshold)==kGolden[i].predicted;
++#if CONFIG_ECG_AI_TEST_ONLY
++        ai_test_only_note_golden_result(static_cast<unsigned>(i),exact);
++#endif
+         passed &= exact;
+         if(!exact) ++failed;
+         predicted_n |= exact && kGolden[i].predicted==0;

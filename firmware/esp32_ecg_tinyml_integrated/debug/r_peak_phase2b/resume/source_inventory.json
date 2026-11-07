@@ -1,0 +1,13 @@
+{
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.h": "f48f55d32657b843454e0f04af15028cf58085ca19b50fa6539793cbcf88054c",
+  "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.cpp": "01e51f827cee12fa81f4956a3876358d238f8c2e294d65e39a85411818ca236f",
+  "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_phase2b_replay.cpp": "7794b242c4159c503fe71a2f86bd3c2bd425209a2cec63be59253480aeeff095",
+  "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_phase2b_test.cpp": "fa10742da497428502b58588b10dd4024ddb6291c9513f604a3aa6d3831624b5",
+  "firmware\\esp32_ecg_tinyml_integrated\\tests\\beat_window_phase2b_test.cpp": "9136cad626a4067a63cc341cdeeb04d962a9263a70b74c5d7d91d77922c894eb",
+  "tools\\ecg_monitor\\develop_r_peak_phase2b.py": "9cc5ced3c4ec538ba9e53528929c5b3f4bf1fd7e29b123696b1e4849b2918dc3",
+  "tools\\ecg_monitor\\develop_r_peak_phase2b_confirmation.py": "704bc9ff0512cc260430dfd6fcb9e027668a6fe16d4b1cdc906fb20923e16f36",
+  "tools\\ecg_monitor\\develop_r_peak_phase2b_ratio.py": "e7fa9da042744e6b7314b971ac394e964d9081a59477e839d73d2c4d7c8081ab",
+  "tools\\ecg_monitor\\evaluate_r_peak_phase2b.py": "5f04791bb9c4e07dc532e15aa3b7e94dd41aff741b98c5933b4d46486ea6a598",
+  "tools\\ecg_monitor\\report_r_peak_phase2b.py": "82be7027e5a29a3c6fb2bff3e2b3209c5980fdc941cdb1bac5716cd4938934aa",
+  "tools\\ecg_monitor\\tests\\test_phase2b_detector.py": "6e9222ef915e04a18a66452144619e9c2bb420364cb48a422d58f6f001306e31"
+}

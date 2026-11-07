@@ -1,0 +1,3069 @@
+{
+  "status": "STAGE1_ANALYSIS_COMPLETE_DETECTOR_UNCHANGED_AI_LIVE_LOCKED",
+  "records": [
+    "115",
+    "118",
+    "121",
+    "210",
+    "214",
+    "233",
+    "234"
+  ],
+  "scope": "Same Validation records, beat symbols, ADC representation, greedy matching and tolerance as historical score; no Test",
+  "criteria": {
+    "sensitivity_min": 0.99,
+    "ppv_min": 0.99,
+    "timing_p95_max_ms": 40,
+    "noise_false_peaks_max": 0,
+    "matching_tolerance_samples": 12
+  },
+  "baseline": {
+    "reference_beats": 16838,
+    "tp": 13226,
+    "fp": 90,
+    "fn": 3612,
+    "sensitivity": 0.78548521202043,
+    "ppv": 0.9932412135776509
+  },
+  "quality_gated": {
+    "reference_beats": 16838,
+    "tp": 13215,
+    "fp": 90,
+    "fn": 3623,
+    "sensitivity": 0.784831927782397,
+    "ppv": 0.9932356257046223
+  },
+  "xqrs": {
+    "reference_beats": 16838,
+    "tp": 16755,
+    "fp": 9,
+    "fn": 83,
+    "sensitivity": 0.9950706734766599,
+    "ppv": 0.9994631352899069
+  },
+  "by_annotation": {
+    "N": {
+      "reference": 11167,
+      "tp": 9165,
+      "fn": 2002,
+      "sensitivity": 0.8207217694994179
+    },
+    "A": {
+      "reference": 104,
+      "tp": 91,
+      "fn": 13,
+      "sensitivity": 0.875
+    },
+    "R": {
+      "reference": 2166,
+      "tp": 2112,
+      "fn": 54,
+      "sensitivity": 0.9750692520775623
+    },
+    "V": {
+      "reference": 1301,
+      "tp": 268,
+      "fn": 1033,
+      "sensitivity": 0.20599538816295157
+    },
+    "E": {
+      "reference": 1,
+      "tp": 0,
+      "fn": 1,
+      "sensitivity": 0.0
+    },
+    "F": {
+      "reference": 22,
+      "tp": 12,
+      "fn": 10,
+      "sensitivity": 0.5454545454545454
+    },
+    "a": {
+      "reference": 22,
+      "tp": 2,
+      "fn": 20,
+      "sensitivity": 0.09090909090909091
+    },
+    "L": {
+      "reference": 2003,
+      "tp": 1553,
+      "fn": 450,
+      "sensitivity": 0.7753369945082377
+    },
+    "Q": {
+      "reference": 2,
+      "tp": 1,
+      "fn": 1,
+      "sensitivity": 0.5
+    },
+    "J": {
+      "reference": 50,
+      "tp": 22,
+      "fn": 28,
+      "sensitivity": 0.44
+    }
+  },
+  "xqrs_by_annotation": {
+    "N": {
+      "reference": 11167,
+      "tp": 11165,
+      "fn": 2,
+      "sensitivity": 0.9998209008686307
+    },
+    "A": {
+      "reference": 104,
+      "tp": 104,
+      "fn": 0,
+      "sensitivity": 1.0
+    },
+    "R": {
+      "reference": 2166,
+      "tp": 2166,
+      "fn": 0,
+      "sensitivity": 1.0
+    },
+    "V": {
+      "reference": 1301,
+      "tp": 1233,
+      "fn": 68,
+      "sensitivity": 0.9477325134511914
+    },
+    "E": {
+      "reference": 1,
+      "tp": 0,
+      "fn": 1,
+      "sensitivity": 0.0
+    },
+    "F": {
+      "reference": 22,
+      "tp": 19,
+      "fn": 3,
+      "sensitivity": 0.8636363636363636
+    },
+    "a": {
+      "reference": 22,
+      "tp": 18,
+      "fn": 4,
+      "sensitivity": 0.8181818181818182
+    },
+    "L": {
+      "reference": 2003,
+      "tp": 1999,
+      "fn": 4,
+      "sensitivity": 0.9980029955067399
+    },
+    "Q": {
+      "reference": 2,
+      "tp": 1,
+      "fn": 1,
+      "sensitivity": 0.5
+    },
+    "J": {
+      "reference": 50,
+      "tp": 50,
+      "fn": 0,
+      "sensitivity": 1.0
+    }
+  },
+  "per_record": [
+    {
+      "record": "115",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 1935,
+        "fp": 11,
+        "fn": 18,
+        "sensitivity": 0.9907834101382489,
+        "ppv": 0.9943473792394656,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1935
+        },
+        "missed_by_annotation": {
+          "N": 18
+        },
+        "reference_beats": 1953,
+        "by_annotation": {
+          "N": {
+            "reference": 1953,
+            "tp": 1935,
+            "fn": 18,
+            "sensitivity": 0.9907834101382489
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 1934,
+        "fp": 11,
+        "fn": 19,
+        "sensitivity": 0.9902713773681515,
+        "ppv": 0.9943444730077121,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1934
+        },
+        "missed_by_annotation": {
+          "N": 19
+        },
+        "reference_beats": 1953,
+        "by_annotation": {
+          "N": {
+            "reference": 1953,
+            "tp": 1934,
+            "fn": 19,
+            "sensitivity": 0.9902713773681515
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 1953,
+        "fp": 0,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1953
+        },
+        "missed_by_annotation": {},
+        "reference_beats": 1953,
+        "by_annotation": {
+          "N": {
+            "reference": 1953,
+            "tp": 1953,
+            "fn": 0,
+            "sensitivity": 1.0
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 1
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 1
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 2,
+        "REFRACTORY_BLOCK": 11,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 1,
+        "RESET_WARMUP": 3,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 1601,
+          "fn": 10,
+          "sensitivity": 0.9937539038101186
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 351,
+          "fn": 7,
+          "sensitivity": 0.98005698005698
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 1950,
+          "fn": 18,
+          "sensitivity": 0.9907692307692307
+        },
+        "negative": {
+          "reference": 3,
+          "fn": 0,
+          "sensitivity": 1.0
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 1953,
+          "fn": 18,
+          "sensitivity": 0.9907834101382489
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 3
+      },
+      "warmup_samples": 1000,
+      "warmup_seconds": 4.0,
+      "conflict_intervals_ms": {
+        "count": 1,
+        "minimum": 440,
+        "maximum": 440
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "115",
+          "start_seconds": 1790.0,
+          "end_seconds": 1800.0,
+          "reference_beats": 13,
+          "fn": 4,
+          "fn_N": 4,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 0.0,
+          "end_seconds": 10.0,
+          "reference_beats": 10,
+          "fn": 2,
+          "fn_N": 2,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 40.0,
+          "end_seconds": 50.0,
+          "reference_beats": 10,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 90.0,
+          "end_seconds": 100.0,
+          "reference_beats": 11,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 100.0,
+          "end_seconds": 110.0,
+          "reference_beats": 10,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 120.0,
+          "end_seconds": 130.0,
+          "reference_beats": 10,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 160.0,
+          "end_seconds": 170.0,
+          "reference_beats": 11,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 270.0,
+          "end_seconds": 280.0,
+          "reference_beats": 11,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 560.0,
+          "end_seconds": 570.0,
+          "reference_beats": 10,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        },
+        {
+          "record": "115",
+          "start_seconds": 660.0,
+          "end_seconds": 670.0,
+          "reference_beats": 11,
+          "fn": 1,
+          "fn_N": 1,
+          "fn_V": 0
+        }
+      ],
+      "elapsed_host_seconds": 1.346100299997488,
+      "xqrs_host_seconds": 1.1585107000137214
+    },
+    {
+      "record": "118",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 2209,
+        "fp": 17,
+        "fn": 69,
+        "sensitivity": 0.9697102721685689,
+        "ppv": 0.9923629829290207,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2112,
+          "A": 88,
+          "V": 9
+        },
+        "missed_by_annotation": {
+          "R": 54,
+          "V": 7,
+          "A": 8
+        },
+        "reference_beats": 2278,
+        "by_annotation": {
+          "A": {
+            "reference": 96,
+            "tp": 88,
+            "fn": 8,
+            "sensitivity": 0.9166666666666666
+          },
+          "R": {
+            "reference": 2166,
+            "tp": 2112,
+            "fn": 54,
+            "sensitivity": 0.9750692520775623
+          },
+          "V": {
+            "reference": 16,
+            "tp": 9,
+            "fn": 7,
+            "sensitivity": 0.5625
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 2207,
+        "fp": 17,
+        "fn": 71,
+        "sensitivity": 0.9688323090430202,
+        "ppv": 0.9923561151079137,
+        "timing_median_abs_ms": 16.0,
+        "timing_p95_abs_ms": 20.0,
+        "matched_by_annotation": {
+          "R": 2110,
+          "A": 88,
+          "V": 9
+        },
+        "missed_by_annotation": {
+          "R": 56,
+          "V": 7,
+          "A": 8
+        },
+        "reference_beats": 2278,
+        "by_annotation": {
+          "A": {
+            "reference": 96,
+            "tp": 88,
+            "fn": 8,
+            "sensitivity": 0.9166666666666666
+          },
+          "R": {
+            "reference": 2166,
+            "tp": 2110,
+            "fn": 56,
+            "sensitivity": 0.974145891043398
+          },
+          "V": {
+            "reference": 16,
+            "tp": 9,
+            "fn": 7,
+            "sensitivity": 0.5625
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 2278,
+        "fp": 0,
+        "fn": 0,
+        "sensitivity": 1.0,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "R": 2166,
+          "V": 16,
+          "A": 96
+        },
+        "missed_by_annotation": {},
+        "reference_beats": 2278,
+        "by_annotation": {
+          "A": {
+            "reference": 96,
+            "tp": 96,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "R": {
+            "reference": 2166,
+            "tp": 2166,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "V": {
+            "reference": 16,
+            "tp": 16,
+            "fn": 0,
+            "sensitivity": 1.0
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 13
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 13
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 3,
+        "BELOW_ADAPTIVE_THRESHOLD": 3,
+        "REFRACTORY_BLOCK": 14,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 12,
+        "RESET_WARMUP": 32,
+        "PENDING_CONFLICT_RESET": 5
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 7,
+          "fn": 6,
+          "sensitivity": 0.14285714285714285
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 2239,
+          "fn": 52,
+          "sensitivity": 0.9767753461366682
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 31,
+          "fn": 10,
+          "sensitivity": 0.6774193548387096
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 1590,
+          "fn": 43,
+          "sensitivity": 0.9729559748427673
+        },
+        "negative": {
+          "reference": 688,
+          "fn": 26,
+          "sensitivity": 0.9622093023255814
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 2278,
+          "fn": 69,
+          "sensitivity": 0.9697102721685689
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 32
+      },
+      "warmup_samples": 7000,
+      "warmup_seconds": 28.0,
+      "conflict_intervals_ms": {
+        "count": 13,
+        "minimum": 300,
+        "maximum": 504
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "118",
+          "start_seconds": 740.0,
+          "end_seconds": 750.0,
+          "reference_beats": 13,
+          "fn": 6,
+          "fn_N": 0,
+          "fn_V": 1
+        },
+        {
+          "record": "118",
+          "start_seconds": 440.0,
+          "end_seconds": 450.0,
+          "reference_beats": 15,
+          "fn": 5,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "118",
+          "start_seconds": 500.0,
+          "end_seconds": 510.0,
+          "reference_beats": 14,
+          "fn": 5,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "118",
+          "start_seconds": 1620.0,
+          "end_seconds": 1630.0,
+          "reference_beats": 14,
+          "fn": 5,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "118",
+          "start_seconds": 460.0,
+          "end_seconds": 470.0,
+          "reference_beats": 14,
+          "fn": 4,
+          "fn_N": 0,
+          "fn_V": 1
+        },
+        {
+          "record": "118",
+          "start_seconds": 490.0,
+          "end_seconds": 500.0,
+          "reference_beats": 14,
+          "fn": 4,
+          "fn_N": 0,
+          "fn_V": 1
+        },
+        {
+          "record": "118",
+          "start_seconds": 560.0,
+          "end_seconds": 570.0,
+          "reference_beats": 13,
+          "fn": 4,
+          "fn_N": 0,
+          "fn_V": 1
+        },
+        {
+          "record": "118",
+          "start_seconds": 1740.0,
+          "end_seconds": 1750.0,
+          "reference_beats": 15,
+          "fn": 4,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "118",
+          "start_seconds": 0.0,
+          "end_seconds": 10.0,
+          "reference_beats": 12,
+          "fn": 3,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "118",
+          "start_seconds": 510.0,
+          "end_seconds": 520.0,
+          "reference_beats": 14,
+          "fn": 3,
+          "fn_N": 0,
+          "fn_V": 0
+        }
+      ],
+      "elapsed_host_seconds": 1.2911958000040613,
+      "xqrs_host_seconds": 1.1137226999999257
+    },
+    {
+      "record": "121",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 1741,
+        "fp": 50,
+        "fn": 122,
+        "sensitivity": 0.9345142243692969,
+        "ppv": 0.9720826353992184,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1739,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 122
+        },
+        "reference_beats": 1863,
+        "by_annotation": {
+          "A": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "N": {
+            "reference": 1861,
+            "tp": 1739,
+            "fn": 122,
+            "sensitivity": 0.9344438473938743
+          },
+          "V": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 1740,
+        "fp": 50,
+        "fn": 123,
+        "sensitivity": 0.9339774557165862,
+        "ppv": 0.9720670391061452,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1738,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 123
+        },
+        "reference_beats": 1863,
+        "by_annotation": {
+          "A": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "N": {
+            "reference": 1861,
+            "tp": 1738,
+            "fn": 123,
+            "sensitivity": 0.9339065018807093
+          },
+          "V": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 1862,
+        "fp": 0,
+        "fn": 1,
+        "sensitivity": 0.9994632313472893,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 1860,
+          "A": 1,
+          "V": 1
+        },
+        "missed_by_annotation": {
+          "N": 1
+        },
+        "reference_beats": 1863,
+        "by_annotation": {
+          "A": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "N": {
+            "reference": 1861,
+            "tp": 1860,
+            "fn": 1,
+            "sensitivity": 0.999462654486835
+          },
+          "V": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 14,
+        "NO_RELIABLE_R_PEAK": 3
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 14,
+        "NO_RELIABLE_R_PEAK": 3
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 2,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 10,
+        "RESET_WARMUP": 38,
+        "REFRACTORY_BLOCK": 45,
+        "BELOW_ADAPTIVE_THRESHOLD": 22,
+        "PENDING_CONFLICT_RESET": 4,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 1024,
+          "fn": 105,
+          "sensitivity": 0.8974609375
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 838,
+          "fn": 16,
+          "sensitivity": 0.9809069212410502
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 1853,
+          "fn": 113,
+          "sensitivity": 0.9390178089584458
+        },
+        "negative": {
+          "reference": 10,
+          "fn": 9,
+          "sensitivity": 0.1
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 1863,
+          "fn": 122,
+          "sensitivity": 0.9345142243692969
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 29,
+        "NO_RELIABLE_R_PEAK": 9
+      },
+      "warmup_samples": 9000,
+      "warmup_seconds": 36.0,
+      "conflict_intervals_ms": {
+        "count": 14,
+        "minimum": 304,
+        "maximum": 488
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "121",
+          "start_seconds": 1580.0,
+          "end_seconds": 1590.0,
+          "reference_beats": 12,
+          "fn": 9,
+          "fn_N": 9,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1540.0,
+          "end_seconds": 1550.0,
+          "reference_beats": 12,
+          "fn": 7,
+          "fn_N": 7,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1590.0,
+          "end_seconds": 1600.0,
+          "reference_beats": 13,
+          "fn": 7,
+          "fn_N": 7,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1620.0,
+          "end_seconds": 1630.0,
+          "reference_beats": 14,
+          "fn": 6,
+          "fn_N": 6,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1700.0,
+          "end_seconds": 1710.0,
+          "reference_beats": 12,
+          "fn": 6,
+          "fn_N": 6,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1470.0,
+          "end_seconds": 1480.0,
+          "reference_beats": 10,
+          "fn": 5,
+          "fn_N": 5,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 250.0,
+          "end_seconds": 260.0,
+          "reference_beats": 10,
+          "fn": 4,
+          "fn_N": 4,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1480.0,
+          "end_seconds": 1490.0,
+          "reference_beats": 11,
+          "fn": 4,
+          "fn_N": 4,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1570.0,
+          "end_seconds": 1580.0,
+          "reference_beats": 14,
+          "fn": 4,
+          "fn_N": 4,
+          "fn_V": 0
+        },
+        {
+          "record": "121",
+          "start_seconds": 1640.0,
+          "end_seconds": 1650.0,
+          "reference_beats": 12,
+          "fn": 4,
+          "fn_N": 4,
+          "fn_V": 0
+        }
+      ],
+      "elapsed_host_seconds": 1.22831999999471,
+      "xqrs_host_seconds": 1.0685437000065576
+    },
+    {
+      "record": "210",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 2061,
+        "fp": 5,
+        "fn": 589,
+        "sensitivity": 0.7777358490566038,
+        "ppv": 0.9975798644724104,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2015,
+          "F": 7,
+          "V": 37,
+          "a": 2
+        },
+        "missed_by_annotation": {
+          "N": 408,
+          "V": 157,
+          "a": 20,
+          "F": 3,
+          "E": 1
+        },
+        "reference_beats": 2650,
+        "by_annotation": {
+          "E": {
+            "reference": 1,
+            "tp": 0,
+            "fn": 1,
+            "sensitivity": 0.0
+          },
+          "F": {
+            "reference": 10,
+            "tp": 7,
+            "fn": 3,
+            "sensitivity": 0.7
+          },
+          "N": {
+            "reference": 2423,
+            "tp": 2015,
+            "fn": 408,
+            "sensitivity": 0.8316137020222865
+          },
+          "V": {
+            "reference": 194,
+            "tp": 37,
+            "fn": 157,
+            "sensitivity": 0.19072164948453607
+          },
+          "a": {
+            "reference": 22,
+            "tp": 2,
+            "fn": 20,
+            "sensitivity": 0.09090909090909091
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 2058,
+        "fp": 5,
+        "fn": 592,
+        "sensitivity": 0.7766037735849056,
+        "ppv": 0.9975763451284537,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2012,
+          "F": 7,
+          "V": 37,
+          "a": 2
+        },
+        "missed_by_annotation": {
+          "N": 411,
+          "V": 157,
+          "a": 20,
+          "F": 3,
+          "E": 1
+        },
+        "reference_beats": 2650,
+        "by_annotation": {
+          "E": {
+            "reference": 1,
+            "tp": 0,
+            "fn": 1,
+            "sensitivity": 0.0
+          },
+          "F": {
+            "reference": 10,
+            "tp": 7,
+            "fn": 3,
+            "sensitivity": 0.7
+          },
+          "N": {
+            "reference": 2423,
+            "tp": 2012,
+            "fn": 411,
+            "sensitivity": 0.8303755674783326
+          },
+          "V": {
+            "reference": 194,
+            "tp": 37,
+            "fn": 157,
+            "sensitivity": 0.19072164948453607
+          },
+          "a": {
+            "reference": 22,
+            "tp": 2,
+            "fn": 20,
+            "sensitivity": 0.09090909090909091
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 2595,
+        "fp": 4,
+        "fn": 55,
+        "sensitivity": 0.9792452830188679,
+        "ppv": 0.9984609465178915,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2423,
+          "V": 147,
+          "F": 7,
+          "a": 18
+        },
+        "missed_by_annotation": {
+          "V": 47,
+          "a": 4,
+          "F": 3,
+          "E": 1
+        },
+        "reference_beats": 2650,
+        "by_annotation": {
+          "E": {
+            "reference": 1,
+            "tp": 0,
+            "fn": 1,
+            "sensitivity": 0.0
+          },
+          "F": {
+            "reference": 10,
+            "tp": 7,
+            "fn": 3,
+            "sensitivity": 0.7
+          },
+          "N": {
+            "reference": 2423,
+            "tp": 2423,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "V": {
+            "reference": 194,
+            "tp": 147,
+            "fn": 47,
+            "sensitivity": 0.7577319587628866
+          },
+          "a": {
+            "reference": 22,
+            "tp": 18,
+            "fn": 4,
+            "sensitivity": 0.8181818181818182
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 135
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 135
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 4,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 135,
+        "PENDING_CONFLICT_RESET": 60,
+        "RESET_WARMUP": 378,
+        "REFRACTORY_BLOCK": 5,
+        "BELOW_ADAPTIVE_THRESHOLD": 6,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 2,
+          "fn": 2,
+          "sensitivity": 0.0
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 175,
+          "fn": 169,
+          "sensitivity": 0.03428571428571429
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 2451,
+          "fn": 408,
+          "sensitivity": 0.8335373317013464
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 21,
+          "fn": 9,
+          "sensitivity": 0.5714285714285714
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 2456,
+          "fn": 431,
+          "sensitivity": 0.8245114006514658
+        },
+        "negative": {
+          "reference": 194,
+          "fn": 158,
+          "sensitivity": 0.18556701030927836
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 2650,
+          "fn": 589,
+          "sensitivity": 0.7777358490566038
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 378
+      },
+      "warmup_samples": 68000,
+      "warmup_seconds": 272.0,
+      "conflict_intervals_ms": {
+        "count": 135,
+        "minimum": 300,
+        "maximum": 500
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "210",
+          "start_seconds": 1080.0,
+          "end_seconds": 1090.0,
+          "reference_beats": 16,
+          "fn": 15,
+          "fn_N": 7,
+          "fn_V": 8
+        },
+        {
+          "record": "210",
+          "start_seconds": 1020.0,
+          "end_seconds": 1030.0,
+          "reference_beats": 16,
+          "fn": 14,
+          "fn_N": 8,
+          "fn_V": 6
+        },
+        {
+          "record": "210",
+          "start_seconds": 230.0,
+          "end_seconds": 240.0,
+          "reference_beats": 15,
+          "fn": 11,
+          "fn_N": 10,
+          "fn_V": 1
+        },
+        {
+          "record": "210",
+          "start_seconds": 420.0,
+          "end_seconds": 430.0,
+          "reference_beats": 18,
+          "fn": 11,
+          "fn_N": 4,
+          "fn_V": 7
+        },
+        {
+          "record": "210",
+          "start_seconds": 600.0,
+          "end_seconds": 610.0,
+          "reference_beats": 17,
+          "fn": 11,
+          "fn_N": 6,
+          "fn_V": 5
+        },
+        {
+          "record": "210",
+          "start_seconds": 1100.0,
+          "end_seconds": 1110.0,
+          "reference_beats": 15,
+          "fn": 10,
+          "fn_N": 5,
+          "fn_V": 5
+        },
+        {
+          "record": "210",
+          "start_seconds": 10.0,
+          "end_seconds": 20.0,
+          "reference_beats": 16,
+          "fn": 9,
+          "fn_N": 7,
+          "fn_V": 2
+        },
+        {
+          "record": "210",
+          "start_seconds": 30.0,
+          "end_seconds": 40.0,
+          "reference_beats": 15,
+          "fn": 9,
+          "fn_N": 7,
+          "fn_V": 2
+        },
+        {
+          "record": "210",
+          "start_seconds": 50.0,
+          "end_seconds": 60.0,
+          "reference_beats": 16,
+          "fn": 9,
+          "fn_N": 8,
+          "fn_V": 1
+        },
+        {
+          "record": "210",
+          "start_seconds": 220.0,
+          "end_seconds": 230.0,
+          "reference_beats": 14,
+          "fn": 9,
+          "fn_N": 8,
+          "fn_V": 1
+        }
+      ],
+      "elapsed_host_seconds": 1.3087679000018397,
+      "xqrs_host_seconds": 1.1088047999946866
+    },
+    {
+      "record": "214",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 1619,
+        "fp": 2,
+        "fn": 643,
+        "sensitivity": 0.715738284703802,
+        "ppv": 0.9987661937075879,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1553,
+          "V": 65,
+          "Q": 1
+        },
+        "missed_by_annotation": {
+          "L": 450,
+          "V": 191,
+          "Q": 1,
+          "F": 1
+        },
+        "reference_beats": 2262,
+        "by_annotation": {
+          "F": {
+            "reference": 1,
+            "tp": 0,
+            "fn": 1,
+            "sensitivity": 0.0
+          },
+          "L": {
+            "reference": 2003,
+            "tp": 1553,
+            "fn": 450,
+            "sensitivity": 0.7753369945082377
+          },
+          "Q": {
+            "reference": 2,
+            "tp": 1,
+            "fn": 1,
+            "sensitivity": 0.5
+          },
+          "V": {
+            "reference": 256,
+            "tp": 65,
+            "fn": 191,
+            "sensitivity": 0.25390625
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 1618,
+        "fp": 2,
+        "fn": 644,
+        "sensitivity": 0.7152961980548187,
+        "ppv": 0.9987654320987654,
+        "timing_median_abs_ms": 4.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1552,
+          "V": 65,
+          "Q": 1
+        },
+        "missed_by_annotation": {
+          "L": 451,
+          "V": 191,
+          "Q": 1,
+          "F": 1
+        },
+        "reference_beats": 2262,
+        "by_annotation": {
+          "F": {
+            "reference": 1,
+            "tp": 0,
+            "fn": 1,
+            "sensitivity": 0.0
+          },
+          "L": {
+            "reference": 2003,
+            "tp": 1552,
+            "fn": 451,
+            "sensitivity": 0.7748377433849226
+          },
+          "Q": {
+            "reference": 2,
+            "tp": 1,
+            "fn": 1,
+            "sensitivity": 0.5
+          },
+          "V": {
+            "reference": 256,
+            "tp": 65,
+            "fn": 191,
+            "sensitivity": 0.25390625
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 2251,
+        "fp": 4,
+        "fn": 11,
+        "sensitivity": 0.9951370468611848,
+        "ppv": 0.9982261640798226,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "L": 1999,
+          "V": 250,
+          "Q": 1,
+          "F": 1
+        },
+        "missed_by_annotation": {
+          "L": 4,
+          "V": 6,
+          "Q": 1
+        },
+        "reference_beats": 2262,
+        "by_annotation": {
+          "F": {
+            "reference": 1,
+            "tp": 1,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "L": {
+            "reference": 2003,
+            "tp": 1999,
+            "fn": 4,
+            "sensitivity": 0.9980029955067399
+          },
+          "Q": {
+            "reference": 2,
+            "tp": 1,
+            "fn": 1,
+            "sensitivity": 0.5
+          },
+          "V": {
+            "reference": 256,
+            "tp": 250,
+            "fn": 6,
+            "sensitivity": 0.9765625
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 178
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 178
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 3,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 177,
+        "PENDING_CONFLICT_RESET": 163,
+        "RESET_WARMUP": 296,
+        "BELOW_ADAPTIVE_THRESHOLD": 2,
+        "REFRACTORY_BLOCK": 1,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 194,
+          "fn": 184,
+          "sensitivity": 0.05154639175257732
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 1854,
+          "fn": 307,
+          "sensitivity": 0.8344120819848975
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 213,
+          "fn": 151,
+          "sensitivity": 0.29107981220657275
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 2062,
+          "fn": 466,
+          "sensitivity": 0.7740058195926285
+        },
+        "negative": {
+          "reference": 200,
+          "fn": 177,
+          "sensitivity": 0.115
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 2262,
+          "fn": 643,
+          "sensitivity": 0.715738284703802
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 296
+      },
+      "warmup_samples": 89500,
+      "warmup_seconds": 358.0,
+      "conflict_intervals_ms": {
+        "count": 178,
+        "minimum": 360,
+        "maximum": 504
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "214",
+          "start_seconds": 1710.0,
+          "end_seconds": 1720.0,
+          "reference_beats": 14,
+          "fn": 10,
+          "fn_N": 0,
+          "fn_V": 3
+        },
+        {
+          "record": "214",
+          "start_seconds": 220.0,
+          "end_seconds": 230.0,
+          "reference_beats": 13,
+          "fn": 9,
+          "fn_N": 0,
+          "fn_V": 3
+        },
+        {
+          "record": "214",
+          "start_seconds": 530.0,
+          "end_seconds": 540.0,
+          "reference_beats": 13,
+          "fn": 9,
+          "fn_N": 0,
+          "fn_V": 2
+        },
+        {
+          "record": "214",
+          "start_seconds": 1250.0,
+          "end_seconds": 1260.0,
+          "reference_beats": 12,
+          "fn": 9,
+          "fn_N": 0,
+          "fn_V": 2
+        },
+        {
+          "record": "214",
+          "start_seconds": 140.0,
+          "end_seconds": 150.0,
+          "reference_beats": 13,
+          "fn": 8,
+          "fn_N": 0,
+          "fn_V": 2
+        },
+        {
+          "record": "214",
+          "start_seconds": 250.0,
+          "end_seconds": 260.0,
+          "reference_beats": 14,
+          "fn": 8,
+          "fn_N": 0,
+          "fn_V": 2
+        },
+        {
+          "record": "214",
+          "start_seconds": 550.0,
+          "end_seconds": 560.0,
+          "reference_beats": 14,
+          "fn": 8,
+          "fn_N": 0,
+          "fn_V": 2
+        },
+        {
+          "record": "214",
+          "start_seconds": 620.0,
+          "end_seconds": 630.0,
+          "reference_beats": 12,
+          "fn": 8,
+          "fn_N": 0,
+          "fn_V": 3
+        },
+        {
+          "record": "214",
+          "start_seconds": 1110.0,
+          "end_seconds": 1120.0,
+          "reference_beats": 13,
+          "fn": 8,
+          "fn_N": 0,
+          "fn_V": 2
+        },
+        {
+          "record": "214",
+          "start_seconds": 1190.0,
+          "end_seconds": 1200.0,
+          "reference_beats": 13,
+          "fn": 8,
+          "fn_N": 0,
+          "fn_V": 2
+        }
+      ],
+      "elapsed_host_seconds": 1.3365818000020226,
+      "xqrs_host_seconds": 1.1455911999946693
+    },
+    {
+      "record": "233",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 963,
+        "fp": 0,
+        "fn": 2116,
+        "sensitivity": 0.3127638843780448,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 36.0,
+        "matched_by_annotation": {
+          "N": 800,
+          "V": 156,
+          "F": 5,
+          "A": 2
+        },
+        "missed_by_annotation": {
+          "V": 675,
+          "N": 1430,
+          "A": 5,
+          "F": 6
+        },
+        "reference_beats": 3079,
+        "by_annotation": {
+          "A": {
+            "reference": 7,
+            "tp": 2,
+            "fn": 5,
+            "sensitivity": 0.2857142857142857
+          },
+          "F": {
+            "reference": 11,
+            "tp": 5,
+            "fn": 6,
+            "sensitivity": 0.45454545454545453
+          },
+          "N": {
+            "reference": 2230,
+            "tp": 800,
+            "fn": 1430,
+            "sensitivity": 0.35874439461883406
+          },
+          "V": {
+            "reference": 831,
+            "tp": 156,
+            "fn": 675,
+            "sensitivity": 0.18772563176895307
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 963,
+        "fp": 0,
+        "fn": 2116,
+        "sensitivity": 0.3127638843780448,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 36.0,
+        "matched_by_annotation": {
+          "V": 157,
+          "N": 799,
+          "F": 5,
+          "A": 2
+        },
+        "missed_by_annotation": {
+          "V": 674,
+          "N": 1431,
+          "A": 5,
+          "F": 6
+        },
+        "reference_beats": 3079,
+        "by_annotation": {
+          "A": {
+            "reference": 7,
+            "tp": 2,
+            "fn": 5,
+            "sensitivity": 0.2857142857142857
+          },
+          "F": {
+            "reference": 11,
+            "tp": 5,
+            "fn": 6,
+            "sensitivity": 0.45454545454545453
+          },
+          "N": {
+            "reference": 2230,
+            "tp": 799,
+            "fn": 1431,
+            "sensitivity": 0.35829596412556053
+          },
+          "V": {
+            "reference": 831,
+            "tp": 157,
+            "fn": 674,
+            "sensitivity": 0.18892900120336945
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 3066,
+        "fp": 1,
+        "fn": 13,
+        "sensitivity": 0.9957778499512829,
+        "ppv": 0.9996739484838605,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 40.0,
+        "matched_by_annotation": {
+          "N": 2229,
+          "V": 819,
+          "A": 7,
+          "F": 11
+        },
+        "missed_by_annotation": {
+          "V": 12,
+          "N": 1
+        },
+        "reference_beats": 3079,
+        "by_annotation": {
+          "A": {
+            "reference": 7,
+            "tp": 7,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "F": {
+            "reference": 11,
+            "tp": 11,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "N": {
+            "reference": 2230,
+            "tp": 2229,
+            "fn": 1,
+            "sensitivity": 0.9995515695067264
+          },
+          "V": {
+            "reference": 831,
+            "tp": 819,
+            "fn": 12,
+            "sensitivity": 0.9855595667870036
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 445
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 444
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 3,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 441,
+        "RESET_WARMUP": 1464,
+        "PENDING_CONFLICT_RESET": 204,
+        "BELOW_ADAPTIVE_THRESHOLD": 3,
+        "END_WINDOW_UNAVAILABLE": 1
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 3,
+          "fn": 3,
+          "sensitivity": 0.0
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 747,
+          "fn": 609,
+          "sensitivity": 0.18473895582329317
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 2328,
+          "fn": 1503,
+          "sensitivity": 0.3543814432989691
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 2376,
+          "fn": 1525,
+          "sensitivity": 0.3581649831649832
+        },
+        "negative": {
+          "reference": 703,
+          "fn": 591,
+          "sensitivity": 0.1593172119487909
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 3079,
+          "fn": 2116,
+          "sensitivity": 0.3127638843780448
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 1464
+      },
+      "warmup_samples": 223000,
+      "warmup_seconds": 892.0,
+      "conflict_intervals_ms": {
+        "count": 445,
+        "minimum": 304,
+        "maximum": 504
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "233",
+          "start_seconds": 740.0,
+          "end_seconds": 750.0,
+          "reference_beats": 17,
+          "fn": 17,
+          "fn_N": 13,
+          "fn_V": 4
+        },
+        {
+          "record": "233",
+          "start_seconds": 120.0,
+          "end_seconds": 130.0,
+          "reference_beats": 17,
+          "fn": 16,
+          "fn_N": 10,
+          "fn_V": 6
+        },
+        {
+          "record": "233",
+          "start_seconds": 160.0,
+          "end_seconds": 170.0,
+          "reference_beats": 17,
+          "fn": 16,
+          "fn_N": 8,
+          "fn_V": 7
+        },
+        {
+          "record": "233",
+          "start_seconds": 190.0,
+          "end_seconds": 200.0,
+          "reference_beats": 17,
+          "fn": 16,
+          "fn_N": 10,
+          "fn_V": 6
+        },
+        {
+          "record": "233",
+          "start_seconds": 330.0,
+          "end_seconds": 340.0,
+          "reference_beats": 16,
+          "fn": 16,
+          "fn_N": 12,
+          "fn_V": 4
+        },
+        {
+          "record": "233",
+          "start_seconds": 380.0,
+          "end_seconds": 390.0,
+          "reference_beats": 16,
+          "fn": 16,
+          "fn_N": 12,
+          "fn_V": 4
+        },
+        {
+          "record": "233",
+          "start_seconds": 460.0,
+          "end_seconds": 470.0,
+          "reference_beats": 16,
+          "fn": 16,
+          "fn_N": 12,
+          "fn_V": 4
+        },
+        {
+          "record": "233",
+          "start_seconds": 860.0,
+          "end_seconds": 870.0,
+          "reference_beats": 18,
+          "fn": 16,
+          "fn_N": 8,
+          "fn_V": 7
+        },
+        {
+          "record": "233",
+          "start_seconds": 1170.0,
+          "end_seconds": 1180.0,
+          "reference_beats": 17,
+          "fn": 16,
+          "fn_N": 10,
+          "fn_V": 6
+        },
+        {
+          "record": "233",
+          "start_seconds": 1270.0,
+          "end_seconds": 1280.0,
+          "reference_beats": 16,
+          "fn": 16,
+          "fn_N": 12,
+          "fn_V": 4
+        }
+      ],
+      "elapsed_host_seconds": 1.389143199994578,
+      "xqrs_host_seconds": 1.1324007000075653
+    },
+    {
+      "record": "234",
+      "channel_index": 0,
+      "lead": "MLII",
+      "all_leads": [
+        "MLII",
+        "V1"
+      ],
+      "units": "mV",
+      "original_fs": 360,
+      "original_samples": 650000,
+      "samples": 451389,
+      "candidate": {
+        "tp": 2698,
+        "fp": 5,
+        "fn": 55,
+        "sensitivity": 0.9800217944061025,
+        "ppv": 0.9981502034776175,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2676,
+          "J": 22
+        },
+        "missed_by_annotation": {
+          "N": 24,
+          "J": 28,
+          "V": 3
+        },
+        "reference_beats": 2753,
+        "by_annotation": {
+          "J": {
+            "reference": 50,
+            "tp": 22,
+            "fn": 28,
+            "sensitivity": 0.44
+          },
+          "N": {
+            "reference": 2700,
+            "tp": 2676,
+            "fn": 24,
+            "sensitivity": 0.9911111111111112
+          },
+          "V": {
+            "reference": 3,
+            "tp": 0,
+            "fn": 3,
+            "sensitivity": 0.0
+          }
+        }
+      },
+      "quality_gated": {
+        "tp": 2695,
+        "fp": 5,
+        "fn": 58,
+        "sensitivity": 0.9789320741009807,
+        "ppv": 0.9981481481481481,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2673,
+          "J": 22
+        },
+        "missed_by_annotation": {
+          "N": 27,
+          "J": 28,
+          "V": 3
+        },
+        "reference_beats": 2753,
+        "by_annotation": {
+          "J": {
+            "reference": 50,
+            "tp": 22,
+            "fn": 28,
+            "sensitivity": 0.44
+          },
+          "N": {
+            "reference": 2700,
+            "tp": 2673,
+            "fn": 27,
+            "sensitivity": 0.99
+          },
+          "V": {
+            "reference": 3,
+            "tp": 0,
+            "fn": 3,
+            "sensitivity": 0.0
+          }
+        }
+      },
+      "xqrs": {
+        "tp": 2750,
+        "fp": 0,
+        "fn": 3,
+        "sensitivity": 0.9989102796948783,
+        "ppv": 1.0,
+        "timing_median_abs_ms": 0.0,
+        "timing_p95_abs_ms": 4.0,
+        "matched_by_annotation": {
+          "N": 2700,
+          "J": 50
+        },
+        "missed_by_annotation": {
+          "V": 3
+        },
+        "reference_beats": 2753,
+        "by_annotation": {
+          "J": {
+            "reference": 50,
+            "tp": 50,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "N": {
+            "reference": 2700,
+            "tp": 2700,
+            "fn": 0,
+            "sensitivity": 1.0
+          },
+          "V": {
+            "reference": 3,
+            "tp": 0,
+            "fn": 3,
+            "sensitivity": 0.0
+          }
+        }
+      },
+      "detector_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 9
+      },
+      "gated_issues": {
+        "AMBIGUOUS_CLOSE_PEAKS": 9
+      },
+      "quality_blocks": {
+        "PASS": 1763
+      },
+      "fn_blocking_evidence": {
+        "INITIAL_WARMUP": 3,
+        "REFRACTORY_BLOCK": 5,
+        "BELOW_ADAPTIVE_THRESHOLD": 3,
+        "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 9,
+        "PENDING_CONFLICT_RESET": 8,
+        "RESET_WARMUP": 27
+      },
+      "rr_bins": [
+        {
+          "bin": "<=300ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        {
+          "bin": "300..508ms",
+          "reference": 28,
+          "fn": 27,
+          "sensitivity": 0.03571428571428571
+        },
+        {
+          "bin": "508..1000ms",
+          "reference": 2724,
+          "fn": 27,
+          "sensitivity": 0.9900881057268722
+        },
+        {
+          "bin": ">1000ms",
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        }
+      ],
+      "morphology": {
+        "positive": {
+          "reference": 2752,
+          "fn": 54,
+          "sensitivity": 0.9803779069767442
+        },
+        "negative": {
+          "reference": 1,
+          "fn": 1,
+          "sensitivity": 0.0
+        },
+        "max_residual_below30": {
+          "reference": 0,
+          "fn": 0,
+          "sensitivity": null
+        },
+        "max_residual_atleast30": {
+          "reference": 2753,
+          "fn": 55,
+          "sensitivity": 0.9800217944061025
+        }
+      },
+      "warmup_fn_by_preceding_reset": {
+        "AMBIGUOUS_CLOSE_PEAKS": 27
+      },
+      "warmup_samples": 5000,
+      "warmup_seconds": 20.0,
+      "conflict_intervals_ms": {
+        "count": 9,
+        "minimum": 416,
+        "maximum": 484
+      },
+      "annotation_rounding_max_error_ms": 2.00000000018008,
+      "adc_clipped_samples": 0,
+      "worst_ten_second_windows": [
+        {
+          "record": "234",
+          "start_seconds": 860.0,
+          "end_seconds": 870.0,
+          "reference_beats": 22,
+          "fn": 20,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "234",
+          "start_seconds": 840.0,
+          "end_seconds": 850.0,
+          "reference_beats": 17,
+          "fn": 5,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "234",
+          "start_seconds": 1370.0,
+          "end_seconds": 1380.0,
+          "reference_beats": 15,
+          "fn": 5,
+          "fn_N": 5,
+          "fn_V": 0
+        },
+        {
+          "record": "234",
+          "start_seconds": 1020.0,
+          "end_seconds": 1030.0,
+          "reference_beats": 15,
+          "fn": 4,
+          "fn_N": 3,
+          "fn_V": 1
+        },
+        {
+          "record": "234",
+          "start_seconds": 1290.0,
+          "end_seconds": 1300.0,
+          "reference_beats": 15,
+          "fn": 4,
+          "fn_N": 3,
+          "fn_V": 1
+        },
+        {
+          "record": "234",
+          "start_seconds": 0.0,
+          "end_seconds": 10.0,
+          "reference_beats": 15,
+          "fn": 3,
+          "fn_N": 3,
+          "fn_V": 0
+        },
+        {
+          "record": "234",
+          "start_seconds": 400.0,
+          "end_seconds": 410.0,
+          "reference_beats": 15,
+          "fn": 3,
+          "fn_N": 3,
+          "fn_V": 0
+        },
+        {
+          "record": "234",
+          "start_seconds": 870.0,
+          "end_seconds": 880.0,
+          "reference_beats": 15,
+          "fn": 3,
+          "fn_N": 0,
+          "fn_V": 0
+        },
+        {
+          "record": "234",
+          "start_seconds": 1700.0,
+          "end_seconds": 1710.0,
+          "reference_beats": 16,
+          "fn": 2,
+          "fn_N": 1,
+          "fn_V": 1
+        },
+        {
+          "record": "234",
+          "start_seconds": 1710.0,
+          "end_seconds": 1720.0,
+          "reference_beats": 15,
+          "fn": 2,
+          "fn_N": 2,
+          "fn_V": 0
+        }
+      ],
+      "elapsed_host_seconds": 1.3275120999896899,
+      "xqrs_host_seconds": 1.141584500001045
+    }
+  ],
+  "current_record_criteria": {
+    "115": true,
+    "118": false,
+    "121": false,
+    "210": false,
+    "214": false,
+    "233": false,
+    "234": false
+  },
+  "xqrs_record_criteria": {
+    "115": true,
+    "118": true,
+    "121": true,
+    "210": false,
+    "214": true,
+    "233": true,
+    "234": true
+  },
+  "controls": {
+    "no_peaks": {
+      "candidate_peaks": 0,
+      "quality_gated_peaks": 0
+    },
+    "pure50Hz": {
+      "candidate_peaks": 0,
+      "quality_gated_peaks": 0
+    }
+  },
+  "xqrs_controls": {
+    "no_peaks": {
+      "candidate_peaks": 0
+    },
+    "pure50Hz": {
+      "candidate_peaks": 1
+    }
+  },
+  "candidate_all_criteria_pass": false,
+  "xqrs_all_criteria_pass": false,
+  "fn_blocking_evidence": {
+    "INITIAL_WARMUP": 20,
+    "REFRACTORY_BLOCK": 81,
+    "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 785,
+    "RESET_WARMUP": 2238,
+    "END_WINDOW_UNAVAILABLE": 5,
+    "BELOW_ADAPTIVE_THRESHOLD": 39,
+    "PENDING_CONFLICT_RESET": 444
+  },
+  "worst_ten_second_windows": [
+    {
+      "record": "234",
+      "start_seconds": 860.0,
+      "end_seconds": 870.0,
+      "reference_beats": 22,
+      "fn": 20,
+      "fn_N": 0,
+      "fn_V": 0
+    },
+    {
+      "record": "233",
+      "start_seconds": 740.0,
+      "end_seconds": 750.0,
+      "reference_beats": 17,
+      "fn": 17,
+      "fn_N": 13,
+      "fn_V": 4
+    },
+    {
+      "record": "233",
+      "start_seconds": 120.0,
+      "end_seconds": 130.0,
+      "reference_beats": 17,
+      "fn": 16,
+      "fn_N": 10,
+      "fn_V": 6
+    },
+    {
+      "record": "233",
+      "start_seconds": 160.0,
+      "end_seconds": 170.0,
+      "reference_beats": 17,
+      "fn": 16,
+      "fn_N": 8,
+      "fn_V": 7
+    },
+    {
+      "record": "233",
+      "start_seconds": 190.0,
+      "end_seconds": 200.0,
+      "reference_beats": 17,
+      "fn": 16,
+      "fn_N": 10,
+      "fn_V": 6
+    },
+    {
+      "record": "233",
+      "start_seconds": 330.0,
+      "end_seconds": 340.0,
+      "reference_beats": 16,
+      "fn": 16,
+      "fn_N": 12,
+      "fn_V": 4
+    },
+    {
+      "record": "233",
+      "start_seconds": 380.0,
+      "end_seconds": 390.0,
+      "reference_beats": 16,
+      "fn": 16,
+      "fn_N": 12,
+      "fn_V": 4
+    },
+    {
+      "record": "233",
+      "start_seconds": 460.0,
+      "end_seconds": 470.0,
+      "reference_beats": 16,
+      "fn": 16,
+      "fn_N": 12,
+      "fn_V": 4
+    },
+    {
+      "record": "233",
+      "start_seconds": 860.0,
+      "end_seconds": 870.0,
+      "reference_beats": 18,
+      "fn": 16,
+      "fn_N": 8,
+      "fn_V": 7
+    },
+    {
+      "record": "233",
+      "start_seconds": 1170.0,
+      "end_seconds": 1180.0,
+      "reference_beats": 17,
+      "fn": 16,
+      "fn_N": 10,
+      "fn_V": 6
+    },
+    {
+      "record": "233",
+      "start_seconds": 1270.0,
+      "end_seconds": 1280.0,
+      "reference_beats": 16,
+      "fn": 16,
+      "fn_N": 12,
+      "fn_V": 4
+    },
+    {
+      "record": "210",
+      "start_seconds": 1080.0,
+      "end_seconds": 1090.0,
+      "reference_beats": 16,
+      "fn": 15,
+      "fn_N": 7,
+      "fn_V": 8
+    },
+    {
+      "record": "210",
+      "start_seconds": 1020.0,
+      "end_seconds": 1030.0,
+      "reference_beats": 16,
+      "fn": 14,
+      "fn_N": 8,
+      "fn_V": 6
+    },
+    {
+      "record": "210",
+      "start_seconds": 230.0,
+      "end_seconds": 240.0,
+      "reference_beats": 15,
+      "fn": 11,
+      "fn_N": 10,
+      "fn_V": 1
+    },
+    {
+      "record": "210",
+      "start_seconds": 420.0,
+      "end_seconds": 430.0,
+      "reference_beats": 18,
+      "fn": 11,
+      "fn_N": 4,
+      "fn_V": 7
+    },
+    {
+      "record": "210",
+      "start_seconds": 600.0,
+      "end_seconds": 610.0,
+      "reference_beats": 17,
+      "fn": 11,
+      "fn_N": 6,
+      "fn_V": 5
+    },
+    {
+      "record": "210",
+      "start_seconds": 1100.0,
+      "end_seconds": 1110.0,
+      "reference_beats": 15,
+      "fn": 10,
+      "fn_N": 5,
+      "fn_V": 5
+    },
+    {
+      "record": "214",
+      "start_seconds": 1710.0,
+      "end_seconds": 1720.0,
+      "reference_beats": 14,
+      "fn": 10,
+      "fn_N": 0,
+      "fn_V": 3
+    },
+    {
+      "record": "121",
+      "start_seconds": 1580.0,
+      "end_seconds": 1590.0,
+      "reference_beats": 12,
+      "fn": 9,
+      "fn_N": 9,
+      "fn_V": 0
+    },
+    {
+      "record": "210",
+      "start_seconds": 10.0,
+      "end_seconds": 20.0,
+      "reference_beats": 16,
+      "fn": 9,
+      "fn_N": 7,
+      "fn_V": 2
+    }
+  ],
+  "examples": [
+    {
+      "record": "115",
+      "start_seconds": 1790.0,
+      "end_seconds": 1800.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\115_worst10s.png"
+    },
+    {
+      "record": "115",
+      "start_seconds": 43.376,
+      "end_seconds": 51.376,
+      "tag": "refractory_block",
+      "path": "debug\\r_peak_audit\\115_refractory_block.png"
+    },
+    {
+      "record": "118",
+      "start_seconds": 740.0,
+      "end_seconds": 750.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\118_worst10s.png"
+    },
+    {
+      "record": "121",
+      "start_seconds": 1580.0,
+      "end_seconds": 1590.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\121_worst10s.png"
+    },
+    {
+      "record": "210",
+      "start_seconds": 1080.0,
+      "end_seconds": 1090.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\210_worst10s.png"
+    },
+    {
+      "record": "210",
+      "start_seconds": 7.667999999999999,
+      "end_seconds": 15.668,
+      "tag": "pending_conflict_reset",
+      "path": "debug\\r_peak_audit\\210_pending_conflict_reset.png"
+    },
+    {
+      "record": "210",
+      "start_seconds": 496.024,
+      "end_seconds": 504.024,
+      "tag": "below_adaptive_threshold",
+      "path": "debug\\r_peak_audit\\210_below_adaptive_threshold.png"
+    },
+    {
+      "record": "210",
+      "start_seconds": 184.7,
+      "end_seconds": 192.7,
+      "tag": "refractory_block",
+      "path": "debug\\r_peak_audit\\210_refractory_block.png"
+    },
+    {
+      "record": "210",
+      "start_seconds": 27.756,
+      "end_seconds": 35.756,
+      "tag": "pvc_reset_warmup",
+      "path": "debug\\r_peak_audit\\210_pvc_reset_warmup.png"
+    },
+    {
+      "record": "214",
+      "start_seconds": 1710.0,
+      "end_seconds": 1720.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\214_worst10s.png"
+    },
+    {
+      "record": "214",
+      "start_seconds": 5.9879999999999995,
+      "end_seconds": 13.988,
+      "tag": "pending_conflict_reset",
+      "path": "debug\\r_peak_audit\\214_pending_conflict_reset.png"
+    },
+    {
+      "record": "214",
+      "start_seconds": 296.416,
+      "end_seconds": 304.416,
+      "tag": "below_adaptive_threshold",
+      "path": "debug\\r_peak_audit\\214_below_adaptive_threshold.png"
+    },
+    {
+      "record": "214",
+      "start_seconds": 1695.128,
+      "end_seconds": 1703.128,
+      "tag": "refractory_block",
+      "path": "debug\\r_peak_audit\\214_refractory_block.png"
+    },
+    {
+      "record": "214",
+      "start_seconds": 145.088,
+      "end_seconds": 153.088,
+      "tag": "pvc_reset_warmup",
+      "path": "debug\\r_peak_audit\\214_pvc_reset_warmup.png"
+    },
+    {
+      "record": "233",
+      "start_seconds": 740.0,
+      "end_seconds": 750.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\233_worst10s.png"
+    },
+    {
+      "record": "233",
+      "start_seconds": 5.368,
+      "end_seconds": 13.368,
+      "tag": "pending_conflict_reset",
+      "path": "debug\\r_peak_audit\\233_pending_conflict_reset.png"
+    },
+    {
+      "record": "233",
+      "start_seconds": 908.576,
+      "end_seconds": 916.576,
+      "tag": "below_adaptive_threshold",
+      "path": "debug\\r_peak_audit\\233_below_adaptive_threshold.png"
+    },
+    {
+      "record": "233",
+      "start_seconds": 0.07600000000000007,
+      "end_seconds": 8.076,
+      "tag": "pvc_reset_warmup",
+      "path": "debug\\r_peak_audit\\233_pvc_reset_warmup.png"
+    },
+    {
+      "record": "234",
+      "start_seconds": 860.0,
+      "end_seconds": 870.0,
+      "tag": "worst10s",
+      "path": "debug\\r_peak_audit\\234_worst10s.png"
+    }
+  ],
+  "matching": {
+    "beat_symbols": "/?ABEFJLNQRSVaefjnr",
+    "tolerance_samples": 12,
+    "tolerance_ms": 48,
+    "algorithm": "unchanged reference-ordered greedy nearest of searchsorted neighbors; detection used once; no time-shift correction",
+    "class_ppv_limit": "Unmatched QRS has no true N/V type; per-symbol sensitivity reported; global PPV only"
+  },
+  "xqrs_configuration": {
+    "wfdb": "4.3.1",
+    "fs": 250,
+    "learn": true,
+    "defaults": true,
+    "input": "(same quantized ADC -2048)/200 in mV; no peak correction, no rescore shift",
+    "implementation": "offline noncausal filtfilt; not a drop-in streaming ESP32 detector"
+  },
+  "versions": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "wfdb": "4.3.1"
+  },
+  "input_sha256": {
+    "115": {
+      "hea": "3212847a692bf3bc5e1dde0343d272e7d56735983276031420060d51d0cdd41c",
+      "dat": "34185efe9889608c76ebfbf5a467d3457970c6d11b77a2bf81b94bcf46e07c41",
+      "atr": "4980667b19b7a637729d40762f071b483d69f5431db818cbddc9a8ae64cc4da2"
+    },
+    "118": {
+      "hea": "48a3d0c4e7742ca0e39a2cbb3ea5142a4d41261adbd0bb25651e0fcd9c6aef2b",
+      "dat": "66ea4b70b7d64abd0f49089ae1b8f0f577664c46e5b29ac23b291934e063df15",
+      "atr": "77afd5400648d128223d5029a49c442f5abd65ba997f732489cb8eed39d71551"
+    },
+    "121": {
+      "hea": "1838d38ff54fed9b831207761d7321682dad0b693f944e4c3a4e6388c46ca6ff",
+      "dat": "679f374a7b2557fed04a4bc5648301ce9bdd38e5a4f13b2e63ebbcf7cb3fb482",
+      "atr": "dbda472aa08eeb6bbbf775b8123e466a7ee57638caecd156407de3141c9fa71c"
+    },
+    "210": {
+      "hea": "9d6a422834435fb8d267256f4fd01bfd8158b511f662c4b5dd8c60059944a322",
+      "dat": "76e971fba03c0ae2ab261c7446240987ecde82f45dad1d4f36e290b950eb464b",
+      "atr": "5a46bef3d185c903b1ce099a988898fc829cea7e6c5bc1984532efd694fa8db6"
+    },
+    "214": {
+      "hea": "beb6b379e93cbe94eb9f1461cccaa0131940e14322df4abbc07665b722ed9206",
+      "dat": "a886b1ceb56e950858dedf5b56d3fdb5f26aef3667f8effcb880c1c000ee0cd3",
+      "atr": "09c588b0623f6dc6138928ce2006f294c4ef3da143eec2cdba6eddb9b1597214"
+    },
+    "233": {
+      "hea": "d5ef73b3b4a98bec6e3d853db08ff18b0a1a9173c95327bcb15b2cfecee99b85",
+      "dat": "6ccd6b1fa0cafc052369e7ec0a99cc6c3b56b3c12afff26db800c55a826211b4",
+      "atr": "c9ce42ecefa9a92e2ec69f9d237d8a53c67c60b31a25d579356ea8910bcc368a"
+    },
+    "234": {
+      "hea": "91c94c803d05f637cc29a3f353d88e1c25b20a25957c8cc25f7cbbf9fe2627c9",
+      "dat": "89f826307bfc91a554021da87c17b88b843ed3d26aa9ea237fc6f7c8af00da6d",
+      "atr": "e829a3e4131fbe9420c1740bfb5000b3f4f64a2b40aa5f739ed6420f75be6785"
+    }
+  },
+  "protected_checks": {
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\idf_component.yml": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\lead_off.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\operator_trace.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\preprocessing.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_conv.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_conv.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_math.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\system_state.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_codec.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_transport.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_transport.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model\\ecg_cnn_int8.tflite": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_metadata.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_samples_int8.bin": true,
+    "data\\processed\\mitbih_split_indices.npz": true,
+    "data\\processed\\mitbih_nv_250hz.npz": true,
+    "results\\optimized_threshold.json": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\sdkconfig": true,
+    "tools\\ecg_monitor\\validate_offline.py": true,
+    "tools\\ecg_monitor\\reports\\offline_validation.json": true
+  },
+  "tool_sha256": {
+    "tools\\ecg_monitor\\audit_r_peaks.py": "9da2c2060b0ddffc8329533148c69fd18fba441170ef5cc7a32ab1cbf0e1881b",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_audit_replay.cpp": "c840cf971cfd17c402ba3c49fb66b445328bb3b765c4705d5fd95f199c6b8e1b",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\detector_replay.cpp": "174aa9d457aa15c0d78c9e7b3042bdbfe836151449784466855f2c03bcd884d6",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\sdkconfig.h": "d9d272e4d31ccce644bc9ba8382f9a522cab88249761eabe1d4866ade40265a1",
+    "tools\\ecg_monitor\\r_peak_audit_report.py": "0fd1d3785788821b6aeb93825728afdb279100a52231ee80d21c5e53582e26da",
+    "tools\\ecg_monitor\\tests\\test_r_peak_audit.py": "a1a119bb8eec2432b3f1b6dc65a273c4774e3957f71f3971b74ddf91726817ff"
+  },
+  "ai_live_unlocked": false,
+  "firmware_changed": false,
+  "com_opened": false,
+  "flashed": false,
+  "limitations": [
+    "Blocking labels are descriptive, overlapping upstream causes remain; no additive causal improvement claim",
+    "Validation reused; not independent final assessment",
+    "Host quality-gated replay is existing mirror, not full RTOS/generation/FSM simulation",
+    "Fixed synthetic ADC gain200counts/mV, not AD8232 calibration",
+    "No hardware/simulator/ECG-body claim; no model inference needed in this stage"
+  ],
+  "source_map": [
+    {
+      "file": "main/signal.h",
+      "line": 7,
+      "symbol": "BeatDetector",
+      "role": "Streaming state: 512-sample raw/time ring, one pending center, EMA states"
+    },
+    {
+      "file": "main/signal.cpp",
+      "line": 38,
+      "symbol": "BeatDetector::push",
+      "role": "Baseline residual, threshold, refractory, pending window, reset"
+    },
+    {
+      "file": "main/signal.cpp",
+      "line": 37,
+      "symbol": "BeatDetector::reset",
+      "role": "Resets all state, including warm-up age and baseline"
+    },
+    {
+      "file": "main/signal.cpp",
+      "line": 22,
+      "symbol": "signal_block_reason",
+      "role": "Rail, timestamp, minimum PTP and mean-difference gates"
+    },
+    {
+      "file": "main/signal.cpp",
+      "line": 6,
+      "symbol": "signal_metrics",
+      "role": "Diagnostic DFT50/variation/baseline metrics; not detector filtering"
+    },
+    {
+      "file": "main/pipeline.cpp",
+      "line": 171,
+      "symbol": "worker",
+      "role": "Model/golden, quality/recovery, block continuity, guarded detector invocation"
+    },
+    {
+      "file": "main/pipeline.cpp",
+      "line": 267,
+      "symbol": "pipeline_observe",
+      "role": "Immediate lead-off/ADC/timing safety"
+    },
+    {
+      "file": "main/pipeline.cpp",
+      "line": 281,
+      "symbol": "pipeline_offer",
+      "role": "Immutable queued block with generation/hash"
+    },
+    {
+      "file": "main/model.cpp",
+      "line": 98,
+      "symbol": "model_invoke_beat",
+      "role": "Calls unchanged quantization and CNN"
+    },
+    {
+      "file": "main/preprocessing.h",
+      "line": 12,
+      "symbol": "ecg_preprocessing::quantize",
+      "role": "Per-beat z-score then int8 quantization; downstream of detector"
+    },
+    {
+      "file": "main/system_state.h",
+      "line": 4,
+      "symbol": "kLivePipelineValidated",
+      "role": "False; independent classification gate remains closed"
+    },
+    {
+      "file": "main/Kconfig.projbuild",
+      "line": 58,
+      "symbol": "ECG_ADC_RAIL_MARGIN .. ECG_QRS_MIN_COUNTS",
+      "role": "16 / 20 / 25 / 30, matching tests/sdkconfig.h"
+    },
+    {
+      "file": "tests/detector_replay.cpp",
+      "line": 8,
+      "symbol": "main",
+      "role": "Historical native candidate + quality-gated host mirror"
+    },
+    {
+      "file": "tests/signal_test.cpp",
+      "line": 10,
+      "symbol": "main",
+      "role": "Synthetic polarity, ring indexing and quality controls"
+    },
+    {
+      "file": "tools/ecg_monitor/validate_offline.py",
+      "line": 22,
+      "symbol": "score / main",
+      "role": "Validation selection, resampling, historical greedy ±12 score"
+    },
+    {
+      "file": "tools/ecg_monitor/ecg_monitor/offline.py",
+      "line": 25,
+      "symbol": "display_filter",
+      "role": "Causal notch50 + bandpass preview only; not detector/CNN input"
+    },
+    {
+      "file": "python/04_extract_beats.py",
+      "line": 25,
+      "symbol": "main",
+      "role": "Record100,25/36 resample, round-half-up annotations, raw256 slice then z-score; not called by live detector"
+    },
+    {
+      "file": "python/05_build_dataset.py",
+      "line": 37,
+      "symbol": "extract_record",
+      "role": "MLII, same integer annotation mapping, raw256 slice then z-score; not called by detector replay"
+    }
+  ],
+  "fn_by_label_and_evidence": {
+    "A": {
+      "RESET_WARMUP": 4,
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 3,
+      "PENDING_CONFLICT_RESET": 6
+    },
+    "E": {
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 1
+    },
+    "F": {
+      "RESET_WARMUP": 10
+    },
+    "J": {
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 5,
+      "PENDING_CONFLICT_RESET": 5,
+      "RESET_WARMUP": 18
+    },
+    "L": {
+      "INITIAL_WARMUP": 3,
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 176,
+      "RESET_WARMUP": 268,
+      "PENDING_CONFLICT_RESET": 1,
+      "REFRACTORY_BLOCK": 1,
+      "END_WINDOW_UNAVAILABLE": 1
+    },
+    "N": {
+      "INITIAL_WARMUP": 11,
+      "REFRACTORY_BLOCK": 65,
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 569,
+      "RESET_WARMUP": 1312,
+      "END_WINDOW_UNAVAILABLE": 4,
+      "BELOW_ADAPTIVE_THRESHOLD": 30,
+      "PENDING_CONFLICT_RESET": 11
+    },
+    "Q": {
+      "RESET_WARMUP": 1
+    },
+    "R": {
+      "INITIAL_WARMUP": 3,
+      "REFRACTORY_BLOCK": 14,
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 9,
+      "RESET_WARMUP": 27,
+      "PENDING_CONFLICT_RESET": 1
+    },
+    "V": {
+      "BELOW_ADAPTIVE_THRESHOLD": 7,
+      "RESET_WARMUP": 598,
+      "PENDING_CONFLICT_RESET": 402,
+      "INITIAL_WARMUP": 3,
+      "ACCEPTED_THEN_RESET_BEFORE_WINDOW": 22,
+      "REFRACTORY_BLOCK": 1
+    },
+    "a": {
+      "PENDING_CONFLICT_RESET": 18,
+      "BELOW_ADAPTIVE_THRESHOLD": 2
+    }
+  },
+  "findings": [
+    {
+      "id": "PENDING_RESET",
+      "evidence": "PROVEN_CODE_TRACE_AND_MICROTEST",
+      "priority": 1,
+      "description": "One pending window conflicts with a second eligible center at 75..126 samples; resets lose both and restart 500-sample warm-up",
+      "reset_events": 795,
+      "fn_during_reset_warmup": 2238,
+      "fn_pending_aborted": 785,
+      "fn_at_conflicting_center": 444
+    },
+    {
+      "id": "REFRACTORY_WRONG_PRECEDING_PEAK",
+      "evidence": "PROVEN_EXAMPLE",
+      "priority": 2,
+      "record": "115",
+      "reference_seconds": 46.376,
+      "previous_reference_rr_ms": 1048,
+      "preceding_false_emitted_peak_seconds": 46.196,
+      "blocked_gap_ms": 180,
+      "description": "Not simply excessive real heart rate: an unrelated preceding accepted local maximum can suppress the true QRS"
+    },
+    {
+      "id": "THRESHOLD",
+      "evidence": "DESCRIPTIVE_TRACE_NOT_COUNTERFACTUAL",
+      "priority": 3,
+      "adaptive_threshold_fn": 39,
+      "absolute_floor_fn": 0,
+      "description": "Fixed ADC-unit floor and envelope over all magnitudes; no separate noise/QRS estimates or RR searchback"
+    },
+    {
+      "id": "GATE",
+      "evidence": "PROVEN_ON_THIS_HOST_REPLAY",
+      "priority": 4,
+      "rejected_full_blocks": 0,
+      "description": "No full block quality rejection here; gated TP 13215 vs candidate13226 reflects replay admission/start/end history, not proof gate is harmless on hardware"
+    },
+    {
+      "id": "XQRS_LIMIT",
+      "evidence": "MEASURED_SAME_INPUT_AND_SCORE",
+      "priority": 4,
+      "description": "Strong offline baseline but record210 sensitivity and pure50Hz control fail unchanged criteria; not deployment approval"
+    }
+  ],
+  "stage2_proposal": [
+    {
+      "priority": 1,
+      "change": "Decouple QRS center detection from 256-sample window completion; bounded pending-center FIFO; preserve detector history on ordinary close beats",
+      "files": [
+        "main/signal.h",
+        "main/signal.cpp",
+        "tests/signal_test.cpp"
+      ]
+    },
+    {
+      "priority": 2,
+      "change": "Causal QRS-energy detection branch with explicit delay and raw-signal localization; adaptive QRS/noise levels and bounded RR-aware searchback",
+      "files": [
+        "main/signal.h",
+        "main/signal.cpp",
+        "tests/detector_replay.cpp"
+      ]
+    },
+    {
+      "priority": 3,
+      "change": "Review refractory and T/P-wave rejection using failure traces; no CNN or preprocessing changes",
+      "files": [
+        "main/signal.cpp",
+        "tests/signal_test.cpp"
+      ]
+    },
+    {
+      "priority": 4,
+      "change": "Validate state/generation/quality recovery and scheduling using a host harness; keep safety and AI-live gates",
+      "files": [
+        "main/pipeline.cpp (only if an interface change is necessary)",
+        "tests/new detector pipeline replay tests"
+      ]
+    }
+  ],
+  "required_post_change_tests": [
+    "Exact same seven Validation records, BEATS, MLII,25/36 resample,ADC mapping,±12 matching; no exclusions/tolerance shifts",
+    "Per-record sensitivity>=.99,PPV>=.99,p95 timing<=40ms; zero flat/pure50Hz false peaks, as historical criteria",
+    "Per-label N/V recall and full FN/FP plots; no claim from aggregate metrics alone",
+    "RR sweep, prematurity/bigeminy, polarity, low amplitude, broad QRS, T/P interference, onset/end and ring/block boundary tests",
+    "Multiple pending windows complete exactly256 samples; raw morphology and index128 center unchanged",
+    "Lead-off/rails/gaps/quality recovery/generation integrity and bounded queues; no relaxed safety thresholds",
+    "CNN golden12x33, preprocessing/CNN parity9425, old trace and GUI/telemetry regressions",
+    "IDF5.4.4 build, then authorized simulator/board latency,CPU,heap,stack,ADC250Hz continuity; no auto COM/flash",
+    "Validation reuse is exploratory; independent final evaluation and patient-aware leakage review before any live approval"
+  ],
+  "stage1_tests": {
+    "python_tests": 51,
+    "status": "PASS",
+    "log": "tools\\ecg_monitor\\reports\\r_peak_audit_tests.log",
+    "cpp": "Both diagnostic and baseline replay built with -std=c++17 -O2 -Wall -Wextra -Werror; actual production signal.cpp linked",
+    "compiler": "g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 15.2.0",
+    "firmware_idf_build": "NOT_RUN: no production firmware or configuration changes in analysis-only stage",
+    "cnn_golden_and_parity": "NOT_RERUN: previous12/12 and9425/9425 artifacts/model/preprocessing protected by SHA; not a new board result"
+  }
+}

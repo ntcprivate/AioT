@@ -1,0 +1,10 @@
+{
+  "huge_y_after_hardware_to_demo": [
+    -1e+18,
+    1e+18
+  ],
+  "unsafe_direct_session_value": [
+    -1e+18
+  ],
+  "int_nan_signature": -9223372036854775808
+}

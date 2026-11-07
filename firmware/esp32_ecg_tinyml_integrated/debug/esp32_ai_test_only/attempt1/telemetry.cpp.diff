@@ -1,0 +1,12 @@
+--- telemetry.cpp.before
++++ telemetry.cpp
+@@ -132,3 +132,9 @@
+ #endif
+     return ESP_OK;
+ }
++TelemetryTestHealth telemetry_test_health() {
++    Clock clock;portENTER_CRITICAL(&clock_lock);clock=acquisition;portEXIT_CRITICAL(&clock_lock);
++    const double hz=clock.intervals && clock.last>clock.first?clock.intervals*1000000.0/(clock.last-clock.first):0;
++    return {attempts.load(),dropped.load(),adc_errors_total.load(),missed_total.load(),late_total.load(),snapshot_errors.load(),
++        write_errors.load(),format_errors.load(),uart_write_errors.load(),uart_tx_timeouts.load(),hz};
++}

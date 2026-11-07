@@ -1,0 +1,25 @@
+{
+  "scope": "Actual UART -> production Qt GUI; offscreen rendering; no simulated predictions",
+  "fields": {
+    "Mode": "RESEARCH_SHADOW ACTIVE",
+    "Latest prediction": "UNKNOWN",
+    "Signal / validity": "INVALID",
+    "PVC probability": "--",
+    "R-peak detected": "0 total; index -1",
+    "Prediction timestamp": "--",
+    "Prediction age": "--",
+    "CNN latency": "--",
+    "Total classified beats": "0",
+    "Skipped/rejected beats": "0 windows; inference drops 0; block drops 0",
+    "Reason": "LEADS_OFF"
+  },
+  "sample_count": 3552,
+  "crc": 0,
+  "missing": 0,
+  "framing": 0,
+  "schema": 0,
+  "official_classification": "UNKNOWN",
+  "official_ai_mode": "LOCKED",
+  "raw_capture": "D:\\Code Part Two\\AIoT\\tools\\ecg_monitor\\captures\\20261106T185430Z_e3c754d0.bin",
+  "status": "PASS"
+}

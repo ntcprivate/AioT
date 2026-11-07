@@ -1,0 +1,50 @@
+[
+  {
+    "file": "main.cpp",
+    "experimental_live": 0,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "pipeline.cpp",
+    "experimental_live": 0,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "model.cpp",
+    "experimental_live": 0,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "signal.cpp",
+    "experimental_live": 0,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "main.cpp",
+    "experimental_live": 1,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "pipeline.cpp",
+    "experimental_live": 1,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "model.cpp",
+    "experimental_live": 1,
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "file": "signal.cpp",
+    "experimental_live": 1,
+    "exit_code": 0,
+    "output": ""
+  }
+]

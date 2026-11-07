@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Fixed9425 matched Validation windows from phase1; not detector end-to-end accuracy",
+  "golden_samples": 12,
+  "repeats_each": 33,
+  "golden_exact": true,
+  "parity_beats": 9425,
+  "preprocessing_mismatched_bytes": 0,
+  "cnn_mismatched_codes": 0,
+  "corpus_sha256": "babc6c1df5efd0e3044d68f818ab519cce8ad9a36f9072073ad5176399ef4168",
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394"
+}

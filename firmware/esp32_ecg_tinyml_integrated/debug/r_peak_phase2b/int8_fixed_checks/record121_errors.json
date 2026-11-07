@@ -1,0 +1,344 @@
+[
+  {
+    "kind": "FP",
+    "sample": 57273,
+    "seconds": 229.092,
+    "nearest_annotation_sample": 57182,
+    "nearest_annotation": "N",
+    "delta_ms": 364,
+    "nearest_reference_missed": false
+  },
+  {
+    "kind": "FP",
+    "sample": 62939,
+    "seconds": 251.756,
+    "nearest_annotation_sample": 62992,
+    "nearest_annotation": "N",
+    "delta_ms": -212,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 75741,
+    "seconds": 302.964,
+    "nearest_annotation_sample": 75800,
+    "nearest_annotation": "N",
+    "delta_ms": -236,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 79292,
+    "seconds": 317.168,
+    "nearest_annotation_sample": 79349,
+    "nearest_annotation": "N",
+    "delta_ms": -228,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 86757,
+    "seconds": 347.028,
+    "nearest_annotation_sample": 86870,
+    "nearest_annotation": "N",
+    "delta_ms": -452,
+    "nearest_reference_missed": false
+  },
+  {
+    "kind": "FP",
+    "sample": 89343,
+    "seconds": 357.372,
+    "nearest_annotation_sample": 89393,
+    "nearest_annotation": "N",
+    "delta_ms": -200,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 359633,
+    "seconds": 1438.532,
+    "nearest_annotation_sample": 359521,
+    "nearest_annotation": "N",
+    "delta_ms": 448,
+    "nearest_reference_missed": false
+  },
+  {
+    "kind": "FP",
+    "sample": 368885,
+    "seconds": 1475.54,
+    "nearest_annotation_sample": 368990,
+    "nearest_annotation": "N",
+    "delta_ms": -420,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 369840,
+    "seconds": 1479.36,
+    "nearest_annotation_sample": 369908,
+    "nearest_annotation": "N",
+    "delta_ms": -272,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 382096,
+    "seconds": 1528.384,
+    "nearest_annotation_sample": 382122,
+    "nearest_annotation": "N",
+    "delta_ms": -104,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 384083,
+    "seconds": 1536.332,
+    "nearest_annotation_sample": 384163,
+    "nearest_annotation": "N",
+    "delta_ms": -320,
+    "nearest_reference_missed": false
+  },
+  {
+    "kind": "FP",
+    "sample": 386650,
+    "seconds": 1546.6,
+    "nearest_annotation_sample": 386748,
+    "nearest_annotation": "N",
+    "delta_ms": -392,
+    "nearest_reference_missed": false
+  },
+  {
+    "kind": "FP",
+    "sample": 388279,
+    "seconds": 1553.116,
+    "nearest_annotation_sample": 388340,
+    "nearest_annotation": "N",
+    "delta_ms": -244,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 391782,
+    "seconds": 1567.128,
+    "nearest_annotation_sample": 391798,
+    "nearest_annotation": "N",
+    "delta_ms": -64,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 392156,
+    "seconds": 1568.624,
+    "nearest_annotation_sample": 392183,
+    "nearest_annotation": "N",
+    "delta_ms": -108,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 396869,
+    "seconds": 1587.476,
+    "nearest_annotation_sample": 396944,
+    "nearest_annotation": "N",
+    "delta_ms": -300,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 404995,
+    "seconds": 1619.98,
+    "nearest_annotation_sample": 405065,
+    "nearest_annotation": "N",
+    "delta_ms": -280,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 406106,
+    "seconds": 1624.424,
+    "nearest_annotation_sample": 406158,
+    "nearest_annotation": "N",
+    "delta_ms": -208,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 413519,
+    "seconds": 1654.076,
+    "nearest_annotation_sample": 413571,
+    "nearest_annotation": "N",
+    "delta_ms": -208,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FP",
+    "sample": 446869,
+    "seconds": 1787.476,
+    "nearest_annotation_sample": 446792,
+    "nearest_annotation": "N",
+    "delta_ms": 308,
+    "nearest_reference_missed": false
+  },
+  {
+    "kind": "FN",
+    "sample": 113,
+    "seconds": 0.452,
+    "nearest_annotation_sample": 113,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 356,
+    "seconds": 1.424,
+    "nearest_annotation_sample": 356,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 62992,
+    "seconds": 251.968,
+    "nearest_annotation_sample": 62992,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 75800,
+    "seconds": 303.2,
+    "nearest_annotation_sample": 75800,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 79349,
+    "seconds": 317.396,
+    "nearest_annotation_sample": 79349,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 89393,
+    "seconds": 357.572,
+    "nearest_annotation_sample": 89393,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 368990,
+    "seconds": 1475.96,
+    "nearest_annotation_sample": 368990,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 369908,
+    "seconds": 1479.632,
+    "nearest_annotation_sample": 369908,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 382122,
+    "seconds": 1528.488,
+    "nearest_annotation_sample": 382122,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 388340,
+    "seconds": 1553.36,
+    "nearest_annotation_sample": 388340,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 391798,
+    "seconds": 1567.192,
+    "nearest_annotation_sample": 391798,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 392183,
+    "seconds": 1568.732,
+    "nearest_annotation_sample": 392183,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 396944,
+    "seconds": 1587.776,
+    "nearest_annotation_sample": 396944,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 405065,
+    "seconds": 1620.26,
+    "nearest_annotation_sample": 405065,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 406158,
+    "seconds": 1624.632,
+    "nearest_annotation_sample": 406158,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 413571,
+    "seconds": 1654.284,
+    "nearest_annotation_sample": 413571,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 413778,
+    "seconds": 1655.112,
+    "nearest_annotation_sample": 413778,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  },
+  {
+    "kind": "FN",
+    "sample": 451304,
+    "seconds": 1805.216,
+    "nearest_annotation_sample": 451304,
+    "nearest_annotation": "N",
+    "delta_ms": 0,
+    "nearest_reference_missed": true
+  }
+]

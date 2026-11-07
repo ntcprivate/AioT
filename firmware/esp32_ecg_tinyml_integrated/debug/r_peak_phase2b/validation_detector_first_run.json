@@ -1,0 +1,136 @@
+[
+  {
+    "record": "115",
+    "tp": 1949,
+    "fp": 1,
+    "fn": 4,
+    "sensitivity": 0.9979518689196109,
+    "ppv": 0.9994871794871795,
+    "timing_median_abs_ms": 4.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 1949
+    },
+    "missed_by_annotation": {
+      "N": 4
+    }
+  },
+  {
+    "record": "118",
+    "tp": 2250,
+    "fp": 28,
+    "fn": 28,
+    "sensitivity": 0.9877085162423178,
+    "ppv": 0.9877085162423178,
+    "timing_median_abs_ms": 32.0,
+    "timing_p95_abs_ms": 44.0,
+    "matched_by_annotation": {
+      "R": 2141,
+      "A": 96,
+      "V": 13
+    },
+    "missed_by_annotation": {
+      "R": 25,
+      "V": 3
+    }
+  },
+  {
+    "record": "121",
+    "tp": 1846,
+    "fp": 19,
+    "fn": 17,
+    "sensitivity": 0.9908749329039184,
+    "ppv": 0.9898123324396783,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 1844,
+      "A": 1,
+      "V": 1
+    },
+    "missed_by_annotation": {
+      "N": 17
+    }
+  },
+  {
+    "record": "210",
+    "tp": 2635,
+    "fp": 5,
+    "fn": 15,
+    "sensitivity": 0.9943396226415094,
+    "ppv": 0.9981060606060606,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 2414,
+      "V": 190,
+      "F": 9,
+      "a": 21,
+      "E": 1
+    },
+    "missed_by_annotation": {
+      "N": 9,
+      "V": 4,
+      "a": 1,
+      "F": 1
+    }
+  },
+  {
+    "record": "214",
+    "tp": 2179,
+    "fp": 78,
+    "fn": 83,
+    "sensitivity": 0.9633068081343943,
+    "ppv": 0.9654408506867523,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "L": 1999,
+      "V": 177,
+      "Q": 2,
+      "F": 1
+    },
+    "missed_by_annotation": {
+      "L": 4,
+      "V": 79
+    }
+  },
+  {
+    "record": "233",
+    "tp": 3069,
+    "fp": 1,
+    "fn": 10,
+    "sensitivity": 0.9967521922702176,
+    "ppv": 0.9996742671009772,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 36.0,
+    "matched_by_annotation": {
+      "N": 2227,
+      "V": 824,
+      "A": 7,
+      "F": 11
+    },
+    "missed_by_annotation": {
+      "V": 7,
+      "N": 3
+    }
+  },
+  {
+    "record": "234",
+    "tp": 2749,
+    "fp": 1,
+    "fn": 4,
+    "sensitivity": 0.998547039593171,
+    "ppv": 0.9996363636363637,
+    "timing_median_abs_ms": 0.0,
+    "timing_p95_abs_ms": 4.0,
+    "matched_by_annotation": {
+      "N": 2696,
+      "J": 50,
+      "V": 3
+    },
+    "missed_by_annotation": {
+      "N": 4
+    }
+  }
+]

@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/CMakeFiles/bootloader
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/CMakeFiles/bootloader.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/CMakeFiles/bootloader-complete.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

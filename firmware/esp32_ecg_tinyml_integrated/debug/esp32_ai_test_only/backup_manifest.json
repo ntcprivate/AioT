@@ -1,0 +1,54 @@
+{
+  "offset": 0,
+  "length": 458752,
+  "sha256": "9491cf32f014d40de82c03d6601857728c19b8c2e0121e4d247bdc6599d04952",
+  "parts": [
+    {
+      "offset": 0,
+      "length": 65536,
+      "sha256": "14544e42b42d7d3168e0c0e35112129f585e2b6517909192c659f2f6ec542df2"
+    },
+    {
+      "offset": 65536,
+      "length": 65536,
+      "sha256": "1566c2e1ada8ba096b0604ce143da54a25bea7c5325fcb35390ffea98987527b"
+    },
+    {
+      "offset": 131072,
+      "length": 65536,
+      "sha256": "dd52b52bccb89bd9581a4757897fd9c6b5020696f39c9f93ed7d95c0f014177f"
+    },
+    {
+      "offset": 196608,
+      "length": 24576,
+      "sha256": "7204f43ba89e6167b40a92c9672adcfd9366e0c913e1a50e4fb86da07e39ffbb"
+    },
+    {
+      "offset": 221184,
+      "length": 4096,
+      "sha256": "7b24f755be20a8189625fa8d013c2b065246377c1d26660e177fa65733f9224c"
+    },
+    {
+      "offset": 225280,
+      "length": 36864,
+      "sha256": "cf8efdba2d8b9571d2e702384630b8247563bfd7b8ef8b850b0dae5255b0ec9c"
+    },
+    {
+      "offset": 262144,
+      "length": 65536,
+      "sha256": "fff3a37e8b07a8b8620b55205b82e718dc79762624e1947b6a816ea921862a5f"
+    },
+    {
+      "offset": 327680,
+      "length": 65536,
+      "sha256": "d05c61c33fd908fd50605211e83705a6a2e3100629352d86df15edb6bb96440e"
+    },
+    {
+      "offset": 393216,
+      "length": 65536,
+      "sha256": "6f89ec4c74d6ee817f807a49d67b110864906f791b2e5e41649392daf23a3a66"
+    }
+  ],
+  "coverage": "All sectors touched by TEST_ONLY writes; remaining sectors never written",
+  "read_verified": "Every segment verified by esptool stub MD5; final segments at115200 baud"
+}

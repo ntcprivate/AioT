@@ -1,0 +1,20 @@
+{
+  "recompiled": "D:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.cpp",
+  "reused_unchanged_objects": 47,
+  "flags": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-DNDEBUG",
+    "-DECG_HOST_TEST=1",
+    "-DTF_LITE_STATIC_MEMORY",
+    "-DTFLITE_SINGLE_ROUNDING=0",
+    "-DECG_CONV_SINGLE_ROUNDING=1",
+    "-ID:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\tests\\host_stubs",
+    "-ID:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\main",
+    "-ID:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\managed_components\\espressif__esp-tflite-micro",
+    "-ID:\\Code Part Two\\AIoT\\firmware\\esp32_ecg_tinyml_integrated\\managed_components\\espressif__esp-tflite-micro\\third_party\\flatbuffers\\include",
+    "-ffunction-sections",
+    "-fdata-sections"
+  ]
+}

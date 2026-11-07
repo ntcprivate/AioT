@@ -1,0 +1,1 @@
+PASS: adapter equals actual TFLM single-round helper on20000 signed cases, right/left shifts and signed ties.

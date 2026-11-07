@@ -1,0 +1,60 @@
+{
+  "2a": [
+    {
+      "samples": 1000000,
+      "rr_samples": 100,
+      "host_ns_total": 10313500,
+      "host_ns_per_sample": 10.313,
+      "windows": 9993,
+      "issues": 0,
+      "sizeof_detector_host": 6448
+    },
+    {
+      "samples": 1000000,
+      "rr_samples": 100,
+      "host_ns_total": 10367400,
+      "host_ns_per_sample": 10.367,
+      "windows": 9993,
+      "issues": 0,
+      "sizeof_detector_host": 6448
+    },
+    {
+      "samples": 1000000,
+      "rr_samples": 100,
+      "host_ns_total": 10793100,
+      "host_ns_per_sample": 10.793,
+      "windows": 9993,
+      "issues": 0,
+      "sizeof_detector_host": 6448
+    }
+  ],
+  "2b": [
+    {
+      "samples": 1000000,
+      "rr_samples": 100,
+      "host_ns_total": 11283000,
+      "host_ns_per_sample": 11.283,
+      "windows": 9993,
+      "issues": 0,
+      "sizeof_detector_host": 6496
+    },
+    {
+      "samples": 1000000,
+      "rr_samples": 100,
+      "host_ns_total": 11069600,
+      "host_ns_per_sample": 11.07,
+      "windows": 9993,
+      "issues": 0,
+      "sizeof_detector_host": 6496
+    },
+    {
+      "samples": 1000000,
+      "rr_samples": 100,
+      "host_ns_total": 11128600,
+      "host_ns_per_sample": 11.129,
+      "windows": 9993,
+      "issues": 0,
+      "sizeof_detector_host": 6496
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source": "HOST_REFERENCE_REPLAY",
+  "samples": 15000,
+  "windows": 99,
+  "rejected": 0,
+  "invalid_blocks": 0,
+  "queue_drops": 0,
+  "queue_high": 3,
+  "record": "208",
+  "native_tf_exact": 99,
+  "predicted_N": 66,
+  "predicted_PVC": 33,
+  "physical_ESP32": false,
+  "input_sha256": "6eb1c4b8d19d2de19cfe0c7675b798041431e817ee1414ed156b52cac02d57cd",
+  "annotation_rounding": "(sample*25+18)//36",
+  "tolerance_samples": 12,
+  "reference_NV": 94,
+  "matched_NV_confusion_rows_N_V": [
+    [
+      61,
+      0
+    ],
+    [
+      1,
+      27
+    ]
+  ],
+  "missed_NV_before_CNN": {
+    "N": 3,
+    "V": 2
+  },
+  "unmatched_detected": 0,
+  "other_reference": 12,
+  "classification_errors": [
+    {
+      "annotation_index": 4820,
+      "detected_index": 4817,
+      "true": "V",
+      "predicted": "NORMAL",
+      "code": -75
+    }
+  ],
+  "scope": "HOST_REFERENCE_REPLAY first60seconds of frozen Train208; smoke checks, not independent accuracy or parameter selection"
+}

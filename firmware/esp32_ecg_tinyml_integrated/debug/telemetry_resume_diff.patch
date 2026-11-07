@@ -1,0 +1,677 @@
+--- before/firmware\esp32_ecg_tinyml_integrated\main\CMakeLists.txt
++++ current/firmware\esp32_ecg_tinyml_integrated\main\CMakeLists.txt
+@@ -1,6 +1,6 @@
+ idf_component_register(SRCS "main.cpp" "pipeline.cpp" "model.cpp" "signal.cpp" "trace_transport.cpp" "single_round_conv.cpp" "single_round_fc.cpp" "telemetry.cpp"
+     INCLUDE_DIRS "."
+-    REQUIRES esp_adc esp_driver_gpio esp_driver_gptimer esp_timer esp_system esp_hw_support heap mbedtls esp-tflite-micro
++    REQUIRES esp_adc esp_driver_gpio esp_driver_gptimer esp_driver_uart esp_timer esp_system esp_hw_support heap mbedtls esp-tflite-micro
+     EMBED_FILES "model/ecg_cnn_int8.tflite" "test_data/ecg_test_samples_int8.bin")
+ target_compile_features(${COMPONENT_LIB} PUBLIC cxx_std_17)
+ # Effective kernel log is derived from the actual TFLM target's compiler options
+--- before/firmware\esp32_ecg_tinyml_integrated\main\Kconfig.projbuild
++++ current/firmware\esp32_ecg_tinyml_integrated\main\Kconfig.projbuild
+@@ -5,6 +5,14 @@
+     help
+         CRC32 frames, 32 actual timestamps/ADC/flags per packet, bounded queue.
+         Sampling never waits for UART. Disables long operator/arithmetic dumps.
++config ECG_SYNTHETIC_TELEMETRY_TEST
++    bool "SYNTHETIC_TELEMETRY_TEST: known pattern, no sensor and no AI input"
++    depends on ECG_TELEMETRY && !ECG_ENABLE_EXPERIMENTAL_LIVE
++    default n
++    help
++        Same250Hz GPTimer/sampling task, queue and UART; replaces ADC read
++        with deterministic512+(sample_index*17 modulo3072). Not ECG.
++        Never calls pipeline_observe/pipeline_offer with synthetic samples.
+ config ECG_CONV_ARITHMETIC_LOG
+     bool "Print three first-Conv arithmetic records outside Invoke"
+     default y
+--- before/firmware\esp32_ecg_tinyml_integrated\main\main.cpp
++++ current/firmware\esp32_ecg_tinyml_integrated\main\main.cpp
+@@ -20,6 +20,7 @@
+ #include "pipeline.h"
+ #include "lead_off.h"
+ #include "telemetry.h"
++#include "telemetry_codec.h"
+ 
+ #if ESP_IDF_VERSION != ESP_IDF_VERSION_VAL(5, 4, 4)
+ #error "Use ESP-IDF v5.4.4 for this project."
+@@ -206,6 +207,7 @@
+     uint64_t previous_slot = 0, notifications_total = 0;
+     int64_t previous_timestamp = 0;
+     uint32_t number = 0, dropped = 0;
++    [[maybe_unused]] uint32_t synthetic_index=0;
+     while (true) {
+         Summary s;
+         // Explicitly initialize padding too: the byte checksum survives queue memcpy.
+@@ -220,11 +222,20 @@
+             sample.raw = -1;
+             // Actual software read-call bounds, never an expected alarm timestamp.
+             sample.timestamp_us = esp_timer_get_time();
++#if CONFIG_ECG_SYNTHETIC_TELEMETRY_TEST
++            sample.raw=ecg_wire::synthetic(synthetic_index++);
++            const esp_err_t error=ESP_OK;
++#else
+             const esp_err_t error = adc_oneshot_read(adc, kChannel, &sample.raw);
++#endif
+             const int64_t read_end = esp_timer_get_time();
+             sample.read_duration_us = read_end - sample.timestamp_us;
++#if CONFIG_ECG_SYNTHETIC_TELEMETRY_TEST
++            sample.lo_plus=sample.lo_minus=0; // Explicit virtual inputs, not a valid sensor claim.
++#else
+             sample.lo_plus = gpio_get_level(kLoPlus);
+             sample.lo_minus = gpio_get_level(kLoMinus);
++#endif
+             const int64_t timestamp = sample.timestamp_us;
+             notifications_total += pending;
+             const uint64_t elapsed_slot = static_cast<uint64_t>(std::max<int64_t>(0, timestamp - epoch) / kPeriodUs);
+@@ -247,7 +258,9 @@
+                 s.maximum = std::max(s.maximum, sample.raw);
+             }
+             const bool lead_off = ad8232::lead_off(sample.lo_plus, sample.lo_minus);
++#if !CONFIG_ECG_SYNTHETIC_TELEMETRY_TEST
+             pipeline_observe(sample.raw, error != ESP_OK, lead_off, skipped > 0 || pending > 1, timestamp);
++#endif
+             if (lead_off) ++s.leads;
+             s.lead_diag.observe(sample.lo_plus, sample.lo_minus);
+             telemetry_sample(sample.raw,timestamp,sample.lo_plus,sample.lo_minus,error!=ESP_OK,skipped>0 || pending>1);
+@@ -291,7 +304,7 @@
+         s.summaries_dropped_total = dropped;
+         if (!summary_valid(s)) ++s.consistency_errors;
+         s.checksum = checksum(&s, offsetof(Summary, checksum));
+-        telemetry_health(s.adc_errors,s.missed,s.late,summary_valid(s));
++        telemetry_health(s.adc_errors,s.missed,s.late,summary_valid(s),s.intervals,s.first_us,s.last_us,s.dt_min,s.dt_max);
+         // Copy the frozen block to the bounded processing queue; no AI in this task.
+         static int raw_copy[kCount];
+         static int64_t time_copy[kCount];
+@@ -299,7 +312,9 @@
+             raw_copy[i] = buffer[i].raw;
+             time_copy[i] = buffer[i].timestamp_us;
+         }
++#if !CONFIG_ECG_SYNTHETIC_TELEMETRY_TEST
+         pipeline_offer(s.number, raw_copy, time_copy, summary_valid(s) && !s.missed && !s.adc_errors && !s.leads);
++#endif
+         // Never stall sampling waiting for UART; count summary loss instead.
+         if (xQueueSend(summaries, &s, 0) != pdTRUE) ++dropped;
+     }
+@@ -307,6 +322,7 @@
+ } // namespace
+ 
+ extern "C" void app_main() {
++    if (!check(telemetry_uart_init(), "telemetry_uart_init")) return;
+     if (!check(pipeline_init(), "pipeline_init")) return;
+     if (!check(telemetry_init(), "telemetry_init")) return;
+     console_lock(); ESP_LOGW(kTag, "Electronic bench test only, no electrodes on a person; no validated ECG or AI input."); console_unlock();
+--- before/firmware\esp32_ecg_tinyml_integrated\main\telemetry.cpp
++++ current/firmware\esp32_ecg_tinyml_integrated\main\telemetry.cpp
+@@ -5,6 +5,8 @@
+ #include "sdkconfig.h"
+ #include "esp_random.h"
+ #include "esp_timer.h"
++#include "driver/uart.h"
++#include "driver/uart_vfs.h"
+ #include "freertos/FreeRTOS.h"
+ #include "freertos/queue.h"
+ #include "freertos/task.h"
+@@ -18,36 +20,70 @@
+ Packet pending={};unsigned count=0;uint32_t sample_index=0,sequence=0,boot=0;
+ std::atomic<uint32_t> dropped{0},write_errors{0};
+ std::atomic<uint32_t> adc_errors_total{0},missed_total{0},late_total{0},snapshot_errors{0};
+-void emit(const char* json) {
++#if CONFIG_ECG_SYNTHETIC_TELEMETRY_TEST
++constexpr bool kSynthetic=true;
++constexpr const char* kSource="SYNTHETIC_TEST";
++#else
++constexpr bool kSynthetic=false;
++constexpr const char* kSource="HARDWARE";
++#endif
++struct Clock {uint32_t intervals;int64_t first,last,minimum,maximum;};
++Clock acquisition={};portMUX_TYPE clock_lock=portMUX_INITIALIZER_UNLOCKED;
++std::atomic<uint32_t> attempts{0};
++uint32_t tx_samples=0,tx_bytes=0;
++struct Completion {uint32_t samples;int64_t time;};
++Completion completed[32]={};unsigned completed_count=0,completed_next=0;
++bool emit(const char* json) {
++    char framed[1800];const int n=ecg_wire::frame(json,framed,sizeof(framed));
++    if(n<0) {++write_errors;return false;}
+     console_lock();
++    bool ok=false;
+     if(!console_trace_active()) {
+-        if(fprintf(stdout,"ECG1 %08lx %s\n",static_cast<unsigned long>(ecg_wire::crc32(reinterpret_cast<const uint8_t*>(json),strlen(json))),json)<0 || fflush(stdout)!=0) {
+-            ++write_errors;clearerr(stdout);
+-        }
++        const int written=uart_write_bytes(UART_NUM_0,framed,static_cast<size_t>(n));
++        ok=written==n && uart_wait_tx_done(UART_NUM_0,pdMS_TO_TICKS(500))==ESP_OK;
++        if(ok)tx_bytes+=static_cast<uint32_t>(n);else ++write_errors;
+     }
+-    console_unlock();
++    console_unlock();return ok;
+ }
+ [[maybe_unused]] void tx_task(void*) {
+-    Packet packet;char json[1200],hex[ecg_wire::kBatch*ecg_wire::kStride*2+1];
++    Packet packet;char json[1600],hex[ecg_wire::kBatch*ecg_wire::kStride*2+1];
+     constexpr char digits[]="0123456789abcdef";
+     int64_t last_status=0;
+     while(true) {
+         if(xQueueReceive(queue,&packet,pdMS_TO_TICKS(100))==pdTRUE) {
+             for(size_t i=0;i<sizeof(packet.bytes);++i) {hex[2*i]=digits[packet.bytes[i]>>4];hex[2*i+1]=digits[packet.bytes[i]&15];}
+             hex[sizeof(hex)-1]=0;
+-            const int n=snprintf(json,sizeof(json),"{\"v\":1,\"type\":\"samples\",\"boot\":\"%08lx\",\"seq\":%lu,\"first\":%lu,\"t0\":%lld,\"fs\":250,\"n\":32,\"data\":\"%s\",\"dropped\":%lu}",
+-                static_cast<unsigned long>(boot),static_cast<unsigned long>(sequence++),static_cast<unsigned long>(packet.first),static_cast<long long>(packet.t0),hex,static_cast<unsigned long>(dropped.load()));
+-            if(n>0 && static_cast<size_t>(n)<sizeof(json))emit(json);else ++write_errors;
++            const int n=snprintf(json,sizeof(json),"{\"v\":1,\"type\":\"samples\",\"boot\":\"%08lx\",\"seq\":%lu,\"first\":%lu,\"t0\":%lld,\"fs\":250,\"n\":32,\"data\":\"%s\",\"source\":\"%s\",\"pattern\":\"%s\",\"dropped\":%lu}",
++                static_cast<unsigned long>(boot),static_cast<unsigned long>(sequence++),static_cast<unsigned long>(packet.first),static_cast<long long>(packet.t0),hex,kSource,kSynthetic?"saw17-v1":"none",static_cast<unsigned long>(dropped.load()));
++            if(n>0 && static_cast<size_t>(n)<sizeof(json)) {
++                if(emit(json)) {
++                    tx_samples+=ecg_wire::kBatch;completed[completed_next]={tx_samples,esp_timer_get_time()};
++                    completed_next=(completed_next+1)%32;if(completed_count<32)++completed_count;
++                }
++            }else ++write_errors;
+         }
+         const int64_t now=esp_timer_get_time();
+         if(now-last_status>=500000) {
+             last_status=now;const auto s=pipeline_telemetry();
+-            const int n=snprintf(json,sizeof(json),"{\"v\":1,\"type\":\"status\",\"boot\":\"%08lx\",\"seq\":%lu,\"t_us\":%lld,\"firmware\":\"ecg-monitor-1\",\"source\":\"HARDWARE\",\"state\":\"%s\",\"reason\":\"%s\",\"model\":\"%s\",\"golden\":%s,\"classification\":\"UNKNOWN\",\"p_pvc\":null,\"threshold\":0.52,\"r_validated\":false,\"bpm\":null,\"rr_ms\":null,\"led\":%s,\"buzzer\":%s,\"self_test\":%s,\"clip_count\":%lu,\"ptp\":%d,\"diff_percent\":%.4f,\"power50_ratio\":%.6f,\"baseline_delta\":%.4f,\"quality_known\":%s,\"quality_t_us\":%lld,\"tx_dropped\":%lu,\"write_errors\":%lu}",
+-                static_cast<unsigned long>(boot),static_cast<unsigned long>(sequence++),static_cast<long long>(now),s.state,s.reason,s.model_ready?"LOCKED":"DISABLED",s.model_ready?"true":"false",s.led?"true":"false",s.buzzer?"true":"false",s.self_test?"true":"false",static_cast<unsigned long>(s.clips),s.ptp,s.diff_percent,s.power50_ratio,s.baseline_delta,s.quality_known?"true":"false",static_cast<long long>(s.quality_time),static_cast<unsigned long>(dropped.load()),static_cast<unsigned long>(write_errors.load()));
++            Clock clock;portENTER_CRITICAL(&clock_lock);clock=acquisition;portEXIT_CRITICAL(&clock_lock);
++            char hz[32]="null",mean[32]="null",txhz[32]="null";
++            if(clock.intervals && clock.last>clock.first) {
++                snprintf(hz,sizeof(hz),"%.6f",clock.intervals*1000000.0/(clock.last-clock.first));
++                snprintf(mean,sizeof(mean),"%.3f",static_cast<double>(clock.last-clock.first)/clock.intervals);
++            }
++            if(completed_count>=2) {
++                const auto& first=completed[completed_count==32?completed_next:0];
++                const auto& last=completed[(completed_next+31)%32];
++                if(last.time>first.time)snprintf(txhz,sizeof(txhz),"%.6f",static_cast<uint32_t>(last.samples-first.samples)*1000000.0/(last.time-first.time));
++            }
++            const int n=snprintf(json,sizeof(json),"{\"v\":1,\"type\":\"status\",\"boot\":\"%08lx\",\"seq\":%lu,\"t_us\":%lld,\"firmware\":\"ecg-monitor-2\",\"source\":\"%s\",\"state\":\"%s\",\"reason\":\"%s\",\"model\":\"%s\",\"golden\":%s,\"classification\":\"UNKNOWN\",\"p_pvc\":null,\"threshold\":0.52,\"r_validated\":false,\"bpm\":null,\"rr_ms\":null,\"led\":%s,\"buzzer\":%s,\"self_test\":%s,\"clip_count\":%lu,\"ptp\":%d,\"diff_percent\":%.4f,\"power50_ratio\":%.6f,\"baseline_delta\":%.4f,\"quality_known\":%s,\"quality_t_us\":%lld,\"tx_dropped\":%lu,\"write_errors\":%lu}",
++                static_cast<unsigned long>(boot),static_cast<unsigned long>(sequence++),static_cast<long long>(now),kSource,s.state,kSynthetic?"SYNTHETIC_TELEMETRY_TEST":s.reason,s.model_ready?"LOCKED":"DISABLED",s.model_ready?"true":"false",s.led?"true":"false",s.buzzer?"true":"false",s.self_test?"true":"false",static_cast<unsigned long>(s.clips),s.ptp,s.diff_percent,s.power50_ratio,s.baseline_delta,s.quality_known?"true":"false",static_cast<long long>(s.quality_time),static_cast<unsigned long>(dropped.load()),static_cast<unsigned long>(write_errors.load()));
+             // Append cumulative sampler health before the closing brace.
+             if(n>0 && static_cast<size_t>(n)<sizeof(json)) {
+-                const int extra=snprintf(json+n-1,sizeof(json)-n+1,",\"quality_valid\":%s,\"r_peaks\":[],\"adc_errors\":%lu,\"missed_est\":%lu,\"late\":%lu,\"snapshot_errors\":%lu,\"rail_margin\":%d,\"diff_limit\":%d}",
+-                    s.quality_valid?"true":"false",static_cast<unsigned long>(adc_errors_total.load()),static_cast<unsigned long>(missed_total.load()),static_cast<unsigned long>(late_total.load()),static_cast<unsigned long>(snapshot_errors.load()),CONFIG_ECG_ADC_RAIL_MARGIN,CONFIG_ECG_MAX_DIFF_PERCENT);
++                const int extra=snprintf(json+n-1,sizeof(json)-n+1,",\"quality_valid\":%s,\"r_peaks\":[],\"adc_errors\":%lu,\"missed_est\":%lu,\"late\":%lu,\"snapshot_errors\":%lu,\"rail_margin\":%d,\"diff_limit\":%d,\"baud\":115200,\"sample_attempts\":%lu,\"tx_samples\":%lu,\"tx_bytes\":%lu,\"acq_hz\":%s,\"tx_hz\":%s,\"dt_mean_us\":%s,\"dt_min_us\":%lld,\"dt_max_us\":%lld,\"clock_last_us\":%lld}",
++                    s.quality_valid?"true":"false",static_cast<unsigned long>(adc_errors_total.load()),static_cast<unsigned long>(missed_total.load()),static_cast<unsigned long>(late_total.load()),static_cast<unsigned long>(snapshot_errors.load()),CONFIG_ECG_ADC_RAIL_MARGIN,CONFIG_ECG_MAX_DIFF_PERCENT,
++                    static_cast<unsigned long>(attempts.load()),static_cast<unsigned long>(tx_samples),static_cast<unsigned long>(tx_bytes),hz,txhz,mean,
++                    static_cast<long long>(clock.minimum),static_cast<long long>(clock.maximum),static_cast<long long>(clock.last));
+                 if(extra>0 && static_cast<size_t>(extra)<sizeof(json)-n+1)emit(json);else ++write_errors;
+             }else ++write_errors;
+         }
+@@ -63,13 +99,33 @@
+ }
+ void telemetry_sample(int raw,int64_t timestamp,uint8_t plus,uint8_t minus,bool adc_error,bool missed) {
+     if(!queue)return;
++    ++attempts;
+     if(!count) {pending.first=sample_index;pending.t0=timestamp;}
+     ecg_wire::sample(pending.bytes+count*ecg_wire::kStride,static_cast<uint32_t>(timestamp-pending.t0),raw,
+         static_cast<uint8_t>((plus?1:0)|(minus?2:0)|(adc_error?4:0)|(missed?8:0)));
+     ++sample_index;
+     if(++count==ecg_wire::kBatch) {if(xQueueSend(queue,&pending,0)!=pdTRUE)++dropped;count=0;}
+ }
+-void telemetry_health(uint32_t adc_errors,uint32_t missed,uint32_t late,bool snapshot_ok) {
++void telemetry_health(uint32_t adc_errors,uint32_t missed,uint32_t late,bool snapshot_ok,
++    uint32_t intervals,int64_t first_us,int64_t last_us,int64_t dt_min,int64_t dt_max) {
+     adc_errors_total.fetch_add(adc_errors);missed_total.fetch_add(missed);late_total.fetch_add(late);
+     if(!snapshot_ok)++snapshot_errors;
++    portENTER_CRITICAL(&clock_lock);acquisition={intervals,first_us,last_us,dt_min,dt_max};portEXIT_CRITICAL(&clock_lock);
+ }
++
++esp_err_t telemetry_uart_init() {
++#if CONFIG_ECG_TELEMETRY
++    if(uart_is_driver_installed(UART_NUM_0))return ESP_ERR_INVALID_STATE;
++    uart_config_t config={};config.baud_rate=115200;config.data_bits=UART_DATA_8_BITS;
++    config.parity=UART_PARITY_DISABLE;config.stop_bits=UART_STOP_BITS_1;config.flow_ctrl=UART_HW_FLOWCTRL_DISABLE;
++    config.source_clk=UART_SCLK_DEFAULT;
++    esp_err_t error=uart_param_config(UART_NUM_0,&config);if(error!=ESP_OK)return error;
++    error=uart_driver_install(UART_NUM_0,256,4096,0,nullptr,0);if(error!=ESP_OK)return error;
++    uart_vfs_dev_use_driver(UART_NUM_0); // All stdout writers share the UART driver's TX lock.
++    if(uart_vfs_dev_port_set_tx_line_endings(UART_NUM_0,ESP_LINE_ENDINGS_LF)!=0)return ESP_FAIL;
++    uint32_t baud=0;error=uart_get_baudrate(UART_NUM_0,&baud);
++    if(error!=ESP_OK)return error;
++    if(baud!=115200)return ESP_FAIL;
++#endif
++    return ESP_OK;
++}
+--- before/firmware\esp32_ecg_tinyml_integrated\main\telemetry.h
++++ current/firmware\esp32_ecg_tinyml_integrated\main\telemetry.h
+@@ -2,5 +2,7 @@
+ #include <cstdint>
+ #include "esp_err.h"
+ esp_err_t telemetry_init();
++esp_err_t telemetry_uart_init();
+ void telemetry_sample(int raw,int64_t timestamp,uint8_t plus,uint8_t minus,bool adc_error,bool missed);
+-void telemetry_health(uint32_t adc_errors,uint32_t missed,uint32_t late,bool snapshot_ok);
++void telemetry_health(uint32_t adc_errors,uint32_t missed,uint32_t late,bool snapshot_ok,
++    uint32_t intervals,int64_t first_us,int64_t last_us,int64_t dt_min,int64_t dt_max);
+--- before/firmware\esp32_ecg_tinyml_integrated\main\telemetry_codec.h
++++ current/firmware\esp32_ecg_tinyml_integrated\main\telemetry_codec.h
+@@ -1,8 +1,11 @@
+ #pragma once
+ #include <cstddef>
+ #include <cstdint>
++#include <cstdio>
++#include <cstring>
+ namespace ecg_wire {
+ constexpr size_t kBatch=32,kStride=7;
++inline int synthetic(uint32_t index) {return 512+static_cast<int>((static_cast<uint64_t>(index)*17)%3072);}
+ inline uint32_t crc32(const uint8_t* p,size_t n) {
+     uint32_t c=0xffffffffu;
+     for(size_t i=0;i<n;++i) {c^=p[i];for(int b=0;b<8;++b)c=(c>>1)^(0xedb88320u & (0u-(c&1)));}
+@@ -13,4 +16,9 @@
+     const uint16_t v=raw<0?65535:static_cast<uint16_t>(raw);
+     p[4]=v&255;p[5]=v>>8;p[6]=flags;
+ }
++inline int frame(const char* json,char* output,size_t capacity) {
++    if(!json || !output || !capacity)return -1;
++    const int n=snprintf(output,capacity,"\nECG1 %08lx %s\n",static_cast<unsigned long>(crc32(reinterpret_cast<const uint8_t*>(json),strlen(json))),json);
++    return n>0 && static_cast<size_t>(n)<capacity?n:-1;
+ }
++}
+--- before/tools\ecg_monitor\ecg_monitor\app.py
++++ current/tools\ecg_monitor\ecg_monitor\app.py
+@@ -29,6 +29,7 @@
+         self.session=Session();self.worker=None;self.parser=StreamParser();self.monitoring=False
+         self.demo_first=0;self.demo_seq=0;self.last_demo=time.monotonic();self.last_event=None
+         self.last_packet=0;self.connected_at=0;self.filter_state=None
++        self.display_rejections=0
+         self.setStyleSheet('''QWidget {background:#101a2b;color:#e5edf6;font-family:Segoe UI;font-size:13px;}
+             QLabel#title {font-size:25px;font-weight:700;} QLabel#banner {background:#26364a;padding:12px;border-radius:6px;}
+             QGroupBox {border:1px solid #33465f;border-radius:7px;margin-top:12px;padding:12px;}
+@@ -72,7 +73,7 @@
+         self.reason=W.QLabel('Đang chờ dữ liệu ECG');self.reason.setWordWrap(True);form.addWidget(self.reason)
+         self.fields={}
+         grid=W.QFormLayout();form.addLayout(grid)
+-        for name in ['Source','Connection','Firmware','Sampling rate','Lead status','Signal quality','Amplitude / Δ ratio','50 Hz estimate','Clipping / 256','Baseline Δ counts','Errors / lost','AI mode','Classification','PVC probability','BPM / RR','LED / buzzer']:
++        for name in ['Source','Connection','Firmware','ADC / generator rate','TX completed rate','RX device-time rate','RX wall-clock rate','Lead status','Signal quality','Amplitude / Δ ratio','50 Hz estimate','Clipping / 256','Baseline Δ counts','Errors / lost','AI mode','Classification','PVC probability','BPM / RR','LED / buzzer']:
+             label=W.QLabel('--');label.setWordWrap(True);label.setSizePolicy(W.QSizePolicy.Policy.Preferred,W.QSizePolicy.Policy.Minimum);grid.addRow(name,label);self.fields[name]=label
+         form.addStretch()
+         locked=W.QLabel('AI TEST: LOCKED\nCần detector + end-to-end + simulator PASS. Golden inference không mở khóa AI-live.');locked.setWordWrap(True);form.addWidget(locked)
+@@ -103,20 +104,29 @@
+         self.disconnect();self.monitoring=False;self.start_button.setText('Start Monitoring')
+         self.session=Session();self.parser=StreamParser();self.last_packet=0;self.filter_state=None
+         self.connect_button.setEnabled(self.mode.currentIndex()==1)
+-        self.raw.setData([],[]);self.filtered.setData([],[])
++        self.reset_plot()
+         self.log_event('Đổi nguồn: '+self.mode.currentText());self.update_status()
+ 
+     def disconnect(self):
+         if self.worker:self.worker.stop();self.worker=None
+         self.session.stop_recording();self.session.disconnect();self.connect_button.setText('Connect')
+         self.record_button.setText('Save session CSV…');self.record_label.setText('No recording')
++        self.session=Session();self.last_packet=0;self.monitoring=False;self.start_button.setText('Start Monitoring')
++        self.parser=StreamParser();self.reset_plot()
++
++    def reset_plot(self):
++        self.raw.setData([],[]);self.filtered.setData([],[])
++        self.plot.setXRange(0,10,padding=0);self.plot.setYRange(0,4095,padding=.02)
++        self.plot.enableAutoRange(axis='y',enable=True)
++        self.filter_state=None;self.demo_first=0;self.demo_seq=0;self.last_demo=time.monotonic()
+ 
+     def toggle_connect(self):
+         if self.worker:self.disconnect();return
+         if self.mode.currentIndex()!=1:self.log_event('Chọn HARDWARE MONITOR để kết nối COM.');return
+         port=self.port.currentData()
+         if not port:self.log_event('Không có COM. Kết nối ESP32 và Refresh COM.');return
+-        self.worker=SerialWorker(port,self.reconnect.isChecked());self.worker.start();self.connected_at=time.monotonic()
++        self.worker=SerialWorker(port,self.reconnect.isChecked(),capture_dir=Path(__file__).resolve().parents[1]/'captures')
++        self.worker.start();self.connected_at=time.monotonic()
+         self.connect_button.setText('Disconnect');self.log_event('Đang mở '+port+'; hãy đóng idf.py monitor nếu cổng đang bận.')
+ 
+     def toggle_monitor(self):
+@@ -125,8 +135,16 @@
+         if self.mode.currentIndex()==1 and not self.worker:self.log_event('Connect ESP32 trước.');return
+         self.monitoring=not self.monitoring;self.start_button.setText('Stop Monitoring' if self.monitoring else 'Start Monitoring')
+         if self.monitoring:
+-            self.last_demo=time.monotonic();self.session.source='DEMO' if self.mode.currentIndex()==0 else 'HARDWARE'
+-        if not self.monitoring:self.session.stop_recording();self.record_button.setText('Save session CSV…')
++            self.session=Session();self.reset_plot()
++            if self.mode.currentIndex()==0:self.parser=StreamParser()
++            if self.worker:
++                while True:
++                    try:self.worker.events.get_nowait()
++                    except queue.Empty:break
++            self.session.source='DEMO' if self.mode.currentIndex()==0 else 'HARDWARE'
++        if not self.monitoring:
++            self.session.stop_recording();self.session.disconnect();self.reset_plot();self.last_packet=0
++            self.record_button.setText('Save session CSV…')
+         self.log_event('Monitoring '+('started' if self.monitoring else 'stopped'))
+ 
+     def toggle_recording(self):
+@@ -150,8 +168,17 @@
+ 
+     def accept(self,p,source):
+         self.last_packet=time.monotonic()
+-        if self.monitoring:self.session.consume(p,source)
+-        elif p['type']=='status':self.session.consume(p,source)
++        actual_source=p.get('source',source)
++        if actual_source not in ('SYNTHETIC_TEST','DEMO','HARDWARE','REPLAY'):actual_source=source
++        old_boot=self.session.boot
++        try:
++            if self.monitoring:self.session.consume(p,actual_source)
++            elif p['type']=='status':self.session.consume(p,actual_source)
++        except (ValueError,TypeError,OverflowError) as e:
++            self.display_rejections+=1
++            if self.display_rejections==1:self.log_event('Rejected display input: '+str(e))
++            return
++        if old_boot is not None and old_boot!=self.session.boot:self.reset_plot()
+ 
+     def tick(self):
+         now=time.monotonic()
+@@ -167,16 +194,20 @@
+                 if kind=='packet':self.accept(data,'HARDWARE')
+                 else:
+                     self.log_event(kind+': '+str(data))
+-                    if kind=='disconnected':self.session.disconnect();self.last_packet=0
++                    if kind in ('connected','disconnected'):
++                        self.session.stop_recording();self.session=Session();self.reset_plot();self.last_packet=0
+             if self.connected_at and now-self.connected_at>5 and not self.last_packet:
+                 self.log_event('Chưa nhận ECG1 hợp lệ: kiểm tra firmware telemetry, COM và baud115200.');self.connected_at=now
+         if self.last_packet and now-self.last_packet>2:
+-            self.session.disconnect();self.last_packet=0;self.log_event('Telemetry timeout: xóa kết quả AI/BPM cũ.')
++            self.session.disconnect();self.reset_plot();self.last_packet=0;self.log_event('Telemetry timeout: xóa kết quả AI/BPM cũ.')
+         if self.session.record_error:
+             self.log_event('Recording stopped: '+self.session.record_error);self.record_label.setText('Recording error — raw monitor continues')
+             self.record_button.setText('Save session CSV…');self.session.record_error=None
+         if not self.pause.isChecked() and self.session.times:
+             x=np.array(self.session.times,dtype=float)/1e6;y=np.array(self.session.values,dtype=float)
++            if np.any(np.isinf(y)) or np.any(np.isfinite(y)&((y<0)|(y>4095))) or not np.isfinite(x).all() or np.any(np.diff(x)<=0):
++                self.display_rejections+=1;self.session.disconnect();self.reset_plot()
++                self.log_event('Display rejected invalid ADC/timestamp; no range clamp used to hide it.');self.update_status();return
+             self.raw.setData(x,y) if self.show_raw.isChecked() else self.raw.setData([],[])
+             if self.show_filtered.isChecked():
+                 from scipy.signal import butter,sosfilt
+@@ -194,9 +225,11 @@
+ 
+     def update_status(self):
+         s=self.session.status;demo=self.mode.currentIndex()==0;live=bool(self.last_packet)
++        synthetic=self.session.source=='SYNTHETIC_TEST'
+         label,p=valid_classification(s,self.session.source,max(s.get('t_us',0),self.session.times[-1] if self.session.times else 0),self.session.last_invalid_t)
+         state='DEMO' if demo and self.monitoring else s.get('state','WAITING') if live else 'WAITING'
+-        if self.session.local_invalid_reason and not demo and live:
++        if synthetic and live:state='SYNTHETIC_TEST';label,p='UNKNOWN',None
++        if self.session.local_invalid_reason and not demo and not synthetic and live:
+             label,p='UNKNOWN',None
+             if state not in ('SYSTEM_FAULT','SELF_TEST'):state='SIGNAL_INVALID'
+         if state in ('NORMAL','PVC') and label=='UNKNOWN':state='SIGNAL_INVALID'
+@@ -204,14 +237,21 @@
+         reason=s.get('reason','');self.reason.setText('Dữ liệu tổng hợp để kiểm thử giao diện; AI chưa chạy.' if demo else REASONS.get(reason,reason or 'Đang chờ dữ liệu ECG'))
+         if self.session.local_invalid_reason and not demo and state=='SIGNAL_INVALID':self.reason.setText(REASONS.get(self.session.local_invalid_reason,self.session.local_invalid_reason))
+         if state=='SELF_TEST':self.reason.setText('Kiểm tra LED/buzzer khi khởi động • độc lập AI, không phải cảnh báo PVC.')
++        if synthetic:self.reason.setText('SYNTHETIC_TEST • mẫu xác định từ ESP32, không phải ECG; không đưa vào AI.')
+         fields=self.fields;fields['Source'].setText('DEMO • SYNTHETIC' if demo else 'HARDWARE • ADC' if live else '--')
++        if synthetic:fields['Source'].setText('SYNTHETIC_TEST • ESP32')
+         fields['Connection'].setText('DEMO / no device' if demo else 'Receiving ECG1' if live else 'No valid telemetry')
+         fields['Firmware'].setText(s.get('firmware','--'))
+         raw_fresh=live and time.monotonic()-self.session.last_samples_received<2
+         if len(self.session.received_times)>1 and raw_fresh:
+             times=list(self.session.received_times);rate=(len(times)-1)*1e6/(times[-1]-times[0]) if times[-1]>times[0] else 0
+-            fields['Sampling rate'].setText(f'{rate:.2f} Hz')
+-        else:fields['Sampling rate'].setText('--')
++            fields['RX device-time rate'].setText(f'{rate:.2f} Hz (delivered)')
++        else:fields['RX device-time rate'].setText('--')
++        hz=s.get('acq_hz');tx=s.get('tx_hz');wall=self.session.received_wall_rate()
++        fresh_clock=live and 0<=s.get('t_us',0)-s.get('clock_last_us',-10**18)<2_000_000
++        fields['ADC / generator rate'].setText(f'{hz:.2f} Hz / {"SYNTH" if synthetic else "ADC"}' if hz is not None and fresh_clock else '--')
++        fields['TX completed rate'].setText(f'{tx:.2f} Hz' if tx is not None and raw_fresh else '--')
++        fields['RX wall-clock rate'].setText(f'{wall:.2f} Hz' if wall is not None and raw_fresh else '--')
+         last_flag=self.session.flags[-1] if self.session.flags else None
+         fields['Lead status'].setText('SIMULATED' if demo else '--' if last_flag is None or not raw_fresh else f'LO+={last_flag&1}, LO−={(last_flag>>1)&1}')
+         known=s.get('quality_known') is True and live and 0<=s.get('t_us',0)-s.get('quality_t_us',-10**18)<=2_000_000
+@@ -223,8 +263,10 @@
+         parser=self.worker.parser if self.worker else self.parser
+         self.session.transport_stats=dict(scope='Cumulative parser/worker counters at last UI update',
+             parse_errors=parser.errors,lost_packets=parser.lost_packets,lost_samples=parser.lost_samples,
++            crc_failures=parser.crc_failures,framing_errors=parser.framing_errors,schema_errors=parser.schema_errors,
++            sequence_errors=parser.sequence_errors,rx_timing_violations=parser.timing_violations,synthetic_mismatches=parser.synthetic_mismatches,
+             host_queue_dropped=self.worker.host_dropped if self.worker else 0,reconnects=parser.reconnects)
+-        fields['Errors / lost'].setText(f'CRC/parse {parser.errors} • packets {parser.lost_packets} • samples {parser.lost_samples} • host {self.worker.host_dropped if self.worker else 0}')
++        fields['Errors / lost'].setText(f'Connection counters: CRC {parser.crc_failures} • frame {parser.framing_errors} • schema {parser.schema_errors} • sequence {parser.sequence_errors}\nPacket gaps {parser.lost_packets} • missing samples {parser.lost_samples} • RX timing {parser.timing_violations}\nSynthetic mismatch {parser.synthetic_mismatches} • host queue drops(worker) {self.worker.host_dropped if self.worker else 0} • reconnects(worker) {parser.reconnects}')
+         if s:fields['Errors / lost'].setText(fields['Errors / lost'].text()+f'\nADC {s.get("adc_errors","--")} • missed {s.get("missed_est","--")} • tx {s.get("tx_dropped","--")}')
+         fields['AI mode'].setText('DISABLED • DEMO' if demo else s.get('model','LOCKED / no data'))
+         fields['Classification'].setText(label);fields['PVC probability'].setText('--' if p is None else f'{p:.5f}')
+--- before/tools\ecg_monitor\ecg_monitor\protocol.py
++++ current/tools\ecg_monitor\ecg_monitor\protocol.py
+@@ -25,10 +25,17 @@
+     return value
+ 
+ 
++class FrameError(ValueError): pass
++class CrcError(ValueError): pass
++class PatternError(ValueError): pass
++
++
+ def decode(line):
+-    if len(line)>MAX_LINE: raise ValueError('oversized frame')
+-    prefix,crc,body=line.rstrip(b'\r\n').split(b' ',2)
+-    if prefix!=b'ECG1' or len(crc)!=8 or int(crc,16)!=zlib.crc32(body): raise ValueError('CRC/frame rejected')
++    if len(line)>MAX_LINE: raise FrameError('oversized frame')
++    try:prefix,crc,body=line.rstrip(b'\r\n').split(b' ',2)
++    except ValueError as error:raise FrameError('missing frame fields') from error
++    if prefix!=b'ECG1' or len(crc)!=8 or not re.fullmatch(b'[0-9a-fA-F]{8}',crc):raise FrameError('invalid prefix/CRC field')
++    if int(crc,16)!=zlib.crc32(body):raise CrcError('CRC mismatch')
+     p=json.loads(body,parse_constant=lambda x: (_ for _ in ()).throw(ValueError('nonfinite JSON')))
+     if not isinstance(p,dict) or type(p.get('v')) is not int or p.get('v')!=1 or p.get('type') not in ('samples','status'): raise ValueError('unsupported protocol/type')
+     if not isinstance(p.get('boot'),str) or not 1<=len(p['boot'])<=32: raise ValueError('invalid boot')
+@@ -42,6 +49,12 @@
+         for dt,adc,flags in rows:
+             if dt>10_000_000 or flags&~15 or (adc>4095 and not (adc==65535 and flags&4)): raise ValueError('invalid sample')
+         p['samples']=[(p['t0']+dt,adc,flags) for dt,adc,flags in rows]
++        if p.get('source') not in (None,'HARDWARE','SYNTHETIC_TEST'):raise ValueError('invalid sample source')
++        if p.get('source')=='SYNTHETIC_TEST':
++            if p.get('pattern')!='saw17-v1':raise PatternError('unknown synthetic pattern')
++            for i,(_,adc,flags) in enumerate(rows):
++                expected=512+((((p['first']+i)&0xffffffff)*17)%3072)
++                if adc!=expected or flags&7:raise PatternError('synthetic sample differs from deterministic reference')
+     else:
+         _integer(p,'t_us',0,2**63-1)
+         if p.get('state') not in ('SELF_TEST','WAITING','COLLECTING','SIGNAL_INVALID','NORMAL','PVC','SYSTEM_FAULT'): raise ValueError('invalid state')
+@@ -67,14 +80,25 @@
+ 
+ 
+ class StreamParser:
+-    def __init__(self):
+-        self.buffer=bytearray();self.discard=False;self.errors=0;self.debug_lines=0
+-        self.lost_packets=0;self.lost_samples=0;self.reconnects=0
+-        self.boot=None;self.seq=None;self.first=None;self.last_time=None
++    def __init__(self,on_reject=None):
++        self.on_reject=on_reject;self.connections=0;self.reconnects=0
++        self._reset()
++
++    def _reset(self):
++        self.buffer=bytearray();self.discard=False;self.debug_lines=0
++        self.crc_failures=0;self.framing_errors=0;self.schema_errors=0;self.sequence_errors=0
++        self.lost_packets=0;self.lost_samples=0;self.timing_violations=0;self.synthetic_mismatches=0
++        self.boot=None;self.seq=None;self.first=None;self.last_time=None;self.retired=set()
++
++    @property
++    def errors(self):return self.crc_failures+self.framing_errors+self.schema_errors+self.sequence_errors+self.synthetic_mismatches
+ 
+     def reset_connection(self):
+-        self.buffer.clear();self.discard=False;self.boot=None;self.seq=None;self.first=None;self.last_time=None
+-        self.reconnects+=1
++        self.connections+=1;self.reconnects=max(0,self.connections-1);self._reset()
++
++    def reject(self,kind,error,line):
++        setattr(self,kind,getattr(self,kind)+1)
++        if self.on_reject:self.on_reject(dict(kind=kind,reason=str(error),line_hex=line.hex()))
+ 
+     def feed(self,data):
+         result=[]
+@@ -83,24 +107,38 @@
+                 if self.discard:self.discard=False;self.buffer.clear();continue
+                 line=bytes(self.buffer);self.buffer.clear()
+                 if not line.startswith(b'ECG1 '):self.debug_lines+=1;continue
++                try:p=decode(line)
++                except CrcError as e:self.reject('crc_failures',e,line);continue
++                except FrameError as e:self.reject('framing_errors',e,line);continue
++                except PatternError as e:self.reject('synthetic_mismatches',e,line);continue
++                except (ValueError,KeyError,TypeError,UnicodeError,OverflowError) as e:self.reject('schema_errors',e,line);continue
++                changed=p['boot']!=self.boot
++                seq=None if changed else self.seq;first=None if changed else self.first;last=None if changed else self.last_time
+                 try:
+-                    p=decode(line)
+-                    if p['boot']!=self.boot:
+-                        self.boot=p['boot'];self.seq=None;self.first=None;self.last_time=None
+-                    if self.seq is not None:
+-                        delta=(p['seq']-self.seq)&0xffffffff
+-                        if delta==0 or delta>=0x80000000:raise ValueError('duplicate/out-of-order packet')
+-                    else:delta=1
++                    if changed and p['boot'] in self.retired:raise ValueError('retired boot replay')
++                    delta=1 if seq is None else (p['seq']-seq)&0xffffffff
++                    if delta==0 or delta>=0x80000000:raise ValueError('duplicate/out-of-order packet')
++                    gap=0;timing=0
+                     if p['type']=='samples':
+-                        if self.first is not None:
+-                            gap=(p['first']-self.first)&0xffffffff
++                        if first is not None:
++                            gap=(p['first']-first)&0xffffffff
+                             if gap>=0x80000000:raise ValueError('sample sequence moved backwards')
+-                        else:gap=0
+-                        if self.last_time is not None and p['samples'][0][0]<=self.last_time:raise ValueError('sample time moved backwards')
+-                        self.lost_samples+=gap;self.first=(p['first']+p['n'])&0xffffffff;self.last_time=p['samples'][-1][0]
+-                    self.lost_packets+=delta-1;self.seq=p['seq'];result.append(p)
+-                except (ValueError,KeyError,TypeError,UnicodeError,OverflowError):self.errors+=1
++                        if last is not None and p['samples'][0][0]<=last:raise ValueError('sample time moved backwards')
++                        times=[r[0] for r in p['samples']]
++                        if last is not None and gap==0:times.insert(0,last)
++                        timing=sum(abs(b-a-4000)>500 for a,b in zip(times,times[1:]))
++                except ValueError as e:self.reject('sequence_errors',e,line);continue
++                if changed:
++                    if self.boot is not None:
++                        if len(self.retired)>=16:self.retired.clear()
++                        self.retired.add(self.boot)
++                    self.boot=p['boot'];self.first=None;self.last_time=None
++                if p['type']=='samples':
++                    self.lost_samples+=gap;self.timing_violations+=timing
++                    self.first=(p['first']+p['n'])&0xffffffff;self.last_time=p['samples'][-1][0]
++                self.lost_packets+=delta-1;self.seq=p['seq'];result.append(p)
+             elif not self.discard:
+                 self.buffer.append(byte)
+-                if len(self.buffer)>MAX_LINE:self.errors+=1;self.buffer.clear();self.discard=True
++                if len(self.buffer)>MAX_LINE:
++                    self.reject('framing_errors','oversized unterminated frame',bytes(self.buffer));self.buffer.clear();self.discard=True
+         return result
+--- before/tools\ecg_monitor\ecg_monitor\serial_worker.py
++++ current/tools\ecg_monitor\ecg_monitor\serial_worker.py
+@@ -2,15 +2,45 @@
+ import threading
+ import time
+ import serial
++import json
++from pathlib import Path
++from datetime import datetime,timezone
++from uuid import uuid4
+ from .protocol import StreamParser
+ 
+ 
+ class SerialWorker:
+     """Never sends commands, reset pulses or opens a port until Connect is clicked."""
+-    def __init__(self,port,auto_reconnect=False,serial_factory=serial.Serial):
++    def __init__(self,port,auto_reconnect=False,serial_factory=serial.Serial,capture_dir=None):
+         self.port=port;self.auto_reconnect=auto_reconnect;self.factory=serial_factory
+         self.events=queue.Queue(maxsize=256);self.stop_event=threading.Event();self.parser=StreamParser()
+         self.thread=None;self.host_dropped=0
++        self.capture_dir=Path(capture_dir) if capture_dir else None
++        self.raw_capture=None;self.reject_capture=None;self.capture_path=None
++        self.parser.on_reject=self.capture_rejection
++
++    def capture_rejection(self,event):
++        if self.reject_capture:
++            try:self.reject_capture.write(json.dumps(event)+'\n');self.reject_capture.flush()
++            except OSError as e:self.post(('capture_error',str(e)));self.close_capture()
++
++    def open_capture(self):
++        if not self.capture_dir:return
++        try:
++            self.capture_dir.mkdir(parents=True,exist_ok=True)
++            name=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'_'+uuid4().hex[:8]
++            self.capture_path=self.capture_dir/(name+'.bin')
++            self.raw_capture=self.capture_path.open('xb')
++            self.reject_capture=self.capture_path.with_suffix('.rejects.jsonl').open('x',encoding='utf-8')
++            self.post(('capture',str(self.capture_path)))
++        except OSError as e:self.post(('capture_error',str(e)));self.close_capture()
++
++    def close_capture(self):
++        for file in (self.raw_capture,self.reject_capture):
++            if file:
++                try:file.close()
++                except OSError:pass
++        self.raw_capture=self.reject_capture=None
+ 
+     def post(self,event):
+         try:self.events.put_nowait(event)
+@@ -27,14 +57,19 @@
+         while not self.stop_event.is_set():
+             device=None
+             try:
+-                device=self.factory(port=None,baudrate=115200,timeout=.1,write_timeout=.1,dsrdtr=False,rtscts=False)
++                device=self.factory(port=None,baudrate=115200,timeout=.05,write_timeout=.1,dsrdtr=False,rtscts=False)
+                 device.dtr=False;device.rts=False;device.port=self.port;device.open()
+-                self.parser.reset_connection();self.post(('connected',self.port))
++                self.parser.reset_connection();self.open_capture();self.post(('connected',self.port))
+                 while not self.stop_event.is_set():
+-                    data=device.read(2048)
++                    waiting=getattr(device,'in_waiting',0)
++                    data=device.read(max(1,min(waiting,8192)))
++                    if self.raw_capture and data:
++                        try:self.raw_capture.write(data);self.raw_capture.flush()
++                        except OSError as e:self.post(('capture_error',str(e)));self.close_capture()
+                     for p in self.parser.feed(data):self.post(('packet',p))
+             except (serial.SerialException,OSError,ValueError) as e:self.post(('disconnected',str(e)))
+             finally:
++                self.close_capture()
+                 if device:
+                     try:device.close()
+                     except OSError:pass
+--- before/tools\ecg_monitor\ecg_monitor\session.py
++++ current/tools\ecg_monitor\ecg_monitor\session.py
+@@ -36,14 +36,28 @@
+         self.record_states=Counter();self.record_classes=Counter();self.record_first_t=None;self.record_last_t=None
+         self.record_error=None
+         self.transport_stats={}
++        self.arrivals=deque(maxlen=256)
+ 
+     def disconnect(self):
+         self.status={};self.last_received=0;self.last_samples_received=0;self.last_status_us=None;self.boot=None
++        self.times.clear();self.values.clear();self.flags.clear();self.received_times.clear()
++        self.local_invalid_reason=None;self.local_invalid_t=None;self.last_invalid_t=None
++        self.arrivals=deque(maxlen=256)
+ 
+     def consume(self,p,source):
++        if p['type']=='samples':
++            rows=p.get('samples',[])
++            if not rows or len(rows)>32:raise ValueError('invalid decoded batch length')
++            previous=self.received_times[-1] if self.received_times and self.boot==p['boot'] and self.source==source else None
++            for t,raw,flags in rows:
++                if type(t) is not int or not 0<=t<2**63 or (previous is not None and t<=previous):raise ValueError('invalid session timestamp')
++                if type(flags) is not int or flags&~15:raise ValueError('invalid session flags')
++                if type(raw) is not int or not (0<=raw<=4095 or (raw==65535 and flags&4)):raise ValueError('invalid session ADC')
++                previous=t
+         if self.boot!=p['boot'] or self.source!=source:
+             self.times.clear();self.values.clear();self.flags.clear();self.received_times.clear();self.status={};self.last_status_us=None
+             self.local_invalid_reason=None;self.local_invalid_t=None;self.last_invalid_t=None
++            self.arrivals.clear();self.total=0;self.adc_errors=0;self.missed_flags=0
+         self.boot=p['boot'];self.source=source;self.last_received=time.monotonic()
+         if p['type']=='status':
+             self.status=p;self.last_status_us=p['t_us']
+@@ -51,6 +65,8 @@
+                 self.local_invalid_reason=None;self.local_invalid_t=None
+             return
+         self.last_samples_received=time.monotonic()
++        if not hasattr(self,'arrivals'):self.arrivals=deque(maxlen=256)
++        self.arrivals.append((self.last_samples_received,len(p['samples'])))
+         if self.last_status_us is not None and p['samples'][-1][0]-self.last_status_us>2_000_000:self.status={}
+         for index,(t,raw,flags) in enumerate(p['samples']):
+             self.received_times.append(t)
+@@ -79,6 +95,12 @@
+         if self.csv:
+             try:self.csv.flush()
+             except OSError as error:self._record_failed(error)
++
++    def received_wall_rate(self,now=None):
++        now=time.monotonic() if now is None else now
++        rows=[r for r in getattr(self,'arrivals',[]) if now-r[0]<=5]
++        if len(rows)<2 or rows[-1][0]<=rows[0][0] or now-rows[-1][0]>2:return None
++        return sum(n for _,n in rows[1:])/(rows[-1][0]-rows[0][0])
+ 
+     def _record_failed(self,error):
+         self.record_error=str(error)

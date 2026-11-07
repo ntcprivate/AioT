@@ -1,0 +1,93 @@
+{
+  "status": "MAPPING_FIXED_LOG_DIAGNOSTICS_TESTED_BUILD_PASSED_HARDWARE_CAUSE_PENDING",
+  "mapping": {
+    "lo_plus_gpio": 27,
+    "lo_minus_gpio": 26,
+    "adc_gpio": 34,
+    "adc_channel": "ADC1_CHANNEL_6"
+  },
+  "gpio": {
+    "mode": "INPUT",
+    "pull_up": "DISABLED",
+    "pull_down": "DISABLED",
+    "interrupt": "DISABLED",
+    "active_level": "HIGH",
+    "module_ac_dc_mode": "NOT_READ"
+  },
+  "findings": {
+    "confirmed_software_error": "LO+ and LO- labels reversed; corrected",
+    "lo_any_invariant": "Swapping inputs leaves OR unchanged; mapping correction cannot explain or clear lo_any=256",
+    "lo_any256_meaning": "OR HIGH in every sampled pair, not necessarily one pin continuously HIGH",
+    "physical_cause": "NOT_DETERMINED from prior aggregate logs. No board readings in this task. Unconnected simulator/electrodes can legitimately assert lead-off; floating/wiring/power/mode issues require measurement.",
+    "drawing": "D:/diagram (1).json uses potentiometer on GPIO34 and a button on GPIO33; no GPIO26/27 or actual AD8232 circuit"
+  },
+  "logging": {
+    "boot": "AD8232_CONFIG",
+    "per_buffer": "AD8232_LEADS",
+    "lo_plus_raw": "Last GPIO27 level in completed256-sample buffer",
+    "lo_minus_raw": "Last GPIO26 level in same buffer",
+    "lead_off": "OR of last sample levels, 0/1",
+    "lo_any": "Count of asserted OR over256 samples",
+    "counts": [
+      "lo_plus_high",
+      "lo_minus_high",
+      "lo_both_high"
+    ],
+    "snapshot": "Same immutable queued Summary with checksum, independently recomputed from frozen sample buffer",
+    "line_integrity": "line_fnv1a; shared console lock; suppressed during operator trace"
+  },
+  "tests": {
+    "cpp_lead_off": "PASS; active-high truth table,65536 sequences, OR swap invariant, counts, snapshots/corruption,256-sample alternating leads",
+    "strict_trace_protocol": "14 PASS",
+    "cpp_trace_encoder": "PASS",
+    "cpp_signal_guards": "PASS",
+    "protected_source_sha256": {
+      "main/pipeline.cpp": true,
+      "main/pipeline.h": true,
+      "main/model.cpp": true,
+      "main/model.h": true,
+      "main/model/ecg_cnn_int8.tflite": true,
+      "main/test_data/ecg_test_metadata.h": true,
+      "main/test_data/ecg_test_samples_int8.bin": true,
+      "main/single_round_conv.cpp": true,
+      "main/single_round_math.h": true,
+      "main/signal.cpp": true,
+      "main/trace_transport.cpp": true,
+      "tests/compare_operator_trace.py": true
+    },
+    "original_projects_snapshot": "PASS unchanged",
+    "firmware_original_model_and_fixtures_embedded": "PASS",
+    "board_runtime": "NOT_RUN"
+  },
+  "build": {
+    "status": "PASSED",
+    "idf_version": "5.4.4",
+    "target": "esp32",
+    "method": "cmake --build build --parallel 4",
+    "exit_code": 0,
+    "binary_bytes": 296240,
+    "binary_sha256": "432da6f68ff2718cba9bdc51b2e85705c478d9f77a85b8cb4603376f9eec8a14",
+    "partition_check": "PASSED",
+    "log": "debug/lead_off_build.log",
+    "warnings_in_final_compile_link": "NONE"
+  },
+  "changed_runtime_files": [
+    "main/main.cpp",
+    "main/lead_off.h"
+  ],
+  "new_test": "tests/lead_off_test.cpp",
+  "protected_before_sha256": "lead_off_before_sha256.json",
+  "after_source_sha256": {
+    "main/main.cpp": "d6f65518aed6165db60e7e23b2e6c525f66221b68dfb0e6da3e6ecc98989a530",
+    "main/lead_off.h": "99f72736bd42294c15a2a15516221fc3828e070638798c7c8c2fb556cf53cd6e",
+    "tests/lead_off_test.cpp": "5c45e90e93ca631c666cfccd6eac0e692c49179cda378be23bb9cb951158e655"
+  },
+  "threshold": 0.52,
+  "live_ADC_enabled": false,
+  "invalid_leads_check": "RETAINED per sample and block",
+  "flash": "NOT_ATTEMPTED",
+  "reset": "NOT_ATTEMPTED",
+  "sampling_runtime_of_new_revision": "NOT_MEASURED",
+  "datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8232.pdf",
+  "notes": "lead_off_review.md"
+}

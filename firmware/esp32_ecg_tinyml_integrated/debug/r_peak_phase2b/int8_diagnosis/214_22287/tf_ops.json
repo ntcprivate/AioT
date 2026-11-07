@@ -1,0 +1,198 @@
+[
+  {
+    "op": 0,
+    "tag": "EXPAND_DIMS",
+    "tensor": 15,
+    "shape": [
+      1,
+      1,
+      256,
+      1
+    ],
+    "scale": 0.053921569138765335,
+    "zero": -27
+  },
+  {
+    "op": 1,
+    "tag": "CONV_2D",
+    "tensor": 16,
+    "shape": [
+      1,
+      1,
+      252,
+      8
+    ],
+    "scale": 0.04097747802734375,
+    "zero": -128
+  },
+  {
+    "op": 2,
+    "tag": "RESHAPE",
+    "tensor": 17,
+    "shape": [
+      1,
+      252,
+      8
+    ],
+    "scale": 0.04097747802734375,
+    "zero": -128
+  },
+  {
+    "op": 3,
+    "tag": "EXPAND_DIMS",
+    "tensor": 18,
+    "shape": [
+      1,
+      1,
+      252,
+      8
+    ],
+    "scale": 0.04097747802734375,
+    "zero": -128
+  },
+  {
+    "op": 4,
+    "tag": "MAX_POOL_2D",
+    "tensor": 19,
+    "shape": [
+      1,
+      1,
+      126,
+      8
+    ],
+    "scale": 0.04097747802734375,
+    "zero": -128
+  },
+  {
+    "op": 5,
+    "tag": "RESHAPE",
+    "tensor": 20,
+    "shape": [
+      1,
+      126,
+      8
+    ],
+    "scale": 0.04097747802734375,
+    "zero": -128
+  },
+  {
+    "op": 6,
+    "tag": "EXPAND_DIMS",
+    "tensor": 21,
+    "shape": [
+      1,
+      1,
+      126,
+      8
+    ],
+    "scale": 0.04097747802734375,
+    "zero": -128
+  },
+  {
+    "op": 7,
+    "tag": "CONV_2D",
+    "tensor": 22,
+    "shape": [
+      1,
+      1,
+      122,
+      16
+    ],
+    "scale": 0.07794410735368729,
+    "zero": -128
+  },
+  {
+    "op": 8,
+    "tag": "RESHAPE",
+    "tensor": 23,
+    "shape": [
+      1,
+      122,
+      16
+    ],
+    "scale": 0.07794410735368729,
+    "zero": -128
+  },
+  {
+    "op": 9,
+    "tag": "EXPAND_DIMS",
+    "tensor": 24,
+    "shape": [
+      1,
+      1,
+      122,
+      16
+    ],
+    "scale": 0.07794410735368729,
+    "zero": -128
+  },
+  {
+    "op": 10,
+    "tag": "MAX_POOL_2D",
+    "tensor": 25,
+    "shape": [
+      1,
+      1,
+      61,
+      16
+    ],
+    "scale": 0.07794410735368729,
+    "zero": -128
+  },
+  {
+    "op": 11,
+    "tag": "RESHAPE",
+    "tensor": 26,
+    "shape": [
+      1,
+      61,
+      16
+    ],
+    "scale": 0.07794410735368729,
+    "zero": -128
+  },
+  {
+    "op": 12,
+    "tag": "MEAN",
+    "tensor": 27,
+    "shape": [
+      1,
+      16
+    ],
+    "scale": 0.008803734555840492,
+    "zero": -128
+  },
+  {
+    "op": 13,
+    "tag": "FULLY_CONNECTED",
+    "tensor": 28,
+    "shape": [
+      1,
+      8
+    ],
+    "scale": 0.005616123788058758,
+    "zero": -128
+  },
+  {
+    "op": 14,
+    "tag": "FULLY_CONNECTED",
+    "tensor": 29,
+    "shape": [
+      1,
+      1
+    ],
+    "scale": 0.05139290168881416,
+    "zero": -38
+  },
+  {
+    "op": 15,
+    "tag": "LOGISTIC",
+    "tensor": 30,
+    "shape": [
+      1,
+      1
+    ],
+    "scale": 0.00390625,
+    "zero": -128
+  }
+]

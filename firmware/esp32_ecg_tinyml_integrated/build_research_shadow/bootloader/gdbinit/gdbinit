@@ -1,0 +1,2 @@
+source D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader/gdbinit/symbols
+source D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/build_research_shadow/bootloader/gdbinit/connect

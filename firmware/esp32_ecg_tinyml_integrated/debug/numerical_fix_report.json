@@ -1,0 +1,126 @@
+{
+  "status": "NUMERICAL_CAUSE_PROVEN_HOST_ALL_GOLDEN_EXACT_BUILD_PASSED_BOARD_PENDING",
+  "scope": "No execution, flash or reset of patched ESP32; host tests are not hardware PASS",
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+  "model_bytes": 8560,
+  "input_sample5_fnv": "54868f67",
+  "assets_match_step8": true,
+  "original_project_snapshot_unchanged": true,
+  "numerical_cause": "CONV double rounding versus CPU builtin single rounding; selective Conv-only adapter matches reference. Other kernels retain double rounding.",
+  "math_report": "isolated_conv_arithmetic.json",
+  "isolated_kernel_report": "conv_host_results.json",
+  "full_chain_report": "full_host_results.json",
+  "arithmetic_helper_report": "requantization_host_result.txt",
+  "actual_compile_flags": [
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/reduce.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    }
+  ],
+  "patch_configuration": {
+    "backend_single_rounding": 0,
+    "conv_single_rounding": 1,
+    "esp_nn_effective": 0,
+    "reference_active": 1
+  },
+  "tests": {
+    "model_integrity": "PASS",
+    "isolated_2016_bytes": "PASS; original 3 differences, patched 0",
+    "sample5_full_16_operator_chain": "PASS on host; zero differences",
+    "golden_12": "PASS on host; sample2=-66 sample5=7",
+    "rounding_20000_signed_cases_and_ties": "PASS",
+    "trace_protocol_unittests": "14 PASS",
+    "fresh_cpp_trace_encoder": "PASS",
+    "fresh_cpp_signal_guards": "PASS",
+    "original_corrupt_trace": "REJECTED as required; no repair; strict_trace_recheck.json",
+    "hardware_sampling_led_buzzer_fsm": "Source preserved/reviewed; runtime retest on board pending"
+  },
+  "partial_board_evidence": {
+    "verified_operator1_bytes": 2000,
+    "expected_tensor_bytes": 2016,
+    "scope": "Only individually checksum-verified chunks; not a complete transport PASS",
+    "new_board_capture": "NOT_AVAILABLE"
+  },
+  "build": {
+    "status": "PASSED",
+    "method": "ESP-IDF v5.4.4 cmake --build build --parallel 4",
+    "exit_code": 0,
+    "binary_bytes": 295072,
+    "binary_sha256": "b3f240cb228edefc8c1765e0aa1e16887a9ab90960c9f91c739147bf688b4eaf",
+    "partition_check": "PASSED",
+    "warning_scope": "Final incremental compile/link emitted no warnings; pre-existing full TFLM source may emit vendor warnings",
+    "log": "debug/numerical_build.log"
+  },
+  "source_sha256": {
+    "main/main.cpp": "22ce8e9522444ce8a6b95627962345ac68109a9356e9e594366204c39aa8b671",
+    "main/pipeline.cpp": "9411a9bd9489e681ba3939f0d1dca68c31671aa99690e94f7b595197e34b4bc9",
+    "main/signal.cpp": "f103df5a0149103626cda3328ab8f33a1b76ee09b89289193286c276673b2bef",
+    "main/trace_codec.h": "917a327bd06215aceda1fada89f93f3ddd01c9c69ce33ad18d40d47089a6b783",
+    "main/trace_transport.cpp": "2eec9efb7fb89a752e6f9a919ac97803263ef506daa3b6c06da754b2736e1716",
+    "tests/compare_operator_trace.py": "70658094df62726ff2541dce588a3432ada00abc46aa69f218e6e17eaf0e6d42",
+    "main/model.cpp": "a2e9df44747ea6f3d1b5ea7452162038f2e285ef069289ea6cab5fd1c63c904f",
+    "main/single_round_conv.cpp": "f89b61eecf305fb994af772ebd299c972afc203c72cd346f349e307ce8935b34",
+    "main/single_round_math.h": "6201eb5acd6631d2d0f1118be8799c1431901499d8d87a822c2833191ebec7de",
+    "CMakeLists.txt": "178d59ea99e367347a3aedd9de3f7421601bcc1e8d9283292e1583d065db2b36",
+    "main/CMakeLists.txt": "3e5a090a0de6c62d59598e2534e32716ab1c2c128f7ffaf373e724daac908d54",
+    "main/Kconfig.projbuild": "df83b49eb745235c0df1e12d191465644289aa1118d041f0695c6a4060f8737d"
+  },
+  "protected_assets": {
+    "main/model/ecg_cnn_int8.tflite": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "main/test_data/ecg_test_samples_int8.bin": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758",
+    "main/test_data/ecg_test_metadata.h": "b69fddca6df4f82fb68c47c4549f55dec406d9f52b762a1d1e2240721db6e296",
+    "debug/python_operator_reference.json": "8b77a3a56a97620172c67171aafcc516e1fd9a4e67e9419720eeb502378da302",
+    "debug/serial_trace_v2.log": "5af9c4509aeb028cbab40f0a558bede1ea42f580efaf8795f9ba0fb7de61a3be"
+  },
+  "live_ADC_enabled": false,
+  "threshold": 0.52,
+  "flash": "NOT_ATTEMPTED",
+  "reset": "NOT_ATTEMPTED",
+  "notes": "numerical_fix_notes.md",
+  "rejected_global_single_round_trial": {
+    "scope": "Prior diagnostic executable, NOT firmware patch",
+    "exit_code": 1,
+    "output": "HOST_GOLDEN mode=1 sample=0 code=-126 reference=-126 exact=1\nHOST_GOLDEN mode=1 sample=1 code=55 reference=50 exact=0\nHOST_GOLDEN mode=1 sample=2 code=-61 reference=-66 exact=0\nHOST_GOLDEN mode=1 sample=3 code=61 reference=68 exact=0\nHOST_GOLDEN mode=1 sample=4 code=-3 reference=7 exact=0\nHOST_GOLDEN mode=1 sample=5 code=10 reference=7 exact=0\nHOST_GOLDEN mode=1 sample=6 code=-125 reference=-124 exact=0\nHOST_GOLDEN mode=1 sample=7 code=-126 reference=-126 exact=1\nHOST_GOLDEN mode=1 sample=8 code=-125 reference=-125 exact=1\nHOST_GOLDEN mode=1 sample=9 code=53 reference=47 exact=0\nHOST_GOLDEN mode=1 sample=10 code=-126 reference=-126 exact=1\nHOST_GOLDEN mode=1 sample=11 code=-126 reference=-126 exact=1\nHOST_GOLDEN_DONE mode=1 failed=7\n",
+    "decision": "REJECTED; applying single rounding globally breaks other operator reference agreement"
+  },
+  "embedded_assets_in_firmware_binary": {
+    "main/model/ecg_cnn_int8.tflite": {
+      "offset": 51056,
+      "bytes": 8560,
+      "sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394"
+    },
+    "main/test_data/ecg_test_samples_int8.bin": {
+      "offset": 59620,
+      "bytes": 3072,
+      "sha256": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758"
+    }
+  },
+  "operator_reference_unchanged": true,
+  "generated_sdkconfig": {
+    "ECG_CONV_ARITHMETIC_LOG": true,
+    "ECG_CONV_DIAGNOSTIC_SAMPLE": 5,
+    "ECG_ENABLE_EXPERIMENTAL_LIVE": false
+  },
+  "changed_files_notes": "numerical_fix_notes.md#tests-and-limits"
+}

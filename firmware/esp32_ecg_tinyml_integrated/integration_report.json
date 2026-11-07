@@ -1,0 +1,95 @@
+{
+  "status": "MONITOR_IMPLEMENTED_HOST_CHECKS_PASS_AI_LIVE_NOT_READY",
+  "idf_required": "5.4.4",
+  "target": "esp32",
+  "original_projects_unchanged": true,
+  "source_evidence": "source_project_hashes.json",
+  "model_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+  "model_bytes": 8560,
+  "preserved": [
+    "Sample/Summary layout",
+    "ADC_BUFFER logger",
+    "GPTimer ISR",
+    "ADC sampling algorithm/250Hz; bounded processing hooks added"
+  ],
+  "checks": {
+    "host_signal_unit_tests": "PASSED",
+    "xtensa_syntax_only": "8/8 PASSED; cached reference include paths/config, not firmware build",
+    "host_actual_tflm_full_chain": "12/12 golden exact; 16/16 sample5 tensor byte comparisons exact"
+  },
+  "build": {
+    "status": "PASS",
+    "idf": "5.4.4",
+    "target": "esp32",
+    "binary_bytes": 299136,
+    "binary_sha256": "775db0b4939efd7ab3436aaed90c442473ff1a613d2943a493a2c4dcd91e9267",
+    "partition_check": "PASS",
+    "log": "debug/system_build_final.log",
+    "warnings": "No warnings in final incremental build; initial full build emitted existing vendor TFLM -Wshadow warnings",
+    "flash": "NOT_ATTEMPTED",
+    "reset": "NOT_ATTEMPTED"
+  },
+  "flash": "NOT_ATTEMPTED",
+  "hardware": "New telemetry/FSM/FC revision NOT_RUN on board; no flash/reset/COM open",
+  "required_tests": {
+    "golden_on_integrated_board": "NOT_RUN",
+    "quality_on_integrated_board": "NOT_RUN",
+    "live_bench_replay": "NOT_RUN"
+  },
+  "runtime_measurements": {
+    "arena_used": "NOT_MEASURED",
+    "heap": "NOT_MEASURED",
+    "stack": "NOT_MEASURED",
+    "latency": "NOT_MEASURED",
+    "sampling_under_AI": "NOT_MEASURED"
+  },
+  "live_mode": {
+    "default": "DISABLED",
+    "reason": "Training used annotation centers. No validated runtime R detector found; supplied detector is experimental only.",
+    "option": "CONFIG_ECG_ENABLE_EXPERIMENTAL_LIVE"
+  },
+  "labels": {
+    "N": 0,
+    "V": 1
+  },
+  "threshold": 0.52,
+  "pipeline": {
+    "input": "1x256x1 int8",
+    "window": "[center-128,center+128), center at index128",
+    "normalization": "population z-score float64 then float32, round ties-to-even INT8",
+    "model_filter": "No added model filter; detector baseline removal is separate",
+    "polarity": "Magnitude detector supports either sign; inverted model input validity not established"
+  },
+  "limitations": [
+    "Linked firmware build passed; no patched board execution or sampling measurement",
+    "No clinical validity or new PVC accuracy claim",
+    "Quality thresholds are adjustable engineering heuristics",
+    "No claim of zero missed ADC samples under AI load",
+    "No model/threshold/data changes or Test inference"
+  ],
+  "current_fix_report": "debug/system_completion.json",
+  "previous_status": "TRACE_PROTOCOL2_BUILD_PASSED_PENDING_BOARD_CAPTURE",
+  "previous_numerical_fix_build": {
+    "status": "PASSED",
+    "method": "ESP-IDF v5.4.4 cmake --build build --parallel 4",
+    "exit_code": 0,
+    "binary_bytes": 295072,
+    "binary_sha256": "b3f240cb228edefc8c1765e0aa1e16887a9ab90960c9f91c739147bf688b4eaf",
+    "partition_check": "PASSED",
+    "warning_scope": "Final incremental compile/link emitted no warnings; pre-existing full TFLM source may emit vendor warnings",
+    "log": "debug/numerical_build.log"
+  },
+  "current_lead_off_report": "debug/lead_off_review.json",
+  "previous_lead_off_build": {
+    "status": "PASSED",
+    "idf_version": "5.4.4",
+    "target": "esp32",
+    "method": "cmake --build build --parallel 4",
+    "exit_code": 0,
+    "binary_bytes": 296240,
+    "binary_sha256": "432da6f68ff2718cba9bdc51b2e85705c478d9f77a85b8cb4603376f9eec8a14",
+    "partition_check": "PASSED",
+    "log": "debug/lead_off_build.log",
+    "warnings_in_final_compile_link": "NONE"
+  }
+}

@@ -1,0 +1,10 @@
+menu "ECG Step 8"
+config ECG_ARENA_KIB
+    int "Internal tensor arena (KiB)"
+    range 16 128
+    default 64
+config ECG_REPEATS
+    int "Timed Invoke calls per sample"
+    range 30 100
+    default 30
+endmenu

@@ -1,0 +1,447 @@
+{
+  "plan": {
+    "records": [
+      "105",
+      "106",
+      "114",
+      "119",
+      "208",
+      "219"
+    ],
+    "candidates": [
+      {
+        "name": "hold_only",
+        "alpha": 0.01,
+        "factor": 2.5
+      },
+      {
+        "name": "fast_baseline",
+        "alpha": 0.025,
+        "factor": 2.5
+      },
+      {
+        "name": "fast_lower_envelope",
+        "alpha": 0.025,
+        "factor": 2.0
+      }
+    ],
+    "hold_samples": 50,
+    "selection": "macro F1 on Train; tie min sensitivity, then declaration order",
+    "reason": "Curvature trial rejected on development due major localization FP/FN; preserve original magnitude fiducial and confirm a stronger peak within200ms"
+  },
+  "results": [
+    {
+      "config": {
+        "name": "hold_only",
+        "alpha": 0.01,
+        "factor": 2.5
+      },
+      "per_record": [
+        {
+          "record": "105",
+          "tp": 2434,
+          "fp": 72,
+          "fn": 138,
+          "sensitivity": 0.9463452566096423,
+          "ppv": 0.9712689545091779,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 2391,
+            "V": 41,
+            "Q": 2
+          },
+          "missed_by_annotation": {
+            "N": 135,
+            "Q": 3
+          },
+          "f1": 0.9586451358802678
+        },
+        {
+          "record": "106",
+          "tp": 1982,
+          "fp": 80,
+          "fn": 45,
+          "sensitivity": 0.9777997039960533,
+          "ppv": 0.9612027158098934,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 32.0,
+          "matched_by_annotation": {
+            "N": 1505,
+            "V": 477
+          },
+          "missed_by_annotation": {
+            "N": 2,
+            "V": 43
+          },
+          "f1": 0.9694301785277574
+        },
+        {
+          "record": "114",
+          "tp": 1876,
+          "fp": 1,
+          "fn": 3,
+          "sensitivity": 0.9984034060670569,
+          "ppv": 0.9994672349493873,
+          "timing_median_abs_ms": 4.0,
+          "timing_p95_abs_ms": 8.0,
+          "matched_by_annotation": {
+            "N": 1818,
+            "V": 43,
+            "J": 2,
+            "F": 4,
+            "A": 9
+          },
+          "missed_by_annotation": {
+            "N": 2,
+            "A": 1
+          },
+          "f1": 0.9989350372736954
+        },
+        {
+          "record": "119",
+          "tp": 1981,
+          "fp": 6,
+          "fn": 6,
+          "sensitivity": 0.9969803724207348,
+          "ppv": 0.9969803724207348,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 1542,
+            "V": 439
+          },
+          "missed_by_annotation": {
+            "N": 1,
+            "V": 5
+          },
+          "f1": 0.9969803724207348
+        },
+        {
+          "record": "208",
+          "tp": 2925,
+          "fp": 10,
+          "fn": 30,
+          "sensitivity": 0.9898477157360406,
+          "ppv": 0.9965928449744463,
+          "timing_median_abs_ms": 4.0,
+          "timing_p95_abs_ms": 12.0,
+          "matched_by_annotation": {
+            "V": 984,
+            "N": 1570,
+            "F": 368,
+            "S": 2,
+            "Q": 1
+          },
+          "missed_by_annotation": {
+            "F": 5,
+            "V": 8,
+            "N": 16,
+            "Q": 1
+          },
+          "f1": 0.9932088285229203
+        },
+        {
+          "record": "219",
+          "tp": 2150,
+          "fp": 4,
+          "fn": 4,
+          "sensitivity": 0.9981429897864438,
+          "ppv": 0.9981429897864438,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 2079,
+            "V": 63,
+            "F": 1,
+            "A": 7
+          },
+          "missed_by_annotation": {
+            "N": 3,
+            "V": 1
+          },
+          "f1": 0.9981429897864438
+        }
+      ],
+      "macro_f1": 0.9858904237353032,
+      "minimum_sensitivity": 0.9463452566096423
+    },
+    {
+      "config": {
+        "name": "fast_baseline",
+        "alpha": 0.025,
+        "factor": 2.5
+      },
+      "per_record": [
+        {
+          "record": "105",
+          "tp": 2453,
+          "fp": 76,
+          "fn": 119,
+          "sensitivity": 0.9537325038880249,
+          "ppv": 0.9699485962831158,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 2410,
+            "V": 41,
+            "Q": 2
+          },
+          "missed_by_annotation": {
+            "N": 116,
+            "Q": 3
+          },
+          "f1": 0.9617722015291119
+        },
+        {
+          "record": "106",
+          "tp": 1999,
+          "fp": 26,
+          "fn": 28,
+          "sensitivity": 0.9861864824864331,
+          "ppv": 0.9871604938271605,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 32.0,
+          "matched_by_annotation": {
+            "N": 1506,
+            "V": 493
+          },
+          "missed_by_annotation": {
+            "N": 1,
+            "V": 27
+          },
+          "f1": 0.9866732477788747
+        },
+        {
+          "record": "114",
+          "tp": 1878,
+          "fp": 1,
+          "fn": 1,
+          "sensitivity": 0.9994678020223523,
+          "ppv": 0.9994678020223523,
+          "timing_median_abs_ms": 4.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 1819,
+            "V": 43,
+            "J": 2,
+            "F": 4,
+            "A": 10
+          },
+          "missed_by_annotation": {
+            "N": 1
+          },
+          "f1": 0.9994678020223523
+        },
+        {
+          "record": "119",
+          "tp": 1985,
+          "fp": 0,
+          "fn": 2,
+          "sensitivity": 0.9989934574735783,
+          "ppv": 1.0,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 1542,
+            "V": 443
+          },
+          "missed_by_annotation": {
+            "N": 1,
+            "V": 1
+          },
+          "f1": 0.999496475327291
+        },
+        {
+          "record": "208",
+          "tp": 2928,
+          "fp": 13,
+          "fn": 27,
+          "sensitivity": 0.9908629441624366,
+          "ppv": 0.995579734784087,
+          "timing_median_abs_ms": 4.0,
+          "timing_p95_abs_ms": 12.0,
+          "matched_by_annotation": {
+            "V": 984,
+            "N": 1573,
+            "F": 368,
+            "S": 2,
+            "Q": 1
+          },
+          "missed_by_annotation": {
+            "F": 5,
+            "V": 8,
+            "N": 13,
+            "Q": 1
+          },
+          "f1": 0.9932157394843962
+        },
+        {
+          "record": "219",
+          "tp": 2150,
+          "fp": 3,
+          "fn": 4,
+          "sensitivity": 0.9981429897864438,
+          "ppv": 0.9986065954482118,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 2079,
+            "V": 63,
+            "F": 1,
+            "A": 7
+          },
+          "missed_by_annotation": {
+            "N": 3,
+            "V": 1
+          },
+          "f1": 0.9983747387973068
+        }
+      ],
+      "macro_f1": 0.9898333674898888,
+      "minimum_sensitivity": 0.9537325038880249
+    },
+    {
+      "config": {
+        "name": "fast_lower_envelope",
+        "alpha": 0.025,
+        "factor": 2.0
+      },
+      "per_record": [
+        {
+          "record": "105",
+          "tp": 2459,
+          "fp": 146,
+          "fn": 113,
+          "sensitivity": 0.9560653188180405,
+          "ppv": 0.943953934740883,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 2415,
+            "V": 41,
+            "Q": 3
+          },
+          "missed_by_annotation": {
+            "N": 111,
+            "Q": 2
+          },
+          "f1": 0.9499710256905544
+        },
+        {
+          "record": "106",
+          "tp": 1963,
+          "fp": 179,
+          "fn": 64,
+          "sensitivity": 0.9684262456832757,
+          "ppv": 0.9164332399626517,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 32.0,
+          "matched_by_annotation": {
+            "N": 1504,
+            "V": 459
+          },
+          "missed_by_annotation": {
+            "N": 3,
+            "V": 61
+          },
+          "f1": 0.9417126409210842
+        },
+        {
+          "record": "114",
+          "tp": 1876,
+          "fp": 6,
+          "fn": 3,
+          "sensitivity": 0.9984034060670569,
+          "ppv": 0.9968119022316685,
+          "timing_median_abs_ms": 4.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 1817,
+            "V": 43,
+            "J": 2,
+            "F": 4,
+            "A": 10
+          },
+          "missed_by_annotation": {
+            "N": 3
+          },
+          "f1": 0.9976070194097314
+        },
+        {
+          "record": "119",
+          "tp": 1980,
+          "fp": 14,
+          "fn": 7,
+          "sensitivity": 0.9964771011575239,
+          "ppv": 0.9929789368104313,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 1542,
+            "V": 438
+          },
+          "missed_by_annotation": {
+            "N": 1,
+            "V": 6
+          },
+          "f1": 0.9947249434815373
+        },
+        {
+          "record": "208",
+          "tp": 2925,
+          "fp": 23,
+          "fn": 30,
+          "sensitivity": 0.9898477157360406,
+          "ppv": 0.9921981004070556,
+          "timing_median_abs_ms": 4.0,
+          "timing_p95_abs_ms": 12.0,
+          "matched_by_annotation": {
+            "V": 983,
+            "N": 1571,
+            "F": 368,
+            "S": 2,
+            "Q": 1
+          },
+          "missed_by_annotation": {
+            "F": 5,
+            "V": 9,
+            "N": 15,
+            "Q": 1
+          },
+          "f1": 0.9910215144841606
+        },
+        {
+          "record": "219",
+          "tp": 2149,
+          "fp": 10,
+          "fn": 5,
+          "sensitivity": 0.9976787372330548,
+          "ppv": 0.9953682260305697,
+          "timing_median_abs_ms": 0.0,
+          "timing_p95_abs_ms": 4.0,
+          "matched_by_annotation": {
+            "N": 2079,
+            "V": 63,
+            "F": 1,
+            "A": 6
+          },
+          "missed_by_annotation": {
+            "N": 3,
+            "V": 1,
+            "A": 1
+          },
+          "f1": 0.996522142360306
+        }
+      ],
+      "macro_f1": 0.9785932143912291,
+      "minimum_sensitivity": 0.9560653188180405
+    }
+  ],
+  "selected": {
+    "name": "fast_baseline",
+    "alpha": 0.025,
+    "factor": 2.5
+  },
+  "frozen_before_validation": true
+}

@@ -1,0 +1,9 @@
+{
+  "previous_explicit_confirmation": {
+    "bench_confirmed": true,
+    "source": "User explicit reply: bench, no person connected; permits flash/reset",
+    "body_testing_authorized": false,
+    "ai_live_unlock_authorized": false
+  },
+  "scope": "User requests Research Shadow, authorizes safe bench flash; no body test or live unlock"
+}

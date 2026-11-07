@@ -1,0 +1,696 @@
+{
+  "scope": "Analysis only; counterfactual diagnostic inference on matched Validation; no Test signal/inference, no training/tuning",
+  "matched_NV": 12378,
+  "per_record": [
+    {
+      "record": "115",
+      "N": 1948,
+      "V": 0,
+      "N_to_V": 0,
+      "V_to_N": 0,
+      "N_to_V_annotation_adc": 0,
+      "V_to_N_annotation_adc": 0
+    },
+    {
+      "record": "118",
+      "N": 0,
+      "V": 13,
+      "N_to_V": 0,
+      "V_to_N": 12,
+      "N_to_V_annotation_adc": 0,
+      "V_to_N_annotation_adc": 12
+    },
+    {
+      "record": "121",
+      "N": 1837,
+      "V": 1,
+      "N_to_V": 6,
+      "V_to_N": 0,
+      "N_to_V_annotation_adc": 7,
+      "V_to_N_annotation_adc": 0
+    },
+    {
+      "record": "210",
+      "N": 2398,
+      "V": 187,
+      "N_to_V": 21,
+      "V_to_N": 45,
+      "N_to_V_annotation_adc": 23,
+      "V_to_N_annotation_adc": 44
+    },
+    {
+      "record": "214",
+      "N": 0,
+      "V": 251,
+      "N_to_V": 0,
+      "V_to_N": 57,
+      "N_to_V_annotation_adc": 0,
+      "V_to_N_annotation_adc": 61
+    },
+    {
+      "record": "233",
+      "N": 2225,
+      "V": 822,
+      "N_to_V": 401,
+      "V_to_N": 21,
+      "N_to_V_annotation_adc": 405,
+      "V_to_N_annotation_adc": 15
+    },
+    {
+      "record": "234",
+      "N": 2693,
+      "V": 3,
+      "N_to_V": 0,
+      "V_to_N": 1,
+      "N_to_V_annotation_adc": 0,
+      "V_to_N_annotation_adc": 3
+    }
+  ],
+  "groups": {
+    "N_correct": {
+      "n": 10673,
+      "records": {
+        "115": 1948,
+        "121": 1831,
+        "210": 2377,
+        "233": 1824,
+        "234": 2693
+      },
+      "ptp": {
+        "p10": 208.0,
+        "median": 372.0,
+        "p90": 638.0
+      },
+      "std": {
+        "p10": 34.6886407611625,
+        "median": 46.91953873637693,
+        "p90": 74.04589539955406
+      },
+      "width_proxy_ms": {
+        "p10": 20.0,
+        "median": 32.0,
+        "p90": 44.0
+      },
+      "strongest_offset_ms": {
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 4.0
+      },
+      "center_energy_fraction": {
+        "p10": 0.6271234675590217,
+        "median": 0.8577803974903329,
+        "p90": 0.9218385665758164
+      },
+      "z_ptp": {
+        "p10": 5.932557983937221,
+        "median": 7.1281796482930995,
+        "p90": 10.533806273201998
+      },
+      "center_error_ms": {
+        "p10": -4.0,
+        "median": 0.0,
+        "p90": 4.0
+      },
+      "p_pvc": {
+        "p10": 0.0078125,
+        "median": 0.0078125,
+        "p90": 0.0546875
+      },
+      "negative_polarity": 5,
+      "neighbor_pvc": 405,
+      "neighbor_beats": {
+        "0": 10221,
+        "1": 451,
+        "2": 1
+      },
+      "zero_center_error": 6920,
+      "center_error_bins": {
+        "4..16ms": 3751,
+        "0ms": 6920,
+        "20..48ms": 2
+      }
+    },
+    "N_wrong": {
+      "n": 428,
+      "records": {
+        "121": 6,
+        "210": 21,
+        "233": 401
+      },
+      "ptp": {
+        "p10": 516.4,
+        "median": 762.5,
+        "p90": 819.0
+      },
+      "std": {
+        "p10": 93.44290457452942,
+        "median": 110.4649272420827,
+        "p90": 120.38785404191087
+      },
+      "width_proxy_ms": {
+        "p10": 32.0,
+        "median": 36.0,
+        "p90": 40.0
+      },
+      "strongest_offset_ms": {
+        "p10": 0.0,
+        "median": 4.0,
+        "p90": 424.0
+      },
+      "center_energy_fraction": {
+        "p10": 0.26679680907444375,
+        "median": 0.3328412359132144,
+        "p90": 0.3745643264648893
+      },
+      "z_ptp": {
+        "p10": 5.763594004740184,
+        "median": 6.849077867393206,
+        "p90": 7.0784320359551085
+      },
+      "center_error_ms": {
+        "p10": -4.0,
+        "median": 0.0,
+        "p90": 0.0
+      },
+      "p_pvc": {
+        "p10": 0.55078125,
+        "median": 0.671875,
+        "p90": 0.87109375
+      },
+      "negative_polarity": 0,
+      "neighbor_pvc": 402,
+      "neighbor_beats": {
+        "0": 26,
+        "1": 401,
+        "2": 1
+      },
+      "zero_center_error": 323,
+      "center_error_bins": {
+        "4..16ms": 105,
+        "0ms": 323
+      }
+    },
+    "V_correct": {
+      "n": 1141,
+      "records": {
+        "118": 1,
+        "121": 1,
+        "210": 142,
+        "214": 194,
+        "233": 801,
+        "234": 2
+      },
+      "ptp": {
+        "p10": 401.0,
+        "median": 748.0,
+        "p90": 827.0
+      },
+      "std": {
+        "p10": 62.335658936117774,
+        "median": 124.38237822611205,
+        "p90": 147.5824463679612
+      },
+      "width_proxy_ms": {
+        "p10": 52.0,
+        "median": 64.0,
+        "p90": 88.0
+      },
+      "strongest_offset_ms": {
+        "p10": -476.0,
+        "median": 4.0,
+        "p90": 12.0
+      },
+      "center_energy_fraction": {
+        "p10": 0.3179367449411929,
+        "median": 0.503641607277104,
+        "p90": 0.5620840633199757
+      },
+      "z_ptp": {
+        "p10": 5.199970259451351,
+        "median": 6.075833794214998,
+        "p90": 6.547112763465837
+      },
+      "center_error_ms": {
+        "p10": -12.0,
+        "median": 0.0,
+        "p90": 36.0
+      },
+      "p_pvc": {
+        "p10": 0.74609375,
+        "median": 0.92578125,
+        "p90": 0.99609375
+      },
+      "negative_polarity": 811,
+      "neighbor_pvc": 143,
+      "neighbor_beats": {
+        "0": 90,
+        "1": 992,
+        "2": 59
+      },
+      "zero_center_error": 453,
+      "center_error_bins": {
+        "4..16ms": 470,
+        "0ms": 453,
+        "20..48ms": 218
+      }
+    },
+    "V_wrong": {
+      "n": 136,
+      "records": {
+        "118": 12,
+        "210": 45,
+        "214": 57,
+        "233": 21,
+        "234": 1
+      },
+      "ptp": {
+        "p10": 319.0,
+        "median": 472.0,
+        "p90": 636.5
+      },
+      "std": {
+        "p10": 47.877872493707486,
+        "median": 78.84345515403925,
+        "p90": 104.9947263101426
+      },
+      "width_proxy_ms": {
+        "p10": 26.0,
+        "median": 44.0,
+        "p90": 60.0
+      },
+      "strongest_offset_ms": {
+        "p10": -494.0,
+        "median": -368.0,
+        "p90": 4.0
+      },
+      "center_energy_fraction": {
+        "p10": 0.21415408629548438,
+        "median": 0.3632513996349712,
+        "p90": 0.5984707256862642
+      },
+      "z_ptp": {
+        "p10": 5.3675572171864285,
+        "median": 6.332693210864612,
+        "p90": 7.6882525952471905
+      },
+      "center_error_ms": {
+        "p10": -12.0,
+        "median": -4.0,
+        "p90": 2.0
+      },
+      "p_pvc": {
+        "p10": 0.01953125,
+        "median": 0.23046875,
+        "p90": 0.47265625
+      },
+      "negative_polarity": 43,
+      "neighbor_pvc": 2,
+      "neighbor_beats": {
+        "1": 105,
+        "0": 31
+      },
+      "zero_center_error": 25,
+      "center_error_bins": {
+        "4..16ms": 106,
+        "0ms": 25,
+        "20..48ms": 5
+      }
+    }
+  },
+  "counterfactual": {
+    "N": {
+      "original_errors": 428,
+      "recovered_by_annotation_center": 15,
+      "persistent_at_annotation_center": 413,
+      "new_errors_from_annotation_center": 22,
+      "annotation_adc_errors": 435,
+      "annotation_mv_errors": 436,
+      "adc_vs_mv_decision_differences": 29,
+      "wrong_despite_exact_original_center": 323,
+      "high_confidence_wrong": 25,
+      "near_threshold_wrong": 76,
+      "annotation_adc_abstained": 1,
+      "annotation_mv_abstained": 1
+    },
+    "V": {
+      "original_errors": 136,
+      "recovered_by_annotation_center": 20,
+      "persistent_at_annotation_center": 116,
+      "new_errors_from_annotation_center": 19,
+      "annotation_adc_errors": 135,
+      "annotation_mv_errors": 134,
+      "adc_vs_mv_decision_differences": 13,
+      "wrong_despite_exact_original_center": 25,
+      "high_confidence_wrong": 41,
+      "near_threshold_wrong": 17,
+      "annotation_adc_abstained": 0,
+      "annotation_mv_abstained": 0
+    }
+  },
+  "counterfactual_parity": {
+    "windows": 24756,
+    "mismatches": 0,
+    "clipped_abstentions": 2
+  },
+  "misses_by_label_reason": {
+    "N": {
+      "detector_miss": 37,
+      "initial_quality_admission_and_detector_warmup": 8,
+      "safety_reset_recovery_or_changed_history": 17,
+      "quantization_clipping_direct": 1,
+      "incomplete_final_quality_block": 3
+    },
+    "V": {
+      "detector_miss": 21,
+      "safety_reset_recovery_or_changed_history": 3
+    }
+  },
+  "unmatched_pvc_by_record": {
+    "118": 6,
+    "121": 10,
+    "214": 3,
+    "233": 2
+  },
+  "train_error_pattern": {
+    "total_fp": 106,
+    "nearest_reference_missed": 90,
+    "preceding_within300ms": 61
+  },
+  "train_raw_six_record_medians": {
+    "N": {
+      "ptp": 467.0,
+      "std": 63.38849660202428,
+      "width_proxy_ms": 28.0
+    },
+    "V": {
+      "ptp": 539.0,
+      "std": 111.24690600800835,
+      "width_proxy_ms": 80.0
+    }
+  },
+  "train_normalized_shape": {
+    "N": {
+      "width_proxy_ms": {
+        "p10": 20.0,
+        "median": 28.0,
+        "p90": 40.0
+      },
+      "polarity": {
+        "p10": 1.0,
+        "median": 1.0,
+        "p90": 1.0
+      },
+      "strongest_offset_ms": {
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 4.0
+      },
+      "center_energy_fraction": {
+        "p10": 0.4199194904832696,
+        "median": 0.8063021645927898,
+        "p90": 0.9207378913340659
+      },
+      "z_ptp": {
+        "p10": 6.26028938354651,
+        "median": 7.483146217295962,
+        "p90": 9.67002790048222
+      }
+    },
+    "V": {
+      "width_proxy_ms": {
+        "p10": 44.0,
+        "median": 72.0,
+        "p90": 92.0
+      },
+      "polarity": {
+        "p10": -1.0,
+        "median": 1.0,
+        "p90": 1.0
+      },
+      "strongest_offset_ms": {
+        "p10": -484.0,
+        "median": 0.0,
+        "p90": 44.0
+      },
+      "center_energy_fraction": {
+        "p10": 0.24747848956550186,
+        "median": 0.4984096676598816,
+        "p90": 0.7099909347493994
+      },
+      "z_ptp": {
+        "p10": 4.366901105499138,
+        "median": 5.130634915278145,
+        "p90": 6.3325137878536095
+      }
+    }
+  },
+  "split": {
+    "train": {
+      "samples": 58134,
+      "N": 53216,
+      "V": 4918,
+      "records": [
+        "100",
+        "101",
+        "103",
+        "105",
+        "106",
+        "109",
+        "111",
+        "112",
+        "114",
+        "116",
+        "119",
+        "122",
+        "124",
+        "201",
+        "202",
+        "203",
+        "205",
+        "207",
+        "208",
+        "209",
+        "212",
+        "213",
+        "215",
+        "217",
+        "219",
+        "220",
+        "221",
+        "223",
+        "228",
+        "230",
+        "231"
+      ]
+    },
+    "validation": {
+      "samples": 12459,
+      "N": 11159,
+      "V": 1300,
+      "records": [
+        "115",
+        "118",
+        "121",
+        "210",
+        "214",
+        "233",
+        "234"
+      ]
+    },
+    "test": {
+      "samples": 11279,
+      "N": 10374,
+      "V": 905,
+      "records": [
+        "107",
+        "108",
+        "113",
+        "117",
+        "123",
+        "200",
+        "222"
+      ]
+    }
+  },
+  "split_index_and_record_disjoint": true,
+  "feature_limits": "width_proxy is count of central samples above half residual amplitude, NOT clinical QRS width; polarity/neighbor/context associations are not causal; scores are uncalibrated",
+  "protected_checks": {
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\idf_component.yml": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\lead_off.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\operator_trace.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\pipeline.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\preprocessing.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\signal.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_conv.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_conv.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_fc.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\single_round_math.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\system_state.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_codec.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_transport.cpp": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\trace_transport.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\model\\ecg_cnn_int8.tflite": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_metadata.h": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\test_data\\ecg_test_samples_int8.bin": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\sdkconfig": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\sdkconfig.synthetic_test": true,
+    "data\\processed\\mitbih_split_indices.npz": true,
+    "data\\processed\\mitbih_nv_250hz.npz": true,
+    "results\\optimized_threshold.json": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\docs\\r_peak_detector_phase2b.md": true,
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\r_peak_phase2b_results.json": true
+  },
+  "no_code_fix": true,
+  "ai_live_unlocked": false,
+  "test_inference": false,
+  "same_window_float32_comparison": {
+    "N": {
+      "int8_errors": 428,
+      "float32_errors": 473,
+      "both_wrong": 423,
+      "int8_only_errors": 5,
+      "float32_only_errors": 50
+    },
+    "V": {
+      "int8_errors": 136,
+      "float32_errors": 132,
+      "both_wrong": 128,
+      "int8_only_errors": 8,
+      "float32_only_errors": 4
+    }
+  },
+  "confidence_bins": {
+    "N": {
+      "0.6<=p<0.9": 293,
+      "0.52<=p<0.6": 110,
+      "p>=0.9": 25
+    },
+    "V": {
+      "p<0.1": 41,
+      "0.1<=p<0.4": 65,
+      "0.4<=p<0.52": 30
+    }
+  },
+  "train_annotation_context": {
+    "N": {
+      "reference": 53216,
+      "neighbor_pvc": 1586
+    },
+    "V": {
+      "reference": 4918,
+      "neighbor_pvc": 825
+    }
+  },
+  "normal_neighbor_association": {
+    "with_neighbor_V": {
+      "n": 807,
+      "wrong": 402
+    },
+    "without_neighbor_V": {
+      "n": 10294,
+      "wrong": 26
+    }
+  },
+  "other_label_predictions": {
+    "R->N": 1393,
+    "R->V": 763,
+    "A->N": 97,
+    "A->V": 7,
+    "F->V": 12,
+    "a->V": 2,
+    "a->N": 19,
+    "F->N": 8,
+    "E->V": 1,
+    "L->N": 1887,
+    "L->V": 111,
+    "Q->N": 1,
+    "Q->V": 1,
+    "J->N": 50
+  },
+  "other_label_pvc_predictions": 897,
+  "training_audit": {
+    "parameters": 849,
+    "has_global_average_pooling": true,
+    "class_weights": {
+      "0": 0.5462079073962718,
+      "1": 5.910329402196014
+    },
+    "best_epoch": 15,
+    "split_seed": 127,
+    "split_search": "200 fixed seeds; class/sample count score only; no predictions",
+    "previous_test_exposed": true,
+    "source_predict_test_line": 220,
+    "test_evaluation_artifact_present": true,
+    "executed_training_source_sha_recorded": false
+  },
+  "calibration_train_only": {
+    "source": "Train only",
+    "size": 600,
+    "indices_verified_train_only": true
+  },
+  "test_readiness": {
+    "saved_test_records": [
+      "107",
+      "108",
+      "113",
+      "117",
+      "123",
+      "200",
+      "222"
+    ],
+    "status": "PREVIOUSLY_EXPOSED_NOT_A_NEW_BLIND_TEST",
+    "evidence": [
+      "results/cnn_metrics.json:evaluation",
+      "python/06_train_evaluate.py:219-225",
+      "results/data_leakage_audit.json:previous_test_exposure"
+    ],
+    "test_inference_performed_now": false
+  },
+  "proposed_acceptance": {
+    "status": "DRAFT_REQUIRES_APPROVAL_BEFORE_INDEPENDENT_EVALUATION_NOT_RETROSPECTIVELY_GRADED",
+    "detector_existing": {
+      "per_record_sensitivity_min": 0.99,
+      "per_record_ppv_min": 0.99,
+      "p95_timing_max_ms": 40,
+      "matching_samples": 12,
+      "flat_50hz_false_peaks": 0,
+      "queue_duplicate_overflow": 0
+    },
+    "classification_research_draft": {
+      "pvc_end_to_end_recall_min": 0.95,
+      "pvc_precision_min": 0.9,
+      "pvc_f1_min": 0.92,
+      "normal_end_to_end_recall_min": 0.99
+    },
+    "requirements": [
+      "Agree N/V-only versus V/non-V/OOD policy first; include unmatched alarms and pre-CNN misses",
+      "Freeze model/source/preprocessing/threshold and all exclusions before new independent patient data",
+      "Report patient/record/class strata and95% patient-cluster uncertainty; predeclare minimum class counts and N/A behavior",
+      "No pass claim on this reused Validation; no clinical performance claim from bench targets"
+    ]
+  },
+  "review_tool_sha256": {
+    "final_ai_readiness_review.py": "eecb1374f550e6056b6643741595a14908eb7cb1ae30ecbd8b3919022c8a3725",
+    "enrich_ai_readiness.py": "2598491a5df8539b1a99daf777b5064422e2f1759ffd63bf201ff69fc83430fa",
+    "readiness_float32_probe.py": "6803ffc2efb47c294143402d9870f9119f95bdac03ffb00cd40ad65d6a5dbe29",
+    "write_final_ai_readiness_report.py": "fee806936ae8f12bc47f851a10dbadd416da8ddc44c5107f7d86f970e2c3655f"
+  },
+  "conclusion": {
+    "confirmed_code_bug": false,
+    "production_code_modified": false,
+    "retraining": "Recommend a separately authorized center-aware training/data-scope experiment; not performed or guaranteed to succeed",
+    "current_acceptance": "FAIL detector121; classification not approved; no untouched Test established; hardware pending",
+    "ai_live": "LOCKED"
+  }
+}

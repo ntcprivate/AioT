@@ -1,0 +1,2530 @@
+[
+  {
+    "index": 3923,
+    "record": "118",
+    "mode": "candidate",
+    "center": 5613,
+    "symbol": "R",
+    "native": -55,
+    "tensorflow": -53,
+    "decision_changed": false,
+    "id": "118_5613",
+    "input_sha256": "49ce5d8bd5860981de69c4b4cacbf40714812dc4df0ba95ece1a2ce34baae7f6",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -56,
+        "tf_first": -55
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 2,
+        "first_bad_index": 0,
+        "native_first": -55,
+        "tf_first": -53
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -56,
+      "tf_first": -55
+    },
+    "requantization": {
+      "accumulator": -9148,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -55,
+      "double_code": -56,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 3955,
+    "record": "118",
+    "mode": "candidate",
+    "center": 12239,
+    "symbol": "R",
+    "native": 70,
+    "tensorflow": 68,
+    "decision_changed": false,
+    "id": "118_12239",
+    "input_sha256": "49caa944d31e368cde14fba60e84691ea8a8429e5808d69de7b94bf1ebbbb6e3",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -14,
+        "tf_first": -15
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 2,
+        "first_bad_index": 0,
+        "native_first": 70,
+        "tf_first": 68
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -14,
+      "tf_first": -15
+    },
+    "requantization": {
+      "accumulator": 12285,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -15,
+      "double_code": -14,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 5983,
+    "record": "118",
+    "mode": "candidate",
+    "center": 416969,
+    "symbol": "R",
+    "native": -116,
+    "tensorflow": -115,
+    "decision_changed": false,
+    "id": "118_416969",
+    "input_sha256": "b445afd8137ad1856df597475a6cc700543032f8672de3dc3783b06715abad80",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -96,
+        "tf_first": -95
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -116,
+        "tf_first": -115
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -96,
+      "tf_first": -95
+    },
+    "requantization": {
+      "accumulator": -30059,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -95,
+      "double_code": -96,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 13355,
+    "record": "210",
+    "mode": "candidate",
+    "center": 200430,
+    "symbol": "V",
+    "native": 106,
+    "tensorflow": 105,
+    "decision_changed": false,
+    "id": "210_200430",
+    "input_sha256": "57afa15ac90ad36bf483ddbf04a0f9bbc522ec2bd0152035ecfe3961a165fe71",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": 8,
+        "tf_first": 7
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": 106,
+        "tf_first": 105
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": 8,
+      "tf_first": 7
+    },
+    "requantization": {
+      "accumulator": 23786,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": 7,
+      "double_code": 8,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 17549,
+    "record": "214",
+    "mode": "candidate",
+    "center": 22287,
+    "symbol": "L",
+    "native": -109,
+    "tensorflow": -108,
+    "decision_changed": false,
+    "id": "214_22287",
+    "input_sha256": "dbff58a4c160c0a47945406e819fb82f140b597b5b41fedb9deba9f0df9ed37b",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -87,
+        "tf_first": -86
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -109,
+        "tf_first": -108
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -87,
+      "tf_first": -86
+    },
+    "requantization": {
+      "accumulator": -25354,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -86,
+      "double_code": -87,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 22088,
+    "record": "233",
+    "mode": "candidate",
+    "center": 20069,
+    "symbol": "V",
+    "native": -7,
+    "tensorflow": -3,
+    "decision_changed": false,
+    "id": "233_20069",
+    "input_sha256": "e2c2a9950bced9e3a6c4b7e5dcd50dd4f09785bbab409b5f1ee821582ac759a2",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -40,
+        "tf_first": -39
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 4,
+        "first_bad_index": 0,
+        "native_first": -7,
+        "tf_first": -3
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -40,
+      "tf_first": -39
+    },
+    "requantization": {
+      "accumulator": -784,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -39,
+      "double_code": -40,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 22360,
+    "record": "233",
+    "mode": "candidate",
+    "center": 59286,
+    "symbol": "N",
+    "native": -23,
+    "tensorflow": -20,
+    "decision_changed": false,
+    "id": "233_59286",
+    "input_sha256": "3a6e2f074bb59771dfa5d50f8ce3380ccc819e90e7fbb612a9563fd910bb46cc",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -45,
+        "tf_first": -44
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 3,
+        "first_bad_index": 0,
+        "native_first": -23,
+        "tf_first": -20
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -45,
+      "tf_first": -44
+    },
+    "requantization": {
+      "accumulator": -3398,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -44,
+      "double_code": -45,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  },
+  {
+    "index": 23940,
+    "record": "233",
+    "mode": "candidate",
+    "center": 291311,
+    "symbol": "N",
+    "native": -93,
+    "tensorflow": -92,
+    "decision_changed": false,
+    "id": "233_291311",
+    "input_sha256": "20785ef7101f3122fb220d70989ed893faf93d449f0019aa01b5889235e6a56c",
+    "operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "tensor": 15,
+        "shape": [
+          1,
+          1,
+          256,
+          1
+        ],
+        "scale": 0.053921569138765335,
+        "zero": -27,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "tensor": 16,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "tensor": 17,
+        "shape": [
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "tensor": 18,
+        "shape": [
+          1,
+          1,
+          252,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "tensor": 19,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "tensor": 20,
+        "shape": [
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "tensor": 21,
+        "shape": [
+          1,
+          1,
+          126,
+          8
+        ],
+        "scale": 0.04097747802734375,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "tensor": 22,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "tensor": 23,
+        "shape": [
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "tensor": 24,
+        "shape": [
+          1,
+          1,
+          122,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "tensor": 25,
+        "shape": [
+          1,
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "tensor": 26,
+        "shape": [
+          1,
+          61,
+          16
+        ],
+        "scale": 0.07794410735368729,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "tensor": 27,
+        "shape": [
+          1,
+          16
+        ],
+        "scale": 0.008803734555840492,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 28,
+        "shape": [
+          1,
+          8
+        ],
+        "scale": 0.005616123788058758,
+        "zero": -128,
+        "mismatches": 0,
+        "maximum_lsb": 0,
+        "first_bad_index": null,
+        "native_first": null,
+        "tf_first": null
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "tensor": 29,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.05139290168881416,
+        "zero": -38,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -74,
+        "tf_first": -73
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "tensor": 30,
+        "shape": [
+          1,
+          1
+        ],
+        "scale": 0.00390625,
+        "zero": -128,
+        "mismatches": 1,
+        "maximum_lsb": 1,
+        "first_bad_index": 0,
+        "native_first": -93,
+        "tf_first": -92
+      }
+    ],
+    "first_differing_operator": {
+      "op": 14,
+      "tag": "FULLY_CONNECTED",
+      "tensor": 29,
+      "shape": [
+        1,
+        1
+      ],
+      "scale": 0.05139290168881416,
+      "zero": -38,
+      "mismatches": 1,
+      "maximum_lsb": 1,
+      "first_bad_index": 0,
+      "native_first": -74,
+      "tf_first": -73
+    },
+    "requantization": {
+      "accumulator": -18558,
+      "multiplier": 2103240986,
+      "shift": -9,
+      "output_zero": -38,
+      "single_code": -73,
+      "double_code": -74,
+      "accumulator_fits_int32": true,
+      "saturated": false
+    }
+  }
+]

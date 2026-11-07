@@ -1,0 +1,16 @@
+{
+  "records": [
+    "105",
+    "106",
+    "114",
+    "119",
+    "208",
+    "219"
+  ],
+  "ratios": [
+    1.5,
+    2.0,
+    3.0
+  ],
+  "selection": "macro F1 on Train; tie min sensitivity, smaller ratio"
+}

@@ -1,0 +1,30 @@
+{
+  "records": [
+    "105",
+    "106",
+    "114",
+    "119",
+    "208",
+    "219"
+  ],
+  "candidates": [
+    {
+      "name": "hold_only",
+      "alpha": 0.01,
+      "factor": 2.5
+    },
+    {
+      "name": "fast_baseline",
+      "alpha": 0.025,
+      "factor": 2.5
+    },
+    {
+      "name": "fast_lower_envelope",
+      "alpha": 0.025,
+      "factor": 2.0
+    }
+  ],
+  "hold_samples": 50,
+  "selection": "macro F1 on Train; tie min sensitivity, then declaration order",
+  "reason": "Curvature trial rejected on development due major localization FP/FN; preserve original magnitude fiducial and confirm a stronger peak within200ms"
+}

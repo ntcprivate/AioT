@@ -1,0 +1,17 @@
+**/.venv/
+**/__pycache__/
+**/build/
+*.pyc
+**/captures/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/data/
+/mit-bih-arrhythmia-database-1.0.0/
+/results/
+/plots/
+/.vscode/
+**/managed_components/
+/tools/ecg_monitor/reports/

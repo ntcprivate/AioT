@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-06",
+  "status": "HOST_CHECKS_AND_BOTH_BUILDS_PASS_PENDING_HARDWARE_VALIDATION",
+  "continued_files": [
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h",
+    "tools\\ecg_monitor\\ecg_monitor\\app.py",
+    "tools\\ecg_monitor\\ecg_monitor\\protocol.py",
+    "tools\\ecg_monitor\\ecg_monitor\\serial_worker.py",
+    "tools\\ecg_monitor\\ecg_monitor\\session.py"
+  ],
+  "git": "NOT_A_GIT_REPOSITORY; snapshot diffs retained; no reset/clean/revert",
+  "changed_relative_to_snapshot": [
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h",
+    "tools\\ecg_monitor\\ecg_monitor\\app.py",
+    "tools\\ecg_monitor\\ecg_monitor\\protocol.py",
+    "tools\\ecg_monitor\\ecg_monitor\\serial_worker.py",
+    "tools\\ecg_monitor\\ecg_monitor\\session.py"
+  ],
+  "modified_or_new_additional_files": [
+    "tools\\ecg_monitor\\benchmark_transport.py",
+    "tools\\ecg_monitor\\diagnose_capture.py",
+    "tools\\ecg_monitor\\tests\\test_telemetry_fix.py",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\telemetry_wire_test.cpp",
+    "firmware\\esp32_ecg_tinyml_integrated\\docs\\telemetry_reliability_review.md",
+    "firmware\\esp32_ecg_tinyml_integrated\\docs\\telemetry_protocol.md",
+    "tools\\ecg_monitor\\README.md",
+    "firmware\\esp32_ecg_tinyml_integrated\\README.md",
+    "README.md",
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\sdkconfig.synthetic_test",
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\finalize_telemetry_audit.py"
+  ],
+  "final_source_sha256": {
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\CMakeLists.txt": "a12009db75f7f6716574a968988261585e6450848af927a33646dacbb4137f8a",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\Kconfig.projbuild": "6fbc83bae8b908af9ea52a10483f83d1615f05653a3d75dc7a51925f835b1f81",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\main.cpp": "e185d3923a9b0102e4679ad960f6c62b836f8012667d8faf6d23064ea39ae75e",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.cpp": "fd0779461318804710505068c614b77ee32fb19ccbf64ab414b4b7f4461db0c7",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry.h": "d11dcfd7b1804387946ea53e831a2779038c727c09b462a23a637507346d094c",
+    "firmware\\esp32_ecg_tinyml_integrated\\main\\telemetry_codec.h": "32d6d540f3d38757f041dc432a2e07f58e0b80e2d5c1da8e064a36dd725d5f76",
+    "tools\\ecg_monitor\\ecg_monitor\\app.py": "c9e5f64070ae59046c2f04ab0e5558c384c1fd356935a7bddbaaed849c58cb6b",
+    "tools\\ecg_monitor\\ecg_monitor\\protocol.py": "ba3adf197235262e55cc8d122653e6a7ca92b563717df426517383f618707eb7",
+    "tools\\ecg_monitor\\ecg_monitor\\serial_worker.py": "c97d58163fd51a552ba3afebafdd7c212daba8dd72639a9529b68727ad36e438",
+    "tools\\ecg_monitor\\ecg_monitor\\session.py": "7836883f07e5c6f14bfb55348befb8e9cf08a584609ad60f4cae5008450381e8"
+  },
+  "additional_sha256": {
+    "tools\\ecg_monitor\\benchmark_transport.py": "430a735f0b4c91820b1f324d12c308fcc03ff7ab070cea64224c36532349eba0",
+    "tools\\ecg_monitor\\diagnose_capture.py": "91c7451d0523f994548b4d8cfd95b31963e6cca019a02a34845cb1e2b6083d27",
+    "tools\\ecg_monitor\\tests\\test_telemetry_fix.py": "a0b6e9b552f7a81031c3a855f3de2ea42f0e0292ed2925d39516cf966f675cb5",
+    "firmware\\esp32_ecg_tinyml_integrated\\tests\\telemetry_wire_test.cpp": "912350cbc940949cde1a4e50adac6eaec7a9d0bdc2bcbf5c8de8fc13a1ea7c68",
+    "firmware\\esp32_ecg_tinyml_integrated\\docs\\telemetry_reliability_review.md": "9d24c0efd40dcb6bb3432a7ecee05d5972cbf2149cefec316b4ba5c3c4d6bd86",
+    "firmware\\esp32_ecg_tinyml_integrated\\docs\\telemetry_protocol.md": "1d234d944c9a4b918955d0b2b6783ec22608443b28a9f1da98f03be454ebf701",
+    "tools\\ecg_monitor\\README.md": "e7b0451f5ff15151683de9c803778ea67817ab0bd0d5edbdc9490c0a05261bb8",
+    "firmware\\esp32_ecg_tinyml_integrated\\README.md": "399ce4901723c1dcf77d814e0c81d932fc9899f72a61ed66b38b8853696e0820",
+    "README.md": "34241c5bc4e2e46cfaaf7d89f80013f9c54d4b6b7e42611374868583a6fae9ed",
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\sdkconfig.synthetic_test": "5798204f385eb22f32b5da13e5ec1f722962a648cc7b03c788156bb7543e7acc",
+    "firmware\\esp32_ecg_tinyml_integrated\\debug\\finalize_telemetry_audit.py": "d03a918fd3adc39801e1d9d1f9e2ca8bc083382b4878e194ec774ab59ffd3a6f"
+  },
+  "protected_source_checks": {
+    "main/model.cpp": true,
+    "main/preprocessing.h": true,
+    "main/signal.cpp": true,
+    "main/signal.h": true,
+    "main/single_round_conv.cpp": true,
+    "main/single_round_math.h": true,
+    "main/single_round_fc.cpp": true,
+    "main/pipeline.cpp": true,
+    "main/system_state.h": true,
+    "main/model/ecg_cnn_int8.tflite": true,
+    "main/test_data/ecg_test_samples_int8.bin": true,
+    "main/test_data/ecg_test_metadata.h": true
+  },
+  "original_project_checks": {
+    "firmware\\esp32_ad8232_adc_test\\main\\alert.cpp": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\alert.h": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_ad8232_adc_test\\main\\main.cpp": true,
+    "firmware\\esp32_tinyml_step8\\main\\CMakeLists.txt": true,
+    "firmware\\esp32_tinyml_step8\\main\\idf_component.yml": true,
+    "firmware\\esp32_tinyml_step8\\main\\Kconfig.projbuild": true,
+    "firmware\\esp32_tinyml_step8\\main\\main.cpp": true,
+    "firmware\\esp32_tinyml_step8\\main\\model\\ecg_cnn_int8.tflite": true,
+    "firmware\\esp32_tinyml_step8\\main\\test_data\\ecg_test_metadata.h": true,
+    "firmware\\esp32_tinyml_step8\\main\\test_data\\ecg_test_samples_int8.bin": true
+  },
+  "tests": {
+    "monitor_python": 42,
+    "legacy_operator_trace_python": 14,
+    "cpp": [
+      "system",
+      "signal",
+      "lead_off",
+      "trace_codec",
+      "telemetry_wire"
+    ],
+    "cpp_python_wire_samples": 16000,
+    "virtual_long_stream_samples": 320000,
+    "golden_samples": 12,
+    "golden_repeats_each": 33,
+    "parity": {
+      "status": "COMPONENT_PARITY_PASS",
+      "scope": "Exploratory matched N/V detections on Validation; excludes missed/false/other-label peaks; NOT end-to-end clinical accuracy",
+      "beats": 9425,
+      "preprocessing_mismatched_bytes": 0,
+      "cnn_mismatched_codes": 0,
+      "quantization_clipped_beats": 0,
+      "runtime_eligible_beats": 9425,
+      "classification_metrics_scope": "Matched N/V windows only, additionally exclude quantization clipping as firmware would; not full pipeline accuracy",
+      "matched_pvc_tp": 229,
+      "matched_pvc_fn": 40,
+      "matched_normal_fp": 14,
+      "matched_normal_tn": 9142
+    }
+  },
+  "transport_load": {
+    "scope": "HOST simulated serial protocol only, not hardware bandwidth/latency measurement",
+    "samples": 15008,
+    "virtual_seconds": 60.032,
+    "status_packets": 118,
+    "parser_errors": 0,
+    "bytes_per_second": 6659.731476545842,
+    "uart_capacity_8n1": 11520.0,
+    "uart_fraction": 0.5781016906723822,
+    "host_processing_seconds": 0.08371200000692625,
+    "sample_points_retained": 5000,
+    "lost_packets": 0
+  },
+  "idf": "5.4.4",
+  "build_artifacts": {
+    "build": {
+      "bytes": 316880,
+      "sha256": "e7662fd2464dd03d927ec666abd96e8115200a9a57131068b6d505a720bf1d93"
+    },
+    "build_synthetic_telemetry_test": {
+      "bytes": 315456,
+      "sha256": "72e1ac24cafc7da6096cbd12954a84f699590c69cc8646b618ed798f83890d86"
+    }
+  },
+  "hardware_config": {
+    "adc_gpio": 34,
+    "lo_plus_gpio": 27,
+    "lo_minus_gpio": 26,
+    "led_gpio": 23,
+    "buzzer_gpio": 25,
+    "target_hz": 250,
+    "threshold": 0.52,
+    "live_unlocked": false
+  },
+  "crc_hardware_root_cause": "UNPROVEN: new failing raw capture not available",
+  "hardware_validation": "PENDING HARDWARE VALIDATION",
+  "com_opened": false,
+  "flashed": false,
+  "reset": false,
+  "report": "docs/telemetry_reliability_review.md"
+}

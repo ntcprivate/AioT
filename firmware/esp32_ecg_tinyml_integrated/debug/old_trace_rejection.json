@@ -1,0 +1,8 @@
+{
+  "status": "TRACE_REJECTED",
+  "transport_verified": false,
+  "hardware_log": "debug\\serial_trace.log",
+  "error": "Line 102: missing protocol2 line checksum; legacy/damaged trace cannot be compared",
+  "first_divergence": null,
+  "note": "No repair or numerical conclusion. Old PASS results must not be reused for this capture."
+}

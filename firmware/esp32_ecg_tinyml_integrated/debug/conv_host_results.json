@@ -1,0 +1,12 @@
+[
+  {
+    "mode": 0,
+    "exit_code": 0,
+    "output": "TFLM_CONV single_rounding=0 bytes=2016 mismatches=3 fnv=84bd53f7 pos292=-92 pos820=-124 pos1455=-105\n"
+  },
+  {
+    "mode": 1,
+    "exit_code": 0,
+    "output": "TFLM_CONV single_rounding=1 bytes=2016 mismatches=0 fnv=c1b69a54 pos292=-93 pos820=-125 pos1455=-106\n"
+  }
+]

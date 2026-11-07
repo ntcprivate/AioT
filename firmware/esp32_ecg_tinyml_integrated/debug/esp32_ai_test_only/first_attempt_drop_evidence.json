@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "adc",
+    "after_case": "11",
+    "missing": 128,
+    "first_sample": 9888,
+    "t0": 39670663,
+    "dropped": 4
+  },
+  {
+    "variant": "synthetic",
+    "after_case": "11",
+    "missing": 160,
+    "first_sample": 9920,
+    "t0": 39798806,
+    "dropped": 5
+  }
+]

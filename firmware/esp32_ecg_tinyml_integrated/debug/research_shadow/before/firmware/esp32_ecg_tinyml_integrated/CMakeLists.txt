@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.16)
+set(IDF_TARGET "esp32" CACHE STRING "Chip target")
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+# Step 8 used ESP_NN_OFF_PROBE=1 even though sdkconfig says y; its archived
+# board log also contains the same two failures. Match kernel selection as a
+# controlled baseline, not as evidence that the old golden tests passed.
+option(ECG_REFERENCE_KERNELS "Match Step 8 reference kernel build" ON)
+if(ECG_REFERENCE_KERNELS)
+    set(ESP_NN_OFF_PROBE 1)
+elseif(DEFINED ESP_NN_OFF_PROBE)
+    message(FATAL_ERROR "Unset ESP_NN_OFF_PROBE before requesting ESP-NN kernels")
+endif()
+project(esp32_ecg_tinyml_integrated)
+# Keep stock MEAN/LOGISTIC; specialize Conv and both FC quantization paths
+# after isolated arithmetic proof and extended labeled-window parity tests.
+target_compile_definitions(__idf_espressif__esp-tflite-micro PUBLIC TFLITE_SINGLE_ROUNDING=0)
+target_compile_definitions(__idf_main PRIVATE ECG_CONV_SINGLE_ROUNDING=1)
+message(STATUS "ECG requantization: Conv/per-channel FC/per-tensor FC single; stock MEAN/LOGISTIC")
+get_target_property(ecg_kernel_options __idf_espressif__esp-tflite-micro COMPILE_OPTIONS)
+get_target_property(ecg_kernel_defines __idf_espressif__esp-tflite-micro COMPILE_DEFINITIONS)
+if("-DESP_NN" IN_LIST ecg_kernel_options OR "ESP_NN" IN_LIST ecg_kernel_defines OR "ESP_NN=1" IN_LIST ecg_kernel_defines)
+    set(ecg_reference_active 0)
+else()
+    set(ecg_reference_active 1)
+endif()
+if(ECG_REFERENCE_KERNELS AND NOT ecg_reference_active)
+    message(FATAL_ERROR "Requested reference kernels but TFLM target still defines ESP_NN")
+endif()
+target_compile_definitions(__idf_main PRIVATE ECG_REFERENCE_KERNELS_ACTIVE=${ecg_reference_active})
+message(STATUS "ECG actual TFLM compiler flags: reference_active=${ecg_reference_active}")
+if(NOT IDF_TARGET STREQUAL "esp32")
+    message(FATAL_ERROR "Requires ESP32-WROOM-32, target esp32")
+endif()

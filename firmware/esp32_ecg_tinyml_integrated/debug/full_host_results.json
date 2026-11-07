@@ -1,0 +1,176 @@
+[
+  {
+    "mode": 0,
+    "host_output": "HOST_GOLDEN backend_single=0 conv_single=0 sample=0 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=1 code=50 reference=50 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=2 code=-61 reference=-66 exact=0 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=3 code=68 reference=68 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=4 code=7 reference=7 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=5 code=0 reference=7 exact=0 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=6 code=-124 reference=-124 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=7 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=8 code=-125 reference=-125 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=9 code=47 reference=47 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=10 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=0 sample=11 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN_DONE backend_single=0 conv_single=0 failed=2\n",
+    "sample5_operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 0
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "mismatches": 3
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "mismatches": 3
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 3
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "mismatches": 2
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "mismatches": 2
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 2
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "mismatches": 17
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "mismatches": 17
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 17
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "mismatches": 8
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "mismatches": 8
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "mismatches": 1
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "mismatches": 6
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "mismatches": 1
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "mismatches": 1
+      }
+    ],
+    "scope": "HOST, not ESP32 hardware"
+  },
+  {
+    "mode": 2,
+    "host_output": "HOST_GOLDEN backend_single=0 conv_single=1 sample=0 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=1 code=50 reference=50 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=2 code=-66 reference=-66 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=3 code=68 reference=68 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=4 code=7 reference=7 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=5 code=7 reference=7 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=6 code=-124 reference=-124 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=7 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=8 code=-125 reference=-125 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=9 code=47 reference=47 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=10 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN backend_single=0 conv_single=1 sample=11 code=-126 reference=-126 exact=1 repeats=33 stable=1\nHOST_GOLDEN_DONE backend_single=0 conv_single=1 failed=0\n",
+    "sample5_operators": [
+      {
+        "op": 0,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 0
+      },
+      {
+        "op": 1,
+        "tag": "CONV_2D",
+        "mismatches": 0
+      },
+      {
+        "op": 2,
+        "tag": "RESHAPE",
+        "mismatches": 0
+      },
+      {
+        "op": 3,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 0
+      },
+      {
+        "op": 4,
+        "tag": "MAX_POOL_2D",
+        "mismatches": 0
+      },
+      {
+        "op": 5,
+        "tag": "RESHAPE",
+        "mismatches": 0
+      },
+      {
+        "op": 6,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 0
+      },
+      {
+        "op": 7,
+        "tag": "CONV_2D",
+        "mismatches": 0
+      },
+      {
+        "op": 8,
+        "tag": "RESHAPE",
+        "mismatches": 0
+      },
+      {
+        "op": 9,
+        "tag": "EXPAND_DIMS",
+        "mismatches": 0
+      },
+      {
+        "op": 10,
+        "tag": "MAX_POOL_2D",
+        "mismatches": 0
+      },
+      {
+        "op": 11,
+        "tag": "RESHAPE",
+        "mismatches": 0
+      },
+      {
+        "op": 12,
+        "tag": "MEAN",
+        "mismatches": 0
+      },
+      {
+        "op": 13,
+        "tag": "FULLY_CONNECTED",
+        "mismatches": 0
+      },
+      {
+        "op": 14,
+        "tag": "FULLY_CONNECTED",
+        "mismatches": 0
+      },
+      {
+        "op": 15,
+        "tag": "LOGISTIC",
+        "mismatches": 0
+      }
+    ],
+    "scope": "HOST, not ESP32 hardware"
+  }
+]

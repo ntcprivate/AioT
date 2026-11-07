@@ -1,0 +1,174 @@
+--- before/main\signal.cpp
++++ after/main\signal.cpp
+@@ -34,11 +34,66 @@
+     if(100*differences/255 > CONFIG_ECG_MAX_DIFF_PERCENT*(maximum-minimum)) return "HIGH_FREQUENCY_NOISE";
+     return nullptr; // Necessary checks only; not proof of ECG validity.
+ }
+-void BeatDetector::reset() { *this=BeatDetector{}; }
++void BeatWindowBuffer::reset() {
++    stats_.dropped_reset+=size_;
++    if(size_)last_drop_reason_="WINDOW_CANCELLED_BY_RESET";
++    head_=size_=0;first_=last_=-1;
++    // Invalidate history instead of zeroing a 6KiB ring on the worker stack.
++}
++bool BeatWindowBuffer::append(int raw,int64_t sample,int64_t timestamp,const char*& issue) {
++    issue=nullptr;
++    if(sample<0 || (last_>=0 && sample!=last_+1)) {issue="BEAT_SAMPLE_INDEX_GAP";return false;}
++    if(first_<0)first_=sample;
++    ring_[sample%kRingSamples]=raw;times_[sample%kRingSamples]=timestamp;last_=sample;
++    return true;
++}
++bool BeatWindowBuffer::enqueue(int64_t center,const char*& issue) {
++    issue=nullptr;
++    if(center==last_enqueued_) {++stats_.duplicate;issue=last_drop_reason_="DUPLICATE_R_CENTER";return false;}
++    if(center<last_enqueued_) {++stats_.out_of_order;issue=last_drop_reason_="R_CENTER_OUT_OF_ORDER";return false;}
++    if(center<128 || first_<0 || center-128<first_ || center>last_ || last_-(center-128)>=kRingSamples) {
++        ++stats_.invalid_center;issue=last_drop_reason_="R_CENTER_HISTORY_UNAVAILABLE";return false;
++    }
++    // Drop newest explicitly. Existing windows remain intact, never reset for overlap/full.
++    if(size_==kPendingCapacity) {++stats_.dropped_full;issue=last_drop_reason_="PENDING_QUEUE_FULL";return false;}
++    pending_[(head_+size_)%kPendingCapacity]={center,times_[center%kRingSamples]};
++    ++size_;++stats_.enqueued;stats_.high_water=std::max<uint32_t>(stats_.high_water,size_);last_enqueued_=center;
++    return true;
++}
++bool BeatWindowBuffer::pop_ready(float* beat,BeatWindowInfo& info,const char*& issue) {
++    issue=nullptr;
++    if(!size_ || last_<pending_[head_].sample+127)return false;
++    const Center center=pending_[head_];
++    head_=(head_+1)%kPendingCapacity;--size_;
++    const int64_t start=center.sample-128,end=center.sample+127;
++    if(!beat || start<first_ || last_-start>=kRingSamples || times_[center.sample%kRingSamples]!=center.timestamp) {
++        ++stats_.overwritten;issue=last_drop_reason_="BEAT_RING_HISTORY_UNAVAILABLE";return false;
++    }
++    if(center.sample<=last_emitted_) {++stats_.out_of_order;issue=last_drop_reason_="BEAT_OUTPUT_OUT_OF_ORDER";return false;}
++    // Validate the complete window before exposing any morphology to the caller.
++    for(int i=1;i<256;++i) {
++        const int64_t dt=times_[(start+i)%kRingSamples]-times_[(start+i-1)%kRingSamples];
++        if(dt<2000 || dt>6000) {++stats_.timing_errors;issue=last_drop_reason_="BEAT_TIMING_GAP";return false;}
++    }
++    for(int i=0;i<256;++i)beat[i]=ring_[(start+i)%kRingSamples];
++    info={center.sample,center.timestamp,start,end};last_emitted_=center.sample;++stats_.completed;
++    return true;
++}
++void BeatDetector::reset_state() {
++    windows_.reset();last_window_={};count_=0;last_center_=-1;
++    baseline_=envelope_=prev_abs_=before_abs_=0;
++}
++void BeatDetector::reset() {++counters_.external_resets;reset_state();}
++BeatDetectorStats BeatDetector::stats() const {
++    return {counters_.samples,counters_.candidates,counters_.warmup_samples,
++        counters_.no_peak_resets,counters_.external_resets,windows_.stats()};
++}
+ bool BeatDetector::push(int raw,int64_t timestamp,float* beat,const char*& issue) {
+     issue=nullptr;
++    const int64_t sample=next_sample_++;
+     const int64_t current=count_++;
+-    ring_[current%512]=raw; times_[current%512]=timestamp;
++    ++counters_.samples;if(current<500)++counters_.warmup_samples;
++    if(!windows_.append(raw,sample,timestamp,issue)) {reset_state();return false;}
+     if(current==0) baseline_=raw;
+     baseline_+=0.01f*(raw-baseline_);
+     const float magnitude=std::abs(raw-baseline_);
+@@ -46,28 +101,21 @@
+     const float threshold=std::max(static_cast<float>(CONFIG_ECG_QRS_MIN_COUNTS),2.5f*envelope_);
+     // Experimental polarity-independent magnitude peak; NOT validated R annotation replacement.
+     if(current>=500 && prev_abs_>before_abs_ && prev_abs_>=magnitude && prev_abs_>threshold) {
+-        int64_t center=current-1;
++        const int64_t center=sample-1;
+         if(last_center_<0 || center-last_center_>=75) { // >=300ms refractory.
+-            if(pending_>=0) { issue="AMBIGUOUS_CLOSE_PEAKS"; reset(); return false; }
+-            pending_=center; last_center_=center;
++            ++counters_.candidates;last_center_=center;
++            // Candidate detection and window readiness are independent. Overlap is valid.
++            // A failure is visible to the caller's existing invalid-state safety path.
++            if(!windows_.enqueue(center,issue)) {
++                before_abs_=prev_abs_;prev_abs_=magnitude;return false;
++            }
+         }
+     }
+     before_abs_=prev_abs_; prev_abs_=magnitude;
+-    if(pending_>=0 && current>=pending_+127) {
+-        // Python slice [center-128, center+128): center occupies input index 128.
+-        const int64_t start=pending_-128;
+-        for(int i=0;i<256;++i) {
+-            beat[i]=ring_[(start+i)%512];
+-            if(i) {
+-                int64_t dt=times_[(start+i)%512]-times_[(start+i-1)%512];
+-                if(dt<2000 || dt>6000) { issue="BEAT_TIMING_GAP"; reset(); return false; }
+-            }
+-        }
+-        pending_=-1;
+-        return true;
+-    }
+-    if(current>1000 && (last_center_<0 || current-last_center_>500)) {
+-        issue="NO_RELIABLE_R_PEAK"; reset();
++    if(windows_.pop_ready(beat,last_window_,issue))return true;
++    if(issue) {reset_state();return false;}
++    if(current>1000 && (last_center_<0 || sample-last_center_>500)) {
++        issue="NO_RELIABLE_R_PEAK";++counters_.no_peak_resets;reset_state();
+     }
+     return false;
+ }
+--- before/main\signal.h
++++ after/main\signal.h
+@@ -4,15 +4,56 @@
+ const char* signal_block_reason(const int* raw, const int64_t* timestamps);
+ struct SignalMetrics {uint32_t clips;int ptp;double diff_percent,power50_ratio,baseline_delta;};
+ SignalMetrics signal_metrics(const int* raw);
++struct BeatWindowInfo {
++    int64_t center_sample=-1, center_timestamp=0;
++    int64_t start_sample=-1, end_sample=-1;
++};
++struct BeatWindowStats {
++    uint64_t enqueued=0, completed=0, dropped_full=0, dropped_reset=0;
++    uint64_t duplicate=0, out_of_order=0, invalid_center=0, overwritten=0, timing_errors=0;
++    uint32_t high_water=0;
++};
++// Single worker owns this object. No allocations or waits; raw morphology stays unchanged.
++class BeatWindowBuffer {
++public:
++    static constexpr unsigned kRingSamples=512, kPendingCapacity=4;
++    void reset(); // Cancel outstanding windows; retain lifetime diagnostics/order history.
++    bool append(int raw,int64_t sample,int64_t timestamp,const char*& issue);
++    bool enqueue(int64_t center,const char*& issue);
++    bool pop_ready(float* beat,BeatWindowInfo& info,const char*& issue);
++    unsigned pending_count() const {return size_;}
++    int64_t first_pending_center() const {return size_?pending_[head_].sample:-1;}
++    const BeatWindowStats& stats() const {return stats_;}
++    const char* last_drop_reason() const {return last_drop_reason_;}
++private:
++    struct Center {int64_t sample=0,timestamp=0;};
++    float ring_[kRingSamples]={};
++    int64_t times_[kRingSamples]={};
++    Center pending_[kPendingCapacity]={};
++    int64_t first_=-1,last_=-1,last_enqueued_=-1,last_emitted_=-1;
++    unsigned head_=0,size_=0;
++    BeatWindowStats stats_={};
++    const char* last_drop_reason_=nullptr;
++};
++struct BeatDetectorStats {
++    uint64_t samples=0,candidates=0,warmup_samples=0,no_peak_resets=0,external_resets=0;
++    BeatWindowStats windows={};
++};
+ class BeatDetector {
+ public:
+     void reset();
+-    // Returns a 256-sample window only after 128 post-center samples exist.
++    // Returns [center-128,center+128) only after its last sample exists.
+     // Detection signal only is baseline-removed; returned morphology is raw.
+     bool push(int raw, int64_t timestamp, float* beat, const char*& issue);
++    const BeatWindowInfo& last_window() const {return last_window_;}
++    BeatDetectorStats stats() const;
++    unsigned pending_count() const {return windows_.pending_count();}
+ private:
+-    float ring_[512] = {};
+-    int64_t times_[512] = {};
+-    int64_t count_ = 0, pending_ = -1, last_center_ = -1;
++    void reset_state();
++    BeatWindowBuffer windows_;
++    BeatWindowInfo last_window_={};
++    struct {uint64_t samples=0,candidates=0,warmup_samples=0,no_peak_resets=0,external_resets=0;} counters_;
++    // Absolute sample index survives resets; count_ remains detector warm-up age.
++    int64_t next_sample_=0,count_=0,last_center_=-1;
+     float baseline_ = 0, envelope_ = 0, prev_abs_ = 0, before_abs_ = 0;
+ };

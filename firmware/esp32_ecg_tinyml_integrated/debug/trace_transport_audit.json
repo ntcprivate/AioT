@@ -1,0 +1,325 @@
+{
+  "status": "OLD_CAPTURE_CORRUPT_NEW_PROTOCOL_BUILT_PENDING_BOARD_TEST",
+  "source_log": "firmware\\esp32_ecg_tinyml_integrated\\log.esp32_ecg_tinyml_integrated.20261106042753.txt",
+  "source_sha256": "c77560a74bf04fab8191872c2dec412c465774c698497e40a52f18a161d0a79f",
+  "analysis_copy_same_bytes": true,
+  "data_lines": 277,
+  "malformed_hex_length_chunks": 35,
+  "odd_hex_chunks": 28,
+  "even_length_corrupt_chunks": 7,
+  "missing_hex_chars": 46,
+  "corrupt_chunks": [
+    {
+      "line": 105,
+      "op": 0,
+      "offset": 64,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 134,
+      "op": 1,
+      "offset": 1536,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 140,
+      "op": 1,
+      "offset": 1920,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 144,
+      "op": 2,
+      "offset": 64,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 163,
+      "op": 2,
+      "offset": 1280,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 172,
+      "op": 2,
+      "offset": 1856,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 179,
+      "op": 3,
+      "offset": 192,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 199,
+      "op": 3,
+      "offset": 1408,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 202,
+      "op": 3,
+      "offset": 1600,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 205,
+      "op": 3,
+      "offset": 1792,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 212,
+      "op": 4,
+      "offset": 128,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 215,
+      "op": 4,
+      "offset": 320,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 219,
+      "op": 4,
+      "offset": 576,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 222,
+      "op": 4,
+      "offset": 768,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 224,
+      "op": 4,
+      "offset": 896,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 237,
+      "op": 5,
+      "offset": 640,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 262,
+      "op": 7,
+      "offset": 0,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 125
+    },
+    {
+      "line": 271,
+      "op": 7,
+      "offset": 576,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 274,
+      "op": 7,
+      "offset": 768,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 277,
+      "op": 7,
+      "offset": 960,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 280,
+      "op": 7,
+      "offset": 1152,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 289,
+      "op": 7,
+      "offset": 1728,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 294,
+      "op": 8,
+      "offset": 0,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 306,
+      "op": 8,
+      "offset": 768,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 315,
+      "op": 8,
+      "offset": 1344,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 318,
+      "op": 8,
+      "offset": 1536,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 327,
+      "op": 9,
+      "offset": 0,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 335,
+      "op": 9,
+      "offset": 512,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 345,
+      "op": 9,
+      "offset": 1152,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 125
+    },
+    {
+      "line": 354,
+      "op": 9,
+      "offset": 1728,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 357,
+      "op": 9,
+      "offset": 1920,
+      "expected_hex_chars": 64,
+      "actual_hex_chars": 63
+    },
+    {
+      "line": 361,
+      "op": 10,
+      "offset": 128,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 364,
+      "op": 10,
+      "offset": 320,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 126
+    },
+    {
+      "line": 385,
+      "op": 11,
+      "offset": 512,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    },
+    {
+      "line": 391,
+      "op": 11,
+      "offset": 896,
+      "expected_hex_chars": 128,
+      "actual_hex_chars": 127
+    }
+  ],
+  "damaged_header_lines": [
+    {
+      "line": 124,
+      "missing_keys": [
+        "offset"
+      ],
+      "received_line": "ECG_TRACE_DATA sample=5 op=1 tensor=16 ffset=960 hex=90c1a09b80ae8080a1d9b4a6809c808099d5cb8f8086808080c6d8809180808080c3da809880808080c8d9809282808080cad9809280808080c2d6809e808080"
+    },
+    {
+      "line": 339,
+      "missing_keys": [
+        "op"
+      ],
+      "received_line": "ECG_TRACE_DATA sample=5 p=9 tensor=24 offset=768 hex=80818381838080808086818083808080808182828180808080848280818080808081808380808080808280808080808080808081808080808080808080808080"
+    }
+  ],
+  "confirmed": "Raw and analysis log bytes identical.35 chunks have short HEX, plus2 additional lines have damaged literal keys (offset->ffset, op->p). Loss is not confined to HEX.",
+  "unproven": "Cannot localize loss between formatting, stdio/VFS/UART, USB adapter and host logging from old capture alone. UART alone is not proven.",
+  "generation_review": "char[129]/64byte snprintf loop is nominally within bounds; AI-task local buffer. No shared HEX buffer race identified. No checks of generation length, write/flush results or per-chunk integrity existed.",
+  "uart_vfs_review": "Pinned IDF5.4.4 uart_vfs.c uses per-UART recursive write lock and waits for FIFO room. This source does not prove or exclude downstream capture loss.",
+  "new_protocol": {
+    "version": 2,
+    "chunk_bytes": 16,
+    "checksums": [
+      "line",
+      "chunk",
+      "tensor",
+      "whole-stream FNV1a32"
+    ],
+    "mandatory_markers": [
+      "BEGIN",
+      "END",
+      "RESULT"
+    ],
+    "repair_allowed": false,
+    "console": "common recursive application lock + stdio lock; bounded checked fwrite/flush",
+    "adc": "summary output only suppressed during dump; sampling and producer integrity logic unchanged"
+  },
+  "tests": {
+    "python_protocol_tests": "14 PASSED",
+    "firmware_hex_encoder": "PASS: all256 byte values, chunk lengths1..16, capacity/terminator guards",
+    "old_capture": "REJECTED explicitly; no repair or operator conclusion"
+  },
+  "hardware_after_fix": "NOT_TESTED",
+  "flash": "NOT_ATTEMPTED",
+  "build": {
+    "status": "PASSED",
+    "method": "ESP-IDF5.4.4 cmake --build build --parallel 4",
+    "exit_code": 0,
+    "binary_bytes": 299600,
+    "binary_sha256": "ddc58fea7eaaef22d4d1d276def9c71df90c5f579ffea9df40d9e3d29b0fec22",
+    "partition_check": "PASSED"
+  },
+  "invariants": {
+    "CNN_and_golden_match_step8": true,
+    "threshold": 0.52,
+    "ADC_live": "DISABLED",
+    "pins": {
+      "ADC": 34,
+      "LO_PLUS": 26,
+      "LO_MINUS": 27,
+      "LED": 23,
+      "buzzer": 25
+    },
+    "sampling": "GPTimer4000us unchanged; no console calls in sampling loop",
+    "board_test_after_fix": "NOT_RUN"
+  }
+}

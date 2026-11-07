@@ -1,0 +1,89 @@
+{
+  "status": "NUMERICAL_CAUSE_PROVEN_HOST_ALL_GOLDEN_EXACT_BUILD_PASSED_BOARD_PENDING",
+  "finding": "Step8 archived board log has same two errors. Actual host kernels reproduce both; Conv-only single rounding matches all12 golden and all16 sample5 tensors.",
+  "step8_existing_log": {
+    "path": "results/esp32_serial.log",
+    "sha256": "d98404e8d5736201434f00d09b9d5e485fdbb21bef5f0fa6b183af8fe5432a3d",
+    "lines": [
+      "ECG_RESULT sample_id=2 dataset_index=56558 record=214 true=1 output_int8=-61 score=0.261718750 predicted=0 python_int8=-66 lsb=5 input_match=1 stable=1 status=NEEDS_REVIEW",
+      "ECG_RESULT sample_id=5 dataset_index=50805 record=210 true=1 output_int8=0 score=0.500000000 predicted=0 python_int8=7 lsb=7 input_match=1 stable=1 status=FAILED",
+      "ECG_DONE samples=12 status=FAILED"
+    ]
+  },
+  "verified_assets": [
+    {
+      "file": "main/model/ecg_cnn_int8.tflite",
+      "sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+      "same_as_step8": true
+    },
+    {
+      "file": "main/test_data/ecg_test_samples_int8.bin",
+      "sha256": "12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758",
+      "same_as_step8": true
+    },
+    {
+      "file": "main/test_data/ecg_test_metadata.h",
+      "sha256": "b69fddca6df4f82fb68c47c4549f55dec406d9f52b762a1d1e2240721db6e296",
+      "same_as_step8": true
+    },
+    {
+      "file": "dependencies.lock",
+      "sha256": "5e94f1306343531fd0655967ce29e039de564610ce53e67590f2c197d717e705",
+      "same_as_step8": true
+    }
+  ],
+  "actual_kernel_compile_flags": [
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/fully_connected.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/logistic.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/pooling.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    },
+    {
+      "file": "D:/Code Part Two/AIoT/firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/reduce.cc",
+      "ESP_NN_defined": false,
+      "TFLITE_SINGLE_ROUNDING": 0
+    }
+  ],
+  "effective_reference": true,
+  "specific_numeric_root_cause": "CONV double rounding versus CPU builtin single rounding; selective Conv-only adapter matches reference. Other kernels retain double rounding.",
+  "candidate_to_inspect": "Resolved: first CONV requantization. Global single rounding rejected; MEAN behavior must remain unchanged.",
+  "golden_reference_changed": false,
+  "pass_criteria_relaxed": false,
+  "live_ADC_enabled": false,
+  "ADC_evidence": "User reports INVALID_LEADS/rail saturation; never used for N/PVC or golden conclusions",
+  "trace": "Sample5, capture per-op bytes immediately via profiler,24KiB bounded buffer; no tensor arena preserve-mode changes",
+  "new_board_trace": "NOT_AVAILABLE_AFTER_PATCH",
+  "python_tensor_reference": "Existing user-generated TensorFlow2.21.0 reference verified; unchanged",
+  "flash": "NOT_ATTEMPTED",
+  "build": {
+    "status": "PASSED",
+    "method": "ESP-IDF v5.4.4 cmake --build build --parallel 4",
+    "exit_code": 0,
+    "binary_bytes": 295072,
+    "binary_sha256": "b3f240cb228edefc8c1765e0aa1e16887a9ab90960c9f91c739147bf688b4eaf",
+    "partition_check": "PASSED",
+    "warning_scope": "Final incremental compile/link emitted no warnings; pre-existing full TFLM source may emit vendor warnings",
+    "log": "debug/numerical_build.log"
+  },
+  "parser_tests": "PASS: FNV known vector, metadata parse, one differing byte/operator detection, truncated trace rejected",
+  "adc_live": "DISABLED",
+  "current_status": "NUMERICAL_CAUSE_PROVEN_HOST_ALL_GOLDEN_EXACT_BUILD_PASSED_BOARD_PENDING",
+  "transport_report": "debug/trace_transport_audit.json",
+  "previous_status": "DEBUG_BUILD_PASSED_NUMERICAL_ROOT_CAUSE_UNRESOLVED",
+  "current_fix_report": "debug/numerical_fix_report.json"
+}

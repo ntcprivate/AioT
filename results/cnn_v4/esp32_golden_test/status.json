@@ -1,0 +1,23 @@
+{
+  "model": "V4",
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "model_bytes": 8688,
+  "threshold_probability": 0.88,
+  "threshold_code_min": 98,
+  "existing_host_parity_reused": {"exact": 25010, "total": 25010},
+  "fixtures_prepared": 22,
+  "parser_tests_passed": 5,
+  "build": "PASS",
+  "idf_version": "5.4.4",
+  "app_binary_bytes": 276928,
+  "static_dram_bytes": 14508,
+  "iram_bytes": 49634,
+  "arena_configured_bytes": 65536,
+  "hardware_status": "NOT_RUN_NO_SERIAL_PORT",
+  "hardware_samples_tested": 0,
+  "hardware_exact": null,
+  "arena_used_bytes": null,
+  "runtime_heap_bytes": null,
+  "latency_us": null,
+  "flashed": false
+}

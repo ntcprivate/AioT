@@ -1,0 +1,8 @@
+dependencies:
+  idf: "==5.4.4"
+  espressif/esp-tflite-micro:
+    version: "==1.4.2"
+    override_path: "../../../../../firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-tflite-micro"
+  espressif/esp-nn:
+    version: "==1.3.0"
+    override_path: "../../../../../firmware/esp32_ecg_tinyml_integrated/managed_components/espressif__esp-nn"

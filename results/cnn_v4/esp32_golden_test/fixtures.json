@@ -1,0 +1,241 @@
+{
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "model_bytes": 8688,
+  "source_checkpoint_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+  "count": 22,
+  "io": {
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_scale": 0.06217966973781586,
+    "input_zero": -8,
+    "output_scale": 0.00390625,
+    "output_zero": -128
+  },
+  "threshold_probability": 0.88,
+  "threshold_code_min": 98,
+  "source": "INCART Validation only; exact cached 25010/25010 host parity reused; selected static fixtures, no inference rerun",
+  "input_sha256": "288186f6d6bc860ae5fc71f77131f2d6e5723c4471244b27747d377469ff1ed4",
+  "raw_sha256": "e4b7dc22d17f7048ba0cf329246d51026db4b7144f7b98a7e03496d330869160",
+  "fixtures": [
+    {
+      "fixture": 0,
+      "validation_index": 0,
+      "record": "I08",
+      "center_250hz": 295,
+      "label": 0,
+      "reference_code": -120,
+      "pvc_probability": 0.03125,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 1,
+      "validation_index": 1,
+      "record": "I08",
+      "center_250hz": 536,
+      "label": 0,
+      "reference_code": -120,
+      "pvc_probability": 0.03125,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 2,
+      "validation_index": 2,
+      "record": "I08",
+      "center_250hz": 781,
+      "label": 0,
+      "reference_code": -120,
+      "pvc_probability": 0.03125,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 3,
+      "validation_index": 3,
+      "record": "I08",
+      "center_250hz": 1032,
+      "label": 0,
+      "reference_code": -120,
+      "pvc_probability": 0.03125,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 4,
+      "validation_index": 88,
+      "record": "I08",
+      "center_250hz": 21977,
+      "label": 1,
+      "reference_code": 74,
+      "pvc_probability": 0.7890625,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 5,
+      "validation_index": 92,
+      "record": "I08",
+      "center_250hz": 22741,
+      "label": 1,
+      "reference_code": 114,
+      "pvc_probability": 0.9453125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 6,
+      "validation_index": 95,
+      "record": "I08",
+      "center_250hz": 23252,
+      "label": 1,
+      "reference_code": 44,
+      "pvc_probability": 0.671875,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 7,
+      "validation_index": 98,
+      "record": "I08",
+      "center_250hz": 23781,
+      "label": 1,
+      "reference_code": 112,
+      "pvc_probability": 0.9375,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 8,
+      "validation_index": 137,
+      "record": "I08",
+      "center_250hz": 30856,
+      "label": 1,
+      "reference_code": 127,
+      "pvc_probability": 0.99609375,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 9,
+      "validation_index": 144,
+      "record": "I08",
+      "center_250hz": 32105,
+      "label": 1,
+      "reference_code": 127,
+      "pvc_probability": 0.99609375,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 10,
+      "validation_index": 1273,
+      "record": "I08",
+      "center_250hz": 290882,
+      "label": 0,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 11,
+      "validation_index": 1662,
+      "record": "I08",
+      "center_250hz": 355378,
+      "label": 1,
+      "reference_code": -117,
+      "pvc_probability": 0.04296875,
+      "reference_prediction": 0
+    },
+    {
+      "fixture": 12,
+      "validation_index": 1762,
+      "record": "I08",
+      "center_250hz": 372329,
+      "label": 0,
+      "reference_code": 127,
+      "pvc_probability": 0.99609375,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 13,
+      "validation_index": 1768,
+      "record": "I08",
+      "center_250hz": 373384,
+      "label": 0,
+      "reference_code": 127,
+      "pvc_probability": 0.99609375,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 14,
+      "validation_index": 18063,
+      "record": "I65",
+      "center_250hz": 149326,
+      "label": 0,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 15,
+      "validation_index": 18492,
+      "record": "I65",
+      "center_250hz": 218481,
+      "label": 0,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 16,
+      "validation_index": 18554,
+      "record": "I65",
+      "center_250hz": 229568,
+      "label": 1,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 17,
+      "validation_index": 22066,
+      "record": "I67",
+      "center_250hz": 3910,
+      "label": 0,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 18,
+      "validation_index": 22372,
+      "record": "I67",
+      "center_250hz": 51664,
+      "label": 1,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 19,
+      "validation_index": 23898,
+      "record": "I67",
+      "center_250hz": 268671,
+      "label": 1,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 20,
+      "validation_index": 24516,
+      "record": "I67",
+      "center_250hz": 367404,
+      "label": 1,
+      "reference_code": 98,
+      "pvc_probability": 0.8828125,
+      "reference_prediction": 1
+    },
+    {
+      "fixture": 21,
+      "validation_index": 24975,
+      "record": "I67",
+      "center_250hz": 443620,
+      "label": 1,
+      "reference_code": -118,
+      "pvc_probability": 0.0390625,
+      "reference_prediction": 0
+    }
+  ]
+}

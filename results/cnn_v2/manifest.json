@@ -1,0 +1,23 @@
+{
+  "decision": "KEEP_V1_V2_NOT_IMPROVED",
+  "V2_INT8": "NOT_EXPORTED_DEVELOPMENT_RULE_NOT_MET",
+  "training_configurations": 1,
+  "model": "models\\v2\\ecg_cnn_v2_best.keras",
+  "model_sha256": "e609077580bf396f9775e7491a1cf3815e31f671d44278a609494e86a13e2036",
+  "source_sha256": {
+    "python\\cnn_v2_common.py": "b2a29cb2322878516be173ce22f421ea9f2c75a8678d7f63c655e1662ffd54a0",
+    "python\\evaluate_cnn_v2.py": "f997c9a2245020ce36cb490f26cdfc57d449f6fbf26e22775e03110cb38250d1",
+    "python\\prepare_cnn_v2.py": "9a3f1049a9c33524d799fea18a1b58e643c47183494347940f0e5646270f13f3",
+    "python\\prepare_cnn_v2_evaluation.py": "1929895075e875a95be03133fa5300aa6b21ca258b024cafdc9c3e9cd479077c",
+    "python\\test_cnn_v2.py": "cf2d7fd084d23d92f3747fa498d3065b4249dd80c4584c7c1005122b5ed21899",
+    "python\\train_cnn_v2.py": "7144c5c9765a498957d0759cf6c58544a82765cc8575ddcb00d4f03cb243fdfb"
+  },
+  "tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "firmware_flash": false,
+  "Test_inference": false,
+  "push": false,
+  "training_wrapper_note": "PowerShell stderr warning generated NativeCommandError; completed finite history and checkpoint read-back validated, no retraining."
+}

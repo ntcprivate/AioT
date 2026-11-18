@@ -1,0 +1,6 @@
+{
+  "aggregate_acceptance": "PASS",
+  "final_decision": "FAIL for promotion/stable multi-group improvement; keep V4 baseline",
+  "reason": "Only2/16 MIT records and3/29 INCART records show FP/F1 benefit;71/73 INCART FP improvement is one record I16(patient8); no real Evaluation PVC rejected, but tiny MIT benefit and concentration do not establish stable patient-level improvement",
+  "no_more_variants": true
+}

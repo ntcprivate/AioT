@@ -1,0 +1,680 @@
+{
+  "scope": "Historical Validation, exploratory only. Checkpoint and export decision frozen before this inference. No Test.",
+  "models": {
+    "V1_INT8": {
+      "conditional": {
+        "confusion_rows_N_V": [
+          [
+            10673,
+            428
+          ],
+          [
+            136,
+            1141
+          ]
+        ],
+        "N_to_PVC": 428,
+        "PVC_to_N": 136,
+        "precision": 0.727214786488209,
+        "recall": 0.8935003915426781,
+        "f1": 0.8018271257905832,
+        "normal_recall": 0.961444914872534,
+        "normal_neighbor_pvc": {
+          "samples": 807,
+          "false_positive": 402,
+          "normal_recall": 0.5018587360594795
+        }
+      },
+      "end_to_end": {
+        "N": {
+          "tp": 10673,
+          "fp": 160,
+          "fn": 494,
+          "precision": 0.9852303147789163,
+          "recall": 0.9557625145518044,
+          "f1": 0.9702727272727273
+        },
+        "V": {
+          "tp": 1141,
+          "fp": 449,
+          "fn": 160,
+          "precision": 0.7176100628930817,
+          "recall": 0.8770176787086856,
+          "f1": 0.7893462469733656
+        }
+      },
+      "matched_windows": 12378,
+      "classified_windows": 16775,
+      "miss_before_cnn": {
+        "N": 66,
+        "V": 24
+      },
+      "unmatched_PVC": 21,
+      "other_annotation_windows": 4352,
+      "other_annotation_PVC": 897,
+      "per_record": [
+        {
+          "record": "115",
+          "confusion_rows_N_V": [
+            [
+              1948,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "normal_recall": 1.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "118",
+          "confusion_rows_N_V": [
+            [
+              0,
+              0
+            ],
+            [
+              12,
+              1
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 12,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "f1": 0.14285714285714285,
+          "normal_recall": 0.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "121",
+          "confusion_rows_N_V": [
+            [
+              1831,
+              6
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "N_to_PVC": 6,
+          "PVC_to_N": 0,
+          "precision": 0.14285714285714285,
+          "recall": 1.0,
+          "f1": 0.25,
+          "normal_recall": 0.9967338051170387,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "210",
+          "confusion_rows_N_V": [
+            [
+              2377,
+              21
+            ],
+            [
+              45,
+              142
+            ]
+          ],
+          "N_to_PVC": 21,
+          "PVC_to_N": 45,
+          "precision": 0.8711656441717791,
+          "recall": 0.7593582887700535,
+          "f1": 0.8114285714285714,
+          "normal_recall": 0.9912427022518766,
+          "normal_neighbor_pvc": {
+            "samples": 124,
+            "false_positive": 20,
+            "normal_recall": 0.8387096774193549
+          }
+        },
+        {
+          "record": "214",
+          "confusion_rows_N_V": [
+            [
+              0,
+              0
+            ],
+            [
+              57,
+              194
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 57,
+          "precision": 1.0,
+          "recall": 0.7729083665338645,
+          "f1": 0.8719101123595505,
+          "normal_recall": 0.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "233",
+          "confusion_rows_N_V": [
+            [
+              1824,
+              401
+            ],
+            [
+              21,
+              801
+            ]
+          ],
+          "N_to_PVC": 401,
+          "PVC_to_N": 21,
+          "precision": 0.6663893510815307,
+          "recall": 0.9744525547445255,
+          "f1": 0.791501976284585,
+          "normal_recall": 0.8197752808988764,
+          "normal_neighbor_pvc": {
+            "samples": 680,
+            "false_positive": 382,
+            "normal_recall": 0.43823529411764706
+          }
+        },
+        {
+          "record": "234",
+          "confusion_rows_N_V": [
+            [
+              2693,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "normal_recall": 1.0,
+          "normal_neighbor_pvc": {
+            "samples": 3,
+            "false_positive": 0,
+            "normal_recall": 1.0
+          }
+        }
+      ],
+      "host_batch_ms_per_window": null,
+      "latency_limit": "Host batch processing including prediction IO, not ESP32 single-beat latency; detector/window delay unchanged and inherited from original replay"
+    },
+    "V1_FLOAT32": {
+      "conditional": {
+        "confusion_rows_N_V": [
+          [
+            10628,
+            473
+          ],
+          [
+            132,
+            1145
+          ]
+        ],
+        "N_to_PVC": 473,
+        "PVC_to_N": 132,
+        "precision": 0.707663782447466,
+        "recall": 0.8966327329678935,
+        "f1": 0.7910189982728842,
+        "normal_recall": 0.9573912260156743,
+        "normal_neighbor_pvc": {
+          "samples": 807,
+          "false_positive": 447,
+          "normal_recall": 0.44609665427509293
+        }
+      },
+      "end_to_end": {
+        "N": {
+          "tp": 10628,
+          "fp": 156,
+          "fn": 539,
+          "precision": 0.9855341246290801,
+          "recall": 0.9517327840959972,
+          "f1": 0.9683385722746116
+        },
+        "V": {
+          "tp": 1145,
+          "fp": 494,
+          "fn": 156,
+          "precision": 0.6985967053081147,
+          "recall": 0.8800922367409685,
+          "f1": 0.7789115646258503
+        }
+      },
+      "matched_windows": 12378,
+      "classified_windows": 16775,
+      "miss_before_cnn": {
+        "N": 66,
+        "V": 24
+      },
+      "unmatched_PVC": 21,
+      "other_annotation_windows": 4352,
+      "other_annotation_PVC": 980,
+      "per_record": [
+        {
+          "record": "115",
+          "confusion_rows_N_V": [
+            [
+              1948,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "normal_recall": 1.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "118",
+          "confusion_rows_N_V": [
+            [
+              0,
+              0
+            ],
+            [
+              12,
+              1
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 12,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "f1": 0.14285714285714285,
+          "normal_recall": 0.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "121",
+          "confusion_rows_N_V": [
+            [
+              1830,
+              7
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "N_to_PVC": 7,
+          "PVC_to_N": 0,
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222222222222222,
+          "normal_recall": 0.9961894393032118,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "210",
+          "confusion_rows_N_V": [
+            [
+              2376,
+              22
+            ],
+            [
+              42,
+              145
+            ]
+          ],
+          "N_to_PVC": 22,
+          "PVC_to_N": 42,
+          "precision": 0.8682634730538922,
+          "recall": 0.7754010695187166,
+          "f1": 0.8192090395480226,
+          "normal_recall": 0.9908256880733946,
+          "normal_neighbor_pvc": {
+            "samples": 124,
+            "false_positive": 21,
+            "normal_recall": 0.8306451612903226
+          }
+        },
+        {
+          "record": "214",
+          "confusion_rows_N_V": [
+            [
+              0,
+              0
+            ],
+            [
+              57,
+              194
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 57,
+          "precision": 1.0,
+          "recall": 0.7729083665338645,
+          "f1": 0.8719101123595505,
+          "normal_recall": 0.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "233",
+          "confusion_rows_N_V": [
+            [
+              1781,
+              444
+            ],
+            [
+              20,
+              802
+            ]
+          ],
+          "N_to_PVC": 444,
+          "PVC_to_N": 20,
+          "precision": 0.6436597110754414,
+          "recall": 0.975669099756691,
+          "f1": 0.7756286266924565,
+          "normal_recall": 0.8004494382022472,
+          "normal_neighbor_pvc": {
+            "samples": 680,
+            "false_positive": 426,
+            "normal_recall": 0.3735294117647059
+          }
+        },
+        {
+          "record": "234",
+          "confusion_rows_N_V": [
+            [
+              2693,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "normal_recall": 1.0,
+          "normal_neighbor_pvc": {
+            "samples": 3,
+            "false_positive": 0,
+            "normal_recall": 1.0
+          }
+        }
+      ],
+      "host_batch_ms_per_window": 0.019888631892272572,
+      "latency_limit": "Host batch processing including prediction IO, not ESP32 single-beat latency; detector/window delay unchanged and inherited from original replay"
+    },
+    "V2_FLOAT32": {
+      "conditional": {
+        "confusion_rows_N_V": [
+          [
+            10172,
+            929
+          ],
+          [
+            49,
+            1228
+          ]
+        ],
+        "N_to_PVC": 929,
+        "PVC_to_N": 49,
+        "precision": 0.5693092257765415,
+        "recall": 0.961628817541112,
+        "f1": 0.7152009318578917,
+        "normal_recall": 0.9163138455994956,
+        "normal_neighbor_pvc": {
+          "samples": 807,
+          "false_positive": 580,
+          "normal_recall": 0.2812887236679058
+        }
+      },
+      "end_to_end": {
+        "N": {
+          "tp": 10172,
+          "fp": 68,
+          "fn": 995,
+          "precision": 0.993359375,
+          "recall": 0.9108981821438166,
+          "f1": 0.9503433456346055
+        },
+        "V": {
+          "tp": 1228,
+          "fp": 955,
+          "fn": 73,
+          "precision": 0.5625286303252405,
+          "recall": 0.9438893159108378,
+          "f1": 0.7049368541905855
+        }
+      },
+      "matched_windows": 12378,
+      "classified_windows": 16775,
+      "miss_before_cnn": {
+        "N": 66,
+        "V": 24
+      },
+      "unmatched_PVC": 26,
+      "other_annotation_windows": 4352,
+      "other_annotation_PVC": 908,
+      "per_record": [
+        {
+          "record": "115",
+          "confusion_rows_N_V": [
+            [
+              1946,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "N_to_PVC": 2,
+          "PVC_to_N": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "normal_recall": 0.9989733059548255,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "118",
+          "confusion_rows_N_V": [
+            [
+              0,
+              0
+            ],
+            [
+              12,
+              1
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 12,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "f1": 0.14285714285714285,
+          "normal_recall": 0.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "121",
+          "confusion_rows_N_V": [
+            [
+              1777,
+              60
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "N_to_PVC": 60,
+          "PVC_to_N": 0,
+          "precision": 0.01639344262295082,
+          "recall": 1.0,
+          "f1": 0.03225806451612903,
+          "normal_recall": 0.9673380511703865,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "210",
+          "confusion_rows_N_V": [
+            [
+              2334,
+              64
+            ],
+            [
+              20,
+              167
+            ]
+          ],
+          "N_to_PVC": 64,
+          "PVC_to_N": 20,
+          "precision": 0.7229437229437229,
+          "recall": 0.893048128342246,
+          "f1": 0.7990430622009569,
+          "normal_recall": 0.9733110925771477,
+          "normal_neighbor_pvc": {
+            "samples": 124,
+            "false_positive": 15,
+            "normal_recall": 0.8790322580645161
+          }
+        },
+        {
+          "record": "214",
+          "confusion_rows_N_V": [
+            [
+              0,
+              0
+            ],
+            [
+              13,
+              238
+            ]
+          ],
+          "N_to_PVC": 0,
+          "PVC_to_N": 13,
+          "precision": 1.0,
+          "recall": 0.9482071713147411,
+          "f1": 0.9734151329243353,
+          "normal_recall": 0.0,
+          "normal_neighbor_pvc": {
+            "samples": 0,
+            "false_positive": 0,
+            "normal_recall": 0.0
+          }
+        },
+        {
+          "record": "233",
+          "confusion_rows_N_V": [
+            [
+              1430,
+              795
+            ],
+            [
+              3,
+              819
+            ]
+          ],
+          "N_to_PVC": 795,
+          "PVC_to_N": 3,
+          "precision": 0.5074349442379182,
+          "recall": 0.9963503649635036,
+          "f1": 0.6724137931034483,
+          "normal_recall": 0.6426966292134831,
+          "normal_neighbor_pvc": {
+            "samples": 680,
+            "false_positive": 565,
+            "normal_recall": 0.16911764705882354
+          }
+        },
+        {
+          "record": "234",
+          "confusion_rows_N_V": [
+            [
+              2685,
+              8
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "N_to_PVC": 8,
+          "PVC_to_N": 1,
+          "precision": 0.2,
+          "recall": 0.6666666666666666,
+          "f1": 0.3076923076923077,
+          "normal_recall": 0.9970293353137765,
+          "normal_neighbor_pvc": {
+            "samples": 3,
+            "false_positive": 0,
+            "normal_recall": 1.0
+          }
+        }
+      ],
+      "host_batch_ms_per_window": 0.017688089418509523,
+      "latency_limit": "Host batch processing including prediction IO, not ESP32 single-beat latency; detector/window delay unchanged and inherited from original replay"
+    }
+  },
+  "deploy_recommendation": "KEEP_V1; no firmware/model replacement authorized by this run",
+  "v2_int8_status": "NOT_EXPORTED: development selection rule not met; quantization/parity/arena checks not applicable",
+  "protected_files_unchanged": 60
+}

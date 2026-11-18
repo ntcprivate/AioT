@@ -1,0 +1,122 @@
+{
+  "source_model": "models\\v4\\ecg_cnn_v4_best.keras",
+  "source_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+  "int8_model": "models\\v4\\ecg_cnn_v4_int8.tflite",
+  "int8_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "bytes": 8688,
+  "parameters": 849,
+  "calibration": {
+    "source": "MIT-BIH Train + INCART Train only",
+    "samples": 1000,
+    "N": 500,
+    "V": 500,
+    "seed": 42
+  },
+  "io": {
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_scale": 0.06217966973781586,
+    "input_zero": -8,
+    "output_scale": 0.00390625,
+    "output_zero": -128
+  },
+  "operators": [
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "MEAN",
+    "FULLY_CONNECTED",
+    "FULLY_CONNECTED",
+    "LOGISTIC"
+  ],
+  "tensor_dtypes": [
+    "int32",
+    "int8"
+  ],
+  "validation": {
+    "samples": 25010,
+    "FP32": {
+      "threshold": 0.88,
+      "precision": 0.9564349850349185,
+      "recall": 0.929541047188106,
+      "f1": 0.94279626290772,
+      "TP": 2876,
+      "TN": 21785,
+      "FP": 131,
+      "FN": 218,
+      "confusion_rows_N_V": [
+        [
+          21785,
+          131
+        ],
+        [
+          218,
+          2876
+        ]
+      ]
+    },
+    "INT8": {
+      "threshold": 0.88,
+      "precision": 0.964769647696477,
+      "recall": 0.9204912734324499,
+      "f1": 0.9421104862719153,
+      "TP": 2848,
+      "TN": 21812,
+      "FP": 104,
+      "FN": 246,
+      "confusion_rows_N_V": [
+        [
+          21812,
+          104
+        ],
+        [
+          246,
+          2848
+        ]
+      ]
+    },
+    "score_mae": 0.003725510323420167,
+    "score_max_abs": 0.4890560507774353,
+    "score_p99_abs": 0.0506596677005291,
+    "class_changes_at_0_88": 55,
+    "input_clipped_values": 5,
+    "input_values": 6402560
+  },
+  "host_parity": {
+    "executable": "results\\cnn_v4\\v4_tflm_host.exe",
+    "return_code": 0,
+    "samples": 25010,
+    "exact_code_matches": 25010,
+    "mismatches": 0,
+    "max_code_delta": 0,
+    "adapter": "V1 Conv/FC single-rounding host adapter exercised with V4 model; not assumed",
+    "stderr": ""
+  },
+  "esp32_compatibility": {
+    "graph_matches_v1_operator_set": true,
+    "resolver_operators": [
+      "CONV_2D",
+      "EXPAND_DIMS",
+      "FULLY_CONNECTED",
+      "LOGISTIC",
+      "MAX_POOL_2D",
+      "MEAN",
+      "RESHAPE"
+    ],
+    "v1_measured_arena_used_bytes": 6124,
+    "v4_estimated_arena_used_bytes": 6124,
+    "estimate_basis": "identical quantized graph, tensor shapes and dtypes; must confirm AllocateTensors in a future firmware build",
+    "current_firmware_arena_allocated_bytes": 65536,
+    "firmware_modified": false,
+    "board_tested": false
+  }
+}

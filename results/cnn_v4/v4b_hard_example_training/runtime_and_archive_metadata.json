@@ -1,0 +1,43 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "tensorflow_installed": "2.21.0",
+  "numpy": "2.4.6",
+  "script_oneDNN": "0 before TensorFlow import",
+  "checkpoints": [
+    {
+      "checkpoint": "v4b_fold0_best.keras",
+      "keras_metadata": {
+        "keras_version": "3.15.1",
+        "date_saved": "2026-11-16@19:20:03"
+      }
+    },
+    {
+      "checkpoint": "v4b_fold1_best.keras",
+      "keras_metadata": {
+        "keras_version": "3.15.1",
+        "date_saved": "2026-11-16@19:21:36"
+      }
+    },
+    {
+      "checkpoint": "v4b_fold2_best.keras",
+      "keras_metadata": {
+        "keras_version": "3.15.1",
+        "date_saved": "2026-11-16@19:23:19"
+      }
+    },
+    {
+      "checkpoint": "v4b_fold3_best.keras",
+      "keras_metadata": {
+        "keras_version": "3.15.1",
+        "date_saved": "2026-11-16@19:27:36"
+      }
+    },
+    {
+      "checkpoint": "v4b_fold4_best.keras",
+      "keras_metadata": {
+        "keras_version": "3.15.1",
+        "date_saved": "2026-11-16@19:31:04"
+      }
+    }
+  ]
+}

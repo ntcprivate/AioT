@@ -1,0 +1,7 @@
+{
+  "completed": true,
+  "threshold": 0.965,
+  "checkpoint_sha256": "343f192826c02490164283cf9a887279a3afc6143e2c24a1c6072429fecf9be4",
+  "MITBIH_Test_samples": 11279,
+  "INCART_Test_samples": 26413
+}

@@ -1,0 +1,26 @@
+{
+  "experiment_configurations": 1,
+  "decision": "KEEP_V1; V3_CENTER_CNN_ONLY_IMPROVES_V2_BUT_END_TO_END_WORSE",
+  "INT8_exported": false,
+  "weights_sha256": {
+    "ecg_cnn_v3_best.keras": {
+      "bytes": 68350,
+      "sha256": "788cd415a6ef5deb2a7015a6314284e6effd79617115f0971058d8679d413260"
+    },
+    "ecg_cnn_v3_float32.tflite": {
+      "bytes": 17112,
+      "sha256": "aae98e3f61fb354d62300cd4a45c1599b1fbb4890187fee5938ba7ee4916df17"
+    }
+  },
+  "protected_files_unchanged": 102,
+  "source_sha256": {
+    "python\\train_cnn_v3.py": "39a329db32418ac58fa06a9935bc63f0f4ea2d4619dd195fd7d261bedb943b14",
+    "python\\evaluate_cnn_v3.py": "761dbf79a556a6769dc2ba2faa83c19401a3ea6f023f5ecb0808bce8223642cb"
+  },
+  "Test_Validation_inference": false,
+  "firmware_GUI_changed": false,
+  "flash": false,
+  "push": false,
+  "training_exit": 0,
+  "evaluation_exit": 0
+}

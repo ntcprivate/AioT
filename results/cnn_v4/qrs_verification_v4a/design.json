@@ -1,0 +1,105 @@
+{
+  "model": "V4 only,849 params,ECG input256x1,no RR",
+  "model_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+  "cnn_threshold": 0.88,
+  "groups": {
+    "Fit": {
+      "MITBIH": [
+        "101",
+        "103",
+        "105",
+        "114",
+        "119",
+        "201",
+        "205",
+        "207",
+        "213",
+        "217",
+        "221",
+        "223",
+        "228",
+        "230"
+      ],
+      "INCART": [
+        "3",
+        "4",
+        "5",
+        "14",
+        "18",
+        "19",
+        "22",
+        "25",
+        "26",
+        "29"
+      ]
+    },
+    "Calibration": {
+      "MITBIH": [
+        "115",
+        "209",
+        "212",
+        "214",
+        "219",
+        "220",
+        "233",
+        "234"
+      ],
+      "INCART": [
+        "7",
+        "12",
+        "15",
+        "16",
+        "20"
+      ]
+    },
+    "Evaluation": {
+      "MITBIH": [
+        "111",
+        "112",
+        "116",
+        "124",
+        "202",
+        "208",
+        "215",
+        "231",
+        "100",
+        "106",
+        "109",
+        "118",
+        "121",
+        "122",
+        "203",
+        "210"
+      ],
+      "INCART": [
+        "1",
+        "6",
+        "8",
+        "13",
+        "28",
+        "32",
+        "2",
+        "11",
+        "21",
+        "23",
+        "24",
+        "31"
+      ]
+    }
+  },
+  "split_rule": "locked CV fold0: Fit original folds3+4, Calibration fold2, Evaluation folds0+1; split frozen before new gate feature computation",
+  "feature": "central48-sample derivative-energy / maximum48-sample derivative-energy in256; strongest support-center offset",
+  "gate_rule": "reject iff ratio < t AND strongest support offset>40samples; never reject on RR or absolute slope",
+  "threshold_candidates": [
+    0,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "selection": "Fit matched-PVC rejection <=0.1%; Calibration zero matched-PVC rejection, no increase FN, no F1 reduction on either dataset; maximize worst-dataset F1 gain then total FP reduction; smaller threshold tie",
+  "latency": "window complete at center+127; no additional samples beyond existing256 window",
+  "evaluation_limit": "Evaluation groups not used to select this gate; previously exposed in V1-V11 research, not independent new patients",
+  "matching": "unchanged greedy one-to-one +/-38samples, full BEATS; OTHER not N; missing V=FN, missing N abstention, unmatched PVC alarm=FP",
+  "test_access": "forbidden; historical Test metrics not used"
+}

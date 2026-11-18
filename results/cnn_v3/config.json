@@ -1,0 +1,87 @@
+{
+  "seed": 42,
+  "threshold": 0.52,
+  "epochs": 30,
+  "patience": 5,
+  "batch_size": 64,
+  "optimizer": "Adam .001",
+  "parameters": 2385,
+  "input": [
+    256,
+    1
+  ],
+  "central_slice": [
+    96,
+    160
+  ],
+  "sampling": "each fit sample exactly once per epoch; no hard-negative oversampling",
+  "class_weights": [
+    0.5436774524910118,
+    6.223777046095955
+  ],
+  "fit_records": [
+    "100",
+    "101",
+    "103",
+    "105",
+    "106",
+    "109",
+    "112",
+    "114",
+    "116",
+    "119",
+    "122",
+    "124",
+    "201",
+    "202",
+    "203",
+    "205",
+    "208",
+    "209",
+    "212",
+    "213",
+    "215",
+    "219",
+    "223",
+    "228",
+    "230"
+  ],
+  "development_records": [
+    "111",
+    "207",
+    "217",
+    "220",
+    "221",
+    "231"
+  ],
+  "counts": {
+    "original_train": {
+      "samples": 58134,
+      "N": 53216,
+      "V": 4918,
+      "hard_N": 1586
+    },
+    "fit": {
+      "samples": 52927,
+      "N": 48675,
+      "V": 4252,
+      "hard_N": 1225
+    },
+    "development": {
+      "samples": 5207,
+      "N": 4541,
+      "V": 666,
+      "hard_N": 361
+    }
+  },
+  "preprocessing": "unchanged full-window per-beat z-score; central crop is inside model",
+  "monitor": "max development PVC F1 at .52; patience5",
+  "int8_export_rule": "V3 development F1 strictly exceeds both V1/V2 Float32@.52 and recall within2 percentage points of V1; not independent acceptance",
+  "limitations": [
+    "V1 fitted these development records. V2 and V3 exclude them from weight fitting.",
+    "Development reused for prior V2 stopping/threshold review and V3 stopping; not independent.",
+    "Known shared patient201/202 kept together; remaining patient groups are existing record proxies."
+  ],
+  "source_sha256": "39a329db32418ac58fa06a9935bc63f0f4ea2d4619dd195fd7d261bedb943b14",
+  "train_cache_sha256": "c1b6a9dcae3c6b1962a6453a342c340d490968a7bf1ef2b13e391ead8ddb9179"
+}

@@ -1,0 +1,996 @@
+{
+  "locked": {
+    "sha256": "61909ec7f93e3d8823627a0127422aefdd098f92a9c95619073968c7a3eb3601",
+    "threshold": 0.8,
+    "rr_fit_mean": [
+      0.7547150254249573,
+      0.7504129409790039,
+      1.0286024808883667,
+      0.998400092124939
+    ],
+    "rr_fit_std": [
+      0.22563959658145905,
+      0.20259849727153778,
+      0.2827460467815399,
+      0.0323653444647789
+    ],
+    "best_epoch": 5,
+    "epochs_run": 10,
+    "parameters": 2017,
+    "seed": 42,
+    "partition": {
+      "method": "fixed SHA256(seed:group), 60% checkpoint / 40% threshold; no waveform or output selection",
+      "INCART_checkpoint_patients": [
+        "4",
+        "20",
+        "25"
+      ],
+      "INCART_threshold_patients": [
+        "15",
+        "28"
+      ],
+      "MITBIH_checkpoint_records": [
+        "115",
+        "118",
+        "121",
+        "214",
+        "234"
+      ],
+      "MITBIH_threshold_records": [
+        "210",
+        "233"
+      ]
+    },
+    "fit_groups": {
+      "MITBIH": [
+        "100",
+        "101",
+        "103",
+        "105",
+        "106",
+        "109",
+        "111",
+        "112",
+        "114",
+        "116",
+        "119",
+        "122",
+        "124",
+        "201",
+        "202",
+        "203",
+        "205",
+        "207",
+        "208",
+        "209",
+        "212",
+        "213",
+        "215",
+        "217",
+        "219",
+        "220",
+        "221",
+        "223",
+        "228",
+        "230",
+        "231"
+      ],
+      "INCART": [
+        "1",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16",
+        "18",
+        "19",
+        "2",
+        "21",
+        "22",
+        "23",
+        "24",
+        "26",
+        "29",
+        "3",
+        "31",
+        "32",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "loss": "binary_crossentropy",
+    "class_weight": [
+      0.5583328602874857,
+      4.785749040384927
+    ],
+    "augmentation": false,
+    "preprocessing": "250Hz,256 samples,per-window z-score",
+    "RR_features": [
+      "current RR",
+      "median preceding up to7 RR",
+      "ratio current/prior median",
+      "history fraction up to8"
+    ],
+    "missing_history": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "tensorflow": "2.21.0",
+    "onednn": "0",
+    "test_accessed_before_lock": false,
+    "retrospective_test": true
+  },
+  "records": [
+    {
+      "dataset": "MITBIH",
+      "record": "107",
+      "offline": {
+        "samples": 59,
+        "N": 0,
+        "V": 59,
+        "threshold": 0.8,
+        "accuracy": 0.6949152542372882,
+        "precision": 1.0,
+        "recall": 0.6949152542372882,
+        "f1": 0.8200000000000001,
+        "pr_auc": null,
+        "fp_per_1000_normal": null,
+        "TP": 41,
+        "FP": 0,
+        "FN": 18,
+        "TN": 0,
+        "confusion_rows_N_V": [
+          [
+            0,
+            0
+          ],
+          [
+            18,
+            41
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 19,
+        "FP": 0,
+        "FN": 40,
+        "TN": 0,
+        "precision": 1.0,
+        "recall": 0.3220338983050847,
+        "f1": 0.4871794871794871,
+        "fp_per_1000_N": 0
+      },
+      "missing_N": 0,
+      "missing_V": 35,
+      "extra_peaks": 0
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "108",
+      "offline": {
+        "samples": 1755,
+        "N": 1738,
+        "V": 17,
+        "threshold": 0.8,
+        "accuracy": 0.9128205128205128,
+        "precision": 0.08536585365853659,
+        "recall": 0.8235294117647058,
+        "f1": 0.15469613259668508,
+        "pr_auc": 0.5655515981147612,
+        "fp_per_1000_normal": 86.30609896432681,
+        "TP": 14,
+        "FP": 150,
+        "FN": 3,
+        "TN": 1588,
+        "confusion_rows_N_V": [
+          [
+            1588,
+            150
+          ],
+          [
+            3,
+            14
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 12,
+        "FP": 158,
+        "FN": 5,
+        "TN": 1325,
+        "precision": 0.07058823529411765,
+        "recall": 0.7058823529411765,
+        "f1": 0.1283422459893048,
+        "fp_per_1000_N": 90.85681426106959
+      },
+      "missing_N": 347,
+      "missing_V": 0,
+      "extra_peaks": 383
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "113",
+      "offline": {
+        "samples": 1787,
+        "N": 1787,
+        "V": 0,
+        "threshold": 0.8,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pr_auc": null,
+        "fp_per_1000_normal": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1787,
+        "confusion_rows_N_V": [
+          [
+            1787,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 0,
+        "FP": 1580,
+        "FN": 0,
+        "TN": 1786,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "fp_per_1000_N": 883.1749580771381
+      },
+      "missing_N": 3,
+      "missing_V": 0,
+      "extra_peaks": 1580
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "117",
+      "offline": {
+        "samples": 1533,
+        "N": 1533,
+        "V": 0,
+        "threshold": 0.8,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pr_auc": null,
+        "fp_per_1000_normal": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1533,
+        "confusion_rows_N_V": [
+          [
+            1533,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 0,
+        "FP": 597,
+        "FN": 0,
+        "TN": 1531,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "fp_per_1000_N": 389.1786179921773
+      },
+      "missing_N": 3,
+      "missing_V": 0,
+      "extra_peaks": 597
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "123",
+      "offline": {
+        "samples": 1517,
+        "N": 1514,
+        "V": 3,
+        "threshold": 0.8,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "pr_auc": 1.0,
+        "fp_per_1000_normal": 0.0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1514,
+        "confusion_rows_N_V": [
+          [
+            1514,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 3,
+        "FP": 3,
+        "FN": 0,
+        "TN": 1223,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "fp_per_1000_N": 1.9801980198019802
+      },
+      "missing_N": 292,
+      "missing_V": 0,
+      "extra_peaks": 293
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "200",
+      "offline": {
+        "samples": 2568,
+        "N": 1742,
+        "V": 826,
+        "threshold": 0.8,
+        "accuracy": 0.9875389408099688,
+        "precision": 1.0,
+        "recall": 0.9612590799031477,
+        "f1": 0.980246913580247,
+        "pr_auc": 0.99979579869774,
+        "fp_per_1000_normal": 0.0,
+        "TP": 794,
+        "FP": 0,
+        "FN": 32,
+        "TN": 1742,
+        "confusion_rows_N_V": [
+          [
+            1742,
+            0
+          ],
+          [
+            32,
+            794
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 781,
+        "FP": 21,
+        "FN": 45,
+        "TN": 1724,
+        "precision": 0.9738154613466334,
+        "recall": 0.9455205811138014,
+        "f1": 0.9594594594594594,
+        "fp_per_1000_N": 12.048192771084338
+      },
+      "missing_N": 13,
+      "missing_V": 21,
+      "extra_peaks": 23
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "222",
+      "offline": {
+        "samples": 2060,
+        "N": 2060,
+        "V": 0,
+        "threshold": 0.8,
+        "accuracy": 0.9878640776699029,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pr_auc": null,
+        "fp_per_1000_normal": 12.135922330097088,
+        "TP": 0,
+        "FP": 25,
+        "FN": 0,
+        "TN": 2035,
+        "confusion_rows_N_V": [
+          [
+            2035,
+            25
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 0,
+        "FP": 91,
+        "FN": 0,
+        "TN": 2003,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "fp_per_1000_N": 44.131910766246364
+      },
+      "missing_N": 30,
+      "missing_V": 0,
+      "extra_peaks": 79
+    },
+    {
+      "dataset": "INCART",
+      "record": "I18",
+      "offline": {
+        "samples": 3027,
+        "N": 2661,
+        "V": 366,
+        "threshold": 0.8,
+        "accuracy": 0.9990089197224975,
+        "precision": 0.9972602739726028,
+        "recall": 0.994535519125683,
+        "f1": 0.9958960328317372,
+        "pr_auc": 0.99993329601365,
+        "fp_per_1000_normal": 0.37579857196542654,
+        "TP": 364,
+        "FP": 1,
+        "FN": 2,
+        "TN": 2660,
+        "confusion_rows_N_V": [
+          [
+            2660,
+            1
+          ],
+          [
+            2,
+            364
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 349,
+        "FP": 16,
+        "FN": 17,
+        "TN": 2505,
+        "precision": 0.9561643835616438,
+        "recall": 0.953551912568306,
+        "f1": 0.9548563611491107,
+        "fp_per_1000_N": 6.010518407212622
+      },
+      "missing_N": 155,
+      "missing_V": 4,
+      "extra_peaks": 25
+    },
+    {
+      "dataset": "INCART",
+      "record": "I19",
+      "offline": {
+        "samples": 2062,
+        "N": 1212,
+        "V": 850,
+        "threshold": 0.8,
+        "accuracy": 0.9980601357904947,
+        "precision": 1.0,
+        "recall": 0.9952941176470588,
+        "f1": 0.9976415094339623,
+        "pr_auc": 0.9999972383319525,
+        "fp_per_1000_normal": 0.0,
+        "TP": 846,
+        "FP": 0,
+        "FN": 4,
+        "TN": 1212,
+        "confusion_rows_N_V": [
+          [
+            1212,
+            0
+          ],
+          [
+            4,
+            846
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 818,
+        "FP": 8,
+        "FN": 32,
+        "TN": 1191,
+        "precision": 0.9903147699757869,
+        "recall": 0.9623529411764706,
+        "f1": 0.9761336515513127,
+        "fp_per_1000_N": 6.600660066006601
+      },
+      "missing_N": 20,
+      "missing_V": 23,
+      "extra_peaks": 8
+    },
+    {
+      "dataset": "INCART",
+      "record": "I20",
+      "offline": {
+        "samples": 2470,
+        "N": 2360,
+        "V": 110,
+        "threshold": 0.8,
+        "accuracy": 0.9951417004048583,
+        "precision": 1.0,
+        "recall": 0.8909090909090909,
+        "f1": 0.9423076923076923,
+        "pr_auc": 0.9997550177095629,
+        "fp_per_1000_normal": 0.0,
+        "TP": 98,
+        "FP": 0,
+        "FN": 12,
+        "TN": 2360,
+        "confusion_rows_N_V": [
+          [
+            2360,
+            0
+          ],
+          [
+            12,
+            98
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 100,
+        "FP": 16,
+        "FN": 11,
+        "TN": 2338,
+        "precision": 0.8620689655172413,
+        "recall": 0.9009009009009009,
+        "f1": 0.881057268722467,
+        "fp_per_1000_N": 6.776789495976281
+      },
+      "missing_N": 23,
+      "missing_V": 1,
+      "extra_peaks": 37
+    },
+    {
+      "dataset": "INCART",
+      "record": "I21",
+      "offline": {
+        "samples": 2079,
+        "N": 2071,
+        "V": 8,
+        "threshold": 0.8,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "pr_auc": 1.0,
+        "fp_per_1000_normal": 0.0,
+        "TP": 8,
+        "FP": 0,
+        "FN": 0,
+        "TN": 2071,
+        "confusion_rows_N_V": [
+          [
+            2071,
+            0
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 8,
+        "FP": 40,
+        "FN": 0,
+        "TN": 2031,
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "fp_per_1000_N": 19.305019305019304
+      },
+      "missing_N": 41,
+      "missing_V": 0,
+      "extra_peaks": 98
+    },
+    {
+      "dataset": "INCART",
+      "record": "I22",
+      "offline": {
+        "samples": 3001,
+        "N": 2816,
+        "V": 185,
+        "threshold": 0.8,
+        "accuracy": 0.996334555148284,
+        "precision": 1.0,
+        "recall": 0.9405405405405406,
+        "f1": 0.9693593314763231,
+        "pr_auc": 0.9996048479409152,
+        "fp_per_1000_normal": 0.0,
+        "TP": 174,
+        "FP": 0,
+        "FN": 11,
+        "TN": 2816,
+        "confusion_rows_N_V": [
+          [
+            2816,
+            0
+          ],
+          [
+            11,
+            174
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 168,
+        "FP": 15,
+        "FN": 17,
+        "TN": 2798,
+        "precision": 0.9180327868852459,
+        "recall": 0.9081081081081082,
+        "f1": 0.9130434782608696,
+        "fp_per_1000_N": 5.326704545454546
+      },
+      "missing_N": 18,
+      "missing_V": 6,
+      "extra_peaks": 32
+    },
+    {
+      "dataset": "INCART",
+      "record": "I38",
+      "offline": {
+        "samples": 2697,
+        "N": 2153,
+        "V": 544,
+        "threshold": 0.8,
+        "accuracy": 0.9992584352984798,
+        "precision": 1.0,
+        "recall": 0.9963235294117647,
+        "f1": 0.998158379373849,
+        "pr_auc": 0.9999966270912035,
+        "fp_per_1000_normal": 0.0,
+        "TP": 542,
+        "FP": 0,
+        "FN": 2,
+        "TN": 2153,
+        "confusion_rows_N_V": [
+          [
+            2153,
+            0
+          ],
+          [
+            2,
+            542
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 529,
+        "FP": 5,
+        "FN": 16,
+        "TN": 2099,
+        "precision": 0.9906367041198502,
+        "recall": 0.9706422018348624,
+        "f1": 0.9805375347544021,
+        "fp_per_1000_N": 2.3223409196470044
+      },
+      "missing_N": 53,
+      "missing_V": 10,
+      "extra_peaks": 8
+    },
+    {
+      "dataset": "INCART",
+      "record": "I39",
+      "offline": {
+        "samples": 1774,
+        "N": 1461,
+        "V": 313,
+        "threshold": 0.8,
+        "accuracy": 0.9994363021420518,
+        "precision": 1.0,
+        "recall": 0.9968051118210862,
+        "f1": 0.9984,
+        "pr_auc": 1.0000000000000002,
+        "fp_per_1000_normal": 0.0,
+        "TP": 312,
+        "FP": 0,
+        "FN": 1,
+        "TN": 1461,
+        "confusion_rows_N_V": [
+          [
+            1461,
+            0
+          ],
+          [
+            1,
+            312
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 308,
+        "FP": 24,
+        "FN": 5,
+        "TN": 1450,
+        "precision": 0.927710843373494,
+        "recall": 0.9840255591054313,
+        "f1": 0.9550387596899226,
+        "fp_per_1000_N": 16.415868673050614
+      },
+      "missing_N": 10,
+      "missing_V": 4,
+      "extra_peaks": 36
+    },
+    {
+      "dataset": "INCART",
+      "record": "I62",
+      "offline": {
+        "samples": 2248,
+        "N": 1453,
+        "V": 795,
+        "threshold": 0.8,
+        "accuracy": 0.8491992882562278,
+        "precision": 1.0,
+        "recall": 0.5735849056603773,
+        "f1": 0.7290167865707434,
+        "pr_auc": 0.9971958289782686,
+        "fp_per_1000_normal": 0.0,
+        "TP": 456,
+        "FP": 0,
+        "FN": 339,
+        "TN": 1453,
+        "confusion_rows_N_V": [
+          [
+            1453,
+            0
+          ],
+          [
+            339,
+            456
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 362,
+        "FP": 40,
+        "FN": 433,
+        "TN": 1439,
+        "precision": 0.900497512437811,
+        "recall": 0.45534591194968554,
+        "f1": 0.6048454469507101,
+        "fp_per_1000_N": 27.529249827942188
+      },
+      "missing_N": 10,
+      "missing_V": 306,
+      "extra_peaks": 38
+    },
+    {
+      "dataset": "INCART",
+      "record": "I63",
+      "offline": {
+        "samples": 1983,
+        "N": 1845,
+        "V": 138,
+        "threshold": 0.8,
+        "accuracy": 0.9848714069591528,
+        "precision": 1.0,
+        "recall": 0.782608695652174,
+        "f1": 0.878048780487805,
+        "pr_auc": 0.9977777208613982,
+        "fp_per_1000_normal": 0.0,
+        "TP": 108,
+        "FP": 0,
+        "FN": 30,
+        "TN": 1845,
+        "confusion_rows_N_V": [
+          [
+            1845,
+            0
+          ],
+          [
+            30,
+            108
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 105,
+        "FP": 1361,
+        "FN": 33,
+        "TN": 1841,
+        "precision": 0.07162346521145975,
+        "recall": 0.7608695652173914,
+        "f1": 0.1309226932668329,
+        "fp_per_1000_N": 736.8706009745533
+      },
+      "missing_N": 6,
+      "missing_V": 8,
+      "extra_peaks": 1369
+    },
+    {
+      "dataset": "INCART",
+      "record": "I64",
+      "offline": {
+        "samples": 1908,
+        "N": 1885,
+        "V": 23,
+        "threshold": 0.8,
+        "accuracy": 0.9984276729559748,
+        "precision": 1.0,
+        "recall": 0.8695652173913043,
+        "f1": 0.9302325581395349,
+        "pr_auc": 0.9981884057971013,
+        "fp_per_1000_normal": 0.0,
+        "TP": 20,
+        "FP": 0,
+        "FN": 3,
+        "TN": 1885,
+        "confusion_rows_N_V": [
+          [
+            1885,
+            0
+          ],
+          [
+            3,
+            20
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 15,
+        "FP": 1749,
+        "FN": 8,
+        "TN": 1871,
+        "precision": 0.008503401360544218,
+        "recall": 0.6521739130434783,
+        "f1": 0.016787912702853947,
+        "fp_per_1000_N": 926.8680445151033
+      },
+      "missing_N": 16,
+      "missing_V": 4,
+      "extra_peaks": 1779
+    },
+    {
+      "dataset": "INCART",
+      "record": "I70",
+      "offline": {
+        "samples": 1539,
+        "N": 1539,
+        "V": 0,
+        "threshold": 0.8,
+        "accuracy": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pr_auc": null,
+        "fp_per_1000_normal": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 1539,
+        "confusion_rows_N_V": [
+          [
+            1539,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 0,
+        "FP": 10,
+        "FN": 0,
+        "TN": 1528,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "fp_per_1000_N": 6.4935064935064934
+      },
+      "missing_N": 6,
+      "missing_V": 0,
+      "extra_peaks": 10
+    },
+    {
+      "dataset": "INCART",
+      "record": "I71",
+      "offline": {
+        "samples": 1625,
+        "N": 1625,
+        "V": 0,
+        "threshold": 0.8,
+        "accuracy": 0.9809230769230769,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pr_auc": null,
+        "fp_per_1000_normal": 19.076923076923077,
+        "TP": 0,
+        "FP": 31,
+        "FN": 0,
+        "TN": 1594,
+        "confusion_rows_N_V": [
+          [
+            1594,
+            31
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "detector": {
+        "TP": 0,
+        "FP": 36,
+        "FN": 0,
+        "TN": 1591,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "fp_per_1000_N": 22.12661339889367
+      },
+      "missing_N": 3,
+      "missing_V": 0,
+      "extra_peaks": 3
+    }
+  ],
+  "summary": {
+    "MITBIH": {
+      "offline": {
+        "TP": 852,
+        "FP": 175,
+        "FN": 53,
+        "TN": 10199,
+        "precision": 0.8296007789678675,
+        "recall": 0.9414364640883978,
+        "f1": 0.8819875776397516,
+        "fp_per_1000_N": 16.869095816464238,
+        "accuracy": 0.9797854419718061
+      },
+      "detector": {
+        "TP": 815,
+        "FP": 2450,
+        "FN": 90,
+        "TN": 9592,
+        "precision": 0.24961715160796324,
+        "recall": 0.9005524861878453,
+        "f1": 0.3908872901678657,
+        "fp_per_1000_N": 236.16734143049933,
+        "accuracy": 0.8038155557271955
+      }
+    },
+    "INCART": {
+      "offline": {
+        "TP": 2928,
+        "FP": 32,
+        "FN": 404,
+        "TN": 23049,
+        "precision": 0.9891891891891892,
+        "recall": 0.8787515006002401,
+        "f1": 0.9307056579783852,
+        "fp_per_1000_N": 1.3864217321606516,
+        "accuracy": 0.983492976943172
+      },
+      "detector": {
+        "TP": 2762,
+        "FP": 3320,
+        "FN": 572,
+        "TN": 22682,
+        "precision": 0.4541269319302861,
+        "recall": 0.8284343131373725,
+        "f1": 0.5866610025488531,
+        "fp_per_1000_N": 143.8412547116676,
+        "accuracy": 0.8673302427052086
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "dataset": "INCART",
+    "record": "I71",
+    "patient_or_record_group": "30",
+    "model": "V4",
+    "reference_N": 1627,
+    "reference_V": 0,
+    "TP": 0,
+    "FP": 33,
+    "FN": 0,
+    "TN": 1591,
+    "missing_N": 3,
+    "missing_V": 0,
+    "extra_peaks": 3,
+    "FP_matched_N": 33,
+    "FP_unmatched_alarm": 0,
+    "matched_OTHER": 43,
+    "out_of_scope_symbols": [
+      "+"
+    ],
+    "timing_abs_p95_samples": 3.0
+  },
+  {
+    "dataset": "INCART",
+    "record": "I71",
+    "patient_or_record_group": "30",
+    "model": "V6",
+    "reference_N": 1627,
+    "reference_V": 0,
+    "TP": 0,
+    "FP": 136,
+    "FN": 0,
+    "TN": 1490,
+    "missing_N": 3,
+    "missing_V": 0,
+    "extra_peaks": 3,
+    "FP_matched_N": 134,
+    "FP_unmatched_alarm": 2,
+    "matched_OTHER": 43,
+    "out_of_scope_symbols": [
+      "+"
+    ],
+    "timing_abs_p95_samples": 3.0
+  },
+  {
+    "dataset": "INCART",
+    "record": "I71",
+    "patient_or_record_group": "30",
+    "model": "V11",
+    "reference_N": 1627,
+    "reference_V": 0,
+    "TP": 0,
+    "FP": 36,
+    "FN": 0,
+    "TN": 1591,
+    "missing_N": 3,
+    "missing_V": 0,
+    "extra_peaks": 3,
+    "FP_matched_N": 33,
+    "FP_unmatched_alarm": 3,
+    "matched_OTHER": 43,
+    "out_of_scope_symbols": [
+      "+"
+    ],
+    "timing_abs_p95_samples": 3.0
+  }
+]

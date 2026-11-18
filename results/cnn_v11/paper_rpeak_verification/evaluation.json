@@ -1,0 +1,625 @@
+{
+  "scope": "original Validation data replay; hold58 reconstructed from current V11 source, paper source unavailable",
+  "records": [
+    {
+      "record": "115",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "3212847a692bf3bc5e1dde0343d272e7d56735983276031420060d51d0cdd41c",
+        ".dat": "34185efe9889608c76ebfbf5a467d3457970c6d11b77a2bf81b94bcf46e07c41",
+        ".atr": "4980667b19b7a637729d40762f071b483d69f5431db818cbddc9a8ae64cc4da2"
+      },
+      "tol12": {
+        "TP": 1949,
+        "FP": 1,
+        "FN": 4,
+        "matched_symbols": {
+          "N": 1949
+        },
+        "missed_symbols": {
+          "N": 4
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 1949,
+        "FP": 1,
+        "FN": 4,
+        "matched_symbols": {
+          "N": 1949
+        },
+        "missed_symbols": {
+          "N": 4
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "118",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "48a3d0c4e7742ca0e39a2cbb3ea5142a4d41261adbd0bb25651e0fcd9c6aef2b",
+        ".dat": "66ea4b70b7d64abd0f49089ae1b8f0f577664c46e5b29ac23b291934e063df15",
+        ".atr": "77afd5400648d128223d5029a49c442f5abd65ba997f732489cb8eed39d71551"
+      },
+      "tol12": {
+        "TP": 2267,
+        "FP": 12,
+        "FN": 11,
+        "matched_symbols": {
+          "R": 2158,
+          "A": 96,
+          "V": 13
+        },
+        "missed_symbols": {
+          "R": 8,
+          "V": 3
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2275,
+        "FP": 4,
+        "FN": 3,
+        "matched_symbols": {
+          "R": 2163,
+          "V": 16,
+          "A": 96
+        },
+        "missed_symbols": {
+          "R": 3
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "121",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "1838d38ff54fed9b831207761d7321682dad0b693f944e4c3a4e6388c46ca6ff",
+        ".dat": "679f374a7b2557fed04a4bc5648301ce9bdd38e5a4f13b2e63ebbcf7cb3fb482",
+        ".atr": "dbda472aa08eeb6bbbf775b8123e466a7ee57638caecd156407de3141c9fa71c"
+      },
+      "tol12": {
+        "TP": 1845,
+        "FP": 20,
+        "FN": 18,
+        "matched_symbols": {
+          "N": 1843,
+          "A": 1,
+          "V": 1
+        },
+        "missed_symbols": {
+          "N": 18
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 1848,
+        "FP": 17,
+        "FN": 15,
+        "matched_symbols": {
+          "N": 1846,
+          "A": 1,
+          "V": 1
+        },
+        "missed_symbols": {
+          "N": 15
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "210",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "9d6a422834435fb8d267256f4fd01bfd8158b511f662c4b5dd8c60059944a322",
+        ".dat": "76e971fba03c0ae2ab261c7446240987ecde82f45dad1d4f36e290b950eb464b",
+        ".atr": "5a46bef3d185c903b1ce099a988898fc829cea7e6c5bc1984532efd694fa8db6"
+      },
+      "tol12": {
+        "TP": 2635,
+        "FP": 5,
+        "FN": 15,
+        "matched_symbols": {
+          "N": 2414,
+          "V": 190,
+          "F": 9,
+          "a": 21,
+          "E": 1
+        },
+        "missed_symbols": {
+          "N": 9,
+          "V": 4,
+          "a": 1,
+          "F": 1
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2635,
+        "FP": 5,
+        "FN": 15,
+        "matched_symbols": {
+          "N": 2414,
+          "V": 190,
+          "F": 9,
+          "a": 21,
+          "E": 1
+        },
+        "missed_symbols": {
+          "N": 9,
+          "V": 4,
+          "a": 1,
+          "F": 1
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "214",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "beb6b379e93cbe94eb9f1461cccaa0131940e14322df4abbc07665b722ed9206",
+        ".dat": "a886b1ceb56e950858dedf5b56d3fdb5f26aef3667f8effcb880c1c000ee0cd3",
+        ".atr": "09c588b0623f6dc6138928ce2006f294c4ef3da143eec2cdba6eddb9b1597214"
+      },
+      "tol12": {
+        "TP": 2253,
+        "FP": 4,
+        "FN": 9,
+        "matched_symbols": {
+          "L": 1999,
+          "V": 251,
+          "Q": 2,
+          "F": 1
+        },
+        "missed_symbols": {
+          "L": 4,
+          "V": 5
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2255,
+        "FP": 2,
+        "FN": 7,
+        "matched_symbols": {
+          "L": 1999,
+          "V": 253,
+          "Q": 2,
+          "F": 1
+        },
+        "missed_symbols": {
+          "L": 4,
+          "V": 3
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "233",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "d5ef73b3b4a98bec6e3d853db08ff18b0a1a9173c95327bcb15b2cfecee99b85",
+        ".dat": "6ccd6b1fa0cafc052369e7ec0a99cc6c3b56b3c12afff26db800c55a826211b4",
+        ".atr": "c9ce42ecefa9a92e2ec69f9d237d8a53c67c60b31a25d579356ea8910bcc368a"
+      },
+      "tol12": {
+        "TP": 3068,
+        "FP": 2,
+        "FN": 11,
+        "matched_symbols": {
+          "N": 2228,
+          "V": 822,
+          "A": 7,
+          "F": 11
+        },
+        "missed_symbols": {
+          "V": 9,
+          "N": 2
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 3070,
+        "FP": 0,
+        "FN": 9,
+        "matched_symbols": {
+          "N": 2228,
+          "V": 824,
+          "A": 7,
+          "F": 11
+        },
+        "missed_symbols": {
+          "V": 7,
+          "N": 2
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "234",
+      "hold": 50,
+      "source_sha256": "82b0110b7407a83643dfb6c1aae1c2c6d60b6556b473838cbe719e725c19edd6",
+      "original_sha256": {
+        ".hea": "91c94c803d05f637cc29a3f353d88e1c25b20a25957c8cc25f7cbbf9fe2627c9",
+        ".dat": "89f826307bfc91a554021da87c17b88b843ed3d26aa9ea237fc6f7c8af00da6d",
+        ".atr": "e829a3e4131fbe9420c1740bfb5000b3f4f64a2b40aa5f739ed6420f75be6785"
+      },
+      "tol12": {
+        "TP": 2749,
+        "FP": 1,
+        "FN": 4,
+        "matched_symbols": {
+          "N": 2696,
+          "J": 50,
+          "V": 3
+        },
+        "missed_symbols": {
+          "N": 4
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2749,
+        "FP": 1,
+        "FN": 4,
+        "matched_symbols": {
+          "N": 2696,
+          "J": 50,
+          "V": 3
+        },
+        "missed_symbols": {
+          "N": 4
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "115",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "3212847a692bf3bc5e1dde0343d272e7d56735983276031420060d51d0cdd41c",
+        ".dat": "34185efe9889608c76ebfbf5a467d3457970c6d11b77a2bf81b94bcf46e07c41",
+        ".atr": "4980667b19b7a637729d40762f071b483d69f5431db818cbddc9a8ae64cc4da2"
+      },
+      "tol12": {
+        "TP": 1950,
+        "FP": 0,
+        "FN": 3,
+        "matched_symbols": {
+          "N": 1950
+        },
+        "missed_symbols": {
+          "N": 3
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 1950,
+        "FP": 0,
+        "FN": 3,
+        "matched_symbols": {
+          "N": 1950
+        },
+        "missed_symbols": {
+          "N": 3
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "118",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "48a3d0c4e7742ca0e39a2cbb3ea5142a4d41261adbd0bb25651e0fcd9c6aef2b",
+        ".dat": "66ea4b70b7d64abd0f49089ae1b8f0f577664c46e5b29ac23b291934e063df15",
+        ".atr": "77afd5400648d128223d5029a49c442f5abd65ba997f732489cb8eed39d71551"
+      },
+      "tol12": {
+        "TP": 2267,
+        "FP": 12,
+        "FN": 11,
+        "matched_symbols": {
+          "R": 2158,
+          "A": 96,
+          "V": 13
+        },
+        "missed_symbols": {
+          "R": 8,
+          "V": 3
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2275,
+        "FP": 4,
+        "FN": 3,
+        "matched_symbols": {
+          "R": 2163,
+          "V": 16,
+          "A": 96
+        },
+        "missed_symbols": {
+          "R": 3
+        },
+        "median_abs_error_samples": 1.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "121",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "1838d38ff54fed9b831207761d7321682dad0b693f944e4c3a4e6388c46ca6ff",
+        ".dat": "679f374a7b2557fed04a4bc5648301ce9bdd38e5a4f13b2e63ebbcf7cb3fb482",
+        ".atr": "dbda472aa08eeb6bbbf775b8123e466a7ee57638caecd156407de3141c9fa71c"
+      },
+      "tol12": {
+        "TP": 1848,
+        "FP": 17,
+        "FN": 15,
+        "matched_symbols": {
+          "N": 1846,
+          "A": 1,
+          "V": 1
+        },
+        "missed_symbols": {
+          "N": 15
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 1851,
+        "FP": 14,
+        "FN": 12,
+        "matched_symbols": {
+          "N": 1849,
+          "A": 1,
+          "V": 1
+        },
+        "missed_symbols": {
+          "N": 12
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "210",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "9d6a422834435fb8d267256f4fd01bfd8158b511f662c4b5dd8c60059944a322",
+        ".dat": "76e971fba03c0ae2ab261c7446240987ecde82f45dad1d4f36e290b950eb464b",
+        ".atr": "5a46bef3d185c903b1ce099a988898fc829cea7e6c5bc1984532efd694fa8db6"
+      },
+      "tol12": {
+        "TP": 2635,
+        "FP": 5,
+        "FN": 15,
+        "matched_symbols": {
+          "N": 2414,
+          "V": 190,
+          "F": 9,
+          "a": 21,
+          "E": 1
+        },
+        "missed_symbols": {
+          "N": 9,
+          "V": 4,
+          "a": 1,
+          "F": 1
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2635,
+        "FP": 5,
+        "FN": 15,
+        "matched_symbols": {
+          "N": 2414,
+          "V": 190,
+          "F": 9,
+          "a": 21,
+          "E": 1
+        },
+        "missed_symbols": {
+          "N": 9,
+          "V": 4,
+          "a": 1,
+          "F": 1
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "214",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "beb6b379e93cbe94eb9f1461cccaa0131940e14322df4abbc07665b722ed9206",
+        ".dat": "a886b1ceb56e950858dedf5b56d3fdb5f26aef3667f8effcb880c1c000ee0cd3",
+        ".atr": "09c588b0623f6dc6138928ce2006f294c4ef3da143eec2cdba6eddb9b1597214"
+      },
+      "tol12": {
+        "TP": 2253,
+        "FP": 4,
+        "FN": 9,
+        "matched_symbols": {
+          "L": 1999,
+          "V": 251,
+          "Q": 2,
+          "F": 1
+        },
+        "missed_symbols": {
+          "L": 4,
+          "V": 5
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2255,
+        "FP": 2,
+        "FN": 7,
+        "matched_symbols": {
+          "L": 1999,
+          "V": 253,
+          "Q": 2,
+          "F": 1
+        },
+        "missed_symbols": {
+          "L": 4,
+          "V": 3
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "233",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "d5ef73b3b4a98bec6e3d853db08ff18b0a1a9173c95327bcb15b2cfecee99b85",
+        ".dat": "6ccd6b1fa0cafc052369e7ec0a99cc6c3b56b3c12afff26db800c55a826211b4",
+        ".atr": "c9ce42ecefa9a92e2ec69f9d237d8a53c67c60b31a25d579356ea8910bcc368a"
+      },
+      "tol12": {
+        "TP": 3068,
+        "FP": 2,
+        "FN": 11,
+        "matched_symbols": {
+          "N": 2228,
+          "V": 822,
+          "A": 7,
+          "F": 11
+        },
+        "missed_symbols": {
+          "V": 9,
+          "N": 2
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 3070,
+        "FP": 0,
+        "FN": 9,
+        "matched_symbols": {
+          "N": 2228,
+          "V": 824,
+          "A": 7,
+          "F": 11
+        },
+        "missed_symbols": {
+          "V": 7,
+          "N": 2
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    },
+    {
+      "record": "234",
+      "hold": 58,
+      "source_sha256": "cf4d61251e4d57eaea257400342cb064be8477a9a86c40e79ccf55a17c28e084",
+      "original_sha256": {
+        ".hea": "91c94c803d05f637cc29a3f353d88e1c25b20a25957c8cc25f7cbbf9fe2627c9",
+        ".dat": "89f826307bfc91a554021da87c17b88b843ed3d26aa9ea237fc6f7c8af00da6d",
+        ".atr": "e829a3e4131fbe9420c1740bfb5000b3f4f64a2b40aa5f739ed6420f75be6785"
+      },
+      "tol12": {
+        "TP": 2749,
+        "FP": 1,
+        "FN": 4,
+        "matched_symbols": {
+          "N": 2696,
+          "J": 50,
+          "V": 3
+        },
+        "missed_symbols": {
+          "N": 4
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      },
+      "tol38": {
+        "TP": 2749,
+        "FP": 1,
+        "FN": 4,
+        "matched_symbols": {
+          "N": 2696,
+          "J": 50,
+          "V": 3
+        },
+        "missed_symbols": {
+          "N": 4
+        },
+        "median_abs_error_samples": 0.0,
+        "duplicates": 0
+      }
+    }
+  ],
+  "totals": {
+    "hold50_tol12": {
+      "TP": 16766,
+      "FP": 45,
+      "FN": 72,
+      "sensitivity": 0.9957239577146929,
+      "ppv": 0.9973231812503718
+    },
+    "hold50_tol38": {
+      "TP": 16781,
+      "FP": 30,
+      "FN": 57,
+      "sensitivity": 0.9966147998574653,
+      "ppv": 0.9982154541669145
+    },
+    "hold58_tol12": {
+      "TP": 16770,
+      "FP": 41,
+      "FN": 68,
+      "sensitivity": 0.9959615156194322,
+      "ppv": 0.9975611206947832
+    },
+    "hold58_tol38": {
+      "TP": 16785,
+      "FP": 26,
+      "FN": 53,
+      "sensitivity": 0.9968523577622045,
+      "ppv": 0.9984533936113259
+    }
+  }
+}

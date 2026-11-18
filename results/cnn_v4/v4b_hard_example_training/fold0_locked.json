@@ -1,0 +1,61 @@
+{
+  "sha256": "f935b85d4b64e0e794f9b1b1f79ea0c6f69c76b2b5d85b48328e1d713cfba8f2",
+  "thresholds": {
+    "V4": 0.83,
+    "V4-B": 0.79
+  },
+  "training": {
+    "sha256": "f935b85d4b64e0e794f9b1b1f79ea0c6f69c76b2b5d85b48328e1d713cfba8f2",
+    "best_epoch": 2,
+    "epochs_run": 7,
+    "history": [
+      {
+        "epoch": 1,
+        "checkpoint_pr_auc": 0.6109482024205445,
+        "loss": 0.5918288230895996
+      },
+      {
+        "epoch": 2,
+        "checkpoint_pr_auc": 0.7196199614869796,
+        "loss": 0.48599186539649963
+      },
+      {
+        "epoch": 3,
+        "checkpoint_pr_auc": 0.6398280237584436,
+        "loss": 0.38511422276496887
+      },
+      {
+        "epoch": 4,
+        "checkpoint_pr_auc": 0.6224972178124134,
+        "loss": 0.30225542187690735
+      },
+      {
+        "epoch": 5,
+        "checkpoint_pr_auc": 0.661092698110807,
+        "loss": 0.2559388279914856
+      },
+      {
+        "epoch": 6,
+        "checkpoint_pr_auc": 0.6744527397276195,
+        "loss": 0.22947752475738525
+      },
+      {
+        "epoch": 7,
+        "checkpoint_pr_auc": 0.704051354468735,
+        "loss": 0.211248978972435
+      }
+    ],
+    "mining": {
+      "0": {
+        "Fit_samples": 74783,
+        "hard_samples": 7479,
+        "mean_hard_baseline_score": 0.7045091986656189
+      },
+      "1": {
+        "Fit_samples": 9204,
+        "hard_samples": 921,
+        "mean_hard_baseline_score": 0.27400410175323486
+      }
+    }
+  }
+}

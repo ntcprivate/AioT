@@ -1,0 +1,153 @@
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+D:\Code Part Two\AIoT\tools\ecg_monitor\.venv_reference\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/30
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1794035812.644530   18368 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_14}}
+Epoch 1 dev F1=0.993994 P=0.993994 R=0.993994 hardFP=0
+827/827 - 3s - 3ms/step - loss: 0.1514 - val_pvc_f1: 0.9940
+Epoch 2/30
+Epoch 2 dev F1=0.996232 P=1.000000 R=0.992492 hardFP=0
+827/827 - 2s - 2ms/step - loss: 0.0679 - val_pvc_f1: 0.9962
+Epoch 3/30
+Epoch 3 dev F1=0.995475 P=1.000000 R=0.990991 hardFP=0
+827/827 - 2s - 3ms/step - loss: 0.0582 - val_pvc_f1: 0.9955
+Epoch 4/30
+E0000 00:00:1794035819.841099   18368 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_14}}
+Epoch 4 dev F1=0.994717 P=1.000000 R=0.989489 hardFP=0
+827/827 - 3s - 3ms/step - loss: 0.0506 - val_pvc_f1: 0.9947
+Epoch 5/30
+Epoch 5 dev F1=0.995475 P=1.000000 R=0.990991 hardFP=0
+827/827 - 3s - 3ms/step - loss: 0.0451 - val_pvc_f1: 0.9955
+Epoch 6/30
+Epoch 6 dev F1=0.996988 P=1.000000 R=0.993994 hardFP=0
+827/827 - 2s - 3ms/step - loss: 0.0403 - val_pvc_f1: 0.9970
+Epoch 7/30
+E0000 00:00:1794035827.179365   18368 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_14}}
+Epoch 7 dev F1=0.995475 P=1.000000 R=0.990991 hardFP=0
+827/827 - 2s - 3ms/step - loss: 0.0362 - val_pvc_f1: 0.9955
+Epoch 8/30
+Epoch 8 dev F1=0.994717 P=1.000000 R=0.989489 hardFP=0
+827/827 - 3s - 3ms/step - loss: 0.0322 - val_pvc_f1: 0.9947
+Epoch 9/30
+E0000 00:00:1794035832.182144   18368 node_def_util.cc:682] NodeDef mentions attribute use_unbounded_threadpool which is not in the op definition: Op<name=MapDataset; signature=input_dataset:variant, other_arguments: -> handle:variant; attr=f:func; attr=Targuments:list(type),min=0; attr=output_types:list(type),min=1; attr=output_shapes:list(shape),min=1; attr=use_inter_op_parallelism:bool,default=true; attr=preserve_cardinality:bool,default=false; attr=force_synchronous:bool,default=false; attr=metadata:string,default=""> This may be expected if your graph generating binary is newer  than this binary. Unknown attributes will be ignored. NodeDef: {{node ParallelMapDatasetV2/_14}}
+Epoch 9 dev F1=0.993958 P=1.000000 R=0.987988 hardFP=0
+827/827 - 2s - 3ms/step - loss: 0.0308 - val_pvc_f1: 0.9940
+Epoch 10/30
+Epoch 10 dev F1=0.995475 P=1.000000 R=0.990991 hardFP=0
+827/827 - 2s - 3ms/step - loss: 0.0289 - val_pvc_f1: 0.9955
+Epoch 11/30
+Epoch 11 dev F1=0.993958 P=1.000000 R=0.987988 hardFP=0
+827/827 - 2s - 3ms/step - loss: 0.0272 - val_pvc_f1: 0.9940
+Saved artifact at 'C:\Users\Admin\AppData\Local\Temp\tmpk5x4a89z'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): TensorSpec(shape=(None, 256, 1), dtype=tf.float32, name='input_layer')
+Output Type:
+  TensorSpec(shape=(None, 1), dtype=tf.float32, name=None)
+Captures:
+  2335694372496: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335694372688: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335814291280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335814292240: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335814287824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335814287440: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335814289936: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2335814293392: TensorSpec(shape=(), dtype=tf.resource, name=None)
+D:\Code Part Two\AIoT\tools\ecg_monitor\.venv_reference\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+{
+  "parameters": 2385,
+  "best_epoch": 6,
+  "epochs_run": 11,
+  "seconds": 27.137034700019285,
+  "epoch_samples": 52927,
+  "hard_occurrences": 1225,
+  "V1_float32": {
+    "confusion_rows_N_V": [
+      [
+        4541,
+        0
+      ],
+      [
+        3,
+        663
+      ]
+    ],
+    "N_to_PVC": 0,
+    "PVC_to_N": 3,
+    "precision": 1.0,
+    "recall": 0.9954954954954955,
+    "f1": 0.9977426636568849,
+    "normal_recall": 1.0,
+    "normal_neighbor_pvc": {
+      "samples": 361,
+      "false_positive": 0,
+      "normal_recall": 1.0
+    }
+  },
+  "V2_float32": {
+    "confusion_rows_N_V": [
+      [
+        4533,
+        8
+      ],
+      [
+        1,
+        665
+      ]
+    ],
+    "N_to_PVC": 8,
+    "PVC_to_N": 1,
+    "precision": 0.9881129271916791,
+    "recall": 0.9984984984984985,
+    "f1": 0.9932785660941,
+    "normal_recall": 0.9982382735080378,
+    "normal_neighbor_pvc": {
+      "samples": 361,
+      "false_positive": 1,
+      "normal_recall": 0.997229916897507
+    }
+  },
+  "V3_float32": {
+    "confusion_rows_N_V": [
+      [
+        4541,
+        0
+      ],
+      [
+        4,
+        662
+      ]
+    ],
+    "N_to_PVC": 0,
+    "PVC_to_N": 4,
+    "precision": 1.0,
+    "recall": 0.993993993993994,
+    "f1": 0.9969879518072289,
+    "normal_recall": 1.0,
+    "normal_neighbor_pvc": {
+      "samples": 361,
+      "false_positive": 0,
+      "normal_recall": 1.0
+    }
+  },
+  "int8_export_selected": false,
+  "tensorflow": "2.21.0",
+  "numpy": "2.5.4",
+  "float_tflite_max_score_error": 2.384185791015625e-07,
+  "model_files": {
+    "ecg_cnn_v3_best.keras": {
+      "bytes": 68350,
+      "sha256": "788cd415a6ef5deb2a7015a6314284e6effd79617115f0971058d8679d413260"
+    },
+    "ecg_cnn_v3_float32.tflite": {
+      "bytes": 17112,
+      "sha256": "aae98e3f61fb354d62300cd4a45c1599b1fbb4890187fee5938ba7ee4916df17"
+    }
+  }
+}

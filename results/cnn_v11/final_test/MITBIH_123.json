@@ -1,0 +1,43 @@
+{
+  "dataset": "MITBIH",
+  "record": "123",
+  "offline": {
+    "samples": 1517,
+    "N": 1514,
+    "V": 3,
+    "threshold": 0.8,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "pr_auc": 1.0,
+    "fp_per_1000_normal": 0.0,
+    "TP": 3,
+    "FP": 0,
+    "FN": 0,
+    "TN": 1514,
+    "confusion_rows_N_V": [
+      [
+        1514,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ]
+  },
+  "detector": {
+    "TP": 3,
+    "FP": 3,
+    "FN": 0,
+    "TN": 1223,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666,
+    "fp_per_1000_N": 1.9801980198019802
+  },
+  "missing_N": 292,
+  "missing_V": 0,
+  "extra_peaks": 293
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "dataset": "MITBIH",
+    "record": "200",
+    "patient_or_record_group": "200",
+    "model": "V4",
+    "reference_N": 1743,
+    "reference_V": 826,
+    "TP": 732,
+    "FP": 9,
+    "FN": 94,
+    "TN": 1726,
+    "missing_N": 13,
+    "missing_V": 21,
+    "extra_peaks": 23,
+    "FP_matched_N": 4,
+    "FP_unmatched_alarm": 5,
+    "matched_OTHER": 31,
+    "out_of_scope_symbols": [
+      "+",
+      "~"
+    ],
+    "timing_abs_p95_samples": 2.0
+  },
+  {
+    "dataset": "MITBIH",
+    "record": "200",
+    "patient_or_record_group": "200",
+    "model": "V6",
+    "reference_N": 1743,
+    "reference_V": 826,
+    "TP": 734,
+    "FP": 18,
+    "FN": 92,
+    "TN": 1722,
+    "missing_N": 13,
+    "missing_V": 21,
+    "extra_peaks": 23,
+    "FP_matched_N": 8,
+    "FP_unmatched_alarm": 10,
+    "matched_OTHER": 31,
+    "out_of_scope_symbols": [
+      "+",
+      "~"
+    ],
+    "timing_abs_p95_samples": 2.0
+  },
+  {
+    "dataset": "MITBIH",
+    "record": "200",
+    "patient_or_record_group": "200",
+    "model": "V11",
+    "reference_N": 1743,
+    "reference_V": 826,
+    "TP": 781,
+    "FP": 21,
+    "FN": 45,
+    "TN": 1724,
+    "missing_N": 13,
+    "missing_V": 21,
+    "extra_peaks": 23,
+    "FP_matched_N": 6,
+    "FP_unmatched_alarm": 15,
+    "matched_OTHER": 31,
+    "out_of_scope_symbols": [
+      "+",
+      "~"
+    ],
+    "timing_abs_p95_samples": 2.0
+  }
+]

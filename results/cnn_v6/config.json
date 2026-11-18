@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "train_samples": 177044,
+  "class_weight": {
+    "0": 0.5583328602874857,
+    "1": 4.785749040384927
+  },
+  "development_partition": {
+    "method": "fixed SHA256(seed:group), 60% checkpoint / 40% threshold; no waveform or output selection",
+    "INCART_checkpoint_patients": [
+      "4",
+      "20",
+      "25"
+    ],
+    "INCART_threshold_patients": [
+      "15",
+      "28"
+    ],
+    "MITBIH_checkpoint_records": [
+      "115",
+      "118",
+      "121",
+      "214",
+      "234"
+    ],
+    "MITBIH_threshold_records": [
+      "210",
+      "233"
+    ]
+  },
+  "augmentation": {
+    "shift_samples": [
+      -6,
+      6
+    ],
+    "shift_probability": 0.7,
+    "central_relative_gain": [
+      0.85,
+      1.15
+    ],
+    "gain_probability": 0.7,
+    "polarity_inversion_probability": 0.12,
+    "renormalize_after": true
+  },
+  "checkpoint_selection": "maximum PR-AUC on checkpoint-only groups",
+  "threshold_selection": "maximum PVC F1 on disjoint threshold-only groups; tie precision then lower threshold",
+  "test_samples_selected_for_training_selection_or_evaluation": false
+}

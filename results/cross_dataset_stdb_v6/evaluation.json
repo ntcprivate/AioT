@@ -1,0 +1,1856 @@
+{
+  "dataset": "MIT-BIH ST Change Database v1.0.0",
+  "dataset_role": "new locked cross-dataset evaluation; not used for training, checkpoint, threshold, or prior error analysis",
+  "source": "https://physionet.org/content/stdb/1.0.0/",
+  "checksum": "84/84 current .hea/.dat/.atr files match official SHA256SUMS.txt",
+  "records": 28,
+  "patients": null,
+  "patient_note": "Patient identifiers are not provided in the WFDB headers; record count must not be called patient count.",
+  "lead": "channel 0 for every record; all channel names are generic ECG",
+  "lead_policy_fixed_before_inference": true,
+  "source_hz": 360,
+  "target_hz": 250,
+  "resample_poly": [
+    25,
+    36
+  ],
+  "window": 256,
+  "normalization": "per-window z-score matching V4/V5/V6",
+  "valid_N": 74999,
+  "valid_V": 322,
+  "excluded_OTHER": 821,
+  "removed_boundary": 39,
+  "removed_numeric": 0,
+  "models": {
+    "V4": {
+      "threshold": 0.88,
+      "sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+      "precision": 0.08236466290269014,
+      "recall": 0.7701863354037267,
+      "f1": 0.1488148814881488,
+      "TP": 248,
+      "TN": 72236,
+      "FP": 2763,
+      "FN": 74,
+      "confusion_rows_N_V": [
+        [
+          72236,
+          2763
+        ],
+        [
+          74,
+          248
+        ]
+      ]
+    },
+    "V5": {
+      "threshold": 0.33,
+      "sha256": "3b7c815814b6c6336118f536b36e36f096438055b3d1647b43277bce07fc24e3",
+      "precision": 0.023807470025015095,
+      "recall": 0.8571428571428571,
+      "f1": 0.0463281577843055,
+      "TP": 276,
+      "TN": 63682,
+      "FP": 11317,
+      "FN": 46,
+      "confusion_rows_N_V": [
+        [
+          63682,
+          11317
+        ],
+        [
+          46,
+          276
+        ]
+      ]
+    },
+    "V6": {
+      "threshold": 0.87,
+      "sha256": "e5399fc30fe722ec31d6cd34ab97029cdf2069a7fa56e8bec4fdf791b535e8d4",
+      "precision": 0.07377805102981863,
+      "recall": 0.7453416149068323,
+      "f1": 0.13426573426573427,
+      "TP": 240,
+      "TN": 71986,
+      "FP": 3013,
+      "FN": 82,
+      "confusion_rows_N_V": [
+        [
+          71986,
+          3013
+        ],
+        [
+          82,
+          240
+        ]
+      ]
+    }
+  },
+  "per_record": [
+    {
+      "record": "300",
+      "lead": "ECG channel 0",
+      "N": 2554,
+      "V": 2,
+      "V4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 2,
+        "TN": 2554,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2554,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 2,
+        "TN": 2554,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2554,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 2,
+        "TN": 2554,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2554,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "record": "301",
+      "lead": "ECG channel 0",
+      "N": 2484,
+      "V": 11,
+      "V4": {
+        "precision": 0.8571428571428571,
+        "recall": 0.5454545454545454,
+        "f1": 0.6666666666666665,
+        "TP": 6,
+        "TN": 2483,
+        "FP": 1,
+        "FN": 5,
+        "confusion_rows_N_V": [
+          [
+            2483,
+            1
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 11,
+        "TN": 2484,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2484,
+            0
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 11,
+        "TN": 2484,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2484,
+            0
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "record": "302",
+      "lead": "ECG channel 0",
+      "N": 2111,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2111,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2111,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2110,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2110,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2111,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2111,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "303",
+      "lead": "ECG channel 0",
+      "N": 2982,
+      "V": 16,
+      "V4": {
+        "precision": 1.0,
+        "recall": 0.9375,
+        "f1": 0.967741935483871,
+        "TP": 15,
+        "TN": 2982,
+        "FP": 0,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            2982,
+            0
+          ],
+          [
+            1,
+            15
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.7619047619047619,
+        "recall": 1.0,
+        "f1": 0.8648648648648648,
+        "TP": 16,
+        "TN": 2977,
+        "FP": 5,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2977,
+            5
+          ],
+          [
+            0,
+            16
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "f1": 0.9411764705882353,
+        "TP": 16,
+        "TN": 2980,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2980,
+            2
+          ],
+          [
+            0,
+            16
+          ]
+        ]
+      }
+    },
+    {
+      "record": "304",
+      "lead": "ECG channel 0",
+      "N": 1851,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1851,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1851,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1849,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1849,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1851,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1851,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "305",
+      "lead": "ECG channel 0",
+      "N": 769,
+      "V": 265,
+      "V4": {
+        "precision": 0.9348837209302325,
+        "recall": 0.7584905660377359,
+        "f1": 0.8375,
+        "TP": 201,
+        "TN": 755,
+        "FP": 14,
+        "FN": 64,
+        "confusion_rows_N_V": [
+          [
+            755,
+            14
+          ],
+          [
+            64,
+            201
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.8490566037735849,
+        "recall": 0.8490566037735849,
+        "f1": 0.8490566037735849,
+        "TP": 225,
+        "TN": 729,
+        "FP": 40,
+        "FN": 40,
+        "confusion_rows_N_V": [
+          [
+            729,
+            40
+          ],
+          [
+            40,
+            225
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.9948186528497409,
+        "recall": 0.7245283018867924,
+        "f1": 0.8384279475982533,
+        "TP": 192,
+        "TN": 768,
+        "FP": 1,
+        "FN": 73,
+        "confusion_rows_N_V": [
+          [
+            768,
+            1
+          ],
+          [
+            73,
+            192
+          ]
+        ]
+      }
+    },
+    {
+      "record": "306",
+      "lead": "ECG channel 0",
+      "N": 6525,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 6474,
+        "FP": 51,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            6474,
+            51
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 659,
+        "FP": 5866,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            659,
+            5866
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 5818,
+        "FP": 707,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            5818,
+            707
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "307",
+      "lead": "ECG channel 0",
+      "N": 2467,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2467,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2467,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2467,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2467,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2467,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2467,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "308",
+      "lead": "ECG channel 0",
+      "N": 2205,
+      "V": 14,
+      "V4": {
+        "precision": 0.006566604127579738,
+        "recall": 1.0,
+        "f1": 0.0130475302889096,
+        "TP": 14,
+        "TN": 87,
+        "FP": 2118,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            87,
+            2118
+          ],
+          [
+            0,
+            14
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.006340579710144928,
+        "recall": 1.0,
+        "f1": 0.012601260126012601,
+        "TP": 14,
+        "TN": 11,
+        "FP": 2194,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            11,
+            2194
+          ],
+          [
+            0,
+            14
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.007102993404363267,
+        "recall": 1.0,
+        "f1": 0.01410579345088161,
+        "TP": 14,
+        "TN": 248,
+        "FP": 1957,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            248,
+            1957
+          ],
+          [
+            0,
+            14
+          ]
+        ]
+      }
+    },
+    {
+      "record": "309",
+      "lead": "ECG channel 0",
+      "N": 5146,
+      "V": 1,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 5145,
+        "FP": 1,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            5145,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "TP": 1,
+        "TN": 5145,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            5145,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 1,
+        "TN": 5146,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            5146,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "record": "310",
+      "lead": "ECG channel 0",
+      "N": 2407,
+      "V": 1,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2407,
+        "FP": 0,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            2407,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "TP": 1,
+        "TN": 2406,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2406,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2407,
+        "FP": 0,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            2407,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "311",
+      "lead": "ECG channel 0",
+      "N": 3007,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3007,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3007,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3007,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3007,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3007,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3007,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "312",
+      "lead": "ECG channel 0",
+      "N": 2329,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2284,
+        "FP": 45,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2284,
+            45
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2274,
+        "FP": 55,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2274,
+            55
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2284,
+        "FP": 45,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2284,
+            45
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "313",
+      "lead": "ECG channel 0",
+      "N": 2697,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2697,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2697,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2695,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2695,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2697,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2697,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "314",
+      "lead": "ECG channel 0",
+      "N": 2115,
+      "V": 1,
+      "V4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 1,
+        "TN": 2115,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2115,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "TP": 1,
+        "TN": 2112,
+        "FP": 3,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2112,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 1,
+        "TN": 2115,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2115,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "record": "315",
+      "lead": "ECG channel 0",
+      "N": 3271,
+      "V": 1,
+      "V4": {
+        "precision": 0.04,
+        "recall": 1.0,
+        "f1": 0.07692307692307693,
+        "TP": 1,
+        "TN": 3247,
+        "FP": 24,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3247,
+            24
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2991,
+        "FP": 280,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            2991,
+            280
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3257,
+        "FP": 14,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            3257,
+            14
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "316",
+      "lead": "ECG channel 0",
+      "N": 3348,
+      "V": 1,
+      "V4": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "TP": 1,
+        "TN": 3347,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3347,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "TP": 1,
+        "TN": 3346,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3346,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3347,
+        "FP": 1,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            3347,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "317",
+      "lead": "ECG channel 0",
+      "N": 2769,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2767,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2767,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2767,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2767,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2767,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2767,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "318",
+      "lead": "ECG channel 0",
+      "N": 3529,
+      "V": 1,
+      "V4": {
+        "precision": 0.02702702702702703,
+        "recall": 1.0,
+        "f1": 0.052631578947368425,
+        "TP": 1,
+        "TN": 3493,
+        "FP": 36,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3493,
+            36
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0031446540880503146,
+        "recall": 1.0,
+        "f1": 0.006269592476489028,
+        "TP": 1,
+        "TN": 3212,
+        "FP": 317,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3212,
+            317
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "TP": 1,
+        "TN": 3528,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3528,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "record": "319",
+      "lead": "ECG channel 0",
+      "N": 2557,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2321,
+        "FP": 236,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2321,
+            236
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2270,
+        "FP": 287,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2270,
+            287
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2489,
+        "FP": 68,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2489,
+            68
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "320",
+      "lead": "ECG channel 0",
+      "N": 3132,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3132,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3132,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3130,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3130,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 3132,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            3132,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "321",
+      "lead": "ECG channel 0",
+      "N": 2113,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2111,
+        "FP": 2,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2111,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2112,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2112,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 2113,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            2113,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "322",
+      "lead": "ECG channel 0",
+      "N": 1503,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1503,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1503,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1478,
+        "FP": 25,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1478,
+            25
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1500,
+        "FP": 3,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1500,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "323",
+      "lead": "ECG channel 0",
+      "N": 5288,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 5128,
+        "FP": 160,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            5128,
+            160
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 4814,
+        "FP": 474,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            4814,
+            474
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 5287,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            5287,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "324",
+      "lead": "ECG channel 0",
+      "N": 1373,
+      "V": 4,
+      "V4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "TP": 4,
+        "TN": 1373,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1373,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "TP": 3,
+        "TN": 1370,
+        "FP": 3,
+        "FN": 1,
+        "confusion_rows_N_V": [
+          [
+            1370,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "TP": 2,
+        "TN": 1373,
+        "FP": 0,
+        "FN": 2,
+        "confusion_rows_N_V": [
+          [
+            1373,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "record": "325",
+      "lead": "ECG channel 0",
+      "N": 1464,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1464,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1464,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1430,
+        "FP": 34,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1430,
+            34
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1464,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1464,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "326",
+      "lead": "ECG channel 0",
+      "N": 1733,
+      "V": 4,
+      "V4": {
+        "precision": 0.0273972602739726,
+        "recall": 0.5,
+        "f1": 0.051948051948051945,
+        "TP": 2,
+        "TN": 1662,
+        "FP": 71,
+        "FN": 2,
+        "confusion_rows_N_V": [
+          [
+            1662,
+            71
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 14,
+        "FP": 1719,
+        "FN": 4,
+        "confusion_rows_N_V": [
+          [
+            14,
+            1719
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1522,
+        "FP": 211,
+        "FN": 4,
+        "confusion_rows_N_V": [
+          [
+            1522,
+            211
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "record": "327",
+      "lead": "ECG channel 0",
+      "N": 1270,
+      "V": 0,
+      "V4": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1269,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1269,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1269,
+        "FP": 1,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1269,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "V6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "TP": 0,
+        "TN": 1270,
+        "FP": 0,
+        "FN": 0,
+        "confusion_rows_N_V": [
+          [
+            1270,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "selection_or_tuning_on_stdb": false
+}

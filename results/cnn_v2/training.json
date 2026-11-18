@@ -1,0 +1,91 @@
+{
+  "tensorflow": "2.21.0",
+  "numpy": "2.5.4",
+  "seed": 42,
+  "best_epoch": 15,
+  "epochs_run": 20,
+  "seconds": 106.63889040000504,
+  "parameters": 849,
+  "class_weights": [
+    0.5436774524910118,
+    6.223777046095955
+  ],
+  "epoch_samples": 56602,
+  "hard_occurrences": 4900,
+  "V1": {
+    "float32": {
+      "confusion_rows_N_V": [
+        [
+          4541,
+          0
+        ],
+        [
+          3,
+          663
+        ]
+      ],
+      "N_to_PVC": 0,
+      "PVC_to_N": 3,
+      "precision": 1.0,
+      "recall": 0.9954954954954955,
+      "f1": 0.9977426636568849,
+      "normal_recall": 1.0,
+      "normal_neighbor_pvc": {
+        "samples": 361,
+        "false_positive": 0,
+        "normal_recall": 1.0
+      }
+    },
+    "int8": {
+      "confusion_rows_N_V": [
+        [
+          4541,
+          0
+        ],
+        [
+          2,
+          664
+        ]
+      ],
+      "N_to_PVC": 0,
+      "PVC_to_N": 2,
+      "precision": 1.0,
+      "recall": 0.996996996996997,
+      "f1": 0.9984962406015038,
+      "normal_recall": 1.0,
+      "normal_neighbor_pvc": {
+        "samples": 361,
+        "false_positive": 0,
+        "normal_recall": 1.0
+      }
+    }
+  },
+  "V2": {
+    "float32": {
+      "confusion_rows_N_V": [
+        [
+          4533,
+          8
+        ],
+        [
+          1,
+          665
+        ]
+      ],
+      "N_to_PVC": 8,
+      "PVC_to_N": 1,
+      "precision": 0.9881129271916791,
+      "recall": 0.9984984984984985,
+      "f1": 0.9932785660941,
+      "normal_recall": 0.9982382735080378,
+      "normal_neighbor_pvc": {
+        "samples": 361,
+        "false_positive": 1,
+        "normal_recall": 0.997229916897507
+      }
+    }
+  },
+  "export_selected": false,
+  "selection_uses": "original Train development only",
+  "export_rule": "development F1 > V1 Float32, precision >= V1 Float32, recall >= V1 Float32 minus .02; exploratory selection only"
+}

@@ -1,0 +1,9 @@
+{
+  "completed": true,
+  "records": 28,
+  "thresholds": {
+    "V4": 0.88,
+    "V5": 0.33,
+    "V6": 0.87
+  }
+}

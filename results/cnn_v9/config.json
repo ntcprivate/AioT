@@ -1,0 +1,39 @@
+{
+  "seed": 42,
+  "architecture": "V4 849 parameters",
+  "group_weighting": "class weight * inverse sqrt within-class group count",
+  "groups": {
+    "INCART": "patient",
+    "MITBIH": "record proxy"
+  },
+  "variants": {
+    "A": "no augmentation",
+    "B": "shift +/-4; central gain 0.9-1.1; baseline wander"
+  },
+  "checkpoint": "PR-AUC checkpoint groups",
+  "threshold": "maximize min(INCART F1,MITBIH F1), then macro F1 on threshold groups",
+  "development_partition": {
+    "method": "fixed SHA256(seed:group), 60% checkpoint / 40% threshold; no waveform or output selection",
+    "INCART_checkpoint_patients": [
+      "4",
+      "20",
+      "25"
+    ],
+    "INCART_threshold_patients": [
+      "15",
+      "28"
+    ],
+    "MITBIH_checkpoint_records": [
+      "115",
+      "118",
+      "121",
+      "214",
+      "234"
+    ],
+    "MITBIH_threshold_records": [
+      "210",
+      "233"
+    ]
+  },
+  "test_used": false
+}

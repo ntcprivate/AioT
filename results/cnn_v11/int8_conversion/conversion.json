@@ -1,0 +1,231 @@
+{
+  "source_sha256": "61909ec7f93e3d8823627a0127422aefdd098f92a9c95619073968c7a3eb3601",
+  "int8_sha256": "54f34c5961d61146b53775c167eaf3740f8c9df638e8ae2b0734ad72ef038e58",
+  "model_bytes": 17792,
+  "parameters": 2017,
+  "runtime": {
+    "tensorflow": "2.21.0",
+    "onednn": "0",
+    "host_reference": "TFLite CPU without default delegates; TFLM/ESP32 parity not yet measured"
+  },
+  "calibration": {
+    "samples": 1565,
+    "seed": 42,
+    "source": "Train only, stratified dataset/class plus real missing-history Train samples",
+    "source_rr_sha256": "f34388fb086b5295d08cbaed3262327d0d073c462ec70e6e34a71ab9f0b90419"
+  },
+  "inputs": [
+    {
+      "name": "serving_default_rr_features:0",
+      "index": 0,
+      "shape": [
+        1,
+        4
+      ],
+      "dtype": "<class 'numpy.int8'>",
+      "scale": 0.14875458180904388,
+      "zero_point": 79
+    },
+    {
+      "name": "serving_default_ecg_256:0",
+      "index": 1,
+      "shape": [
+        1,
+        256,
+        1
+      ],
+      "dtype": "<class 'numpy.int8'>",
+      "scale": 0.059675201773643494,
+      "zero_point": -15
+    }
+  ],
+  "output": {
+    "name": "StatefulPartitionedCall_1:0",
+    "index": 63,
+    "scale": 0.00390625,
+    "zero_point": -128
+  },
+  "threshold": {
+    "fp32": 0.8,
+    "int8_code_min": 77,
+    "rule": "code >= int8_code_min; no tuning",
+    "first_positive_probability": 0.80078125
+  },
+  "rr_fit_mean": [
+    0.7547150254249573,
+    0.7504129409790039,
+    1.0286024808883667,
+    0.998400092124939
+  ],
+  "rr_fit_std": [
+    0.22563959658145905,
+    0.20259849727153778,
+    0.2827460467815399,
+    0.0323653444647789
+  ],
+  "development": {
+    "MITBIH": {
+      "samples": 12459,
+      "FP32": {
+        "samples": 12459,
+        "N": 11159,
+        "V": 1300,
+        "threshold": 0.8,
+        "accuracy": 0.9936592021831607,
+        "precision": 0.9849086576648134,
+        "recall": 0.9538461538461539,
+        "f1": 0.9691285658460337,
+        "pr_auc": 0.9902925692068465,
+        "fp_per_1000_normal": 1.7026615288108253,
+        "TP": 1240,
+        "FP": 19,
+        "FN": 60,
+        "TN": 11140,
+        "confusion_rows_N_V": [
+          [
+            11140,
+            19
+          ],
+          [
+            60,
+            1240
+          ]
+        ]
+      },
+      "INT8": {
+        "samples": 12459,
+        "N": 11159,
+        "V": 1300,
+        "threshold": 0.8,
+        "accuracy": 0.9928565695481179,
+        "precision": 0.97639653815893,
+        "recall": 0.9546153846153846,
+        "f1": 0.9653831194087904,
+        "pr_auc": 0.9878271251218808,
+        "fp_per_1000_normal": 2.688412940227619,
+        "TP": 1241,
+        "FP": 30,
+        "FN": 59,
+        "TN": 11129,
+        "confusion_rows_N_V": [
+          [
+            11129,
+            30
+          ],
+          [
+            59,
+            1241
+          ]
+        ]
+      },
+      "prediction_changes": 20,
+      "score_mae": 0.008664226550402731,
+      "score_max_abs": 0.25753332674503326,
+      "score_p99_abs": 0.12729946255683902
+    },
+    "INCART": {
+      "samples": 25010,
+      "FP32": {
+        "samples": 25010,
+        "N": 21916,
+        "V": 3094,
+        "threshold": 0.8,
+        "accuracy": 0.999280287884846,
+        "precision": 0.9980569948186528,
+        "recall": 0.9961215255332903,
+        "f1": 0.9970883209317374,
+        "pr_auc": 0.9999120387183987,
+        "fp_per_1000_normal": 0.27377258623836465,
+        "TP": 3082,
+        "FP": 6,
+        "FN": 12,
+        "TN": 21910,
+        "confusion_rows_N_V": [
+          [
+            21910,
+            6
+          ],
+          [
+            12,
+            3082
+          ]
+        ]
+      },
+      "INT8": {
+        "samples": 25010,
+        "N": 21916,
+        "V": 3094,
+        "threshold": 0.8,
+        "accuracy": 0.9993202718912435,
+        "precision": 0.9977353607246846,
+        "recall": 0.9967679379444085,
+        "f1": 0.9972514147130154,
+        "pr_auc": 0.9999108384450834,
+        "fp_per_1000_normal": 0.31940135061142544,
+        "TP": 3084,
+        "FP": 7,
+        "FN": 10,
+        "TN": 21909,
+        "confusion_rows_N_V": [
+          [
+            21909,
+            7
+          ],
+          [
+            10,
+            3084
+          ]
+        ]
+      },
+      "prediction_changes": 3,
+      "score_mae": 0.0008570008133315913,
+      "score_max_abs": 0.20498868823051453,
+      "score_p99_abs": 0.00799186592921614
+    }
+  },
+  "golden_status": "TFLite-host reference; exact TFLM/ESP32 parity pending",
+  "operators": [
+    "STRIDED_SLICE",
+    "EXPAND_DIMS",
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "MEAN",
+    "FULLY_CONNECTED",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "MEAN",
+    "FULLY_CONNECTED",
+    "CONCATENATION",
+    "FULLY_CONNECTED",
+    "FULLY_CONNECTED",
+    "CONCATENATION",
+    "FULLY_CONNECTED",
+    "LOGISTIC"
+  ],
+  "memory": {
+    "tensor_arena_bytes": null,
+    "arena_status": "NOT MEASURED; tensor sizes are not allocator usage",
+    "sum_tensor_shape_bytes_including_constants_and_aliases": 29456,
+    "largest_tensor_bytes": 3744
+  },
+  "input_clipping_development": {
+    "ECG_values": 2,
+    "RR_values": 0
+  }
+}

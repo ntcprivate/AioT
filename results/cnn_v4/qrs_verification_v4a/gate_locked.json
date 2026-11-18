@@ -1,0 +1,6 @@
+{
+  "selected_threshold": 0.05,
+  "reason": "Fit matched-PVC rejection <=0.1%; Calibration zero matched-PVC rejection, no increase FN, no F1 reduction on either dataset; maximize worst-dataset F1 gain then total FP reduction; smaller threshold tie",
+  "design_sha256": "c1fce7cdda02f09df1b4c16ca62cc8e315f19cd986033b92ddcc45565c88ef57",
+  "calibration_FPs_reduced": 2
+}

@@ -1,0 +1,6 @@
+{
+  "completed": true,
+  "v7_sha256": "be1e72c92e2f3d90c222a41dfdca02b33196b1945453d9af052d7e1fd80e4a8c",
+  "threshold": 0.95,
+  "v8_design_sha256_before_v7_test": "5a0e42ce8573004ac245d0ccd16bcae677766dd5e42b4e9bbe4c98af05c29616"
+}

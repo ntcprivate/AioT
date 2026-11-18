@@ -1,0 +1,8 @@
+{
+  "fallback": "history_fraction < 2/8 OR any abs(Fit-zscore timing features[0:3]) > 3",
+  "matching_tolerance_samples": 38,
+  "scope": "original Development/Validation only; detector-generated windows; ungated detector stream, not full firmware quality gate; synthetic ADC mapping 2048+200counts/mV",
+  "missing_N": "not counted TN; separately reported missed_N; all missed V count FN",
+  "OTHER": "excluded from N/V classification, never relabeled N",
+  "adaptive_limit": "development previously examined; exploratory result"
+}

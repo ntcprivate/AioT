@@ -1,0 +1,7 @@
+﻿cohort,model,threshold,precision,recall,f1,fp,fn,hard_fp
+annotation-centered Train-development,V1,0.52,1.0,0.9954954954954955,0.9977426636568849,0,3,0
+annotation-centered Train-development,V2,0.52,0.9881129271916791,0.9984984984984985,0.9932785660941,8,1,1
+annotation-centered Train-development,V3,0.52,1.0,0.993993993993994,0.9969879518072289,0,4,0
+same Train-development detector2B end-to-end N/V,V1,0.52,0.83841059602649,0.9504504504504504,0.8909218859957776,122,33,0
+same Train-development detector2B end-to-end N/V,V2,0.52,0.8037974683544303,0.9534534534534534,0.8722527472527473,155,31,1
+same Train-development detector2B end-to-end N/V,V3,0.52,0.7657004830917874,0.9519519519519519,0.8487282463186078,194,32,0

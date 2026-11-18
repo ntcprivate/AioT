@@ -1,0 +1,44 @@
+{
+  "definitions": "Morphology proxies only: central128 peak-to-peak in mV; number of samples over half absolute deviation from median, not clinical QRS duration. Cutoffs from Fit only. Descriptive strata, no parameter selection.",
+  "Fit_low_ptp_q10": 1.5231190560895356,
+  "Fit_broad_support_q90_ms": 116.0,
+  "evaluation": {
+    "MITBIH": {
+      "all_matched_PVC": {
+        "samples": 2491,
+        "rejected": 0
+      },
+      "low_amplitude_Fit_q10": {
+        "samples": 250,
+        "rejected": 0
+      },
+      "broad_half_amplitude_support_Fit_q90": {
+        "samples": 534,
+        "rejected": 0
+      },
+      "short_detected_RR_lt600ms": {
+        "samples": 2284,
+        "rejected": 0
+      }
+    },
+    "INCART": {
+      "all_matched_PVC": {
+        "samples": 6937,
+        "rejected": 0
+      },
+      "low_amplitude_Fit_q10": {
+        "samples": 871,
+        "rejected": 0
+      },
+      "broad_half_amplitude_support_Fit_q90": {
+        "samples": 326,
+        "rejected": 0
+      },
+      "short_detected_RR_lt600ms": {
+        "samples": 5840,
+        "rejected": 0
+      }
+    }
+  },
+  "streaming_decisions_checked": 182
+}

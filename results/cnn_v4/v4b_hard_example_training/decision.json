@@ -1,0 +1,29 @@
+{
+  "status": "FAIL",
+  "criteria": {
+    "MITBIH": {
+      "mean_f1_noninferior": false,
+      "recall_rule": true,
+      "FP_rule": false,
+      "worst_fold_rule": false,
+      "group_stability_fraction": 0.7419354838709677,
+      "groups_improved": 13,
+      "groups_worsened": 13,
+      "groups_with_PVC": 31,
+      "group_stability_rule": true
+    },
+    "INCART": {
+      "mean_f1_noninferior": false,
+      "recall_rule": true,
+      "FP_rule": false,
+      "worst_fold_rule": false,
+      "group_stability_fraction": 0.7777777777777778,
+      "groups_improved": 8,
+      "groups_worsened": 13,
+      "groups_with_PVC": 27,
+      "group_stability_rule": true
+    }
+  },
+  "recommendation": "keep original V4; no Test evaluation or extra variants",
+  "baseline_reuse": "exact old CNN-only confusion counts reproduced in all5 folds, supporting same splits/calibration; historical training runtime not fully recorded"
+}

@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "architecture": "V6 + SpatialDropout1D(0.1) after final Conv1D in both branches",
+  "parameters": 1969,
+  "outer_folds": 5,
+  "split_source": "results\\v10_research\\step1_5fold_cv\\folds_split.json",
+  "checkpoint_selection": "PR-AUC on disjoint checkpoint fold",
+  "threshold_selection": "max F1 on disjoint calibration fold",
+  "fit_folds": 2,
+  "augmentation": false,
+  "test_accessed": false
+}

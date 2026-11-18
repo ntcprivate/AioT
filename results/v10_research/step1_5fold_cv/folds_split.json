@@ -1,0 +1,457 @@
+[
+  {
+    "fold_index": 0,
+    "outer_eval_fold_id": 0,
+    "inner_checkpoint_fold_id": 1,
+    "inner_threshold_fold_id": 2,
+    "inner_fit_fold_ids": [
+      3,
+      4
+    ],
+    "outer_MITBIH_records": [
+      "111",
+      "112",
+      "116",
+      "124",
+      "202",
+      "208",
+      "215",
+      "231"
+    ],
+    "outer_INCART_patients": [
+      "1",
+      "6",
+      "8",
+      "13",
+      "28",
+      "32"
+    ],
+    "checkpoint_MITBIH_records": [
+      "100",
+      "106",
+      "109",
+      "118",
+      "121",
+      "122",
+      "203",
+      "210"
+    ],
+    "checkpoint_INCART_patients": [
+      "2",
+      "11",
+      "21",
+      "23",
+      "24",
+      "31"
+    ],
+    "threshold_MITBIH_records": [
+      "115",
+      "209",
+      "212",
+      "214",
+      "219",
+      "220",
+      "233",
+      "234"
+    ],
+    "threshold_INCART_patients": [
+      "7",
+      "12",
+      "15",
+      "16",
+      "20"
+    ],
+    "fit_MITBIH_records": [
+      "101",
+      "103",
+      "105",
+      "114",
+      "119",
+      "201",
+      "205",
+      "207",
+      "213",
+      "217",
+      "221",
+      "223",
+      "228",
+      "230"
+    ],
+    "fit_INCART_patients": [
+      "3",
+      "4",
+      "5",
+      "14",
+      "18",
+      "19",
+      "22",
+      "25",
+      "26",
+      "29"
+    ]
+  },
+  {
+    "fold_index": 1,
+    "outer_eval_fold_id": 1,
+    "inner_checkpoint_fold_id": 2,
+    "inner_threshold_fold_id": 3,
+    "inner_fit_fold_ids": [
+      0,
+      4
+    ],
+    "outer_MITBIH_records": [
+      "100",
+      "106",
+      "109",
+      "118",
+      "121",
+      "122",
+      "203",
+      "210"
+    ],
+    "outer_INCART_patients": [
+      "2",
+      "11",
+      "21",
+      "23",
+      "24",
+      "31"
+    ],
+    "checkpoint_MITBIH_records": [
+      "115",
+      "209",
+      "212",
+      "214",
+      "219",
+      "220",
+      "233",
+      "234"
+    ],
+    "checkpoint_INCART_patients": [
+      "7",
+      "12",
+      "15",
+      "16",
+      "20"
+    ],
+    "threshold_MITBIH_records": [
+      "101",
+      "114",
+      "119",
+      "205",
+      "207",
+      "213",
+      "221"
+    ],
+    "threshold_INCART_patients": [
+      "3",
+      "5",
+      "19",
+      "25",
+      "29"
+    ],
+    "fit_MITBIH_records": [
+      "103",
+      "105",
+      "111",
+      "112",
+      "116",
+      "124",
+      "201",
+      "202",
+      "208",
+      "215",
+      "217",
+      "223",
+      "228",
+      "230",
+      "231"
+    ],
+    "fit_INCART_patients": [
+      "1",
+      "4",
+      "6",
+      "8",
+      "13",
+      "14",
+      "18",
+      "22",
+      "26",
+      "28",
+      "32"
+    ]
+  },
+  {
+    "fold_index": 2,
+    "outer_eval_fold_id": 2,
+    "inner_checkpoint_fold_id": 3,
+    "inner_threshold_fold_id": 4,
+    "inner_fit_fold_ids": [
+      0,
+      1
+    ],
+    "outer_MITBIH_records": [
+      "115",
+      "209",
+      "212",
+      "214",
+      "219",
+      "220",
+      "233",
+      "234"
+    ],
+    "outer_INCART_patients": [
+      "7",
+      "12",
+      "15",
+      "16",
+      "20"
+    ],
+    "checkpoint_MITBIH_records": [
+      "101",
+      "114",
+      "119",
+      "205",
+      "207",
+      "213",
+      "221"
+    ],
+    "checkpoint_INCART_patients": [
+      "3",
+      "5",
+      "19",
+      "25",
+      "29"
+    ],
+    "threshold_MITBIH_records": [
+      "103",
+      "105",
+      "201",
+      "217",
+      "223",
+      "228",
+      "230"
+    ],
+    "threshold_INCART_patients": [
+      "4",
+      "14",
+      "18",
+      "22",
+      "26"
+    ],
+    "fit_MITBIH_records": [
+      "100",
+      "106",
+      "109",
+      "111",
+      "112",
+      "116",
+      "118",
+      "121",
+      "122",
+      "124",
+      "202",
+      "203",
+      "208",
+      "210",
+      "215",
+      "231"
+    ],
+    "fit_INCART_patients": [
+      "1",
+      "2",
+      "6",
+      "8",
+      "11",
+      "13",
+      "21",
+      "23",
+      "24",
+      "28",
+      "31",
+      "32"
+    ]
+  },
+  {
+    "fold_index": 3,
+    "outer_eval_fold_id": 3,
+    "inner_checkpoint_fold_id": 4,
+    "inner_threshold_fold_id": 0,
+    "inner_fit_fold_ids": [
+      1,
+      2
+    ],
+    "outer_MITBIH_records": [
+      "101",
+      "114",
+      "119",
+      "205",
+      "207",
+      "213",
+      "221"
+    ],
+    "outer_INCART_patients": [
+      "3",
+      "5",
+      "19",
+      "25",
+      "29"
+    ],
+    "checkpoint_MITBIH_records": [
+      "103",
+      "105",
+      "201",
+      "217",
+      "223",
+      "228",
+      "230"
+    ],
+    "checkpoint_INCART_patients": [
+      "4",
+      "14",
+      "18",
+      "22",
+      "26"
+    ],
+    "threshold_MITBIH_records": [
+      "111",
+      "112",
+      "116",
+      "124",
+      "202",
+      "208",
+      "215",
+      "231"
+    ],
+    "threshold_INCART_patients": [
+      "1",
+      "6",
+      "8",
+      "13",
+      "28",
+      "32"
+    ],
+    "fit_MITBIH_records": [
+      "100",
+      "106",
+      "109",
+      "115",
+      "118",
+      "121",
+      "122",
+      "203",
+      "209",
+      "210",
+      "212",
+      "214",
+      "219",
+      "220",
+      "233",
+      "234"
+    ],
+    "fit_INCART_patients": [
+      "2",
+      "7",
+      "11",
+      "12",
+      "15",
+      "16",
+      "20",
+      "21",
+      "23",
+      "24",
+      "31"
+    ]
+  },
+  {
+    "fold_index": 4,
+    "outer_eval_fold_id": 4,
+    "inner_checkpoint_fold_id": 0,
+    "inner_threshold_fold_id": 1,
+    "inner_fit_fold_ids": [
+      2,
+      3
+    ],
+    "outer_MITBIH_records": [
+      "103",
+      "105",
+      "201",
+      "217",
+      "223",
+      "228",
+      "230"
+    ],
+    "outer_INCART_patients": [
+      "4",
+      "14",
+      "18",
+      "22",
+      "26"
+    ],
+    "checkpoint_MITBIH_records": [
+      "111",
+      "112",
+      "116",
+      "124",
+      "202",
+      "208",
+      "215",
+      "231"
+    ],
+    "checkpoint_INCART_patients": [
+      "1",
+      "6",
+      "8",
+      "13",
+      "28",
+      "32"
+    ],
+    "threshold_MITBIH_records": [
+      "100",
+      "106",
+      "109",
+      "118",
+      "121",
+      "122",
+      "203",
+      "210"
+    ],
+    "threshold_INCART_patients": [
+      "2",
+      "11",
+      "21",
+      "23",
+      "24",
+      "31"
+    ],
+    "fit_MITBIH_records": [
+      "101",
+      "114",
+      "115",
+      "119",
+      "205",
+      "207",
+      "209",
+      "212",
+      "213",
+      "214",
+      "219",
+      "220",
+      "221",
+      "233",
+      "234"
+    ],
+    "fit_INCART_patients": [
+      "3",
+      "5",
+      "7",
+      "12",
+      "15",
+      "16",
+      "19",
+      "20",
+      "25",
+      "29"
+    ]
+  }
+]

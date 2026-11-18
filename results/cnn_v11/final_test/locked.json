@@ -1,0 +1,125 @@
+{
+  "sha256": "61909ec7f93e3d8823627a0127422aefdd098f92a9c95619073968c7a3eb3601",
+  "threshold": 0.8,
+  "rr_fit_mean": [
+    0.7547150254249573,
+    0.7504129409790039,
+    1.0286024808883667,
+    0.998400092124939
+  ],
+  "rr_fit_std": [
+    0.22563959658145905,
+    0.20259849727153778,
+    0.2827460467815399,
+    0.0323653444647789
+  ],
+  "best_epoch": 5,
+  "epochs_run": 10,
+  "parameters": 2017,
+  "seed": 42,
+  "partition": {
+    "method": "fixed SHA256(seed:group), 60% checkpoint / 40% threshold; no waveform or output selection",
+    "INCART_checkpoint_patients": [
+      "4",
+      "20",
+      "25"
+    ],
+    "INCART_threshold_patients": [
+      "15",
+      "28"
+    ],
+    "MITBIH_checkpoint_records": [
+      "115",
+      "118",
+      "121",
+      "214",
+      "234"
+    ],
+    "MITBIH_threshold_records": [
+      "210",
+      "233"
+    ]
+  },
+  "fit_groups": {
+    "MITBIH": [
+      "100",
+      "101",
+      "103",
+      "105",
+      "106",
+      "109",
+      "111",
+      "112",
+      "114",
+      "116",
+      "119",
+      "122",
+      "124",
+      "201",
+      "202",
+      "203",
+      "205",
+      "207",
+      "208",
+      "209",
+      "212",
+      "213",
+      "215",
+      "217",
+      "219",
+      "220",
+      "221",
+      "223",
+      "228",
+      "230",
+      "231"
+    ],
+    "INCART": [
+      "1",
+      "11",
+      "12",
+      "13",
+      "14",
+      "16",
+      "18",
+      "19",
+      "2",
+      "21",
+      "22",
+      "23",
+      "24",
+      "26",
+      "29",
+      "3",
+      "31",
+      "32",
+      "5",
+      "6",
+      "7",
+      "8"
+    ]
+  },
+  "loss": "binary_crossentropy",
+  "class_weight": [
+    0.5583328602874857,
+    4.785749040384927
+  ],
+  "augmentation": false,
+  "preprocessing": "250Hz,256 samples,per-window z-score",
+  "RR_features": [
+    "current RR",
+    "median preceding up to7 RR",
+    "ratio current/prior median",
+    "history fraction up to8"
+  ],
+  "missing_history": [
+    1,
+    1,
+    1,
+    0
+  ],
+  "tensorflow": "2.21.0",
+  "onednn": "0",
+  "test_accessed_before_lock": false,
+  "retrospective_test": true
+}

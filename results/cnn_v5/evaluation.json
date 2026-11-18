@@ -1,0 +1,124 @@
+{
+  "seed": 42,
+  "architecture": "multi-scale central QRS + full-window context",
+  "parameters": 4585,
+  "train_samples": 177044,
+  "class_weight": {
+    "0": 0.5583328602874857,
+    "1": 4.785749040384927
+  },
+  "selection_dataset": "INCART Validation only",
+  "selected_threshold": 0.33,
+  "best_epoch": 5,
+  "epochs_run": 10,
+  "checkpoint_sha256": "3b7c815814b6c6336118f536b36e36f096438055b3d1647b43277bce07fc24e3",
+  "comparison": {
+    "INCART_Validation": {
+      "samples": 25010,
+      "N": 21916,
+      "V": 3094,
+      "V4": {
+        "threshold": 0.88,
+        "precision": 0.9564349850349185,
+        "recall": 0.929541047188106,
+        "f1": 0.94279626290772,
+        "TP": 2876,
+        "TN": 21785,
+        "FP": 131,
+        "FN": 218,
+        "confusion_rows_N_V": [
+          [
+            21785,
+            131
+          ],
+          [
+            218,
+            2876
+          ]
+        ]
+      },
+      "V5": {
+        "threshold": 0.33,
+        "precision": 0.998062015503876,
+        "recall": 0.9987071751777634,
+        "f1": 0.9983844911147011,
+        "TP": 3090,
+        "TN": 21910,
+        "FP": 6,
+        "FN": 4,
+        "confusion_rows_N_V": [
+          [
+            21910,
+            6
+          ],
+          [
+            4,
+            3090
+          ]
+        ]
+      }
+    },
+    "MITBIH_Validation": {
+      "samples": 12459,
+      "N": 11159,
+      "V": 1300,
+      "V4": {
+        "threshold": 0.88,
+        "precision": 0.650917176209005,
+        "recall": 0.9007692307692308,
+        "f1": 0.7557276540819621,
+        "TP": 1171,
+        "TN": 10531,
+        "FP": 628,
+        "FN": 129,
+        "confusion_rows_N_V": [
+          [
+            10531,
+            628
+          ],
+          [
+            129,
+            1171
+          ]
+        ]
+      },
+      "V5": {
+        "threshold": 0.33,
+        "precision": 0.9794628751974723,
+        "recall": 0.9538461538461539,
+        "f1": 0.9664848012470773,
+        "TP": 1240,
+        "TN": 11133,
+        "FP": 26,
+        "FN": 60,
+        "confusion_rows_N_V": [
+          [
+            11133,
+            26
+          ],
+          [
+            60,
+            1240
+          ]
+        ]
+      }
+    }
+  },
+  "clear_improvement_rule": "INCART F1 gain >=0.5pp, MIT-BIH F1 loss <=1pp, INCART recall loss <=1pp",
+  "incart_f1_gain": 0.05558822820698106,
+  "mitbih_f1_gain": 0.21075714716511518,
+  "incart_recall_drop": -0.06916612798965738,
+  "worth_independent_testing": true,
+  "test_or_edb_used": false,
+  "expected_tflm_ops": [
+    "STRIDED_SLICE",
+    "CONV_2D",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "MEAN",
+    "FULLY_CONNECTED",
+    "CONCATENATION",
+    "LOGISTIC"
+  ],
+  "int8_exported": false
+}

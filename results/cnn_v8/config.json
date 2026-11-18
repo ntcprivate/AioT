@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "status": "DESIGN_LOCKED_BEFORE_V7_TEST",
+  "seed": 42,
+  "architecture": "V6 dual branch central-QRS/full-window; GlobalAveragePooling in both branches; no Flatten",
+  "parameter_budget": 3000,
+  "expected_parameters": 1969,
+  "training_data": [
+    "MIT-BIH Train",
+    "INCART Train"
+  ],
+  "preprocessing": {
+    "sample_rate_hz": 250,
+    "window_samples": 256,
+    "normalization": "per-window z-score",
+    "labels": [
+      "N",
+      "V"
+    ],
+    "other_policy": "exclude"
+  },
+  "hard_negative": {
+    "source": "Train N only",
+    "miner": "frozen V6 FP32 score",
+    "criterion": "N with V6 score >= 0.50",
+    "weight_multiplier": 1.5,
+    "oversampling": false
+  },
+  "group_balance": {
+    "INCART": "patient_id",
+    "MITBIH": "record_id proxy because full patient identity is unavailable",
+    "method": "inverse square-root group count within class, normalized to mean 1 per class",
+    "sample_weight_cap": 8.0
+  },
+  "augmentation": {
+    "center_shift_samples": [-4, 4],
+    "shift_probability": 0.5,
+    "gaussian_noise_sigma": [0.005, 0.025],
+    "noise_probability": 0.4,
+    "baseline_wander_amplitude": [0.01, 0.06],
+    "baseline_wander_hz": [0.25, 0.7],
+    "baseline_probability": 0.4,
+    "polarity_inversion": false,
+    "zscore_after_augmentation": true
+  },
+  "optimizer": "Adam 0.001",
+  "batch_size": 128,
+  "max_epochs": 25,
+  "early_stopping": {
+    "metric": "PR-AUC on checkpoint-only development groups",
+    "patience": 5
+  },
+  "development_partition": "reuse exact V6 checkpoint/threshold patient-record groups",
+  "threshold_selection": {
+    "range": [0.01, 0.99],
+    "step": 0.005,
+    "eligible": "combined recall >= 0.95 and per-dataset recall >= 0.90 on threshold groups",
+    "objective": "maximum combined F1; tie higher precision then higher threshold",
+    "fallback": "maximum combined F1 if no eligible threshold"
+  },
+  "test_use": "forbidden during V8 training, checkpoint selection, threshold calibration, and development comparison"
+}

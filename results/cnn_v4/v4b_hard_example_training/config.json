@@ -1,0 +1,18 @@
+{
+  "architecture": "V4 849 params, no RR; original V4 untouched",
+  "seed": 42,
+  "fold_seed": "42+1000*k",
+  "folds_sha256": "4d626d9a95624a3d698fd4762dd4e6b7519476efb5f653ab076394902f056321",
+  "baseline": "Reuse exact Step1 V4 checkpoints trained on identical Fit/Checkpoint groups,seed,BCE,classweights,Adam.001,batch128,max20,patience5,no augmentation; source training metadata recorded, historical runtime environment incomplete",
+  "hard_mining": "baseline best model scores on Fit only, NOT OOF; within each class select top10% loss (positive1-score,negative score), deterministic stable ties",
+  "weighting": "2x for hard Fit examples then normalize within class; multiply original Fit class weight; equivalent weighted exposure ~18.18% hard per class",
+  "loss": "binary_crossentropy",
+  "augmentation": false,
+  "epochs": 20,
+  "patience": 5,
+  "batch": 128,
+  "threshold": "same baseline grid .05.. .95 step.01 max combined Calibration PVC F1, tie precision then smaller threshold",
+  "single_factor": "class-balanced Fit hardness weighting; no independent attribution to positive vs negative arms",
+  "passing_rule": "both mean fold end-to-end F1 >= baseline; INC mean Recall increases; MIT mean Recall drop<=1pp; each mean FP/1000N increase <=max(1,10% baseline); worst fold F1 not worse on either dataset; >=60% patient/record groups with PVC have F1 drop<=2pp",
+  "evaluation_limit": "Previously examined Train+Development; no Test; folds separate Fit/Checkpoint/Calibration/outer for each run; exploratory adaptive validation"
+}

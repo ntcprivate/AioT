@@ -1,0 +1,6 @@
+{
+  "locked": true,
+  "threshold": 0.95,
+  "checkpoint_sha256": "be1e72c92e2f3d90c222a41dfdca02b33196b1945453d9af052d7e1fd80e4a8c",
+  "test_used": false
+}

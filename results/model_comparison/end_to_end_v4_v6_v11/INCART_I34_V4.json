@@ -1,0 +1,21 @@
+{
+  "dataset": "INCART",
+  "record": "I34",
+  "group": "15",
+  "stage": "old",
+  "model": "V4",
+  "reference_N": 1429,
+  "peakTP": 1953,
+  "peakFP": 21,
+  "peakFN": 12,
+  "missingN": 5,
+  "missingV": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "TN": 1424,
+  "precision": 0,
+  "recall": 0,
+  "f1": 0,
+  "fp_per_1000_N": 0.0
+}

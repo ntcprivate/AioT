@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "features": [
+    "current_RR_seconds",
+    "median_previous_up_to_7_RR",
+    "current_over_previous_median",
+    "history_fraction_up_to_8"
+  ],
+  "missing_history": "1 second; prior median 1 second; explicit history fraction",
+  "rr_scaling": "Fit mean/std, epsilon 1e-8; no clipping",
+  "annotation_symbols": "beat-position filtering only; no class labels used as features",
+  "epochs": 20,
+  "patience": 5,
+  "batch": 128,
+  "augmentation": false,
+  "onednn": "0",
+  "tensorflow": "2.21.0",
+  "adaptive_limit": "Architecture motivated by previously viewed outer results; not independent confirmation",
+  "splits_sha256": "4d626d9a95624a3d698fd4762dd4e6b7519476efb5f653ab076394902f056321"
+}

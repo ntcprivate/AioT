@@ -1,0 +1,119 @@
+{
+  "sha256": "e6d3f20e1cfed26ae69914ded06cd15a0adddb0ad2c66f3095b57644e612ca3a",
+  "best_epoch": 15,
+  "epochs_run": 20,
+  "history": [
+    {
+      "epoch": 1,
+      "checkpoint_pr_auc": 0.37159682503160046,
+      "loss": 0.5281912088394165
+    },
+    {
+      "epoch": 2,
+      "checkpoint_pr_auc": 0.4244904493048556,
+      "loss": 0.3600616753101349
+    },
+    {
+      "epoch": 3,
+      "checkpoint_pr_auc": 0.4572456853495341,
+      "loss": 0.31051504611968994
+    },
+    {
+      "epoch": 4,
+      "checkpoint_pr_auc": 0.456701487983009,
+      "loss": 0.29300305247306824
+    },
+    {
+      "epoch": 5,
+      "checkpoint_pr_auc": 0.47536150547170847,
+      "loss": 0.2764493525028229
+    },
+    {
+      "epoch": 6,
+      "checkpoint_pr_auc": 0.4944072402810113,
+      "loss": 0.26754799485206604
+    },
+    {
+      "epoch": 7,
+      "checkpoint_pr_auc": 0.5070073616116149,
+      "loss": 0.25806915760040283
+    },
+    {
+      "epoch": 8,
+      "checkpoint_pr_auc": 0.5241399520240296,
+      "loss": 0.2505742609500885
+    },
+    {
+      "epoch": 9,
+      "checkpoint_pr_auc": 0.5336730393371105,
+      "loss": 0.24302363395690918
+    },
+    {
+      "epoch": 10,
+      "checkpoint_pr_auc": 0.5756371470605477,
+      "loss": 0.23419281840324402
+    },
+    {
+      "epoch": 11,
+      "checkpoint_pr_auc": 0.5762577785320405,
+      "loss": 0.22566485404968262
+    },
+    {
+      "epoch": 12,
+      "checkpoint_pr_auc": 0.622787338091099,
+      "loss": 0.21717266738414764
+    },
+    {
+      "epoch": 13,
+      "checkpoint_pr_auc": 0.6110210135638464,
+      "loss": 0.2125847190618515
+    },
+    {
+      "epoch": 14,
+      "checkpoint_pr_auc": 0.6145817754141946,
+      "loss": 0.2071581929922104
+    },
+    {
+      "epoch": 15,
+      "checkpoint_pr_auc": 0.6234352103262258,
+      "loss": 0.2037135809659958
+    },
+    {
+      "epoch": 16,
+      "checkpoint_pr_auc": 0.6045165685399023,
+      "loss": 0.1991841197013855
+    },
+    {
+      "epoch": 17,
+      "checkpoint_pr_auc": 0.5999656101023056,
+      "loss": 0.19837363064289093
+    },
+    {
+      "epoch": 18,
+      "checkpoint_pr_auc": 0.6024895877267015,
+      "loss": 0.19130025804042816
+    },
+    {
+      "epoch": 19,
+      "checkpoint_pr_auc": 0.6070269859550933,
+      "loss": 0.18849463760852814
+    },
+    {
+      "epoch": 20,
+      "checkpoint_pr_auc": 0.601662545107468,
+      "loss": 0.18735936284065247
+    }
+  ],
+  "mining": {
+    "0": {
+      "Fit_samples": 79598,
+      "hard_samples": 7960,
+      "mean_hard_baseline_score": 0.5289188623428345
+    },
+    "1": {
+      "Fit_samples": 8727,
+      "hard_samples": 873,
+      "mean_hard_baseline_score": 0.4961920380592346
+    }
+  }
+}

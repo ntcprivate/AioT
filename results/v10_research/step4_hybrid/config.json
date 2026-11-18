@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "architecture": "V4 context conv8k5-pool2-conv16k5-pool2-GAP-dense8; V6 center crop128-conv8k5-pool2-conv12k5-pool2-GAP-dense8; fusion dense12-sigmoid",
+  "parameters": 1701,
+  "outer_folds": 5,
+  "split_source": "results\\v10_research\\step1_5fold_cv\\folds_split.json",
+  "checkpoint_selection": "PR-AUC on disjoint checkpoint fold",
+  "threshold_selection": "max F1 on disjoint calibration fold",
+  "fit_folds": 2,
+  "augmentation": false,
+  "test_accessed": false,
+  "tensorflow": "2.21.0",
+  "onednn": "0",
+  "folds_sha256": "4d626d9a95624a3d698fd4762dd4e6b7519476efb5f653ab076394902f056321",
+  "adaptive_limit": "Prior outer CV influenced architecture; exploratory adaptive comparison, not independent confirmation"
+}

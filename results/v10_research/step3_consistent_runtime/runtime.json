@@ -1,0 +1,7 @@
+{
+  "tensorflow": "2.21.0",
+  "numpy": "2.4.6",
+  "TF_ENABLE_ONEDNN_OPTS": "0",
+  "folds_sha256": "4d626d9a95624a3d698fd4762dd4e6b7519476efb5f653ab076394902f056321",
+  "baseline_runtime_evidence": "Step1 and Step2 set oneDNN=0 before importing TensorFlow; historical effective environment not recorded, so retrospective verification is limited"
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "MITBIH",
+  "record": "115",
+  "group": "115",
+  "stage": "old",
+  "model": "V4",
+  "reference_N": 1953,
+  "peakTP": 1949,
+  "peakFP": 1,
+  "peakFN": 4,
+  "missingN": 4,
+  "missingV": 0,
+  "TP": 0,
+  "FP": 0,
+  "FN": 0,
+  "TN": 1949,
+  "precision": 0,
+  "recall": 0,
+  "f1": 0,
+  "fp_per_1000_N": 0.0
+}

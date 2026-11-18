@@ -1,0 +1,200 @@
+[
+  {
+    "role": "Fit",
+    "dataset": "MITBIH",
+    "rule": "V4",
+    "TP": 2375,
+    "FP": 513,
+    "FN": 141,
+    "precision": 0.8223684210526315,
+    "recall": 0.9439586645468998,
+    "f1": 0.8789785344189489
+  },
+  {
+    "role": "Fit",
+    "dataset": "MITBIH",
+    "rule": "V4 OR V6",
+    "TP": 2444,
+    "FP": 548,
+    "FN": 72,
+    "precision": 0.8168449197860963,
+    "recall": 0.9713831478537361,
+    "f1": 0.887436456063907
+  },
+  {
+    "role": "Fit",
+    "dataset": "MITBIH",
+    "rule": "V4 OR V11",
+    "TP": 2456,
+    "FP": 608,
+    "FN": 60,
+    "precision": 0.8015665796344648,
+    "recall": 0.9761526232114467,
+    "f1": 0.8802867383512545
+  },
+  {
+    "role": "Fit",
+    "dataset": "INCART",
+    "rule": "V4",
+    "TP": 4743,
+    "FP": 796,
+    "FN": 1947,
+    "precision": 0.8562917494132515,
+    "recall": 0.7089686098654708,
+    "f1": 0.7756971134189223
+  },
+  {
+    "role": "Fit",
+    "dataset": "INCART",
+    "rule": "V4 OR V6",
+    "TP": 5696,
+    "FP": 1540,
+    "FN": 994,
+    "precision": 0.7871752349364289,
+    "recall": 0.8514200298953662,
+    "f1": 0.8180382019244579
+  },
+  {
+    "role": "Fit",
+    "dataset": "INCART",
+    "rule": "V4 OR V11",
+    "TP": 5730,
+    "FP": 2158,
+    "FN": 960,
+    "precision": 0.7264198782961461,
+    "recall": 0.8565022421524664,
+    "f1": 0.7861160653038827
+  },
+  {
+    "role": "Calibration",
+    "dataset": "MITBIH",
+    "rule": "V4",
+    "TP": 1085,
+    "FP": 568,
+    "FN": 70,
+    "precision": 0.6563823351482153,
+    "recall": 0.9393939393939394,
+    "f1": 0.7727920227920229
+  },
+  {
+    "role": "Calibration",
+    "dataset": "MITBIH",
+    "rule": "V4 OR V6",
+    "TP": 1104,
+    "FP": 596,
+    "FN": 51,
+    "precision": 0.6494117647058824,
+    "recall": 0.9558441558441558,
+    "f1": 0.7733800350262698
+  },
+  {
+    "role": "Calibration",
+    "dataset": "MITBIH",
+    "rule": "V4 OR V11",
+    "TP": 1115,
+    "FP": 600,
+    "FN": 40,
+    "precision": 0.6501457725947521,
+    "recall": 0.9653679653679653,
+    "f1": 0.7770034843205574
+  },
+  {
+    "role": "Calibration",
+    "dataset": "INCART",
+    "rule": "V4",
+    "TP": 2738,
+    "FP": 385,
+    "FN": 232,
+    "precision": 0.8767211015049632,
+    "recall": 0.9218855218855219,
+    "f1": 0.8987362547185296
+  },
+  {
+    "role": "Calibration",
+    "dataset": "INCART",
+    "rule": "V4 OR V6",
+    "TP": 2844,
+    "FP": 2283,
+    "FN": 126,
+    "precision": 0.5547103569338795,
+    "recall": 0.9575757575757575,
+    "f1": 0.7024824008892182
+  },
+  {
+    "role": "Calibration",
+    "dataset": "INCART",
+    "rule": "V4 OR V11",
+    "TP": 2839,
+    "FP": 2405,
+    "FN": 131,
+    "precision": 0.5413806254767353,
+    "recall": 0.9558922558922559,
+    "f1": 0.6912588263939614
+  },
+  {
+    "role": "Evaluation",
+    "dataset": "MITBIH",
+    "rule": "V4",
+    "TP": 2310,
+    "FP": 1510,
+    "FN": 238,
+    "precision": 0.6047120418848168,
+    "recall": 0.9065934065934066,
+    "f1": 0.7255025125628141
+  },
+  {
+    "role": "Evaluation",
+    "dataset": "MITBIH",
+    "rule": "V4 OR V6",
+    "TP": 2437,
+    "FP": 1610,
+    "FN": 111,
+    "precision": 0.6021744502100321,
+    "recall": 0.956436420722135,
+    "f1": 0.7390447308567096
+  },
+  {
+    "role": "Evaluation",
+    "dataset": "MITBIH",
+    "rule": "V4 OR V11",
+    "TP": 2461,
+    "FP": 1727,
+    "FN": 87,
+    "precision": 0.5876313276026743,
+    "recall": 0.9658555729984302,
+    "f1": 0.7307007125890738
+  },
+  {
+    "role": "Evaluation",
+    "dataset": "INCART",
+    "rule": "V4",
+    "TP": 6026,
+    "FP": 1938,
+    "FN": 993,
+    "precision": 0.7566549472626821,
+    "recall": 0.8585268556774469,
+    "f1": 0.8043782954014549
+  },
+  {
+    "role": "Evaluation",
+    "dataset": "INCART",
+    "rule": "V4 OR V6",
+    "TP": 6777,
+    "FP": 3080,
+    "FN": 242,
+    "precision": 0.6875317033580197,
+    "recall": 0.9655221541530132,
+    "f1": 0.803152405783361
+  },
+  {
+    "role": "Evaluation",
+    "dataset": "INCART",
+    "rule": "V4 OR V11",
+    "TP": 6815,
+    "FP": 3639,
+    "FN": 204,
+    "precision": 0.6519035775779606,
+    "recall": 0.9709360307736145,
+    "f1": 0.7800606650260401
+  }
+]

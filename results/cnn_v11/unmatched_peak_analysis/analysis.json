@@ -1,0 +1,1829 @@
+{
+  "scope": "Train+Development only; original greedy matching tolerance38 unchanged; extra categories observational, not expert R/T/P/noise adjudication",
+  "records": [
+    {
+      "dataset": "INCART",
+      "record": "I01",
+      "patient": "1",
+      "reference": 2757,
+      "matched": 2392,
+      "missed": 365,
+      "unmatched": 329,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 210,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 37,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 80,
+        "ADC_mapping_rail_in_window": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1747,
+        "ADC_SATURATION": 10
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I02",
+      "patient": "1",
+      "reference": 2674,
+      "matched": 2602,
+      "missed": 72,
+      "unmatched": 75,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 8,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 44,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 21,
+        "ADC_mapping_rail_in_window": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1751,
+        "ADC_SATURATION": 6
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I03",
+      "patient": "2",
+      "reference": 2452,
+      "matched": 2411,
+      "missed": 41,
+      "unmatched": 90,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 34,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 36,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 20
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I04",
+      "patient": "2",
+      "reference": 2424,
+      "matched": 2032,
+      "missed": 392,
+      "unmatched": 189,
+      "matched_OTHER": 27,
+      "duplicate_centers": 0,
+      "categories": {
+        "ADC_mapping_rail_in_window": 43,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 70,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 17,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 59
+      },
+      "logged_block_quality": {
+        "ADC_SATURATION": 359,
+        "FLAT_OR_TOO_SMALL": 2,
+        "PASS": 1396
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I05",
+      "patient": "2",
+      "reference": 1776,
+      "matched": 1743,
+      "missed": 33,
+      "unmatched": 240,
+      "matched_OTHER": 9,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 222,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 14,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 4
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I06",
+      "patient": "3",
+      "reference": 2493,
+      "matched": 2469,
+      "missed": 24,
+      "unmatched": 59,
+      "matched_OTHER": 48,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 32,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 13,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 14
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I07",
+      "patient": "3",
+      "reference": 2706,
+      "matched": 2498,
+      "missed": 208,
+      "unmatched": 34,
+      "matched_OTHER": 60,
+      "duplicate_centers": 0,
+      "categories": {
+        "ADC_mapping_rail_in_window": 4,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 8,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 15,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 7
+      },
+      "logged_block_quality": {
+        "ADC_SATURATION": 215,
+        "PASS": 1542
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I08",
+      "patient": "4",
+      "reference": 2131,
+      "matched": 2085,
+      "missed": 46,
+      "unmatched": 246,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 144,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 57,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 45
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I09",
+      "patient": "5",
+      "reference": 2997,
+      "matched": 2936,
+      "missed": 61,
+      "unmatched": 414,
+      "matched_OTHER": 7,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 318,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 57,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 38,
+        "ADC_mapping_rail_in_window": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1751,
+        "ADC_SATURATION": 6
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I10",
+      "patient": "5",
+      "reference": 3682,
+      "matched": 3468,
+      "missed": 214,
+      "unmatched": 46,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 44,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1754,
+        "ADC_SATURATION": 3
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I11",
+      "patient": "5",
+      "reference": 2106,
+      "matched": 2099,
+      "missed": 7,
+      "unmatched": 485,
+      "matched_OTHER": 24,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 478,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 3,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 4
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I12",
+      "patient": "6",
+      "reference": 2809,
+      "matched": 2794,
+      "missed": 15,
+      "unmatched": 11,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 11
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I13",
+      "patient": "6",
+      "reference": 2023,
+      "matched": 2021,
+      "missed": 2,
+      "unmatched": 0,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I14",
+      "patient": "6",
+      "reference": 1866,
+      "matched": 1860,
+      "missed": 6,
+      "unmatched": 9,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 3,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I15",
+      "patient": "7",
+      "reference": 2635,
+      "matched": 2625,
+      "missed": 10,
+      "unmatched": 5,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 5
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I16",
+      "patient": "8",
+      "reference": 1522,
+      "matched": 1511,
+      "missed": 11,
+      "unmatched": 1355,
+      "matched_OTHER": 1510,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 2,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1329,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 24
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I17",
+      "patient": "8",
+      "reference": 1673,
+      "matched": 1663,
+      "missed": 10,
+      "unmatched": 167,
+      "matched_OTHER": 1639,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 6,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 158,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I23",
+      "patient": "11",
+      "reference": 2205,
+      "matched": 2192,
+      "missed": 13,
+      "unmatched": 26,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 11,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 14,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I24",
+      "patient": "11",
+      "reference": 2571,
+      "matched": 2562,
+      "missed": 9,
+      "unmatched": 7,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 5
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I25",
+      "patient": "12",
+      "reference": 1712,
+      "matched": 1675,
+      "missed": 37,
+      "unmatched": 878,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 633,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 43,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 202
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I26",
+      "patient": "12",
+      "reference": 1509,
+      "matched": 1484,
+      "missed": 25,
+      "unmatched": 1250,
+      "matched_OTHER": 4,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1169,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 44,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 37
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I27",
+      "patient": "13",
+      "reference": 2605,
+      "matched": 2583,
+      "missed": 22,
+      "unmatched": 12,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "ADC_mapping_rail_in_window": 2,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 4,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 3,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1744,
+        "ADC_SATURATION": 13
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I28",
+      "patient": "13",
+      "reference": 1717,
+      "matched": 1694,
+      "missed": 23,
+      "unmatched": 12,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 8,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1,
+        "ADC_mapping_rail_in_window": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1712,
+        "ADC_SATURATION": 45
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I29",
+      "patient": "14",
+      "reference": 2621,
+      "matched": 2488,
+      "missed": 133,
+      "unmatched": 219,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 118,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 52,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 49
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I30",
+      "patient": "14",
+      "reference": 2462,
+      "matched": 2414,
+      "missed": 48,
+      "unmatched": 113,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 42,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 54,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 17
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I31",
+      "patient": "14",
+      "reference": 3210,
+      "matched": 1540,
+      "missed": 1670,
+      "unmatched": 33,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 3,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 12,
+        "ADC_mapping_rail_in_window": 18
+      },
+      "logged_block_quality": {
+        "PASS": 859,
+        "ADC_SATURATION": 898
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I32",
+      "patient": "14",
+      "reference": 1619,
+      "matched": 1610,
+      "missed": 9,
+      "unmatched": 24,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 16,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 7,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I33",
+      "patient": "15",
+      "reference": 1837,
+      "matched": 1828,
+      "missed": 9,
+      "unmatched": 17,
+      "matched_OTHER": 587,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 5,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 12
+      },
+      "logged_block_quality": {
+        "PASS": 1756,
+        "FLAT_OR_TOO_SMALL": 1
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I34",
+      "patient": "15",
+      "reference": 1965,
+      "matched": 1953,
+      "missed": 12,
+      "unmatched": 21,
+      "matched_OTHER": 529,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 15,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 6
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I35",
+      "patient": "16",
+      "reference": 3676,
+      "matched": 3659,
+      "missed": 17,
+      "unmatched": 0,
+      "matched_OTHER": 18,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1723,
+        "ADC_SATURATION": 34
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I36",
+      "patient": "16",
+      "reference": 3911,
+      "matched": 3618,
+      "missed": 293,
+      "unmatched": 57,
+      "matched_OTHER": 11,
+      "duplicate_centers": 0,
+      "categories": {
+        "ADC_mapping_rail_in_window": 57
+      },
+      "logged_block_quality": {
+        "PASS": 1303,
+        "ADC_SATURATION": 454
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I37",
+      "patient": "16",
+      "reference": 2461,
+      "matched": 2458,
+      "missed": 3,
+      "unmatched": 1,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I40",
+      "patient": "18",
+      "reference": 2666,
+      "matched": 2423,
+      "missed": 243,
+      "unmatched": 233,
+      "matched_OTHER": 4,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 171,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 41,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 21
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I41",
+      "patient": "18",
+      "reference": 1630,
+      "matched": 1607,
+      "missed": 23,
+      "unmatched": 33,
+      "matched_OTHER": 4,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 21,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 8,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 4
+      },
+      "logged_block_quality": {
+        "PASS": 1753,
+        "FLAT_OR_TOO_SMALL": 4
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I42",
+      "patient": "19",
+      "reference": 3109,
+      "matched": 3101,
+      "missed": 8,
+      "unmatched": 0,
+      "matched_OTHER": 9,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I43",
+      "patient": "19",
+      "reference": 2209,
+      "matched": 2202,
+      "missed": 7,
+      "unmatched": 0,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I44",
+      "patient": "20",
+      "reference": 2495,
+      "matched": 2492,
+      "missed": 3,
+      "unmatched": 0,
+      "matched_OTHER": 8,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I45",
+      "patient": "20",
+      "reference": 1928,
+      "matched": 1923,
+      "missed": 5,
+      "unmatched": 1,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I46",
+      "patient": "20",
+      "reference": 2658,
+      "matched": 2638,
+      "missed": 20,
+      "unmatched": 20,
+      "matched_OTHER": 4,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 10,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 8
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I47",
+      "patient": "21",
+      "reference": 1953,
+      "matched": 1896,
+      "missed": 57,
+      "unmatched": 287,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 53,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 187,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 47
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I48",
+      "patient": "21",
+      "reference": 2357,
+      "matched": 2295,
+      "missed": 62,
+      "unmatched": 210,
+      "matched_OTHER": 3,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 68,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 99,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 43
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I49",
+      "patient": "22",
+      "reference": 2147,
+      "matched": 2145,
+      "missed": 2,
+      "unmatched": 2,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I50",
+      "patient": "22",
+      "reference": 2998,
+      "matched": 2982,
+      "missed": 16,
+      "unmatched": 14,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 11,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I51",
+      "patient": "23",
+      "reference": 2777,
+      "matched": 2771,
+      "missed": 6,
+      "unmatched": 2,
+      "matched_OTHER": 3,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1
+      },
+      "logged_block_quality": {
+        "ADC_SATURATION": 438,
+        "PASS": 1319
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I52",
+      "patient": "23",
+      "reference": 1747,
+      "matched": 1744,
+      "missed": 3,
+      "unmatched": 0,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1755,
+        "FLAT_OR_TOO_SMALL": 2
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I53",
+      "patient": "23",
+      "reference": 2262,
+      "matched": 2250,
+      "missed": 12,
+      "unmatched": 8,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 4,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 3,
+        "ADC_mapping_rail_in_window": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1738,
+        "ADC_SATURATION": 19
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I54",
+      "patient": "24",
+      "reference": 2363,
+      "matched": 2252,
+      "missed": 111,
+      "unmatched": 386,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 173,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 88,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 125
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I55",
+      "patient": "24",
+      "reference": 2166,
+      "matched": 2153,
+      "missed": 13,
+      "unmatched": 43,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 27,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 7,
+        "ADC_mapping_rail_in_window": 5,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 4
+      },
+      "logged_block_quality": {
+        "PASS": 1428,
+        "ADC_SATURATION": 329
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I56",
+      "patient": "24",
+      "reference": 1705,
+      "matched": 1700,
+      "missed": 5,
+      "unmatched": 0,
+      "matched_OTHER": 26,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I57",
+      "patient": "25",
+      "reference": 2871,
+      "matched": 2810,
+      "missed": 61,
+      "unmatched": 43,
+      "matched_OTHER": 7,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 39,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1756,
+        "ADC_SATURATION": 1
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I58",
+      "patient": "25",
+      "reference": 2325,
+      "matched": 2278,
+      "missed": 47,
+      "unmatched": 66,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 30,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 5,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 31
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I59",
+      "patient": "26",
+      "reference": 2148,
+      "matched": 2101,
+      "missed": 47,
+      "unmatched": 83,
+      "matched_OTHER": 40,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 30,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 41,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 12
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I60",
+      "patient": "26",
+      "reference": 2475,
+      "matched": 2439,
+      "missed": 36,
+      "unmatched": 72,
+      "matched_OTHER": 51,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 21,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 33,
+        "ADC_mapping_rail_in_window": 3,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 15
+      },
+      "logged_block_quality": {
+        "PASS": 1714,
+        "ADC_SATURATION": 43
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I61",
+      "patient": "26",
+      "reference": 1454,
+      "matched": 1452,
+      "missed": 2,
+      "unmatched": 0,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I65",
+      "patient": "28",
+      "reference": 2664,
+      "matched": 2645,
+      "missed": 19,
+      "unmatched": 17,
+      "matched_OTHER": 9,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 7,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 9,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I66",
+      "patient": "28",
+      "reference": 2340,
+      "matched": 2240,
+      "missed": 100,
+      "unmatched": 62,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 37,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 19,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 3,
+        "ADC_mapping_rail_in_window": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1652,
+        "ADC_SATURATION": 105
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I67",
+      "patient": "28",
+      "reference": 2975,
+      "matched": 2941,
+      "missed": 34,
+      "unmatched": 39,
+      "matched_OTHER": 6,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 23,
+        "ADC_mapping_rail_in_window": 1,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 5,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 10
+      },
+      "logged_block_quality": {
+        "PASS": 1745,
+        "ADC_SATURATION": 12
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I68",
+      "patient": "29",
+      "reference": 2644,
+      "matched": 2533,
+      "missed": 111,
+      "unmatched": 214,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 83,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 96,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 35
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I69",
+      "patient": "29",
+      "reference": 2169,
+      "matched": 2159,
+      "missed": 10,
+      "unmatched": 16,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 7,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 5,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 4
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I72",
+      "patient": "31",
+      "reference": 2270,
+      "matched": 2264,
+      "missed": 6,
+      "unmatched": 0,
+      "matched_OTHER": 8,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I73",
+      "patient": "31",
+      "reference": 1992,
+      "matched": 1988,
+      "missed": 4,
+      "unmatched": 0,
+      "matched_OTHER": 32,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I74",
+      "patient": "32",
+      "reference": 2405,
+      "matched": 2383,
+      "missed": 22,
+      "unmatched": 44,
+      "matched_OTHER": 47,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 16,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 17,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 11
+      },
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "INCART",
+      "record": "I75",
+      "patient": "32",
+      "reference": 2103,
+      "matched": 2100,
+      "missed": 3,
+      "unmatched": 0,
+      "matched_OTHER": 7,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1757
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "100",
+      "patient": "100",
+      "reference": 2273,
+      "matched": 2269,
+      "missed": 4,
+      "unmatched": 0,
+      "matched_OTHER": 33,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "101",
+      "patient": "101",
+      "reference": 1865,
+      "matched": 1858,
+      "missed": 7,
+      "unmatched": 10,
+      "matched_OTHER": 5,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 4,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 3,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "103",
+      "patient": "103",
+      "reference": 2084,
+      "matched": 2081,
+      "missed": 3,
+      "unmatched": 0,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "105",
+      "patient": "105",
+      "reference": 2572,
+      "matched": 2476,
+      "missed": 96,
+      "unmatched": 55,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 36,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 18
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "106",
+      "patient": "106",
+      "reference": 2027,
+      "matched": 2019,
+      "missed": 8,
+      "unmatched": 6,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 4
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "109",
+      "patient": "109",
+      "reference": 2532,
+      "matched": 2528,
+      "missed": 4,
+      "unmatched": 0,
+      "matched_OTHER": 2490,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "111",
+      "patient": "111",
+      "reference": 2124,
+      "matched": 2118,
+      "missed": 6,
+      "unmatched": 23,
+      "matched_OTHER": 2117,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 22
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "112",
+      "patient": "112",
+      "reference": 2539,
+      "matched": 2535,
+      "missed": 4,
+      "unmatched": 9,
+      "matched_OTHER": 2,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 9
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "114",
+      "patient": "114",
+      "reference": 1879,
+      "matched": 1878,
+      "missed": 1,
+      "unmatched": 1,
+      "matched_OTHER": 16,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "115",
+      "patient": "115",
+      "reference": 1953,
+      "matched": 1949,
+      "missed": 4,
+      "unmatched": 1,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "116",
+      "patient": "116",
+      "reference": 2412,
+      "matched": 2391,
+      "missed": 21,
+      "unmatched": 4,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 3,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "118",
+      "patient": "118",
+      "reference": 2278,
+      "matched": 2275,
+      "missed": 3,
+      "unmatched": 4,
+      "matched_OTHER": 2259,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "119",
+      "patient": "119",
+      "reference": 1987,
+      "matched": 1985,
+      "missed": 2,
+      "unmatched": 0,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "121",
+      "patient": "121",
+      "reference": 1863,
+      "matched": 1848,
+      "missed": 15,
+      "unmatched": 17,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 7,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 10
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "122",
+      "patient": "122",
+      "reference": 2476,
+      "matched": 2472,
+      "missed": 4,
+      "unmatched": 0,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "124",
+      "patient": "124",
+      "reference": 1619,
+      "matched": 1616,
+      "missed": 3,
+      "unmatched": 1,
+      "matched_OTHER": 1569,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "201",
+      "patient": "201",
+      "reference": 1963,
+      "matched": 1954,
+      "missed": 9,
+      "unmatched": 16,
+      "matched_OTHER": 137,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 11,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 4,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1758,
+        "FLAT_OR_TOO_SMALL": 5
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "202",
+      "patient": "202",
+      "reference": 2136,
+      "matched": 2131,
+      "missed": 5,
+      "unmatched": 4,
+      "matched_OTHER": 54,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 2,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "203",
+      "patient": "203",
+      "reference": 2980,
+      "matched": 2797,
+      "missed": 183,
+      "unmatched": 30,
+      "matched_OTHER": 4,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 19,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 4,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 7
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "205",
+      "patient": "205",
+      "reference": 2656,
+      "matched": 2638,
+      "missed": 18,
+      "unmatched": 0,
+      "matched_OTHER": 14,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "207",
+      "patient": "207",
+      "reference": 1860,
+      "matched": 1842,
+      "missed": 18,
+      "unmatched": 101,
+      "matched_OTHER": 1744,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 94,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 5,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "208",
+      "patient": "208",
+      "reference": 2955,
+      "matched": 2935,
+      "missed": 20,
+      "unmatched": 6,
+      "matched_OTHER": 371,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 1,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "209",
+      "patient": "209",
+      "reference": 3005,
+      "matched": 2991,
+      "missed": 14,
+      "unmatched": 16,
+      "matched_OTHER": 383,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 12,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "210",
+      "patient": "210",
+      "reference": 2650,
+      "matched": 2635,
+      "missed": 15,
+      "unmatched": 5,
+      "matched_OTHER": 31,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "212",
+      "patient": "212",
+      "reference": 2748,
+      "matched": 2741,
+      "missed": 7,
+      "unmatched": 11,
+      "matched_OTHER": 1822,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 3,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 5,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "213",
+      "patient": "213",
+      "reference": 3251,
+      "matched": 3241,
+      "missed": 10,
+      "unmatched": 0,
+      "matched_OTHER": 387,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "214",
+      "patient": "214",
+      "reference": 2262,
+      "matched": 2255,
+      "missed": 7,
+      "unmatched": 2,
+      "matched_OTHER": 2002,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "215",
+      "patient": "215",
+      "reference": 3363,
+      "matched": 3355,
+      "missed": 8,
+      "unmatched": 0,
+      "matched_OTHER": 4,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "217",
+      "patient": "217",
+      "reference": 2208,
+      "matched": 2194,
+      "missed": 14,
+      "unmatched": 3,
+      "matched_OTHER": 1799,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_already_matched_beat_secondary_or_localization_unresolved": 2,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "219",
+      "patient": "219",
+      "reference": 2154,
+      "matched": 2151,
+      "missed": 3,
+      "unmatched": 2,
+      "matched_OTHER": 8,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1,
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1762,
+        "FLAT_OR_TOO_SMALL": 1
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "220",
+      "patient": "220",
+      "reference": 2048,
+      "matched": 2044,
+      "missed": 4,
+      "unmatched": 0,
+      "matched_OTHER": 94,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "221",
+      "patient": "221",
+      "reference": 2427,
+      "matched": 2423,
+      "missed": 4,
+      "unmatched": 0,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1762,
+        "FLAT_OR_TOO_SMALL": 1
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "223",
+      "patient": "223",
+      "reference": 2605,
+      "matched": 2596,
+      "missed": 9,
+      "unmatched": 1,
+      "matched_OTHER": 103,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "228",
+      "patient": "228",
+      "reference": 2053,
+      "matched": 2011,
+      "missed": 42,
+      "unmatched": 96,
+      "matched_OTHER": 1,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 22,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 67,
+        "near_already_matched_beat_secondary_or_localization_unresolved": 7
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "230",
+      "patient": "230",
+      "reference": 2256,
+      "matched": 2250,
+      "missed": 6,
+      "unmatched": 5,
+      "matched_OTHER": 0,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 3,
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 2
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "231",
+      "patient": "231",
+      "reference": 1571,
+      "matched": 1568,
+      "missed": 3,
+      "unmatched": 53,
+      "matched_OTHER": 1252,
+      "duplicate_centers": 0,
+      "categories": {
+        "far_from_reference_T_P_noise_or_unannotated_unresolved": 53
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "233",
+      "patient": "233",
+      "reference": 3079,
+      "matched": 3070,
+      "missed": 9,
+      "unmatched": 0,
+      "matched_OTHER": 18,
+      "duplicate_centers": 0,
+      "categories": {},
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    },
+    {
+      "dataset": "MITBIH",
+      "record": "234",
+      "patient": "234",
+      "reference": 2753,
+      "matched": 2749,
+      "missed": 4,
+      "unmatched": 1,
+      "matched_OTHER": 50,
+      "duplicate_centers": 0,
+      "categories": {
+        "near_unmatched_reference_timing_compatible_unconfirmed": 1
+      },
+      "logged_block_quality": {
+        "PASS": 1763
+      }
+    }
+  ]
+}

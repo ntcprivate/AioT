@@ -1,0 +1,45 @@
+{
+  "fixtures": 16,
+  "requantization_exact": true,
+  "tflite_host_replay_exact": true,
+  "threshold_decisions_exact": true,
+  "TFLM_ESP32_exact_parity": "PENDING",
+  "operator_versions": [
+    {
+      "operator": "STRIDED_SLICE",
+      "version": 2
+    },
+    {
+      "operator": "EXPAND_DIMS",
+      "version": 1
+    },
+    {
+      "operator": "CONV_2D",
+      "version": 3
+    },
+    {
+      "operator": "RESHAPE",
+      "version": 1
+    },
+    {
+      "operator": "MAX_POOL_2D",
+      "version": 2
+    },
+    {
+      "operator": "MEAN",
+      "version": 2
+    },
+    {
+      "operator": "FULLY_CONNECTED",
+      "version": 4
+    },
+    {
+      "operator": "CONCATENATION",
+      "version": 2
+    },
+    {
+      "operator": "LOGISTIC",
+      "version": 2
+    }
+  ]
+}

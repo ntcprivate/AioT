@@ -1,0 +1,61 @@
+{
+  "records": [
+    {
+      "record": "111",
+      "reference_N": 0,
+      "reference_V": 1,
+      "miss_N": 0,
+      "miss_V": 0,
+      "windows": 2137,
+      "unmatched": 55
+    },
+    {
+      "record": "207",
+      "reference_N": 0,
+      "reference_V": 105,
+      "miss_N": 0,
+      "miss_V": 16,
+      "windows": 1883,
+      "unmatched": 65
+    },
+    {
+      "record": "217",
+      "reference_N": 244,
+      "reference_V": 162,
+      "miss_N": 0,
+      "miss_V": 11,
+      "windows": 2191,
+      "unmatched": 48
+    },
+    {
+      "record": "220",
+      "reference_N": 1954,
+      "reference_V": 0,
+      "miss_N": 5,
+      "miss_V": 0,
+      "windows": 2043,
+      "unmatched": 0
+    },
+    {
+      "record": "221",
+      "reference_N": 2031,
+      "reference_V": 396,
+      "miss_N": 9,
+      "miss_V": 3,
+      "windows": 2415,
+      "unmatched": 0
+    },
+    {
+      "record": "231",
+      "reference_N": 314,
+      "reference_V": 2,
+      "miss_N": 0,
+      "miss_V": 0,
+      "windows": 1620,
+      "unmatched": 53
+    }
+  ],
+  "threshold_frozen_before_replay": 0.53,
+  "replay_sha256": "3090ada6afa1e85357b9b020f85f10251afe69169f63a879b912f3462a826f7a",
+  "protocol": "Same Phase2B safe replay, MLII,25/36 resampling,ADC2048+200*mV,round-half-up annotation,greedy tolerance12,same V1 input clipping preflight; host mirror not RTOS/hardware"
+}

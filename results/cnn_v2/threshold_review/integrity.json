@@ -1,0 +1,11 @@
+{
+  "grid_rows": 132,
+  "V2_weights_unchanged": true,
+  "protected_files_unchanged": 60,
+  "PR_tie_checks": "PASS",
+  "Test_Validation_inference": false,
+  "threshold_official_changed": false,
+  "export_INT8": false,
+  "flash": false,
+  "push": false
+}

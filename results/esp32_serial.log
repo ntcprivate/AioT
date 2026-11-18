@@ -1,0 +1,419 @@
+ECG_BOOT firmware=step8_v1 idf=v5.4.4 target=esp32 cpu_mhz=240 component=1.4.2
+ECG_CONFIG esp_nn=ENABLED_BUILD_OPTION actual_kernel_paths=NEEDS_VERIFICATION
+ECG_HEAP stage=before_init free=298644 minimum=298644 largest=163840
+ECG_HASH kind=model sha256=38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394 status=PASS
+ECG_HASH kind=samples sha256=12d63c89086b3615a92bee11914825cce9fd0d5bd11f41599d1281f00475b758 status=PASS
+ECG_INIT stage=model_loaded bytes=8560
+ECG_INIT stage=schema_valid version=3
+ECG_INIT stage=operators_registered count=7
+ECG_OPERATOR code=70 version=1
+ECG_OPERATOR code=3 version=3
+ECG_OPERATOR code=22 version=1
+ECG_OPERATOR code=17 version=2
+ECG_OPERATOR code=40 version=2
+ECG_OPERATOR code=9 version=4
+ECG_OPERATOR code=14 version=2
+ECG_INIT stage=arena_allocated bytes=65536
+ECG_ARENA allocated=65536 used=6396
+ECG_INIT stage=input_valid dtype=int8 shape=1,256,1 scale=0.0539215691388 zero=-27
+ECG_INIT stage=output_valid dtype=int8 shape=1,1 scale=0.00390625 zero=-128
+ECG_INIT stage=interpreter_ready threshold=0.519999981 samples=12
+ECG_HEAP stage=after_init free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=0 run=0 latency_us=9417
+ECG_TIME sample_id=0 run=1 latency_us=9410
+ECG_TIME sample_id=0 run=2 latency_us=9410
+ECG_TIME sample_id=0 run=3 latency_us=9410
+ECG_TIME sample_id=0 run=4 latency_us=9410
+ECG_TIME sample_id=0 run=5 latency_us=9410
+ECG_TIME sample_id=0 run=6 latency_us=9410
+ECG_TIME sample_id=0 run=7 latency_us=9410
+ECG_TIME sample_id=0 run=8 latency_us=9410
+ECG_TIME sample_id=0 run=9 latency_us=9410
+ECG_TIME sample_id=0 run=10 latency_us=9410
+ECG_TIME sample_id=0 run=11 latency_us=9410
+ECG_TIME sample_id=0 run=12 latency_us=9410
+ECG_TIME sample_id=0 run=13 latency_us=9410
+ECG_TIME sample_id=0 run=14 latency_us=9410
+ECG_TIME sample_id=0 run=15 latency_us=9410
+ECG_TIME sample_id=0 run=16 latency_us=9410
+ECG_TIME sample_id=0 run=17 latency_us=9410
+ECG_TIME sample_id=0 run=18 latency_us=9410
+ECG_TIME sample_id=0 run=19 latency_us=9410
+ECG_TIME sample_id=0 run=20 latency_us=9410
+ECG_TIME sample_id=0 run=21 latency_us=9410
+ECG_TIME sample_id=0 run=22 latency_us=9410
+ECG_TIME sample_id=0 run=23 latency_us=9410
+ECG_TIME sample_id=0 run=24 latency_us=9410
+ECG_TIME sample_id=0 run=25 latency_us=9410
+ECG_TIME sample_id=0 run=26 latency_us=9410
+ECG_TIME sample_id=0 run=27 latency_us=9410
+ECG_TIME sample_id=0 run=28 latency_us=9410
+ECG_TIME sample_id=0 run=29 latency_us=9410
+ECG_LATENCY sample_id=0 count=30 min=9410 mean=9410.233 median=9410.000 p95=9410 max=9417
+ECG_RESULT sample_id=0 dataset_index=19766 record=115 true=0 output_int8=-126 score=0.007812500 predicted=0 python_int8=-126 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=1 run=0 latency_us=9419
+ECG_TIME sample_id=1 run=1 latency_us=9411
+ECG_TIME sample_id=1 run=2 latency_us=9411
+ECG_TIME sample_id=1 run=3 latency_us=9411
+ECG_TIME sample_id=1 run=4 latency_us=9411
+ECG_TIME sample_id=1 run=5 latency_us=9411
+ECG_TIME sample_id=1 run=6 latency_us=9411
+ECG_TIME sample_id=1 run=7 latency_us=9411
+ECG_TIME sample_id=1 run=8 latency_us=9411
+ECG_TIME sample_id=1 run=9 latency_us=9411
+ECG_TIME sample_id=1 run=10 latency_us=9411
+ECG_TIME sample_id=1 run=11 latency_us=9411
+ECG_TIME sample_id=1 run=12 latency_us=9411
+ECG_TIME sample_id=1 run=13 latency_us=9411
+ECG_TIME sample_id=1 run=14 latency_us=9411
+ECG_TIME sample_id=1 run=15 latency_us=9411
+ECG_TIME sample_id=1 run=16 latency_us=9411
+ECG_TIME sample_id=1 run=17 latency_us=9411
+ECG_TIME sample_id=1 run=18 latency_us=9411
+ECG_TIME sample_id=1 run=19 latency_us=9411
+ECG_TIME sample_id=1 run=20 latency_us=9411
+ECG_TIME sample_id=1 run=21 latency_us=9411
+ECG_TIME sample_id=1 run=22 latency_us=9411
+ECG_TIME sample_id=1 run=23 latency_us=9411
+ECG_TIME sample_id=1 run=24 latency_us=9411
+ECG_TIME sample_id=1 run=25 latency_us=9411
+ECG_TIME sample_id=1 run=26 latency_us=9411
+ECG_TIME sample_id=1 run=27 latency_us=9411
+ECG_TIME sample_id=1 run=28 latency_us=9411
+ECG_TIME sample_id=1 run=29 latency_us=9411
+ECG_LATENCY sample_id=1 count=30 min=9411 mean=9411.267 median=9411.000 p95=9411 max=9419
+ECG_RESULT sample_id=1 dataset_index=78432 record=233 true=0 output_int8=50 score=0.695312500 predicted=1 python_int8=50 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=2 run=0 latency_us=9419
+ECG_TIME sample_id=2 run=1 latency_us=9411
+ECG_TIME sample_id=2 run=2 latency_us=9411
+ECG_TIME sample_id=2 run=3 latency_us=9411
+ECG_TIME sample_id=2 run=4 latency_us=9411
+ECG_TIME sample_id=2 run=5 latency_us=9411
+ECG_TIME sample_id=2 run=6 latency_us=9411
+ECG_TIME sample_id=2 run=7 latency_us=9411
+ECG_TIME sample_id=2 run=8 latency_us=9411
+ECG_TIME sample_id=2 run=9 latency_us=9411
+ECG_TIME sample_id=2 run=10 latency_us=9411
+ECG_TIME sample_id=2 run=11 latency_us=9411
+ECG_TIME sample_id=2 run=12 latency_us=9411
+ECG_TIME sample_id=2 run=13 latency_us=9411
+ECG_TIME sample_id=2 run=14 latency_us=9411
+ECG_TIME sample_id=2 run=15 latency_us=9411
+ECG_TIME sample_id=2 run=16 latency_us=9411
+ECG_TIME sample_id=2 run=17 latency_us=9411
+ECG_TIME sample_id=2 run=18 latency_us=9411
+ECG_TIME sample_id=2 run=19 latency_us=9411
+ECG_TIME sample_id=2 run=20 latency_us=9411
+ECG_TIME sample_id=2 run=21 latency_us=9411
+ECG_TIME sample_id=2 run=22 latency_us=9411
+ECG_TIME sample_id=2 run=23 latency_us=9411
+ECG_TIME sample_id=2 run=24 latency_us=9411
+ECG_TIME sample_id=2 run=25 latency_us=9411
+ECG_TIME sample_id=2 run=26 latency_us=9411
+ECG_TIME sample_id=2 run=27 latency_us=9411
+ECG_TIME sample_id=2 run=28 latency_us=9411
+ECG_TIME sample_id=2 run=29 latency_us=9411
+ECG_LATENCY sample_id=2 count=30 min=9411 mean=9411.267 median=9411.000 p95=9411 max=9419
+ECG_RESULT sample_id=2 dataset_index=56558 record=214 true=1 output_int8=-61 score=0.261718750 predicted=0 python_int8=-66 lsb=5 input_match=1 stable=1 status=NEEDS_REVIEW
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=3 run=0 latency_us=9429
+ECG_TIME sample_id=3 run=1 latency_us=9421
+ECG_TIME sample_id=3 run=2 latency_us=9421
+ECG_TIME sample_id=3 run=3 latency_us=9421
+ECG_TIME sample_id=3 run=4 latency_us=9421
+ECG_TIME sample_id=3 run=5 latency_us=9421
+ECG_TIME sample_id=3 run=6 latency_us=9421
+ECG_TIME sample_id=3 run=7 latency_us=9421
+ECG_TIME sample_id=3 run=8 latency_us=9421
+ECG_TIME sample_id=3 run=9 latency_us=9421
+ECG_TIME sample_id=3 run=10 latency_us=9421
+ECG_TIME sample_id=3 run=11 latency_us=9421
+ECG_TIME sample_id=3 run=12 latency_us=9421
+ECG_TIME sample_id=3 run=13 latency_us=9421
+ECG_TIME sample_id=3 run=14 latency_us=9421
+ECG_TIME sample_id=3 run=15 latency_us=9421
+ECG_TIME sample_id=3 run=16 latency_us=9421
+ECG_TIME sample_id=3 run=17 latency_us=9421
+ECG_TIME sample_id=3 run=18 latency_us=9421
+ECG_TIME sample_id=3 run=19 latency_us=9421
+ECG_TIME sample_id=3 run=20 latency_us=9421
+ECG_TIME sample_id=3 run=21 latency_us=9421
+ECG_TIME sample_id=3 run=22 latency_us=9421
+ECG_TIME sample_id=3 run=23 latency_us=9421
+ECG_TIME sample_id=3 run=24 latency_us=9421
+ECG_TIME sample_id=3 run=25 latency_us=9421
+ECG_TIME sample_id=3 run=26 latency_us=9421
+ECG_TIME sample_id=3 run=27 latency_us=9421
+ECG_TIME sample_id=3 run=28 latency_us=9421
+ECG_TIME sample_id=3 run=29 latency_us=9421
+ECG_LATENCY sample_id=3 count=30 min=9421 mean=9421.267 median=9421.000 p95=9421 max=9429
+ECG_RESULT sample_id=3 dataset_index=76710 record=233 true=1 output_int8=68 score=0.765625000 predicted=1 python_int8=68 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=4 run=0 latency_us=9428
+ECG_TIME sample_id=4 run=1 latency_us=9420
+ECG_TIME sample_id=4 run=2 latency_us=9420
+ECG_TIME sample_id=4 run=3 latency_us=9420
+ECG_TIME sample_id=4 run=4 latency_us=9420
+ECG_TIME sample_id=4 run=5 latency_us=9420
+ECG_TIME sample_id=4 run=6 latency_us=9420
+ECG_TIME sample_id=4 run=7 latency_us=9420
+ECG_TIME sample_id=4 run=8 latency_us=9420
+ECG_TIME sample_id=4 run=9 latency_us=9420
+ECG_TIME sample_id=4 run=10 latency_us=9420
+ECG_TIME sample_id=4 run=11 latency_us=9420
+ECG_TIME sample_id=4 run=12 latency_us=9420
+ECG_TIME sample_id=4 run=13 latency_us=9420
+ECG_TIME sample_id=4 run=14 latency_us=9420
+ECG_TIME sample_id=4 run=15 latency_us=9420
+ECG_TIME sample_id=4 run=16 latency_us=9420
+ECG_TIME sample_id=4 run=17 latency_us=9420
+ECG_TIME sample_id=4 run=18 latency_us=9420
+ECG_TIME sample_id=4 run=19 latency_us=9420
+ECG_TIME sample_id=4 run=20 latency_us=9420
+ECG_TIME sample_id=4 run=21 latency_us=9420
+ECG_TIME sample_id=4 run=22 latency_us=9420
+ECG_TIME sample_id=4 run=23 latency_us=9420
+ECG_TIME sample_id=4 run=24 latency_us=9420
+ECG_TIME sample_id=4 run=25 latency_us=9420
+ECG_TIME sample_id=4 run=26 latency_us=9420
+ECG_TIME sample_id=4 run=27 latency_us=9420
+ECG_TIME sample_id=4 run=28 latency_us=9420
+ECG_TIME sample_id=4 run=29 latency_us=9420
+ECG_LATENCY sample_id=4 count=30 min=9420 mean=9420.267 median=9420.000 p95=9420 max=9428
+ECG_RESULT sample_id=4 dataset_index=28388 record=121 true=0 output_int8=7 score=0.527343750 predicted=1 python_int8=7 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=5 run=0 latency_us=9418
+ECG_TIME sample_id=5 run=1 latency_us=9411
+ECG_TIME sample_id=5 run=2 latency_us=9411
+ECG_TIME sample_id=5 run=3 latency_us=9411
+ECG_TIME sample_id=5 run=4 latency_us=9411
+ECG_TIME sample_id=5 run=5 latency_us=9411
+ECG_TIME sample_id=5 run=6 latency_us=9411
+ECG_TIME sample_id=5 run=7 latency_us=9411
+ECG_TIME sample_id=5 run=8 latency_us=9411
+ECG_TIME sample_id=5 run=9 latency_us=9411
+ECG_TIME sample_id=5 run=10 latency_us=9411
+ECG_TIME sample_id=5 run=11 latency_us=9411
+ECG_TIME sample_id=5 run=12 latency_us=9411
+ECG_TIME sample_id=5 run=13 latency_us=9411
+ECG_TIME sample_id=5 run=14 latency_us=9411
+ECG_TIME sample_id=5 run=15 latency_us=9411
+ECG_TIME sample_id=5 run=16 latency_us=9411
+ECG_TIME sample_id=5 run=17 latency_us=9411
+ECG_TIME sample_id=5 run=18 latency_us=9411
+ECG_TIME sample_id=5 run=19 latency_us=9411
+ECG_TIME sample_id=5 run=20 latency_us=9411
+ECG_TIME sample_id=5 run=21 latency_us=9411
+ECG_TIME sample_id=5 run=22 latency_us=9411
+ECG_TIME sample_id=5 run=23 latency_us=9411
+ECG_TIME sample_id=5 run=24 latency_us=9411
+ECG_TIME sample_id=5 run=25 latency_us=9411
+ECG_TIME sample_id=5 run=26 latency_us=9411
+ECG_TIME sample_id=5 run=27 latency_us=9411
+ECG_TIME sample_id=5 run=28 latency_us=9411
+ECG_TIME sample_id=5 run=29 latency_us=9411
+ECG_LATENCY sample_id=5 count=30 min=9411 mean=9411.233 median=9411.000 p95=9411 max=9418
+ECG_RESULT sample_id=5 dataset_index=50805 record=210 true=1 output_int8=0 score=0.500000000 predicted=0 python_int8=7 lsb=7 input_match=1 stable=1 status=FAILED
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=6 run=0 latency_us=9416
+ECG_TIME sample_id=6 run=1 latency_us=9408
+ECG_TIME sample_id=6 run=2 latency_us=9408
+ECG_TIME sample_id=6 run=3 latency_us=9408
+ECG_TIME sample_id=6 run=4 latency_us=9408
+ECG_TIME sample_id=6 run=5 latency_us=9408
+ECG_TIME sample_id=6 run=6 latency_us=9408
+ECG_TIME sample_id=6 run=7 latency_us=9408
+ECG_TIME sample_id=6 run=8 latency_us=9408
+ECG_TIME sample_id=6 run=9 latency_us=9408
+ECG_TIME sample_id=6 run=10 latency_us=9408
+ECG_TIME sample_id=6 run=11 latency_us=9408
+ECG_TIME sample_id=6 run=12 latency_us=9408
+ECG_TIME sample_id=6 run=13 latency_us=9408
+ECG_TIME sample_id=6 run=14 latency_us=9408
+ECG_TIME sample_id=6 run=15 latency_us=9408
+ECG_TIME sample_id=6 run=16 latency_us=9408
+ECG_TIME sample_id=6 run=17 latency_us=9408
+ECG_TIME sample_id=6 run=18 latency_us=9408
+ECG_TIME sample_id=6 run=19 latency_us=9408
+ECG_TIME sample_id=6 run=20 latency_us=9408
+ECG_TIME sample_id=6 run=21 latency_us=9408
+ECG_TIME sample_id=6 run=22 latency_us=9408
+ECG_TIME sample_id=6 run=23 latency_us=9408
+ECG_TIME sample_id=6 run=24 latency_us=9408
+ECG_TIME sample_id=6 run=25 latency_us=9408
+ECG_TIME sample_id=6 run=26 latency_us=9408
+ECG_TIME sample_id=6 run=27 latency_us=9408
+ECG_TIME sample_id=6 run=28 latency_us=9408
+ECG_TIME sample_id=6 run=29 latency_us=9408
+ECG_LATENCY sample_id=6 count=30 min=9408 mean=9408.267 median=9408.000 p95=9408 max=9416
+ECG_RESULT sample_id=6 dataset_index=52318 record=210 true=0 output_int8=-124 score=0.015625000 predicted=0 python_int8=-124 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=7 run=0 latency_us=9416
+ECG_TIME sample_id=7 run=1 latency_us=9408
+ECG_TIME sample_id=7 run=2 latency_us=9408
+ECG_TIME sample_id=7 run=3 latency_us=9408
+ECG_TIME sample_id=7 run=4 latency_us=9408
+ECG_TIME sample_id=7 run=5 latency_us=9408
+ECG_TIME sample_id=7 run=6 latency_us=9408
+ECG_TIME sample_id=7 run=7 latency_us=9408
+ECG_TIME sample_id=7 run=8 latency_us=9408
+ECG_TIME sample_id=7 run=9 latency_us=9408
+ECG_TIME sample_id=7 run=10 latency_us=9408
+ECG_TIME sample_id=7 run=11 latency_us=9408
+ECG_TIME sample_id=7 run=12 latency_us=9408
+ECG_TIME sample_id=7 run=13 latency_us=9408
+ECG_TIME sample_id=7 run=14 latency_us=9408
+ECG_TIME sample_id=7 run=15 latency_us=9408
+ECG_TIME sample_id=7 run=16 latency_us=9408
+ECG_TIME sample_id=7 run=17 latency_us=9408
+ECG_TIME sample_id=7 run=18 latency_us=9408
+ECG_TIME sample_id=7 run=19 latency_us=9408
+ECG_TIME sample_id=7 run=20 latency_us=9408
+ECG_TIME sample_id=7 run=21 latency_us=9408
+ECG_TIME sample_id=7 run=22 latency_us=9408
+ECG_TIME sample_id=7 run=23 latency_us=9408
+ECG_TIME sample_id=7 run=24 latency_us=9408
+ECG_TIME sample_id=7 run=25 latency_us=9408
+ECG_TIME sample_id=7 run=26 latency_us=9408
+ECG_TIME sample_id=7 run=27 latency_us=9408
+ECG_TIME sample_id=7 run=28 latency_us=9408
+ECG_TIME sample_id=7 run=29 latency_us=9408
+ECG_LATENCY sample_id=7 count=30 min=9408 mean=9408.267 median=9408.000 p95=9408 max=9416
+ECG_RESULT sample_id=7 dataset_index=81870 record=234 true=0 output_int8=-126 score=0.007812500 predicted=0 python_int8=-126 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=8 run=0 latency_us=9437
+ECG_TIME sample_id=8 run=1 latency_us=9430
+ECG_TIME sample_id=8 run=2 latency_us=9430
+ECG_TIME sample_id=8 run=3 latency_us=9430
+ECG_TIME sample_id=8 run=4 latency_us=9430
+ECG_TIME sample_id=8 run=5 latency_us=9430
+ECG_TIME sample_id=8 run=6 latency_us=9430
+ECG_TIME sample_id=8 run=7 latency_us=9430
+ECG_TIME sample_id=8 run=8 latency_us=9430
+ECG_TIME sample_id=8 run=9 latency_us=9430
+ECG_TIME sample_id=8 run=10 latency_us=9430
+ECG_TIME sample_id=8 run=11 latency_us=9430
+ECG_TIME sample_id=8 run=12 latency_us=9430
+ECG_TIME sample_id=8 run=13 latency_us=9430
+ECG_TIME sample_id=8 run=14 latency_us=9430
+ECG_TIME sample_id=8 run=15 latency_us=9430
+ECG_TIME sample_id=8 run=16 latency_us=9430
+ECG_TIME sample_id=8 run=17 latency_us=9430
+ECG_TIME sample_id=8 run=18 latency_us=9430
+ECG_TIME sample_id=8 run=19 latency_us=9430
+ECG_TIME sample_id=8 run=20 latency_us=9430
+ECG_TIME sample_id=8 run=21 latency_us=9430
+ECG_TIME sample_id=8 run=22 latency_us=9430
+ECG_TIME sample_id=8 run=23 latency_us=9430
+ECG_TIME sample_id=8 run=24 latency_us=9430
+ECG_TIME sample_id=8 run=25 latency_us=9430
+ECG_TIME sample_id=8 run=26 latency_us=9430
+ECG_TIME sample_id=8 run=27 latency_us=9430
+ECG_TIME sample_id=8 run=28 latency_us=9430
+ECG_TIME sample_id=8 run=29 latency_us=9430
+ECG_LATENCY sample_id=8 count=30 min=9430 mean=9430.233 median=9430.000 p95=9430 max=9437
+ECG_RESULT sample_id=8 dataset_index=27174 record=121 true=0 output_int8=-125 score=0.011718750 predicted=0 python_int8=-125 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=9 run=0 latency_us=9429
+ECG_TIME sample_id=9 run=1 latency_us=9421
+ECG_TIME sample_id=9 run=2 latency_us=9421
+ECG_TIME sample_id=9 run=3 latency_us=9421
+ECG_TIME sample_id=9 run=4 latency_us=9421
+ECG_TIME sample_id=9 run=5 latency_us=9421
+ECG_TIME sample_id=9 run=6 latency_us=9421
+ECG_TIME sample_id=9 run=7 latency_us=9421
+ECG_TIME sample_id=9 run=8 latency_us=9421
+ECG_TIME sample_id=9 run=9 latency_us=9421
+ECG_TIME sample_id=9 run=10 latency_us=9421
+ECG_TIME sample_id=9 run=11 latency_us=9421
+ECG_TIME sample_id=9 run=12 latency_us=9421
+ECG_TIME sample_id=9 run=13 latency_us=9421
+ECG_TIME sample_id=9 run=14 latency_us=9421
+ECG_TIME sample_id=9 run=15 latency_us=9421
+ECG_TIME sample_id=9 run=16 latency_us=9421
+ECG_TIME sample_id=9 run=17 latency_us=9421
+ECG_TIME sample_id=9 run=18 latency_us=9421
+ECG_TIME sample_id=9 run=19 latency_us=9421
+ECG_TIME sample_id=9 run=20 latency_us=9421
+ECG_TIME sample_id=9 run=21 latency_us=9421
+ECG_TIME sample_id=9 run=22 latency_us=9421
+ECG_TIME sample_id=9 run=23 latency_us=9421
+ECG_TIME sample_id=9 run=24 latency_us=9421
+ECG_TIME sample_id=9 run=25 latency_us=9421
+ECG_TIME sample_id=9 run=26 latency_us=9421
+ECG_TIME sample_id=9 run=27 latency_us=9421
+ECG_TIME sample_id=9 run=28 latency_us=9421
+ECG_TIME sample_id=9 run=29 latency_us=9421
+ECG_LATENCY sample_id=9 count=30 min=9421 mean=9421.267 median=9421.000 p95=9421 max=9429
+ECG_RESULT sample_id=9 dataset_index=76481 record=233 true=1 output_int8=47 score=0.683593750 predicted=1 python_int8=47 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=10 run=0 latency_us=9416
+ECG_TIME sample_id=10 run=1 latency_us=9409
+ECG_TIME sample_id=10 run=2 latency_us=9409
+ECG_TIME sample_id=10 run=3 latency_us=9409
+ECG_TIME sample_id=10 run=4 latency_us=9409
+ECG_TIME sample_id=10 run=5 latency_us=9409
+ECG_TIME sample_id=10 run=6 latency_us=9409
+ECG_TIME sample_id=10 run=7 latency_us=9409
+ECG_TIME sample_id=10 run=8 latency_us=9409
+ECG_TIME sample_id=10 run=9 latency_us=9409
+ECG_TIME sample_id=10 run=10 latency_us=9409
+ECG_TIME sample_id=10 run=11 latency_us=9409
+ECG_TIME sample_id=10 run=12 latency_us=9409
+ECG_TIME sample_id=10 run=13 latency_us=9409
+ECG_TIME sample_id=10 run=14 latency_us=9409
+ECG_TIME sample_id=10 run=15 latency_us=9409
+ECG_TIME sample_id=10 run=16 latency_us=9409
+ECG_TIME sample_id=10 run=17 latency_us=9409
+ECG_TIME sample_id=10 run=18 latency_us=9409
+ECG_TIME sample_id=10 run=19 latency_us=9409
+ECG_TIME sample_id=10 run=20 latency_us=9409
+ECG_TIME sample_id=10 run=21 latency_us=9409
+ECG_TIME sample_id=10 run=22 latency_us=9409
+ECG_TIME sample_id=10 run=23 latency_us=9409
+ECG_TIME sample_id=10 run=24 latency_us=9409
+ECG_TIME sample_id=10 run=25 latency_us=9409
+ECG_TIME sample_id=10 run=26 latency_us=9409
+ECG_TIME sample_id=10 run=27 latency_us=9409
+ECG_TIME sample_id=10 run=28 latency_us=9409
+ECG_TIME sample_id=10 run=29 latency_us=9409
+ECG_LATENCY sample_id=10 count=30 min=9409 mean=9409.233 median=9409.000 p95=9409 max=9416
+ECG_RESULT sample_id=10 dataset_index=52498 record=210 true=0 output_int8=-126 score=0.007812500 predicted=0 python_int8=-126 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_TIME sample_id=11 run=0 latency_us=9418
+ECG_TIME sample_id=11 run=1 latency_us=9410
+ECG_TIME sample_id=11 run=2 latency_us=9410
+ECG_TIME sample_id=11 run=3 latency_us=9410
+ECG_TIME sample_id=11 run=4 latency_us=9410
+ECG_TIME sample_id=11 run=5 latency_us=9410
+ECG_TIME sample_id=11 run=6 latency_us=9410
+ECG_TIME sample_id=11 run=7 latency_us=9410
+ECG_TIME sample_id=11 run=8 latency_us=9410
+ECG_TIME sample_id=11 run=9 latency_us=9410
+ECG_TIME sample_id=11 run=10 latency_us=9410
+ECG_TIME sample_id=11 run=11 latency_us=9410
+ECG_TIME sample_id=11 run=12 latency_us=9410
+ECG_TIME sample_id=11 run=13 latency_us=9410
+ECG_TIME sample_id=11 run=14 latency_us=9410
+ECG_TIME sample_id=11 run=15 latency_us=9410
+ECG_TIME sample_id=11 run=16 latency_us=9410
+ECG_TIME sample_id=11 run=17 latency_us=9410
+ECG_TIME sample_id=11 run=18 latency_us=9410
+ECG_TIME sample_id=11 run=19 latency_us=9410
+ECG_TIME sample_id=11 run=20 latency_us=9410
+ECG_TIME sample_id=11 run=21 latency_us=9410
+ECG_TIME sample_id=11 run=22 latency_us=9410
+ECG_TIME sample_id=11 run=23 latency_us=9410
+ECG_TIME sample_id=11 run=24 latency_us=9410
+ECG_TIME sample_id=11 run=25 latency_us=9410
+ECG_TIME sample_id=11 run=26 latency_us=9410
+ECG_TIME sample_id=11 run=27 latency_us=9410
+ECG_TIME sample_id=11 run=28 latency_us=9410
+ECG_TIME sample_id=11 run=29 latency_us=9410
+ECG_LATENCY sample_id=11 count=30 min=9410 mean=9410.267 median=9410.000 p95=9410 max=9418
+ECG_RESULT sample_id=11 dataset_index=19095 record=115 true=0 output_int8=-126 score=0.007812500 predicted=0 python_int8=-126 lsb=0 input_match=1 stable=1 status=EXACT_MATCH
+ECG_HEAP stage=after_sample free=232608 minimum=232608 largest=110592
+ECG_HEAP stage=final free=232608 minimum=232608 largest=110592
+ECG_DONE samples=12 status=FAILED

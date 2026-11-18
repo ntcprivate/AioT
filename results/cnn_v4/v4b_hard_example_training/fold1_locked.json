@@ -1,0 +1,66 @@
+{
+  "sha256": "d3ed83293e30c4fd5a826fbcec48ecbb170f347c819bc90731c82a43a0c4c637",
+  "thresholds": {
+    "V4": 0.86,
+    "V4-B": 0.76
+  },
+  "training": {
+    "sha256": "d3ed83293e30c4fd5a826fbcec48ecbb170f347c819bc90731c82a43a0c4c637",
+    "best_epoch": 3,
+    "epochs_run": 8,
+    "history": [
+      {
+        "epoch": 1,
+        "checkpoint_pr_auc": 0.5592238526958491,
+        "loss": 0.5842359066009521
+      },
+      {
+        "epoch": 2,
+        "checkpoint_pr_auc": 0.8657124088537174,
+        "loss": 0.4806389808654785
+      },
+      {
+        "epoch": 3,
+        "checkpoint_pr_auc": 0.9364061389616628,
+        "loss": 0.3884948194026947
+      },
+      {
+        "epoch": 4,
+        "checkpoint_pr_auc": 0.9331346587474516,
+        "loss": 0.32684624195098877
+      },
+      {
+        "epoch": 5,
+        "checkpoint_pr_auc": 0.9172528242860126,
+        "loss": 0.2914334833621979
+      },
+      {
+        "epoch": 6,
+        "checkpoint_pr_auc": 0.9195854557425879,
+        "loss": 0.27324506640434265
+      },
+      {
+        "epoch": 7,
+        "checkpoint_pr_auc": 0.9141579504286561,
+        "loss": 0.2619350552558899
+      },
+      {
+        "epoch": 8,
+        "checkpoint_pr_auc": 0.9105599826579129,
+        "loss": 0.2502879500389099
+      }
+    ],
+    "mining": {
+      "0": {
+        "Fit_samples": 73607,
+        "hard_samples": 7361,
+        "mean_hard_baseline_score": 0.6307086944580078
+      },
+      "1": {
+        "Fit_samples": 9713,
+        "hard_samples": 972,
+        "mean_hard_baseline_score": 0.24694085121154785
+      }
+    }
+  }
+}

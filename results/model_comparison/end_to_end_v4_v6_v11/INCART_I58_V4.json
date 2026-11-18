@@ -1,0 +1,21 @@
+{
+  "dataset": "INCART",
+  "record": "I58",
+  "group": "25",
+  "stage": "old",
+  "model": "V4",
+  "reference_N": 2313,
+  "peakTP": 2278,
+  "peakFP": 66,
+  "peakFN": 47,
+  "missingN": 47,
+  "missingV": 0,
+  "TP": 12,
+  "FP": 1,
+  "FN": 0,
+  "TN": 2266,
+  "precision": 0.9230769230769231,
+  "recall": 1.0,
+  "f1": 0.9600000000000001,
+  "fp_per_1000_N": 0.43233895373973197
+}

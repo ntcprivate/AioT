@@ -1,0 +1,2974 @@
+{
+  "schema": 1,
+  "purpose": "INCART integrity audit and V4 split preparation; no beat extraction or training",
+  "source": "files",
+  "authoritative_headers": "files/*.hea",
+  "old_headers_used": false,
+  "integrity": {
+    "records_listed": 75,
+    "complete_triplets": 75,
+    "checksum_entries": 230,
+    "checksum_failures": [],
+    "wfdb_records_read": 75,
+    "wfdb_failures": []
+  },
+  "summary": {
+    "patients": 32,
+    "records": 75,
+    "N": 150410,
+    "V": 20013,
+    "OTHER": 5496,
+    "sample_rates_hz": [
+      257.0
+    ],
+    "lead_sets": [
+      [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ]
+    ]
+  },
+  "annotation_alignment_screen": {
+    "method": "lead II local max absolute excursion from +/-250 ms median within +/-100 ms",
+    "count": 170384,
+    "median_samples": 0.0,
+    "median_ms": 0.0,
+    "p95_absolute_samples": 6.0,
+    "p95_absolute_ms": 23.346303501945524,
+    "warning": "Screening only; do not shift annotations globally without morphology-stratified review."
+  },
+  "records": [
+    {
+      "record_id": "I01",
+      "patient_id": "1",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2413,
+      "V": 344,
+      "OTHER": 0,
+      "annotation_total": 2757,
+      "symbols": {
+        "N": 2413,
+        "V": 344
+      },
+      "qrs_offset_count": 2757
+    },
+    {
+      "record_id": "I02",
+      "patient_id": "1",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2445,
+      "V": 229,
+      "OTHER": 0,
+      "annotation_total": 2674,
+      "symbols": {
+        "N": 2445,
+        "V": 229
+      },
+      "qrs_offset_count": 2673
+    },
+    {
+      "record_id": "I03",
+      "patient_id": "2",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2325,
+      "V": 125,
+      "OTHER": 2,
+      "annotation_total": 2452,
+      "symbols": {
+        "A": 2,
+        "N": 2325,
+        "V": 125
+      },
+      "qrs_offset_count": 2449
+    },
+    {
+      "record_id": "I04",
+      "patient_id": "2",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2270,
+      "V": 121,
+      "OTHER": 33,
+      "annotation_total": 2424,
+      "symbols": {
+        "A": 16,
+        "F": 17,
+        "N": 2270,
+        "V": 121
+      },
+      "qrs_offset_count": 2390
+    },
+    {
+      "record_id": "I05",
+      "patient_id": "2",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1520,
+      "V": 247,
+      "OTHER": 9,
+      "annotation_total": 1776,
+      "symbols": {
+        "F": 9,
+        "N": 1520,
+        "V": 247
+      },
+      "qrs_offset_count": 1767
+    },
+    {
+      "record_id": "I06",
+      "patient_id": "3",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2436,
+      "V": 9,
+      "OTHER": 48,
+      "annotation_total": 2493,
+      "symbols": {
+        "A": 48,
+        "N": 2436,
+        "V": 9
+      },
+      "qrs_offset_count": 2445
+    },
+    {
+      "record_id": "I07",
+      "patient_id": "3",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2640,
+      "V": 1,
+      "OTHER": 65,
+      "annotation_total": 2706,
+      "symbols": {
+        "A": 65,
+        "N": 2640,
+        "V": 1
+      },
+      "qrs_offset_count": 2640
+    },
+    {
+      "record_id": "I08",
+      "patient_id": "4",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1777,
+      "V": 351,
+      "OTHER": 3,
+      "annotation_total": 2131,
+      "symbols": {
+        "A": 2,
+        "N": 1777,
+        "Q": 1,
+        "V": 351
+      },
+      "qrs_offset_count": 2127
+    },
+    {
+      "record_id": "I09",
+      "patient_id": "5",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2948,
+      "V": 41,
+      "OTHER": 8,
+      "annotation_total": 2997,
+      "symbols": {
+        "N": 2948,
+        "V": 41,
+        "n": 8
+      },
+      "qrs_offset_count": 2988
+    },
+    {
+      "record_id": "I10",
+      "patient_id": "5",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 3599,
+      "V": 83,
+      "OTHER": 0,
+      "annotation_total": 3682,
+      "symbols": {
+        "N": 3599,
+        "V": 83
+      },
+      "qrs_offset_count": 3682
+    },
+    {
+      "record_id": "I11",
+      "patient_id": "5",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2078,
+      "V": 4,
+      "OTHER": 24,
+      "annotation_total": 2106,
+      "symbols": {
+        "N": 2078,
+        "V": 4,
+        "n": 24
+      },
+      "qrs_offset_count": 2081
+    },
+    {
+      "record_id": "I12",
+      "patient_id": "6",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2800,
+      "V": 6,
+      "OTHER": 3,
+      "annotation_total": 2809,
+      "symbols": {
+        "A": 1,
+        "F": 2,
+        "N": 2800,
+        "V": 6
+      },
+      "qrs_offset_count": 2806
+    },
+    {
+      "record_id": "I13",
+      "patient_id": "6",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1793,
+      "V": 230,
+      "OTHER": 0,
+      "annotation_total": 2023,
+      "symbols": {
+        "N": 1793,
+        "V": 230
+      },
+      "qrs_offset_count": 2023
+    },
+    {
+      "record_id": "I14",
+      "patient_id": "6",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1802,
+      "V": 64,
+      "OTHER": 0,
+      "annotation_total": 1866,
+      "symbols": {
+        "N": 1802,
+        "V": 64
+      },
+      "qrs_offset_count": 1866
+    },
+    {
+      "record_id": "I15",
+      "patient_id": "7",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2632,
+      "V": 3,
+      "OTHER": 0,
+      "annotation_total": 2635,
+      "symbols": {
+        "N": 2632,
+        "V": 3
+      },
+      "qrs_offset_count": 2634
+    },
+    {
+      "record_id": "I16",
+      "patient_id": "8",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 0,
+      "V": 2,
+      "OTHER": 1520,
+      "annotation_total": 1522,
+      "symbols": {
+        "R": 1520,
+        "V": 2
+      },
+      "qrs_offset_count": 2
+    },
+    {
+      "record_id": "I17",
+      "patient_id": "8",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 0,
+      "V": 27,
+      "OTHER": 1646,
+      "annotation_total": 1673,
+      "symbols": {
+        "R": 1646,
+        "V": 27
+      },
+      "qrs_offset_count": 27
+    },
+    {
+      "record_id": "I18",
+      "patient_id": "9",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2662,
+      "V": 366,
+      "OTHER": 56,
+      "annotation_total": 3084,
+      "symbols": {
+        "F": 56,
+        "N": 2662,
+        "V": 366
+      },
+      "qrs_offset_count": 3028
+    },
+    {
+      "record_id": "I19",
+      "patient_id": "9",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1212,
+      "V": 850,
+      "OTHER": 1,
+      "annotation_total": 2063,
+      "symbols": {
+        "B": 1,
+        "N": 1212,
+        "V": 850
+      },
+      "qrs_offset_count": 2062
+    },
+    {
+      "record_id": "I20",
+      "patient_id": "10",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2361,
+      "V": 111,
+      "OTHER": 180,
+      "annotation_total": 2652,
+      "symbols": {
+        "A": 179,
+        "F": 1,
+        "N": 2361,
+        "V": 111
+      },
+      "qrs_offset_count": 2470
+    },
+    {
+      "record_id": "I21",
+      "patient_id": "10",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2072,
+      "V": 8,
+      "OTHER": 104,
+      "annotation_total": 2184,
+      "symbols": {
+        "A": 104,
+        "N": 2072,
+        "V": 8
+      },
+      "qrs_offset_count": 2080
+    },
+    {
+      "record_id": "I22",
+      "patient_id": "10",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2816,
+      "V": 185,
+      "OTHER": 125,
+      "annotation_total": 3126,
+      "symbols": {
+        "A": 124,
+        "F": 1,
+        "N": 2816,
+        "V": 185
+      },
+      "qrs_offset_count": 3001
+    },
+    {
+      "record_id": "I23",
+      "patient_id": "11",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2192,
+      "V": 13,
+      "OTHER": 0,
+      "annotation_total": 2205,
+      "symbols": {
+        "N": 2192,
+        "V": 13
+      },
+      "qrs_offset_count": 2205
+    },
+    {
+      "record_id": "I24",
+      "patient_id": "11",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2565,
+      "V": 6,
+      "OTHER": 0,
+      "annotation_total": 2571,
+      "symbols": {
+        "N": 2565,
+        "V": 6
+      },
+      "qrs_offset_count": 2570
+    },
+    {
+      "record_id": "I25",
+      "patient_id": "12",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1705,
+      "V": 5,
+      "OTHER": 2,
+      "annotation_total": 1712,
+      "symbols": {
+        "A": 2,
+        "N": 1705,
+        "V": 5
+      },
+      "qrs_offset_count": 1710
+    },
+    {
+      "record_id": "I26",
+      "patient_id": "12",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1498,
+      "V": 4,
+      "OTHER": 7,
+      "annotation_total": 1509,
+      "symbols": {
+        "A": 5,
+        "N": 1498,
+        "S": 2,
+        "V": 4
+      },
+      "qrs_offset_count": 1502
+    },
+    {
+      "record_id": "I27",
+      "patient_id": "13",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1885,
+      "V": 720,
+      "OTHER": 0,
+      "annotation_total": 2605,
+      "symbols": {
+        "N": 1885,
+        "V": 720
+      },
+      "qrs_offset_count": 2605
+    },
+    {
+      "record_id": "I28",
+      "patient_id": "13",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1713,
+      "V": 4,
+      "OTHER": 0,
+      "annotation_total": 1717,
+      "symbols": {
+        "N": 1713,
+        "V": 4
+      },
+      "qrs_offset_count": 1717
+    },
+    {
+      "record_id": "I29",
+      "patient_id": "14",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1837,
+      "V": 783,
+      "OTHER": 1,
+      "annotation_total": 2621,
+      "symbols": {
+        "N": 1837,
+        "Q": 1,
+        "V": 783
+      },
+      "qrs_offset_count": 2618
+    },
+    {
+      "record_id": "I30",
+      "patient_id": "14",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1706,
+      "V": 756,
+      "OTHER": 0,
+      "annotation_total": 2462,
+      "symbols": {
+        "N": 1706,
+        "V": 756
+      },
+      "qrs_offset_count": 2460
+    },
+    {
+      "record_id": "I31",
+      "patient_id": "14",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1844,
+      "V": 1365,
+      "OTHER": 1,
+      "annotation_total": 3210,
+      "symbols": {
+        "N": 1844,
+        "Q": 1,
+        "V": 1365
+      },
+      "qrs_offset_count": 3208
+    },
+    {
+      "record_id": "I32",
+      "patient_id": "14",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1562,
+      "V": 57,
+      "OTHER": 0,
+      "annotation_total": 1619,
+      "symbols": {
+        "N": 1562,
+        "V": 57
+      },
+      "qrs_offset_count": 1619
+    },
+    {
+      "record_id": "I33",
+      "patient_id": "15",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1245,
+      "V": 1,
+      "OTHER": 591,
+      "annotation_total": 1837,
+      "symbols": {
+        "A": 591,
+        "N": 1245,
+        "V": 1
+      },
+      "qrs_offset_count": 1246
+    },
+    {
+      "record_id": "I34",
+      "patient_id": "15",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1429,
+      "V": 0,
+      "OTHER": 536,
+      "annotation_total": 1965,
+      "symbols": {
+        "A": 536,
+        "N": 1429
+      },
+      "qrs_offset_count": 1428
+    },
+    {
+      "record_id": "I35",
+      "patient_id": "16",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 3200,
+      "V": 458,
+      "OTHER": 18,
+      "annotation_total": 3676,
+      "symbols": {
+        "F": 18,
+        "N": 3200,
+        "V": 458
+      },
+      "qrs_offset_count": 3657
+    },
+    {
+      "record_id": "I36",
+      "patient_id": "16",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 3449,
+      "V": 450,
+      "OTHER": 12,
+      "annotation_total": 3911,
+      "symbols": {
+        "F": 12,
+        "N": 3449,
+        "V": 450
+      },
+      "qrs_offset_count": 3898
+    },
+    {
+      "record_id": "I37",
+      "patient_id": "16",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2009,
+      "V": 452,
+      "OTHER": 0,
+      "annotation_total": 2461,
+      "symbols": {
+        "N": 2009,
+        "V": 452
+      },
+      "qrs_offset_count": 2461
+    },
+    {
+      "record_id": "I38",
+      "patient_id": "17",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2153,
+      "V": 545,
+      "OTHER": 1,
+      "annotation_total": 2699,
+      "symbols": {
+        "N": 2153,
+        "Q": 1,
+        "V": 545
+      },
+      "qrs_offset_count": 2698
+    },
+    {
+      "record_id": "I39",
+      "patient_id": "17",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1462,
+      "V": 313,
+      "OTHER": 0,
+      "annotation_total": 1775,
+      "symbols": {
+        "N": 1462,
+        "V": 313
+      },
+      "qrs_offset_count": 1774
+    },
+    {
+      "record_id": "I40",
+      "patient_id": "18",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2568,
+      "V": 92,
+      "OTHER": 6,
+      "annotation_total": 2666,
+      "symbols": {
+        "A": 6,
+        "N": 2568,
+        "V": 92
+      },
+      "qrs_offset_count": 2660
+    },
+    {
+      "record_id": "I41",
+      "patient_id": "18",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1624,
+      "V": 1,
+      "OTHER": 5,
+      "annotation_total": 1630,
+      "symbols": {
+        "A": 5,
+        "N": 1624,
+        "V": 1
+      },
+      "qrs_offset_count": 1625
+    },
+    {
+      "record_id": "I42",
+      "patient_id": "19",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1546,
+      "V": 1554,
+      "OTHER": 9,
+      "annotation_total": 3109,
+      "symbols": {
+        "F": 9,
+        "N": 1546,
+        "V": 1554
+      },
+      "qrs_offset_count": 3099
+    },
+    {
+      "record_id": "I43",
+      "patient_id": "19",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1087,
+      "V": 1120,
+      "OTHER": 2,
+      "annotation_total": 2209,
+      "symbols": {
+        "F": 2,
+        "N": 1087,
+        "V": 1120
+      },
+      "qrs_offset_count": 2206
+    },
+    {
+      "record_id": "I44",
+      "patient_id": "20",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1803,
+      "V": 684,
+      "OTHER": 8,
+      "annotation_total": 2495,
+      "symbols": {
+        "A": 8,
+        "N": 1803,
+        "V": 684
+      },
+      "qrs_offset_count": 2486
+    },
+    {
+      "record_id": "I45",
+      "patient_id": "20",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1437,
+      "V": 491,
+      "OTHER": 0,
+      "annotation_total": 1928,
+      "symbols": {
+        "N": 1437,
+        "V": 491
+      },
+      "qrs_offset_count": 1928
+    },
+    {
+      "record_id": "I46",
+      "patient_id": "20",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2232,
+      "V": 422,
+      "OTHER": 4,
+      "annotation_total": 2658,
+      "symbols": {
+        "A": 1,
+        "F": 3,
+        "N": 2232,
+        "V": 422
+      },
+      "qrs_offset_count": 2654
+    },
+    {
+      "record_id": "I47",
+      "patient_id": "21",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1859,
+      "V": 93,
+      "OTHER": 1,
+      "annotation_total": 1953,
+      "symbols": {
+        "A": 1,
+        "N": 1859,
+        "V": 93
+      },
+      "qrs_offset_count": 1952
+    },
+    {
+      "record_id": "I48",
+      "patient_id": "21",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2119,
+      "V": 235,
+      "OTHER": 3,
+      "annotation_total": 2357,
+      "symbols": {
+        "A": 2,
+        "F": 1,
+        "N": 2119,
+        "V": 235
+      },
+      "qrs_offset_count": 2354
+    },
+    {
+      "record_id": "I49",
+      "patient_id": "22",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2120,
+      "V": 27,
+      "OTHER": 1,
+      "annotation_total": 2148,
+      "symbols": {
+        "+": 1,
+        "N": 2120,
+        "V": 27
+      },
+      "qrs_offset_count": 2147
+    },
+    {
+      "record_id": "I50",
+      "patient_id": "22",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2994,
+      "V": 4,
+      "OTHER": 1,
+      "annotation_total": 2999,
+      "symbols": {
+        "+": 1,
+        "N": 2994,
+        "V": 4
+      },
+      "qrs_offset_count": 2998
+    },
+    {
+      "record_id": "I51",
+      "patient_id": "23",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1970,
+      "V": 803,
+      "OTHER": 4,
+      "annotation_total": 2777,
+      "symbols": {
+        "A": 3,
+        "F": 1,
+        "N": 1970,
+        "V": 803
+      },
+      "qrs_offset_count": 2772
+    },
+    {
+      "record_id": "I52",
+      "patient_id": "23",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1610,
+      "V": 137,
+      "OTHER": 0,
+      "annotation_total": 1747,
+      "symbols": {
+        "N": 1610,
+        "V": 137
+      },
+      "qrs_offset_count": 1747
+    },
+    {
+      "record_id": "I53",
+      "patient_id": "23",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1151,
+      "V": 1111,
+      "OTHER": 0,
+      "annotation_total": 2262,
+      "symbols": {
+        "N": 1151,
+        "V": 1111
+      },
+      "qrs_offset_count": 2260
+    },
+    {
+      "record_id": "I54",
+      "patient_id": "24",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2340,
+      "V": 22,
+      "OTHER": 1,
+      "annotation_total": 2363,
+      "symbols": {
+        "A": 1,
+        "N": 2340,
+        "V": 22
+      },
+      "qrs_offset_count": 2362
+    },
+    {
+      "record_id": "I55",
+      "patient_id": "24",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2148,
+      "V": 17,
+      "OTHER": 1,
+      "annotation_total": 2166,
+      "symbols": {
+        "A": 1,
+        "N": 2148,
+        "V": 17
+      },
+      "qrs_offset_count": 2165
+    },
+    {
+      "record_id": "I56",
+      "patient_id": "24",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1672,
+      "V": 7,
+      "OTHER": 26,
+      "annotation_total": 1705,
+      "symbols": {
+        "A": 26,
+        "N": 1672,
+        "V": 7
+      },
+      "qrs_offset_count": 1679
+    },
+    {
+      "record_id": "I57",
+      "patient_id": "25",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2842,
+      "V": 21,
+      "OTHER": 8,
+      "annotation_total": 2871,
+      "symbols": {
+        "A": 3,
+        "F": 3,
+        "N": 2842,
+        "Q": 2,
+        "V": 21
+      },
+      "qrs_offset_count": 2862
+    },
+    {
+      "record_id": "I58",
+      "patient_id": "25",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2313,
+      "V": 12,
+      "OTHER": 0,
+      "annotation_total": 2325,
+      "symbols": {
+        "N": 2313,
+        "V": 12
+      },
+      "qrs_offset_count": 2325
+    },
+    {
+      "record_id": "I59",
+      "patient_id": "26",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2026,
+      "V": 81,
+      "OTHER": 41,
+      "annotation_total": 2148,
+      "symbols": {
+        "N": 2026,
+        "V": 81,
+        "j": 41
+      },
+      "qrs_offset_count": 2107
+    },
+    {
+      "record_id": "I60",
+      "patient_id": "26",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2424,
+      "V": 0,
+      "OTHER": 51,
+      "annotation_total": 2475,
+      "symbols": {
+        "N": 2424,
+        "j": 51
+      },
+      "qrs_offset_count": 2423
+    },
+    {
+      "record_id": "I61",
+      "patient_id": "26",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1453,
+      "V": 0,
+      "OTHER": 1,
+      "annotation_total": 1454,
+      "symbols": {
+        "A": 1,
+        "N": 1453
+      },
+      "qrs_offset_count": 1453
+    },
+    {
+      "record_id": "I62",
+      "patient_id": "27",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1453,
+      "V": 795,
+      "OTHER": 21,
+      "annotation_total": 2269,
+      "symbols": {
+        "A": 5,
+        "F": 12,
+        "N": 1453,
+        "S": 4,
+        "V": 795
+      },
+      "qrs_offset_count": 2248
+    },
+    {
+      "record_id": "I63",
+      "patient_id": "27",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1847,
+      "V": 138,
+      "OTHER": 9,
+      "annotation_total": 1994,
+      "symbols": {
+        "F": 8,
+        "N": 1847,
+        "S": 1,
+        "V": 138
+      },
+      "qrs_offset_count": 1985
+    },
+    {
+      "record_id": "I64",
+      "patient_id": "27",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1887,
+      "V": 23,
+      "OTHER": 3,
+      "annotation_total": 1913,
+      "symbols": {
+        "F": 3,
+        "N": 1887,
+        "V": 23
+      },
+      "qrs_offset_count": 1908
+    },
+    {
+      "record_id": "I65",
+      "patient_id": "28",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2273,
+      "V": 382,
+      "OTHER": 9,
+      "annotation_total": 2664,
+      "symbols": {
+        "A": 2,
+        "F": 4,
+        "N": 2273,
+        "S": 3,
+        "V": 382
+      },
+      "qrs_offset_count": 2655
+    },
+    {
+      "record_id": "I66",
+      "patient_id": "28",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2139,
+      "V": 200,
+      "OTHER": 1,
+      "annotation_total": 2340,
+      "symbols": {
+        "N": 2139,
+        "S": 1,
+        "V": 200
+      },
+      "qrs_offset_count": 2338
+    },
+    {
+      "record_id": "I67",
+      "patient_id": "28",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2438,
+      "V": 531,
+      "OTHER": 6,
+      "annotation_total": 2975,
+      "symbols": {
+        "F": 1,
+        "N": 2438,
+        "S": 5,
+        "V": 531
+      },
+      "qrs_offset_count": 2968
+    },
+    {
+      "record_id": "I68",
+      "patient_id": "29",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2481,
+      "V": 161,
+      "OTHER": 3,
+      "annotation_total": 2645,
+      "symbols": {
+        "+": 1,
+        "A": 2,
+        "N": 2481,
+        "V": 161
+      },
+      "qrs_offset_count": 2642
+    },
+    {
+      "record_id": "I69",
+      "patient_id": "29",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2000,
+      "V": 167,
+      "OTHER": 3,
+      "annotation_total": 2170,
+      "symbols": {
+        "+": 1,
+        "A": 1,
+        "F": 1,
+        "N": 2000,
+        "V": 167
+      },
+      "qrs_offset_count": 2166
+    },
+    {
+      "record_id": "I70",
+      "patient_id": "30",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1540,
+      "V": 0,
+      "OTHER": 127,
+      "annotation_total": 1667,
+      "symbols": {
+        "+": 1,
+        "A": 126,
+        "N": 1540
+      },
+      "qrs_offset_count": 1540
+    },
+    {
+      "record_id": "I71",
+      "patient_id": "30",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1627,
+      "V": 0,
+      "OTHER": 50,
+      "annotation_total": 1677,
+      "symbols": {
+        "+": 7,
+        "A": 35,
+        "N": 1627,
+        "R": 8
+      },
+      "qrs_offset_count": 1626
+    },
+    {
+      "record_id": "I72",
+      "patient_id": "31",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1876,
+      "V": 386,
+      "OTHER": 8,
+      "annotation_total": 2270,
+      "symbols": {
+        "A": 8,
+        "N": 1876,
+        "V": 386
+      },
+      "qrs_offset_count": 2260
+    },
+    {
+      "record_id": "I73",
+      "patient_id": "31",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1890,
+      "V": 70,
+      "OTHER": 32,
+      "annotation_total": 1992,
+      "symbols": {
+        "A": 32,
+        "N": 1890,
+        "V": 70
+      },
+      "qrs_offset_count": 1960
+    },
+    {
+      "record_id": "I74",
+      "patient_id": "32",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 2083,
+      "V": 274,
+      "OTHER": 48,
+      "annotation_total": 2405,
+      "symbols": {
+        "F": 48,
+        "N": 2083,
+        "V": 274
+      },
+      "qrs_offset_count": 2355
+    },
+    {
+      "record_id": "I75",
+      "patient_id": "32",
+      "fs_hz": 257.0,
+      "samples": 462600,
+      "duration_seconds": 1800.0,
+      "signals": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "lead_ii_index": 1,
+      "N": 1483,
+      "V": 613,
+      "OTHER": 7,
+      "annotation_total": 2103,
+      "symbols": {
+        "F": 7,
+        "N": 1483,
+        "V": 613
+      },
+      "qrs_offset_count": 2095
+    }
+  ],
+  "patients": [
+    {
+      "patient_id": "1",
+      "records": [
+        "I01",
+        "I02"
+      ],
+      "record_count": 2,
+      "N": 4858,
+      "V": 573,
+      "OTHER": 0
+    },
+    {
+      "patient_id": "2",
+      "records": [
+        "I03",
+        "I04",
+        "I05"
+      ],
+      "record_count": 3,
+      "N": 6115,
+      "V": 493,
+      "OTHER": 44
+    },
+    {
+      "patient_id": "3",
+      "records": [
+        "I06",
+        "I07"
+      ],
+      "record_count": 2,
+      "N": 5076,
+      "V": 10,
+      "OTHER": 113
+    },
+    {
+      "patient_id": "4",
+      "records": [
+        "I08"
+      ],
+      "record_count": 1,
+      "N": 1777,
+      "V": 351,
+      "OTHER": 3
+    },
+    {
+      "patient_id": "5",
+      "records": [
+        "I09",
+        "I10",
+        "I11"
+      ],
+      "record_count": 3,
+      "N": 8625,
+      "V": 128,
+      "OTHER": 32
+    },
+    {
+      "patient_id": "6",
+      "records": [
+        "I12",
+        "I13",
+        "I14"
+      ],
+      "record_count": 3,
+      "N": 6395,
+      "V": 300,
+      "OTHER": 3
+    },
+    {
+      "patient_id": "7",
+      "records": [
+        "I15"
+      ],
+      "record_count": 1,
+      "N": 2632,
+      "V": 3,
+      "OTHER": 0
+    },
+    {
+      "patient_id": "8",
+      "records": [
+        "I16",
+        "I17"
+      ],
+      "record_count": 2,
+      "N": 0,
+      "V": 29,
+      "OTHER": 3166
+    },
+    {
+      "patient_id": "9",
+      "records": [
+        "I18",
+        "I19"
+      ],
+      "record_count": 2,
+      "N": 3874,
+      "V": 1216,
+      "OTHER": 57
+    },
+    {
+      "patient_id": "10",
+      "records": [
+        "I20",
+        "I21",
+        "I22"
+      ],
+      "record_count": 3,
+      "N": 7249,
+      "V": 304,
+      "OTHER": 409
+    },
+    {
+      "patient_id": "11",
+      "records": [
+        "I23",
+        "I24"
+      ],
+      "record_count": 2,
+      "N": 4757,
+      "V": 19,
+      "OTHER": 0
+    },
+    {
+      "patient_id": "12",
+      "records": [
+        "I25",
+        "I26"
+      ],
+      "record_count": 2,
+      "N": 3203,
+      "V": 9,
+      "OTHER": 9
+    },
+    {
+      "patient_id": "13",
+      "records": [
+        "I27",
+        "I28"
+      ],
+      "record_count": 2,
+      "N": 3598,
+      "V": 724,
+      "OTHER": 0
+    },
+    {
+      "patient_id": "14",
+      "records": [
+        "I29",
+        "I30",
+        "I31",
+        "I32"
+      ],
+      "record_count": 4,
+      "N": 6949,
+      "V": 2961,
+      "OTHER": 2
+    },
+    {
+      "patient_id": "15",
+      "records": [
+        "I33",
+        "I34"
+      ],
+      "record_count": 2,
+      "N": 2674,
+      "V": 1,
+      "OTHER": 1127
+    },
+    {
+      "patient_id": "16",
+      "records": [
+        "I35",
+        "I36",
+        "I37"
+      ],
+      "record_count": 3,
+      "N": 8658,
+      "V": 1360,
+      "OTHER": 30
+    },
+    {
+      "patient_id": "17",
+      "records": [
+        "I38",
+        "I39"
+      ],
+      "record_count": 2,
+      "N": 3615,
+      "V": 858,
+      "OTHER": 1
+    },
+    {
+      "patient_id": "18",
+      "records": [
+        "I40",
+        "I41"
+      ],
+      "record_count": 2,
+      "N": 4192,
+      "V": 93,
+      "OTHER": 11
+    },
+    {
+      "patient_id": "19",
+      "records": [
+        "I42",
+        "I43"
+      ],
+      "record_count": 2,
+      "N": 2633,
+      "V": 2674,
+      "OTHER": 11
+    },
+    {
+      "patient_id": "20",
+      "records": [
+        "I44",
+        "I45",
+        "I46"
+      ],
+      "record_count": 3,
+      "N": 5472,
+      "V": 1597,
+      "OTHER": 12
+    },
+    {
+      "patient_id": "21",
+      "records": [
+        "I47",
+        "I48"
+      ],
+      "record_count": 2,
+      "N": 3978,
+      "V": 328,
+      "OTHER": 4
+    },
+    {
+      "patient_id": "22",
+      "records": [
+        "I49",
+        "I50"
+      ],
+      "record_count": 2,
+      "N": 5114,
+      "V": 31,
+      "OTHER": 2
+    },
+    {
+      "patient_id": "23",
+      "records": [
+        "I51",
+        "I52",
+        "I53"
+      ],
+      "record_count": 3,
+      "N": 4731,
+      "V": 2051,
+      "OTHER": 4
+    },
+    {
+      "patient_id": "24",
+      "records": [
+        "I54",
+        "I55",
+        "I56"
+      ],
+      "record_count": 3,
+      "N": 6160,
+      "V": 46,
+      "OTHER": 28
+    },
+    {
+      "patient_id": "25",
+      "records": [
+        "I57",
+        "I58"
+      ],
+      "record_count": 2,
+      "N": 5155,
+      "V": 33,
+      "OTHER": 8
+    },
+    {
+      "patient_id": "26",
+      "records": [
+        "I59",
+        "I60",
+        "I61"
+      ],
+      "record_count": 3,
+      "N": 5903,
+      "V": 81,
+      "OTHER": 93
+    },
+    {
+      "patient_id": "27",
+      "records": [
+        "I62",
+        "I63",
+        "I64"
+      ],
+      "record_count": 3,
+      "N": 5187,
+      "V": 956,
+      "OTHER": 33
+    },
+    {
+      "patient_id": "28",
+      "records": [
+        "I65",
+        "I66",
+        "I67"
+      ],
+      "record_count": 3,
+      "N": 6850,
+      "V": 1113,
+      "OTHER": 16
+    },
+    {
+      "patient_id": "29",
+      "records": [
+        "I68",
+        "I69"
+      ],
+      "record_count": 2,
+      "N": 4481,
+      "V": 328,
+      "OTHER": 6
+    },
+    {
+      "patient_id": "30",
+      "records": [
+        "I70",
+        "I71"
+      ],
+      "record_count": 2,
+      "N": 3167,
+      "V": 0,
+      "OTHER": 177
+    },
+    {
+      "patient_id": "31",
+      "records": [
+        "I72",
+        "I73"
+      ],
+      "record_count": 2,
+      "N": 3766,
+      "V": 456,
+      "OTHER": 40
+    },
+    {
+      "patient_id": "32",
+      "records": [
+        "I74",
+        "I75"
+      ],
+      "record_count": 2,
+      "N": 3566,
+      "V": 887,
+      "OTHER": 55
+    }
+  ],
+  "proposed_split": {
+    "seed": 42,
+    "search": "100000 fixed-seed patient permutations; count balance only; no waveforms/model outputs",
+    "score": 0.057926302569209775,
+    "patient_overlap": false,
+    "train": {
+      "patient_ids": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "6",
+        "7",
+        "8",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16",
+        "18",
+        "19",
+        "21",
+        "22",
+        "23",
+        "24",
+        "26",
+        "29",
+        "31",
+        "32"
+      ],
+      "records": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "I06",
+        "I07",
+        "I09",
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I23",
+        "I24",
+        "I25",
+        "I26",
+        "I27",
+        "I28",
+        "I29",
+        "I30",
+        "I31",
+        "I32",
+        "I35",
+        "I36",
+        "I37",
+        "I40",
+        "I41",
+        "I42",
+        "I43",
+        "I47",
+        "I48",
+        "I49",
+        "I50",
+        "I51",
+        "I52",
+        "I53",
+        "I54",
+        "I55",
+        "I56",
+        "I59",
+        "I60",
+        "I61",
+        "I68",
+        "I69",
+        "I72",
+        "I73",
+        "I74",
+        "I75"
+      ],
+      "patient_count": 22,
+      "record_count": 52,
+      "N": 105390,
+      "V": 13584,
+      "OTHER": 3653
+    },
+    "validation": {
+      "patient_ids": [
+        "4",
+        "15",
+        "20",
+        "25",
+        "28"
+      ],
+      "records": [
+        "I08",
+        "I33",
+        "I34",
+        "I44",
+        "I45",
+        "I46",
+        "I57",
+        "I58",
+        "I65",
+        "I66",
+        "I67"
+      ],
+      "patient_count": 5,
+      "record_count": 11,
+      "N": 21928,
+      "V": 3095,
+      "OTHER": 1166
+    },
+    "test": {
+      "patient_ids": [
+        "9",
+        "10",
+        "17",
+        "27",
+        "30"
+      ],
+      "records": [
+        "I18",
+        "I19",
+        "I20",
+        "I21",
+        "I22",
+        "I38",
+        "I39",
+        "I62",
+        "I63",
+        "I64",
+        "I70",
+        "I71"
+      ],
+      "patient_count": 5,
+      "record_count": 12,
+      "N": 23092,
+      "V": 3334,
+      "OTHER": 677
+    }
+  },
+  "v4_contract": {
+    "labels": {
+      "N": 0,
+      "V": 1
+    },
+    "other_policy": "exclude; never map OTHER to NORMAL",
+    "incart_lead": "II",
+    "incart_resampling": "257 Hz to 250 Hz with scipy.signal.resample_poly(up=250, down=257)",
+    "annotation_mapping": "round half up: floor(sample*250/257 + 0.5); validate on extracted windows",
+    "window": "256 samples centered at mapped annotation: 128 before, 128 from center",
+    "normalization": "per-window z-score with finite/epsilon guard, matching V1",
+    "test_policy": "seal proposed INCART test patients; no architecture, checkpoint, or threshold selection"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "architecture": "V1 849 parameters",
+  "train_samples": 177044,
+  "mit_train_samples": 58134,
+  "incart_train_samples": 118910,
+  "incart_validation_samples": 25010,
+  "class_weight": {
+    "0": 0.5583328602874857,
+    "1": 4.785749040384927
+  },
+  "best_epoch": 3,
+  "epochs_run": 8,
+  "selection": "max INCART Validation PVC F1; tie precision then lower threshold",
+  "selected_threshold": 0.88,
+  "validation": {
+    "threshold": 0.88,
+    "precision": 0.9564349850349185,
+    "recall": 0.929541047188106,
+    "f1": 0.94279626290772,
+    "TP": 2876,
+    "TN": 21785,
+    "FP": 131,
+    "FN": 218,
+    "confusion_rows_N_V": [
+      [
+        21785,
+        131
+      ],
+      [
+        218,
+        2876
+      ]
+    ]
+  },
+  "test_used_for_selection": false,
+  "model_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1"
+}

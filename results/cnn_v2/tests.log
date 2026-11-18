@@ -1,0 +1,9 @@
+test_development_isolation (test_cnn_v2.V2Checks.test_development_isolation) ... ok
+test_metrics_and_hard_negative_scope (test_cnn_v2.V2Checks.test_metrics_and_hard_negative_scope) ... ok
+test_sampling_keeps_regular_and_pvc_beats (test_cnn_v2.V2Checks.test_sampling_keeps_regular_and_pvc_beats) ... ok
+test_v1_firmware_gui_and_split_unchanged (test_cnn_v2.V2Checks.test_v1_firmware_gui_and_split_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.186s
+
+OK

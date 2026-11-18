@@ -1,0 +1,43 @@
+{
+  "dataset": "INCART",
+  "record": "I21",
+  "offline": {
+    "samples": 2079,
+    "N": 2071,
+    "V": 8,
+    "threshold": 0.8,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "pr_auc": 1.0,
+    "fp_per_1000_normal": 0.0,
+    "TP": 8,
+    "FP": 0,
+    "FN": 0,
+    "TN": 2071,
+    "confusion_rows_N_V": [
+      [
+        2071,
+        0
+      ],
+      [
+        0,
+        8
+      ]
+    ]
+  },
+  "detector": {
+    "TP": 8,
+    "FP": 40,
+    "FN": 0,
+    "TN": 2031,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857,
+    "fp_per_1000_N": 19.305019305019304
+  },
+  "missing_N": 41,
+  "missing_V": 0,
+  "extra_peaks": 98
+}

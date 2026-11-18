@@ -1,0 +1,118 @@
+{
+  "seed": 42,
+  "epochs": 30,
+  "patience": 5,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "threshold": 0.52,
+  "hard_negative_multiplicity": 4,
+  "training": "from scratch, cloned V1 architecture, no V1 weights",
+  "monitor": "development PVC F1 at fixed .52; maximum, patience5",
+  "export_rule": "development F1 > V1 Float32, precision >= V1 Float32, recall >= V1 Float32 minus .02; exploratory selection only",
+  "hard_definition": "central N and at least one V annotation inside [center-128,center+128) at250Hz",
+  "train_records": [
+    "100",
+    "101",
+    "103",
+    "105",
+    "106",
+    "109",
+    "111",
+    "112",
+    "114",
+    "116",
+    "119",
+    "122",
+    "124",
+    "201",
+    "202",
+    "203",
+    "205",
+    "207",
+    "208",
+    "209",
+    "212",
+    "213",
+    "215",
+    "217",
+    "219",
+    "220",
+    "221",
+    "223",
+    "228",
+    "230",
+    "231"
+  ],
+  "fit_records": [
+    "100",
+    "101",
+    "103",
+    "105",
+    "106",
+    "109",
+    "112",
+    "114",
+    "116",
+    "119",
+    "122",
+    "124",
+    "201",
+    "202",
+    "203",
+    "205",
+    "208",
+    "209",
+    "212",
+    "213",
+    "215",
+    "219",
+    "223",
+    "228",
+    "230"
+  ],
+  "development_records": [
+    "111",
+    "207",
+    "217",
+    "220",
+    "221",
+    "231"
+  ],
+  "development_groups": [
+    "record_111",
+    "record_207",
+    "record_217",
+    "record_220",
+    "record_221",
+    "record_231"
+  ],
+  "counts": {
+    "original_train": {
+      "samples": 58134,
+      "N": 53216,
+      "V": 4918,
+      "hard_N": 1586
+    },
+    "fit": {
+      "samples": 52927,
+      "N": 48675,
+      "V": 4252,
+      "hard_N": 1225
+    },
+    "development": {
+      "samples": 5207,
+      "N": 4541,
+      "V": 666,
+      "hard_N": 361
+    }
+  },
+  "provenance": {
+    "dataset_sha256": "5540e47b41a01b3f87c563ce7f701213fcf30dc241ef79037ab9ab92c46bbce5",
+    "original_split_sha256": "25f41d81ae741b21dddac89852c5066dca5493992f570dfad5343feb9b0c977b"
+  },
+  "limitations": [
+    "Record proxies except known 201/202 shared patient; other patient identity not independently verified.",
+    "V1 previously trained on all original Train, including new development; V1 development comparison is optimistic for V1.",
+    "Historical Validation is exploratory only; no Test prediction or raw Test record access."
+  ]
+}

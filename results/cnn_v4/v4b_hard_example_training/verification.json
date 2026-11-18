@@ -1,0 +1,37 @@
+[
+  {
+    "fold": 0,
+    "baseline_counts_reproduced": true,
+    "hash_verified": true,
+    "mining_Fit_only": true,
+    "within_class_weight_totals_preserved": true
+  },
+  {
+    "fold": 1,
+    "baseline_counts_reproduced": true,
+    "hash_verified": true,
+    "mining_Fit_only": true,
+    "within_class_weight_totals_preserved": true
+  },
+  {
+    "fold": 2,
+    "baseline_counts_reproduced": true,
+    "hash_verified": true,
+    "mining_Fit_only": true,
+    "within_class_weight_totals_preserved": true
+  },
+  {
+    "fold": 3,
+    "baseline_counts_reproduced": true,
+    "hash_verified": true,
+    "mining_Fit_only": true,
+    "within_class_weight_totals_preserved": true
+  },
+  {
+    "fold": 4,
+    "baseline_counts_reproduced": true,
+    "hash_verified": true,
+    "mining_Fit_only": true,
+    "within_class_weight_totals_preserved": true
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "firmware_model": {
+    "source_path": "firmware/esp32_ecg_tinyml_integrated/main/model/ecg_cnn_int8.tflite",
+    "embedded_by": "firmware/esp32_ecg_tinyml_integrated/main/CMakeLists.txt",
+    "bytes": 8560,
+    "sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+    "matches": [
+      "models/ecg_cnn_int8.tflite",
+      "firmware/esp32_tinyml_step8/main/model/ecg_cnn_int8.tflite"
+    ],
+    "architecture": "V1: Conv1D(8,5)-Pool2-Conv1D(16,5)-Pool2-GlobalAveragePooling-Dense8-Dense1(sigmoid)",
+    "threshold": 0.52,
+    "conclusion": "V1 INT8 remains embedded; V3 has not replaced it"
+  },
+  "versions": {
+    "V1": {
+      "keras_best": "models/ecg_cnn_best.keras",
+      "keras_best_sha256": "254595d658838de6525f4dc0a2821415a9197443e529d838e362044cd2e32399",
+      "keras_final": "models/ecg_cnn_final.keras",
+      "keras_final_sha256": "2616c77c3251b300ba902e3bc6d134758de49eec12087539ef5e50e66a1fd24c",
+      "float_tflite": "models/ecg_cnn_float32.tflite",
+      "float_tflite_sha256": "ff90884a156f8fb2f623facf857583522fa7a990c8e5d720a671055a1680d8cb",
+      "int8_tflite": "models/ecg_cnn_int8.tflite",
+      "int8_tflite_sha256": "38705f5399ada9b87f466725608a053ae2305295a8a3cae7bda01f4928f4a394",
+      "parameters": 849,
+      "threshold": 0.52
+    },
+    "V2": {
+      "keras_best": "models/v2/ecg_cnn_v2_best.keras",
+      "keras_best_sha256": "e609077580bf396f9775e7491a1cf3815e31f671d44278a609494e86a13e2036",
+      "parameters": 849,
+      "training_threshold": 0.52,
+      "exploratory_tuned_threshold": 0.53,
+      "int8_exported": false,
+      "deployment_decision": "KEEP_V1"
+    },
+    "V3": {
+      "keras_best": "models/v3/ecg_cnn_v3_best.keras",
+      "keras_best_sha256": "788cd415a6ef5deb2a7015a6314284e6effd79617115f0971058d8679d413260",
+      "float_tflite": "models/v3/ecg_cnn_v3_float32.tflite",
+      "float_tflite_sha256": "aae98e3f61fb354d62300cd4a45c1599b1fbb4890187fee5938ba7ee4916df17",
+      "parameters": 2385,
+      "threshold": 0.52,
+      "int8_exported": false,
+      "deployment_decision": "KEEP_V1"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "protocol": {
+    "records": [
+      {
+        "record": "111",
+        "reference_N": 0,
+        "reference_V": 1,
+        "miss_N": 0,
+        "miss_V": 0,
+        "windows": 2137,
+        "unmatched": 55
+      },
+      {
+        "record": "207",
+        "reference_N": 0,
+        "reference_V": 105,
+        "miss_N": 0,
+        "miss_V": 16,
+        "windows": 1883,
+        "unmatched": 65
+      },
+      {
+        "record": "217",
+        "reference_N": 244,
+        "reference_V": 162,
+        "miss_N": 0,
+        "miss_V": 11,
+        "windows": 2191,
+        "unmatched": 48
+      },
+      {
+        "record": "220",
+        "reference_N": 1954,
+        "reference_V": 0,
+        "miss_N": 5,
+        "miss_V": 0,
+        "windows": 2043,
+        "unmatched": 0
+      },
+      {
+        "record": "221",
+        "reference_N": 2031,
+        "reference_V": 396,
+        "miss_N": 9,
+        "miss_V": 3,
+        "windows": 2415,
+        "unmatched": 0
+      },
+      {
+        "record": "231",
+        "reference_N": 314,
+        "reference_V": 2,
+        "miss_N": 0,
+        "miss_V": 0,
+        "windows": 1620,
+        "unmatched": 53
+      }
+    ],
+    "threshold_frozen_before_replay": 0.53,
+    "replay_sha256": "3090ada6afa1e85357b9b020f85f10251afe69169f63a879b912f3462a826f7a",
+    "protocol": "Same Phase2B safe replay, MLII,25/36 resampling,ADC2048+200*mV,round-half-up annotation,greedy tolerance12,same V1 input clipping preflight; host mirror not RTOS/hardware"
+  },
+  "models": {
+    "V1_0.52": {
+      "conditional": {
+        "threshold": 0.52,
+        "precision": 1.0,
+        "recall": 0.9952830188679245,
+        "f1": 0.9976359338061466,
+        "fp": 0,
+        "fn": 3,
+        "tp": 633,
+        "tn": 4529
+      },
+      "end_to_end": {
+        "tp": 633,
+        "fp": 122,
+        "fn": 33,
+        "precision": 0.83841059602649,
+        "recall": 0.9504504504504504,
+        "f1": 0.8909218859957776
+      },
+      "unmatched_PVC": 122,
+      "miss_before_CNN_N": 14,
+      "miss_before_CNN_V": 30,
+      "other_annotation_windows": 6903,
+      "other_annotation_PVC": 3179
+    },
+    "V2_0.52": {
+      "conditional": {
+        "threshold": 0.52,
+        "precision": 0.9890965732087228,
+        "recall": 0.9984276729559748,
+        "f1": 0.9937402190923318,
+        "fp": 7,
+        "fn": 1,
+        "tp": 635,
+        "tn": 4522
+      },
+      "end_to_end": {
+        "tp": 635,
+        "fp": 155,
+        "fn": 31,
+        "precision": 0.8037974683544303,
+        "recall": 0.9534534534534534,
+        "f1": 0.8722527472527473
+      },
+      "unmatched_PVC": 148,
+      "miss_before_CNN_N": 14,
+      "miss_before_CNN_V": 30,
+      "other_annotation_windows": 6903,
+      "other_annotation_PVC": 3919
+    },
+    "V2_0.53": {
+      "conditional": {
+        "threshold": 0.53,
+        "precision": 0.9906396255850234,
+        "recall": 0.9984276729559748,
+        "f1": 0.9945184025058731,
+        "fp": 6,
+        "fn": 1,
+        "tp": 635,
+        "tn": 4523
+      },
+      "end_to_end": {
+        "tp": 635,
+        "fp": 154,
+        "fn": 31,
+        "precision": 0.8048162230671736,
+        "recall": 0.9534534534534534,
+        "f1": 0.872852233676976
+      },
+      "unmatched_PVC": 148,
+      "miss_before_CNN_N": 14,
+      "miss_before_CNN_V": 30,
+      "other_annotation_windows": 6903,
+      "other_annotation_PVC": 3905
+    }
+  },
+  "scope": "same Train-development records; threshold selected beforehand on annotation-centered scores, no end-to-end threshold retuning",
+  "protected_files_unchanged": 60
+}

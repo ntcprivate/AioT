@@ -1,0 +1,100 @@
+{
+  "groups": {
+    "Fit": {
+      "MITBIH": [
+        "101",
+        "103",
+        "105",
+        "114",
+        "119",
+        "201",
+        "205",
+        "207",
+        "213",
+        "217",
+        "221",
+        "223",
+        "228",
+        "230"
+      ],
+      "INCART": [
+        "3",
+        "4",
+        "5",
+        "14",
+        "18",
+        "19",
+        "22",
+        "25",
+        "26",
+        "29"
+      ]
+    },
+    "Calibration": {
+      "MITBIH": [
+        "115",
+        "209",
+        "212",
+        "214",
+        "219",
+        "220",
+        "233",
+        "234"
+      ],
+      "INCART": [
+        "7",
+        "12",
+        "15",
+        "16",
+        "20"
+      ]
+    },
+    "Evaluation": {
+      "MITBIH": [
+        "111",
+        "112",
+        "116",
+        "124",
+        "202",
+        "208",
+        "215",
+        "231",
+        "100",
+        "106",
+        "109",
+        "118",
+        "121",
+        "122",
+        "203",
+        "210"
+      ],
+      "INCART": [
+        "1",
+        "6",
+        "8",
+        "13",
+        "28",
+        "32",
+        "2",
+        "11",
+        "21",
+        "23",
+        "24",
+        "31"
+      ]
+    }
+  },
+  "partition": "Reuse frozen V4-A Fit/Calibration/Evaluation; no new parameter selection. Older research exposed these records; many Evaluation groups were in CNN Fit, so not independent model validation.",
+  "hypotheses": [
+    "A: center morphology/window-neighbor contrast differs between rescued PVC and newly false-positive N",
+    "B: missed PVC examples can define Train-only candidates, with hard-negative N protection",
+    "C: fixed diagnostic OR at unchanged thresholds .88/.87/.80 quantifies real rescue/FP tradeoff; not an oracle or chosen cascade"
+  ],
+  "thresholds": {
+    "V4": 0.88,
+    "V6": 0.87,
+    "V11": 0.8
+  },
+  "feature_definitions": "central128 half-amplitude support, not clinical QRS duration; PTP; current detector RR; window correlation with previous detector window; central/context energy ratio; fixed scores",
+  "no_Test": true
+}

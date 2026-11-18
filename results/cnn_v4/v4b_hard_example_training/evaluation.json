@@ -1,0 +1,5244 @@
+{
+  "config": {
+    "architecture": "V4 849 params, no RR; original V4 untouched",
+    "seed": 42,
+    "fold_seed": "42+1000*k",
+    "folds_sha256": "4d626d9a95624a3d698fd4762dd4e6b7519476efb5f653ab076394902f056321",
+    "baseline": "Reuse exact Step1 V4 checkpoints trained on identical Fit/Checkpoint groups,seed,BCE,classweights,Adam.001,batch128,max20,patience5,no augmentation; source training metadata recorded, historical runtime environment incomplete",
+    "hard_mining": "baseline best model scores on Fit only, NOT OOF; within each class select top10% loss (positive1-score,negative score), deterministic stable ties",
+    "weighting": "2x for hard Fit examples then normalize within class; multiply original Fit class weight; equivalent weighted exposure ~18.18% hard per class",
+    "loss": "binary_crossentropy",
+    "augmentation": false,
+    "epochs": 20,
+    "patience": 5,
+    "batch": 128,
+    "threshold": "same baseline grid .05.. .95 step.01 max combined Calibration PVC F1, tie precision then smaller threshold",
+    "single_factor": "class-balanced Fit hardness weighting; no independent attribution to positive vs negative arms",
+    "passing_rule": "both mean fold end-to-end F1 >= baseline; INC mean Recall increases; MIT mean Recall drop<=1pp; each mean FP/1000N increase <=max(1,10% baseline); worst fold F1 not worse on either dataset; >=60% patient/record groups with PVC have F1 drop<=2pp",
+    "evaluation_limit": "Previously examined Train+Development; no Test; folds separate Fit/Checkpoint/Calibration/outer for each run; exploratory adaptive validation"
+  },
+  "folds": [
+    {
+      "fold_index": 0,
+      "baseline_sha256": "69dd08d9f193b0c9563a9eef55acc6ef49501956e408370c2e18c48598440d50",
+      "v4b_sha256": "f935b85d4b64e0e794f9b1b1f79ea0c6f69c76b2b5d85b48328e1d713cfba8f2",
+      "training": {
+        "sha256": "f935b85d4b64e0e794f9b1b1f79ea0c6f69c76b2b5d85b48328e1d713cfba8f2",
+        "best_epoch": 2,
+        "epochs_run": 7,
+        "history": [
+          {
+            "epoch": 1,
+            "checkpoint_pr_auc": 0.6109482024205445,
+            "loss": 0.5918288230895996
+          },
+          {
+            "epoch": 2,
+            "checkpoint_pr_auc": 0.7196199614869796,
+            "loss": 0.48599186539649963
+          },
+          {
+            "epoch": 3,
+            "checkpoint_pr_auc": 0.6398280237584436,
+            "loss": 0.38511422276496887
+          },
+          {
+            "epoch": 4,
+            "checkpoint_pr_auc": 0.6224972178124134,
+            "loss": 0.30225542187690735
+          },
+          {
+            "epoch": 5,
+            "checkpoint_pr_auc": 0.661092698110807,
+            "loss": 0.2559388279914856
+          },
+          {
+            "epoch": 6,
+            "checkpoint_pr_auc": 0.6744527397276195,
+            "loss": 0.22947752475738525
+          },
+          {
+            "epoch": 7,
+            "checkpoint_pr_auc": 0.704051354468735,
+            "loss": 0.211248978972435
+          }
+        ],
+        "mining": {
+          "0": {
+            "Fit_samples": 74783,
+            "hard_samples": 7479,
+            "mean_hard_baseline_score": 0.7045091986656189
+          },
+          "1": {
+            "Fit_samples": 9204,
+            "hard_samples": 921,
+            "mean_hard_baseline_score": 0.27400410175323486
+          }
+        }
+      },
+      "CNN_only": {
+        "V4": {
+          "MITBIH": {
+            "samples": 13322,
+            "N": 11988,
+            "V": 1334,
+            "threshold": 0.83,
+            "accuracy": 0.9715508181954662,
+            "precision": 0.8598342125094197,
+            "recall": 0.8553223388305847,
+            "f1": 0.8575723412251034,
+            "pr_auc": 0.9243126142290529,
+            "fp_per_1000_normal": 15.515515515515515,
+            "TP": 1141,
+            "FP": 186,
+            "FN": 193,
+            "TN": 11802,
+            "confusion_rows_N_V": [
+              [
+                11802,
+                186
+              ],
+              [
+                193,
+                1141
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 28879,
+            "N": 25253,
+            "V": 3626,
+            "threshold": 0.83,
+            "accuracy": 0.9298798434848852,
+            "precision": 0.817029702970297,
+            "recall": 0.5689464975179261,
+            "f1": 0.6707852381726548,
+            "pr_auc": 0.7142044501020144,
+            "fp_per_1000_normal": 18.294856056706134,
+            "TP": 2063,
+            "FP": 462,
+            "FN": 1563,
+            "TN": 24791,
+            "confusion_rows_N_V": [
+              [
+                24791,
+                462
+              ],
+              [
+                1563,
+                2063
+              ]
+            ]
+          }
+        },
+        "V4-B": {
+          "MITBIH": {
+            "samples": 13322,
+            "N": 11988,
+            "V": 1334,
+            "threshold": 0.79,
+            "accuracy": 0.9739528599309413,
+            "precision": 0.8542713567839196,
+            "recall": 0.8920539730134932,
+            "f1": 0.8727539420608728,
+            "pr_auc": 0.9497632510469913,
+            "fp_per_1000_normal": 16.9336002669336,
+            "TP": 1190,
+            "FP": 203,
+            "FN": 144,
+            "TN": 11785,
+            "confusion_rows_N_V": [
+              [
+                11785,
+                203
+              ],
+              [
+                144,
+                1190
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 28879,
+            "N": 25253,
+            "V": 3626,
+            "threshold": 0.79,
+            "accuracy": 0.9197686900515946,
+            "precision": 0.7117437722419929,
+            "recall": 0.6067291781577496,
+            "f1": 0.6550543397350008,
+            "pr_auc": 0.7231634114794507,
+            "fp_per_1000_normal": 35.2829366807904,
+            "TP": 2200,
+            "FP": 891,
+            "FN": 1426,
+            "TN": 24362,
+            "confusion_rows_N_V": [
+              [
+                24362,
+                891
+              ],
+              [
+                1426,
+                2200
+              ]
+            ]
+          }
+        }
+      },
+      "end_to_end": {
+        "V4": [
+          {
+            "dataset": "INCART",
+            "record": "I01",
+            "group": "1",
+            "TP": 14,
+            "FP": 132,
+            "FN": 330,
+            "TN": 1977,
+            "N": 2413,
+            "V": 344,
+            "missingN": 330,
+            "missingV": 35,
+            "extra_peaks": 329,
+            "FP_matched_N": 106,
+            "FP_unmatched_alarm": 26
+          },
+          {
+            "dataset": "INCART",
+            "record": "I02",
+            "group": "1",
+            "TP": 4,
+            "FP": 48,
+            "FN": 225,
+            "TN": 2343,
+            "N": 2445,
+            "V": 229,
+            "missingN": 69,
+            "missingV": 3,
+            "extra_peaks": 75,
+            "FP_matched_N": 33,
+            "FP_unmatched_alarm": 15
+          },
+          {
+            "dataset": "INCART",
+            "record": "I12",
+            "group": "6",
+            "TP": 2,
+            "FP": 2,
+            "FN": 4,
+            "TN": 2787,
+            "N": 2800,
+            "V": 6,
+            "missingN": 12,
+            "missingV": 2,
+            "extra_peaks": 11,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I13",
+            "group": "6",
+            "TP": 229,
+            "FP": 0,
+            "FN": 1,
+            "TN": 1792,
+            "N": 1793,
+            "V": 230,
+            "missingN": 1,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I14",
+            "group": "6",
+            "TP": 64,
+            "FP": 2,
+            "FN": 0,
+            "TN": 1795,
+            "N": 1802,
+            "V": 64,
+            "missingN": 6,
+            "missingV": 0,
+            "extra_peaks": 9,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I16",
+            "group": "8",
+            "TP": 0,
+            "FP": 1117,
+            "FN": 2,
+            "TN": 0,
+            "N": 0,
+            "V": 2,
+            "missingN": 0,
+            "missingV": 1,
+            "extra_peaks": 1355,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1117
+          },
+          {
+            "dataset": "INCART",
+            "record": "I17",
+            "group": "8",
+            "TP": 0,
+            "FP": 20,
+            "FN": 27,
+            "TN": 0,
+            "N": 0,
+            "V": 27,
+            "missingN": 0,
+            "missingV": 3,
+            "extra_peaks": 167,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 20
+          },
+          {
+            "dataset": "INCART",
+            "record": "I27",
+            "group": "13",
+            "TP": 707,
+            "FP": 26,
+            "FN": 13,
+            "TN": 1842,
+            "N": 1885,
+            "V": 720,
+            "missingN": 19,
+            "missingV": 3,
+            "extra_peaks": 12,
+            "FP_matched_N": 24,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I28",
+            "group": "13",
+            "TP": 4,
+            "FP": 10,
+            "FN": 0,
+            "TN": 1685,
+            "N": 1713,
+            "V": 4,
+            "missingN": 23,
+            "missingV": 0,
+            "extra_peaks": 12,
+            "FP_matched_N": 5,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "INCART",
+            "record": "I65",
+            "group": "28",
+            "TP": 49,
+            "FP": 11,
+            "FN": 333,
+            "TN": 2249,
+            "N": 2273,
+            "V": 382,
+            "missingN": 16,
+            "missingV": 3,
+            "extra_peaks": 17,
+            "FP_matched_N": 8,
+            "FP_unmatched_alarm": 3
+          },
+          {
+            "dataset": "INCART",
+            "record": "I66",
+            "group": "28",
+            "TP": 37,
+            "FP": 17,
+            "FN": 163,
+            "TN": 2034,
+            "N": 2139,
+            "V": 200,
+            "missingN": 93,
+            "missingV": 7,
+            "extra_peaks": 62,
+            "FP_matched_N": 12,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "INCART",
+            "record": "I67",
+            "group": "28",
+            "TP": 49,
+            "FP": 7,
+            "FN": 482,
+            "TN": 2401,
+            "N": 2438,
+            "V": 531,
+            "missingN": 32,
+            "missingV": 2,
+            "extra_peaks": 39,
+            "FP_matched_N": 5,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I74",
+            "group": "32",
+            "TP": 266,
+            "FP": 15,
+            "FN": 8,
+            "TN": 2050,
+            "N": 2083,
+            "V": 274,
+            "missingN": 19,
+            "missingV": 2,
+            "extra_peaks": 44,
+            "FP_matched_N": 14,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I75",
+            "group": "32",
+            "TP": 612,
+            "FP": 1,
+            "FN": 1,
+            "TN": 1480,
+            "N": 1483,
+            "V": 613,
+            "missingN": 2,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "111",
+            "group": "111",
+            "TP": 1,
+            "FP": 1,
+            "FN": 0,
+            "TN": 0,
+            "N": 0,
+            "V": 1,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 23,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "112",
+            "group": "112",
+            "TP": 0,
+            "FP": 2,
+            "FN": 0,
+            "TN": 2531,
+            "N": 2537,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 9,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "116",
+            "group": "116",
+            "TP": 106,
+            "FP": 7,
+            "FN": 3,
+            "TN": 2278,
+            "N": 2302,
+            "V": 109,
+            "missingN": 20,
+            "missingV": 1,
+            "extra_peaks": 4,
+            "FP_matched_N": 4,
+            "FP_unmatched_alarm": 3
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "124",
+            "group": "124",
+            "TP": 41,
+            "FP": 0,
+            "FN": 6,
+            "TN": 0,
+            "N": 0,
+            "V": 47,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "202",
+            "group": "202",
+            "TP": 19,
+            "FP": 153,
+            "FN": 0,
+            "TN": 1907,
+            "N": 2061,
+            "V": 19,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 4,
+            "FP_matched_N": 151,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "208",
+            "group": "208",
+            "TP": 933,
+            "FP": 16,
+            "FN": 59,
+            "TN": 1561,
+            "N": 1586,
+            "V": 992,
+            "missingN": 11,
+            "missingV": 3,
+            "extra_peaks": 6,
+            "FP_matched_N": 14,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "215",
+            "group": "215",
+            "TP": 37,
+            "FP": 0,
+            "FN": 127,
+            "TN": 3190,
+            "N": 3195,
+            "V": 164,
+            "missingN": 5,
+            "missingV": 3,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "231",
+            "group": "231",
+            "TP": 2,
+            "FP": 0,
+            "FN": 0,
+            "TN": 314,
+            "N": 314,
+            "V": 2,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 53,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          }
+        ],
+        "V4-B": [
+          {
+            "dataset": "INCART",
+            "record": "I01",
+            "group": "1",
+            "TP": 15,
+            "FP": 140,
+            "FN": 329,
+            "TN": 1963,
+            "N": 2413,
+            "V": 344,
+            "missingN": 330,
+            "missingV": 35,
+            "extra_peaks": 329,
+            "FP_matched_N": 120,
+            "FP_unmatched_alarm": 20
+          },
+          {
+            "dataset": "INCART",
+            "record": "I02",
+            "group": "1",
+            "TP": 2,
+            "FP": 47,
+            "FN": 227,
+            "TN": 2344,
+            "N": 2445,
+            "V": 229,
+            "missingN": 69,
+            "missingV": 3,
+            "extra_peaks": 75,
+            "FP_matched_N": 32,
+            "FP_unmatched_alarm": 15
+          },
+          {
+            "dataset": "INCART",
+            "record": "I12",
+            "group": "6",
+            "TP": 1,
+            "FP": 1,
+            "FN": 5,
+            "TN": 2787,
+            "N": 2800,
+            "V": 6,
+            "missingN": 12,
+            "missingV": 2,
+            "extra_peaks": 11,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I13",
+            "group": "6",
+            "TP": 229,
+            "FP": 0,
+            "FN": 1,
+            "TN": 1792,
+            "N": 1793,
+            "V": 230,
+            "missingN": 1,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I14",
+            "group": "6",
+            "TP": 64,
+            "FP": 2,
+            "FN": 0,
+            "TN": 1795,
+            "N": 1802,
+            "V": 64,
+            "missingN": 6,
+            "missingV": 0,
+            "extra_peaks": 9,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I16",
+            "group": "8",
+            "TP": 0,
+            "FP": 1082,
+            "FN": 2,
+            "TN": 0,
+            "N": 0,
+            "V": 2,
+            "missingN": 0,
+            "missingV": 1,
+            "extra_peaks": 1355,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1082
+          },
+          {
+            "dataset": "INCART",
+            "record": "I17",
+            "group": "8",
+            "TP": 0,
+            "FP": 10,
+            "FN": 27,
+            "TN": 0,
+            "N": 0,
+            "V": 27,
+            "missingN": 0,
+            "missingV": 3,
+            "extra_peaks": 167,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 10
+          },
+          {
+            "dataset": "INCART",
+            "record": "I27",
+            "group": "13",
+            "TP": 713,
+            "FP": 232,
+            "FN": 7,
+            "TN": 1636,
+            "N": 1885,
+            "V": 720,
+            "missingN": 19,
+            "missingV": 3,
+            "extra_peaks": 12,
+            "FP_matched_N": 230,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I28",
+            "group": "13",
+            "TP": 4,
+            "FP": 6,
+            "FN": 0,
+            "TN": 1688,
+            "N": 1713,
+            "V": 4,
+            "missingN": 23,
+            "missingV": 0,
+            "extra_peaks": 12,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 4
+          },
+          {
+            "dataset": "INCART",
+            "record": "I65",
+            "group": "28",
+            "TP": 104,
+            "FP": 9,
+            "FN": 278,
+            "TN": 2250,
+            "N": 2273,
+            "V": 382,
+            "missingN": 16,
+            "missingV": 3,
+            "extra_peaks": 17,
+            "FP_matched_N": 7,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I66",
+            "group": "28",
+            "TP": 50,
+            "FP": 14,
+            "FN": 150,
+            "TN": 2037,
+            "N": 2139,
+            "V": 200,
+            "missingN": 93,
+            "missingV": 7,
+            "extra_peaks": 62,
+            "FP_matched_N": 9,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "INCART",
+            "record": "I67",
+            "group": "28",
+            "TP": 134,
+            "FP": 8,
+            "FN": 397,
+            "TN": 2399,
+            "N": 2438,
+            "V": 531,
+            "missingN": 32,
+            "missingV": 2,
+            "extra_peaks": 39,
+            "FP_matched_N": 7,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I74",
+            "group": "32",
+            "TP": 258,
+            "FP": 3,
+            "FN": 16,
+            "TN": 2062,
+            "N": 2083,
+            "V": 274,
+            "missingN": 19,
+            "missingV": 2,
+            "extra_peaks": 44,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I75",
+            "group": "32",
+            "TP": 612,
+            "FP": 0,
+            "FN": 1,
+            "TN": 1481,
+            "N": 1483,
+            "V": 613,
+            "missingN": 2,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "111",
+            "group": "111",
+            "TP": 1,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "N": 0,
+            "V": 1,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 23,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "112",
+            "group": "112",
+            "TP": 0,
+            "FP": 4,
+            "FN": 0,
+            "TN": 2529,
+            "N": 2537,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 9,
+            "FP_matched_N": 4,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "116",
+            "group": "116",
+            "TP": 108,
+            "FP": 7,
+            "FN": 1,
+            "TN": 2278,
+            "N": 2302,
+            "V": 109,
+            "missingN": 20,
+            "missingV": 1,
+            "extra_peaks": 4,
+            "FP_matched_N": 4,
+            "FP_unmatched_alarm": 3
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "124",
+            "group": "124",
+            "TP": 41,
+            "FP": 0,
+            "FN": 6,
+            "TN": 0,
+            "N": 0,
+            "V": 47,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "202",
+            "group": "202",
+            "TP": 19,
+            "FP": 159,
+            "FN": 0,
+            "TN": 1901,
+            "N": 2061,
+            "V": 19,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 4,
+            "FP_matched_N": 157,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "208",
+            "group": "208",
+            "TP": 947,
+            "FP": 12,
+            "FN": 45,
+            "TN": 1564,
+            "N": 1586,
+            "V": 992,
+            "missingN": 11,
+            "missingV": 3,
+            "extra_peaks": 6,
+            "FP_matched_N": 11,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "215",
+            "group": "215",
+            "TP": 62,
+            "FP": 4,
+            "FN": 102,
+            "TN": 3186,
+            "N": 3195,
+            "V": 164,
+            "missingN": 5,
+            "missingV": 3,
+            "extra_peaks": 0,
+            "FP_matched_N": 4,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "231",
+            "group": "231",
+            "TP": 2,
+            "FP": 0,
+            "FN": 0,
+            "TN": 314,
+            "N": 314,
+            "V": 2,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 53,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          }
+        ]
+      },
+      "thresholds": {
+        "V4": 0.83,
+        "V4-B": 0.79
+      }
+    },
+    {
+      "fold_index": 1,
+      "baseline_sha256": "782eb22ed46ea45010bd96532b1ee83a68d4e25e71567c5d843981a69cec1b39",
+      "v4b_sha256": "d3ed83293e30c4fd5a826fbcec48ecbb170f347c819bc90731c82a43a0c4c637",
+      "training": {
+        "sha256": "d3ed83293e30c4fd5a826fbcec48ecbb170f347c819bc90731c82a43a0c4c637",
+        "best_epoch": 3,
+        "epochs_run": 8,
+        "history": [
+          {
+            "epoch": 1,
+            "checkpoint_pr_auc": 0.5592238526958491,
+            "loss": 0.5842359066009521
+          },
+          {
+            "epoch": 2,
+            "checkpoint_pr_auc": 0.8657124088537174,
+            "loss": 0.4806389808654785
+          },
+          {
+            "epoch": 3,
+            "checkpoint_pr_auc": 0.9364061389616628,
+            "loss": 0.3884948194026947
+          },
+          {
+            "epoch": 4,
+            "checkpoint_pr_auc": 0.9331346587474516,
+            "loss": 0.32684624195098877
+          },
+          {
+            "epoch": 5,
+            "checkpoint_pr_auc": 0.9172528242860126,
+            "loss": 0.2914334833621979
+          },
+          {
+            "epoch": 6,
+            "checkpoint_pr_auc": 0.9195854557425879,
+            "loss": 0.27324506640434265
+          },
+          {
+            "epoch": 7,
+            "checkpoint_pr_auc": 0.9141579504286561,
+            "loss": 0.2619350552558899
+          },
+          {
+            "epoch": 8,
+            "checkpoint_pr_auc": 0.9105599826579129,
+            "loss": 0.2502879500389099
+          }
+        ],
+        "mining": {
+          "0": {
+            "Fit_samples": 73607,
+            "hard_samples": 7361,
+            "mean_hard_baseline_score": 0.6307086944580078
+          },
+          "1": {
+            "Fit_samples": 9713,
+            "hard_samples": 972,
+            "mean_hard_baseline_score": 0.24694085121154785
+          }
+        }
+      },
+      "CNN_only": {
+        "V4": {
+          "MITBIH": {
+            "samples": 14240,
+            "N": 13026,
+            "V": 1214,
+            "threshold": 0.86,
+            "accuracy": 0.9075842696629214,
+            "precision": 0.46867321867321865,
+            "recall": 0.628500823723229,
+            "f1": 0.5369458128078818,
+            "pr_auc": 0.5668650959085908,
+            "fp_per_1000_normal": 66.40565023798557,
+            "TP": 763,
+            "FP": 865,
+            "FN": 451,
+            "TN": 12161,
+            "confusion_rows_N_V": [
+              [
+                12161,
+                865
+              ],
+              [
+                451,
+                763
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 32880,
+            "N": 29489,
+            "V": 3391,
+            "threshold": 0.86,
+            "accuracy": 0.9753041362530414,
+            "precision": 0.9285476902625457,
+            "recall": 0.8239457387201415,
+            "f1": 0.8731249999999999,
+            "pr_auc": 0.8882630713914642,
+            "fp_per_1000_normal": 7.290854216826613,
+            "TP": 2794,
+            "FP": 215,
+            "FN": 597,
+            "TN": 29274,
+            "confusion_rows_N_V": [
+              [
+                29274,
+                215
+              ],
+              [
+                597,
+                2794
+              ]
+            ]
+          }
+        },
+        "V4-B": {
+          "MITBIH": {
+            "samples": 14240,
+            "N": 13026,
+            "V": 1214,
+            "threshold": 0.76,
+            "accuracy": 0.9043539325842697,
+            "precision": 0.45375,
+            "recall": 0.5980230642504119,
+            "f1": 0.5159914712153517,
+            "pr_auc": 0.5353950771120113,
+            "fp_per_1000_normal": 67.096576078612,
+            "TP": 726,
+            "FP": 874,
+            "FN": 488,
+            "TN": 12152,
+            "confusion_rows_N_V": [
+              [
+                12152,
+                874
+              ],
+              [
+                488,
+                726
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 32880,
+            "N": 29489,
+            "V": 3391,
+            "threshold": 0.76,
+            "accuracy": 0.9498175182481752,
+            "precision": 0.7244135086362464,
+            "recall": 0.8286641108817459,
+            "f1": 0.7730398899587345,
+            "pr_auc": 0.8615081612675213,
+            "fp_per_1000_normal": 36.25080538505883,
+            "TP": 2810,
+            "FP": 1069,
+            "FN": 581,
+            "TN": 28420,
+            "confusion_rows_N_V": [
+              [
+                28420,
+                1069
+              ],
+              [
+                581,
+                2810
+              ]
+            ]
+          }
+        }
+      },
+      "end_to_end": {
+        "V4": [
+          {
+            "dataset": "INCART",
+            "record": "I03",
+            "group": "2",
+            "TP": 0,
+            "FP": 8,
+            "FN": 125,
+            "TN": 2277,
+            "N": 2325,
+            "V": 125,
+            "missingN": 40,
+            "missingV": 1,
+            "extra_peaks": 90,
+            "FP_matched_N": 8,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I04",
+            "group": "2",
+            "TP": 8,
+            "FP": 0,
+            "FN": 113,
+            "TN": 1884,
+            "N": 2270,
+            "V": 121,
+            "missingN": 386,
+            "missingV": 0,
+            "extra_peaks": 189,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I05",
+            "group": "2",
+            "TP": 84,
+            "FP": 60,
+            "FN": 163,
+            "TN": 1436,
+            "N": 1520,
+            "V": 247,
+            "missingN": 33,
+            "missingV": 0,
+            "extra_peaks": 240,
+            "FP_matched_N": 51,
+            "FP_unmatched_alarm": 9
+          },
+          {
+            "dataset": "INCART",
+            "record": "I23",
+            "group": "11",
+            "TP": 1,
+            "FP": 0,
+            "FN": 12,
+            "TN": 2179,
+            "N": 2192,
+            "V": 13,
+            "missingN": 13,
+            "missingV": 0,
+            "extra_peaks": 26,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I24",
+            "group": "11",
+            "TP": 1,
+            "FP": 1,
+            "FN": 5,
+            "TN": 2555,
+            "N": 2565,
+            "V": 6,
+            "missingN": 9,
+            "missingV": 0,
+            "extra_peaks": 7,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I47",
+            "group": "21",
+            "TP": 91,
+            "FP": 23,
+            "FN": 2,
+            "TN": 1785,
+            "N": 1859,
+            "V": 93,
+            "missingN": 56,
+            "missingV": 1,
+            "extra_peaks": 287,
+            "FP_matched_N": 18,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "INCART",
+            "record": "I48",
+            "group": "21",
+            "TP": 231,
+            "FP": 9,
+            "FN": 4,
+            "TN": 2060,
+            "N": 2119,
+            "V": 235,
+            "missingN": 58,
+            "missingV": 4,
+            "extra_peaks": 210,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 8
+          },
+          {
+            "dataset": "INCART",
+            "record": "I51",
+            "group": "23",
+            "TP": 800,
+            "FP": 23,
+            "FN": 3,
+            "TN": 1944,
+            "N": 1970,
+            "V": 803,
+            "missingN": 3,
+            "missingV": 2,
+            "extra_peaks": 2,
+            "FP_matched_N": 23,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I52",
+            "group": "23",
+            "TP": 137,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1607,
+            "N": 1610,
+            "V": 137,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I53",
+            "group": "23",
+            "TP": 1098,
+            "FP": 1,
+            "FN": 13,
+            "TN": 1145,
+            "N": 1151,
+            "V": 1111,
+            "missingN": 6,
+            "missingV": 6,
+            "extra_peaks": 8,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I54",
+            "group": "24",
+            "TP": 0,
+            "FP": 0,
+            "FN": 22,
+            "TN": 2229,
+            "N": 2340,
+            "V": 22,
+            "missingN": 111,
+            "missingV": 0,
+            "extra_peaks": 386,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I55",
+            "group": "24",
+            "TP": 2,
+            "FP": 0,
+            "FN": 15,
+            "TN": 2135,
+            "N": 2148,
+            "V": 17,
+            "missingN": 13,
+            "missingV": 0,
+            "extra_peaks": 43,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I56",
+            "group": "24",
+            "TP": 0,
+            "FP": 0,
+            "FN": 7,
+            "TN": 1667,
+            "N": 1672,
+            "V": 7,
+            "missingN": 5,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I72",
+            "group": "31",
+            "TP": 282,
+            "FP": 71,
+            "FN": 104,
+            "TN": 1802,
+            "N": 1876,
+            "V": 386,
+            "missingN": 3,
+            "missingV": 3,
+            "extra_peaks": 0,
+            "FP_matched_N": 71,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I73",
+            "group": "31",
+            "TP": 30,
+            "FP": 16,
+            "FN": 40,
+            "TN": 1872,
+            "N": 1890,
+            "V": 70,
+            "missingN": 2,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 16,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "100",
+            "group": "100",
+            "TP": 0,
+            "FP": 0,
+            "FN": 1,
+            "TN": 2235,
+            "N": 2239,
+            "V": 1,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "106",
+            "group": "106",
+            "TP": 326,
+            "FP": 2,
+            "FN": 194,
+            "TN": 1506,
+            "N": 1507,
+            "V": 520,
+            "missingN": 1,
+            "missingV": 7,
+            "extra_peaks": 6,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "109",
+            "group": "109",
+            "TP": 6,
+            "FP": 0,
+            "FN": 32,
+            "TN": 0,
+            "N": 0,
+            "V": 38,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "118",
+            "group": "118",
+            "TP": 4,
+            "FP": 0,
+            "FN": 12,
+            "TN": 0,
+            "N": 0,
+            "V": 16,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 4,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "121",
+            "group": "121",
+            "TP": 0,
+            "FP": 10,
+            "FN": 1,
+            "TN": 1837,
+            "N": 1861,
+            "V": 1,
+            "missingN": 15,
+            "missingV": 0,
+            "extra_peaks": 17,
+            "FP_matched_N": 9,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "122",
+            "group": "122",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2472,
+            "N": 2476,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "203",
+            "group": "203",
+            "TP": 350,
+            "FP": 783,
+            "FN": 94,
+            "TN": 1607,
+            "N": 2529,
+            "V": 444,
+            "missingN": 141,
+            "missingV": 39,
+            "extra_peaks": 30,
+            "FP_matched_N": 781,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "210",
+            "group": "210",
+            "TP": 40,
+            "FP": 3,
+            "FN": 154,
+            "TN": 2411,
+            "N": 2423,
+            "V": 194,
+            "missingN": 9,
+            "missingV": 4,
+            "extra_peaks": 5,
+            "FP_matched_N": 3,
+            "FP_unmatched_alarm": 0
+          }
+        ],
+        "V4-B": [
+          {
+            "dataset": "INCART",
+            "record": "I03",
+            "group": "2",
+            "TP": 1,
+            "FP": 311,
+            "FN": 124,
+            "TN": 1974,
+            "N": 2325,
+            "V": 125,
+            "missingN": 40,
+            "missingV": 1,
+            "extra_peaks": 90,
+            "FP_matched_N": 311,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I04",
+            "group": "2",
+            "TP": 9,
+            "FP": 11,
+            "FN": 112,
+            "TN": 1873,
+            "N": 2270,
+            "V": 121,
+            "missingN": 386,
+            "missingV": 0,
+            "extra_peaks": 189,
+            "FP_matched_N": 11,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I05",
+            "group": "2",
+            "TP": 99,
+            "FP": 671,
+            "FN": 148,
+            "TN": 907,
+            "N": 1520,
+            "V": 247,
+            "missingN": 33,
+            "missingV": 0,
+            "extra_peaks": 240,
+            "FP_matched_N": 580,
+            "FP_unmatched_alarm": 91
+          },
+          {
+            "dataset": "INCART",
+            "record": "I23",
+            "group": "11",
+            "TP": 2,
+            "FP": 0,
+            "FN": 11,
+            "TN": 2179,
+            "N": 2192,
+            "V": 13,
+            "missingN": 13,
+            "missingV": 0,
+            "extra_peaks": 26,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I24",
+            "group": "11",
+            "TP": 1,
+            "FP": 1,
+            "FN": 5,
+            "TN": 2555,
+            "N": 2565,
+            "V": 6,
+            "missingN": 9,
+            "missingV": 0,
+            "extra_peaks": 7,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I47",
+            "group": "21",
+            "TP": 91,
+            "FP": 24,
+            "FN": 2,
+            "TN": 1784,
+            "N": 1859,
+            "V": 93,
+            "missingN": 56,
+            "missingV": 1,
+            "extra_peaks": 287,
+            "FP_matched_N": 19,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "INCART",
+            "record": "I48",
+            "group": "21",
+            "TP": 231,
+            "FP": 8,
+            "FN": 4,
+            "TN": 2061,
+            "N": 2119,
+            "V": 235,
+            "missingN": 58,
+            "missingV": 4,
+            "extra_peaks": 210,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 8
+          },
+          {
+            "dataset": "INCART",
+            "record": "I51",
+            "group": "23",
+            "TP": 801,
+            "FP": 21,
+            "FN": 2,
+            "TN": 1946,
+            "N": 1970,
+            "V": 803,
+            "missingN": 3,
+            "missingV": 2,
+            "extra_peaks": 2,
+            "FP_matched_N": 21,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I52",
+            "group": "23",
+            "TP": 137,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1607,
+            "N": 1610,
+            "V": 137,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I53",
+            "group": "23",
+            "TP": 1101,
+            "FP": 1,
+            "FN": 10,
+            "TN": 1145,
+            "N": 1151,
+            "V": 1111,
+            "missingN": 6,
+            "missingV": 6,
+            "extra_peaks": 8,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I54",
+            "group": "24",
+            "TP": 3,
+            "FP": 0,
+            "FN": 19,
+            "TN": 2229,
+            "N": 2340,
+            "V": 22,
+            "missingN": 111,
+            "missingV": 0,
+            "extra_peaks": 386,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I55",
+            "group": "24",
+            "TP": 2,
+            "FP": 5,
+            "FN": 15,
+            "TN": 2130,
+            "N": 2148,
+            "V": 17,
+            "missingN": 13,
+            "missingV": 0,
+            "extra_peaks": 43,
+            "FP_matched_N": 5,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I56",
+            "group": "24",
+            "TP": 0,
+            "FP": 2,
+            "FN": 7,
+            "TN": 1665,
+            "N": 1672,
+            "V": 7,
+            "missingN": 5,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I72",
+            "group": "31",
+            "TP": 277,
+            "FP": 74,
+            "FN": 109,
+            "TN": 1799,
+            "N": 1876,
+            "V": 386,
+            "missingN": 3,
+            "missingV": 3,
+            "extra_peaks": 0,
+            "FP_matched_N": 74,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I73",
+            "group": "31",
+            "TP": 26,
+            "FP": 18,
+            "FN": 44,
+            "TN": 1870,
+            "N": 1890,
+            "V": 70,
+            "missingN": 2,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 18,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "100",
+            "group": "100",
+            "TP": 1,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2235,
+            "N": 2239,
+            "V": 1,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "106",
+            "group": "106",
+            "TP": 292,
+            "FP": 2,
+            "FN": 228,
+            "TN": 1506,
+            "N": 1507,
+            "V": 520,
+            "missingN": 1,
+            "missingV": 7,
+            "extra_peaks": 6,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "109",
+            "group": "109",
+            "TP": 8,
+            "FP": 0,
+            "FN": 30,
+            "TN": 0,
+            "N": 0,
+            "V": 38,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "118",
+            "group": "118",
+            "TP": 4,
+            "FP": 0,
+            "FN": 12,
+            "TN": 0,
+            "N": 0,
+            "V": 16,
+            "missingN": 0,
+            "missingV": 0,
+            "extra_peaks": 4,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "121",
+            "group": "121",
+            "TP": 0,
+            "FP": 42,
+            "FN": 1,
+            "TN": 1806,
+            "N": 1861,
+            "V": 1,
+            "missingN": 15,
+            "missingV": 0,
+            "extra_peaks": 17,
+            "FP_matched_N": 40,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "122",
+            "group": "122",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2472,
+            "N": 2476,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "203",
+            "group": "203",
+            "TP": 342,
+            "FP": 747,
+            "FN": 102,
+            "TN": 1645,
+            "N": 2529,
+            "V": 444,
+            "missingN": 141,
+            "missingV": 39,
+            "extra_peaks": 30,
+            "FP_matched_N": 743,
+            "FP_unmatched_alarm": 4
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "210",
+            "group": "210",
+            "TP": 45,
+            "FP": 7,
+            "FN": 149,
+            "TN": 2407,
+            "N": 2423,
+            "V": 194,
+            "missingN": 9,
+            "missingV": 4,
+            "extra_peaks": 5,
+            "FP_matched_N": 7,
+            "FP_unmatched_alarm": 0
+          }
+        ]
+      },
+      "thresholds": {
+        "V4": 0.86,
+        "V4-B": 0.76
+      }
+    },
+    {
+      "fold_index": 2,
+      "baseline_sha256": "750d1b177be2015f3807063b628bcfa1d3aae9abe21a0a058c3179019940f97b",
+      "v4b_sha256": "a926aac6d4b47aa06e0006e465c64d3e1f9044ecc762ed280861decb6abf9d88",
+      "training": {
+        "sha256": "a926aac6d4b47aa06e0006e465c64d3e1f9044ecc762ed280861decb6abf9d88",
+        "best_epoch": 3,
+        "epochs_run": 8,
+        "history": [
+          {
+            "epoch": 1,
+            "checkpoint_pr_auc": 0.6980758492781904,
+            "loss": 0.5419401526451111
+          },
+          {
+            "epoch": 2,
+            "checkpoint_pr_auc": 0.9053766540197022,
+            "loss": 0.40357208251953125
+          },
+          {
+            "epoch": 3,
+            "checkpoint_pr_auc": 0.9622904832079079,
+            "loss": 0.3220154345035553
+          },
+          {
+            "epoch": 4,
+            "checkpoint_pr_auc": 0.9553092428630247,
+            "loss": 0.2983558475971222
+          },
+          {
+            "epoch": 5,
+            "checkpoint_pr_auc": 0.9612474517263095,
+            "loss": 0.2863914668560028
+          },
+          {
+            "epoch": 6,
+            "checkpoint_pr_auc": 0.9544638517062586,
+            "loss": 0.27572283148765564
+          },
+          {
+            "epoch": 7,
+            "checkpoint_pr_auc": 0.9597963582179442,
+            "loss": 0.2696939706802368
+          },
+          {
+            "epoch": 8,
+            "checkpoint_pr_auc": 0.9574627240849194,
+            "loss": 0.2638269066810608
+          }
+        ],
+        "mining": {
+          "0": {
+            "Fit_samples": 79756,
+            "hard_samples": 7976,
+            "mean_hard_baseline_score": 0.6813632845878601
+          },
+          "1": {
+            "Fit_samples": 9565,
+            "hard_samples": 957,
+            "mean_hard_baseline_score": 0.5951500535011292
+          }
+        }
+      },
+      "CNN_only": {
+        "V4": {
+          "MITBIH": {
+            "samples": 15609,
+            "N": 14455,
+            "V": 1154,
+            "threshold": 0.72,
+            "accuracy": 0.9700813633160357,
+            "precision": 0.7370600414078675,
+            "recall": 0.925476603119584,
+            "f1": 0.8205916250480214,
+            "pr_auc": 0.9359676013459521,
+            "fp_per_1000_normal": 26.357661708751298,
+            "TP": 1068,
+            "FP": 381,
+            "FN": 86,
+            "TN": 14074,
+            "confusion_rows_N_V": [
+              [
+                14074,
+                381
+              ],
+              [
+                86,
+                1068
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 25596,
+            "N": 22628,
+            "V": 2968,
+            "threshold": 0.72,
+            "accuracy": 0.9776527582434755,
+            "precision": 0.87531328320802,
+            "recall": 0.9413746630727763,
+            "f1": 0.9071428571428571,
+            "pr_auc": 0.9556495041942893,
+            "fp_per_1000_normal": 17.58882800070709,
+            "TP": 2794,
+            "FP": 398,
+            "FN": 174,
+            "TN": 22230,
+            "confusion_rows_N_V": [
+              [
+                22230,
+                398
+              ],
+              [
+                174,
+                2794
+              ]
+            ]
+          }
+        },
+        "V4-B": {
+          "MITBIH": {
+            "samples": 15609,
+            "N": 14455,
+            "V": 1154,
+            "threshold": 0.46,
+            "accuracy": 0.9372157088858991,
+            "precision": 0.5443425076452599,
+            "recall": 0.925476603119584,
+            "f1": 0.6854942233632862,
+            "pr_auc": 0.9116681241242788,
+            "fp_per_1000_normal": 61.84711172604635,
+            "TP": 1068,
+            "FP": 894,
+            "FN": 86,
+            "TN": 13561,
+            "confusion_rows_N_V": [
+              [
+                13561,
+                894
+              ],
+              [
+                86,
+                1068
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 25596,
+            "N": 22628,
+            "V": 2968,
+            "threshold": 0.46,
+            "accuracy": 0.963666197843413,
+            "precision": 0.7788724685276409,
+            "recall": 0.9588948787061995,
+            "f1": 0.8595590456055572,
+            "pr_auc": 0.947505513778113,
+            "fp_per_1000_normal": 35.707972423546046,
+            "TP": 2846,
+            "FP": 808,
+            "FN": 122,
+            "TN": 21820,
+            "confusion_rows_N_V": [
+              [
+                21820,
+                808
+              ],
+              [
+                122,
+                2846
+              ]
+            ]
+          }
+        }
+      },
+      "end_to_end": {
+        "V4": [
+          {
+            "dataset": "INCART",
+            "record": "I15",
+            "group": "7",
+            "TP": 0,
+            "FP": 6,
+            "FN": 3,
+            "TN": 2617,
+            "N": 2632,
+            "V": 3,
+            "missingN": 10,
+            "missingV": 0,
+            "extra_peaks": 5,
+            "FP_matched_N": 5,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I25",
+            "group": "12",
+            "TP": 2,
+            "FP": 210,
+            "FN": 3,
+            "TN": 1565,
+            "N": 1705,
+            "V": 5,
+            "missingN": 33,
+            "missingV": 3,
+            "extra_peaks": 878,
+            "FP_matched_N": 107,
+            "FP_unmatched_alarm": 103
+          },
+          {
+            "dataset": "INCART",
+            "record": "I26",
+            "group": "12",
+            "TP": 1,
+            "FP": 13,
+            "FN": 3,
+            "TN": 1466,
+            "N": 1498,
+            "V": 4,
+            "missingN": 22,
+            "missingV": 0,
+            "extra_peaks": 1250,
+            "FP_matched_N": 10,
+            "FP_unmatched_alarm": 3
+          },
+          {
+            "dataset": "INCART",
+            "record": "I33",
+            "group": "15",
+            "TP": 1,
+            "FP": 1,
+            "FN": 0,
+            "TN": 1240,
+            "N": 1245,
+            "V": 1,
+            "missingN": 5,
+            "missingV": 0,
+            "extra_peaks": 17,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I34",
+            "group": "15",
+            "TP": 0,
+            "FP": 4,
+            "FN": 0,
+            "TN": 1422,
+            "N": 1429,
+            "V": 0,
+            "missingN": 5,
+            "missingV": 0,
+            "extra_peaks": 21,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I35",
+            "group": "16",
+            "TP": 368,
+            "FP": 82,
+            "FN": 90,
+            "TN": 3103,
+            "N": 3200,
+            "V": 458,
+            "missingN": 15,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 82,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I36",
+            "group": "16",
+            "TP": 331,
+            "FP": 209,
+            "FN": 119,
+            "TN": 3021,
+            "N": 3449,
+            "V": 450,
+            "missingN": 221,
+            "missingV": 71,
+            "extra_peaks": 57,
+            "FP_matched_N": 207,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I37",
+            "group": "16",
+            "TP": 451,
+            "FP": 1,
+            "FN": 1,
+            "TN": 2006,
+            "N": 2009,
+            "V": 452,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I44",
+            "group": "20",
+            "TP": 680,
+            "FP": 1,
+            "FN": 4,
+            "TN": 1800,
+            "N": 1803,
+            "V": 684,
+            "missingN": 2,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I45",
+            "group": "20",
+            "TP": 486,
+            "FP": 0,
+            "FN": 5,
+            "TN": 1433,
+            "N": 1437,
+            "V": 491,
+            "missingN": 4,
+            "missingV": 1,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I46",
+            "group": "20",
+            "TP": 407,
+            "FP": 22,
+            "FN": 15,
+            "TN": 2195,
+            "N": 2232,
+            "V": 422,
+            "missingN": 20,
+            "missingV": 0,
+            "extra_peaks": 20,
+            "FP_matched_N": 17,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "115",
+            "group": "115",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1949,
+            "N": 1953,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "209",
+            "group": "209",
+            "TP": 1,
+            "FP": 1,
+            "FN": 0,
+            "TN": 2606,
+            "N": 2621,
+            "V": 1,
+            "missingN": 14,
+            "missingV": 0,
+            "extra_peaks": 16,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "212",
+            "group": "212",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 919,
+            "N": 923,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 11,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "214",
+            "group": "214",
+            "TP": 189,
+            "FP": 1,
+            "FN": 67,
+            "TN": 0,
+            "N": 0,
+            "V": 256,
+            "missingN": 0,
+            "missingV": 3,
+            "extra_peaks": 2,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "219",
+            "group": "219",
+            "TP": 58,
+            "FP": 12,
+            "FN": 6,
+            "TN": 2067,
+            "N": 2082,
+            "V": 64,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 2,
+            "FP_matched_N": 12,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "220",
+            "group": "220",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1950,
+            "N": 1954,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "233",
+            "group": "233",
+            "TP": 817,
+            "FP": 376,
+            "FN": 14,
+            "TN": 1852,
+            "N": 2230,
+            "V": 831,
+            "missingN": 2,
+            "missingV": 7,
+            "extra_peaks": 0,
+            "FP_matched_N": 376,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "234",
+            "group": "234",
+            "TP": 0,
+            "FP": 2,
+            "FN": 3,
+            "TN": 2695,
+            "N": 2700,
+            "V": 3,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          }
+        ],
+        "V4-B": [
+          {
+            "dataset": "INCART",
+            "record": "I15",
+            "group": "7",
+            "TP": 0,
+            "FP": 4,
+            "FN": 3,
+            "TN": 2619,
+            "N": 2632,
+            "V": 3,
+            "missingN": 10,
+            "missingV": 0,
+            "extra_peaks": 5,
+            "FP_matched_N": 3,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I25",
+            "group": "12",
+            "TP": 1,
+            "FP": 250,
+            "FN": 4,
+            "TN": 1543,
+            "N": 1705,
+            "V": 5,
+            "missingN": 33,
+            "missingV": 3,
+            "extra_peaks": 878,
+            "FP_matched_N": 129,
+            "FP_unmatched_alarm": 121
+          },
+          {
+            "dataset": "INCART",
+            "record": "I26",
+            "group": "12",
+            "TP": 1,
+            "FP": 16,
+            "FN": 3,
+            "TN": 1475,
+            "N": 1498,
+            "V": 4,
+            "missingN": 22,
+            "missingV": 0,
+            "extra_peaks": 1250,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 15
+          },
+          {
+            "dataset": "INCART",
+            "record": "I33",
+            "group": "15",
+            "TP": 1,
+            "FP": 2,
+            "FN": 0,
+            "TN": 1240,
+            "N": 1245,
+            "V": 1,
+            "missingN": 5,
+            "missingV": 0,
+            "extra_peaks": 17,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I34",
+            "group": "15",
+            "TP": 0,
+            "FP": 2,
+            "FN": 0,
+            "TN": 1423,
+            "N": 1429,
+            "V": 0,
+            "missingN": 5,
+            "missingV": 0,
+            "extra_peaks": 21,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I35",
+            "group": "16",
+            "TP": 391,
+            "FP": 226,
+            "FN": 67,
+            "TN": 2959,
+            "N": 3200,
+            "V": 458,
+            "missingN": 15,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 226,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I36",
+            "group": "16",
+            "TP": 345,
+            "FP": 331,
+            "FN": 105,
+            "TN": 2910,
+            "N": 3449,
+            "V": 450,
+            "missingN": 221,
+            "missingV": 71,
+            "extra_peaks": 57,
+            "FP_matched_N": 318,
+            "FP_unmatched_alarm": 13
+          },
+          {
+            "dataset": "INCART",
+            "record": "I37",
+            "group": "16",
+            "TP": 451,
+            "FP": 68,
+            "FN": 1,
+            "TN": 1939,
+            "N": 2009,
+            "V": 452,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 67,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I44",
+            "group": "20",
+            "TP": 682,
+            "FP": 3,
+            "FN": 2,
+            "TN": 1798,
+            "N": 1803,
+            "V": 684,
+            "missingN": 2,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 3,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I45",
+            "group": "20",
+            "TP": 488,
+            "FP": 0,
+            "FN": 3,
+            "TN": 1433,
+            "N": 1437,
+            "V": 491,
+            "missingN": 4,
+            "missingV": 1,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I46",
+            "group": "20",
+            "TP": 410,
+            "FP": 24,
+            "FN": 12,
+            "TN": 2191,
+            "N": 2232,
+            "V": 422,
+            "missingN": 20,
+            "missingV": 0,
+            "extra_peaks": 20,
+            "FP_matched_N": 21,
+            "FP_unmatched_alarm": 3
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "115",
+            "group": "115",
+            "TP": 0,
+            "FP": 1,
+            "FN": 0,
+            "TN": 1948,
+            "N": 1953,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "209",
+            "group": "209",
+            "TP": 1,
+            "FP": 4,
+            "FN": 0,
+            "TN": 2603,
+            "N": 2621,
+            "V": 1,
+            "missingN": 14,
+            "missingV": 0,
+            "extra_peaks": 16,
+            "FP_matched_N": 4,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "212",
+            "group": "212",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 919,
+            "N": 923,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 11,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "214",
+            "group": "214",
+            "TP": 188,
+            "FP": 1,
+            "FN": 68,
+            "TN": 0,
+            "N": 0,
+            "V": 256,
+            "missingN": 0,
+            "missingV": 3,
+            "extra_peaks": 2,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "219",
+            "group": "219",
+            "TP": 57,
+            "FP": 6,
+            "FN": 7,
+            "TN": 2073,
+            "N": 2082,
+            "V": 64,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 2,
+            "FP_matched_N": 6,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "220",
+            "group": "220",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1950,
+            "N": 1954,
+            "V": 0,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "233",
+            "group": "233",
+            "TP": 816,
+            "FP": 890,
+            "FN": 15,
+            "TN": 1338,
+            "N": 2230,
+            "V": 831,
+            "missingN": 2,
+            "missingV": 7,
+            "extra_peaks": 0,
+            "FP_matched_N": 890,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "234",
+            "group": "234",
+            "TP": 1,
+            "FP": 2,
+            "FN": 2,
+            "TN": 2694,
+            "N": 2700,
+            "V": 3,
+            "missingN": 4,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 0
+          }
+        ]
+      },
+      "thresholds": {
+        "V4": 0.72,
+        "V4-B": 0.46
+      }
+    },
+    {
+      "fold_index": 3,
+      "baseline_sha256": "cedc793c7ed43a806d4393cab3b3de1e08ad6734f12b13410a302cc60f996aca",
+      "v4b_sha256": "e6d3f20e1cfed26ae69914ded06cd15a0adddb0ad2c66f3095b57644e612ca3a",
+      "training": {
+        "sha256": "e6d3f20e1cfed26ae69914ded06cd15a0adddb0ad2c66f3095b57644e612ca3a",
+        "best_epoch": 15,
+        "epochs_run": 20,
+        "history": [
+          {
+            "epoch": 1,
+            "checkpoint_pr_auc": 0.37159682503160046,
+            "loss": 0.5281912088394165
+          },
+          {
+            "epoch": 2,
+            "checkpoint_pr_auc": 0.4244904493048556,
+            "loss": 0.3600616753101349
+          },
+          {
+            "epoch": 3,
+            "checkpoint_pr_auc": 0.4572456853495341,
+            "loss": 0.31051504611968994
+          },
+          {
+            "epoch": 4,
+            "checkpoint_pr_auc": 0.456701487983009,
+            "loss": 0.29300305247306824
+          },
+          {
+            "epoch": 5,
+            "checkpoint_pr_auc": 0.47536150547170847,
+            "loss": 0.2764493525028229
+          },
+          {
+            "epoch": 6,
+            "checkpoint_pr_auc": 0.4944072402810113,
+            "loss": 0.26754799485206604
+          },
+          {
+            "epoch": 7,
+            "checkpoint_pr_auc": 0.5070073616116149,
+            "loss": 0.25806915760040283
+          },
+          {
+            "epoch": 8,
+            "checkpoint_pr_auc": 0.5241399520240296,
+            "loss": 0.2505742609500885
+          },
+          {
+            "epoch": 9,
+            "checkpoint_pr_auc": 0.5336730393371105,
+            "loss": 0.24302363395690918
+          },
+          {
+            "epoch": 10,
+            "checkpoint_pr_auc": 0.5756371470605477,
+            "loss": 0.23419281840324402
+          },
+          {
+            "epoch": 11,
+            "checkpoint_pr_auc": 0.5762577785320405,
+            "loss": 0.22566485404968262
+          },
+          {
+            "epoch": 12,
+            "checkpoint_pr_auc": 0.622787338091099,
+            "loss": 0.21717266738414764
+          },
+          {
+            "epoch": 13,
+            "checkpoint_pr_auc": 0.6110210135638464,
+            "loss": 0.2125847190618515
+          },
+          {
+            "epoch": 14,
+            "checkpoint_pr_auc": 0.6145817754141946,
+            "loss": 0.2071581929922104
+          },
+          {
+            "epoch": 15,
+            "checkpoint_pr_auc": 0.6234352103262258,
+            "loss": 0.2037135809659958
+          },
+          {
+            "epoch": 16,
+            "checkpoint_pr_auc": 0.6045165685399023,
+            "loss": 0.1991841197013855
+          },
+          {
+            "epoch": 17,
+            "checkpoint_pr_auc": 0.5999656101023056,
+            "loss": 0.19837363064289093
+          },
+          {
+            "epoch": 18,
+            "checkpoint_pr_auc": 0.6024895877267015,
+            "loss": 0.19130025804042816
+          },
+          {
+            "epoch": 19,
+            "checkpoint_pr_auc": 0.6070269859550933,
+            "loss": 0.18849463760852814
+          },
+          {
+            "epoch": 20,
+            "checkpoint_pr_auc": 0.601662545107468,
+            "loss": 0.18735936284065247
+          }
+        ],
+        "mining": {
+          "0": {
+            "Fit_samples": 79598,
+            "hard_samples": 7960,
+            "mean_hard_baseline_score": 0.5289188623428345
+          },
+          "1": {
+            "Fit_samples": 8727,
+            "hard_samples": 873,
+            "mean_hard_baseline_score": 0.4961920380592346
+          }
+        }
+      },
+      "CNN_only": {
+        "V4": {
+          "MITBIH": {
+            "samples": 13741,
+            "N": 12462,
+            "V": 1279,
+            "threshold": 0.86,
+            "accuracy": 0.9761298304344662,
+            "precision": 0.8089668615984406,
+            "recall": 0.9734167318217357,
+            "f1": 0.8836053938963804,
+            "pr_auc": 0.9457131072866714,
+            "fp_per_1000_normal": 23.591718825228696,
+            "TP": 1245,
+            "FP": 294,
+            "FN": 34,
+            "TN": 12168,
+            "confusion_rows_N_V": [
+              [
+                12168,
+                294
+              ],
+              [
+                34,
+                1245
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 29127,
+            "N": 25955,
+            "V": 3172,
+            "threshold": 0.86,
+            "accuracy": 0.9644659594190956,
+            "precision": 0.7913826015816744,
+            "recall": 0.9148802017654477,
+            "f1": 0.8486620851001608,
+            "pr_auc": 0.8980486443287845,
+            "fp_per_1000_normal": 29.47408977075708,
+            "TP": 2902,
+            "FP": 765,
+            "FN": 270,
+            "TN": 25190,
+            "confusion_rows_N_V": [
+              [
+                25190,
+                765
+              ],
+              [
+                270,
+                2902
+              ]
+            ]
+          }
+        },
+        "V4-B": {
+          "MITBIH": {
+            "samples": 13741,
+            "N": 12462,
+            "V": 1279,
+            "threshold": 0.64,
+            "accuracy": 0.9413434247871334,
+            "precision": 0.6171371966319961,
+            "recall": 0.9741985926505082,
+            "f1": 0.755609460278957,
+            "pr_auc": 0.8548682048950058,
+            "fp_per_1000_normal": 62.028566843203336,
+            "TP": 1246,
+            "FP": 773,
+            "FN": 33,
+            "TN": 11689,
+            "confusion_rows_N_V": [
+              [
+                11689,
+                773
+              ],
+              [
+                33,
+                1246
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 29127,
+            "N": 25955,
+            "V": 3172,
+            "threshold": 0.64,
+            "accuracy": 0.9716757647543516,
+            "precision": 0.8329078014184397,
+            "recall": 0.9255989911727617,
+            "f1": 0.8768105121696282,
+            "pr_auc": 0.8836760959623675,
+            "fp_per_1000_normal": 22.693122712386824,
+            "TP": 2936,
+            "FP": 589,
+            "FN": 236,
+            "TN": 25366,
+            "confusion_rows_N_V": [
+              [
+                25366,
+                589
+              ],
+              [
+                236,
+                2936
+              ]
+            ]
+          }
+        }
+      },
+      "end_to_end": {
+        "V4": [
+          {
+            "dataset": "INCART",
+            "record": "I06",
+            "group": "3",
+            "TP": 8,
+            "FP": 0,
+            "FN": 1,
+            "TN": 2412,
+            "N": 2436,
+            "V": 9,
+            "missingN": 24,
+            "missingV": 0,
+            "extra_peaks": 59,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I07",
+            "group": "3",
+            "TP": 1,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2437,
+            "N": 2640,
+            "V": 1,
+            "missingN": 203,
+            "missingV": 0,
+            "extra_peaks": 34,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I09",
+            "group": "5",
+            "TP": 4,
+            "FP": 0,
+            "FN": 37,
+            "TN": 2888,
+            "N": 2948,
+            "V": 41,
+            "missingN": 60,
+            "missingV": 0,
+            "extra_peaks": 414,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I10",
+            "group": "5",
+            "TP": 9,
+            "FP": 1,
+            "FN": 74,
+            "TN": 3384,
+            "N": 3599,
+            "V": 83,
+            "missingN": 214,
+            "missingV": 0,
+            "extra_peaks": 46,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I11",
+            "group": "5",
+            "TP": 4,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2071,
+            "N": 2078,
+            "V": 4,
+            "missingN": 7,
+            "missingV": 0,
+            "extra_peaks": 485,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I42",
+            "group": "19",
+            "TP": 1494,
+            "FP": 370,
+            "FN": 60,
+            "TN": 1172,
+            "N": 1546,
+            "V": 1554,
+            "missingN": 4,
+            "missingV": 4,
+            "extra_peaks": 0,
+            "FP_matched_N": 370,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I43",
+            "group": "19",
+            "TP": 1055,
+            "FP": 0,
+            "FN": 65,
+            "TN": 1085,
+            "N": 1087,
+            "V": 1120,
+            "missingN": 2,
+            "missingV": 5,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I57",
+            "group": "25",
+            "TP": 17,
+            "FP": 2,
+            "FN": 4,
+            "TN": 2784,
+            "N": 2842,
+            "V": 21,
+            "missingN": 57,
+            "missingV": 3,
+            "extra_peaks": 43,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I58",
+            "group": "25",
+            "TP": 12,
+            "FP": 1,
+            "FN": 0,
+            "TN": 2266,
+            "N": 2313,
+            "V": 12,
+            "missingN": 47,
+            "missingV": 0,
+            "extra_peaks": 66,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I68",
+            "group": "29",
+            "TP": 121,
+            "FP": 191,
+            "FN": 40,
+            "TN": 2186,
+            "N": 2481,
+            "V": 161,
+            "missingN": 106,
+            "missingV": 5,
+            "extra_peaks": 214,
+            "FP_matched_N": 189,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I69",
+            "group": "29",
+            "TP": 158,
+            "FP": 2,
+            "FN": 9,
+            "TN": 1989,
+            "N": 2000,
+            "V": 167,
+            "missingN": 10,
+            "missingV": 0,
+            "extra_peaks": 16,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "101",
+            "group": "101",
+            "TP": 0,
+            "FP": 1,
+            "FN": 0,
+            "TN": 1852,
+            "N": 1860,
+            "V": 0,
+            "missingN": 7,
+            "missingV": 0,
+            "extra_peaks": 10,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "114",
+            "group": "114",
+            "TP": 40,
+            "FP": 0,
+            "FN": 3,
+            "TN": 1819,
+            "N": 1820,
+            "V": 43,
+            "missingN": 1,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "119",
+            "group": "119",
+            "TP": 443,
+            "FP": 0,
+            "FN": 1,
+            "TN": 1542,
+            "N": 1543,
+            "V": 444,
+            "missingN": 1,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "205",
+            "group": "205",
+            "TP": 57,
+            "FP": 0,
+            "FN": 14,
+            "TN": 2565,
+            "N": 2571,
+            "V": 71,
+            "missingN": 6,
+            "missingV": 12,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "207",
+            "group": "207",
+            "TP": 78,
+            "FP": 78,
+            "FN": 27,
+            "TN": 0,
+            "N": 0,
+            "V": 105,
+            "missingN": 0,
+            "missingV": 7,
+            "extra_peaks": 101,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 78
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "213",
+            "group": "213",
+            "TP": 212,
+            "FP": 277,
+            "FN": 8,
+            "TN": 2359,
+            "N": 2641,
+            "V": 220,
+            "missingN": 5,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 277,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "221",
+            "group": "221",
+            "TP": 391,
+            "FP": 0,
+            "FN": 5,
+            "TN": 2029,
+            "N": 2031,
+            "V": 396,
+            "missingN": 2,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          }
+        ],
+        "V4-B": [
+          {
+            "dataset": "INCART",
+            "record": "I06",
+            "group": "3",
+            "TP": 8,
+            "FP": 3,
+            "FN": 1,
+            "TN": 2410,
+            "N": 2436,
+            "V": 9,
+            "missingN": 24,
+            "missingV": 0,
+            "extra_peaks": 59,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I07",
+            "group": "3",
+            "TP": 1,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2437,
+            "N": 2640,
+            "V": 1,
+            "missingN": 203,
+            "missingV": 0,
+            "extra_peaks": 34,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I09",
+            "group": "5",
+            "TP": 7,
+            "FP": 0,
+            "FN": 34,
+            "TN": 2888,
+            "N": 2948,
+            "V": 41,
+            "missingN": 60,
+            "missingV": 0,
+            "extra_peaks": 414,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I10",
+            "group": "5",
+            "TP": 2,
+            "FP": 6,
+            "FN": 81,
+            "TN": 3381,
+            "N": 3599,
+            "V": 83,
+            "missingN": 214,
+            "missingV": 0,
+            "extra_peaks": 46,
+            "FP_matched_N": 4,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I11",
+            "group": "5",
+            "TP": 2,
+            "FP": 0,
+            "FN": 2,
+            "TN": 2071,
+            "N": 2078,
+            "V": 4,
+            "missingN": 7,
+            "missingV": 0,
+            "extra_peaks": 485,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I42",
+            "group": "19",
+            "TP": 1516,
+            "FP": 485,
+            "FN": 38,
+            "TN": 1057,
+            "N": 1546,
+            "V": 1554,
+            "missingN": 4,
+            "missingV": 4,
+            "extra_peaks": 0,
+            "FP_matched_N": 485,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I43",
+            "group": "19",
+            "TP": 1068,
+            "FP": 0,
+            "FN": 52,
+            "TN": 1085,
+            "N": 1087,
+            "V": 1120,
+            "missingN": 2,
+            "missingV": 5,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I57",
+            "group": "25",
+            "TP": 16,
+            "FP": 9,
+            "FN": 5,
+            "TN": 2778,
+            "N": 2842,
+            "V": 21,
+            "missingN": 57,
+            "missingV": 3,
+            "extra_peaks": 43,
+            "FP_matched_N": 7,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I58",
+            "group": "25",
+            "TP": 12,
+            "FP": 1,
+            "FN": 0,
+            "TN": 2266,
+            "N": 2313,
+            "V": 12,
+            "missingN": 47,
+            "missingV": 0,
+            "extra_peaks": 66,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I68",
+            "group": "29",
+            "TP": 117,
+            "FP": 39,
+            "FN": 44,
+            "TN": 2341,
+            "N": 2481,
+            "V": 161,
+            "missingN": 106,
+            "missingV": 5,
+            "extra_peaks": 214,
+            "FP_matched_N": 34,
+            "FP_unmatched_alarm": 5
+          },
+          {
+            "dataset": "INCART",
+            "record": "I69",
+            "group": "29",
+            "TP": 164,
+            "FP": 2,
+            "FN": 3,
+            "TN": 1989,
+            "N": 2000,
+            "V": 167,
+            "missingN": 10,
+            "missingV": 0,
+            "extra_peaks": 16,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "101",
+            "group": "101",
+            "TP": 0,
+            "FP": 1,
+            "FN": 0,
+            "TN": 1852,
+            "N": 1860,
+            "V": 0,
+            "missingN": 7,
+            "missingV": 0,
+            "extra_peaks": 10,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "114",
+            "group": "114",
+            "TP": 34,
+            "FP": 0,
+            "FN": 9,
+            "TN": 1819,
+            "N": 1820,
+            "V": 43,
+            "missingN": 1,
+            "missingV": 0,
+            "extra_peaks": 1,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "119",
+            "group": "119",
+            "TP": 443,
+            "FP": 1,
+            "FN": 1,
+            "TN": 1541,
+            "N": 1543,
+            "V": 444,
+            "missingN": 1,
+            "missingV": 1,
+            "extra_peaks": 0,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "205",
+            "group": "205",
+            "TP": 56,
+            "FP": 0,
+            "FN": 15,
+            "TN": 2565,
+            "N": 2571,
+            "V": 71,
+            "missingN": 6,
+            "missingV": 12,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "207",
+            "group": "207",
+            "TP": 86,
+            "FP": 88,
+            "FN": 19,
+            "TN": 0,
+            "N": 0,
+            "V": 105,
+            "missingN": 0,
+            "missingV": 7,
+            "extra_peaks": 101,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 88
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "213",
+            "group": "213",
+            "TP": 215,
+            "FP": 773,
+            "FN": 5,
+            "TN": 1863,
+            "N": 2641,
+            "V": 220,
+            "missingN": 5,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 773,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "221",
+            "group": "221",
+            "TP": 392,
+            "FP": 1,
+            "FN": 4,
+            "TN": 2028,
+            "N": 2031,
+            "V": 396,
+            "missingN": 2,
+            "missingV": 2,
+            "extra_peaks": 0,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 0
+          }
+        ]
+      },
+      "thresholds": {
+        "V4": 0.86,
+        "V4-B": 0.64
+      }
+    },
+    {
+      "fold_index": 4,
+      "baseline_sha256": "917067939649a8d0bf8b47d0546dae681fbaa4b2902d61d34496784c3621f777",
+      "v4b_sha256": "748295600185169485f96758f7f6a50e32a542da9fd77ef62b558d463d677058",
+      "training": {
+        "sha256": "748295600185169485f96758f7f6a50e32a542da9fd77ef62b558d463d677058",
+        "best_epoch": 12,
+        "epochs_run": 17,
+        "history": [
+          {
+            "epoch": 1,
+            "checkpoint_pr_auc": 0.6131762755869509,
+            "loss": 0.42539384961128235
+          },
+          {
+            "epoch": 2,
+            "checkpoint_pr_auc": 0.6786016280230919,
+            "loss": 0.29751935601234436
+          },
+          {
+            "epoch": 3,
+            "checkpoint_pr_auc": 0.758878694272618,
+            "loss": 0.2557964622974396
+          },
+          {
+            "epoch": 4,
+            "checkpoint_pr_auc": 0.8145628221116644,
+            "loss": 0.2264164686203003
+          },
+          {
+            "epoch": 5,
+            "checkpoint_pr_auc": 0.8601981135740286,
+            "loss": 0.20603543519973755
+          },
+          {
+            "epoch": 6,
+            "checkpoint_pr_auc": 0.885202886279094,
+            "loss": 0.18726621568202972
+          },
+          {
+            "epoch": 7,
+            "checkpoint_pr_auc": 0.8944669337771316,
+            "loss": 0.16929836571216583
+          },
+          {
+            "epoch": 8,
+            "checkpoint_pr_auc": 0.9019234112952821,
+            "loss": 0.1594347506761551
+          },
+          {
+            "epoch": 9,
+            "checkpoint_pr_auc": 0.9039284815787438,
+            "loss": 0.1492655724287033
+          },
+          {
+            "epoch": 10,
+            "checkpoint_pr_auc": 0.9041289637914448,
+            "loss": 0.1426098644733429
+          },
+          {
+            "epoch": 11,
+            "checkpoint_pr_auc": 0.904679626202026,
+            "loss": 0.13713626563549042
+          },
+          {
+            "epoch": 12,
+            "checkpoint_pr_auc": 0.9056201132215468,
+            "loss": 0.13417142629623413
+          },
+          {
+            "epoch": 13,
+            "checkpoint_pr_auc": 0.9031850839086817,
+            "loss": 0.13205139338970184
+          },
+          {
+            "epoch": 14,
+            "checkpoint_pr_auc": 0.8995353618192373,
+            "loss": 0.13030338287353516
+          },
+          {
+            "epoch": 15,
+            "checkpoint_pr_auc": 0.903754460975135,
+            "loss": 0.12541067600250244
+          },
+          {
+            "epoch": 16,
+            "checkpoint_pr_auc": 0.9008614117566089,
+            "loss": 0.12398293614387512
+          },
+          {
+            "epoch": 17,
+            "checkpoint_pr_auc": 0.8999956357148047,
+            "loss": 0.12091678380966187
+          }
+        ],
+        "mining": {
+          "0": {
+            "Fit_samples": 75500,
+            "hard_samples": 7550,
+            "mean_hard_baseline_score": 0.2965836524963379
+          },
+          "1": {
+            "Fit_samples": 8573,
+            "hard_samples": 858,
+            "mean_hard_baseline_score": 0.6139586567878723
+          }
+        }
+      },
+      "CNN_only": {
+        "V4": {
+          "MITBIH": {
+            "samples": 13681,
+            "N": 12444,
+            "V": 1237,
+            "threshold": 0.91,
+            "accuracy": 0.9429135297127403,
+            "precision": 0.7753623188405797,
+            "recall": 0.5189975747776879,
+            "f1": 0.6217917675544794,
+            "pr_auc": 0.705939082665236,
+            "fp_per_1000_normal": 14.946962391513983,
+            "TP": 642,
+            "FP": 186,
+            "FN": 595,
+            "TN": 12258,
+            "confusion_rows_N_V": [
+              [
+                12258,
+                186
+              ],
+              [
+                595,
+                642
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 27438,
+            "N": 23922,
+            "V": 3516,
+            "threshold": 0.91,
+            "accuracy": 0.8931773452875574,
+            "precision": 0.8651685393258427,
+            "recall": 0.197098976109215,
+            "f1": 0.3210562890896456,
+            "pr_auc": 0.6656706154811268,
+            "fp_per_1000_normal": 4.514672686230249,
+            "TP": 693,
+            "FP": 108,
+            "FN": 2823,
+            "TN": 23814,
+            "confusion_rows_N_V": [
+              [
+                23814,
+                108
+              ],
+              [
+                2823,
+                693
+              ]
+            ]
+          }
+        },
+        "V4-B": {
+          "MITBIH": {
+            "samples": 13681,
+            "N": 12444,
+            "V": 1237,
+            "threshold": 0.88,
+            "accuracy": 0.9409399897668299,
+            "precision": 0.769811320754717,
+            "recall": 0.49474535165723527,
+            "f1": 0.6023622047244095,
+            "pr_auc": 0.6999416600021895,
+            "fp_per_1000_normal": 14.705882352941176,
+            "TP": 612,
+            "FP": 183,
+            "FN": 625,
+            "TN": 12261,
+            "confusion_rows_N_V": [
+              [
+                12261,
+                183
+              ],
+              [
+                625,
+                612
+              ]
+            ]
+          },
+          "INCART": {
+            "samples": 27438,
+            "N": 23922,
+            "V": 3516,
+            "threshold": 0.88,
+            "accuracy": 0.8918652963043954,
+            "precision": 0.8607095926412615,
+            "recall": 0.18629124004550626,
+            "f1": 0.30628945522562545,
+            "pr_auc": 0.6572064146025494,
+            "fp_per_1000_normal": 4.431067636485244,
+            "TP": 655,
+            "FP": 106,
+            "FN": 2861,
+            "TN": 23816,
+            "confusion_rows_N_V": [
+              [
+                23816,
+                106
+              ],
+              [
+                2861,
+                655
+              ]
+            ]
+          }
+        }
+      },
+      "end_to_end": {
+        "V4": [
+          {
+            "dataset": "INCART",
+            "record": "I08",
+            "group": "4",
+            "TP": 210,
+            "FP": 7,
+            "FN": 141,
+            "TN": 1728,
+            "N": 1777,
+            "V": 351,
+            "missingN": 43,
+            "missingV": 2,
+            "extra_peaks": 246,
+            "FP_matched_N": 6,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I29",
+            "group": "14",
+            "TP": 78,
+            "FP": 1,
+            "FN": 705,
+            "TN": 1727,
+            "N": 1837,
+            "V": 783,
+            "missingN": 110,
+            "missingV": 23,
+            "extra_peaks": 219,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I30",
+            "group": "14",
+            "TP": 106,
+            "FP": 0,
+            "FN": 650,
+            "TN": 1663,
+            "N": 1706,
+            "V": 756,
+            "missingN": 43,
+            "missingV": 5,
+            "extra_peaks": 113,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I31",
+            "group": "14",
+            "TP": 45,
+            "FP": 9,
+            "FN": 1320,
+            "TN": 886,
+            "N": 1844,
+            "V": 1365,
+            "missingN": 949,
+            "missingV": 721,
+            "extra_peaks": 33,
+            "FP_matched_N": 9,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I32",
+            "group": "14",
+            "TP": 3,
+            "FP": 0,
+            "FN": 54,
+            "TN": 1553,
+            "N": 1562,
+            "V": 57,
+            "missingN": 9,
+            "missingV": 0,
+            "extra_peaks": 24,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I40",
+            "group": "18",
+            "TP": 86,
+            "FP": 14,
+            "FN": 6,
+            "TN": 2321,
+            "N": 2568,
+            "V": 92,
+            "missingN": 241,
+            "missingV": 0,
+            "extra_peaks": 233,
+            "FP_matched_N": 6,
+            "FP_unmatched_alarm": 8
+          },
+          {
+            "dataset": "INCART",
+            "record": "I41",
+            "group": "18",
+            "TP": 0,
+            "FP": 0,
+            "FN": 1,
+            "TN": 1602,
+            "N": 1624,
+            "V": 1,
+            "missingN": 22,
+            "missingV": 0,
+            "extra_peaks": 33,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I49",
+            "group": "22",
+            "TP": 27,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2118,
+            "N": 2120,
+            "V": 27,
+            "missingN": 2,
+            "missingV": 0,
+            "extra_peaks": 2,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I50",
+            "group": "22",
+            "TP": 0,
+            "FP": 2,
+            "FN": 4,
+            "TN": 2977,
+            "N": 2994,
+            "V": 4,
+            "missingN": 16,
+            "missingV": 0,
+            "extra_peaks": 14,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I59",
+            "group": "26",
+            "TP": 11,
+            "FP": 4,
+            "FN": 70,
+            "TN": 1981,
+            "N": 2026,
+            "V": 81,
+            "missingN": 43,
+            "missingV": 3,
+            "extra_peaks": 83,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I60",
+            "group": "26",
+            "TP": 0,
+            "FP": 11,
+            "FN": 0,
+            "TN": 2377,
+            "N": 2424,
+            "V": 0,
+            "missingN": 36,
+            "missingV": 0,
+            "extra_peaks": 72,
+            "FP_matched_N": 11,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I61",
+            "group": "26",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1451,
+            "N": 1453,
+            "V": 0,
+            "missingN": 2,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "103",
+            "group": "103",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2079,
+            "N": 2082,
+            "V": 0,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "105",
+            "group": "105",
+            "TP": 6,
+            "FP": 109,
+            "FN": 35,
+            "TN": 2353,
+            "N": 2526,
+            "V": 41,
+            "missingN": 93,
+            "missingV": 0,
+            "extra_peaks": 55,
+            "FP_matched_N": 80,
+            "FP_unmatched_alarm": 29
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "201",
+            "group": "201",
+            "TP": 191,
+            "FP": 15,
+            "FN": 7,
+            "TN": 1620,
+            "N": 1625,
+            "V": 198,
+            "missingN": 5,
+            "missingV": 1,
+            "extra_peaks": 16,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 15
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "217",
+            "group": "217",
+            "TP": 149,
+            "FP": 30,
+            "FN": 13,
+            "TN": 214,
+            "N": 244,
+            "V": 162,
+            "missingN": 0,
+            "missingV": 11,
+            "extra_peaks": 3,
+            "FP_matched_N": 30,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "223",
+            "group": "223",
+            "TP": 216,
+            "FP": 2,
+            "FN": 257,
+            "TN": 2024,
+            "N": 2029,
+            "V": 473,
+            "missingN": 3,
+            "missingV": 6,
+            "extra_peaks": 1,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "228",
+            "group": "228",
+            "TP": 66,
+            "FP": 21,
+            "FN": 296,
+            "TN": 1634,
+            "N": 1688,
+            "V": 362,
+            "missingN": 35,
+            "missingV": 5,
+            "extra_peaks": 96,
+            "FP_matched_N": 19,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "230",
+            "group": "230",
+            "TP": 1,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2249,
+            "N": 2255,
+            "V": 1,
+            "missingN": 6,
+            "missingV": 0,
+            "extra_peaks": 5,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          }
+        ],
+        "V4-B": [
+          {
+            "dataset": "INCART",
+            "record": "I08",
+            "group": "4",
+            "TP": 206,
+            "FP": 7,
+            "FN": 145,
+            "TN": 1728,
+            "N": 1777,
+            "V": 351,
+            "missingN": 43,
+            "missingV": 2,
+            "extra_peaks": 246,
+            "FP_matched_N": 6,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I29",
+            "group": "14",
+            "TP": 72,
+            "FP": 2,
+            "FN": 711,
+            "TN": 1727,
+            "N": 1837,
+            "V": 783,
+            "missingN": 110,
+            "missingV": 23,
+            "extra_peaks": 219,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I30",
+            "group": "14",
+            "TP": 93,
+            "FP": 0,
+            "FN": 663,
+            "TN": 1663,
+            "N": 1706,
+            "V": 756,
+            "missingN": 43,
+            "missingV": 5,
+            "extra_peaks": 113,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I31",
+            "group": "14",
+            "TP": 43,
+            "FP": 9,
+            "FN": 1322,
+            "TN": 886,
+            "N": 1844,
+            "V": 1365,
+            "missingN": 949,
+            "missingV": 721,
+            "extra_peaks": 33,
+            "FP_matched_N": 9,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I32",
+            "group": "14",
+            "TP": 2,
+            "FP": 0,
+            "FN": 55,
+            "TN": 1553,
+            "N": 1562,
+            "V": 57,
+            "missingN": 9,
+            "missingV": 0,
+            "extra_peaks": 24,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I40",
+            "group": "18",
+            "TP": 86,
+            "FP": 14,
+            "FN": 6,
+            "TN": 2321,
+            "N": 2568,
+            "V": 92,
+            "missingN": 241,
+            "missingV": 0,
+            "extra_peaks": 233,
+            "FP_matched_N": 6,
+            "FP_unmatched_alarm": 8
+          },
+          {
+            "dataset": "INCART",
+            "record": "I41",
+            "group": "18",
+            "TP": 0,
+            "FP": 0,
+            "FN": 1,
+            "TN": 1602,
+            "N": 1624,
+            "V": 1,
+            "missingN": 22,
+            "missingV": 0,
+            "extra_peaks": 33,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I49",
+            "group": "22",
+            "TP": 27,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2118,
+            "N": 2120,
+            "V": 27,
+            "missingN": 2,
+            "missingV": 0,
+            "extra_peaks": 2,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I50",
+            "group": "22",
+            "TP": 0,
+            "FP": 2,
+            "FN": 4,
+            "TN": 2977,
+            "N": 2994,
+            "V": 4,
+            "missingN": 16,
+            "missingV": 0,
+            "extra_peaks": 14,
+            "FP_matched_N": 1,
+            "FP_unmatched_alarm": 1
+          },
+          {
+            "dataset": "INCART",
+            "record": "I59",
+            "group": "26",
+            "TP": 11,
+            "FP": 4,
+            "FN": 70,
+            "TN": 1981,
+            "N": 2026,
+            "V": 81,
+            "missingN": 43,
+            "missingV": 3,
+            "extra_peaks": 83,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "INCART",
+            "record": "I60",
+            "group": "26",
+            "TP": 0,
+            "FP": 11,
+            "FN": 0,
+            "TN": 2377,
+            "N": 2424,
+            "V": 0,
+            "missingN": 36,
+            "missingV": 0,
+            "extra_peaks": 72,
+            "FP_matched_N": 11,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "INCART",
+            "record": "I61",
+            "group": "26",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1451,
+            "N": 1453,
+            "V": 0,
+            "missingN": 2,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "103",
+            "group": "103",
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2079,
+            "N": 2082,
+            "V": 0,
+            "missingN": 3,
+            "missingV": 0,
+            "extra_peaks": 0,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "105",
+            "group": "105",
+            "TP": 4,
+            "FP": 111,
+            "FN": 37,
+            "TN": 2351,
+            "N": 2526,
+            "V": 41,
+            "missingN": 93,
+            "missingV": 0,
+            "extra_peaks": 55,
+            "FP_matched_N": 82,
+            "FP_unmatched_alarm": 29
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "201",
+            "group": "201",
+            "TP": 185,
+            "FP": 15,
+            "FN": 13,
+            "TN": 1620,
+            "N": 1625,
+            "V": 198,
+            "missingN": 5,
+            "missingV": 1,
+            "extra_peaks": 16,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 15
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "217",
+            "group": "217",
+            "TP": 150,
+            "FP": 25,
+            "FN": 12,
+            "TN": 219,
+            "N": 244,
+            "V": 162,
+            "missingN": 0,
+            "missingV": 11,
+            "extra_peaks": 3,
+            "FP_matched_N": 25,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "223",
+            "group": "223",
+            "TP": 198,
+            "FP": 2,
+            "FN": 275,
+            "TN": 2024,
+            "N": 2029,
+            "V": 473,
+            "missingN": 3,
+            "missingV": 6,
+            "extra_peaks": 1,
+            "FP_matched_N": 2,
+            "FP_unmatched_alarm": 0
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "228",
+            "group": "228",
+            "TP": 61,
+            "FP": 23,
+            "FN": 301,
+            "TN": 1632,
+            "N": 1688,
+            "V": 362,
+            "missingN": 35,
+            "missingV": 5,
+            "extra_peaks": 96,
+            "FP_matched_N": 21,
+            "FP_unmatched_alarm": 2
+          },
+          {
+            "dataset": "MITBIH",
+            "record": "230",
+            "group": "230",
+            "TP": 1,
+            "FP": 0,
+            "FN": 0,
+            "TN": 2249,
+            "N": 2255,
+            "V": 1,
+            "missingN": 6,
+            "missingV": 0,
+            "extra_peaks": 5,
+            "FP_matched_N": 0,
+            "FP_unmatched_alarm": 0
+          }
+        ]
+      },
+      "thresholds": {
+        "V4": 0.91,
+        "V4-B": 0.88
+      }
+    }
+  ],
+  "summary": {
+    "CNN_only": {
+      "MITBIH": {
+        "V4": {
+          "mean": {
+            "precision": 0.7299793306059053,
+            "recall": 0.7803428144545642,
+            "f1": 0.7441013881063734,
+            "fp_per_1000_normal": 29.363501735799012
+          },
+          "std_f1": 0.13860797728653146,
+          "worst_fold_f1": 0.5369458128078818,
+          "per_fold": [
+            {
+              "samples": 13322,
+              "N": 11988,
+              "V": 1334,
+              "threshold": 0.83,
+              "accuracy": 0.9715508181954662,
+              "precision": 0.8598342125094197,
+              "recall": 0.8553223388305847,
+              "f1": 0.8575723412251034,
+              "pr_auc": 0.9243126142290529,
+              "fp_per_1000_normal": 15.515515515515515,
+              "TP": 1141,
+              "FP": 186,
+              "FN": 193,
+              "TN": 11802,
+              "confusion_rows_N_V": [
+                [
+                  11802,
+                  186
+                ],
+                [
+                  193,
+                  1141
+                ]
+              ]
+            },
+            {
+              "samples": 14240,
+              "N": 13026,
+              "V": 1214,
+              "threshold": 0.86,
+              "accuracy": 0.9075842696629214,
+              "precision": 0.46867321867321865,
+              "recall": 0.628500823723229,
+              "f1": 0.5369458128078818,
+              "pr_auc": 0.5668650959085908,
+              "fp_per_1000_normal": 66.40565023798557,
+              "TP": 763,
+              "FP": 865,
+              "FN": 451,
+              "TN": 12161,
+              "confusion_rows_N_V": [
+                [
+                  12161,
+                  865
+                ],
+                [
+                  451,
+                  763
+                ]
+              ]
+            },
+            {
+              "samples": 15609,
+              "N": 14455,
+              "V": 1154,
+              "threshold": 0.72,
+              "accuracy": 0.9700813633160357,
+              "precision": 0.7370600414078675,
+              "recall": 0.925476603119584,
+              "f1": 0.8205916250480214,
+              "pr_auc": 0.9359676013459521,
+              "fp_per_1000_normal": 26.357661708751298,
+              "TP": 1068,
+              "FP": 381,
+              "FN": 86,
+              "TN": 14074,
+              "confusion_rows_N_V": [
+                [
+                  14074,
+                  381
+                ],
+                [
+                  86,
+                  1068
+                ]
+              ]
+            },
+            {
+              "samples": 13741,
+              "N": 12462,
+              "V": 1279,
+              "threshold": 0.86,
+              "accuracy": 0.9761298304344662,
+              "precision": 0.8089668615984406,
+              "recall": 0.9734167318217357,
+              "f1": 0.8836053938963804,
+              "pr_auc": 0.9457131072866714,
+              "fp_per_1000_normal": 23.591718825228696,
+              "TP": 1245,
+              "FP": 294,
+              "FN": 34,
+              "TN": 12168,
+              "confusion_rows_N_V": [
+                [
+                  12168,
+                  294
+                ],
+                [
+                  34,
+                  1245
+                ]
+              ]
+            },
+            {
+              "samples": 13681,
+              "N": 12444,
+              "V": 1237,
+              "threshold": 0.91,
+              "accuracy": 0.9429135297127403,
+              "precision": 0.7753623188405797,
+              "recall": 0.5189975747776879,
+              "f1": 0.6217917675544794,
+              "pr_auc": 0.705939082665236,
+              "fp_per_1000_normal": 14.946962391513983,
+              "TP": 642,
+              "FP": 186,
+              "FN": 595,
+              "TN": 12258,
+              "confusion_rows_N_V": [
+                [
+                  12258,
+                  186
+                ],
+                [
+                  595,
+                  642
+                ]
+              ]
+            }
+          ]
+        },
+        "V4-B": {
+          "mean": {
+            "precision": 0.6478624763631785,
+            "recall": 0.7768995169382465,
+            "f1": 0.6864422603285755,
+            "fp_per_1000_normal": 44.52234745354729
+          },
+          "std_f1": 0.12297964899340116,
+          "worst_fold_f1": 0.5159914712153517,
+          "per_fold": [
+            {
+              "samples": 13322,
+              "N": 11988,
+              "V": 1334,
+              "threshold": 0.79,
+              "accuracy": 0.9739528599309413,
+              "precision": 0.8542713567839196,
+              "recall": 0.8920539730134932,
+              "f1": 0.8727539420608728,
+              "pr_auc": 0.9497632510469913,
+              "fp_per_1000_normal": 16.9336002669336,
+              "TP": 1190,
+              "FP": 203,
+              "FN": 144,
+              "TN": 11785,
+              "confusion_rows_N_V": [
+                [
+                  11785,
+                  203
+                ],
+                [
+                  144,
+                  1190
+                ]
+              ]
+            },
+            {
+              "samples": 14240,
+              "N": 13026,
+              "V": 1214,
+              "threshold": 0.76,
+              "accuracy": 0.9043539325842697,
+              "precision": 0.45375,
+              "recall": 0.5980230642504119,
+              "f1": 0.5159914712153517,
+              "pr_auc": 0.5353950771120113,
+              "fp_per_1000_normal": 67.096576078612,
+              "TP": 726,
+              "FP": 874,
+              "FN": 488,
+              "TN": 12152,
+              "confusion_rows_N_V": [
+                [
+                  12152,
+                  874
+                ],
+                [
+                  488,
+                  726
+                ]
+              ]
+            },
+            {
+              "samples": 15609,
+              "N": 14455,
+              "V": 1154,
+              "threshold": 0.46,
+              "accuracy": 0.9372157088858991,
+              "precision": 0.5443425076452599,
+              "recall": 0.925476603119584,
+              "f1": 0.6854942233632862,
+              "pr_auc": 0.9116681241242788,
+              "fp_per_1000_normal": 61.84711172604635,
+              "TP": 1068,
+              "FP": 894,
+              "FN": 86,
+              "TN": 13561,
+              "confusion_rows_N_V": [
+                [
+                  13561,
+                  894
+                ],
+                [
+                  86,
+                  1068
+                ]
+              ]
+            },
+            {
+              "samples": 13741,
+              "N": 12462,
+              "V": 1279,
+              "threshold": 0.64,
+              "accuracy": 0.9413434247871334,
+              "precision": 0.6171371966319961,
+              "recall": 0.9741985926505082,
+              "f1": 0.755609460278957,
+              "pr_auc": 0.8548682048950058,
+              "fp_per_1000_normal": 62.028566843203336,
+              "TP": 1246,
+              "FP": 773,
+              "FN": 33,
+              "TN": 11689,
+              "confusion_rows_N_V": [
+                [
+                  11689,
+                  773
+                ],
+                [
+                  33,
+                  1246
+                ]
+              ]
+            },
+            {
+              "samples": 13681,
+              "N": 12444,
+              "V": 1237,
+              "threshold": 0.88,
+              "accuracy": 0.9409399897668299,
+              "precision": 0.769811320754717,
+              "recall": 0.49474535165723527,
+              "f1": 0.6023622047244095,
+              "pr_auc": 0.6999416600021895,
+              "fp_per_1000_normal": 14.705882352941176,
+              "TP": 612,
+              "FP": 183,
+              "FN": 625,
+              "TN": 12261,
+              "confusion_rows_N_V": [
+                [
+                  12261,
+                  183
+                ],
+                [
+                  625,
+                  612
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "INCART": {
+        "V4": {
+          "mean": {
+            "precision": 0.8554883634696759,
+            "recall": 0.6892492154371013,
+            "f1": 0.7241542939010637,
+            "fp_per_1000_normal": 15.432660146245434
+          },
+          "std_f1": 0.21749277377167153,
+          "worst_fold_f1": 0.3210562890896456,
+          "per_fold": [
+            {
+              "samples": 28879,
+              "N": 25253,
+              "V": 3626,
+              "threshold": 0.83,
+              "accuracy": 0.9298798434848852,
+              "precision": 0.817029702970297,
+              "recall": 0.5689464975179261,
+              "f1": 0.6707852381726548,
+              "pr_auc": 0.7142044501020144,
+              "fp_per_1000_normal": 18.294856056706134,
+              "TP": 2063,
+              "FP": 462,
+              "FN": 1563,
+              "TN": 24791,
+              "confusion_rows_N_V": [
+                [
+                  24791,
+                  462
+                ],
+                [
+                  1563,
+                  2063
+                ]
+              ]
+            },
+            {
+              "samples": 32880,
+              "N": 29489,
+              "V": 3391,
+              "threshold": 0.86,
+              "accuracy": 0.9753041362530414,
+              "precision": 0.9285476902625457,
+              "recall": 0.8239457387201415,
+              "f1": 0.8731249999999999,
+              "pr_auc": 0.8882630713914642,
+              "fp_per_1000_normal": 7.290854216826613,
+              "TP": 2794,
+              "FP": 215,
+              "FN": 597,
+              "TN": 29274,
+              "confusion_rows_N_V": [
+                [
+                  29274,
+                  215
+                ],
+                [
+                  597,
+                  2794
+                ]
+              ]
+            },
+            {
+              "samples": 25596,
+              "N": 22628,
+              "V": 2968,
+              "threshold": 0.72,
+              "accuracy": 0.9776527582434755,
+              "precision": 0.87531328320802,
+              "recall": 0.9413746630727763,
+              "f1": 0.9071428571428571,
+              "pr_auc": 0.9556495041942893,
+              "fp_per_1000_normal": 17.58882800070709,
+              "TP": 2794,
+              "FP": 398,
+              "FN": 174,
+              "TN": 22230,
+              "confusion_rows_N_V": [
+                [
+                  22230,
+                  398
+                ],
+                [
+                  174,
+                  2794
+                ]
+              ]
+            },
+            {
+              "samples": 29127,
+              "N": 25955,
+              "V": 3172,
+              "threshold": 0.86,
+              "accuracy": 0.9644659594190956,
+              "precision": 0.7913826015816744,
+              "recall": 0.9148802017654477,
+              "f1": 0.8486620851001608,
+              "pr_auc": 0.8980486443287845,
+              "fp_per_1000_normal": 29.47408977075708,
+              "TP": 2902,
+              "FP": 765,
+              "FN": 270,
+              "TN": 25190,
+              "confusion_rows_N_V": [
+                [
+                  25190,
+                  765
+                ],
+                [
+                  270,
+                  2902
+                ]
+              ]
+            },
+            {
+              "samples": 27438,
+              "N": 23922,
+              "V": 3516,
+              "threshold": 0.91,
+              "accuracy": 0.8931773452875574,
+              "precision": 0.8651685393258427,
+              "recall": 0.197098976109215,
+              "f1": 0.3210562890896456,
+              "pr_auc": 0.6656706154811268,
+              "fp_per_1000_normal": 4.514672686230249,
+              "TP": 693,
+              "FP": 108,
+              "FN": 2823,
+              "TN": 23814,
+              "confusion_rows_N_V": [
+                [
+                  23814,
+                  108
+                ],
+                [
+                  2823,
+                  693
+                ]
+              ]
+            }
+          ]
+        },
+        "V4-B": {
+          "mean": {
+            "precision": 0.7817294286931162,
+            "recall": 0.7012356797927926,
+            "f1": 0.6941506485389093,
+            "fp_per_1000_normal": 26.873180967653468
+          },
+          "std_f1": 0.2092428745042666,
+          "worst_fold_f1": 0.30628945522562545,
+          "per_fold": [
+            {
+              "samples": 28879,
+              "N": 25253,
+              "V": 3626,
+              "threshold": 0.79,
+              "accuracy": 0.9197686900515946,
+              "precision": 0.7117437722419929,
+              "recall": 0.6067291781577496,
+              "f1": 0.6550543397350008,
+              "pr_auc": 0.7231634114794507,
+              "fp_per_1000_normal": 35.2829366807904,
+              "TP": 2200,
+              "FP": 891,
+              "FN": 1426,
+              "TN": 24362,
+              "confusion_rows_N_V": [
+                [
+                  24362,
+                  891
+                ],
+                [
+                  1426,
+                  2200
+                ]
+              ]
+            },
+            {
+              "samples": 32880,
+              "N": 29489,
+              "V": 3391,
+              "threshold": 0.76,
+              "accuracy": 0.9498175182481752,
+              "precision": 0.7244135086362464,
+              "recall": 0.8286641108817459,
+              "f1": 0.7730398899587345,
+              "pr_auc": 0.8615081612675213,
+              "fp_per_1000_normal": 36.25080538505883,
+              "TP": 2810,
+              "FP": 1069,
+              "FN": 581,
+              "TN": 28420,
+              "confusion_rows_N_V": [
+                [
+                  28420,
+                  1069
+                ],
+                [
+                  581,
+                  2810
+                ]
+              ]
+            },
+            {
+              "samples": 25596,
+              "N": 22628,
+              "V": 2968,
+              "threshold": 0.46,
+              "accuracy": 0.963666197843413,
+              "precision": 0.7788724685276409,
+              "recall": 0.9588948787061995,
+              "f1": 0.8595590456055572,
+              "pr_auc": 0.947505513778113,
+              "fp_per_1000_normal": 35.707972423546046,
+              "TP": 2846,
+              "FP": 808,
+              "FN": 122,
+              "TN": 21820,
+              "confusion_rows_N_V": [
+                [
+                  21820,
+                  808
+                ],
+                [
+                  122,
+                  2846
+                ]
+              ]
+            },
+            {
+              "samples": 29127,
+              "N": 25955,
+              "V": 3172,
+              "threshold": 0.64,
+              "accuracy": 0.9716757647543516,
+              "precision": 0.8329078014184397,
+              "recall": 0.9255989911727617,
+              "f1": 0.8768105121696282,
+              "pr_auc": 0.8836760959623675,
+              "fp_per_1000_normal": 22.693122712386824,
+              "TP": 2936,
+              "FP": 589,
+              "FN": 236,
+              "TN": 25366,
+              "confusion_rows_N_V": [
+                [
+                  25366,
+                  589
+                ],
+                [
+                  236,
+                  2936
+                ]
+              ]
+            },
+            {
+              "samples": 27438,
+              "N": 23922,
+              "V": 3516,
+              "threshold": 0.88,
+              "accuracy": 0.8918652963043954,
+              "precision": 0.8607095926412615,
+              "recall": 0.18629124004550626,
+              "f1": 0.30628945522562545,
+              "pr_auc": 0.6572064146025494,
+              "fp_per_1000_normal": 4.431067636485244,
+              "TP": 655,
+              "FP": 106,
+              "FN": 2861,
+              "TN": 23816,
+              "confusion_rows_N_V": [
+                [
+                  23816,
+                  106
+                ],
+                [
+                  2861,
+                  655
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "end_to_end": {
+      "MITBIH": {
+        "V4": {
+          "mean": {
+            "precision": 0.725234413693405,
+            "recall": 0.7674128849614921,
+            "f1": 0.7351117368571912,
+            "fp_per_1000_N": 29.204401508211372
+          },
+          "std_f1": 0.1359182405232739,
+          "worst_fold_f1": 0.5303140978816654,
+          "per_fold": [
+            {
+              "TP": 1139,
+              "FP": 179,
+              "FN": 195,
+              "TN": 11781,
+              "N": 11995,
+              "V": 1334,
+              "missingN": 43,
+              "missingV": 7,
+              "extra_peaks": 100,
+              "FP_matched_N": 171,
+              "FP_unmatched_alarm": 8,
+              "precision": 0.8641881638846738,
+              "recall": 0.8538230884557722,
+              "f1": 0.8589743589743589,
+              "fp_per_1000_N": 14.922884535223009
+            },
+            {
+              "TP": 726,
+              "FP": 798,
+              "FN": 488,
+              "TN": 12068,
+              "N": 13035,
+              "V": 1214,
+              "missingN": 174,
+              "missingV": 50,
+              "extra_peaks": 62,
+              "FP_matched_N": 793,
+              "FP_unmatched_alarm": 5,
+              "precision": 0.4763779527559055,
+              "recall": 0.5980230642504119,
+              "f1": 0.5303140978816654,
+              "fp_per_1000_N": 61.219792865362486
+            },
+            {
+              "TP": 1065,
+              "FP": 392,
+              "FN": 90,
+              "TN": 14038,
+              "N": 14463,
+              "V": 1155,
+              "missingN": 35,
+              "missingV": 10,
+              "extra_peaks": 33,
+              "FP_matched_N": 390,
+              "FP_unmatched_alarm": 2,
+              "precision": 0.7309540150995195,
+              "recall": 0.922077922077922,
+              "f1": 0.8154670750382849,
+              "fp_per_1000_N": 27.10364378068174
+            },
+            {
+              "TP": 1221,
+              "FP": 356,
+              "FN": 58,
+              "TN": 12166,
+              "N": 12466,
+              "V": 1279,
+              "missingN": 22,
+              "missingV": 24,
+              "extra_peaks": 112,
+              "FP_matched_N": 278,
+              "FP_unmatched_alarm": 78,
+              "precision": 0.7742549143944197,
+              "recall": 0.9546520719311963,
+              "f1": 0.8550420168067225,
+              "fp_per_1000_N": 28.557676881116638
+            },
+            {
+              "TP": 629,
+              "FP": 177,
+              "FN": 608,
+              "TN": 12173,
+              "N": 12449,
+              "V": 1237,
+              "missingN": 145,
+              "missingV": 23,
+              "extra_peaks": 176,
+              "FP_matched_N": 131,
+              "FP_unmatched_alarm": 46,
+              "precision": 0.7803970223325062,
+              "recall": 0.5084882780921585,
+              "f1": 0.6157611355849241,
+              "fp_per_1000_N": 14.218009478672986
+            }
+          ]
+        },
+        "V4-B": {
+          "mean": {
+            "precision": 0.6456377045771815,
+            "recall": 0.763543589399419,
+            "f1": 0.6780243942032549,
+            "fp_per_1000_N": 44.53535523524391
+          },
+          "std_f1": 0.12277167454777392,
+          "worst_fold_f1": 0.5118343195266272,
+          "per_fold": [
+            {
+              "TP": 1180,
+              "FP": 186,
+              "FN": 154,
+              "TN": 11772,
+              "N": 11995,
+              "V": 1334,
+              "missingN": 43,
+              "missingV": 7,
+              "extra_peaks": 100,
+              "FP_matched_N": 180,
+              "FP_unmatched_alarm": 6,
+              "precision": 0.8638360175695461,
+              "recall": 0.8845577211394303,
+              "f1": 0.8740740740740741,
+              "fp_per_1000_N": 15.506461025427262
+            },
+            {
+              "TP": 692,
+              "FP": 798,
+              "FN": 522,
+              "TN": 12071,
+              "N": 13035,
+              "V": 1214,
+              "missingN": 174,
+              "missingV": 50,
+              "extra_peaks": 62,
+              "FP_matched_N": 790,
+              "FP_unmatched_alarm": 8,
+              "precision": 0.46442953020134226,
+              "recall": 0.5700164744645799,
+              "f1": 0.5118343195266272,
+              "fp_per_1000_N": 61.219792865362486
+            },
+            {
+              "TP": 1063,
+              "FP": 904,
+              "FN": 92,
+              "TN": 13525,
+              "N": 14463,
+              "V": 1155,
+              "missingN": 35,
+              "missingV": 10,
+              "extra_peaks": 33,
+              "FP_matched_N": 903,
+              "FP_unmatched_alarm": 1,
+              "precision": 0.5404168784951703,
+              "recall": 0.9203463203463204,
+              "f1": 0.680973734785394,
+              "fp_per_1000_N": 62.50432137177626
+            },
+            {
+              "TP": 1226,
+              "FP": 864,
+              "FN": 53,
+              "TN": 11668,
+              "N": 12466,
+              "V": 1279,
+              "missingN": 22,
+              "missingV": 24,
+              "extra_peaks": 112,
+              "FP_matched_N": 776,
+              "FP_unmatched_alarm": 88,
+              "precision": 0.5866028708133971,
+              "recall": 0.9585613760750586,
+              "f1": 0.7278124072425053,
+              "fp_per_1000_N": 69.30851917214824
+            },
+            {
+              "TP": 599,
+              "FP": 176,
+              "FN": 638,
+              "TN": 12174,
+              "N": 12449,
+              "V": 1237,
+              "missingN": 145,
+              "missingV": 23,
+              "extra_peaks": 176,
+              "FP_matched_N": 130,
+              "FP_unmatched_alarm": 46,
+              "precision": 0.7729032258064517,
+              "recall": 0.48423605497170574,
+              "f1": 0.595427435387674,
+              "fp_per_1000_N": 14.137681741505341
+            }
+          ]
+        }
+      },
+      "INCART": {
+        "V4": {
+          "mean": {
+            "precision": 0.8219945915082685,
+            "recall": 0.672881478842881,
+            "f1": 0.6924229903473436,
+            "fp_per_1000_N": 22.19961950786378
+          },
+          "std_f1": 0.23827536490188217,
+          "worst_fold_f1": 0.2740256596465747,
+          "per_fold": [
+            {
+              "TP": 2037,
+              "FP": 1408,
+              "FN": 1589,
+              "TN": 24435,
+              "N": 25267,
+              "V": 3626,
+              "missingN": 622,
+              "missingV": 63,
+              "extra_peaks": 2132,
+              "FP_matched_N": 210,
+              "FP_unmatched_alarm": 1198,
+              "precision": 0.5912917271407837,
+              "recall": 0.5617760617760618,
+              "f1": 0.5761561306745864,
+              "fp_per_1000_N": 55.72485851110144
+            },
+            {
+              "TP": 2765,
+              "FP": 212,
+              "FN": 628,
+              "TN": 28577,
+              "N": 29507,
+              "V": 3393,
+              "missingN": 741,
+              "missingV": 19,
+              "extra_peaks": 1488,
+              "FP_matched_N": 189,
+              "FP_unmatched_alarm": 23,
+              "precision": 0.9287873698354048,
+              "recall": 0.8149130562923667,
+              "f1": 0.8681318681318682,
+              "fp_per_1000_N": 7.184735825397364
+            },
+            {
+              "TP": 2727,
+              "FP": 549,
+              "FN": 243,
+              "TN": 21868,
+              "N": 22639,
+              "V": 2970,
+              "missingN": 340,
+              "missingV": 78,
+              "extra_peaks": 2250,
+              "FP_matched_N": 431,
+              "FP_unmatched_alarm": 118,
+              "precision": 0.8324175824175825,
+              "recall": 0.9181818181818182,
+              "f1": 0.873198847262248,
+              "fp_per_1000_N": 24.25018772913998
+            },
+            {
+              "TP": 2883,
+              "FP": 567,
+              "FN": 290,
+              "TN": 24674,
+              "N": 25970,
+              "V": 3173,
+              "missingN": 734,
+              "missingV": 17,
+              "extra_peaks": 1377,
+              "FP_matched_N": 562,
+              "FP_unmatched_alarm": 5,
+              "precision": 0.8356521739130435,
+              "recall": 0.9086038449416955,
+              "f1": 0.8706024460214403,
+              "fp_per_1000_N": 21.83288409703504
+            },
+            {
+              "TP": 566,
+              "FP": 48,
+              "FN": 2951,
+              "TN": 22384,
+              "N": 23935,
+              "V": 3517,
+              "missingN": 1516,
+              "missingV": 754,
+              "extra_peaks": 1072,
+              "FP_matched_N": 35,
+              "FP_unmatched_alarm": 13,
+              "precision": 0.9218241042345277,
+              "recall": 0.16093261302246234,
+              "f1": 0.2740256596465747,
+              "fp_per_1000_N": 2.0054313766450806
+            }
+          ]
+        },
+        "V4-B": {
+          "mean": {
+            "precision": 0.7602294680304491,
+            "recall": 0.6853510645188898,
+            "f1": 0.6651966974823909,
+            "fp_per_1000_N": 32.86222183120449
+          },
+          "std_f1": 0.22310075561079726,
+          "worst_fold_f1": 0.26302971261568436,
+          "per_fold": [
+            {
+              "TP": 2186,
+              "FP": 1554,
+              "FN": 1440,
+              "TN": 24234,
+              "N": 25267,
+              "V": 3626,
+              "missingN": 622,
+              "missingV": 63,
+              "extra_peaks": 2132,
+              "FP_matched_N": 411,
+              "FP_unmatched_alarm": 1143,
+              "precision": 0.5844919786096257,
+              "recall": 0.6028681742967458,
+              "f1": 0.5935378767309258,
+              "fp_per_1000_N": 61.50314639648553
+            },
+            {
+              "TP": 2781,
+              "FP": 1147,
+              "FN": 612,
+              "TN": 27724,
+              "N": 29507,
+              "V": 3393,
+              "missingN": 741,
+              "missingV": 19,
+              "extra_peaks": 1488,
+              "FP_matched_N": 1042,
+              "FP_unmatched_alarm": 105,
+              "precision": 0.7079938900203666,
+              "recall": 0.8196286472148541,
+              "f1": 0.7597322770113372,
+              "fp_per_1000_N": 38.87213203646592
+            },
+            {
+              "TP": 2770,
+              "FP": 926,
+              "FN": 200,
+              "TN": 21530,
+              "N": 22639,
+              "V": 2970,
+              "missingN": 340,
+              "missingV": 78,
+              "extra_peaks": 2250,
+              "FP_matched_N": 769,
+              "FP_unmatched_alarm": 157,
+              "precision": 0.7494588744588745,
+              "recall": 0.9326599326599326,
+              "f1": 0.8310831083108311,
+              "fp_per_1000_N": 40.9028667343964
+            },
+            {
+              "TP": 2913,
+              "FP": 545,
+              "FN": 260,
+              "TN": 24703,
+              "N": 25970,
+              "V": 3173,
+              "missingN": 734,
+              "missingV": 17,
+              "extra_peaks": 1377,
+              "FP_matched_N": 533,
+              "FP_unmatched_alarm": 12,
+              "precision": 0.8423944476576055,
+              "recall": 0.9180586196028995,
+              "f1": 0.878600512743176,
+              "fp_per_1000_N": 20.98575279168271
+            },
+            {
+              "TP": 540,
+              "FP": 49,
+              "FN": 2977,
+              "TN": 22384,
+              "N": 23935,
+              "V": 3517,
+              "missingN": 1516,
+              "missingV": 754,
+              "extra_peaks": 1072,
+              "FP_matched_N": 35,
+              "FP_unmatched_alarm": 14,
+              "precision": 0.9168081494057725,
+              "recall": 0.15353994882001706,
+              "f1": 0.26302971261568436,
+              "fp_per_1000_N": 2.047211196991853
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "no_body_connection": true,
+  "ADC_binary_verified": true,
+  "scope": "Disconnected-electrode firmware and ADC function check; no human measurement",
+  "user_statement": "All AD8232 electrodes removed from person",
+  "simulator_source_verified": null,
+  "measured_voltages": null,
+  "hashes": {
+    "adc_application.bin": "80e428b11f8192fb590d34fd902bbc554d22a01e32e555977a3327947362eb2e",
+    "adc_bootloader.bin": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+    "adc_partition_table.bin": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+  }
+}

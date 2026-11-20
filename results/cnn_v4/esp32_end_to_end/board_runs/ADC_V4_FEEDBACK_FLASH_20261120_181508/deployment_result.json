@@ -1,0 +1,31 @@
+{
+  "flash": "PASS",
+  "golden_exact": 22,
+  "golden_failed": 0,
+  "adc_mode_verified": true,
+  "firmware_application_bytes": 325648,
+  "firmware_application_sha256": "f0f3b8817b144205032a10409873f48b1b7940e4aa971766dd6e06f085efb3bb",
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "threshold": 0.88,
+  "output_code_min": 98,
+  "boot_ids": [
+    "e5ab600c"
+  ],
+  "application_elf_boot_log": [
+    "I (251) app_init: ELF file SHA256:  ff7718ab9..."
+  ],
+  "startup_final_state": "SIGNAL_INVALID",
+  "startup_final_reason": "LEADS_OFF",
+  "acq_hz": 250.0,
+  "led_reported": false,
+  "buzzer_reported": false,
+  "led_gpio": 23,
+  "buzzer_gpio": 25,
+  "new_feedback_logic": "Present in verified prebuilt application; not physically tested",
+  "hardware_alert_test_performed": false,
+  "benchmark_replay_unit_tests_run": false,
+  "build_run": false,
+  "unexpected_resets_observed": false,
+  "raw_uart_sha256": "c87429b2fe8825d69c917c8e31c5bfbdda6d12f164fa2fae6c1b645a6447c4b2",
+  "trailing_bytes": 0
+}

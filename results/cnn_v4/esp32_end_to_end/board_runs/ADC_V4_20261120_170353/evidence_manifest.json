@@ -1,0 +1,57 @@
+[
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\uart_raw.log",
+    "bytes": 885500,
+    "sha256": "6d3d9caf76daba1b6caa608136375c50d61144a922f2fa48d26bfc52fdcdb228"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\adc_raw.csv",
+    "bytes": 902461,
+    "sha256": "5583ec666d508a3baea090fbb5957f4817f52be582a0652de1b889d41b50070c"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\predictions.csv",
+    "bytes": 26,
+    "sha256": "28512d224426ad40563adc9a7d4ed23c70385e292e094122f9b87efea473fdae"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\telemetry.json",
+    "bytes": 919969,
+    "sha256": "b7c942190e59fba84bae1e672fc6273c2eca949f87f8a31343dd0cf83091107d"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\session_metadata.json",
+    "bytes": 2092,
+    "sha256": "7b2a056c7ea66be6be810380d8e6baac3cbff8c3847b4de20374c34a4fb10ca9"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\adc_metrics.json",
+    "bytes": 4195,
+    "sha256": "c92ff9fe25a746203ff864a49aae42e0f762b64f9166eb9a3114f5325142367b"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\verified_metrics.json",
+    "bytes": 2142,
+    "sha256": "6e216fdc04811ae437489d41ea296c584a4e357f45e7c86681ea3203e7637c22"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170353\\report.md",
+    "bytes": 3254,
+    "sha256": "b01c71b407ea224cbec446f9b261d97a0a3211e100a26238886a18ac06b766c4"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170132\\flash.log",
+    "bytes": 3070,
+    "sha256": "cd8ed226407cf50ead87eb2c5c83ae7585cc53b04db475d8737901a9073c9ef8"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_170132\\uart_raw.log",
+    "bytes": 500086,
+    "sha256": "aeec52d84735d21d5ae2dd98e3b35a8568c03528671005770d5a711288bf280b"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\adc_ready_preparation_20261120\\adc_application.bin",
+    "bytes": 324864,
+    "sha256": "80e428b11f8192fb590d34fd902bbc554d22a01e32e555977a3327947362eb2e"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "parser_tests_passed": 4,
+  "parser_tests_failed": 0,
+  "ninja_exit": 0,
+  "size_exit": 0,
+  "hardware_tests_run": false,
+  "flash": false,
+  "reset": false
+}

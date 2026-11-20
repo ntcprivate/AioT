@@ -1,0 +1,12 @@
+{
+  "raw_file_unchanged": true,
+  "newline_terminated_ECG1_frames": 738,
+  "CRC_errors_in_complete_frames": 0,
+  "unterminated_tail_bytes": 511,
+  "tail_is_last_status_seq738": true,
+  "replay_END_byte_offset": 660557,
+  "summary_byte_offset": 660439,
+  "tail_byte_offset": 666007,
+  "tail_after_END": true,
+  "interpretation": "Capture ended mid periodic status frame after required replay END. Do not infer UART wire corruption from uncompleted terminal frame; frame excluded from metrics, raw preserved; no claim entire raw ends on frame boundary."
+}

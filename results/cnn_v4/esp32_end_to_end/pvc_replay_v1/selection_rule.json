@@ -1,0 +1,14 @@
+{
+  "dataset": "INCART Validation only from incart_patient_split_v4.json",
+  "order": "record ID ascending, then start ascending on 250-sample (1s) grid",
+  "samples": 15360,
+  "fs": 250,
+  "duration_seconds": 61.44,
+  "minimum_N": 20,
+  "minimum_V": 20,
+  "selection_count_interval": "[start+1000,end-256); excludes 4s startup and 1.024s tail for selection only",
+  "scoring": "all annotations within supplied stream, including startup/edges; missing V always FN",
+  "selection_inputs": "annotation symbols/times, header sampling rate/duration only; no waveform/model scores",
+  "fallback": "none; FAIL if no candidate; waveform numeric/contract failure stops, no reselection",
+  "interpretation": "small engineering pilot, not statistically precise independent PVC performance"
+}

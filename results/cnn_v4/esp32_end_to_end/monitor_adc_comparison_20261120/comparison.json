@@ -1,0 +1,161 @@
+[
+  {
+    "file": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\uart_raw.log",
+    "bytes": 1019612,
+    "sha256": "a51c3c2f2cafc05b9d562c784091c5b7a148eda234335dea9e32c276b3005a3b",
+    "sample_count": 30144,
+    "adc4095": 27348,
+    "rail_high": 27351,
+    "rail_low": 173,
+    "lo_plus_high": 5598,
+    "lo_minus_high": 139,
+    "lo_any": 5598,
+    "lo_combinations": {
+      "0,0": 24546,
+      "1,0": 5459,
+      "1,1": 139
+    },
+    "status_reasons": {
+      "ADC_SATURATION": 192,
+      "LEADS_OFF": 40,
+      "PROCESS_BLOCK_GAP": 3
+    },
+    "r_peaks_max": 0,
+    "classified_max": 0,
+    "r_peaks_start": 0,
+    "classified_start": 0,
+    "successful_beat_events": 0,
+    "boot_ids": [
+      "bc71c753"
+    ],
+    "golden": true,
+    "adc_byte_example": {
+      "line": 3,
+      "first": 526432,
+      "sample_index": 526432,
+      "t_us": 2106077763,
+      "raw": 4095,
+      "flags": 0,
+      "packed_hex": "00000000ff0f00",
+      "adc_bytes": "ff0f"
+    },
+    "session_value_mismatches": 0,
+    "plot_raw_matches_session": true,
+    "independent_crc_rejects": 1,
+    "decoder_rejects": {},
+    "stream_parser": {
+      "crc": 0,
+      "schema": 0,
+      "framing": 0,
+      "sequence": 0,
+      "lost_samples": 0
+    }
+  },
+  {
+    "file": "tools\\ecg_monitor\\captures\\20261120T120914Z_5a1c16ff.bin",
+    "bytes": 1993980,
+    "sha256": "8987629177e41a9977f3a719c692ecec90f4fcf91dff0e0e25237de10a729938",
+    "sample_count": 61568,
+    "adc4095": 35064,
+    "rail_high": 35066,
+    "rail_low": 381,
+    "lo_plus_high": 33505,
+    "lo_minus_high": 26474,
+    "lo_any": 33601,
+    "lo_combinations": {
+      "1,1": 26378,
+      "1,0": 7127,
+      "0,0": 27967,
+      "0,1": 96
+    },
+    "status_reasons": {
+      "LEADS_OFF": 265,
+      "ADC_SATURATION": 216
+    },
+    "r_peaks_max": 0,
+    "classified_max": 0,
+    "r_peaks_start": 0,
+    "classified_start": 0,
+    "successful_beat_events": 0,
+    "boot_ids": [
+      "c7a1f7ed"
+    ],
+    "golden": true,
+    "adc_byte_example": {
+      "line": 273,
+      "first": 92032,
+      "sample_index": 92051,
+      "t_us": 368632334,
+      "raw": 4095,
+      "flags": 1,
+      "packed_hex": "e0280100ff0f01",
+      "adc_bytes": "ff0f"
+    },
+    "session_value_mismatches": 0,
+    "plot_raw_matches_session": true,
+    "independent_crc_rejects": 1,
+    "decoder_rejects": {},
+    "stream_parser": {
+      "crc": 0,
+      "schema": 0,
+      "framing": 0,
+      "sequence": 0,
+      "lost_samples": 0
+    }
+  },
+  {
+    "file": "tools\\ecg_monitor\\captures\\20261120T110601Z_7d859e74.bin",
+    "bytes": 1346299,
+    "sha256": "22353268d854aed92d32dac31112921f1fd1db63fe8ee509de26f8ceb91b6779",
+    "sample_count": 41472,
+    "adc4095": 15201,
+    "rail_high": 15522,
+    "rail_low": 4221,
+    "lo_plus_high": 8541,
+    "lo_minus_high": 3633,
+    "lo_any": 8770,
+    "lo_combinations": {
+      "0,0": 32702,
+      "1,0": 5137,
+      "0,1": 229,
+      "1,1": 3404
+    },
+    "status_reasons": {
+      "ADC_SATURATION": 157,
+      "LEADS_OFF": 132,
+      "PROCESS_BLOCK_GAP": 22,
+      "COLLECTING_R_ALIGNED_BEAT": 9,
+      "HIGH_FREQUENCY_NOISE": 4
+    },
+    "r_peaks_max": 34,
+    "classified_max": 31,
+    "r_peaks_start": 25,
+    "classified_start": 24,
+    "successful_beat_events": 7,
+    "boot_ids": [
+      "bc71c753"
+    ],
+    "golden": true,
+    "adc_byte_example": {
+      "line": 446,
+      "first": 958848,
+      "sample_index": 958849,
+      "t_us": 3835745763,
+      "raw": 4095,
+      "flags": 0,
+      "packed_hex": "a00f0000ff0f00",
+      "adc_bytes": "ff0f"
+    },
+    "session_value_mismatches": 0,
+    "plot_raw_matches_session": true,
+    "independent_crc_rejects": 39,
+    "decoder_rejects": {},
+    "stream_parser": {
+      "crc": 38,
+      "schema": 0,
+      "framing": 0,
+      "sequence": 0,
+      "lost_samples": 0
+    }
+  }
+]

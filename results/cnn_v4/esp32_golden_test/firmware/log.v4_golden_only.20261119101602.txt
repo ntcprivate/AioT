@@ -1,0 +1,73 @@
+[0;32mI (29) boot: ESP-IDF v5.4.4 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 16 2026 19:53:12[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=16288h ( 90760) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=000262b0 vaddr=3ffb0000 size=0266ch (  9836) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=00028924 vaddr=40080000 size=076f4h ( 30452) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=1ee58h (126552) map[0m
+[0;32mI (179) esp_image: segment 4: paddr=0004ee80 vaddr=400876f4 size=04af0h ( 19184) load[0m
+[0;32mI (186) esp_image: segment 5: paddr=00053978 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (192) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (193) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (215) cpu_start: Pro cpu start user code[0m
+[0;32mI (215) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (217) app_init: Application information:[0m
+[0;32mI (220) app_init: Project name:     v4_golden_only[0m
+[0;32mI (225) app_init: App version:      v4-golden-1[0m
+[0;32mI (229) app_init: Compile time:     Nov 18 2026 23:00:22[0m
+[0;32mI (234) app_init: ELF file SHA256:  9aa5e749e...[0m
+[0;32mI (239) app_init: ESP-IDF:          v5.4.4[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFB38B0 len 0002C750 (177 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 4008C1E4 len 00013E1C (79 KiB): IRAM[0m
+[0;32mI (288) spi_flash: detected chip: generic[0m
+[0;32mI (291) spi_flash: flash io: dio[0m
+[0;32mI (294) main_task: Started on CPU0[0m
+[0;32mI (304) main_task: Calling app_main()[0m
+V4_GOLDEN_BEGIN source=STATIC_FIXTURES adc_live=0 model=V4 reference_active=1 esp_nn_effective=0 threshold_code=98
+V4_GOLDEN_MODEL sha256=a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e arena_allocated=65536 arena_used=6124 internal_heap_before=297160 internal_heap_after=231620
+V4_GOLDEN_SAMPLE i=0 label=0 code=-120 reference=-120 probability=0.031250000 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=83822 status=EXACT
+V4_GOLDEN_SAMPLE i=1 label=0 code=-120 reference=-120 probability=0.031250000 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82970 status=EXACT
+V4_GOLDEN_SAMPLE i=2 label=0 code=-120 reference=-120 probability=0.031250000 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82954 status=EXACT
+V4_GOLDEN_SAMPLE i=3 label=0 code=-120 reference=-120 probability=0.031250000 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82973 status=EXACT
+V4_GOLDEN_SAMPLE i=4 label=1 code=74 reference=74 probability=0.789062500 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=83013 status=EXACT
+V4_GOLDEN_SAMPLE i=5 label=1 code=114 reference=114 probability=0.945312500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82937 status=EXACT
+V4_GOLDEN_SAMPLE i=6 label=1 code=44 reference=44 probability=0.671875000 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82989 status=EXACT
+V4_GOLDEN_SAMPLE i=7 label=1 code=112 reference=112 probability=0.937500000 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82957 status=EXACT
+V4_GOLDEN_SAMPLE i=8 label=1 code=127 reference=127 probability=0.996093750 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82993 status=EXACT
+V4_GOLDEN_SAMPLE i=9 label=1 code=127 reference=127 probability=0.996093750 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82997 status=EXACT
+V4_GOLDEN_SAMPLE i=10 label=0 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82993 status=EXACT
+V4_GOLDEN_SAMPLE i=11 label=1 code=-117 reference=-117 probability=0.042968750 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82989 status=EXACT
+V4_GOLDEN_SAMPLE i=12 label=0 code=127 reference=127 probability=0.996093750 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82953 status=EXACT
+V4_GOLDEN_SAMPLE i=13 label=0 code=127 reference=127 probability=0.996093750 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=83017 status=EXACT
+V4_GOLDEN_SAMPLE i=14 label=0 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82950 status=EXACT
+V4_GOLDEN_SAMPLE i=15 label=0 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82934 status=EXACT
+V4_GOLDEN_SAMPLE i=16 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82946 status=EXACT
+V4_GOLDEN_SAMPLE i=17 label=0 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82937 status=EXACT
+V4_GOLDEN_SAMPLE i=18 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82965 status=EXACT
+V4_GOLDEN_SAMPLE i=19 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82962 status=EXACT
+V4_GOLDEN_SAMPLE i=20 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=83009 status=EXACT
+V4_GOLDEN_SAMPLE i=21 label=1 code=-118 reference=-118 probability=0.039062500 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82970 status=EXACT
+V4_GOLDEN_MEMORY arena_used=6124 arena_allocated=65536 internal_heap_min=231400 stack_high_water_bytes=6576
+V4_GOLDEN_RESULT status=PASS exact=22 total=22 prep_exact=22 max_code_delta=0 latency_mean_us=83010 latency_min_us=82934 latency_max_us=83822 model_sha256=a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e
+V4_GOLDEN_END
+[0;32mI (2544) main_task: Returned from app_main()[0m

@@ -1,0 +1,40 @@
+{
+  "build": "PASS",
+  "idf": "5.4.4",
+  "cpu_mhz": 160,
+  "jobs": 1,
+  "binary_bytes": 347440,
+  "binary_sha256": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418",
+  "static_dram_bytes": 43228,
+  "static_iram_bytes": 54066,
+  "protocol_sha256": "c87f8de8e6e6623b7c8e9ed46055e06a2ca7e1a16ab7100133084af2ad769fec",
+  "original_MIT100_raw_log_unchanged": true,
+  "detector_preprocessing_model_pipeline_unchanged": true,
+  "host_evaluator_regression_tests_pass": 6,
+  "hardware": "NOT_RUN",
+  "flashed": false,
+  "COM3_opened": false,
+  "benchmark_or_ADC_run": false,
+  "manifest": {
+    "results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\application.bin": {
+      "bytes": 347440,
+      "sha256": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418"
+    },
+    "results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\application.elf": {
+      "bytes": 11479008,
+      "sha256": "df119523da0f0416230fe6010f77d378d30970221135127ccb345822c84a1921"
+    },
+    "results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\bootloader.bin": {
+      "bytes": 26032,
+      "sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67"
+    },
+    "results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    "results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\sdkconfig": {
+      "bytes": 65779,
+      "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "ports": [
+    {
+      "port": "COM3",
+      "description": "Silicon Labs CP210x USB to UART Bridge (COM3)",
+      "hwid": "USB VID:PID=10C4:EA60 SER=0001 LOCATION=1-1"
+    }
+  ],
+  "COM3_exclusive_probe": "PASS_no_reset_command",
+  "checkpoint_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+  "parameters": 849,
+  "threshold": 0.88,
+  "INT8_threshold_code": 98,
+  "CPU_MHz": 160,
+  "IDF": "5.4.4",
+  "TFLM": "1.4.2",
+  "ESP_NN_effective": false,
+  "fixtures": 22,
+  "warmup_per_fixture": 3,
+  "measured_per_fixture": 30,
+  "raw_fixture_sha256": "e4b7dc22d17f7048ba0cf329246d51026db4b7144f7b98a7e03496d330869160",
+  "model_hashes": {
+    "FP32": "699dd84a6490d1cb50ea67c840225a7023b0dbfccd24350d58f8c53463217522",
+    "INT8": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e"
+  },
+  "model_bytes": {
+    "FP32": 9584,
+    "INT8": 8688
+  },
+  "statistic": "pooled660 measured runs; p95 linear interpolation, SD sample ddof1; per-fixture also exported",
+  "timing": "esp_timer_get_time; UART and vTaskDelay outside timing, no detector/ADC tasks; window-to-output is norm+quant/copy+Invoke",
+  "repeat_order": [
+    "FP32",
+    "INT8"
+  ],
+  "main_stack_bytes": 8192,
+  "arena_allocated_bytes": 65536,
+  "backup_manifest": {
+    "application.bin": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418",
+    "bootloader.bin": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+    "partition-table.bin": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820",
+    "sdkconfig": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+  }
+}

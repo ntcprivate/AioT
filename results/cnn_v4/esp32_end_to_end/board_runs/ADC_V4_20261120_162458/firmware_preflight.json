@@ -1,0 +1,72 @@
+{
+  "source_contract": "PASS_READ_ONLY",
+  "model_hash": "PASS",
+  "ADC_branch": "main.cpp/adc_oneshot_read; replay_main and benchmark not selected when ECG_EXPERIMENT_MODE=ADC",
+  "expected_ADC": "ADC1_CHANNEL6_GPIO34_12bit_12dB",
+  "LO_plus": 27,
+  "LO_minus": 26,
+  "fs": 250,
+  "window": 256,
+  "quality_safety_recovery": "retained",
+  "historical_ADC_build_path": "results\\cnn_v4\\esp32_end_to_end\\builds\\ADC_previous\\esp32_ecg_v4_experiment.bin",
+  "historical_ADC_build_sha256": "81b90643f47c4c138648c514e2ed0107f814b5f0a6389cffca34763da953438b",
+  "historical_ADC_build_is_not_current_board_firmware": true,
+  "sources": {
+    "firmware/esp32_ecg_v4_experiment/main/main.cpp": {
+      "bytes": 21653,
+      "sha256": "68b68f825ad4d3ac8c967a902cd9e1b26c1d9e7c010f4b35b3c99a03891aea2e"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/model.cpp": {
+      "bytes": 9497,
+      "sha256": "781cbec296a0cb4f4207e97d6225b1c1143e924f92ad4cd8ac21ef17c4778832"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/pipeline.cpp": {
+      "bytes": 24314,
+      "sha256": "cdf9a1c8c3dd069590c6ba55b3cde06b6b08a8ac310fd0ee4e23d93910f744fc"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/signal.cpp": {
+      "bytes": 7452,
+      "sha256": "01e51f827cee12fa81f4956a3876358d238f8c2e294d65e39a85411818ca236f"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/signal.h": {
+      "bytes": 3201,
+      "sha256": "5f98bb8acf71ec7a30aa6d1ef64bb688acf377fb03bb44c958307198927b93f8"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/preprocessing.h": {
+      "bytes": 1823,
+      "sha256": "f6c57d5faaa247d78fbb287721a7ec276a1b1e239eb30dbf4869842669370b87"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/lead_off.h": {
+      "bytes": 1591,
+      "sha256": "99f72736bd42294c15a2a15516221fc3828e070638798c7c8c2fb556cf53cd6e"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/research_shadow.h": {
+      "bytes": 3589,
+      "sha256": "f7a037c064bb8c03f8bdc7532d1b922442a6dbd614dc664431a66b5df635f965"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/telemetry.cpp": {
+      "bytes": 11232,
+      "sha256": "cb0e745b02881df12c003ac08cdad8da6e25de8c59630a95b55e1afc230d508a"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/telemetry_codec.h": {
+      "bytes": 1021,
+      "sha256": "32d6d540f3d38757f041dc432a2e07f58e0b80e2d5c1da8e064a36dd725d5f76"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/CMakeLists.txt": {
+      "bytes": 1436,
+      "sha256": "bf9024e45add5f3fa94b529b8976c8fa3f88129af6202605285a1a05567fb41d"
+    },
+    "firmware/esp32_ecg_v4_experiment/CMakeLists.txt": {
+      "bytes": 2811,
+      "sha256": "29cfb447c9bb00d7efcea19d959bd70426fc106deb22fdc3b113485c2f861cf1"
+    },
+    "firmware/esp32_ecg_v4_experiment/sdkconfig.defaults": {
+      "bytes": 499,
+      "sha256": "44875d233681f50d2e882a5181295b34dc8a47d5e8b7e84213976208f16cb810"
+    },
+    "firmware/esp32_ecg_v4_experiment/main/test_data/ecg_test_metadata.h": {
+      "bytes": 1431,
+      "sha256": "c1f2172ce8a0bbd96975f3f28f38f8b7b45f0846df830230a4e33ad0b4c0e17b"
+    }
+  }
+}

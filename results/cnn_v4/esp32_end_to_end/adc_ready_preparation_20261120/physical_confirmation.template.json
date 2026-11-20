@@ -1,0 +1,16 @@
+{
+  "physical_review_approved": false,
+  "no_body_connection": false,
+  "simulator_source_verified": false,
+  "supply_measured_and_approved": false,
+  "out_voltage_measured_and_approved": false,
+  "wiring_verified": false,
+  "ADC_binary_verified": false,
+  "source_model": null,
+  "supply_V": null,
+  "out_offset_V": null,
+  "out_min_V": null,
+  "out_max_V": null,
+  "reference_sync": null,
+  "reviewer": null
+}

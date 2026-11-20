@@ -1,0 +1,7 @@
+{
+  "scope": "Passive recording of existing UART; no instruction to connect person; physical safety not verified by software",
+  "user_requested_recording": true,
+  "source_description": "User reports AD8232 input present",
+  "no_body_connection": null,
+  "isolation_verified": null
+}

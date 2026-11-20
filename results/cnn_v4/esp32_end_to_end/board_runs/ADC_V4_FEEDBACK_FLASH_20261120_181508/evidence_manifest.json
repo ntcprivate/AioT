@@ -1,0 +1,42 @@
+[
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_FEEDBACK_FLASH_20261120_181508\\flash.log",
+    "bytes": 3072,
+    "sha256": "dfdbafef8a3cbc087d39d1a3cabdca025c88c3d034255540272f237956e45dd7"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_FEEDBACK_FLASH_20261120_181508\\uart_raw.log",
+    "bytes": 522925,
+    "sha256": "c87429b2fe8825d69c917c8e31c5bfbdda6d12f164fa2fae6c1b645a6447c4b2"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_FEEDBACK_FLASH_20261120_181508\\session_metadata.json",
+    "bytes": 1562,
+    "sha256": "61c4afc1f70a1fffc2b64f49cb07d430893aab8c5fdf4775a33800ef18d27000"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_FEEDBACK_FLASH_20261120_181508\\deployment_result.json",
+    "bytes": 1068,
+    "sha256": "142a5b4b6084549764a3cbeb870b8cfcb082c537eda933a42a5842f04a760c35"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_FEEDBACK_FLASH_20261120_181508\\report.md",
+    "bytes": 2068,
+    "sha256": "144cd9a6daa5afb8201e1a83f96c150638c23fd5877773b901f6235f89ef31c4"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_FEEDBACK_FLASH_20261120_181508\\adc_metrics.json",
+    "bytes": 4187,
+    "sha256": "b130731cc2c3a4d667d5335a4260543d3490af965742f792020544404e3fdc13"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\adc_v4_feedback_20261120\\application.bin",
+    "bytes": 325648,
+    "sha256": "f0f3b8817b144205032a10409873f48b1b7940e4aa971766dd6e06f085efb3bb"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\adc_v4_feedback_20261120\\manifest.json",
+    "bytes": 2543,
+    "sha256": "83e5472864fce3e46919d2cd2405d0ce463d66e230629340830738c0158e8566"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "exact": 22,
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "result": {
+    "status": "PASS",
+    "exact": "22",
+    "total": "22",
+    "prep_exact": "22",
+    "max_code_delta": "0",
+    "latency_mean_us": "83010",
+    "latency_min_us": "82934",
+    "latency_max_us": "83822",
+    "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e"
+  },
+  "memory": {
+    "arena_used": "6124",
+    "arena_allocated": "65536",
+    "internal_heap_min": "231400",
+    "stack_high_water_bytes": "6576"
+  },
+  "allocation": {
+    "sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+    "arena_allocated": "65536",
+    "arena_used": "6124",
+    "internal_heap_before": "297160",
+    "internal_heap_after": "231620"
+  },
+  "claim": "static golden arithmetic only, not ECG classification accuracy"
+}

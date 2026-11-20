@@ -1,0 +1,16 @@
+{
+  "FP32": "PASS_726_RUNS_SINGLE_BOOT",
+  "INT8": "PASS_726_RUNS_SINGLE_BOOT",
+  "measured_per_backend": 660,
+  "warmup_per_backend": 66,
+  "same_board_CPU_IDF_sdkconfig_fixtures": true,
+  "current_firmware": "BENCH_INT8_V4",
+  "current_application_sha256": "228ba68bec0b6f713a1d0b53f650bdec15d910fd40454dfe4b6800ab3ef08389",
+  "restore_performed": false,
+  "PVC_MIT100_raw_logs_unchanged": true,
+  "trained": false,
+  "ADC_or_V11_or_replay_experiment_run": false,
+  "committed": false,
+  "pushed": false,
+  "publication": "descriptive hardware benchmark with single-board/single-boot limitations in report.md"
+}

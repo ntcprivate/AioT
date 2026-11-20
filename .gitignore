@@ -38,3 +38,31 @@
 # Operating system
 .DS_Store
 Thumbs.db
+
+# Local Python environments, installed packages and generated caches
+**/.venv*/
+**/venv/
+**/site-packages/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.egg-info/
+*.whl
+*.msi
+*.exe
+
+# Regenerable ESP-IDF configurations; preserve snapshots under results/**/builds/
+/firmware/**/build_*/
+
+# Downloaded ECG datasets (keep separately, never remove local files)
+/.old-headers/
+/files/
+/european-st-t-database-1.0.0/
+/mit-bih-supraventricular-arrhythmia-database-1.0.0/
+/mit-bih-st-change-database-1.0.0/
+/stdb-1.0.0.zip
+
+# Machine-local credentials and repair backups
+/.aws/
+/.git-credentials
+/git_repair_backup_*/
+/git_repair_active.txt

@@ -1,0 +1,55 @@
+{
+  "confirmation": {
+    "no_body_connection": true,
+    "ADC_binary_verified": true,
+    "scope": "Disconnected-electrode firmware and ADC function check; no human measurement",
+    "user_statement": "All AD8232 electrodes removed from person",
+    "simulator_source_verified": null,
+    "measured_voltages": null,
+    "hashes": {
+      "adc_application.bin": "80e428b11f8192fb590d34fd902bbc554d22a01e32e555977a3327947362eb2e",
+      "adc_bootloader.bin": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+      "adc_partition_table.bin": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    }
+  },
+  "port": "COM3",
+  "baud": 115200,
+  "requested_seconds": 120.0,
+  "host_start_utc": "2026-11-20T10:02:05.033119+00:00",
+  "flash": false,
+  "disconnected_check": true,
+  "valid_ecg_claim": false,
+  "host_end_utc": "2026-11-20T10:03:12.836152+00:00",
+  "error": "ValueError: INCOMPLETE_GOLDEN_OR_ADC_MODE",
+  "golden_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "boots": 1,
+  "boot_ids": [
+    "bc71c753"
+  ],
+  "trailing_bytes": 256,
+  "elapsed_seconds": 67.80304110000725,
+  "uart_sha256": "aeec52d84735d21d5ae2dd98e3b35a8568c03528671005770d5a711288bf280b"
+}

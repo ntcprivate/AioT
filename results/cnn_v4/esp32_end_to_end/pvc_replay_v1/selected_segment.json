@@ -1,0 +1,14 @@
+{
+  "record": "I08",
+  "start_250hz": 116500,
+  "end_250hz_exclusive": 131860,
+  "interior_N": 39,
+  "interior_V": 20,
+  "scanned": [
+    {
+      "record": "I08",
+      "windows_examined": 467
+    }
+  ],
+  "rule_sha256": "b789f8cefcd62ebfd91dd421f4dcca85a1889661211163024303a7fe9a961b24"
+}

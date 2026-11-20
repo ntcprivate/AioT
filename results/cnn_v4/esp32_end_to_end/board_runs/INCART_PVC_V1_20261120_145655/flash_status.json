@@ -1,0 +1,32 @@
+{
+  "exit_code": 0,
+  "command": [
+    "C:\\Espressif\\tools\\python\\v5.4.4\\venv\\Scripts\\python.exe",
+    "-m",
+    "esptool",
+    "--chip",
+    "esp32",
+    "--port",
+    "COM3",
+    "--baud",
+    "460800",
+    "--before",
+    "default_reset",
+    "--after",
+    "no_reset",
+    "write_flash",
+    "--flash_mode",
+    "dio",
+    "--flash_freq",
+    "40m",
+    "--flash_size",
+    "4MB",
+    "0x1000",
+    "D:\\Code Part Two\\AIoT\\results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\bootloader.bin",
+    "0x8000",
+    "D:\\Code Part Two\\AIoT\\results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\partition-table.bin",
+    "0x10000",
+    "D:\\Code Part Two\\AIoT\\results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\build\\application.bin"
+  ],
+  "after": "no_reset; capture will record before one EN pulse"
+}

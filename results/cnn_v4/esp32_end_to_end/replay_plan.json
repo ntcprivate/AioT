@@ -1,0 +1,22 @@
+{
+  "status": "PLANNED_NOT_MATERIALIZED_PYTHON311_MISSING",
+  "records": [
+    {"dataset": "MITBIH", "record": "100", "split": "Train", "lead": "MLII", "source_hz": 360},
+    {"dataset": "INCART", "record": "I08", "split": "Validation", "lead": "II", "source_hz": 257}
+  ],
+  "range_250hz": [0, 15360],
+  "duration_seconds": 61.44,
+  "mapping": "clip(rint(2048 + 200 * physical_mV), 0, 4095); resample_poly full record then crop",
+  "purpose": "engineering smoke replay; not sufficient to establish dataset-wide accuracy or independent generalization",
+  "annotation_in_firmware": false,
+  "threshold_probability": 0.88,
+  "threshold_code_min": 98,
+  "matching_tolerance_samples": 38,
+  "matching": "chronological reference, nearest unused detection, tie lower detection index",
+  "missed_PVC": "FN, including startup/boundary/quality rejection",
+  "missed_Normal": "abstention, never TN",
+  "matched_OTHER": "detector beat TP; exclude from N/V classification",
+  "unmatched_PVC": "FP alarm under existing protocol; not evidence that peak is noise",
+  "detector_status": "NOT_READY_FOR_ACCURACY_CLAIM",
+  "physical_quality_gate": "retained but synthetic ADC mapping is not an analog validity measurement"
+}

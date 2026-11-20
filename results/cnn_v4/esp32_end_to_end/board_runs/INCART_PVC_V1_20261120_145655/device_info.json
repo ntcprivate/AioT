@@ -1,0 +1,21 @@
+{
+  "chip": "ESP32-D0WD-V3 (revision v3.1)",
+  "MAC": "b0:3f:d3:51:8b:ec",
+  "crystal": "40MHz",
+  "cpu_hz_measured_boot": 160000000,
+  "idf": "5.4.4",
+  "port": "COM3",
+  "baud_requested": 115200,
+  "baud_reported": 115201,
+  "arena_used": 6124,
+  "arena_allocated": 65536,
+  "heap_min": 160420,
+  "stack_free_bytes": 8304,
+  "application_sha256": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418",
+  "app_ELF_SHA256_boot_prefix": "df119523d...",
+  "flash_status": "PASS_esptool_exit0_all_written_sections_hash_verified",
+  "flash_after": "no_reset_then_one_capture_EN_reset",
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "heap_free_last_telemetry_after_task_exit": 173648,
+  "heap_free_at_replay_END": 169192
+}

@@ -1,0 +1,202 @@
+{
+  "firmware\\esp32_ecg_v4_experiment\\.gitignore": {
+    "bytes": 71,
+    "sha256": "30350fea5aa9e403a44e4aa530014a22812ff115882fd175ba64360ebda24bce"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\CMakeLists.txt": {
+    "bytes": 2782,
+    "sha256": "ddb56d7f6e566468c8fb9a84908947c9d633c47cd287106c684ceef1a55f7625"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\dependencies.lock": {
+    "bytes": 824,
+    "sha256": "1ffed316bb53acd11a696c0f85d2731853cd5e13bc398ea983d691d3ce3f3f71"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\sdkconfig": {
+    "bytes": 65779,
+    "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\sdkconfig.defaults": {
+    "bytes": 499,
+    "sha256": "44875d233681f50d2e882a5181295b34dc8a47d5e8b7e84213976208f16cb810"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\ai_test_only.cpp": {
+    "bytes": 10006,
+    "sha256": "25484d68c170904ca7d478a1e3b556d8e41fa191cae19b3ab1454b8870722667"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\ai_test_only.h": {
+    "bytes": 270,
+    "sha256": "d4d4e4bdbad1c13bfc48786350f2f1743b9d4ddeff457c77ee058537faf18b82"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\benchmark.cpp": {
+    "bytes": 4685,
+    "sha256": "2804eedd95e396ba7aa6f38a76862dd06ff0ff15f133453ffda36a6c79a0c019"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\bench_feedback.h": {
+    "bytes": 1656,
+    "sha256": "32e620a907aa40c86dfb6704bfb1d6a300d67fe93ceb1560c6efd8f3521ed912"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\CMakeLists.txt": {
+    "bytes": 1374,
+    "sha256": "6c4151291579ffd88453d0779506b5985b27546dc5790708cbbccc59af32e554"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\fp32_identity.h": {
+    "bytes": 109,
+    "sha256": "650ac95169d308eb9f2d0039d71a296bfb216a57331d587d8488c05c6da3d245"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\idf_component.yml": {
+    "bytes": 329,
+    "sha256": "7f279e4a6d786d64912787d1022a99884c43c8823d966fe7ab4058aaf01f3c16"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\Kconfig.projbuild": {
+    "bytes": 3707,
+    "sha256": "fe5c8425bcfa794dca23a70f3a16eeeb79517ad75ff0d7206733bd3454fe1d7c"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\lead_off.h": {
+    "bytes": 1591,
+    "sha256": "99f72736bd42294c15a2a15516221fc3828e070638798c7c8c2fb556cf53cd6e"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\main.cpp": {
+    "bytes": 21653,
+    "sha256": "68b68f825ad4d3ac8c967a902cd9e1b26c1d9e7c010f4b35b3c99a03891aea2e"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\model.cpp": {
+    "bytes": 9497,
+    "sha256": "781cbec296a0cb4f4207e97d6225b1c1143e924f92ad4cd8ac21ef17c4778832"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\model.h": {
+    "bytes": 242,
+    "sha256": "32814244792747c151c67e246e91363a27682252b82ee0f3c9c1c67514917bad"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\operator_trace.h": {
+    "bytes": 6326,
+    "sha256": "223913df1f47df1545694a8e296d7d508756bc8f2bca344f544c816d17bc4234"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\pipeline.cpp": {
+    "bytes": 24314,
+    "sha256": "cdf9a1c8c3dd069590c6ba55b3cde06b6b08a8ac310fd0ee4e23d93910f744fc"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\pipeline.h": {
+    "bytes": 1129,
+    "sha256": "491eed53a2112f6e4a92f54330391159d70ca91ca3350baf0e9dc15c946b9283"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\preprocessing.h": {
+    "bytes": 1823,
+    "sha256": "f6c57d5faaa247d78fbb287721a7ec276a1b1e239eb30dbf4869842669370b87"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\replay_identity.h": {
+    "bytes": 337,
+    "sha256": "38b083995c06a3600fdbf07835d9cac6e890f91623afbde3d0591886e237aeb4"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\replay_main.cpp": {
+    "bytes": 4428,
+    "sha256": "a7bd4af7b25945068b0b96b4756ca7b8f410da674abc2938bc256d41e1d1b5ae"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\research_shadow.h": {
+    "bytes": 3589,
+    "sha256": "f7a037c064bb8c03f8bdc7532d1b922442a6dbd614dc664431a66b5df635f965"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\signal.cpp": {
+    "bytes": 7452,
+    "sha256": "01e51f827cee12fa81f4956a3876358d238f8c2e294d65e39a85411818ca236f"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\signal.h": {
+    "bytes": 3201,
+    "sha256": "5f98bb8acf71ec7a30aa6d1ef64bb688acf377fb03bb44c958307198927b93f8"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\single_round_conv.cpp": {
+    "bytes": 4915,
+    "sha256": "fe8158babc0b303c825f3ecced417370caf8374b66660553c6850dd0a50cdb67"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\single_round_conv.h": {
+    "bytes": 233,
+    "sha256": "6f406bd0d3a8a9019f5cd05f6d4723a76e82050074f3be3d37745be3d9f561f6"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\single_round_fc.cpp": {
+    "bytes": 2694,
+    "sha256": "313d9bb5bea29fbd788ca006ee34774f8ba8ed8f0708e4288824727f1c0b01de"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\single_round_fc.h": {
+    "bytes": 151,
+    "sha256": "0e3a9b92a788483e792b7366011b76c19aec8124f7edee3f4a09685bdc2b85c2"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\single_round_math.h": {
+    "bytes": 683,
+    "sha256": "4479d05724fb35389f66d585292dde3d8f581ba13fb478a07e2348cfec424c07"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\system_state.h": {
+    "bytes": 1338,
+    "sha256": "84b0b6028017150232a06304117a6edcdabbdc344319b1c449c85a675db12f27"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\telemetry.cpp": {
+    "bytes": 11232,
+    "sha256": "cb0e745b02881df12c003ac08cdad8da6e25de8c59630a95b55e1afc230d508a"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\telemetry.h": {
+    "bytes": 683,
+    "sha256": "50437dcc4fbdaa53d31c46b8749f8f5092469ec8107653b65df702784d247224"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\telemetry_codec.h": {
+    "bytes": 1021,
+    "sha256": "32d6d540f3d38757f041dc432a2e07f58e0b80e2d5c1da8e064a36dd725d5f76"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\trace_codec.h": {
+    "bytes": 457,
+    "sha256": "917a327bd06215aceda1fada89f93f3ddd01c9c69ce33ad18d40d47089a6b783"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\trace_transport.cpp": {
+    "bytes": 1875,
+    "sha256": "2eec9efb7fb89a752e6f9a919ac97803263ef506daa3b6c06da754b2736e1716"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\trace_transport.h": {
+    "bytes": 459,
+    "sha256": "3d6d71220aac08410574c0f26f11a090bb030a39f627670d37fd0cae8bd4117c"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\tests\\replay_host.cpp": {
+    "bytes": 1318,
+    "sha256": "b46563bcf59468e08d3ca0a3366ea7f743e3a1d90309e5be9803476087f7dfd1"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\tests\\test_replay_evaluator.py": {
+    "bytes": 2440,
+    "sha256": "b79c9195a9dd845ffb2367d2471b134743cb686057d27fd556bfc4577c136123"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\tests\\test_v4.cpp": {
+    "bytes": 3044,
+    "sha256": "e16b22cda3aac287085d615a0d5cac9eabbfdb2d1ef303268f210e29acaf6121"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\tests\\tflm_replay_host.cpp": {
+    "bytes": 2139,
+    "sha256": "fdbb731098e242112a243b74281cef8941c0e51f75c471e47a562a4c7e962798"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\tests\\host_stubs\\sdkconfig.h": {
+    "bytes": 163,
+    "sha256": "35bf8f93d9470798b2d0e5398fa5fa074c32b3477a8420fdf8e9d0ba37bace4a"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\assets\\INCART_I08.bin": {
+    "bytes": 30720,
+    "sha256": "c84d851221398d49f3e8b979bfa140c8cf7c9df0315ec6c4dae300cbdac99967"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\assets\\MITBIH_100.bin": {
+    "bytes": 30720,
+    "sha256": "79e989ecfc3e964d914137e0fe601f285405d16856da3a614564bcb8d53e64a3"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\assets\\v4_raw.bin": {
+    "bytes": 22528,
+    "sha256": "e4b7dc22d17f7048ba0cf329246d51026db4b7144f7b98a7e03496d330869160"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\model\\ecg_cnn_int8.tflite": {
+    "bytes": 8688,
+    "sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\model\\ecg_cnn_v4_fp32.tflite": {
+    "bytes": 9584,
+    "sha256": "699dd84a6490d1cb50ea67c840225a7023b0dbfccd24350d58f8c53463217522"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\test_data\\ecg_test_metadata.h": {
+    "bytes": 1431,
+    "sha256": "c1f2172ce8a0bbd96975f3f28f38f8b7b45f0846df830230a4e33ad0b4c0e17b"
+  },
+  "firmware\\esp32_ecg_v4_experiment\\main\\test_data\\ecg_test_samples_int8.bin": {
+    "bytes": 5632,
+    "sha256": "288186f6d6bc860ae5fc71f77131f2d6e5723c4471244b27747d377469ff1ed4"
+  }
+}

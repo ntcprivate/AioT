@@ -1,0 +1,9 @@
+{
+  "backend": "INT8",
+  "error": null,
+  "boots": 1,
+  "measurement_EN_resets": 1,
+  "elapsed_seconds": 66.56059570002253,
+  "uart_sha256": "941d565d472a2e6b61e16b686293935f8b99b4584708e3980227d229906f4f23",
+  "uart_bytes": 104852
+}

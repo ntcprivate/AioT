@@ -1,0 +1,69 @@
+{
+  "build": "PASS; final Ninja exit 0",
+  "python_gui_parser_tests_pass": 37,
+  "cpp_feedback_suite": "PASS",
+  "hardware_tests_run": false,
+  "flash": false,
+  "reset": false,
+  "mode": "ADC",
+  "threshold": 0.88,
+  "code_threshold": 98,
+  "unchanged_verified": [
+    "models\\v4\\ecg_cnn_v4_int8.tflite",
+    "firmware\\esp32_ecg_v4_experiment\\main\\preprocessing.h",
+    "firmware\\esp32_ecg_v4_experiment\\main\\signal.cpp",
+    "firmware\\esp32_ecg_v4_experiment\\main\\test_data\\ecg_test_metadata.h"
+  ],
+  "files": [
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\main\\pipeline.cpp",
+      "bytes": 25079,
+      "sha256": "470c8dff6f68293e778405a61cbe0cdab9c358d281984a55b2500fb91e79bdee"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\main\\v4_feedback.h",
+      "bytes": 1179,
+      "sha256": "7982732fc8ac914a9a17c95f6d1738d91e42f7e2c901d40f61a267267807fa1b"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\tests\\test_v4_feedback.cpp",
+      "bytes": 2129,
+      "sha256": "e59fb572fe6edef0175ee0d924808a85b407677c11f74e724b8cf907c47011a7"
+    },
+    {
+      "path": "tools\\ecg_monitor\\ecg_monitor\\ai.py",
+      "bytes": 6210,
+      "sha256": "4225ce6f9af42c837475608f413f7fb0d190436caa39b9ba710cdceedfe78d7c"
+    },
+    {
+      "path": "tools\\ecg_monitor\\tests\\test_v4_threshold.py",
+      "bytes": 2540,
+      "sha256": "905857fae8e39b8687f4760f6dfff697338e4640a673490b8ae656172551db32"
+    },
+    {
+      "path": "models\\v4\\ecg_cnn_v4_int8.tflite",
+      "bytes": 8688,
+      "sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e"
+    },
+    {
+      "path": "results\\cnn_v4\\esp32_end_to_end\\adc_v4_feedback_20261120\\application.bin",
+      "bytes": 325648,
+      "sha256": "f0f3b8817b144205032a10409873f48b1b7940e4aa971766dd6e06f085efb3bb"
+    },
+    {
+      "path": "results\\cnn_v4\\esp32_end_to_end\\adc_v4_feedback_20261120\\bootloader.bin",
+      "bytes": 26032,
+      "sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67"
+    },
+    {
+      "path": "results\\cnn_v4\\esp32_end_to_end\\adc_v4_feedback_20261120\\partition-table.bin",
+      "bytes": 3072,
+      "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    {
+      "path": "results\\cnn_v4\\esp32_end_to_end\\adc_v4_feedback_20261120\\sdkconfig",
+      "bytes": 65779,
+      "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+    }
+  ]
+}

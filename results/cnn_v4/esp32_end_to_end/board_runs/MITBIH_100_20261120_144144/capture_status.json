@@ -1,0 +1,57 @@
+{
+  "port": "COM3",
+  "baud": 115200,
+  "timeout_seconds": 240.0,
+  "reset_commands": 1,
+  "flash": false,
+  "log": "D:\\Code Part Two\\AIoT\\results\\cnn_v4\\esp32_end_to_end\\board_runs\\MITBIH_100_20261120_144144\\uart_raw.log",
+  "status": "CAPTURE_COMPLETE",
+  "reset_start_monotonic": 238987.5433091,
+  "error": null,
+  "elapsed_seconds": 133.19372889999067,
+  "boot_count": 1,
+  "boot_ids": [
+    "f7214f94"
+  ],
+  "golden_count": 22,
+  "golden_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "markers": {
+    "ECG_GOLDEN_DONE": [
+      "ECG_GOLDEN_DONE samples=22 failed=0 status=PASSED live_mode_unchanged=1"
+    ],
+    "V4_REPLAY_BEGIN": [
+      "V4_REPLAY_BEGIN record=MITBIH_100 samples=15360 fs=250 sha256=79e989ecfc3e964d914137e0fe601f285405d16856da3a614564bcb8d53e64a3 source=LABELED_REPLAY analog_validated=0"
+    ],
+    "V4_PIPELINE_SUMMARY": [
+      "V4_PIPELINE_SUMMARY detected=73 classified=65 rejected=7 queue_drops=0 block_drops=0 heap_free=169192 heap_min=160420"
+    ],
+    "V4_REPLAY_END": [
+      "V4_REPLAY_END record=MITBIH_100 stream_complete=1 missed=0 heap_free=169192 heap_min=160420 status=CAPTURE_ONLY_NOT_ACCURACY_PASS"
+    ]
+  },
+  "raw_bytes": 692025,
+  "sha256": "1fbe94640a85b39f843e11ce1ab41d1796e423b6a32f3dea0cfe614acb97b6d8"
+}

@@ -23,7 +23,13 @@ def validate_ai(p):
     if r['state'] in ('NORMAL','PVC'):
         if type(prob) not in (int,float) or not math.isfinite(prob) or not 0<=prob<=1:raise ValueError('invalid AI probability')
         if r['r_index']<128 or not 0<r['r_t_us']<=r['window_end_us']<=r['result_t_us']<r['valid_until_us']<=r['result_t_us']+1_500_000:raise ValueError('invalid AI prediction times')
-        if r['state']!=('PVC' if prob>=.52 else 'NORMAL'):raise ValueError('AI label/probability mismatch')
+        # Firmware owns the classification. Older V1 captures omit threshold.
+        threshold=p.get('threshold',.52)
+        if type(threshold) not in (int,float) or not math.isfinite(threshold) or not 0<threshold<1:
+            raise ValueError('invalid AI threshold')
+        if p.get('model_version')=='V4' and 'threshold' not in p:
+            raise ValueError('V4 requires firmware threshold')
+        if r['state']!=('PVC' if prob>=threshold else 'NORMAL'):raise ValueError('AI label/probability mismatch')
     elif prob is not None:raise ValueError('invalid AI state exposes probability')
 
 def display(session,now,connected=True):

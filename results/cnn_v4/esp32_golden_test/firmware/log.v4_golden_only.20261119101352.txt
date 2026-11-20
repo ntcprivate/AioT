@@ -1,0 +1,9 @@
+V4_GOLDEN_SAMPLE i=17 label=0 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82937 status=EXACT
+V4_GOLDEN_SAMPLE i=18 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82965 status=EXACT
+V4_GOLDEN_SAMPLE i=19 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=82962 status=EXACT
+V4_GOLDEN_SAMPLE i=20 label=1 code=98 reference=98 probability=0.882812500 predicted=1 expected_predicted=1 delta=0 prep_exact=1 clipped=0 inference_us=83009 status=EXACT
+V4_GOLDEN_SAMPLE i=21 label=1 code=-118 reference=-118 probability=0.039062500 predicted=0 expected_predicted=0 delta=0 prep_exact=1 clipped=0 inference_us=82970 status=EXACT
+V4_GOLDEN_MEMORY arena_used=6124 arena_allocated=65536 internal_heap_min=231400 stack_high_water_bytes=6576
+V4_GOLDEN_RESULT status=PASS exact=22 total=22 prep_exact=22 max_code_delta=0 latency_mean_us=83010 latency_min_us=82934 latency_max_us=83822 model_sha256=a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e
+V4_GOLDEN_END
+[0;32mI (2544) main_task: Returned from app_main()[0m

@@ -1,0 +1,22 @@
+{
+  "status": "NOT_RUN",
+  "golden_result": null,
+  "ADC_signal_valid": null,
+  "actual_inferences": null,
+  "sample_count": null,
+  "sampling_rate_hz": null,
+  "ADC_errors": null,
+  "missed_samples": null,
+  "queue_drops": null,
+  "block_drops": null,
+  "latency": null,
+  "runtime_memory": null,
+  "TP": null,
+  "TN": null,
+  "FP": null,
+  "FN": null,
+  "precision": null,
+  "recall": null,
+  "f1": null,
+  "note": "null means unmeasured, not zero. No reference labels or real ADC data received."
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "path": "firmware\\esp32_ecg_v4_experiment\\log.esp32_ecg_v4_experiment.20261119130501.txt",
+    "sha256": "b1eb89bb35c0f07a8e6680968c5a7f20cbb4f54727ec913b5faf023762ffefb7",
+    "boots": {
+      "d9ca79c7": {
+        "first_us": 3587305,
+        "last_us": 53057305
+      }
+    },
+    "golden_ids": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "golden_failed": [],
+    "rom_reset_lines": []
+  },
+  {
+    "path": "firmware\\esp32_ecg_v4_experiment\\log.esp32_ecg_v4_experiment.20261120143453.txt",
+    "sha256": "9aa1eb52f735dadafbeb8650318d42d792f4e99557269f63ca953d56d7f21d22",
+    "boots": {
+      "d58e241a": {
+        "first_us": 2057307,
+        "last_us": 5117306
+      },
+      "4c63110c": {
+        "first_us": 527309,
+        "last_us": 39797305
+      }
+    },
+    "golden_ids": [
+      "0",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "golden_failed": [],
+    "rom_reset_lines": [
+      "rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)"
+    ]
+  }
+]

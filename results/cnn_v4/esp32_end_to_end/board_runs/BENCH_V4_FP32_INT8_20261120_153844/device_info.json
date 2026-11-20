@@ -1,0 +1,26 @@
+{
+  "FP32": {
+    "chip": "ESP32-D0WD-V3 (revision v3.1)",
+    "MAC": "b0:3f:d3:51:8b:ec",
+    "cpu_hz": 160000000,
+    "idf_boot": [
+      "I (239) app_init: ESP-IDF:          v5.4.4"
+    ],
+    "ELF_prefix": [
+      "I (234) app_init: ELF file SHA256:  6e0a0738a..."
+    ],
+    "capture_seconds": 30.272019199997885
+  },
+  "INT8": {
+    "chip": "ESP32-D0WD-V3 (revision v3.1)",
+    "MAC": "b0:3f:d3:51:8b:ec",
+    "cpu_hz": 160000000,
+    "idf_boot": [
+      "I (238) app_init: ESP-IDF:          v5.4.4"
+    ],
+    "ELF_prefix": [
+      "I (233) app_init: ELF file SHA256:  9a2b982b1..."
+    ],
+    "capture_seconds": 66.56059570002253
+  }
+}

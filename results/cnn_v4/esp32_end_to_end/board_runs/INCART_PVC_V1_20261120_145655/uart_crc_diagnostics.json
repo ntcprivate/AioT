@@ -1,0 +1,12 @@
+[
+  {
+    "line": 1726,
+    "length": 511,
+    "stored": "915b7887",
+    "calculated": "c56c3463",
+    "JSON_parse": "Unterminated string starting at: line 1 column 487 (char 486)",
+    "sequence": null,
+    "time": null,
+    "body": "{\"v\":2,\"type\":\"status\",\"boot\":\"687938e9\",\"seq\":738,\"t_us\":132497308,\"firmware\":\"ecg-monitor-2\",\"source\":\"LABELED_REPLAY\",\"state\":\"SIGNAL_INVALID\",\"reason\":\"SAMPLING_STALLED\",\"model\":\"READY\",\"golden\":true,\"model_version\":\"V4\",\"threshold\":0.88,\"bpm\":null,\"rr_ms\":null,\"led\":false,\"buzzer\":false,\"self_test\":false,\"clip_count\":0,\"ptp\":272,\"diff_percent\":3.7572,\"power50_ratio\":0.000942,\"baseline_delta\":20.5781,\"quality_known\":true,\"quality_t_us\":128422133,\"tx_dropped\":0,\"write_errors\":0,\"quality_va"
+  }
+]

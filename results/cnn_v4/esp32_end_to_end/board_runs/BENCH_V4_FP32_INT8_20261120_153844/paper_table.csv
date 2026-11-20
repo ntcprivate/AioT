@@ -1,0 +1,34 @@
+metric,FP32,INT8,unit,note
+Invoke_mean,34.47240909090909,83.08481818181818,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Invoke_median,34.4745,83.088,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Invoke_min,34.441,83.064,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Invoke_max,34.492,83.093,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Invoke_p95,34.485,83.093,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Invoke_sample_SD,0.010572356764157525,0.009080501698969061,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Window_to_raw_output_mean,36.29454545454546,86.77118181818183,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Window_to_raw_output_median,36.2955,86.775,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Window_to_raw_output_min,36.21,86.698,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Window_to_raw_output_max,36.366,86.837,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Window_to_raw_output_p95,36.36,86.836,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Window_to_raw_output_sample_SD,0.037802771380843044,0.03372967115109221,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Normalization_mean,1.8171818181818182,1.854659090909091,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Normalization_median,1.8135,1.852,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Normalization_min,1.764,1.795,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Normalization_max,1.88,1.919,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Normalization_p95,1.879,1.918,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Normalization_sample_SD,0.0346825661867195,0.034009690118171614,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Quantization_or_copy_mean,0.0049545454545454545,1.8317045454545455,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Quantization_or_copy_median,0.005,1.831,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Quantization_or_copy_min,0.004,1.825,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Quantization_or_copy_max,0.005,1.839,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Quantization_or_copy_p95,0.005,1.836,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+Quantization_or_copy_sample_SD,0.00020845687696600777,0.0033976217612066728,ms,"660 measured runs per model, 22 fixtures x30, warmups excluded"
+model_bytes,9584,8688,bytes,static linker or runtime as labeled; arena allocation same64KiB
+application_bytes,273936,270576,bytes,static linker or runtime as labeled; arena allocation same64KiB
+static_DRAM_bytes,14996,15532,bytes,static linker or runtime as labeled; arena allocation same64KiB
+static_IRAM_bytes,49634,49634,bytes,static linker or runtime as labeled; arena allocation same64KiB
+arena_used_bytes,18120,6124,bytes,static linker or runtime as labeled; arena allocation same64KiB
+arena_allocated_bytes,65536,65536,bytes,static linker or runtime as labeled; arena allocation same64KiB
+minimum_free_heap_bytes,230912,230376,bytes,static linker or runtime as labeled; arena allocation same64KiB
+main_stack_high_water_free_bytes,6616,6592,bytes,static linker or runtime as labeled; arena allocation same64KiB
+main_stack_peak_used_estimate_bytes,1576,1600,bytes,static linker or runtime as labeled; arena allocation same64KiB

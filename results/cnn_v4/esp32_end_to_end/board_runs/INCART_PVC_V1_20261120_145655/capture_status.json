@@ -1,0 +1,57 @@
+{
+  "port": "COM3",
+  "baud": 115200,
+  "timeout_seconds": 240.0,
+  "reset_commands": 1,
+  "flash": false,
+  "log": "D:\\Code Part Two\\AIoT\\results\\cnn_v4\\esp32_end_to_end\\board_runs\\INCART_PVC_V1_20261120_145655\\uart_raw.log",
+  "status": "CAPTURE_COMPLETE",
+  "reset_start_monotonic": 239967.2952464,
+  "error": null,
+  "elapsed_seconds": 133.10079399999813,
+  "boot_count": 1,
+  "boot_ids": [
+    "687938e9"
+  ],
+  "golden_count": 22,
+  "golden_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "markers": {
+    "ECG_GOLDEN_DONE": [
+      "ECG_GOLDEN_DONE samples=22 failed=0 status=PASSED live_mode_unchanged=1"
+    ],
+    "V4_REPLAY_BEGIN": [
+      "V4_REPLAY_BEGIN record=INCART_PVC_V1 samples=15360 fs=250 sha256=3c22e5aed668a003f774272d4896b07fbc1ba57f603de227897b595920c43086 source=LABELED_REPLAY analog_validated=0"
+    ],
+    "V4_PIPELINE_SUMMARY": [
+      "V4_PIPELINE_SUMMARY detected=78 classified=77 rejected=1 queue_drops=0 block_drops=0 heap_free=169192 heap_min=160420"
+    ],
+    "V4_REPLAY_END": [
+      "V4_REPLAY_END record=INCART_PVC_V1 stream_complete=1 missed=0 heap_free=169192 heap_min=160420 status=CAPTURE_ONLY_NOT_ACCURACY_PASS"
+    ]
+  },
+  "raw_bytes": 666518,
+  "sha256": "53d97bb1d96460d93e82db6cfcea9999e824af6d18b46d2748fa70cf9ca82ecb"
+}

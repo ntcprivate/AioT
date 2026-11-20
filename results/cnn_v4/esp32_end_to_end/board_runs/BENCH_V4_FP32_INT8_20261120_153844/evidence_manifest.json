@@ -1,0 +1,170 @@
+{
+  "benchmark_source.cpp": {
+    "bytes": 4685,
+    "sha256": "2804eedd95e396ba7aa6f38a76862dd06ff0ff15f133453ffda36a6c79a0c019"
+  },
+  "config.json": {
+    "bytes": 1681,
+    "sha256": "ed82b906d0a34b9c00f5bcdb45a9e1aa681228ed42be50dbd12790eeaa8baa47"
+  },
+  "device_info.json": {
+    "bytes": 668,
+    "sha256": "6183e8cc4e28ec7fffeb6270145dfe5fdd9d9f54039861cc8f6167a6e5d5e1da"
+  },
+  "embedded_fixture_verification.json": {
+    "bytes": 337,
+    "sha256": "efff15cd9262e14d4a1f9e9e90decf0f1aff0a643d6846afd4d2ba1066f27483"
+  },
+  "experiment_status.json": {
+    "bytes": 628,
+    "sha256": "f3453e456f7aba4b25a265510d42b73673f5aa93bab0f093b17107ba8919e1e6"
+  },
+  "fixture_comparison.csv": {
+    "bytes": 1751,
+    "sha256": "484c802ec5374504e3590b859b5131bfa2c1bb078bc9020d93087ae3e3a8a1c0"
+  },
+  "metrics.json": {
+    "bytes": 14497,
+    "sha256": "bf3d04c83db32c80598e9c7a6b5882be24d678cb4037de2292373ec967fb98a9"
+  },
+  "paper_table.csv": {
+    "bytes": 3666,
+    "sha256": "7253649d9459dfc5902c3825c06727933880a032368de36df329ce5ff67ec6df"
+  },
+  "paper_table.md": {
+    "bytes": 1498,
+    "sha256": "5e1d1791732a4142cab1a0e6ef2316c83e3b4029de50caecea49ca13cb7f3893"
+  },
+  "preprocessing_source.h": {
+    "bytes": 1823,
+    "sha256": "f6c57d5faaa247d78fbb287721a7ec276a1b1e239eb30dbf4869842669370b87"
+  },
+  "report.md": {
+    "bytes": 9310,
+    "sha256": "7365776a5a484a1b510bbc294565586a9ffe3568fb35234f00bab7a47589114e"
+  },
+  "FP32\\all_runs.csv": {
+    "bytes": 31471,
+    "sha256": "6ee6eed852dd0f07d3a21e4066bcf638345b93e5224cc5a8ec31515938cd7784"
+  },
+  "FP32\\build.log": {
+    "bytes": 14059,
+    "sha256": "a3197bf9074a15d68e6f755956566543cc6153b1c47d006d6053e7d8a2c3794d"
+  },
+  "FP32\\build_verification.json": {
+    "bytes": 6724,
+    "sha256": "bd1f388f89e8b490a6b66a2af9d427fee105ad9b4d346c645d1ecaf530b77ec9"
+  },
+  "FP32\\capture_status.json": {
+    "bytes": 242,
+    "sha256": "744ddea6d77ef6ffd712eaf7673f67f9cc19d353f33e1aabaa490271eaf65288"
+  },
+  "FP32\\flash.log": {
+    "bytes": 1505,
+    "sha256": "24ebfd90dc16d4a18d0e49b4e2449109e7bfaac80d5181ccce3d6349af973bb5"
+  },
+  "FP32\\flash_status.json": {
+    "bytes": 904,
+    "sha256": "33a84713051e775e360da6be0a9f572c0c4e938ec1542e1986fd7712920ee9d8"
+  },
+  "FP32\\uart_raw.log": {
+    "bytes": 101356,
+    "sha256": "6e8c7c9a7b6f3aaa6ae4601837d49e8d1274272e20ea47ad84e075ade0f8d892"
+  },
+  "FP32\\validated_samples.json": {
+    "bytes": 190698,
+    "sha256": "479a72c67768041eab1d6ea31653ab3a6b9371d302ad92c299c0802fe0caece3"
+  },
+  "INT8\\all_runs.csv": {
+    "bytes": 34969,
+    "sha256": "475eeb04e85e3fbeaa5c55ef4082ad46e0ac9e57971cc43f7b6836bc043f236b"
+  },
+  "INT8\\build.log": {
+    "bytes": 13662,
+    "sha256": "50905f3a375eabb2955d1237543073214a116c5398f5216babbf0cf6b2d1246e"
+  },
+  "INT8\\build_verification.json": {
+    "bytes": 6724,
+    "sha256": "6dbd911384cea60a38833fed25592224fcbbfe96b2d86d98092f6c1a2bf803b6"
+  },
+  "INT8\\capture_status.json": {
+    "bytes": 241,
+    "sha256": "5af1dd2ea080b1aed8e383b5ba0efe5fc15f823aecd249814d912e6e43bfcfdb"
+  },
+  "INT8\\flash.log": {
+    "bytes": 1501,
+    "sha256": "85b8d67992d0c289bef06666393e74895ac52c13f142db58eb2a21ea5ee371aa"
+  },
+  "INT8\\flash_status.json": {
+    "bytes": 904,
+    "sha256": "3b438f3526561b88a2839666326ce0ce60b68355daa861f43a5825354481e4aa"
+  },
+  "INT8\\uart_raw.log": {
+    "bytes": 104852,
+    "sha256": "941d565d472a2e6b61e16b686293935f8b99b4584708e3980227d229906f4f23"
+  },
+  "INT8\\validated_samples.json": {
+    "bytes": 194194,
+    "sha256": "1d68e387404b68c8debc4e520b578eac52d2612b0c4939fa5a17e1573e9de359"
+  },
+  "restore_REPLAY_PVC\\application.bin": {
+    "bytes": 347440,
+    "sha256": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418"
+  },
+  "restore_REPLAY_PVC\\bootloader.bin": {
+    "bytes": 26032,
+    "sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67"
+  },
+  "restore_REPLAY_PVC\\partition-table.bin": {
+    "bytes": 3072,
+    "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+  },
+  "restore_REPLAY_PVC\\restore_command_NOT_EXECUTED.ps1": {
+    "bytes": 806,
+    "sha256": "9a43deef20803cee26dd5f0904451da9be40fd7c1e3b50a5ae1b7110949b9c85"
+  },
+  "restore_REPLAY_PVC\\sdkconfig": {
+    "bytes": 65779,
+    "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+  },
+  "INT8\\build\\application.bin": {
+    "bytes": 270576,
+    "sha256": "228ba68bec0b6f713a1d0b53f650bdec15d910fd40454dfe4b6800ab3ef08389"
+  },
+  "INT8\\build\\application.elf": {
+    "bytes": 10980512,
+    "sha256": "9a2b982b11ad468b34f411122db80940ab46a742467236f449a9c92f3cce05e8"
+  },
+  "INT8\\build\\bootloader.bin": {
+    "bytes": 26032,
+    "sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67"
+  },
+  "INT8\\build\\partition-table.bin": {
+    "bytes": 3072,
+    "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+  },
+  "INT8\\build\\sdkconfig": {
+    "bytes": 65779,
+    "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+  },
+  "FP32\\build\\application.bin": {
+    "bytes": 273936,
+    "sha256": "d303edbc662ec9a0863ec270583bcb43f8b1ee90b3397c3d9a4cddb99eca4218"
+  },
+  "FP32\\build\\application.elf": {
+    "bytes": 10983560,
+    "sha256": "6e0a0738a8fa998b0e4b16e6283e01add36ea392b8294cc327088989801cca25"
+  },
+  "FP32\\build\\bootloader.bin": {
+    "bytes": 26032,
+    "sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67"
+  },
+  "FP32\\build\\partition-table.bin": {
+    "bytes": 3072,
+    "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+  },
+  "FP32\\build\\sdkconfig": {
+    "bytes": 65779,
+    "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+  }
+}

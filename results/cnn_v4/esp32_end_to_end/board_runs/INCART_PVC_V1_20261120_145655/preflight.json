@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "ports": [
+    {
+      "device": "COM3",
+      "description": "Silicon Labs CP210x USB to UART Bridge (COM3)",
+      "hwid": "USB VID:PID=10C4:EA60 SER=0001 LOCATION=1-1"
+    }
+  ],
+  "protocol_sha256": "c87f8de8e6e6623b7c8e9ed46055e06a2ca7e1a16ab7100133084af2ad769fec",
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "application_sha256": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418",
+  "build_record": "INCART_PVC_V1",
+  "threshold": 0.88,
+  "threshold_code": 98,
+  "source": "locked snapshot, no rebuild"
+}

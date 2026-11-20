@@ -1,0 +1,14 @@
+{
+  "raw_fixture_sha256": "e4b7dc22d17f7048ba0cf329246d51026db4b7144f7b98a7e03496d330869160",
+  "bytes": 22528,
+  "firmware": {
+    "FP32": {
+      "raw_fixture_occurrences": 1,
+      "raw_fixture_file_offset": 43545
+    },
+    "INT8": {
+      "raw_fixture_occurrences": 1,
+      "raw_fixture_file_offset": 43800
+    }
+  }
+}

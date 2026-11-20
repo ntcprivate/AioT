@@ -1,0 +1,57 @@
+{
+  "status": "READY_FOR_ENGINEERING_BOARD_TEST_PENDING_USER_PERMISSION_NOT_ACCURACY_VALIDATED",
+  "builds": {
+    "REPLAY_MITBIH_100": {
+      "build": "PASS",
+      "binary_bytes": 347440,
+      "binary_sha256": "a9f5c9c73d06d67977fda6cfecf1df2c56a1da824b259692c479b2739b67355e",
+      "static_dram_bytes": 43228,
+      "static_iram_bytes": 54066,
+      "log": "build_replay_MITBIH_100_20261119.log",
+      "bootloader.bin_sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+      "partition-table.bin_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    "REPLAY_INCART_I08": {
+      "build": "PASS",
+      "binary_bytes": 347440,
+      "binary_sha256": "b5484805be3755e0d793e48b9d6e761cb71213e9c8b9de08107cc1c978877c6e",
+      "static_dram_bytes": 43228,
+      "static_iram_bytes": 54066,
+      "log": "build_replay_INCART_I08_20261119.log",
+      "bootloader.bin_sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+      "partition-table.bin_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    "BENCH_INT8": {
+      "build": "PASS",
+      "binary_bytes": 270576,
+      "binary_sha256": "228ba68bec0b6f713a1d0b53f650bdec15d910fd40454dfe4b6800ab3ef08389",
+      "static_dram_bytes": 15532,
+      "static_iram_bytes": 49634,
+      "log": "build_bench_INT8_20261119.log",
+      "bootloader.bin_sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+      "partition-table.bin_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    "BENCH_FP32": {
+      "build": "PASS",
+      "binary_bytes": 273936,
+      "binary_sha256": "d303edbc662ec9a0863ec270583bcb43f8b1ee90b3397c3d9a4cddb99eca4218",
+      "static_dram_bytes": 14996,
+      "static_iram_bytes": 49634,
+      "log": "build_bench_FP32_20261119.log",
+      "bootloader.bin_sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+      "partition-table.bin_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    }
+  },
+  "host_cpp_groups_pass": 7,
+  "evaluator_tests_pass": 6,
+  "host_replay": "COMPLETED_UNGATED_NO_RTOS_EMULATION",
+  "FP32_host": "PASS_22_GOLDEN",
+  "PVC_replay_coverage": "NOT_ESTABLISHED_NO_PVC_IN_FROZEN_SMOKE_SEGMENTS",
+  "detector_tuned": false,
+  "old_firmware_hashes_unchanged": 9711,
+  "hardware_run": false,
+  "flashed": false,
+  "COM3_opened": false,
+  "runtime_memory_latency": "PENDING_BOARD",
+  "current_shared_cache_mode": "BENCH_FP32; never flash this shared cache as replay without explicit reconfigure"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "tools\\ecg_monitor\\captures\\20261120T110102Z_f0fe45e2.bin",
+    "bytes": 1837891,
+    "sha256": "a4e58a0ef98caf3048d9715e8b5122650c39ae73216fd107a7e11c5743c92fac"
+  },
+  {
+    "path": "tools\\ecg_monitor\\captures\\20261120T110601Z_7d859e74.bin",
+    "bytes": 1346299,
+    "sha256": "22353268d854aed92d32dac31112921f1fd1db63fe8ee509de26f8ceb91b6779"
+  },
+  {
+    "path": "firmware\\esp32_ecg_v4_experiment\\main\\pipeline.cpp",
+    "bytes": 25079,
+    "sha256": "470c8dff6f68293e778405a61cbe0cdab9c358d281984a55b2500fb91e79bdee"
+  },
+  {
+    "path": "firmware\\esp32_ecg_v4_experiment\\main\\signal.cpp",
+    "bytes": 7452,
+    "sha256": "01e51f827cee12fa81f4956a3876358d238f8c2e294d65e39a85411818ca236f"
+  },
+  {
+    "path": "firmware\\esp32_ecg_v4_experiment\\main\\research_shadow.h",
+    "bytes": 3589,
+    "sha256": "f7a037c064bb8c03f8bdc7532d1b922442a6dbd614dc664431a66b5df635f965"
+  },
+  {
+    "path": "firmware\\esp32_ecg_v4_experiment\\main\\preprocessing.h",
+    "bytes": 1823,
+    "sha256": "f6c57d5faaa247d78fbb287721a7ec276a1b1e239eb30dbf4869842669370b87"
+  }
+]

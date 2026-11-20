@@ -1,0 +1,7 @@
+{
+  "no_body_connection": true,
+  "ADC_binary_verified": true,
+  "user_confirmation": "All electrodes removed from person; ECG Monitor disconnected COM3",
+  "scope": "Flash prepared feedback firmware and startup golden only",
+  "application_sha256": "f0f3b8817b144205032a10409873f48b1b7940e4aa971766dd6e06f085efb3bb"
+}

@@ -1,0 +1,2 @@
+results/cnn_v2/train_only.npz filter=lfs diff=lfs merge=lfs -text
+results/model_improvement/next_direction_analysis/beat_diagnostics.json filter=lfs diff=lfs merge=lfs -text

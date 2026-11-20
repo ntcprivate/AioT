@@ -1,0 +1,12 @@
+[
+  {
+    "file": "20261120T110102Z_f0fe45e2.bin",
+    "autocorrelation_lag40_160ms": 0.8076741573930146,
+    "autocorrelation_lag80_320ms": 0.7239469764574975
+  },
+  {
+    "file": "20261120T110601Z_7d859e74.bin",
+    "autocorrelation_lag40_160ms": 0.9334681403622954,
+    "autocorrelation_lag80_320ms": 0.9679065974436113
+  }
+]

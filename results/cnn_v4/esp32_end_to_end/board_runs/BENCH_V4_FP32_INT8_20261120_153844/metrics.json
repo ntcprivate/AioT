@@ -1,0 +1,460 @@
+{
+  "config": {
+    "ports": [
+      {
+        "port": "COM3",
+        "description": "Silicon Labs CP210x USB to UART Bridge (COM3)",
+        "hwid": "USB VID:PID=10C4:EA60 SER=0001 LOCATION=1-1"
+      }
+    ],
+    "COM3_exclusive_probe": "PASS_no_reset_command",
+    "checkpoint_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+    "parameters": 849,
+    "threshold": 0.88,
+    "INT8_threshold_code": 98,
+    "CPU_MHz": 160,
+    "IDF": "5.4.4",
+    "TFLM": "1.4.2",
+    "ESP_NN_effective": false,
+    "fixtures": 22,
+    "warmup_per_fixture": 3,
+    "measured_per_fixture": 30,
+    "raw_fixture_sha256": "e4b7dc22d17f7048ba0cf329246d51026db4b7144f7b98a7e03496d330869160",
+    "model_hashes": {
+      "FP32": "699dd84a6490d1cb50ea67c840225a7023b0dbfccd24350d58f8c53463217522",
+      "INT8": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e"
+    },
+    "model_bytes": {
+      "FP32": 9584,
+      "INT8": 8688
+    },
+    "statistic": "pooled660 measured runs; p95 linear interpolation, SD sample ddof1; per-fixture also exported",
+    "timing": "esp_timer_get_time; UART and vTaskDelay outside timing, no detector/ADC tasks; window-to-output is norm+quant/copy+Invoke",
+    "repeat_order": [
+      "FP32",
+      "INT8"
+    ],
+    "main_stack_bytes": 8192,
+    "arena_allocated_bytes": 65536,
+    "backup_manifest": {
+      "application.bin": "2a85f7922caddf802ac3e1927c0c0739a7ac7b180cef68533d242111b2009418",
+      "bootloader.bin": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67",
+      "partition-table.bin": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820",
+      "sdkconfig": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+    }
+  },
+  "models": {
+    "FP32": {
+      "status": "PASS_REAL_ESP32",
+      "model_bytes": 9584,
+      "application_bytes": 273936,
+      "static_DRAM_bytes": 14996,
+      "static_IRAM_bytes": 49634,
+      "arena_used_bytes": 18120,
+      "arena_allocated_bytes": 65536,
+      "minimum_free_heap_bytes": 230912,
+      "main_stack_high_water_free_bytes": 6616,
+      "main_stack_reserved_bytes": 8192,
+      "main_stack_peak_used_estimate_bytes": 1576,
+      "measured_runs": 660,
+      "warmup_runs": 66,
+      "statistics": {
+        "norm_us": {
+          "n": 660,
+          "mean_us": 1817.1818181818182,
+          "median_us": 1813.5,
+          "min_us": 1764,
+          "max_us": 1880,
+          "p95_us": 1879.0,
+          "sample_SD_us": 34.6825661867195
+        },
+        "quant_copy_us": {
+          "n": 660,
+          "mean_us": 4.954545454545454,
+          "median_us": 5.0,
+          "min_us": 4,
+          "max_us": 5,
+          "p95_us": 5.0,
+          "sample_SD_us": 0.20845687696600776
+        },
+        "invoke_us": {
+          "n": 660,
+          "mean_us": 34472.40909090909,
+          "median_us": 34474.5,
+          "min_us": 34441,
+          "max_us": 34492,
+          "p95_us": 34485.0,
+          "sample_SD_us": 10.572356764157526
+        },
+        "total_us": {
+          "n": 660,
+          "mean_us": 36294.545454545456,
+          "median_us": 36295.5,
+          "min_us": 36210,
+          "max_us": 36366,
+          "p95_us": 36360.0,
+          "sample_SD_us": 37.80277138084304
+        }
+      },
+      "first_warmup_per_fixture_invoke": {
+        "n": 22,
+        "mean_us": 34545.454545454544,
+        "median_us": 34512.5,
+        "min_us": 34465,
+        "max_us": 35176,
+        "p95_us": 34582.8,
+        "sample_SD_us": 144.6126936642533
+      },
+      "first_Invoke_after_boot_us": 35176,
+      "uart_sha256": "6e8c7c9a7b6f3aaa6ae4601837d49e8d1274272e20ea47ad84e075ade0f8d892",
+      "application_sha256": "d303edbc662ec9a0863ec270583bcb43f8b1ee90b3397c3d9a4cddb99eca4218"
+    },
+    "INT8": {
+      "status": "PASS_REAL_ESP32",
+      "model_bytes": 8688,
+      "application_bytes": 270576,
+      "static_DRAM_bytes": 15532,
+      "static_IRAM_bytes": 49634,
+      "arena_used_bytes": 6124,
+      "arena_allocated_bytes": 65536,
+      "minimum_free_heap_bytes": 230376,
+      "main_stack_high_water_free_bytes": 6592,
+      "main_stack_reserved_bytes": 8192,
+      "main_stack_peak_used_estimate_bytes": 1600,
+      "measured_runs": 660,
+      "warmup_runs": 66,
+      "statistics": {
+        "norm_us": {
+          "n": 660,
+          "mean_us": 1854.659090909091,
+          "median_us": 1852.0,
+          "min_us": 1795,
+          "max_us": 1919,
+          "p95_us": 1918.0,
+          "sample_SD_us": 34.00969011817161
+        },
+        "quant_copy_us": {
+          "n": 660,
+          "mean_us": 1831.7045454545455,
+          "median_us": 1831.0,
+          "min_us": 1825,
+          "max_us": 1839,
+          "p95_us": 1836.0,
+          "sample_SD_us": 3.397621761206673
+        },
+        "invoke_us": {
+          "n": 660,
+          "mean_us": 83084.81818181818,
+          "median_us": 83088.0,
+          "min_us": 83064,
+          "max_us": 83093,
+          "p95_us": 83093.0,
+          "sample_SD_us": 9.08050169896906
+        },
+        "total_us": {
+          "n": 660,
+          "mean_us": 86771.18181818182,
+          "median_us": 86775.0,
+          "min_us": 86698,
+          "max_us": 86837,
+          "p95_us": 86836.0,
+          "sample_SD_us": 33.72967115109221
+        }
+      },
+      "first_warmup_per_fixture_invoke": {
+        "n": 22,
+        "mean_us": 83154.45454545454,
+        "median_us": 83117.0,
+        "min_us": 83065,
+        "max_us": 83758,
+        "p95_us": 83190.65,
+        "sample_SD_us": 138.32216613768614
+      },
+      "first_Invoke_after_boot_us": 83758,
+      "uart_sha256": "941d565d472a2e6b61e16b686293935f8b99b4584708e3980227d229906f4f23",
+      "application_sha256": "228ba68bec0b6f713a1d0b53f650bdec15d910fd40454dfe4b6800ab3ef08389"
+    }
+  },
+  "comparison": {
+    "INT8_speedup_FP32_over_INT8": 0.4149062349209406,
+    "INT8_latency_ratio_INT8_over_FP32": 2.4101831108673206,
+    "INT8_latency_percent_change": 141.01831108673207,
+    "INT8_total_latency_percent_change": 139.07499248572287,
+    "model_reduction_bytes": 896,
+    "model_reduction_percent": 9.348914858096824,
+    "application_reduction_bytes": 3360,
+    "application_reduction_percent": 1.226563868932884,
+    "arena_used_reduction_percent": 66.20309050772627,
+    "predictions_matching": 22,
+    "predictions_different": 0,
+    "max_abs_score_difference": 0.04567235700000005,
+    "mean_abs_score_difference": 0.009496239409090912
+  },
+  "fixtures": [
+    {
+      "fixture": 0,
+      "FP32_score": 0.032672055,
+      "INT8_score": 0.03125,
+      "INT8_code": -120,
+      "score_INT8_minus_FP32": -0.0014220549999999985,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34470,
+      "INT8_invoke_mean_us": 83073
+    },
+    {
+      "fixture": 1,
+      "FP32_score": 0.032672055,
+      "INT8_score": 0.03125,
+      "INT8_code": -120,
+      "score_INT8_minus_FP32": -0.0014220549999999985,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34471,
+      "INT8_invoke_mean_us": 83073
+    },
+    {
+      "fixture": 2,
+      "FP32_score": 0.032672055,
+      "INT8_score": 0.03125,
+      "INT8_code": -120,
+      "score_INT8_minus_FP32": -0.0014220549999999985,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34471,
+      "INT8_invoke_mean_us": 83072.5
+    },
+    {
+      "fixture": 3,
+      "FP32_score": 0.032672055,
+      "INT8_score": 0.03125,
+      "INT8_code": -120,
+      "score_INT8_minus_FP32": -0.0014220549999999985,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34470,
+      "INT8_invoke_mean_us": 83073
+    },
+    {
+      "fixture": 4,
+      "FP32_score": 0.834734857,
+      "INT8_score": 0.7890625,
+      "INT8_code": 74,
+      "score_INT8_minus_FP32": -0.04567235700000005,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34463,
+      "INT8_invoke_mean_us": 83077
+    },
+    {
+      "fixture": 5,
+      "FP32_score": 0.952011883,
+      "INT8_score": 0.9453125,
+      "INT8_code": 114,
+      "score_INT8_minus_FP32": -0.006699382999999948,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34463,
+      "INT8_invoke_mean_us": 83072.5
+    },
+    {
+      "fixture": 6,
+      "FP32_score": 0.68524605,
+      "INT8_score": 0.671875,
+      "INT8_code": 44,
+      "score_INT8_minus_FP32": -0.013371050000000051,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34447,
+      "INT8_invoke_mean_us": 83076
+    },
+    {
+      "fixture": 7,
+      "FP32_score": 0.949846804,
+      "INT8_score": 0.9375,
+      "INT8_code": 112,
+      "score_INT8_minus_FP32": -0.012346803999999989,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34463,
+      "INT8_invoke_mean_us": 83082.5
+    },
+    {
+      "fixture": 8,
+      "FP32_score": 0.995624602,
+      "INT8_score": 0.99609375,
+      "INT8_code": 127,
+      "score_INT8_minus_FP32": 0.0004691479999999748,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34459,
+      "INT8_invoke_mean_us": 83086.5
+    },
+    {
+      "fixture": 9,
+      "FP32_score": 0.997792125,
+      "INT8_score": 0.99609375,
+      "INT8_code": 127,
+      "score_INT8_minus_FP32": -0.0016983750000000297,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34465,
+      "INT8_invoke_mean_us": 83087
+    },
+    {
+      "fixture": 10,
+      "FP32_score": 0.906246006,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.02343350600000005,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34475,
+      "INT8_invoke_mean_us": 83090
+    },
+    {
+      "fixture": 11,
+      "FP32_score": 0.043208096,
+      "INT8_score": 0.04296875,
+      "INT8_code": -117,
+      "score_INT8_minus_FP32": -0.0002393460000000014,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34483,
+      "INT8_invoke_mean_us": 83090.5
+    },
+    {
+      "fixture": 12,
+      "FP32_score": 0.996739686,
+      "INT8_score": 0.99609375,
+      "INT8_code": 127,
+      "score_INT8_minus_FP32": -0.0006459359999999581,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34471,
+      "INT8_invoke_mean_us": 83086
+    },
+    {
+      "fixture": 13,
+      "FP32_score": 0.995454788,
+      "INT8_score": 0.99609375,
+      "INT8_code": 127,
+      "score_INT8_minus_FP32": 0.0006389620000000207,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34471,
+      "INT8_invoke_mean_us": 83086
+    },
+    {
+      "fixture": 14,
+      "FP32_score": 0.906590819,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.023778319000000048,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34479,
+      "INT8_invoke_mean_us": 83091
+    },
+    {
+      "fixture": 15,
+      "FP32_score": 0.89855814,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.015745640000000005,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34479,
+      "INT8_invoke_mean_us": 83093
+    },
+    {
+      "fixture": 16,
+      "FP32_score": 0.887085259,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.004272759000000015,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34483,
+      "INT8_invoke_mean_us": 83092
+    },
+    {
+      "fixture": 17,
+      "FP32_score": 0.895533264,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.012720763999999996,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34483,
+      "INT8_invoke_mean_us": 83093
+    },
+    {
+      "fixture": 18,
+      "FP32_score": 0.887234628,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.00442212799999997,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34479,
+      "INT8_invoke_mean_us": 83092.5
+    },
+    {
+      "fixture": 19,
+      "FP32_score": 0.893145561,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.010333060999999977,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34475,
+      "INT8_invoke_mean_us": 83093
+    },
+    {
+      "fixture": 20,
+      "FP32_score": 0.908166528,
+      "INT8_score": 0.8828125,
+      "INT8_code": 98,
+      "score_INT8_minus_FP32": -0.025354027999999973,
+      "FP32_prediction": 1,
+      "INT8_prediction": 1,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34483,
+      "INT8_invoke_mean_us": 83093
+    },
+    {
+      "fixture": 21,
+      "FP32_score": 0.040449981,
+      "INT8_score": 0.0390625,
+      "INT8_code": -118,
+      "score_INT8_minus_FP32": -0.001387481000000003,
+      "FP32_prediction": 0,
+      "INT8_prediction": 0,
+      "decision_matches": true,
+      "FP32_invoke_mean_us": 34490,
+      "INT8_invoke_mean_us": 83093
+    }
+  ],
+  "publication_limit": "single board, single boot per backend, repeated runs not independent board sessions; validation golden set selected for numerical edge cases, not classification accuracy or R-to-result/ADC latency"
+}

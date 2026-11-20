@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "segment_id": "INCART_PVC_V1",
+  "dataset": "INCART",
+  "record": "I08",
+  "split": "Validation",
+  "lead": "II",
+  "source_hz": 257,
+  "fs": 250,
+  "start_250hz": 116500,
+  "end_250hz_exclusive": 131860,
+  "samples": 15360,
+  "N": 43,
+  "V": 20,
+  "OTHER": 0,
+  "annotation_list": "results\\cnn_v4\\esp32_end_to_end\\pvc_replay_v1\\annotations.json",
+  "annotation_sha256": "779bd42aa43ec542228545edf4b93fa0fae93f88f62f87e4e7e3a11d0fb7d333",
+  "asset": "firmware\\esp32_ecg_v4_experiment\\main\\assets\\INCART_PVC_V1.bin",
+  "stream_sha256": "3c22e5aed668a003f774272d4896b07fbc1ba57f603de227897b595920c43086",
+  "source_hashes": {
+    "hea": "894685a526257fc568ca0703d5dbbf48627e058dc1de1afb24293184ab4810e5",
+    "dat": "fc046a96e339e9f5cc6d96325a042fee9d9e69424c71a50d506dafa755fc8ffb",
+    "atr": "7caba653d33e45628bf106a12d682edf8529ec1252489a9d9050054599998fae"
+  },
+  "selection_rule_sha256": "b789f8cefcd62ebfd91dd421f4dcca85a1889661211163024303a7fe9a961b24",
+  "selection_sha256": "bf511bca2c44539c8754c71e30a2c24a9556719d47f9cc1b9d1c44070016dde5",
+  "mapping": "full resample_poly 250/257 then crop; clip(rint(2048+200*mV),0,4095)",
+  "annotation_mapping": "floor(source_sample*250/257+0.5)-start_250hz",
+  "threshold": 0.88,
+  "threshold_code": 98,
+  "model_sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e",
+  "matching": {
+    "tolerance_samples": 38,
+    "algorithm": "chronological reference nearest unused detection, ties lower index",
+    "beat_symbols": "NLRBAaJSVrFejnE/fQ?",
+    "OTHER": "matched beat TP detector; excluded N/V classifier",
+    "missing_V": "FN",
+    "missing_N": "abstention not TN",
+    "unmatched_PVC": "FP alarm, not automatically noise"
+  },
+  "rail_samples": 0,
+  "labels_in_firmware": false
+}

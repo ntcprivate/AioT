@@ -1,0 +1,12 @@
+{
+  "flash": "PASS",
+  "golden": "22/22_EXACT",
+  "session": "PASS_SINGLE_BOOT_COMPLETE",
+  "evaluator": "PASS_EXIT0",
+  "uart_complete_frame_crc": "738/738_VALID",
+  "uart_capture_boundary": "WARN_511_BYTE_UNTERMINATED_STATUS_AFTER_END_RAW_PRESERVED",
+  "accuracy_acceptance": "NOT_ESTABLISHED_PVC_RECALL_45_PERCENT",
+  "trained": false,
+  "tuned": false,
+  "other_trials": false
+}

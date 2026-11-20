@@ -1,0 +1,1234 @@
+ .../debug/ai_live/hardware.log                     |   1808 +
+ .../debug/ai_live/tests.log                        |     83 +
+ .../debug/bench_demo/hardware.log                  |   1828 +
+ .../debug/bench_demo/tests.log                     |    Bin 0 -> 1952 bytes
+ .../debug/bench_states/hardware.log                |    945 +
+ .../debug/bench_states/tests.log                   |    Bin 0 -> 1970 bytes
+ .../esp32_ai_test_only/attempt1/fixture_tf.log     |     11 +
+ .../esp32_ai_test_only/attempt1/hardware_adc.log   |   1373 +
+ .../attempt1/hardware_synthetic.log                |   1379 +
+ .../esp32_ai_test_only/attempt1/host_tests.log     |    Bin 0 -> 16386 bytes
+ .../debug/esp32_ai_test_only/fixture_tf.log        |     11 +
+ .../debug/esp32_ai_test_only/hardware_adc.log      |   1498 +
+ .../esp32_ai_test_only/hardware_synthetic.log      |   1506 +
+ .../debug/esp32_ai_test_only/host_tests.log        |    Bin 0 -> 16386 bytes
+ .../esp32_ai_test_only/review_tests_final.log      |    Bin 0 -> 3066 bytes
+ .../counterfactual_reference.log                   |     11 +
+ .../debug/final_ai_readiness/keras_probe.log       |      8 +
+ .../debug/r_peak_phase2a/cpp_tests.log             |      6 +
+ .../debug/r_peak_phase2a/esp32_size_layout.log     |      3 +
+ .../debug/r_peak_phase2a/parity/golden.log         |     13 +
+ .../debug/r_peak_phase2a/parity/native.log         |      0
+ .../debug/r_peak_phase2a/parity/preprocessing.log  |      0
+ .../debug/r_peak_phase2a/parity/tensorflow.log     |     11 +
+ .../debug/r_peak_phase2a/trace_tests.log           |    Bin 0 -> 3578 bytes
+ .../debug/r_peak_phase2b/2a_native_cnn.log         |      0
+ .../debug/r_peak_phase2b/2a_preprocessing.log      |      0
+ .../debug/r_peak_phase2b/2b_native_cnn.log         |      0
+ .../debug/r_peak_phase2b/2b_preprocessing.log      |      0
+ .../debug/r_peak_phase2b/cpp_regression.log        |      9 +
+ .../debug/r_peak_phase2b/esp32_size.log            |      4 +
+ .../debug/r_peak_phase2b/evaluation_run.log        |    Bin 0 -> 2478 bytes
+ .../fixed_validation/2a_native_cnn.log             |      0
+ .../fixed_validation/2a_preprocessing.log          |      0
+ .../fixed_validation/2b_native_cnn.log             |      0
+ .../fixed_validation/2b_preprocessing.log          |      0
+ .../r_peak_phase2b/int8_diagnosis/tensorflow.log   |     10 +
+ .../int8_fixed_checks/cpp_regression.log           |      8 +
+ .../r_peak_phase2b/int8_fixed_checks/golden.log    |     13 +
+ .../int8_fixed_checks/trace_tests.log              |    Bin 0 -> 3578 bytes
+ .../debug/r_peak_phase2b/parity/golden.log         |     13 +
+ .../debug/r_peak_phase2b/parity/native.log         |      0
+ .../debug/r_peak_phase2b/parity/preprocessing.log  |      0
+ .../debug/r_peak_phase2b/parity/tensorflow.log     |     11 +
+ .../debug/r_peak_phase2b/trace_tests.log           |    Bin 0 -> 3578 bytes
+ .../debug/research_shadow/attempt1/hardware.log    |   2350 +
+ .../debug/research_shadow/attempt2/hardware.log    |   2393 +
+ .../debug/research_shadow/hardware.log             |   1805 +
+ .../debug/research_shadow/host_tests.log           |    Bin 0 -> 19696 bytes
+ .../debug/research_shadow/host_tests_final.log     |    Bin 0 -> 20026 bytes
+ .../debug/research_shadow/replay_inference_0.log   |      0
+ .../debug/research_shadow/replay_inference_1.log   |     11 +
+ .../debug/research_shadow/replay_stage0.log        |      1 +
+ .../debug/research_shadow/replay_stage1.log        |      0
+ .../debug/research_shadow/replay_stage2.log        |     11 +
+ .../debug/serial_trace.log                         |    403 +
+ .../debug/serial_trace_v2.log                      |   2369 +
+ .../debug/telemetry_cpp_regression_tests.log       |      5 +
+ .../debug/telemetry_fix_golden.log                 |    Bin 0 -> 2614 bytes
+ .../debug/telemetry_trace_regression_tests.log     |    Bin 0 -> 3578 bytes
+ models/v11/v11_final_best.keras                    |    Bin 0 -> 106344 bytes
+ models/v11/v11_fold0_best.keras                    |    Bin 0 -> 106344 bytes
+ models/v11/v11_fold1_best.keras                    |    Bin 0 -> 106344 bytes
+ models/v11/v11_fold2_best.keras                    |    Bin 0 -> 106344 bytes
+ models/v11/v11_fold3_best.keras                    |    Bin 0 -> 106344 bytes
+ models/v11/v11_fold4_best.keras                    |    Bin 0 -> 106344 bytes
+ models/v2/ecg_cnn_v2_best.keras                    |    Bin 0 -> 47482 bytes
+ models/v3/ecg_cnn_v3_best.keras                    |    Bin 0 -> 68350 bytes
+ models/v3/ecg_cnn_v3_float32.tflite                |    Bin 0 -> 17112 bytes
+ models/v4/ecg_cnn_v4_best.keras                    |    Bin 0 -> 47730 bytes
+ models/v4/ecg_cnn_v4_int8.tflite                   |    Bin 0 -> 8688 bytes
+ models/v5/ecg_cnn_v5_best.keras                    |    Bin 0 -> 127504 bytes
+ models/v6/ablation_flatten_no_aug.keras            |    Bin 0 -> 127373 bytes
+ models/v6/ablation_pool_aug.keras                  |    Bin 0 -> 96065 bytes
+ models/v6/ablation_pool_no_aug.keras               |    Bin 0 -> 96065 bytes
+ models/v6/ecg_cnn_v6_best.keras                    |    Bin 0 -> 96065 bytes
+ models/v7/ecg_cnn_v7_best.keras                    |    Bin 0 -> 108170 bytes
+ models/v8/ecg_cnn_v8_best.keras                    |    Bin 0 -> 96057 bytes
+ models/v9/ecg_cnn_v9_a_best.keras                  |    Bin 0 -> 47732 bytes
+ models/v9/ecg_cnn_v9_b_best.keras                  |    Bin 0 -> 47732 bytes
+ models/v9/ecg_cnn_v9_best.keras                    |    Bin 0 -> 47732 bytes
+ python/analyze_next_direction.py                   |     80 +
+ python/analyze_unmatched_v11.py                    |     61 +
+ python/audit_incart_v4_readiness.py                |    288 +
+ python/audit_v11_pre_esp32.py                      |     38 +
+ python/build_cnn_v4_tflm_host.py                   |     44 +
+ python/cnn_v2_common.py                            |     26 +
+ python/compare_e2e_v4_v6_v11.py                    |     71 +
+ python/compare_test_e2e_v4_v6_v11.py               |     80 +
+ python/convert_v11_int8.py                         |     78 +
+ python/convert_validate_cnn_v4_int8.py             |    140 +
+ python/develop_v4a_qrs_gate.py                     |    101 +
+ python/diagnose_rpeak_v11.py                       |     25 +
+ python/diagnose_v5_precision_drop.py               |    198 +
+ python/evaluate_cnn_v2.py                          |     40 +
+ python/evaluate_cnn_v2_threshold_e2e.py            |     24 +
+ python/evaluate_cnn_v3.py                          |     51 +
+ python/evaluate_cross_dataset_edb.py               |    121 +
+ python/evaluate_cross_dataset_stdb_v6.py           |    150 +
+ python/evaluate_cross_dataset_svdb.py              |     92 +
+ python/evaluate_rpeak_candidate_v11.py             |     49 +
+ python/evaluate_v11_e2e.py                         |     69 +
+ python/evaluate_v6_main_tests_once.py              |    141 +
+ python/evaluate_v7_tests_once.py                   |     81 +
+ python/evaluate_v8_tests_once.py                   |    126 +
+ python/final_evaluate_cnn_v5.py                    |     77 +
+ python/finalize_test_v11.py                        |     93 +
+ python/finish_v11_e2e.py                           |     32 +
+ python/prepare_cnn_v2.py                           |     56 +
+ python/prepare_cnn_v2_evaluation.py                |     33 +
+ python/prepare_cnn_v2_threshold_e2e.py             |     32 +
+ python/prepare_cnn_v4_incart.py                    |    110 +
+ python/report_next_direction.py                    |     31 +
+ python/report_rpeak_v11.py                         |     26 +
+ python/report_v4a_gate.py                          |     50 +
+ python/report_v4b_controlled.py                    |     55 +
+ python/review_cnn_v2_threshold.py                  |     30 +
+ python/rr_recall_stage_probe.cpp                   |     22 +
+ python/run_v10_step0_step1.py                      |    666 +
+ python/run_v10_step2_v10a.py                       |    186 +
+ python/run_v10_step3_v10b.py                       |     51 +
+ python/run_v10_step4_hybrid.py                     |     43 +
+ python/run_v11_rr.py                               |    127 +
+ python/summarize_v10b.py                           |     26 +
+ python/summarize_v10c.py                           |     22 +
+ python/summarize_v11.py                            |     23 +
+ python/test_cnn_v2.py                              |     36 +
+ python/train_cnn_v2.py                             |     62 +
+ python/train_cnn_v3.py                             |     76 +
+ python/train_evaluate_cnn_v4.py                    |    139 +
+ python/train_evaluate_cnn_v5.py                    |    149 +
+ python/train_evaluate_cnn_v6.py                    |    287 +
+ python/train_evaluate_cnn_v7.py                    |    261 +
+ python/train_evaluate_cnn_v8.py                    |    231 +
+ python/train_evaluate_cnn_v9.py                    |    225 +
+ python/train_v4b_controlled.py                     |    108 +
+ python/validate_v11_detector_rr.py                 |     76 +
+ python/verify_paper_rpeaks.py                      |     37 +
+ python/verify_v11_int8_golden.py                   |     21 +
+ results/cnn_v11/config.json                        |     20 +
+ results/cnn_v11/end_to_end_detector/INCART_I08.csv |   6343 +
+ .../end_to_end_detector/INCART_I08_predictions.npz |    Bin 0 -> 13185 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I33.csv |   5442 +
+ .../end_to_end_detector/INCART_I33_predictions.npz |    Bin 0 -> 10866 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I34.csv |   5704 +
+ .../end_to_end_detector/INCART_I34_predictions.npz |    Bin 0 -> 11410 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I44.csv |   6705 +
+ .../end_to_end_detector/INCART_I44_predictions.npz |    Bin 0 -> 13608 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I45.csv |   5586 +
+ .../end_to_end_detector/INCART_I45_predictions.npz |    Bin 0 -> 11352 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I46.csv |   7045 +
+ .../end_to_end_detector/INCART_I46_predictions.npz |    Bin 0 -> 14256 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I57.csv |   7427 +
+ .../end_to_end_detector/INCART_I57_predictions.npz |    Bin 0 -> 14570 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I58.csv |   6437 +
+ .../end_to_end_detector/INCART_I58_predictions.npz |    Bin 0 -> 12887 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I65.csv |   7074 +
+ .../end_to_end_detector/INCART_I65_predictions.npz |    Bin 0 -> 14352 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I66.csv |   6273 +
+ .../end_to_end_detector/INCART_I66_predictions.npz |    Bin 0 -> 12960 bytes
+ results/cnn_v11/end_to_end_detector/INCART_I67.csv |   7675 +
+ .../end_to_end_detector/INCART_I67_predictions.npz |    Bin 0 -> 15532 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_115.csv |   5663 +
+ .../end_to_end_detector/MITBIH_115_predictions.npz |    Bin 0 -> 11368 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_118.csv |   6320 +
+ .../end_to_end_detector/MITBIH_118_predictions.npz |    Bin 0 -> 13187 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_121.csv |   5490 +
+ .../end_to_end_detector/MITBIH_121_predictions.npz |    Bin 0 -> 11034 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_210.csv |   7028 +
+ .../end_to_end_detector/MITBIH_210_predictions.npz |    Bin 0 -> 14263 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_214.csv |   6277 +
+ .../end_to_end_detector/MITBIH_214_predictions.npz |    Bin 0 -> 12850 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_233.csv |   7901 +
+ .../end_to_end_detector/MITBIH_233_predictions.npz |    Bin 0 -> 16078 bytes
+ results/cnn_v11/end_to_end_detector/MITBIH_234.csv |   7261 +
+ .../end_to_end_detector/MITBIH_234_predictions.npz |    Bin 0 -> 14150 bytes
+ results/cnn_v11/end_to_end_detector/config.json    |      8 +
+ .../cnn_v11/end_to_end_detector/evaluation.json    |  43495 ++
+ results/cnn_v11/end_to_end_detector/report.md      |     60 +
+ results/cnn_v11/evaluation.json                    |   1139 +
+ results/cnn_v11/final_test/INCART_I18.json         |     43 +
+ results/cnn_v11/final_test/INCART_I18_detector.csv |   7196 +
+ results/cnn_v11/final_test/INCART_I18_detector.npz |    Bin 0 -> 18219 bytes
+ results/cnn_v11/final_test/INCART_I18_offline.npz  |    Bin 0 -> 12174 bytes
+ results/cnn_v11/final_test/INCART_I19.json         |     43 +
+ results/cnn_v11/final_test/INCART_I19_detector.csv |   5770 +
+ results/cnn_v11/final_test/INCART_I19_detector.npz |    Bin 0 -> 12793 bytes
+ results/cnn_v11/final_test/INCART_I19_offline.npz  |    Bin 0 -> 8087 bytes
+ results/cnn_v11/final_test/INCART_I20.json         |     43 +
+ results/cnn_v11/final_test/INCART_I20_detector.csv |   7070 +
+ results/cnn_v11/final_test/INCART_I20_detector.npz |    Bin 0 -> 16732 bytes
+ results/cnn_v11/final_test/INCART_I20_offline.npz  |    Bin 0 -> 9815 bytes
+ results/cnn_v11/final_test/INCART_I21.json         |     43 +
+ results/cnn_v11/final_test/INCART_I21_detector.csv |   6223 +
+ results/cnn_v11/final_test/INCART_I21_detector.npz |    Bin 0 -> 14288 bytes
+ results/cnn_v11/final_test/INCART_I21_offline.npz  |    Bin 0 -> 7977 bytes
+ results/cnn_v11/final_test/INCART_I22.json         |     43 +
+ results/cnn_v11/final_test/INCART_I22_detector.csv |   8010 +
+ results/cnn_v11/final_test/INCART_I22_detector.npz |    Bin 0 -> 19324 bytes
+ results/cnn_v11/final_test/INCART_I22_offline.npz  |    Bin 0 -> 12031 bytes
+ results/cnn_v11/final_test/INCART_I38.json         |     43 +
+ results/cnn_v11/final_test/INCART_I38_detector.csv |   6951 +
+ results/cnn_v11/final_test/INCART_I38_detector.npz |    Bin 0 -> 16189 bytes
+ results/cnn_v11/final_test/INCART_I38_offline.npz  |    Bin 0 -> 10586 bytes
+ results/cnn_v11/final_test/INCART_I39.json         |     43 +
+ results/cnn_v11/final_test/INCART_I39_detector.csv |   5340 +
+ results/cnn_v11/final_test/INCART_I39_detector.npz |    Bin 0 -> 11455 bytes
+ results/cnn_v11/final_test/INCART_I39_offline.npz  |    Bin 0 -> 6968 bytes
+ results/cnn_v11/final_test/INCART_I62.json         |     43 +
+ results/cnn_v11/final_test/INCART_I62_detector.csv |   5735 +
+ results/cnn_v11/final_test/INCART_I62_detector.npz |    Bin 0 -> 12815 bytes
+ results/cnn_v11/final_test/INCART_I62_offline.npz  |    Bin 0 -> 8874 bytes
+ results/cnn_v11/final_test/INCART_I63.json         |     43 +
+ results/cnn_v11/final_test/INCART_I63_detector.csv |   8396 +
+ results/cnn_v11/final_test/INCART_I63_detector.npz |    Bin 0 -> 19243 bytes
+ results/cnn_v11/final_test/INCART_I63_offline.npz  |    Bin 0 -> 7805 bytes
+ results/cnn_v11/final_test/INCART_I64.json         |     43 +
+ results/cnn_v11/final_test/INCART_I64_detector.csv |   9091 +
+ results/cnn_v11/final_test/INCART_I64_detector.npz |    Bin 0 -> 20412 bytes
+ results/cnn_v11/final_test/INCART_I64_offline.npz  |    Bin 0 -> 7322 bytes
+ results/cnn_v11/final_test/INCART_I70.json         |     43 +
+ results/cnn_v11/final_test/INCART_I70_detector.csv |   5093 +
+ results/cnn_v11/final_test/INCART_I70_detector.npz |    Bin 0 -> 10955 bytes
+ results/cnn_v11/final_test/INCART_I70_offline.npz  |    Bin 0 -> 5943 bytes
+ results/cnn_v11/final_test/INCART_I71.json         |     43 +
+ results/cnn_v11/final_test/INCART_I71_detector.csv |   5096 +
+ results/cnn_v11/final_test/INCART_I71_detector.npz |    Bin 0 -> 10989 bytes
+ results/cnn_v11/final_test/INCART_I71_offline.npz  |    Bin 0 -> 6292 bytes
+ results/cnn_v11/final_test/MITBIH_107.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_107_detector.csv |   5960 +
+ results/cnn_v11/final_test/MITBIH_107_detector.npz |    Bin 0 -> 13453 bytes
+ results/cnn_v11/final_test/MITBIH_107_offline.npz  |    Bin 0 -> 632 bytes
+ results/cnn_v11/final_test/MITBIH_108.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_108_detector.csv |   5341 +
+ results/cnn_v11/final_test/MITBIH_108_detector.npz |    Bin 0 -> 11848 bytes
+ results/cnn_v11/final_test/MITBIH_108_offline.npz  |    Bin 0 -> 6964 bytes
+ results/cnn_v11/final_test/MITBIH_113.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_113_detector.csv |   8500 +
+ results/cnn_v11/final_test/MITBIH_113_detector.npz |    Bin 0 -> 18570 bytes
+ results/cnn_v11/final_test/MITBIH_113_offline.npz  |    Bin 0 -> 6896 bytes
+ results/cnn_v11/final_test/MITBIH_117.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_117_detector.csv |   6022 +
+ results/cnn_v11/final_test/MITBIH_117_detector.npz |    Bin 0 -> 12737 bytes
+ results/cnn_v11/final_test/MITBIH_117_offline.npz  |    Bin 0 -> 6100 bytes
+ results/cnn_v11/final_test/MITBIH_123.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_123_detector.csv |   4801 +
+ results/cnn_v11/final_test/MITBIH_123_detector.npz |    Bin 0 -> 10158 bytes
+ results/cnn_v11/final_test/MITBIH_123_offline.npz  |    Bin 0 -> 5938 bytes
+ results/cnn_v11/final_test/MITBIH_200.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_200_detector.csv |   6408 +
+ results/cnn_v11/final_test/MITBIH_200_detector.npz |    Bin 0 -> 15686 bytes
+ results/cnn_v11/final_test/MITBIH_200_offline.npz  |    Bin 0 -> 9834 bytes
+ results/cnn_v11/final_test/MITBIH_222.json         |     43 +
+ results/cnn_v11/final_test/MITBIH_222_detector.csv |   6714 +
+ results/cnn_v11/final_test/MITBIH_222_detector.npz |    Bin 0 -> 16178 bytes
+ results/cnn_v11/final_test/MITBIH_222_offline.npz  |    Bin 0 -> 8290 bytes
+ results/cnn_v11/final_test/evaluation.json         |    996 +
+ results/cnn_v11/final_test/locked.json             |    125 +
+ results/cnn_v11/final_test/report.md               |     58 +
+ results/cnn_v11/fold0.json                         |    183 +
+ results/cnn_v11/fold1.json                         |    183 +
+ results/cnn_v11/fold2.json                         |    183 +
+ results/cnn_v11/fold3.json                         |    183 +
+ results/cnn_v11/fold4.json                         |    183 +
+ .../int8_conversion/calibration_manifest.json      |  10957 +
+ results/cnn_v11/int8_conversion/conversion.json    |    231 +
+ .../int8_conversion/development_predictions.npz    |    Bin 0 -> 276179 bytes
+ .../int8_conversion/ecg_cnn_v11_int8.tflite        |    Bin 0 -> 17792 bytes
+ .../cnn_v11/int8_conversion/golden_ecg_int8.bin    |    Bin 0 -> 4096 bytes
+ .../cnn_v11/int8_conversion/golden_fixtures.json   |   8710 +
+ .../cnn_v11/int8_conversion/golden_fixtures.npz    |    Bin 0 -> 20708 bytes
+ .../cnn_v11/int8_conversion/golden_output_int8.bin |      1 +
+ results/cnn_v11/int8_conversion/golden_rr_int8.bin |      1 +
+ .../int8_conversion/golden_verification.json       |     45 +
+ results/cnn_v11/int8_conversion/report.md          |    105 +
+ .../paper_rpeak_verification/115_hold50.csv        |   5663 +
+ .../paper_rpeak_verification/115_hold58.csv        |   5663 +
+ .../paper_rpeak_verification/118_hold50.csv        |   6320 +
+ .../paper_rpeak_verification/118_hold58.csv        |   6320 +
+ .../paper_rpeak_verification/121_hold50.csv        |   5490 +
+ .../paper_rpeak_verification/121_hold58.csv        |   5490 +
+ .../paper_rpeak_verification/210_hold50.csv        |   7028 +
+ .../paper_rpeak_verification/210_hold58.csv        |   7028 +
+ .../paper_rpeak_verification/214_hold50.csv        |   6277 +
+ .../paper_rpeak_verification/214_hold58.csv        |   6274 +
+ .../paper_rpeak_verification/233_hold50.csv        |   7901 +
+ .../paper_rpeak_verification/233_hold58.csv        |   7901 +
+ .../paper_rpeak_verification/234_hold50.csv        |   7261 +
+ .../paper_rpeak_verification/234_hold58.csv        |   7261 +
+ .../paper_rpeak_verification/evaluation.json       |    625 +
+ .../cnn_v11/paper_rpeak_verification/hold50.cpp    |    132 +
+ .../cnn_v11/paper_rpeak_verification/hold58.cpp    |    132 +
+ results/cnn_v11/paper_rpeak_verification/report.md |     78 +
+ results/cnn_v11/pre_esp32_audit/analysis.json      |    359 +
+ results/cnn_v11/pre_esp32_audit/report.md          |     75 +
+ results/cnn_v11/report.md                          |     20 +
+ .../development_fold_metrics.json                  |    158 +
+ results/cnn_v11/rpeak_optimization/diagnosis.json  |   1341 +
+ results/cnn_v11/rpeak_optimization/evaluation.json |   1732 +
+ results/cnn_v11/rpeak_optimization/report.md       |     32 +
+ .../cnn_v11/rr_detector_validation/INCART_I01.csv  |   7063 +
+ .../cnn_v11/rr_detector_validation/INCART_I02.csv  |   7088 +
+ .../cnn_v11/rr_detector_validation/INCART_I03.csv  |   6756 +
+ .../cnn_v11/rr_detector_validation/INCART_I04.csv  |   5999 +
+ .../cnn_v11/rr_detector_validation/INCART_I05.csv  |   5672 +
+ .../cnn_v11/rr_detector_validation/INCART_I06.csv  |   6805 +
+ .../cnn_v11/rr_detector_validation/INCART_I07.csv  |   6638 +
+ .../cnn_v11/rr_detector_validation/INCART_I08.csv  |   6343 +
+ .../cnn_v11/rr_detector_validation/INCART_I09.csv  |   8195 +
+ .../cnn_v11/rr_detector_validation/INCART_I10.csv  |   8476 +
+ .../cnn_v11/rr_detector_validation/INCART_I11.csv  |   6461 +
+ .../cnn_v11/rr_detector_validation/INCART_I12.csv  |   7366 +
+ .../cnn_v11/rr_detector_validation/INCART_I13.csv  |   5797 +
+ .../cnn_v11/rr_detector_validation/INCART_I14.csv  |   5495 +
+ .../cnn_v11/rr_detector_validation/INCART_I15.csv  |   7015 +
+ .../cnn_v11/rr_detector_validation/INCART_I16.csv  |   7486 +
+ .../cnn_v11/rr_detector_validation/INCART_I17.csv  |   5416 +
+ .../cnn_v11/rr_detector_validation/INCART_I23.csv  |   6177 +
+ .../cnn_v11/rr_detector_validation/INCART_I24.csv  |   6681 +
+ .../cnn_v11/rr_detector_validation/INCART_I25.csv  |   6848 +
+ .../cnn_v11/rr_detector_validation/INCART_I26.csv  |   7214 +
+ .../cnn_v11/rr_detector_validation/INCART_I27.csv  |   6912 +
+ .../cnn_v11/rr_detector_validation/INCART_I28.csv  |   5127 +
+ .../cnn_v11/rr_detector_validation/INCART_I29.csv  |   7169 +
+ .../cnn_v11/rr_detector_validation/INCART_I30.csv  |   6801 +
+ .../cnn_v11/rr_detector_validation/INCART_I31.csv  |   4348 +
+ .../cnn_v11/rr_detector_validation/INCART_I32.csv  |   4655 +
+ .../cnn_v11/rr_detector_validation/INCART_I33.csv  |   5442 +
+ .../cnn_v11/rr_detector_validation/INCART_I34.csv  |   5704 +
+ .../cnn_v11/rr_detector_validation/INCART_I35.csv  |   8957 +
+ .../cnn_v11/rr_detector_validation/INCART_I36.csv  |   8423 +
+ .../cnn_v11/rr_detector_validation/INCART_I37.csv  |   6672 +
+ .../cnn_v11/rr_detector_validation/INCART_I40.csv  |   6587 +
+ .../cnn_v11/rr_detector_validation/INCART_I41.csv  |   3895 +
+ .../cnn_v11/rr_detector_validation/INCART_I42.csv  |   7958 +
+ .../cnn_v11/rr_detector_validation/INCART_I43.csv  |   6160 +
+ .../cnn_v11/rr_detector_validation/INCART_I44.csv  |   6705 +
+ .../cnn_v11/rr_detector_validation/INCART_I45.csv  |   5586 +
+ .../cnn_v11/rr_detector_validation/INCART_I46.csv  |   7045 +
+ .../cnn_v11/rr_detector_validation/INCART_I47.csv  |   5634 +
+ .../cnn_v11/rr_detector_validation/INCART_I48.csv  |   6039 +
+ .../cnn_v11/rr_detector_validation/INCART_I49.csv  |   6048 +
+ .../cnn_v11/rr_detector_validation/INCART_I50.csv  |   7748 +
+ .../cnn_v11/rr_detector_validation/INCART_I51.csv  |   6285 +
+ .../cnn_v11/rr_detector_validation/INCART_I52.csv  |   5239 +
+ .../cnn_v11/rr_detector_validation/INCART_I53.csv  |   6214 +
+ .../cnn_v11/rr_detector_validation/INCART_I54.csv  |   6353 +
+ .../cnn_v11/rr_detector_validation/INCART_I55.csv  |   4390 +
+ .../cnn_v11/rr_detector_validation/INCART_I56.csv  |   5093 +
+ .../cnn_v11/rr_detector_validation/INCART_I57.csv  |   7427 +
+ .../cnn_v11/rr_detector_validation/INCART_I58.csv  |   6437 +
+ .../cnn_v11/rr_detector_validation/INCART_I59.csv  |   6122 +
+ .../cnn_v11/rr_detector_validation/INCART_I60.csv  |   6668 +
+ .../cnn_v11/rr_detector_validation/INCART_I61.csv  |   4660 +
+ .../cnn_v11/rr_detector_validation/INCART_I65.csv  |   7074 +
+ .../cnn_v11/rr_detector_validation/INCART_I66.csv  |   6273 +
+ .../cnn_v11/rr_detector_validation/INCART_I67.csv  |   7675 +
+ .../cnn_v11/rr_detector_validation/INCART_I68.csv  |   6808 +
+ .../cnn_v11/rr_detector_validation/INCART_I69.csv  |   5687 +
+ .../cnn_v11/rr_detector_validation/INCART_I72.csv  |   5758 +
+ .../cnn_v11/rr_detector_validation/INCART_I73.csv  |   4179 +
+ .../cnn_v11/rr_detector_validation/INCART_I74.csv  |   5889 +
+ .../cnn_v11/rr_detector_validation/INCART_I75.csv  |   5939 +
+ .../cnn_v11/rr_detector_validation/MITBIH_100.csv  |   5847 +
+ .../cnn_v11/rr_detector_validation/MITBIH_101.csv  |   5480 +
+ .../cnn_v11/rr_detector_validation/MITBIH_103.csv  |   5925 +
+ .../cnn_v11/rr_detector_validation/MITBIH_105.csv  |   6802 +
+ .../cnn_v11/rr_detector_validation/MITBIH_106.csv  |   5810 +
+ .../cnn_v11/rr_detector_validation/MITBIH_109.csv  |   6818 +
+ .../cnn_v11/rr_detector_validation/MITBIH_111.csv  |   6044 +
+ .../cnn_v11/rr_detector_validation/MITBIH_112.csv  |   6851 +
+ .../cnn_v11/rr_detector_validation/MITBIH_114.csv  |   5514 +
+ .../cnn_v11/rr_detector_validation/MITBIH_115.csv  |   5663 +
+ .../cnn_v11/rr_detector_validation/MITBIH_116.csv  |   6552 +
+ .../cnn_v11/rr_detector_validation/MITBIH_118.csv  |   6320 +
+ .../cnn_v11/rr_detector_validation/MITBIH_119.csv  |   5732 +
+ .../cnn_v11/rr_detector_validation/MITBIH_121.csv  |   5490 +
+ .../cnn_v11/rr_detector_validation/MITBIH_122.csv  |   6706 +
+ .../cnn_v11/rr_detector_validation/MITBIH_124.csv  |   4998 +
+ .../cnn_v11/rr_detector_validation/MITBIH_201.csv  |   5664 +
+ .../cnn_v11/rr_detector_validation/MITBIH_202.csv  |   6031 +
+ .../cnn_v11/rr_detector_validation/MITBIH_203.csv  |   7361 +
+ .../cnn_v11/rr_detector_validation/MITBIH_205.csv  |   6918 +
+ .../cnn_v11/rr_detector_validation/MITBIH_207.csv  |   5640 +
+ .../cnn_v11/rr_detector_validation/MITBIH_208.csv  |   7636 +
+ .../cnn_v11/rr_detector_validation/MITBIH_209.csv  |   7777 +
+ .../cnn_v11/rr_detector_validation/MITBIH_210.csv  |   7028 +
+ .../cnn_v11/rr_detector_validation/MITBIH_212.csv  |   7267 +
+ .../cnn_v11/rr_detector_validation/MITBIH_213.csv  |   8244 +
+ .../cnn_v11/rr_detector_validation/MITBIH_214.csv  |   6277 +
+ .../cnn_v11/rr_detector_validation/MITBIH_215.csv  |   8473 +
+ .../cnn_v11/rr_detector_validation/MITBIH_217.csv  |   6154 +
+ .../cnn_v11/rr_detector_validation/MITBIH_219.csv  |   6063 +
+ .../cnn_v11/rr_detector_validation/MITBIH_220.csv  |   5851 +
+ .../cnn_v11/rr_detector_validation/MITBIH_221.csv  |   6602 +
+ .../cnn_v11/rr_detector_validation/MITBIH_223.csv  |   6952 +
+ .../cnn_v11/rr_detector_validation/MITBIH_228.csv  |   5971 +
+ .../cnn_v11/rr_detector_validation/MITBIH_230.csv  |   6203 +
+ .../cnn_v11/rr_detector_validation/MITBIH_231.csv  |   5005 +
+ .../cnn_v11/rr_detector_validation/MITBIH_233.csv  |   7901 +
+ .../cnn_v11/rr_detector_validation/MITBIH_234.csv  |   7261 +
+ .../cnn_v11/rr_detector_validation/evaluation.json | 383508 ++++++++++++++++++
+ results/cnn_v11/rr_detector_validation/report.md   |     18 +
+ .../cnn_v11/rr_detector_validation/rr_features.npz |    Bin 0 -> 1965517 bytes
+ results/cnn_v11/test_independence_audit/report.md  |     93 +
+ .../cnn_v11/unmatched_peak_analysis/analysis.json  |   1829 +
+ .../cnn_v11/unmatched_peak_analysis/peak_cases.csv |   8803 +
+ .../unmatched_peak_analysis/record_summary.md      |    107 +
+ results/cnn_v11/unmatched_peak_analysis/report.md  |     78 +
+ .../unmatched_peak_analysis/waveform_examples.png  |    Bin 0 -> 369214 bytes
+ results/cnn_v2/cached_validation_metadata.json     |   4915 +
+ results/cnn_v2/comparison.csv                      |     10 +
+ results/cnn_v2/config.json                         |    118 +
+ results/cnn_v2/development_predictions.npz         |    Bin 0 -> 33685 bytes
+ results/cnn_v2/development_v1.json                 |     48 +
+ results/cnn_v2/evaluation.json                     |    680 +
+ results/cnn_v2/evaluation.log                      |    Bin 0 -> 5576 bytes
+ results/cnn_v2/evaluation_prepare.log              |    Bin 0 -> 532 bytes
+ results/cnn_v2/historical_validation_scores.npz    |    Bin 0 -> 113928 bytes
+ results/cnn_v2/history.json                        |    542 +
+ results/cnn_v2/manifest.json                       |     23 +
+ results/cnn_v2/protected_sha256.json               |     62 +
+ results/cnn_v2/report.md                           |    117 +
+ results/cnn_v2/tests.log                           |      9 +
+ results/cnn_v2/threshold_review/111_events.csv     |   6044 +
+ results/cnn_v2/threshold_review/207_events.csv     |   5640 +
+ results/cnn_v2/threshold_review/217_events.csv     |   6154 +
+ results/cnn_v2/threshold_review/220_events.csv     |   5851 +
+ results/cnn_v2/threshold_review/221_events.csv     |   6602 +
+ results/cnn_v2/threshold_review/231_events.csv     |   5005 +
+ .../threshold_review/development_e2e_metadata.json |     61 +
+ .../threshold_review/development_e2e_scores.npz    |    Bin 0 -> 78033 bytes
+ results/cnn_v2/threshold_review/e2e.log            |    Bin 0 -> 4744 bytes
+ results/cnn_v2/threshold_review/e2e_prepare.log    |    Bin 0 -> 1414 bytes
+ results/cnn_v2/threshold_review/end_to_end.json    |    142 +
+ results/cnn_v2/threshold_review/integrity.json     |     11 +
+ results/cnn_v2/threshold_review/report.md          |     75 +
+ results/cnn_v2/threshold_review/selection.json     |    100 +
+ .../cnn_v2/threshold_review/threshold_sweep.csv    |    133 +
+ results/cnn_v2/training.json                       |     91 +
+ results/cnn_v2/training.log                        |    Bin 0 -> 41150 bytes
+ results/cnn_v2_prepare.log                         |    Bin 0 -> 6504 bytes
+ results/cnn_v3/comparison.csv                      |      7 +
+ results/cnn_v3/config.json                         |     87 +
+ results/cnn_v3/development_predictions.npz         |    Bin 0 -> 28055 bytes
+ results/cnn_v3/end_to_end_predictions.npz          |    Bin 0 -> 44953 bytes
+ results/cnn_v3/evaluation.json                     |    657 +
+ results/cnn_v3/evaluation.log                      |    111 +
+ results/cnn_v3/history.json                        |    299 +
+ results/cnn_v3/manifest.json                       |     26 +
+ results/cnn_v3/process_exit.txt                    |      1 +
+ results/cnn_v3/protected_sha256.json               |    104 +
+ results/cnn_v3/report.md                           |     72 +
+ results/cnn_v3/training.json                       |     91 +
+ results/cnn_v3/training.log                        |    153 +
+ results/cnn_v4/int8_conversion.json                |    122 +
+ results/cnn_v4/int8_conversion_run.log             |    Bin 0 -> 10372 bytes
+ results/cnn_v4/preprocessing.json                  |    786 +
+ .../qrs_verification_v4a/INCART_I01_features.npz   |    Bin 0 -> 47851 bytes
+ .../qrs_verification_v4a/INCART_I02_features.npz   |    Bin 0 -> 44596 bytes
+ .../qrs_verification_v4a/INCART_I03_features.npz   |    Bin 0 -> 43809 bytes
+ .../qrs_verification_v4a/INCART_I04_features.npz   |    Bin 0 -> 39335 bytes
+ .../qrs_verification_v4a/INCART_I05_features.npz   |    Bin 0 -> 34992 bytes
+ .../qrs_verification_v4a/INCART_I06_features.npz   |    Bin 0 -> 35906 bytes
+ .../qrs_verification_v4a/INCART_I07_features.npz   |    Bin 0 -> 35742 bytes
+ .../qrs_verification_v4a/INCART_I08_features.npz   |    Bin 0 -> 38408 bytes
+ .../qrs_verification_v4a/INCART_I09_features.npz   |    Bin 0 -> 48884 bytes
+ .../qrs_verification_v4a/INCART_I10_features.npz   |    Bin 0 -> 52520 bytes
+ .../qrs_verification_v4a/INCART_I11_features.npz   |    Bin 0 -> 34069 bytes
+ .../qrs_verification_v4a/INCART_I12_features.npz   |    Bin 0 -> 39457 bytes
+ .../qrs_verification_v4a/INCART_I13_features.npz   |    Bin 0 -> 29006 bytes
+ .../qrs_verification_v4a/INCART_I14_features.npz   |    Bin 0 -> 26273 bytes
+ .../qrs_verification_v4a/INCART_I15_features.npz   |    Bin 0 -> 37359 bytes
+ .../qrs_verification_v4a/INCART_I16_features.npz   |    Bin 0 -> 46408 bytes
+ .../qrs_verification_v4a/INCART_I17_features.npz   |    Bin 0 -> 32660 bytes
+ .../qrs_verification_v4a/INCART_I23_features.npz   |    Bin 0 -> 33190 bytes
+ .../qrs_verification_v4a/INCART_I24_features.npz   |    Bin 0 -> 41847 bytes
+ .../qrs_verification_v4a/INCART_I25_features.npz   |    Bin 0 -> 40812 bytes
+ .../qrs_verification_v4a/INCART_I26_features.npz   |    Bin 0 -> 43224 bytes
+ .../qrs_verification_v4a/INCART_I27_features.npz   |    Bin 0 -> 38753 bytes
+ .../qrs_verification_v4a/INCART_I28_features.npz   |    Bin 0 -> 22803 bytes
+ .../qrs_verification_v4a/INCART_I29_features.npz   |    Bin 0 -> 45051 bytes
+ .../qrs_verification_v4a/INCART_I30_features.npz   |    Bin 0 -> 41101 bytes
+ .../qrs_verification_v4a/INCART_I31_features.npz   |    Bin 0 -> 32023 bytes
+ .../qrs_verification_v4a/INCART_I32_features.npz   |    Bin 0 -> 23245 bytes
+ .../qrs_verification_v4a/INCART_I33_features.npz   |    Bin 0 -> 26614 bytes
+ .../qrs_verification_v4a/INCART_I34_features.npz   |    Bin 0 -> 28245 bytes
+ .../qrs_verification_v4a/INCART_I35_features.npz   |    Bin 0 -> 55661 bytes
+ .../qrs_verification_v4a/INCART_I36_features.npz   |    Bin 0 -> 59819 bytes
+ .../qrs_verification_v4a/INCART_I37_features.npz   |    Bin 0 -> 33800 bytes
+ .../qrs_verification_v4a/INCART_I40_features.npz   |    Bin 0 -> 41874 bytes
+ .../qrs_verification_v4a/INCART_I41_features.npz   |    Bin 0 -> 23313 bytes
+ .../qrs_verification_v4a/INCART_I42_features.npz   |    Bin 0 -> 50585 bytes
+ .../qrs_verification_v4a/INCART_I43_features.npz   |    Bin 0 -> 34219 bytes
+ .../qrs_verification_v4a/INCART_I44_features.npz   |    Bin 0 -> 35625 bytes
+ .../qrs_verification_v4a/INCART_I45_features.npz   |    Bin 0 -> 28290 bytes
+ .../qrs_verification_v4a/INCART_I46_features.npz   |    Bin 0 -> 38517 bytes
+ .../qrs_verification_v4a/INCART_I47_features.npz   |    Bin 0 -> 32073 bytes
+ .../qrs_verification_v4a/INCART_I48_features.npz   |    Bin 0 -> 37341 bytes
+ .../qrs_verification_v4a/INCART_I49_features.npz   |    Bin 0 -> 29077 bytes
+ .../qrs_verification_v4a/INCART_I50_features.npz   |    Bin 0 -> 41007 bytes
+ .../qrs_verification_v4a/INCART_I51_features.npz   |    Bin 0 -> 45344 bytes
+ .../qrs_verification_v4a/INCART_I52_features.npz   |    Bin 0 -> 24522 bytes
+ .../qrs_verification_v4a/INCART_I53_features.npz   |    Bin 0 -> 36345 bytes
+ .../qrs_verification_v4a/INCART_I54_features.npz   |    Bin 0 -> 45545 bytes
+ .../qrs_verification_v4a/INCART_I55_features.npz   |    Bin 0 -> 36804 bytes
+ .../qrs_verification_v4a/INCART_I56_features.npz   |    Bin 0 -> 30086 bytes
+ .../qrs_verification_v4a/INCART_I57_features.npz   |    Bin 0 -> 40311 bytes
+ .../qrs_verification_v4a/INCART_I58_features.npz   |    Bin 0 -> 32911 bytes
+ .../qrs_verification_v4a/INCART_I59_features.npz   |    Bin 0 -> 33303 bytes
+ .../qrs_verification_v4a/INCART_I60_features.npz   |    Bin 0 -> 40372 bytes
+ .../qrs_verification_v4a/INCART_I61_features.npz   |    Bin 0 -> 19926 bytes
+ .../qrs_verification_v4a/INCART_I65_features.npz   |    Bin 0 -> 40627 bytes
+ .../qrs_verification_v4a/INCART_I66_features.npz   |    Bin 0 -> 34616 bytes
+ .../qrs_verification_v4a/INCART_I67_features.npz   |    Bin 0 -> 46725 bytes
+ .../qrs_verification_v4a/INCART_I68_features.npz   |    Bin 0 -> 47656 bytes
+ .../qrs_verification_v4a/INCART_I69_features.npz   |    Bin 0 -> 37001 bytes
+ .../qrs_verification_v4a/INCART_I72_features.npz   |    Bin 0 -> 38072 bytes
+ .../qrs_verification_v4a/INCART_I73_features.npz   |    Bin 0 -> 33860 bytes
+ .../qrs_verification_v4a/INCART_I74_features.npz   |    Bin 0 -> 35166 bytes
+ .../qrs_verification_v4a/INCART_I75_features.npz   |    Bin 0 -> 33001 bytes
+ .../qrs_verification_v4a/MITBIH_100_features.npz   |    Bin 0 -> 30901 bytes
+ .../qrs_verification_v4a/MITBIH_101_features.npz   |    Bin 0 -> 26466 bytes
+ .../qrs_verification_v4a/MITBIH_103_features.npz   |    Bin 0 -> 28392 bytes
+ .../qrs_verification_v4a/MITBIH_105_features.npz   |    Bin 0 -> 43382 bytes
+ .../qrs_verification_v4a/MITBIH_106_features.npz   |    Bin 0 -> 32129 bytes
+ .../qrs_verification_v4a/MITBIH_109_features.npz   |    Bin 0 -> 41905 bytes
+ .../qrs_verification_v4a/MITBIH_111_features.npz   |    Bin 0 -> 36980 bytes
+ .../qrs_verification_v4a/MITBIH_112_features.npz   |    Bin 0 -> 43020 bytes
+ .../qrs_verification_v4a/MITBIH_114_features.npz   |    Bin 0 -> 33082 bytes
+ .../qrs_verification_v4a/MITBIH_115_features.npz   |    Bin 0 -> 26423 bytes
+ .../qrs_verification_v4a/MITBIH_116_features.npz   |    Bin 0 -> 32975 bytes
+ .../qrs_verification_v4a/MITBIH_118_features.npz   |    Bin 0 -> 39038 bytes
+ .../qrs_verification_v4a/MITBIH_119_features.npz   |    Bin 0 -> 29370 bytes
+ .../qrs_verification_v4a/MITBIH_121_features.npz   |    Bin 0 -> 32823 bytes
+ .../qrs_verification_v4a/MITBIH_122_features.npz   |    Bin 0 -> 39690 bytes
+ .../qrs_verification_v4a/MITBIH_124_features.npz   |    Bin 0 -> 28043 bytes
+ .../qrs_verification_v4a/MITBIH_201_features.npz   |    Bin 0 -> 33584 bytes
+ .../qrs_verification_v4a/MITBIH_202_features.npz   |    Bin 0 -> 37237 bytes
+ .../qrs_verification_v4a/MITBIH_203_features.npz   |    Bin 0 -> 49407 bytes
+ .../qrs_verification_v4a/MITBIH_205_features.npz   |    Bin 0 -> 35347 bytes
+ .../qrs_verification_v4a/MITBIH_207_features.npz   |    Bin 0 -> 33741 bytes
+ .../qrs_verification_v4a/MITBIH_208_features.npz   |    Bin 0 -> 46054 bytes
+ .../qrs_verification_v4a/MITBIH_209_features.npz   |    Bin 0 -> 41546 bytes
+ .../qrs_verification_v4a/MITBIH_210_features.npz   |    Bin 0 -> 45054 bytes
+ .../qrs_verification_v4a/MITBIH_212_features.npz   |    Bin 0 -> 43544 bytes
+ .../qrs_verification_v4a/MITBIH_213_features.npz   |    Bin 0 -> 53351 bytes
+ .../qrs_verification_v4a/MITBIH_214_features.npz   |    Bin 0 -> 38707 bytes
+ .../qrs_verification_v4a/MITBIH_215_features.npz   |    Bin 0 -> 55213 bytes
+ .../qrs_verification_v4a/MITBIH_217_features.npz   |    Bin 0 -> 38643 bytes
+ .../qrs_verification_v4a/MITBIH_219_features.npz   |    Bin 0 -> 35665 bytes
+ .../qrs_verification_v4a/MITBIH_220_features.npz   |    Bin 0 -> 28093 bytes
+ .../qrs_verification_v4a/MITBIH_221_features.npz   |    Bin 0 -> 37002 bytes
+ .../qrs_verification_v4a/MITBIH_223_features.npz   |    Bin 0 -> 44125 bytes
+ .../qrs_verification_v4a/MITBIH_228_features.npz   |    Bin 0 -> 36768 bytes
+ .../qrs_verification_v4a/MITBIH_230_features.npz   |    Bin 0 -> 34418 bytes
+ .../qrs_verification_v4a/MITBIH_231_features.npz   |    Bin 0 -> 25411 bytes
+ .../qrs_verification_v4a/MITBIH_233_features.npz   |    Bin 0 -> 51775 bytes
+ .../qrs_verification_v4a/MITBIH_234_features.npz   |    Bin 0 -> 36502 bytes
+ .../qrs_verification_v4a/PVC_subgroup_checks.json  |     44 +
+ .../qrs_verification_v4a/calibration_trials.json   |    532 +
+ results/cnn_v4/qrs_verification_v4a/decision.json  |      6 +
+ results/cnn_v4/qrs_verification_v4a/design.json    |    105 +
+ .../cnn_v4/qrs_verification_v4a/evaluation.json    |   5071 +
+ .../cnn_v4/qrs_verification_v4a/gate_locked.json   |      6 +
+ .../cnn_v4/qrs_verification_v4a/group_metrics.json |   1514 +
+ results/cnn_v4/qrs_verification_v4a/report.md      |    200 +
+ results/cnn_v4/report.md                           |     75 +
+ results/cnn_v4/selection.json                      |     38 +
+ results/cnn_v4/test_evaluation.json                |    255 +
+ results/cnn_v4/test_evaluation.lock.json           |      6 +
+ results/cnn_v4/training_run.log                    |    Bin 0 -> 28754 bytes
+ results/cnn_v4/v4_full_chain_host.cpp              |     34 +
+ results/cnn_v4/v4_validation_python_codes.bin      |    Bin 0 -> 25010 bytes
+ results/cnn_v4/v4_validation_tflm_host_codes.bin   |    Bin 0 -> 25010 bytes
+ .../checkpoints/v4b_fold0_best.keras               |    Bin 0 -> 47722 bytes
+ .../checkpoints/v4b_fold1_best.keras               |    Bin 0 -> 47722 bytes
+ .../checkpoints/v4b_fold2_best.keras               |    Bin 0 -> 47722 bytes
+ .../checkpoints/v4b_fold3_best.keras               |    Bin 0 -> 47722 bytes
+ .../checkpoints/v4b_fold4_best.keras               |    Bin 0 -> 47722 bytes
+ .../cnn_v4/v4b_hard_example_training/config.json   |     18 +
+ .../cnn_v4/v4b_hard_example_training/decision.json |     29 +
+ .../v4b_hard_example_training/evaluation.json      |   5244 +
+ .../cnn_v4/v4b_hard_example_training/fold0.json    |    883 +
+ .../v4b_hard_example_training/fold0_Fit_mining.npz |    Bin 0 -> 305242 bytes
+ .../v4b_hard_example_training/fold0_locked.json    |     61 +
+ .../v4b_hard_example_training/fold0_training.json  |     54 +
+ .../fold0_v4_fold0_INCART_I01_prediction.npz       |    Bin 0 -> 14417 bytes
+ .../fold0_v4_fold0_INCART_I02_prediction.npz       |    Bin 0 -> 11572 bytes
+ .../fold0_v4_fold0_INCART_I12_prediction.npz       |    Bin 0 -> 9417 bytes
+ .../fold0_v4_fold0_INCART_I13_prediction.npz       |    Bin 0 -> 12162 bytes
+ .../fold0_v4_fold0_INCART_I14_prediction.npz       |    Bin 0 -> 11521 bytes
+ .../fold0_v4_fold0_INCART_I16_prediction.npz       |    Bin 0 -> 16705 bytes
+ .../fold0_v4_fold0_INCART_I17_prediction.npz       |    Bin 0 -> 11578 bytes
+ .../fold0_v4_fold0_INCART_I27_prediction.npz       |    Bin 0 -> 12920 bytes
+ .../fold0_v4_fold0_INCART_I28_prediction.npz       |    Bin 0 -> 5545 bytes
+ .../fold0_v4_fold0_INCART_I65_prediction.npz       |    Bin 0 -> 10170 bytes
+ .../fold0_v4_fold0_INCART_I66_prediction.npz       |    Bin 0 -> 8438 bytes
+ .../fold0_v4_fold0_INCART_I67_prediction.npz       |    Bin 0 -> 12226 bytes
+ .../fold0_v4_fold0_INCART_I74_prediction.npz       |    Bin 0 -> 14039 bytes
+ .../fold0_v4_fold0_INCART_I75_prediction.npz       |    Bin 0 -> 12897 bytes
+ .../fold0_v4_fold0_MITBIH_111_prediction.npz       |    Bin 0 -> 13479 bytes
+ .../fold0_v4_fold0_MITBIH_112_prediction.npz       |    Bin 0 -> 13310 bytes
+ .../fold0_v4_fold0_MITBIH_116_prediction.npz       |    Bin 0 -> 11735 bytes
+ .../fold0_v4_fold0_MITBIH_124_prediction.npz       |    Bin 0 -> 10584 bytes
+ .../fold0_v4_fold0_MITBIH_202_prediction.npz       |    Bin 0 -> 13240 bytes
+ .../fold0_v4_fold0_MITBIH_208_prediction.npz       |    Bin 0 -> 14567 bytes
+ .../fold0_v4_fold0_MITBIH_215_prediction.npz       |    Bin 0 -> 17693 bytes
+ .../fold0_v4_fold0_MITBIH_231_prediction.npz       |    Bin 0 -> 7824 bytes
+ .../fold0_v4b_fold0_INCART_I01_prediction.npz      |    Bin 0 -> 14978 bytes
+ .../fold0_v4b_fold0_INCART_I02_prediction.npz      |    Bin 0 -> 13043 bytes
+ .../fold0_v4b_fold0_INCART_I12_prediction.npz      |    Bin 0 -> 10210 bytes
+ .../fold0_v4b_fold0_INCART_I13_prediction.npz      |    Bin 0 -> 12520 bytes
+ .../fold0_v4b_fold0_INCART_I14_prediction.npz      |    Bin 0 -> 11579 bytes
+ .../fold0_v4b_fold0_INCART_I16_prediction.npz      |    Bin 0 -> 16641 bytes
+ .../fold0_v4b_fold0_INCART_I17_prediction.npz      |    Bin 0 -> 11555 bytes
+ .../fold0_v4b_fold0_INCART_I27_prediction.npz      |    Bin 0 -> 13253 bytes
+ .../fold0_v4b_fold0_INCART_I28_prediction.npz      |    Bin 0 -> 6495 bytes
+ .../fold0_v4b_fold0_INCART_I65_prediction.npz      |    Bin 0 -> 10804 bytes
+ .../fold0_v4b_fold0_INCART_I66_prediction.npz      |    Bin 0 -> 8978 bytes
+ .../fold0_v4b_fold0_INCART_I67_prediction.npz      |    Bin 0 -> 12376 bytes
+ .../fold0_v4b_fold0_INCART_I74_prediction.npz      |    Bin 0 -> 11763 bytes
+ .../fold0_v4b_fold0_INCART_I75_prediction.npz      |    Bin 0 -> 12972 bytes
+ .../fold0_v4b_fold0_MITBIH_111_prediction.npz      |    Bin 0 -> 13460 bytes
+ .../fold0_v4b_fold0_MITBIH_112_prediction.npz      |    Bin 0 -> 15126 bytes
+ .../fold0_v4b_fold0_MITBIH_116_prediction.npz      |    Bin 0 -> 12609 bytes
+ .../fold0_v4b_fold0_MITBIH_124_prediction.npz      |    Bin 0 -> 10597 bytes
+ .../fold0_v4b_fold0_MITBIH_202_prediction.npz      |    Bin 0 -> 13265 bytes
+ .../fold0_v4b_fold0_MITBIH_208_prediction.npz      |    Bin 0 -> 16962 bytes
+ .../fold0_v4b_fold0_MITBIH_215_prediction.npz      |    Bin 0 -> 18931 bytes
+ .../fold0_v4b_fold0_MITBIH_231_prediction.npz      |    Bin 0 -> 9277 bytes
+ .../cnn_v4/v4b_hard_example_training/fold1.json    |    920 +
+ .../v4b_hard_example_training/fold1_Fit_mining.npz |    Bin 0 -> 453543 bytes
+ .../v4b_hard_example_training/fold1_locked.json    |     66 +
+ .../v4b_hard_example_training/fold1_training.json  |     59 +
+ .../fold1_v4_fold1_INCART_I03_prediction.npz       |    Bin 0 -> 15444 bytes
+ .../fold1_v4_fold1_INCART_I04_prediction.npz       |    Bin 0 -> 13722 bytes
+ .../fold1_v4_fold1_INCART_I05_prediction.npz       |    Bin 0 -> 12367 bytes
+ .../fold1_v4_fold1_INCART_I23_prediction.npz       |    Bin 0 -> 14063 bytes
+ .../fold1_v4_fold1_INCART_I24_prediction.npz       |    Bin 0 -> 15759 bytes
+ .../fold1_v4_fold1_INCART_I47_prediction.npz       |    Bin 0 -> 13790 bytes
+ .../fold1_v4_fold1_INCART_I48_prediction.npz       |    Bin 0 -> 15560 bytes
+ .../fold1_v4_fold1_INCART_I51_prediction.npz       |    Bin 0 -> 17033 bytes
+ .../fold1_v4_fold1_INCART_I52_prediction.npz       |    Bin 0 -> 11153 bytes
+ .../fold1_v4_fold1_INCART_I53_prediction.npz       |    Bin 0 -> 13819 bytes
+ .../fold1_v4_fold1_INCART_I54_prediction.npz       |    Bin 0 -> 16166 bytes
+ .../fold1_v4_fold1_INCART_I55_prediction.npz       |    Bin 0 -> 13625 bytes
+ .../fold1_v4_fold1_INCART_I56_prediction.npz       |    Bin 0 -> 10800 bytes
+ .../fold1_v4_fold1_INCART_I72_prediction.npz       |    Bin 0 -> 14119 bytes
+ .../fold1_v4_fold1_INCART_I73_prediction.npz       |    Bin 0 -> 12223 bytes
+ .../fold1_v4_fold1_MITBIH_100_prediction.npz       |    Bin 0 -> 14111 bytes
+ .../fold1_v4_fold1_MITBIH_106_prediction.npz       |    Bin 0 -> 13047 bytes
+ .../fold1_v4_fold1_MITBIH_109_prediction.npz       |    Bin 0 -> 15022 bytes
+ .../fold1_v4_fold1_MITBIH_118_prediction.npz       |    Bin 0 -> 14225 bytes
+ .../fold1_v4_fold1_MITBIH_121_prediction.npz       |    Bin 0 -> 11993 bytes
+ .../fold1_v4_fold1_MITBIH_122_prediction.npz       |    Bin 0 -> 15067 bytes
+ .../fold1_v4_fold1_MITBIH_203_prediction.npz       |    Bin 0 -> 16956 bytes
+ .../fold1_v4_fold1_MITBIH_210_prediction.npz       |    Bin 0 -> 16154 bytes
+ .../fold1_v4b_fold1_INCART_I03_prediction.npz      |    Bin 0 -> 15215 bytes
+ .../fold1_v4b_fold1_INCART_I04_prediction.npz      |    Bin 0 -> 13630 bytes
+ .../fold1_v4b_fold1_INCART_I05_prediction.npz      |    Bin 0 -> 12329 bytes
+ .../fold1_v4b_fold1_INCART_I23_prediction.npz      |    Bin 0 -> 13918 bytes
+ .../fold1_v4b_fold1_INCART_I24_prediction.npz      |    Bin 0 -> 15717 bytes
+ .../fold1_v4b_fold1_INCART_I47_prediction.npz      |    Bin 0 -> 13730 bytes
+ .../fold1_v4b_fold1_INCART_I48_prediction.npz      |    Bin 0 -> 15500 bytes
+ .../fold1_v4b_fold1_INCART_I51_prediction.npz      |    Bin 0 -> 17004 bytes
+ .../fold1_v4b_fold1_INCART_I52_prediction.npz      |    Bin 0 -> 11106 bytes
+ .../fold1_v4b_fold1_INCART_I53_prediction.npz      |    Bin 0 -> 13852 bytes
+ .../fold1_v4b_fold1_INCART_I54_prediction.npz      |    Bin 0 -> 16105 bytes
+ .../fold1_v4b_fold1_INCART_I55_prediction.npz      |    Bin 0 -> 13683 bytes
+ .../fold1_v4b_fold1_INCART_I56_prediction.npz      |    Bin 0 -> 10756 bytes
+ .../fold1_v4b_fold1_INCART_I72_prediction.npz      |    Bin 0 -> 14075 bytes
+ .../fold1_v4b_fold1_INCART_I73_prediction.npz      |    Bin 0 -> 12145 bytes
+ .../fold1_v4b_fold1_MITBIH_100_prediction.npz      |    Bin 0 -> 14183 bytes
+ .../fold1_v4b_fold1_MITBIH_106_prediction.npz      |    Bin 0 -> 13001 bytes
+ .../fold1_v4b_fold1_MITBIH_109_prediction.npz      |    Bin 0 -> 15032 bytes
+ .../fold1_v4b_fold1_MITBIH_118_prediction.npz      |    Bin 0 -> 14190 bytes
+ .../fold1_v4b_fold1_MITBIH_121_prediction.npz      |    Bin 0 -> 11932 bytes
+ .../fold1_v4b_fold1_MITBIH_122_prediction.npz      |    Bin 0 -> 14985 bytes
+ .../fold1_v4b_fold1_MITBIH_203_prediction.npz      |    Bin 0 -> 16923 bytes
+ .../fold1_v4b_fold1_MITBIH_210_prediction.npz      |    Bin 0 -> 16043 bytes
+ .../cnn_v4/v4b_hard_example_training/fold2.json    |    792 +
+ .../v4b_hard_example_training/fold2_Fit_mining.npz |    Bin 0 -> 489180 bytes
+ .../v4b_hard_example_training/fold2_locked.json    |     66 +
+ .../v4b_hard_example_training/fold2_training.json  |     59 +
+ .../fold2_v4_fold2_INCART_I15_prediction.npz       |    Bin 0 -> 16246 bytes
+ .../fold2_v4_fold2_INCART_I25_prediction.npz       |    Bin 0 -> 15998 bytes
+ .../fold2_v4_fold2_INCART_I26_prediction.npz       |    Bin 0 -> 16875 bytes
+ .../fold2_v4_fold2_INCART_I33_prediction.npz       |    Bin 0 -> 11902 bytes
+ .../fold2_v4_fold2_INCART_I34_prediction.npz       |    Bin 0 -> 12610 bytes
+ .../fold2_v4_fold2_INCART_I35_prediction.npz       |    Bin 0 -> 22018 bytes
+ .../fold2_v4_fold2_INCART_I36_prediction.npz       |    Bin 0 -> 21917 bytes
+ .../fold2_v4_fold2_INCART_I37_prediction.npz       |    Bin 0 -> 15303 bytes
+ .../fold2_v4_fold2_INCART_I44_prediction.npz       |    Bin 0 -> 15558 bytes
+ .../fold2_v4_fold2_INCART_I45_prediction.npz       |    Bin 0 -> 12359 bytes
+ .../fold2_v4_fold2_INCART_I46_prediction.npz       |    Bin 0 -> 16626 bytes
+ .../fold2_v4_fold2_MITBIH_115_prediction.npz       |    Bin 0 -> 12581 bytes
+ .../fold2_v4_fold2_MITBIH_209_prediction.npz       |    Bin 0 -> 18372 bytes
+ .../fold2_v4_fold2_MITBIH_212_prediction.npz       |    Bin 0 -> 16887 bytes
+ .../fold2_v4_fold2_MITBIH_214_prediction.npz       |    Bin 0 -> 14252 bytes
+ .../fold2_v4_fold2_MITBIH_219_prediction.npz       |    Bin 0 -> 13736 bytes
+ .../fold2_v4_fold2_MITBIH_220_prediction.npz       |    Bin 0 -> 13099 bytes
+ .../fold2_v4_fold2_MITBIH_233_prediction.npz       |    Bin 0 -> 18360 bytes
+ .../fold2_v4_fold2_MITBIH_234_prediction.npz       |    Bin 0 -> 16714 bytes
+ .../fold2_v4b_fold2_INCART_I15_prediction.npz      |    Bin 0 -> 16071 bytes
+ .../fold2_v4b_fold2_INCART_I25_prediction.npz      |    Bin 0 -> 15937 bytes
+ .../fold2_v4b_fold2_INCART_I26_prediction.npz      |    Bin 0 -> 16787 bytes
+ .../fold2_v4b_fold2_INCART_I33_prediction.npz      |    Bin 0 -> 11678 bytes
+ .../fold2_v4b_fold2_INCART_I34_prediction.npz      |    Bin 0 -> 12389 bytes
+ .../fold2_v4b_fold2_INCART_I35_prediction.npz      |    Bin 0 -> 21667 bytes
+ .../fold2_v4b_fold2_INCART_I36_prediction.npz      |    Bin 0 -> 21706 bytes
+ .../fold2_v4b_fold2_INCART_I37_prediction.npz      |    Bin 0 -> 15263 bytes
+ .../fold2_v4b_fold2_INCART_I44_prediction.npz      |    Bin 0 -> 15261 bytes
+ .../fold2_v4b_fold2_INCART_I45_prediction.npz      |    Bin 0 -> 12043 bytes
+ .../fold2_v4b_fold2_INCART_I46_prediction.npz      |    Bin 0 -> 16285 bytes
+ .../fold2_v4b_fold2_MITBIH_115_prediction.npz      |    Bin 0 -> 12209 bytes
+ .../fold2_v4b_fold2_MITBIH_209_prediction.npz      |    Bin 0 -> 18067 bytes
+ .../fold2_v4b_fold2_MITBIH_212_prediction.npz      |    Bin 0 -> 16955 bytes
+ .../fold2_v4b_fold2_MITBIH_214_prediction.npz      |    Bin 0 -> 14191 bytes
+ .../fold2_v4b_fold2_MITBIH_219_prediction.npz      |    Bin 0 -> 13567 bytes
+ .../fold2_v4b_fold2_MITBIH_220_prediction.npz      |    Bin 0 -> 12753 bytes
+ .../fold2_v4b_fold2_MITBIH_233_prediction.npz      |    Bin 0 -> 18337 bytes
+ .../fold2_v4b_fold2_MITBIH_234_prediction.npz      |    Bin 0 -> 16326 bytes
+ .../cnn_v4/v4b_hard_example_training/fold3.json    |    820 +
+ .../v4b_hard_example_training/fold3_Fit_mining.npz |    Bin 0 -> 482286 bytes
+ .../v4b_hard_example_training/fold3_locked.json    |    126 +
+ .../v4b_hard_example_training/fold3_training.json  |    119 +
+ .../fold3_v4_fold3_INCART_I06_prediction.npz       |    Bin 0 -> 16011 bytes
+ .../fold3_v4_fold3_INCART_I07_prediction.npz       |    Bin 0 -> 15849 bytes
+ .../fold3_v4_fold3_INCART_I09_prediction.npz       |    Bin 0 -> 20528 bytes
+ .../fold3_v4_fold3_INCART_I10_prediction.npz       |    Bin 0 -> 21461 bytes
+ .../fold3_v4_fold3_INCART_I11_prediction.npz       |    Bin 0 -> 16216 bytes
+ .../fold3_v4_fold3_INCART_I42_prediction.npz       |    Bin 0 -> 18437 bytes
+ .../fold3_v4_fold3_INCART_I43_prediction.npz       |    Bin 0 -> 13754 bytes
+ .../fold3_v4_fold3_INCART_I57_prediction.npz       |    Bin 0 -> 17701 bytes
+ .../fold3_v4_fold3_INCART_I58_prediction.npz       |    Bin 0 -> 14869 bytes
+ .../fold3_v4_fold3_INCART_I68_prediction.npz       |    Bin 0 -> 17012 bytes
+ .../fold3_v4_fold3_INCART_I69_prediction.npz       |    Bin 0 -> 13958 bytes
+ .../fold3_v4_fold3_MITBIH_101_prediction.npz       |    Bin 0 -> 12122 bytes
+ .../fold3_v4_fold3_MITBIH_114_prediction.npz       |    Bin 0 -> 12244 bytes
+ .../fold3_v4_fold3_MITBIH_119_prediction.npz       |    Bin 0 -> 12791 bytes
+ .../fold3_v4_fold3_MITBIH_205_prediction.npz       |    Bin 0 -> 16278 bytes
+ .../fold3_v4_fold3_MITBIH_207_prediction.npz       |    Bin 0 -> 12278 bytes
+ .../fold3_v4_fold3_MITBIH_213_prediction.npz       |    Bin 0 -> 19332 bytes
+ .../fold3_v4_fold3_MITBIH_221_prediction.npz       |    Bin 0 -> 15234 bytes
+ .../fold3_v4b_fold3_INCART_I06_prediction.npz      |    Bin 0 -> 15611 bytes
+ .../fold3_v4b_fold3_INCART_I07_prediction.npz      |    Bin 0 -> 15476 bytes
+ .../fold3_v4b_fold3_INCART_I09_prediction.npz      |    Bin 0 -> 20131 bytes
+ .../fold3_v4b_fold3_INCART_I10_prediction.npz      |    Bin 0 -> 21052 bytes
+ .../fold3_v4b_fold3_INCART_I11_prediction.npz      |    Bin 0 -> 15681 bytes
+ .../fold3_v4b_fold3_INCART_I42_prediction.npz      |    Bin 0 -> 18530 bytes
+ .../fold3_v4b_fold3_INCART_I43_prediction.npz      |    Bin 0 -> 13656 bytes
+ .../fold3_v4b_fold3_INCART_I57_prediction.npz      |    Bin 0 -> 17389 bytes
+ .../fold3_v4b_fold3_INCART_I58_prediction.npz      |    Bin 0 -> 14602 bytes
+ .../fold3_v4b_fold3_INCART_I68_prediction.npz      |    Bin 0 -> 17070 bytes
+ .../fold3_v4b_fold3_INCART_I69_prediction.npz      |    Bin 0 -> 13804 bytes
+ .../fold3_v4b_fold3_MITBIH_101_prediction.npz      |    Bin 0 -> 11833 bytes
+ .../fold3_v4b_fold3_MITBIH_114_prediction.npz      |    Bin 0 -> 12213 bytes
+ .../fold3_v4b_fold3_MITBIH_119_prediction.npz      |    Bin 0 -> 12481 bytes
+ .../fold3_v4b_fold3_MITBIH_205_prediction.npz      |    Bin 0 -> 15761 bytes
+ .../fold3_v4b_fold3_MITBIH_207_prediction.npz      |    Bin 0 -> 12375 bytes
+ .../fold3_v4b_fold3_MITBIH_213_prediction.npz      |    Bin 0 -> 19290 bytes
+ .../fold3_v4b_fold3_MITBIH_221_prediction.npz      |    Bin 0 -> 15111 bytes
+ .../cnn_v4/v4b_hard_example_training/fold4.json    |    837 +
+ .../v4b_hard_example_training/fold4_Fit_mining.npz |    Bin 0 -> 461870 bytes
+ .../v4b_hard_example_training/fold4_locked.json    |    111 +
+ .../v4b_hard_example_training/fold4_training.json  |    104 +
+ .../fold4_v4_fold4_INCART_I08_prediction.npz       |    Bin 0 -> 15141 bytes
+ .../fold4_v4_fold4_INCART_I29_prediction.npz       |    Bin 0 -> 17294 bytes
+ .../fold4_v4_fold4_INCART_I30_prediction.npz       |    Bin 0 -> 16242 bytes
+ .../fold4_v4_fold4_INCART_I31_prediction.npz       |    Bin 0 -> 10086 bytes
+ .../fold4_v4_fold4_INCART_I32_prediction.npz       |    Bin 0 -> 10930 bytes
+ .../fold4_v4_fold4_INCART_I40_prediction.npz       |    Bin 0 -> 16964 bytes
+ .../fold4_v4_fold4_INCART_I41_prediction.npz       |    Bin 0 -> 11040 bytes
+ .../fold4_v4_fold4_INCART_I49_prediction.npz       |    Bin 0 -> 13578 bytes
+ .../fold4_v4_fold4_INCART_I50_prediction.npz       |    Bin 0 -> 18358 bytes
+ .../fold4_v4_fold4_INCART_I59_prediction.npz       |    Bin 0 -> 14098 bytes
+ .../fold4_v4_fold4_INCART_I60_prediction.npz       |    Bin 0 -> 16014 bytes
+ .../fold4_v4_fold4_INCART_I61_prediction.npz       |    Bin 0 -> 9669 bytes
+ .../fold4_v4_fold4_MITBIH_103_prediction.npz       |    Bin 0 -> 13365 bytes
+ .../fold4_v4_fold4_MITBIH_105_prediction.npz       |    Bin 0 -> 15895 bytes
+ .../fold4_v4_fold4_MITBIH_201_prediction.npz       |    Bin 0 -> 12769 bytes
+ .../fold4_v4_fold4_MITBIH_217_prediction.npz       |    Bin 0 -> 13495 bytes
+ .../fold4_v4_fold4_MITBIH_223_prediction.npz       |    Bin 0 -> 16190 bytes
+ .../fold4_v4_fold4_MITBIH_228_prediction.npz       |    Bin 0 -> 13742 bytes
+ .../fold4_v4_fold4_MITBIH_230_prediction.npz       |    Bin 0 -> 14582 bytes
+ .../fold4_v4b_fold4_INCART_I08_prediction.npz      |    Bin 0 -> 15088 bytes
+ .../fold4_v4b_fold4_INCART_I29_prediction.npz      |    Bin 0 -> 17245 bytes
+ .../fold4_v4b_fold4_INCART_I30_prediction.npz      |    Bin 0 -> 16179 bytes
+ .../fold4_v4b_fold4_INCART_I31_prediction.npz      |    Bin 0 -> 10043 bytes
+ .../fold4_v4b_fold4_INCART_I32_prediction.npz      |    Bin 0 -> 10894 bytes
+ .../fold4_v4b_fold4_INCART_I40_prediction.npz      |    Bin 0 -> 16898 bytes
+ .../fold4_v4b_fold4_INCART_I41_prediction.npz      |    Bin 0 -> 10998 bytes
+ .../fold4_v4b_fold4_INCART_I49_prediction.npz      |    Bin 0 -> 13550 bytes
+ .../fold4_v4b_fold4_INCART_I50_prediction.npz      |    Bin 0 -> 18284 bytes
+ .../fold4_v4b_fold4_INCART_I59_prediction.npz      |    Bin 0 -> 14087 bytes
+ .../fold4_v4b_fold4_INCART_I60_prediction.npz      |    Bin 0 -> 15962 bytes
+ .../fold4_v4b_fold4_INCART_I61_prediction.npz      |    Bin 0 -> 9646 bytes
+ .../fold4_v4b_fold4_MITBIH_103_prediction.npz      |    Bin 0 -> 13308 bytes
+ .../fold4_v4b_fold4_MITBIH_105_prediction.npz      |    Bin 0 -> 15865 bytes
+ .../fold4_v4b_fold4_MITBIH_201_prediction.npz      |    Bin 0 -> 12715 bytes
+ .../fold4_v4b_fold4_MITBIH_217_prediction.npz      |    Bin 0 -> 13554 bytes
+ .../fold4_v4b_fold4_MITBIH_223_prediction.npz      |    Bin 0 -> 16161 bytes
+ .../fold4_v4b_fold4_MITBIH_228_prediction.npz      |    Bin 0 -> 13703 bytes
+ .../fold4_v4b_fold4_MITBIH_230_prediction.npz      |    Bin 0 -> 14524 bytes
+ .../v4b_hard_example_training/group_metrics.json   |   3064 +
+ results/cnn_v4/v4b_hard_example_training/report.md |    313 +
+ .../runtime_and_archive_metadata.json              |     43 +
+ .../v4b_hard_example_training/verification.json    |     37 +
+ results/cnn_v5/config.json                         |     13 +
+ results/cnn_v5/evaluation.json                     |    124 +
+ results/cnn_v5/final_evaluation/evaluation.json    |    173 +
+ .../cnn_v5/final_evaluation/evaluation.lock.json   |      6 +
+ results/cnn_v5/final_evaluation/report.md          |     26 +
+ results/cnn_v5/precision_drop_audit.md             |    139 +
+ .../precision_drop_diagnostic/beat_predictions.csv |  37693 ++
+ .../per_record_metrics.csv                         |     39 +
+ results/cnn_v5/precision_drop_diagnostic/report.md |     36 +
+ .../cnn_v5/precision_drop_diagnostic/summary.json  |     60 +
+ results/cnn_v5/report.md                           |     31 +
+ results/cnn_v5_final_run.log                       |    Bin 0 -> 8486 bytes
+ results/cnn_v5_training_run.log                    |    Bin 0 -> 24442 bytes
+ results/cnn_v6/config.json                         |     48 +
+ results/cnn_v6/evaluation.json                     |    701 +
+ .../cnn_v6/main_dataset_comparison/evaluation.json |    532 +
+ .../main_dataset_comparison/evaluation.lock.json   |      7 +
+ results/cnn_v6/main_dataset_comparison/report.md   |     28 +
+ results/cnn_v7/config.json                         |     62 +
+ results/cnn_v7/evaluation.json                     |    762 +
+ results/cnn_v7/final_test/evaluation.json          |    183 +
+ results/cnn_v7/final_test/evaluation.lock.json     |      6 +
+ results/cnn_v7/locked.json                         |      6 +
+ results/cnn_v7/report.md                           |     42 +
+ results/cnn_v8/config.json                         |     62 +
+ results/cnn_v8/evaluation.json                     |    801 +
+ results/cnn_v8/final_test/evaluation.json          |    431 +
+ results/cnn_v8/final_test/evaluation.lock.json     |      7 +
+ results/cnn_v8/final_test/report.md                |     35 +
+ results/cnn_v8/locked.json                         |      6 +
+ results/cnn_v8/report.md                           |     45 +
+ results/cnn_v9/config.json                         |     39 +
+ results/cnn_v9/evaluation.json                     |    432 +
+ results/cnn_v9/locked.json                         |      7 +
+ results/cnn_v9/report.md                           |     41 +
+ results/cross_dataset_edb/evaluation.json          |   4297 +
+ results/cross_dataset_edb/evaluation.lock.json     |      6 +
+ results/cross_dataset_edb/report.md                |     16 +
+ results/cross_dataset_edb_run.log                  |    Bin 0 -> 9056 bytes
+ results/cross_dataset_stdb_v6/evaluation.json      |   1856 +
+ results/cross_dataset_stdb_v6/evaluation.lock.json |      9 +
+ results/cross_dataset_stdb_v6/report.md            |     12 +
+ results/cross_dataset_svdb/evaluation.json         |   3493 +
+ results/cross_dataset_svdb/evaluation.lock.json    |      8 +
+ results/cross_dataset_svdb_run.log                 |    Bin 0 -> 6440 bytes
+ results/esp32_serial.log                           |    419 +
+ results/incart_v4_preparation.json                 |   2974 +
+ results/incart_v4_preparation_run.log              |    Bin 0 -> 6858 bytes
+ results/model_and_incart_v4_readiness_report.md    |    131 +
+ .../end_to_end_v4_v6_v11/INCART_I08_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I08_V4_scores.npz  |    Bin 0 -> 12089 bytes
+ .../end_to_end_v4_v6_v11/INCART_I33_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I33_V4_scores.npz  |    Bin 0 -> 5895 bytes
+ .../end_to_end_v4_v6_v11/INCART_I34_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I34_V4_scores.npz  |    Bin 0 -> 6327 bytes
+ .../end_to_end_v4_v6_v11/INCART_I44_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I44_V4_scores.npz  |    Bin 0 -> 9431 bytes
+ .../end_to_end_v4_v6_v11/INCART_I45_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I45_V4_scores.npz  |    Bin 0 -> 7566 bytes
+ .../end_to_end_v4_v6_v11/INCART_I46_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I46_V4_scores.npz  |    Bin 0 -> 9847 bytes
+ .../end_to_end_v4_v6_v11/INCART_I57_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I57_V4_scores.npz  |    Bin 0 -> 8834 bytes
+ .../end_to_end_v4_v6_v11/INCART_I58_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I58_V4_scores.npz  |    Bin 0 -> 7038 bytes
+ .../end_to_end_v4_v6_v11/INCART_I65_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I65_V4_scores.npz  |    Bin 0 -> 11072 bytes
+ .../end_to_end_v4_v6_v11/INCART_I66_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I66_V4_scores.npz  |    Bin 0 -> 8992 bytes
+ .../end_to_end_v4_v6_v11/INCART_I67_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/INCART_I67_V4_scores.npz  |    Bin 0 -> 13541 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_115_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_115_V4_scores.npz  |    Bin 0 -> 5875 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_118_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_118_V4_scores.npz  |    Bin 0 -> 14544 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_121_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_121_V4_scores.npz  |    Bin 0 -> 12395 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_210_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_210_V4_scores.npz  |    Bin 0 -> 16487 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_214_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_214_V4_scores.npz  |    Bin 0 -> 14606 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_233_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_233_V4_scores.npz  |    Bin 0 -> 18808 bytes
+ .../end_to_end_v4_v6_v11/MITBIH_234_V4.json        |     21 +
+ .../end_to_end_v4_v6_v11/MITBIH_234_V4_scores.npz  |    Bin 0 -> 7513 bytes
+ .../end_to_end_v4_v6_v11/evaluation.json           |   2396 +
+ .../end_to_end_v4_v6_v11/report.md                 |    109 +
+ .../INCART_I18_V4_scores.npz                       |    Bin 0 -> 14308 bytes
+ .../INCART_I18_V6_scores.npz                       |    Bin 0 -> 18485 bytes
+ .../INCART_I18_metrics.json                        |     62 +
+ .../INCART_I19_V4_scores.npz                       |    Bin 0 -> 10404 bytes
+ .../INCART_I19_V6_scores.npz                       |    Bin 0 -> 13192 bytes
+ .../INCART_I19_metrics.json                        |     62 +
+ .../INCART_I20_V4_scores.npz                       |    Bin 0 -> 8184 bytes
+ .../INCART_I20_V6_scores.npz                       |    Bin 0 -> 16822 bytes
+ .../INCART_I20_metrics.json                        |     62 +
+ .../INCART_I21_V4_scores.npz                       |    Bin 0 -> 6573 bytes
+ .../INCART_I21_V6_scores.npz                       |    Bin 0 -> 14366 bytes
+ .../INCART_I21_metrics.json                        |     62 +
+ .../INCART_I22_V4_scores.npz                       |    Bin 0 -> 9412 bytes
+ .../INCART_I22_V6_scores.npz                       |    Bin 0 -> 19438 bytes
+ .../INCART_I22_metrics.json                        |     62 +
+ .../INCART_I38_V4_scores.npz                       |    Bin 0 -> 11997 bytes
+ .../INCART_I38_V6_scores.npz                       |    Bin 0 -> 16632 bytes
+ .../INCART_I38_metrics.json                        |     62 +
+ .../INCART_I39_V4_scores.npz                       |    Bin 0 -> 7291 bytes
+ .../INCART_I39_V6_scores.npz                       |    Bin 0 -> 11849 bytes
+ .../INCART_I39_metrics.json                        |     62 +
+ .../INCART_I62_V4_scores.npz                       |    Bin 0 -> 8750 bytes
+ .../INCART_I62_V6_scores.npz                       |    Bin 0 -> 12875 bytes
+ .../INCART_I62_metrics.json                        |     62 +
+ .../INCART_I63_V4_scores.npz                       |    Bin 0 -> 9054 bytes
+ .../INCART_I63_V6_scores.npz                       |    Bin 0 -> 19970 bytes
+ .../INCART_I63_metrics.json                        |     62 +
+ .../INCART_I64_V4_scores.npz                       |    Bin 0 -> 9715 bytes
+ .../INCART_I64_V6_scores.npz                       |    Bin 0 -> 21172 bytes
+ .../INCART_I64_metrics.json                        |     62 +
+ .../INCART_I70_V4_scores.npz                       |    Bin 0 -> 10948 bytes
+ .../INCART_I70_V6_scores.npz                       |    Bin 0 -> 10965 bytes
+ .../INCART_I70_metrics.json                        |     68 +
+ .../INCART_I71_V4_scores.npz                       |    Bin 0 -> 10985 bytes
+ .../INCART_I71_V6_scores.npz                       |    Bin 0 -> 10862 bytes
+ .../INCART_I71_metrics.json                        |     68 +
+ .../MITBIH_107_V4_scores.npz                       |    Bin 0 -> 13270 bytes
+ .../MITBIH_107_V6_scores.npz                       |    Bin 0 -> 13305 bytes
+ .../MITBIH_107_metrics.json                        |     71 +
+ .../MITBIH_108_V4_scores.npz                       |    Bin 0 -> 11865 bytes
+ .../MITBIH_108_V6_scores.npz                       |    Bin 0 -> 11934 bytes
+ .../MITBIH_108_metrics.json                        |     77 +
+ .../MITBIH_113_V4_scores.npz                       |    Bin 0 -> 17235 bytes
+ .../MITBIH_113_V6_scores.npz                       |    Bin 0 -> 18959 bytes
+ .../MITBIH_113_metrics.json                        |     68 +
+ .../MITBIH_117_V4_scores.npz                       |    Bin 0 -> 13630 bytes
+ .../MITBIH_117_V6_scores.npz                       |    Bin 0 -> 13495 bytes
+ .../MITBIH_117_metrics.json                        |     71 +
+ .../MITBIH_123_V4_scores.npz                       |    Bin 0 -> 4994 bytes
+ .../MITBIH_123_V6_scores.npz                       |    Bin 0 -> 10449 bytes
+ .../MITBIH_123_metrics.json                        |     68 +
+ .../MITBIH_200_V4_scores.npz                       |    Bin 0 -> 15465 bytes
+ .../MITBIH_200_V6_scores.npz                       |    Bin 0 -> 16406 bytes
+ .../MITBIH_200_metrics.json                        |     71 +
+ .../MITBIH_222_V4_scores.npz                       |    Bin 0 -> 9894 bytes
+ .../MITBIH_222_V6_scores.npz                       |    Bin 0 -> 16395 bytes
+ .../MITBIH_222_metrics.json                        |     71 +
+ .../test_end_to_end_v4_v6_v11/evaluation.json      |   2170 +
+ .../test_end_to_end_v4_v6_v11/report.md            |    146 +
+ .../next_direction_analysis/INCART_I01_paired.npz  |    Bin 0 -> 36917 bytes
+ .../next_direction_analysis/INCART_I01_stage.csv   |   5474 +
+ .../next_direction_analysis/INCART_I02_paired.npz  |    Bin 0 -> 34715 bytes
+ .../next_direction_analysis/INCART_I02_stage.csv   |   5357 +
+ .../next_direction_analysis/INCART_I03_paired.npz  |    Bin 0 -> 33844 bytes
+ .../next_direction_analysis/INCART_I03_stage.csv   |   5002 +
+ .../next_direction_analysis/INCART_I04_paired.npz  |    Bin 0 -> 30032 bytes
+ .../next_direction_analysis/INCART_I04_stage.csv   |   4480 +
+ .../next_direction_analysis/INCART_I05_paired.npz  |    Bin 0 -> 27173 bytes
+ .../next_direction_analysis/INCART_I05_stage.csv   |   3979 +
+ .../next_direction_analysis/INCART_I06_paired.npz  |    Bin 0 -> 26777 bytes
+ .../next_direction_analysis/INCART_I06_stage.csv   |   5057 +
+ .../next_direction_analysis/INCART_I07_paired.npz  |    Bin 0 -> 26811 bytes
+ .../next_direction_analysis/INCART_I07_stage.csv   |   5070 +
+ .../next_direction_analysis/INCART_I08_paired.npz  |    Bin 0 -> 28933 bytes
+ .../next_direction_analysis/INCART_I08_stage.csv   |   4663 +
+ .../next_direction_analysis/INCART_I09_paired.npz  |    Bin 0 -> 37980 bytes
+ .../next_direction_analysis/INCART_I09_stage.csv   |   6703 +
+ .../next_direction_analysis/INCART_I10_paired.npz  |    Bin 0 -> 39844 bytes
+ .../next_direction_analysis/INCART_I10_stage.csv   |   7039 +
+ .../next_direction_analysis/INCART_I11_paired.npz  |    Bin 0 -> 26454 bytes
+ .../next_direction_analysis/INCART_I11_stage.csv   |   5169 +
+ .../next_direction_analysis/INCART_I12_paired.npz  |    Bin 0 -> 29673 bytes
+ .../next_direction_analysis/INCART_I12_stage.csv   |   5611 +
+ .../next_direction_analysis/INCART_I13_paired.npz  |    Bin 0 -> 22770 bytes
+ .../next_direction_analysis/INCART_I13_stage.csv   |   4042 +
+ .../next_direction_analysis/INCART_I14_paired.npz  |    Bin 0 -> 19905 bytes
+ .../next_direction_analysis/INCART_I14_stage.csv   |   3739 +
+ .../next_direction_analysis/INCART_I15_paired.npz  |    Bin 0 -> 28316 bytes
+ .../next_direction_analysis/INCART_I15_stage.csv   |   5261 +
+ .../next_direction_analysis/INCART_I16_paired.npz  |    Bin 0 -> 35236 bytes
+ .../next_direction_analysis/INCART_I16_stage.csv   |   5734 +
+ .../next_direction_analysis/INCART_I17_paired.npz  |    Bin 0 -> 25343 bytes
+ .../next_direction_analysis/INCART_I17_stage.csv   |   3660 +
+ .../next_direction_analysis/INCART_I23_paired.npz  |    Bin 0 -> 25029 bytes
+ .../next_direction_analysis/INCART_I23_stage.csv   |   4437 +
+ .../next_direction_analysis/INCART_I24_paired.npz  |    Bin 0 -> 33034 bytes
+ .../next_direction_analysis/INCART_I24_stage.csv   |   5139 +
+ .../next_direction_analysis/INCART_I25_paired.npz  |    Bin 0 -> 32074 bytes
+ .../next_direction_analysis/INCART_I25_stage.csv   |   5107 +
+ .../next_direction_analysis/INCART_I26_paired.npz  |    Bin 0 -> 33405 bytes
+ .../next_direction_analysis/INCART_I26_stage.csv   |   5468 +
+ .../next_direction_analysis/INCART_I27_paired.npz  |    Bin 0 -> 29128 bytes
+ .../next_direction_analysis/INCART_I27_stage.csv   |   5192 +
+ .../next_direction_analysis/INCART_I28_paired.npz  |    Bin 0 -> 18170 bytes
+ .../next_direction_analysis/INCART_I28_stage.csv   |   3414 +
+ .../next_direction_analysis/INCART_I29_paired.npz  |    Bin 0 -> 34267 bytes
+ .../next_direction_analysis/INCART_I29_stage.csv   |   5415 +
+ .../next_direction_analysis/INCART_I30_paired.npz  |    Bin 0 -> 31063 bytes
+ .../next_direction_analysis/INCART_I30_stage.csv   |   5055 +
+ .../next_direction_analysis/INCART_I31_paired.npz  |    Bin 0 -> 21487 bytes
+ .../next_direction_analysis/INCART_I31_stage.csv   |   3295 +
+ .../next_direction_analysis/INCART_I32_paired.npz  |    Bin 0 -> 17670 bytes
+ .../next_direction_analysis/INCART_I32_stage.csv   |   3269 +
+ .../next_direction_analysis/INCART_I33_paired.npz  |    Bin 0 -> 19595 bytes
+ .../next_direction_analysis/INCART_I33_stage.csv   |   3691 +
+ .../next_direction_analysis/INCART_I34_paired.npz  |    Bin 0 -> 20852 bytes
+ .../next_direction_analysis/INCART_I34_stage.csv   |   3948 +
+ .../next_direction_analysis/INCART_I35_paired.npz  |    Bin 0 -> 42396 bytes
+ .../next_direction_analysis/INCART_I35_stage.csv   |   7320 +
+ .../next_direction_analysis/INCART_I36_paired.npz  |    Bin 0 -> 45875 bytes
+ .../next_direction_analysis/INCART_I36_stage.csv   |   7374 +
+ .../next_direction_analysis/INCART_I37_paired.npz  |    Bin 0 -> 26256 bytes
+ .../next_direction_analysis/INCART_I37_stage.csv   |   4918 +
+ .../next_direction_analysis/INCART_I40_paired.npz  |    Bin 0 -> 32116 bytes
+ .../next_direction_analysis/INCART_I40_stage.csv   |   5314 +
+ .../next_direction_analysis/INCART_I41_paired.npz  |    Bin 0 -> 17499 bytes
+ .../next_direction_analysis/INCART_I41_stage.csv   |   3280 +
+ .../next_direction_analysis/INCART_I42_paired.npz  |    Bin 0 -> 36826 bytes
+ .../next_direction_analysis/INCART_I42_stage.csv   |   6202 +
+ .../next_direction_analysis/INCART_I43_paired.npz  |    Bin 0 -> 23723 bytes
+ .../next_direction_analysis/INCART_I43_stage.csv   |   4404 +
+ .../next_direction_analysis/INCART_I44_paired.npz  |    Bin 0 -> 26885 bytes
+ .../next_direction_analysis/INCART_I44_stage.csv   |   4984 +
+ .../next_direction_analysis/INCART_I45_paired.npz  |    Bin 0 -> 20992 bytes
+ .../next_direction_analysis/INCART_I45_stage.csv   |   3849 +
+ .../next_direction_analysis/INCART_I46_paired.npz  |    Bin 0 -> 29178 bytes
+ .../next_direction_analysis/INCART_I46_stage.csv   |   5317 +
+ .../next_direction_analysis/INCART_I47_paired.npz  |    Bin 0 -> 23738 bytes
+ .../next_direction_analysis/INCART_I47_stage.csv   |   4368 +
+ .../next_direction_analysis/INCART_I48_paired.npz  |    Bin 0 -> 27411 bytes
+ .../next_direction_analysis/INCART_I48_stage.csv   |   5011 +
+ .../next_direction_analysis/INCART_I49_paired.npz  |    Bin 0 -> 21963 bytes
+ .../next_direction_analysis/INCART_I49_stage.csv   |   4295 +
+ .../next_direction_analysis/INCART_I50_paired.npz  |    Bin 0 -> 31566 bytes
+ .../next_direction_analysis/INCART_I50_stage.csv   |   5993 +
+ .../next_direction_analysis/INCART_I51_paired.npz  |    Bin 0 -> 33466 bytes
+ .../next_direction_analysis/INCART_I51_stage.csv   |   5546 +
+ .../next_direction_analysis/INCART_I52_paired.npz  |    Bin 0 -> 18095 bytes
+ .../next_direction_analysis/INCART_I52_stage.csv   |   3489 +
+ .../next_direction_analysis/INCART_I53_paired.npz  |    Bin 0 -> 25381 bytes
+ .../next_direction_analysis/INCART_I53_stage.csv   |   4516 +
+ .../next_direction_analysis/INCART_I54_paired.npz  |    Bin 0 -> 35821 bytes
+ .../next_direction_analysis/INCART_I54_stage.csv   |   5278 +
+ .../next_direction_analysis/INCART_I55_paired.npz  |    Bin 0 -> 29463 bytes
+ .../next_direction_analysis/INCART_I55_stage.csv   |   4392 +
+ .../next_direction_analysis/INCART_I56_paired.npz  |    Bin 0 -> 23667 bytes
+ .../next_direction_analysis/INCART_I56_stage.csv   |   3402 +
+ .../next_direction_analysis/INCART_I57_paired.npz  |    Bin 0 -> 30153 bytes
+ .../next_direction_analysis/INCART_I57_stage.csv   |   5710 +
+ .../next_direction_analysis/INCART_I58_paired.npz  |    Bin 0 -> 24137 bytes
+ .../next_direction_analysis/INCART_I58_stage.csv   |   4691 +
+ .../next_direction_analysis/INCART_I59_paired.npz  |    Bin 0 -> 25612 bytes
+ .../next_direction_analysis/INCART_I59_stage.csv   |   4369 +
+ .../next_direction_analysis/INCART_I60_paired.npz  |    Bin 0 -> 31966 bytes
+ .../next_direction_analysis/INCART_I60_stage.csv   |   5022 +
+ .../next_direction_analysis/INCART_I61_paired.npz  |    Bin 0 -> 15251 bytes
+ .../next_direction_analysis/INCART_I61_stage.csv   |   2904 +
+ .../next_direction_analysis/INCART_I65_paired.npz  |    Bin 0 -> 30260 bytes
+ .../next_direction_analysis/INCART_I65_stage.csv   |   5325 +
+ .../next_direction_analysis/INCART_I66_paired.npz  |    Bin 0 -> 25716 bytes
+ .../next_direction_analysis/INCART_I66_stage.csv   |   4607 +
+ .../next_direction_analysis/INCART_I67_paired.npz  |    Bin 0 -> 34924 bytes
+ .../next_direction_analysis/INCART_I67_stage.csv   |   5962 +
+ .../next_direction_analysis/INCART_I68_paired.npz  |    Bin 0 -> 36968 bytes
+ .../next_direction_analysis/INCART_I68_stage.csv   |   5496 +
+ .../next_direction_analysis/INCART_I69_paired.npz  |    Bin 0 -> 29306 bytes
+ .../next_direction_analysis/INCART_I69_stage.csv   |   4351 +
+ .../next_direction_analysis/INCART_I72_paired.npz  |    Bin 0 -> 30245 bytes
+ .../next_direction_analysis/INCART_I72_stage.csv   |   4528 +
+ .../next_direction_analysis/INCART_I73_paired.npz  |    Bin 0 -> 27238 bytes
+ .../next_direction_analysis/INCART_I73_stage.csv   |   3976 +
+ .../next_direction_analysis/INCART_I74_paired.npz  |    Bin 0 -> 27471 bytes
+ .../next_direction_analysis/INCART_I74_stage.csv   |   4855 +
+ .../next_direction_analysis/INCART_I75_paired.npz  |    Bin 0 -> 25121 bytes
+ .../next_direction_analysis/INCART_I75_stage.csv   |   4200 +
+ .../next_direction_analysis/MITBIH_100_paired.npz  |    Bin 0 -> 23063 bytes
+ .../next_direction_analysis/MITBIH_100_stage.csv   |   4538 +
+ .../next_direction_analysis/MITBIH_101_paired.npz  |    Bin 0 -> 19316 bytes
+ .../next_direction_analysis/MITBIH_101_stage.csv   |   3736 +
+ .../next_direction_analysis/MITBIH_103_paired.npz  |    Bin 0 -> 21151 bytes
+ .../next_direction_analysis/MITBIH_103_stage.csv   |   4163 +
+ .../next_direction_analysis/MITBIH_105_paired.npz  |    Bin 0 -> 34507 bytes
+ .../next_direction_analysis/MITBIH_105_stage.csv   |   5073 +
+ .../next_direction_analysis/MITBIH_106_paired.npz  |    Bin 0 -> 23703 bytes
+ .../next_direction_analysis/MITBIH_106_stage.csv   |   4051 +
+ .../next_direction_analysis/MITBIH_109_paired.npz  |    Bin 0 -> 32201 bytes
+ .../next_direction_analysis/MITBIH_109_stage.csv   |   5056 +
+ .../next_direction_analysis/MITBIH_111_paired.npz  |    Bin 0 -> 29891 bytes
+ .../next_direction_analysis/MITBIH_111_stage.csv   |   4283 +
+ .../next_direction_analysis/MITBIH_112_paired.npz  |    Bin 0 -> 34456 bytes
+ .../next_direction_analysis/MITBIH_112_stage.csv   |   5089 +
+ .../next_direction_analysis/MITBIH_114_paired.npz  |    Bin 0 -> 26248 bytes
+ .../next_direction_analysis/MITBIH_114_stage.csv   |   3758 +
+ .../next_direction_analysis/MITBIH_115_paired.npz  |    Bin 0 -> 20006 bytes
+ .../next_direction_analysis/MITBIH_115_stage.csv   |   3900 +
+ .../next_direction_analysis/MITBIH_116_paired.npz  |    Bin 0 -> 24929 bytes
+ .../next_direction_analysis/MITBIH_116_stage.csv   |   4792 +
+ .../next_direction_analysis/MITBIH_118_paired.npz  |    Bin 0 -> 31256 bytes
+ .../next_direction_analysis/MITBIH_118_stage.csv   |   4558 +
+ .../next_direction_analysis/MITBIH_119_paired.npz  |    Bin 0 -> 21323 bytes
+ .../next_direction_analysis/MITBIH_119_stage.csv   |   3970 +
+ .../next_direction_analysis/MITBIH_121_paired.npz  |    Bin 0 -> 26010 bytes
+ .../next_direction_analysis/MITBIH_121_stage.csv   |   3732 +
+ .../next_direction_analysis/MITBIH_122_paired.npz  |    Bin 0 -> 31729 bytes
+ .../next_direction_analysis/MITBIH_122_stage.csv   |   4945 +
+ .../next_direction_analysis/MITBIH_124_paired.npz  |    Bin 0 -> 22286 bytes
+ .../next_direction_analysis/MITBIH_124_stage.csv   |   3235 +
+ .../next_direction_analysis/MITBIH_201_paired.npz  |    Bin 0 -> 26225 bytes
+ .../next_direction_analysis/MITBIH_201_stage.csv   |   3987 +
+ .../next_direction_analysis/MITBIH_202_paired.npz  |    Bin 0 -> 29486 bytes
+ .../next_direction_analysis/MITBIH_202_stage.csv   |   4272 +
+ .../next_direction_analysis/MITBIH_203_paired.npz  |    Bin 0 -> 37630 bytes
+ .../next_direction_analysis/MITBIH_203_stage.csv   |   5660 +
+ .../next_direction_analysis/MITBIH_205_paired.npz  |    Bin 0 -> 26704 bytes
+ .../next_direction_analysis/MITBIH_205_stage.csv   |   5279 +
+ .../next_direction_analysis/MITBIH_207_paired.npz  |    Bin 0 -> 25840 bytes
+ .../next_direction_analysis/MITBIH_207_stage.csv   |   3912 +
+ .../next_direction_analysis/MITBIH_208_paired.npz  |    Bin 0 -> 34553 bytes
+ .../next_direction_analysis/MITBIH_208_stage.csv   |   5885 +
+ .../next_direction_analysis/MITBIH_209_paired.npz  |    Bin 0 -> 31330 bytes
+ .../next_direction_analysis/MITBIH_209_stage.csv   |   6015 +
+ .../next_direction_analysis/MITBIH_210_paired.npz  |    Bin 0 -> 35830 bytes
+ .../next_direction_analysis/MITBIH_210_stage.csv   |   5281 +
+ .../next_direction_analysis/MITBIH_212_paired.npz  |    Bin 0 -> 34380 bytes
+ .../next_direction_analysis/MITBIH_212_stage.csv   |   5504 +
+ .../next_direction_analysis/MITBIH_213_paired.npz  |    Bin 0 -> 43223 bytes
+ .../next_direction_analysis/MITBIH_213_stage.csv   |   6482 +
+ .../next_direction_analysis/MITBIH_214_paired.npz  |    Bin 0 -> 30305 bytes
+ .../next_direction_analysis/MITBIH_214_stage.csv   |   4515 +
+ .../next_direction_analysis/MITBIH_215_paired.npz  |    Bin 0 -> 44068 bytes
+ .../next_direction_analysis/MITBIH_215_stage.csv   |   6711 +
+ .../next_direction_analysis/MITBIH_217_paired.npz  |    Bin 0 -> 29575 bytes
+ .../next_direction_analysis/MITBIH_217_stage.csv   |   4395 +
+ .../next_direction_analysis/MITBIH_219_paired.npz  |    Bin 0 -> 28803 bytes
+ .../next_direction_analysis/MITBIH_219_stage.csv   |   4309 +
+ .../next_direction_analysis/MITBIH_220_paired.npz  |    Bin 0 -> 21069 bytes
+ .../next_direction_analysis/MITBIH_220_stage.csv   |   4089 +
+ .../next_direction_analysis/MITBIH_221_paired.npz  |    Bin 0 -> 27618 bytes
+ .../next_direction_analysis/MITBIH_221_stage.csv   |   4846 +
+ .../next_direction_analysis/MITBIH_223_paired.npz  |    Bin 0 -> 35172 bytes
+ .../next_direction_analysis/MITBIH_223_stage.csv   |   5195 +
+ .../next_direction_analysis/MITBIH_228_paired.npz  |    Bin 0 -> 28542 bytes
+ .../next_direction_analysis/MITBIH_228_stage.csv   |   4219 +
+ .../next_direction_analysis/MITBIH_230_paired.npz  |    Bin 0 -> 27318 bytes
+ .../next_direction_analysis/MITBIH_230_stage.csv   |   4510 +
+ .../next_direction_analysis/MITBIH_231_paired.npz  |    Bin 0 -> 19722 bytes
+ .../next_direction_analysis/MITBIH_231_stage.csv   |   3243 +
+ .../next_direction_analysis/MITBIH_233_paired.npz  |    Bin 0 -> 39795 bytes
+ .../next_direction_analysis/MITBIH_233_stage.csv   |   6140 +
+ .../next_direction_analysis/MITBIH_234_paired.npz  |    Bin 0 -> 27313 bytes
+ .../next_direction_analysis/MITBIH_234_stage.csv   |   5500 +
+ .../Train_only_candidate_counts.json               |     10 +
+ .../next_direction_analysis/evaluation.json        |   4083 +
+ .../fixed_OR_diagnostic.json                       |    200 +
+ .../next_direction_analysis/plan_locked.json       |    100 +
+ .../next_direction_analysis/report.md              |    242 +
+ results/model_version_audit.json                   |     49 +
+ .../checkpoints/v10a_fold0_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold1_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold2_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold3_best.keras              |    Bin 0 -> 101265 bytes
+ .../archive_step3_onednn_enabled/fold_v10a_0.json  |    118 +
+ .../archive_step3_onednn_enabled/fold_v10a_1.json  |    118 +
+ .../archive_step3_onednn_enabled/fold_v10a_2.json  |    118 +
+ .../archive_step3_onednn_enabled/runtime_issue.md  |      9 +
+ .../step0_dev_analysis/dev_analysis.json           |   2637 +
+ .../step1_5fold_cv/checkpoints/v4_fold0_best.keras |    Bin 0 -> 47721 bytes
+ .../step1_5fold_cv/checkpoints/v4_fold1_best.keras |    Bin 0 -> 47721 bytes
+ .../step1_5fold_cv/checkpoints/v4_fold2_best.keras |    Bin 0 -> 47721 bytes
+ .../step1_5fold_cv/checkpoints/v4_fold3_best.keras |    Bin 0 -> 47721 bytes
+ .../step1_5fold_cv/checkpoints/v4_fold4_best.keras |    Bin 0 -> 47721 bytes
+ .../step1_5fold_cv/checkpoints/v6_fold0_best.keras |    Bin 0 -> 96052 bytes
+ .../step1_5fold_cv/checkpoints/v6_fold1_best.keras |    Bin 0 -> 96052 bytes
+ .../step1_5fold_cv/checkpoints/v6_fold2_best.keras |    Bin 0 -> 96052 bytes
+ .../step1_5fold_cv/checkpoints/v6_fold3_best.keras |    Bin 0 -> 96052 bytes
+ .../step1_5fold_cv/checkpoints/v6_fold4_best.keras |    Bin 0 -> 96052 bytes
+ .../v10_research/step1_5fold_cv/cv_evaluation.json |   5240 +
+ .../v10_research/step1_5fold_cv/folds_split.json   |    457 +
+ results/v10_research/step1_5fold_cv/report.md      |     26 +
+ .../step2/checkpoints/v10a_fold0_best.keras        |    Bin 0 -> 100552 bytes
+ .../step2/checkpoints/v10a_fold1_best.keras        |    Bin 0 -> 100552 bytes
+ .../step2/checkpoints/v10a_fold2_best.keras        |    Bin 0 -> 100552 bytes
+ .../step2/checkpoints/v10a_fold3_best.keras        |    Bin 0 -> 100552 bytes
+ .../step2/checkpoints/v10a_fold4_best.keras        |    Bin 0 -> 100552 bytes
+ results/v10_research/step2/config.json             |     12 +
+ results/v10_research/step2/evaluation.json         |   1221 +
+ results/v10_research/step2/fold_v10a_0.json        |    118 +
+ results/v10_research/step2/fold_v10a_1.json        |    118 +
+ results/v10_research/step2/fold_v10a_2.json        |    118 +
+ results/v10_research/step2/fold_v10a_3.json        |    118 +
+ results/v10_research/step2/fold_v10a_4.json        |    118 +
+ results/v10_research/step2/report.md               |     22 +
+ .../step3/checkpoints/v10a_fold0_best.keras        |    Bin 0 -> 101265 bytes
+ .../step3/checkpoints/v10a_fold1_best.keras        |    Bin 0 -> 101265 bytes
+ .../step3/checkpoints/v10a_fold2_best.keras        |    Bin 0 -> 101265 bytes
+ .../step3/checkpoints/v10a_fold3_best.keras        |    Bin 0 -> 101265 bytes
+ results/v10_research/step3/fold_v10a_0.json        |    118 +
+ results/v10_research/step3/fold_v10a_1.json        |    118 +
+ results/v10_research/step3/fold_v10a_2.json        |    118 +
+ results/v10_research/step3/runtime_issue.md        |      9 +
+ .../checkpoints/v10a_fold0_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold1_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold2_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold3_best.keras              |    Bin 0 -> 101265 bytes
+ .../checkpoints/v10a_fold4_best.keras              |    Bin 0 -> 101265 bytes
+ .../step3_consistent_runtime/config.json           |     13 +
+ .../step3_consistent_runtime/evaluation.json       |   1222 +
+ .../step3_consistent_runtime/fold_v10a_0.json      |    118 +
+ .../step3_consistent_runtime/fold_v10a_1.json      |    118 +
+ .../step3_consistent_runtime/fold_v10a_2.json      |    118 +
+ .../step3_consistent_runtime/fold_v10a_3.json      |    118 +
+ .../step3_consistent_runtime/fold_v10a_4.json      |    118 +
+ .../step3_consistent_runtime/report.md             |     12 +
+ .../step3_consistent_runtime/runtime.json          |      7 +
+ .../step4_hybrid/checkpoints/v10a_fold0_best.keras |    Bin 0 -> 95251 bytes
+ .../step4_hybrid/checkpoints/v10a_fold1_best.keras |    Bin 0 -> 95251 bytes
+ .../step4_hybrid/checkpoints/v10a_fold2_best.keras |    Bin 0 -> 95251 bytes
+ .../step4_hybrid/checkpoints/v10a_fold3_best.keras |    Bin 0 -> 95251 bytes
+ .../step4_hybrid/checkpoints/v10a_fold4_best.keras |    Bin 0 -> 95251 bytes
+ results/v10_research/step4_hybrid/config.json      |     16 +
+ .../v10_research/step4_hybrid/design_locked.json   |      8 +
+ results/v10_research/step4_hybrid/evaluation.json  |   1225 +
+ results/v10_research/step4_hybrid/fold_v10a_0.json |    118 +
+ results/v10_research/step4_hybrid/fold_v10a_1.json |    118 +
+ results/v10_research/step4_hybrid/fold_v10a_2.json |    118 +
+ results/v10_research/step4_hybrid/fold_v10a_3.json |    118 +
+ results/v10_research/step4_hybrid/fold_v10a_4.json |    118 +
+ results/v10_research/step4_hybrid/report.md        |     16 +
+ 1233 files changed, 2103054 insertions(+)

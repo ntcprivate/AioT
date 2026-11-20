@@ -1,0 +1,9 @@
+{
+  "backend": "FP32",
+  "error": null,
+  "boots": 1,
+  "measurement_EN_resets": 1,
+  "elapsed_seconds": 30.272019199997885,
+  "uart_sha256": "6e8c7c9a7b6f3aaa6ae4601837d49e8d1274272e20ea47ad84e075ade0f8d892",
+  "uart_bytes": 101356
+}

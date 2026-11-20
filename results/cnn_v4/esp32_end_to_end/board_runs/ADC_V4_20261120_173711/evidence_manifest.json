@@ -1,0 +1,37 @@
+[
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\uart_raw.log",
+    "bytes": 1019612,
+    "sha256": "a51c3c2f2cafc05b9d562c784091c5b7a148eda234335dea9e32c276b3005a3b"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\adc_raw.csv",
+    "bytes": 961693,
+    "sha256": "a8a346e66d87e7a3411b511674e21a82903a3151793d7eadcc186db778e006d9"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\predictions.csv",
+    "bytes": 26,
+    "sha256": "28512d224426ad40563adc9a7d4ed23c70385e292e094122f9b87efea473fdae"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\telemetry.json",
+    "bytes": 931833,
+    "sha256": "d3df319433b031c5a8f3434f8d7f9d055c4b622375a95456fbc069593a9a21bc"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\metrics.json",
+    "bytes": 1698,
+    "sha256": "13b20d09f91b5799ec93f5a90c631db111d4b321a763b2676835fe3090a8af40"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\report.md",
+    "bytes": 2312,
+    "sha256": "af7db1e2755057f422300f0ada189e3ade5f17195760e2d8c3e4463a5ef5f02f"
+  },
+  {
+    "path": "results\\cnn_v4\\esp32_end_to_end\\board_runs\\ADC_V4_20261120_173711\\session_metadata.json",
+    "bytes": 1341,
+    "sha256": "f8e2d77d2c3c864e8560fc2796d091efff83c3aadfe0a8f8e0e20d9e9f0b6372"
+  }
+]

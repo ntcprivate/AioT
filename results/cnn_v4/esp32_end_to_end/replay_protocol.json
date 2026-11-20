@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "purpose": "Development engineering replay, not independent accuracy evaluation",
+  "fs": 250,
+  "samples_per_record": 15360,
+  "range": "[0,15360), no padding or looping",
+  "mapping": "clip(rint(2048+200*physical_mV),0,4095), ties-to-even; full resample before crop",
+  "detector": {
+    "source": "copied signal.cpp",
+    "confirmation_samples": 50,
+    "refractory_samples": 75,
+    "status": "NOT_READY_FOR_ACCURACY_CLAIMS"
+  },
+  "matching": {
+    "tolerance_samples": 38,
+    "algorithm": "chronological reference, nearest unused detection, ties lower detection index",
+    "beat_symbols": "NLRBAaJSVrFejnE/fQ?",
+    "OTHER": "beat TP for detector; excluded N/V classifier, never Normal",
+    "missed_V": "FN",
+    "missed_N": "abstention, not TN",
+    "unmatched_PVC": "FP alarm; not automatically noise",
+    "scope": "all beat annotations within supplied stream; boundaries/warmup/rejections reported, not silently removed"
+  },
+  "threshold": 0.88,
+  "threshold_code": 98,
+  "records": [
+    {
+      "dataset": "MITBIH",
+      "record": "100",
+      "split": "Train",
+      "lead": "MLII",
+      "source_hz": 360,
+      "asset": "firmware\\esp32_ecg_v4_experiment\\main\\assets\\MITBIH_100.bin",
+      "sha256": "79e989ecfc3e964d914137e0fe601f285405d16856da3a614564bcb8d53e64a3",
+      "reference_path": "results\\cnn_v4\\esp32_end_to_end\\MITBIH_100_annotations.json",
+      "reference_sha256": "798b356f588638ab83ede6798ea82fcd759b7fe8764164c8d66f4ffe5a1d1dcc",
+      "source_hashes": {
+        "hea": "60ebc904c7bf3e04d142638d3fd5c903e8dc9f10f1ea3264e07926aa089ee75e",
+        "dat": "b2ea3c250e56e48f4b7b90697832b8ecd1afa1e0bb31f2dcfea4ed6e1075a639",
+        "atr": "8d8a5349fb16638ebbf649f1779d12e96d91b736b2aafe59db43719ae583d471"
+      },
+      "rail_samples": 0
+    },
+    {
+      "dataset": "INCART",
+      "record": "I08",
+      "split": "Validation",
+      "lead": "II",
+      "source_hz": 257,
+      "asset": "firmware\\esp32_ecg_v4_experiment\\main\\assets\\INCART_I08.bin",
+      "sha256": "c84d851221398d49f3e8b979bfa140c8cf7c9df0315ec6c4dae300cbdac99967",
+      "reference_path": "results\\cnn_v4\\esp32_end_to_end\\INCART_I08_annotations.json",
+      "reference_sha256": "3adab5e43dd076cc9dba952bf3c08a40ca6cfe209f214f6fecaba7913a770e5d",
+      "source_hashes": {
+        "hea": "894685a526257fc568ca0703d5dbbf48627e058dc1de1afb24293184ab4810e5",
+        "dat": "fc046a96e339e9f5cc6d96325a042fee9d9e69424c71a50d506dafa755fc8ffb",
+        "atr": "7caba653d33e45628bf106a12d682edf8529ec1252489a9d9050054599998fae"
+      },
+      "rail_samples": 0
+    }
+  ]
+}

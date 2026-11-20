@@ -1,0 +1,15 @@
+# V4 ADC feedback and Monitor compatibility
+
+Build PASS (IDF5.4.4, ADC, CPU160MHz, reference kernels); Ninja final exit0. Source model hash and embedded binary model bytes verified unchanged. Threshold .88/code98 retained; prior hashes confirm signal.cpp, preprocessing.h and golden metadata unchanged. No COM3 access, flash, reset, ECG measurement or new board golden was performed.
+
+ADC live feedback uses a separate pure state machine in main/v4_feedback.h, called by alert_task in pipeline.cpp. Invalid/fault outranks fresh predictions. Without model/quality recovery readiness or a fresh result, output WAITING: LED1000ms ON/1000ms OFF, buzzerOFF. Fresh NORMAL: LEDON/buzzerOFF. Fresh PVC: LED/buzzer200ms ON/200ms OFF. INVALID: bothOFF. A state transition restarts phase immediately on the next alert task iteration (up to normal20ms scheduling cadence, not zero hardware latency). No new task, allocation or blocking pattern delay; ADC ISR/task and inference worker unchanged. Two GPIO writes remain in the existing alert task. Timing impact on real board remains unmeasured.
+
+Only ADC AI LIVE uses this path. BENCH_DEMO/self-test/golden-demo remain disabled; replay output is not used. No new fake prediction source. GPIO23/25 have a single output owner in pipeline.cpp; ADC34 and lead-off27/26 do not conflict. On GPIO API error existing safe-OFF/fault handling remains.
+
+Hardware contract: active-HIGH LED-to-resistor-to-GND and active-HIGH self-oscillating buzzer. Actual module polarity, buzzer type and load current cannot be determined from source and were NOT measured. A passive buzzer needs a carrier/PWM driver; a load beyond GPIO capability needs a suitable driver (and inductive protection where applicable). Do not treat the compiled output as proof of audible/physical behavior. Confirm hardware specification before a disconnected-person bench test.
+
+Monitor ai.py previously rejected V4 NORMAL scores between .52 and .88. It now validates the firmware label against the transmitted threshold; V4 requires the threshold field. Legacy V1 packets without model V4 retain .52 compatibility. The GUI does not select a new label or run CNN. No UI layout change. Existing freshness, source, quality, invalidation, CRC and DEMO/HARDWARE separation retained.
+
+Tests:37 Python GUI/parser tests PASS (new V4 boundary97/98, missing/invalid threshold, label mismatch, GUI fields, plus existing unification/shadow regressions). One C++ assert suite PASS for all4states, timing edges, immediate phase transitions, invalid priority, absent/expired prediction, and actual ecg_ai publish/fresh/clear behavior. These are synthetic logic tests, not measured ECG or accuracy results. Test logs: ../test_v4_feedback_gui_20261120.log; build log ../build_adc_v4_feedback_20261120.log.
+
+Artifact copies here are the NEW feedback firmware; earlier ADC ready copies and board evidence remain unchanged. Ready for authorized disconnected-person bench flashing after output hardware compatibility check; not yet hardware verified. No flash requested/executed in this task. Existing ADC saturation is not fixed by this change and must still keep outputsOFF.

@@ -1,0 +1,12 @@
+{
+  "user_general_assurance_received": true,
+  "user_basis": "Used for earlier measurements",
+  "actual_supply_voltage_received": false,
+  "actual_OUT_extrema_received": false,
+  "source_model_received": false,
+  "isolation_technical_details_received": false,
+  "wiring_confirmation_received": false,
+  "flash_authorized_by_verified_checklist": false,
+  "COM3_opened": false,
+  "note": "General assurance is recorded, not substituted for requested measured evidence."
+}

@@ -1,0 +1,67 @@
+{
+  "status": "BUILD_ARTIFACT_CHECKS_PASS_NOT_HARDWARE_PASS",
+  "mode": "ADC",
+  "cpu_MHz": 160,
+  "threshold": 0.88,
+  "output_code_min": 98,
+  "reference_kernels": true,
+  "flash": false,
+  "hardware_confirmation_complete": false,
+  "files": [
+    {
+      "path": "models\\v4\\ecg_cnn_v4_int8.tflite",
+      "bytes": 8688,
+      "sha256": "a7ce1ed87e781597d6bbe09901602c801c08863e3ad0c3313f3a234f86719b0e"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\build_adc_MITBIH_100\\esp32_ecg_v4_experiment.bin",
+      "bytes": 324864,
+      "sha256": "80e428b11f8192fb590d34fd902bbc554d22a01e32e555977a3327947362eb2e"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\build_adc_MITBIH_100\\bootloader\\bootloader.bin",
+      "bytes": 26032,
+      "sha256": "52b240360d7c696ce52388c4b5b64642eb5c2dc2f3ecf8cf7f50abfaff7afb67"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\build_adc_MITBIH_100\\partition_table\\partition-table.bin",
+      "bytes": 3072,
+      "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\build_adc_MITBIH_100\\flasher_args.json",
+      "bytes": 965,
+      "sha256": "a9cc058630a0566fd2b05097865cf487d8a8b3504763f62faca45c15e19e7e80"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\sdkconfig",
+      "bytes": 65779,
+      "sha256": "642c6fc88f43c595dda71a34a615d91a214fc09f6cae1623b34da765aaab1e78"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\build_adc_MITBIH_100\\CMakeCache.txt",
+      "bytes": 26318,
+      "sha256": "32824aeb24dff0cd8f817a965c31df1634dd6f7c3241524efb60b9ae02528de8"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\build_adc_MITBIH_100\\compile_commands.json",
+      "bytes": 6048629,
+      "sha256": "8fa9e6b3d53e96b58088aa336c3e6bdab8aefbd3528c8174d20bcff8a39491c0"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\main\\preprocessing.h",
+      "bytes": 1823,
+      "sha256": "f6c57d5faaa247d78fbb287721a7ec276a1b1e239eb30dbf4869842669370b87"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\main\\signal.cpp",
+      "bytes": 7452,
+      "sha256": "01e51f827cee12fa81f4956a3876358d238f8c2e294d65e39a85411818ca236f"
+    },
+    {
+      "path": "firmware\\esp32_ecg_v4_experiment\\main\\test_data\\ecg_test_metadata.h",
+      "bytes": 1431,
+      "sha256": "c1f2172ce8a0bbd96975f3f28f38f8b7b45f0846df830230a4e33ad0b4c0e17b"
+    }
+  ]
+}

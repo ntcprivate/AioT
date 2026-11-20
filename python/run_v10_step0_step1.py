@@ -507,7 +507,7 @@ def main() -> None:
         "protocol": {
             "seed": SEED,
             "outer_folds": 5,
-            "split_design": "2 folds Fit / 1 fold Checkpoint Selection (PR-AUC) / 1 fold Threshold Calibration (max F1) / 1 Outer Fold Evaluation",
+            "split_design": "3 folds Fit / 1 fold Checkpoint Selection (PR-AUC) / 1 fold Threshold Calibration (max F1) / 1 Outer Fold Evaluation",
             "batch_size": BATCH_SIZE,
             "max_epochs": MAX_EPOCHS,
             "patience": PATIENCE,
@@ -523,12 +523,6 @@ def main() -> None:
     for arch_name, builder in architectures.items():
         print(f"\n=== Running 5-Fold Group CV for {arch_name} ===")
         fold_evals = []
-        completed_cv_path = STEP1_DIR / "cv_evaluation.json"
-        completed_rows = {}
-        if completed_cv_path.exists():
-            completed_cv = json.loads(completed_cv_path.read_text(encoding="utf-8"))
-            for row in completed_cv.get("models", {}).get(arch_name, {}).get("folds", []):
-                completed_rows[int(row["fold_index"])] = row
         for fold_info in folds_spec:
             k = fold_info["fold_index"]
             fold_cache_path = STEP1_DIR / f"fold_{arch_name.lower()}_{k}.json"
@@ -537,14 +531,6 @@ def main() -> None:
                 cached_row = json.loads(fold_cache_path.read_text(encoding="utf-8"))
                 if cached_row.get("checkpoint_sha256") == sha256_file(ckpt_path) and "MITBIH" in cached_row and "INCART" in cached_row:
                     print(f" [{arch_name} Fold {k}] Resumed from valid cached result & checkpoint.")
-                    fold_evals.append(cached_row)
-                    continue
-            # Older completed runs wrote the aggregate CV artifact but not the
-            # per-fold cache. Reuse a row only when its checkpoint hash matches.
-            if k in completed_rows and ckpt_path.exists():
-                cached_row = completed_rows[k]
-                if cached_row.get("checkpoint_sha256") == sha256_file(ckpt_path) and "MITBIH" in cached_row and "INCART" in cached_row:
-                    print(f" [{arch_name} Fold {k}] Resumed from valid aggregate result & checkpoint.")
                     fold_evals.append(cached_row)
                     continue
             f_t0 = time.time()
@@ -626,6 +612,7 @@ def main() -> None:
                 f"INC F1={100*inc_metrics['f1']:.2f}% (P={100*inc_metrics['precision']:.2f}%, R={100*inc_metrics['recall']:.2f}%, FP/1kN={inc_metrics['fp_per_1000_normal']:.2f})"
             )
 
+            fold_evals.append({
             fold_row = {
                 "fold_index": k,
                 "seed": fold_seed,
@@ -642,6 +629,7 @@ def main() -> None:
                 "combined": comb_metrics,
                 "outer_MITBIH_per_record": outer_mit_per_rec,
                 "outer_INCART_per_patient": outer_inc_per_pat,
+            })
             }
             fold_cache_path.write_text(json.dumps(fold_row, indent=2) + "\n", encoding="utf-8")
             fold_evals.append(fold_row)

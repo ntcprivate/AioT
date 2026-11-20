@@ -1,0 +1,38 @@
+{
+  "source_checkpoint_sha256": "36caf719d11d0bb2d20d4de79fdfd0bed741b93bc48a7976df031b2a6ef8d4e1",
+  "sha256": "699dd84a6490d1cb50ea67c840225a7023b0dbfccd24350d58f8c53463217522",
+  "bytes": 9584,
+  "tensorflow": "2.21.0",
+  "operators": [
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "CONV_2D",
+    "RESHAPE",
+    "EXPAND_DIMS",
+    "MAX_POOL_2D",
+    "RESHAPE",
+    "MEAN",
+    "FULLY_CONNECTED",
+    "FULLY_CONNECTED",
+    "LOGISTIC",
+    "DELEGATE",
+    "DELEGATE",
+    "DELEGATE",
+    "DELEGATE"
+  ],
+  "input_shape": [
+    1,
+    256,
+    1
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "status": "EXPORT_ONLY; ESP32 float kernel allocation/inference PENDING; not retrained"
+}
